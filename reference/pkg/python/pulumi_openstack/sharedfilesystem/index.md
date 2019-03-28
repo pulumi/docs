@@ -833,19 +833,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_openstack.sharedfilesystem.get_share">
-<code class="descclassname">pulumi_openstack.sharedfilesystem.</code><code class="descname">get_share</code><span class="sig-paren">(</span><em>description=None</em>, <em>export_location_path=None</em>, <em>is_public=None</em>, <em>metadata=None</em>, <em>name=None</em>, <em>region=None</em>, <em>share_network_id=None</em>, <em>snapshot_id=None</em>, <em>status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.get_share" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_openstack.sharedfilesystem.</code><code class="descname">get_share</code><span class="sig-paren">(</span><em>description=None</em>, <em>export_location_path=None</em>, <em>is_public=None</em>, <em>metadata=None</em>, <em>name=None</em>, <em>region=None</em>, <em>share_network_id=None</em>, <em>snapshot_id=None</em>, <em>status=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.get_share" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available Shared File System share.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.sharedfilesystem.get_share_network">
-<code class="descclassname">pulumi_openstack.sharedfilesystem.</code><code class="descname">get_share_network</code><span class="sig-paren">(</span><em>description=None</em>, <em>ip_version=None</em>, <em>name=None</em>, <em>network_type=None</em>, <em>neutron_net_id=None</em>, <em>neutron_subnet_id=None</em>, <em>region=None</em>, <em>security_service_id=None</em>, <em>segmentation_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.get_share_network" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_openstack.sharedfilesystem.</code><code class="descname">get_share_network</code><span class="sig-paren">(</span><em>description=None</em>, <em>ip_version=None</em>, <em>name=None</em>, <em>network_type=None</em>, <em>neutron_net_id=None</em>, <em>neutron_subnet_id=None</em>, <em>region=None</em>, <em>security_service_id=None</em>, <em>segmentation_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.get_share_network" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available Shared File System share network.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.sharedfilesystem.get_snapshot">
-<code class="descclassname">pulumi_openstack.sharedfilesystem.</code><code class="descname">get_snapshot</code><span class="sig-paren">(</span><em>description=None</em>, <em>name=None</em>, <em>region=None</em>, <em>share_id=None</em>, <em>status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.get_snapshot" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_openstack.sharedfilesystem.</code><code class="descname">get_snapshot</code><span class="sig-paren">(</span><em>description=None</em>, <em>name=None</em>, <em>region=None</em>, <em>share_id=None</em>, <em>status=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.get_snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available Shared File System snapshot.</p>
 </dd></dl>
 

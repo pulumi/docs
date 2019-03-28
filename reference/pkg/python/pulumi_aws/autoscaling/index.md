@@ -240,8 +240,8 @@ for more information.</p>
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>availability_zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of one or more availability zones for the group. This parameter should not be specified when using <code class="docutils literal notranslate"><span class="pre">vpc_zone_identifier</span></code>.</li>
-<li><strong>default_cooldown</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The amount of time, in seconds, after a scaling activity completes before another scaling activity can start.</li>
-<li><strong>desired_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of Amazon EC2 instances that
+<li><strong>default_cooldown</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of time, in seconds, after a scaling activity completes before another scaling activity can start.</li>
+<li><strong>desired_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of Amazon EC2 instances that
 should be running in the group. (See also Waiting for
 Capacity below.)</li>
 <li><strong>enabled_metrics</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of metrics to collect. The allowed values are <code class="docutils literal notranslate"><span class="pre">GroupMinSize</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupMaxSize</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupDesiredCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupInServiceInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupPendingInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupStandbyInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupTerminatingInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupTotalInstances</span></code>.</li>
@@ -260,7 +260,7 @@ for all instances in the pool to terminate.  You can force an autoscaling group 
 even if it’s in the process of scaling a resource. Normally, Terraform
 drains all the instances before deleting the group.  This bypasses that
 behavior and potentially leaves resources dangling.</li>
-<li><strong>health_check_grace_period</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Time (in seconds) after instance comes into service before checking health.</li>
+<li><strong>health_check_grace_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Time (in seconds) after instance comes into service before checking health.</li>
 <li><strong>health_check_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – “EC2” or “ELB”. Controls how health checking is done.</li>
 <li><strong>initial_lifecycle_hooks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more
 <a class="reference external" href="http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html">Lifecycle Hooks</a>
@@ -273,13 +273,13 @@ a new autoscaling group. For all other use-cases, please use <code class="docuti
 <li><strong>launch_template</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument containing launch template settings along with the overrides to specify multiple instance types. Defined below.</li>
 <li><strong>load_balancers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of elastic load balancer names to add to the autoscaling
 group names. Only valid for classic load balancers. For ALBs, use <code class="docutils literal notranslate"><span class="pre">target_group_arns</span></code> instead.</li>
-<li><strong>max_size</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum size of the auto scale group.</li>
+<li><strong>max_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum size of the auto scale group.</li>
 <li><strong>metrics_granularity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The granularity to associate with the metrics to collect. The only valid value is <code class="docutils literal notranslate"><span class="pre">1Minute</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">1Minute</span></code>.</li>
-<li><strong>min_elb_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Setting this causes Terraform to wait for
-this number of instances to show up healthy in the ELB only on creation.
-Updates will not wait on ELB instance number changes.
+<li><strong>min_elb_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Setting this causes Terraform to wait for
+this number of instances from this autoscaling group to show up healthy in the
+ELB only on creation. Updates will not wait on ELB instance number changes.
 (See also Waiting for Capacity below.)</li>
-<li><strong>min_size</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The minimum size of the auto scale group.
+<li><strong>min_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The minimum size of the auto scale group.
 (See also Waiting for Capacity below.)</li>
 <li><strong>mixed_instances_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the auto scaling group. By default generated by Terraform.</li>
@@ -295,12 +295,12 @@ Note that if you suspend either the <code class="docutils literal notranslate"><
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of tag blocks. Tags documented below.</li>
 <li><strong>tags_collection</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of tag blocks (maps). Tags documented below.</li>
 <li><strong>target_group_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of <code class="docutils literal notranslate"><span class="pre">aws_alb_target_group</span></code> ARNs, for use with Application Load Balancing.</li>
-<li><strong>termination_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of policies to decide how the instances in the auto scale group should be terminated. The allowed values are <code class="docutils literal notranslate"><span class="pre">OldestInstance</span></code>, <code class="docutils literal notranslate"><span class="pre">NewestInstance</span></code>, <code class="docutils literal notranslate"><span class="pre">OldestLaunchConfiguration</span></code>, <code class="docutils literal notranslate"><span class="pre">ClosestToNextInstanceHour</span></code>, <code class="docutils literal notranslate"><span class="pre">Default</span></code>.</li>
+<li><strong>termination_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of policies to decide how the instances in the auto scale group should be terminated. The allowed values are <code class="docutils literal notranslate"><span class="pre">OldestInstance</span></code>, <code class="docutils literal notranslate"><span class="pre">NewestInstance</span></code>, <code class="docutils literal notranslate"><span class="pre">OldestLaunchConfiguration</span></code>, <code class="docutils literal notranslate"><span class="pre">ClosestToNextInstanceHour</span></code>, <code class="docutils literal notranslate"><span class="pre">OldestLaunchTemplate</span></code>, <code class="docutils literal notranslate"><span class="pre">AllocationStrategy</span></code>, <code class="docutils literal notranslate"><span class="pre">Default</span></code>.</li>
 <li><strong>vpc_zone_identifiers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of subnet IDs to launch resources in.</li>
-<li><strong>wait_for_elb_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Setting this will cause Terraform to wait
-for exactly this number of healthy instances in all attached load balancers
-on both create and update operations. (Takes precedence over
-<code class="docutils literal notranslate"><span class="pre">min_elb_capacity</span></code> behavior.)
+<li><strong>wait_for_elb_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Setting this will cause Terraform to wait
+for exactly this number of healthy instances from this autoscaling group in
+all attached load balancers on both create and update operations. (Takes
+precedence over <code class="docutils literal notranslate"><span class="pre">min_elb_capacity</span></code> behavior.)
 (See also Waiting for Capacity below.)</li>
 </ul>
 </td>
@@ -415,8 +415,8 @@ group names. Only valid for classic load balancers. For ALBs, use <code class="d
 <dt id="pulumi_aws.autoscaling.Group.min_elb_capacity">
 <code class="descname">min_elb_capacity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.min_elb_capacity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Setting this causes Terraform to wait for
-this number of instances to show up healthy in the ELB only on creation.
-Updates will not wait on ELB instance number changes.
+this number of instances from this autoscaling group to show up healthy in the
+ELB only on creation. Updates will not wait on ELB instance number changes.
 (See also Waiting for Capacity below.)</p>
 </dd></dl>
 
@@ -494,7 +494,7 @@ Note that if you suspend either the <code class="docutils literal notranslate"><
 <dl class="attribute">
 <dt id="pulumi_aws.autoscaling.Group.termination_policies">
 <code class="descname">termination_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.termination_policies" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of policies to decide how the instances in the auto scale group should be terminated. The allowed values are <code class="docutils literal notranslate"><span class="pre">OldestInstance</span></code>, <code class="docutils literal notranslate"><span class="pre">NewestInstance</span></code>, <code class="docutils literal notranslate"><span class="pre">OldestLaunchConfiguration</span></code>, <code class="docutils literal notranslate"><span class="pre">ClosestToNextInstanceHour</span></code>, <code class="docutils literal notranslate"><span class="pre">Default</span></code>.</p>
+<dd><p>A list of policies to decide how the instances in the auto scale group should be terminated. The allowed values are <code class="docutils literal notranslate"><span class="pre">OldestInstance</span></code>, <code class="docutils literal notranslate"><span class="pre">NewestInstance</span></code>, <code class="docutils literal notranslate"><span class="pre">OldestLaunchConfiguration</span></code>, <code class="docutils literal notranslate"><span class="pre">ClosestToNextInstanceHour</span></code>, <code class="docutils literal notranslate"><span class="pre">OldestLaunchTemplate</span></code>, <code class="docutils literal notranslate"><span class="pre">AllocationStrategy</span></code>, <code class="docutils literal notranslate"><span class="pre">Default</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -507,9 +507,9 @@ Note that if you suspend either the <code class="docutils literal notranslate"><
 <dt id="pulumi_aws.autoscaling.Group.wait_for_elb_capacity">
 <code class="descname">wait_for_elb_capacity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.wait_for_elb_capacity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Setting this will cause Terraform to wait
-for exactly this number of healthy instances in all attached load balancers
-on both create and update operations. (Takes precedence over
-<code class="docutils literal notranslate"><span class="pre">min_elb_capacity</span></code> behavior.)
+for exactly this number of healthy instances from this autoscaling group in
+all attached load balancers on both create and update operations. (Takes
+precedence over <code class="docutils literal notranslate"><span class="pre">min_elb_capacity</span></code> behavior.)
 (See also Waiting for Capacity below.)</p>
 </dd></dl>
 
@@ -578,7 +578,7 @@ but take care to not duplicate those hooks with this resource.</div></blockquote
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>autoscaling_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Auto Scaling group to which you want to assign the lifecycle hook</li>
 <li><strong>default_result</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses or if an unexpected failure occurs. The value for this parameter can be either CONTINUE or ABANDON. The default value for this parameter is ABANDON.</li>
-<li><strong>heartbeat_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Defines the amount of time, in seconds, that can elapse before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action defined in the DefaultResult parameter</li>
+<li><strong>heartbeat_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Defines the amount of time, in seconds, that can elapse before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action defined in the DefaultResult parameter</li>
 <li><strong>lifecycle_transition</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The instance state to which you want to attach the lifecycle hook. For a list of lifecycle hook types, see <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/autoscaling/describe-lifecycle-hook-types.html#examples">describe-lifecycle-hook-types</a></li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the lifecycle hook.</li>
 <li><strong>notification_metadata</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Contains additional information that you want to include any time Auto Scaling sends a message to the notification target.</li>
@@ -760,7 +760,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.autoscaling.Policy">
-<em class="property">class </em><code class="descclassname">pulumi_aws.autoscaling.</code><code class="descname">Policy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>adjustment_type=None</em>, <em>autoscaling_group_name=None</em>, <em>cooldown=None</em>, <em>estimated_instance_warmup=None</em>, <em>metric_aggregation_type=None</em>, <em>min_adjustment_magnitude=None</em>, <em>min_adjustment_step=None</em>, <em>name=None</em>, <em>policy_type=None</em>, <em>scaling_adjustment=None</em>, <em>step_adjustments=None</em>, <em>target_tracking_configuration=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Policy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.autoscaling.</code><code class="descname">Policy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>adjustment_type=None</em>, <em>autoscaling_group_name=None</em>, <em>cooldown=None</em>, <em>estimated_instance_warmup=None</em>, <em>metric_aggregation_type=None</em>, <em>min_adjustment_magnitude=None</em>, <em>name=None</em>, <em>policy_type=None</em>, <em>scaling_adjustment=None</em>, <em>step_adjustments=None</em>, <em>target_tracking_configuration=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AutoScaling Scaling Policy resource.</p>
 <blockquote>
 <div><strong>NOTE:</strong> You may want to omit <code class="docutils literal notranslate"><span class="pre">desired_capacity</span></code> attribute from attached <code class="docutils literal notranslate"><span class="pre">aws_autoscaling_group</span></code>
@@ -777,13 +777,12 @@ or <a class="reference external" href="https://docs.aws.amazon.com/AutoScaling/l
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>adjustment_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are <code class="docutils literal notranslate"><span class="pre">ChangeInCapacity</span></code>, <code class="docutils literal notranslate"><span class="pre">ExactCapacity</span></code>, and <code class="docutils literal notranslate"><span class="pre">PercentChangeInCapacity</span></code>.</li>
 <li><strong>autoscaling_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the autoscaling group.</li>
-<li><strong>cooldown</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.</li>
-<li><strong>estimated_instance_warmup</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics. Without a value, AWS will default to the group’s specified cooldown period.</li>
+<li><strong>cooldown</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.</li>
+<li><strong>estimated_instance_warmup</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics. Without a value, AWS will default to the group’s specified cooldown period.</li>
 <li><strong>metric_aggregation_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The aggregation type for the policy’s metrics. Valid values are “Minimum”, “Maximum”, and “Average”. Without a value, AWS will treat the aggregation type as “Average”.</li>
-<li><strong>min_adjustment_step</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Use <code class="docutils literal notranslate"><span class="pre">min_adjustment_magnitude</span></code> instead.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the dimension.</li>
 <li><strong>policy_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy type, either “SimpleScaling”, “StepScaling” or “TargetTrackingScaling”. If this value isn’t provided, AWS will default to “SimpleScaling.”</li>
-<li><strong>scaling_adjustment</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of members by which to
+<li><strong>scaling_adjustment</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of members by which to
 scale, when the adjustment bounds are breached. A positive value scales
 up. A negative value scales down.</li>
 <li><strong>target_tracking_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A target tracking policy. These have the following structure:</li>
@@ -826,12 +825,6 @@ up. A negative value scales down.</li>
 <dt id="pulumi_aws.autoscaling.Policy.metric_aggregation_type">
 <code class="descname">metric_aggregation_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.metric_aggregation_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The aggregation type for the policy’s metrics. Valid values are “Minimum”, “Maximum”, and “Average”. Without a value, AWS will treat the aggregation type as “Average”.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.autoscaling.Policy.min_adjustment_step">
-<code class="descname">min_adjustment_step</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.min_adjustment_step" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use <code class="docutils literal notranslate"><span class="pre">min_adjustment_magnitude</span></code> instead.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -912,12 +905,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>autoscaling_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or Amazon Resource Name (ARN) of the Auto Scaling group.</li>
-<li><strong>desired_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of EC2 instances that should be running in the group. Default 0.  Set to -1 if you don’t want to change the desired capacity at the scheduled time.</li>
+<li><strong>desired_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of EC2 instances that should be running in the group. Default 0.  Set to -1 if you don’t want to change the desired capacity at the scheduled time.</li>
 <li><strong>end_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time for this action to end, in “YYYY-MM-DDThh:mm:ssZ” format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
 If you try to schedule your action in the past, Auto Scaling returns an error message.</li>
-<li><strong>max_size</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum size for the Auto Scaling group. Default 0.
+<li><strong>max_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum size for the Auto Scaling group. Default 0.
 Set to -1 if you don’t want to change the maximum size at the scheduled time.</li>
-<li><strong>min_size</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The minimum size for the Auto Scaling group. Default 0.
+<li><strong>min_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The minimum size for the Auto Scaling group. Default 0.
 Set to -1 if you don’t want to change the minimum size at the scheduled time.</li>
 <li><strong>recurrence</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time when recurring future actions will start. Start time is specified by the user following the Unix cron syntax format.</li>
 <li><strong>scheduled_action_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of this scaling action.</li>

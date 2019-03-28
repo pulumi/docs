@@ -139,7 +139,7 @@ a restricted host and strong password.</div></blockquote>
 use. Can be <code class="docutils literal notranslate"><span class="pre">MYSQL_5_6</span></code>, <code class="docutils literal notranslate"><span class="pre">MYSQL_5_7</span></code> or <code class="docutils literal notranslate"><span class="pre">POSTGRES_9_6</span></code> for second-generation
 instances, or <code class="docutils literal notranslate"><span class="pre">MYSQL_5_5</span></code> or <code class="docutils literal notranslate"><span class="pre">MYSQL_5_6</span></code> for first-generation instances.
 See <a class="reference external" href="https://cloud.google.com/sql/docs/1st-2nd-gen-differences">Second Generation Capabilities</a>
-for more information. <code class="docutils literal notranslate"><span class="pre">POSTGRES_9_6</span></code> support is in beta.</li>
+for more information.</li>
 <li><strong>master_instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the instance that will act as
 the master in the replication setup. Note, this requires the master to have
 <code class="docutils literal notranslate"><span class="pre">binary_log_enabled</span></code> set, as well as existing backups.</li>
@@ -168,7 +168,8 @@ configuration is detailed below.</li>
 <dl class="attribute">
 <dt id="pulumi_gcp.sql.DatabaseInstance.connection_name">
 <code class="descname">connection_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.DatabaseInstance.connection_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The connection name of the instance to be used in connection strings.</p>
+<dd><p>The connection name of the instance to be used in
+connection strings. For example, when connecting with <a class="reference external" href="https://cloud.google.com/sql/docs/mysql/connect-admin-proxy">Cloud SQL Proxy</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -178,14 +179,14 @@ configuration is detailed below.</li>
 use. Can be <code class="docutils literal notranslate"><span class="pre">MYSQL_5_6</span></code>, <code class="docutils literal notranslate"><span class="pre">MYSQL_5_7</span></code> or <code class="docutils literal notranslate"><span class="pre">POSTGRES_9_6</span></code> for second-generation
 instances, or <code class="docutils literal notranslate"><span class="pre">MYSQL_5_5</span></code> or <code class="docutils literal notranslate"><span class="pre">MYSQL_5_6</span></code> for first-generation instances.
 See <a class="reference external" href="https://cloud.google.com/sql/docs/1st-2nd-gen-differences">Second Generation Capabilities</a>
-for more information. <code class="docutils literal notranslate"><span class="pre">POSTGRES_9_6</span></code> support is in beta.</p>
+for more information.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.sql.DatabaseInstance.first_ip_address">
 <code class="descname">first_ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.DatabaseInstance.first_ip_address" title="Permalink to this definition">¶</a></dt>
-<dd><p>The first IPv4 address of the addresses assigned. This is
-is to support accessing the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/issues/912">first address in the list in a terraform output</a>
+<dd><p>The first IPv4 address of any type assigned. This is to
+support accessing the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/issues/912">first address in the list in a terraform output</a>
 when the resource is configured with a <code class="docutils literal notranslate"><span class="pre">count</span></code>.</p>
 </dd></dl>
 
@@ -207,10 +208,28 @@ up to <a class="reference external" href="https://cloud.google.com/sql/docs/dele
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_gcp.sql.DatabaseInstance.private_ip_address">
+<code class="descname">private_ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.DatabaseInstance.private_ip_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>The first private (<code class="docutils literal notranslate"><span class="pre">PRIVATE</span></code>) IPv4 address assigned. This is
+a workaround for an <a class="reference external" href="https://github.com/hashicorp/terraform/issues/17048">issue fixed in Terraform 0.12</a>
+but also provides a convenient way to access an IP of a specific type without
+performing filtering in a Terraform config.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gcp.sql.DatabaseInstance.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.DatabaseInstance.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.sql.DatabaseInstance.public_ip_address">
+<code class="descname">public_ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.DatabaseInstance.public_ip_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>The first public (<code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code>) IPv4 address assigned. This is
+a workaround for an <a class="reference external" href="https://github.com/hashicorp/terraform/issues/17048">issue fixed in Terraform 0.12</a>
+but also provides a convenient way to access an IP of a specific type without
+performing filtering in a Terraform config.</p>
 </dd></dl>
 
 <dl class="attribute">

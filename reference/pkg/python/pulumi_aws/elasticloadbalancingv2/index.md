@@ -26,7 +26,7 @@
 
 <dl class="class">
 <dt id="pulumi_aws.elasticloadbalancingv2.GetTargetGroupResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.elasticloadbalancingv2.</code><code class="descname">GetTargetGroupResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>arn_suffix=None</em>, <em>deregistration_delay=None</em>, <em>health_check=None</em>, <em>name=None</em>, <em>port=None</em>, <em>protocol=None</em>, <em>slow_start=None</em>, <em>stickiness=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancingv2.GetTargetGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticloadbalancingv2.</code><code class="descname">GetTargetGroupResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>arn_suffix=None</em>, <em>deregistration_delay=None</em>, <em>health_check=None</em>, <em>lambda_multi_value_headers_enabled=None</em>, <em>name=None</em>, <em>port=None</em>, <em>protocol=None</em>, <em>slow_start=None</em>, <em>stickiness=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancingv2.GetTargetGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getTargetGroup.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticloadbalancingv2.GetTargetGroupResult.id">
@@ -38,7 +38,7 @@
 
 <dl class="class">
 <dt id="pulumi_aws.elasticloadbalancingv2.Listener">
-<em class="property">class </em><code class="descclassname">pulumi_aws.elasticloadbalancingv2.</code><code class="descname">Listener</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>certificate_arn=None</em>, <em>default_action=None</em>, <em>load_balancer_arn=None</em>, <em>port=None</em>, <em>protocol=None</em>, <em>ssl_policy=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancingv2.Listener" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticloadbalancingv2.</code><code class="descname">Listener</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>certificate_arn=None</em>, <em>default_actions=None</em>, <em>load_balancer_arn=None</em>, <em>port=None</em>, <em>protocol=None</em>, <em>ssl_policy=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancingv2.Listener" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Load Balancer Listener resource.</p>
 <blockquote>
 <div><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">aws_alb_listener</span></code> is known as <code class="docutils literal notranslate"><span class="pre">aws_lb_listener</span></code>. The functionality is identical.</div></blockquote>
@@ -50,9 +50,9 @@
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>certificate_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the <cite>``aws_lb_listener_certificate`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/lb_listener_certificate.html">https://www.terraform.io/docs/providers/aws/r/lb_listener_certificate.html</a>&gt;`_.</li>
-<li><strong>default_action</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An Action block. Action blocks are documented below.</li>
+<li><strong>default_actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An Action block. Action blocks are documented below.</li>
 <li><strong>load_balancer_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the load balancer.</li>
-<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The port. Specify a value from <code class="docutils literal notranslate"><span class="pre">1</span></code> to <code class="docutils literal notranslate"><span class="pre">65535</span></code> or <code class="docutils literal notranslate"><span class="pre">#{port}</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">#{port}</span></code>.</li>
+<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port. Specify a value from <code class="docutils literal notranslate"><span class="pre">1</span></code> to <code class="docutils literal notranslate"><span class="pre">65535</span></code> or <code class="docutils literal notranslate"><span class="pre">#{port}</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">#{port}</span></code>.</li>
 <li><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol. Valid values are <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code>, or <code class="docutils literal notranslate"><span class="pre">#{protocol}</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">#{protocol}</span></code>.</li>
 <li><strong>ssl_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the SSL Policy for the listener. Required if <code class="docutils literal notranslate"><span class="pre">protocol</span></code> is <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code> or <code class="docutils literal notranslate"><span class="pre">TLS</span></code>.</li>
 </ul>
@@ -73,8 +73,8 @@
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_aws.elasticloadbalancingv2.Listener.default_action">
-<code class="descname">default_action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancingv2.Listener.default_action" title="Permalink to this definition">¶</a></dt>
+<dt id="pulumi_aws.elasticloadbalancingv2.Listener.default_actions">
+<code class="descname">default_actions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancingv2.Listener.default_actions" title="Permalink to this definition">¶</a></dt>
 <dd><p>An Action block. Action blocks are documented below.</p>
 </dd></dl>
 
@@ -231,7 +231,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An Action block. Action blocks are documented below.</li>
 <li><strong>conditions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A Condition block. Condition blocks are documented below.</li>
 <li><strong>listener_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the listener to which to attach the rule.</li>
-<li><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The priority for the rule between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">50000</span></code>. Leaving it unset will automatically set the rule with next available priority after currently existing highest rule. A listener can’t have multiple rules with the same priority.</li>
+<li><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The priority for the rule between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">50000</span></code>. Leaving it unset will automatically set the rule with next available priority after currently existing highest rule. A listener can’t have multiple rules with the same priority.</li>
 </ul>
 </td>
 </tr>
@@ -326,7 +326,7 @@ This is a <code class="docutils literal notranslate"><span class="pre">network</
 <li><strong>enable_deletion_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, deletion of the load balancer will be disabled via
 the AWS API. This will prevent Terraform from deleting the load balancer. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>enable_http2</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether HTTP/2 is enabled in <code class="docutils literal notranslate"><span class="pre">application</span></code> load balancers. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</li>
-<li><strong>idle_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time in seconds that the connection is allowed to be idle. Only valid for Load Balancers of type <code class="docutils literal notranslate"><span class="pre">application</span></code>. Default: 60.</li>
+<li><strong>idle_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time in seconds that the connection is allowed to be idle. Only valid for Load Balancers of type <code class="docutils literal notranslate"><span class="pre">application</span></code>. Default: 60.</li>
 <li><strong>internal</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the LB will be internal.</li>
 <li><strong>ip_address_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of IP addresses used by the subnets for your load balancer. The possible values are <code class="docutils literal notranslate"><span class="pre">ipv4</span></code> and <code class="docutils literal notranslate"><span class="pre">dualstack</span></code></li>
 <li><strong>load_balancer_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of load balancer to create. Possible values are <code class="docutils literal notranslate"><span class="pre">application</span></code> or <code class="docutils literal notranslate"><span class="pre">network</span></code>. The default value is <code class="docutils literal notranslate"><span class="pre">application</span></code>.</li>
@@ -501,7 +501,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.elasticloadbalancingv2.TargetGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.elasticloadbalancingv2.</code><code class="descname">TargetGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>deregistration_delay=None</em>, <em>health_check=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>port=None</em>, <em>protocol=None</em>, <em>proxy_protocol_v2=None</em>, <em>slow_start=None</em>, <em>stickiness=None</em>, <em>tags=None</em>, <em>target_type=None</em>, <em>vpc_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancingv2.TargetGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticloadbalancingv2.</code><code class="descname">TargetGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>deregistration_delay=None</em>, <em>health_check=None</em>, <em>lambda_multi_value_headers_enabled=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>port=None</em>, <em>protocol=None</em>, <em>proxy_protocol_v2=None</em>, <em>slow_start=None</em>, <em>stickiness=None</em>, <em>tags=None</em>, <em>target_type=None</em>, <em>vpc_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancingv2.TargetGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Target Group resource for use with Load Balancer resources.</p>
 <blockquote>
 <div><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">aws_alb_target_group</span></code> is known as <code class="docutils literal notranslate"><span class="pre">aws_lb_target_group</span></code>. The functionality is identical.</div></blockquote>
@@ -512,14 +512,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>deregistration_delay</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The amount time for Elastic Load Balancing to wait before changing the state of a deregistering target from draining to unused. The range is 0-3600 seconds. The default value is 300 seconds.</li>
+<li><strong>deregistration_delay</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount time for Elastic Load Balancing to wait before changing the state of a deregistering target from draining to unused. The range is 0-3600 seconds. The default value is 300 seconds.</li>
 <li><strong>health_check</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A Health Check block. Health Check blocks are documented below.</li>
+<li><strong>lambda_multi_value_headers_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when <code class="docutils literal notranslate"><span class="pre">target_type</span></code> is <code class="docutils literal notranslate"><span class="pre">lambda</span></code>.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the target group. If omitted, Terraform will assign a random, unique name.</li>
 <li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>. Cannot be longer than 6 characters.</li>
-<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The port to use to connect with the target. Valid values are either ports 1-65536, or <code class="docutils literal notranslate"><span class="pre">traffic-port</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">traffic-port</span></code>.</li>
+<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port to use to connect with the target. Valid values are either ports 1-65536, or <code class="docutils literal notranslate"><span class="pre">traffic-port</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">traffic-port</span></code>.</li>
 <li><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol to use to connect with the target. Defaults to <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>. Not applicable when <code class="docutils literal notranslate"><span class="pre">target_type</span></code> is <code class="docutils literal notranslate"><span class="pre">lambda</span></code>.</li>
 <li><strong>proxy_protocol_v2</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean to enable / disable support for proxy protocol v2 on Network Load Balancers. See <a class="reference external" href="https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#proxy-protocol">doc</a> for more information.</li>
-<li><strong>slow_start</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The amount time for targets to warm up before the load balancer sends them a full share of requests. The range is 30-900 seconds or 0 to disable. The default value is 0 seconds.</li>
+<li><strong>slow_start</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount time for targets to warm up before the load balancer sends them a full share of requests. The range is 30-900 seconds or 0 to disable. The default value is 0 seconds.</li>
 <li><strong>stickiness</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A Stickiness block. Stickiness blocks are documented below. <code class="docutils literal notranslate"><span class="pre">stickiness</span></code> is only valid if used with Load Balancers of type <code class="docutils literal notranslate"><span class="pre">Application</span></code></li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 <li><strong>target_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of target that you must specify when registering targets with this target group.
@@ -556,6 +557,12 @@ You can’t specify publicly routable IP addresses.</li>
 <dt id="pulumi_aws.elasticloadbalancingv2.TargetGroup.health_check">
 <code class="descname">health_check</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancingv2.TargetGroup.health_check" title="Permalink to this definition">¶</a></dt>
 <dd><p>A Health Check block. Health Check blocks are documented below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticloadbalancingv2.TargetGroup.lambda_multi_value_headers_enabled">
+<code class="descname">lambda_multi_value_headers_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancingv2.TargetGroup.lambda_multi_value_headers_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when <code class="docutils literal notranslate"><span class="pre">target_type</span></code> is <code class="docutils literal notranslate"><span class="pre">lambda</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -677,7 +684,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Availability Zone where the IP address of the target is to be registered.</li>
-<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The port on which targets receive traffic.</li>
+<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port on which targets receive traffic.</li>
 <li><strong>target_group_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the target group with which to register targets</li>
 <li><strong>target_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the target. This is the Instance ID for an instance, or the container ID for an ECS container. If the target type is ip, specify an IP address. If the target type is lambda, specify the arn of lambda.</li>
 </ul>

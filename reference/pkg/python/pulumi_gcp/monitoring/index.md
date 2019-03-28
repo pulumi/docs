@@ -2,7 +2,7 @@
 <span id="monitoring"></span><h1>monitoring<a class="headerlink" href="#module-pulumi_gcp.monitoring" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.monitoring.AlertPolicy">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.monitoring.</code><code class="descname">AlertPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>combiner=None</em>, <em>conditions=None</em>, <em>display_name=None</em>, <em>enabled=None</em>, <em>labels=None</em>, <em>notification_channels=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.AlertPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.monitoring.</code><code class="descname">AlertPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>combiner=None</em>, <em>conditions=None</em>, <em>display_name=None</em>, <em>documentation=None</em>, <em>enabled=None</em>, <em>labels=None</em>, <em>notification_channels=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.AlertPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A description of the conditions under which some aspect of your system is
 considered to be “unhealthy” and the ways to notify people or services
 about this state.</p>
@@ -14,7 +14,11 @@ about this state.</p>
 </ul>
 </li>
 </ul>
-<table class="docutils field-list" frame="void" rules="none">
+<div class = "oics-button" style="float: right; margin: 0 0 -15px">
+  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=monitoring_alert_policy_basic&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
+    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
+  </a>
+</div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -234,7 +238,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><a class="reference external" href="https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.uptimeCheckConfigs">API documentation</a></li>
 <li>How-to Guides<ul>
-<li><a class="reference external" href="https://cloud.google.com/monitoring/api/v3/">Official Documentation</a></li>
+<li><a class="reference external" href="https://cloud.google.com/monitoring/uptime-checks/">Official Documentation</a></li>
 </ul>
 </li>
 </ul>

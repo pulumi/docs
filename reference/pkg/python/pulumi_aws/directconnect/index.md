@@ -14,7 +14,7 @@
 <li><strong>address_family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The address family for the BGP peer. <code class="docutils literal notranslate"><span class="pre">ipv4</span></code> or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code>.</li>
 <li><strong>amazon_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IPv4 CIDR address to use to send traffic to Amazon.
 Required for IPv4 BGP peers on public virtual interfaces.</li>
-<li><strong>bgp_asn</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.</li>
+<li><strong>bgp_asn</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.</li>
 <li><strong>bgp_auth_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The authentication key for BGP configuration.</li>
 <li><strong>customer_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IPv4 CIDR destination address to which Amazon should send traffic.
 Required for IPv4 BGP peers on public virtual interfaces.</li>
@@ -38,6 +38,12 @@ Required for IPv4 BGP peers on public virtual interfaces.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.directconnect.BgpPeer.aws_device">
+<code class="descname">aws_device</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.BgpPeer.aws_device" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Direct Connect endpoint on which the BGP peer terminates.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.directconnect.BgpPeer.bgp_asn">
 <code class="descname">bgp_asn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.BgpPeer.bgp_asn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.</p>
@@ -47,6 +53,12 @@ Required for IPv4 BGP peers on public virtual interfaces.</p>
 <dt id="pulumi_aws.directconnect.BgpPeer.bgp_auth_key">
 <code class="descname">bgp_auth_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.BgpPeer.bgp_auth_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>The authentication key for BGP configuration.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.BgpPeer.bgp_peer_id">
+<code class="descname">bgp_peer_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.BgpPeer.bgp_peer_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the BGP peer.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -135,9 +147,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.directconnect.Connection.aws_device">
+<code class="descname">aws_device</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.Connection.aws_device" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Direct Connect endpoint on which the physical connection terminates.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.directconnect.Connection.bandwidth">
 <code class="descname">bandwidth</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.Connection.bandwidth" title="Permalink to this definition">¶</a></dt>
 <dd><p>The bandwidth of the connection. Available values: 1Gbps, 10Gbps. Case sensitive.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.Connection.has_logical_redundancy">
+<code class="descname">has_logical_redundancy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.Connection.has_logical_redundancy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates whether the connection supports a secondary BGP peer in the same address family (IPv4/IPv6).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -446,14 +470,14 @@ A hosted virtual interface is a virtual interface that is owned by another AWS a
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>address_family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The address family for the BGP peer. <code class="docutils literal notranslate"><span class="pre">ipv4</span></code> or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code>.</li>
 <li><strong>amazon_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.</li>
-<li><strong>bgp_asn</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.</li>
+<li><strong>bgp_asn</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.</li>
 <li><strong>bgp_auth_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The authentication key for BGP configuration.</li>
 <li><strong>connection_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.</li>
 <li><strong>customer_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.</li>
-<li><strong>mtu</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual private interface can be either <code class="docutils literal notranslate"><span class="pre">1500</span></code> or <code class="docutils literal notranslate"><span class="pre">9001</span></code> (jumbo frames). Default is <code class="docutils literal notranslate"><span class="pre">1500</span></code>.</li>
+<li><strong>mtu</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual private interface can be either <code class="docutils literal notranslate"><span class="pre">1500</span></code> or <code class="docutils literal notranslate"><span class="pre">9001</span></code> (jumbo frames). Default is <code class="docutils literal notranslate"><span class="pre">1500</span></code>.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the virtual interface.</li>
 <li><strong>owner_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS account that will own the new virtual interface.</li>
-<li><strong>vlan</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The VLAN ID.</li>
+<li><strong>vlan</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The VLAN ID.</li>
 </ul>
 </td>
 </tr>
@@ -475,6 +499,12 @@ A hosted virtual interface is a virtual interface that is owned by another AWS a
 <dt id="pulumi_aws.directconnect.HostedPrivateVirtualInterface.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.HostedPrivateVirtualInterface.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN of the virtual interface.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.HostedPrivateVirtualInterface.aws_device">
+<code class="descname">aws_device</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.HostedPrivateVirtualInterface.aws_device" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Direct Connect endpoint on which the virtual interface terminates.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -676,14 +706,14 @@ A hosted virtual interface is a virtual interface that is owned by another AWS a
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>address_family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The address family for the BGP peer. <code class="docutils literal notranslate"><span class="pre">ipv4</span></code> or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code>.</li>
 <li><strong>amazon_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.</li>
-<li><strong>bgp_asn</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.</li>
+<li><strong>bgp_asn</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.</li>
 <li><strong>bgp_auth_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The authentication key for BGP configuration.</li>
 <li><strong>connection_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.</li>
 <li><strong>customer_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the virtual interface.</li>
 <li><strong>owner_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS account that will own the new virtual interface.</li>
 <li><strong>route_filter_prefixes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of routes to be advertised to the AWS network in this region.</li>
-<li><strong>vlan</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The VLAN ID.</li>
+<li><strong>vlan</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The VLAN ID.</li>
 </ul>
 </td>
 </tr>
@@ -705,6 +735,12 @@ A hosted virtual interface is a virtual interface that is owned by another AWS a
 <dt id="pulumi_aws.directconnect.HostedPublicVirtualInterface.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.HostedPublicVirtualInterface.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN of the virtual interface.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.HostedPublicVirtualInterface.aws_device">
+<code class="descname">aws_device</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.HostedPublicVirtualInterface.aws_device" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Direct Connect endpoint on which the virtual interface terminates.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -874,8 +910,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.directconnect.LinkAggregationGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">LinkAggregationGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>connections_bandwidth=None</em>, <em>force_destroy=None</em>, <em>location=None</em>, <em>name=None</em>, <em>number_of_connections=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.LinkAggregationGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Direct Connect LAG.</p>
+<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">LinkAggregationGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>connections_bandwidth=None</em>, <em>force_destroy=None</em>, <em>location=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.LinkAggregationGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a Direct Connect LAG. Connections can be added to the LAG via the <cite>``aws_dx_connection`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/dx_connection.html">https://www.terraform.io/docs/providers/aws/r/dx_connection.html</a>&gt;`_ and <cite>``aws_dx_connection_association`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/dx_connection_association.html">https://www.terraform.io/docs/providers/aws/r/dx_connection_association.html</a>&gt;`_ resources.</p>
+<blockquote>
+<div><em>NOTE:</em> When creating a LAG, Direct Connect requires creating a Connection. Terraform will remove this unmanaged connection during resource creation.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -888,7 +926,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The AWS Direct Connect location in which the LAG should be allocated. See <a class="reference external" href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html">DescribeLocations</a> for the list of AWS Direct Connect locations. Use <code class="docutils literal notranslate"><span class="pre">locationCode</span></code>.</p>
 </li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the LAG.</li>
-<li><strong>number_of_connections</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of physical connections initially provisioned and bundled by the LAG. Use <code class="docutils literal notranslate"><span class="pre">aws_dx_connection</span></code> and <code class="docutils literal notranslate"><span class="pre">aws_dx_connection_association</span></code> resources instead. Default connections will be removed as part of LAG creation automatically in future versions.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
 </td>
@@ -899,6 +936,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.directconnect.LinkAggregationGroup.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.LinkAggregationGroup.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN of the LAG.</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">jumbo_frame_capable</span></code> -Indicates whether jumbo frames (9001 MTU) are supported.</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -914,6 +954,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.directconnect.LinkAggregationGroup.has_logical_redundancy">
+<code class="descname">has_logical_redundancy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.LinkAggregationGroup.has_logical_redundancy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates whether the LAG supports a secondary BGP peer in the same address family (IPv4/IPv6).</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.directconnect.LinkAggregationGroup.location">
 <code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.LinkAggregationGroup.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>The AWS Direct Connect location in which the LAG should be allocated. See <a class="reference external" href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html">DescribeLocations</a> for the list of AWS Direct Connect locations. Use <code class="docutils literal notranslate"><span class="pre">locationCode</span></code>.</p>
@@ -923,12 +969,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.directconnect.LinkAggregationGroup.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.LinkAggregationGroup.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the LAG.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.directconnect.LinkAggregationGroup.number_of_connections">
-<code class="descname">number_of_connections</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.LinkAggregationGroup.number_of_connections" title="Permalink to this definition">¶</a></dt>
-<dd><p>The number of physical connections initially provisioned and bundled by the LAG. Use <code class="docutils literal notranslate"><span class="pre">aws_dx_connection</span></code> and <code class="docutils literal notranslate"><span class="pre">aws_dx_connection_association</span></code> resources instead. Default connections will be removed as part of LAG creation automatically in future versions.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -990,16 +1030,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>address_family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The address family for the BGP peer. <code class="docutils literal notranslate"><span class="pre">ipv4</span></code> or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code>.</li>
 <li><strong>amazon_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.</li>
-<li><strong>bgp_asn</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.</li>
+<li><strong>bgp_asn</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.</li>
 <li><strong>bgp_auth_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The authentication key for BGP configuration.</li>
 <li><strong>connection_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.</li>
 <li><strong>customer_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.</li>
 <li><strong>dx_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Direct Connect gateway to which to connect the virtual interface.</li>
-<li><strong>mtu</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
+<li><strong>mtu</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
 The MTU of a virtual private interface can be either <code class="docutils literal notranslate"><span class="pre">1500</span></code> or <code class="docutils literal notranslate"><span class="pre">9001</span></code> (jumbo frames). Default is <code class="docutils literal notranslate"><span class="pre">1500</span></code>.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the virtual interface.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
-<li><strong>vlan</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The VLAN ID.</li>
+<li><strong>vlan</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The VLAN ID.</li>
 <li><strong>vpn_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the virtual private gateway to which to connect the virtual interface.</li>
 </ul>
 </td>
@@ -1022,6 +1062,12 @@ The MTU of a virtual private interface can be either <code class="docutils liter
 <dt id="pulumi_aws.directconnect.PrivateVirtualInterface.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.PrivateVirtualInterface.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN of the virtual interface.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.PrivateVirtualInterface.aws_device">
+<code class="descname">aws_device</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.PrivateVirtualInterface.aws_device" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Direct Connect endpoint on which the virtual interface terminates.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1144,14 +1190,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>address_family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The address family for the BGP peer. <code class="docutils literal notranslate"><span class="pre">ipv4</span></code> or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code>.</li>
 <li><strong>amazon_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.</li>
-<li><strong>bgp_asn</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.</li>
+<li><strong>bgp_asn</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.</li>
 <li><strong>bgp_auth_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The authentication key for BGP configuration.</li>
 <li><strong>connection_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.</li>
 <li><strong>customer_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the virtual interface.</li>
 <li><strong>route_filter_prefixes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of routes to be advertised to the AWS network in this region.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
-<li><strong>vlan</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The VLAN ID.</li>
+<li><strong>vlan</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The VLAN ID.</li>
 </ul>
 </td>
 </tr>
@@ -1173,6 +1219,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.directconnect.PublicVirtualInterface.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.PublicVirtualInterface.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN of the virtual interface.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.PublicVirtualInterface.aws_device">
+<code class="descname">aws_device</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.PublicVirtualInterface.aws_device" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Direct Connect endpoint on which the virtual interface terminates.</p>
 </dd></dl>
 
 <dl class="attribute">

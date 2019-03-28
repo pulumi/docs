@@ -359,7 +359,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_openstack.images.get_image">
-<code class="descclassname">pulumi_openstack.images.</code><code class="descname">get_image</code><span class="sig-paren">(</span><em>member_status=None</em>, <em>most_recent=None</em>, <em>name=None</em>, <em>owner=None</em>, <em>properties=None</em>, <em>region=None</em>, <em>size_max=None</em>, <em>size_min=None</em>, <em>sort_direction=None</em>, <em>sort_key=None</em>, <em>tag=None</em>, <em>visibility=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.get_image" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_openstack.images.</code><code class="descname">get_image</code><span class="sig-paren">(</span><em>member_status=None</em>, <em>most_recent=None</em>, <em>name=None</em>, <em>owner=None</em>, <em>properties=None</em>, <em>region=None</em>, <em>size_max=None</em>, <em>size_min=None</em>, <em>sort_direction=None</em>, <em>sort_key=None</em>, <em>tag=None</em>, <em>visibility=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.get_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack image.</p>
 </dd></dl>
 

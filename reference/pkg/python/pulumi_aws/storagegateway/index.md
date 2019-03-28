@@ -94,7 +94,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>snapshot_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The snapshot ID of the snapshot to restore as the new cached volume. e.g. <code class="docutils literal notranslate"><span class="pre">snap-1122aabb</span></code>.</li>
 <li><strong>source_volume_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN for an existing volume. Specifying this ARN makes the new volume into an exact copy of the specified existing volume’s latest recovery point. The <code class="docutils literal notranslate"><span class="pre">volume_size_in_bytes</span></code> value for this new volume must be equal to or larger than the size of the existing volume, in bytes.</li>
 <li><strong>target_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the iSCSI target used by initiators to connect to the target and as a suffix for the target ARN. The target name must be unique across all volumes of a gateway.</li>
-<li><strong>volume_size_in_bytes</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The size of the volume in bytes.</li>
+<li><strong>volume_size_in_bytes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The size of the volume in bytes.</li>
 </ul>
 </td>
 </tr>

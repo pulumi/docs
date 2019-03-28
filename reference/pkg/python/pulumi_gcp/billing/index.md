@@ -10,6 +10,9 @@ an existing Google Cloud Platform Billing Account.</p>
 <dt><strong>Note:</strong> This resource <strong>must not</strong> be used in conjunction with</dt>
 <dd><code class="docutils literal notranslate"><span class="pre">google_billing_account_iam_member</span></code> for the <strong>same role</strong> or they will fight over
 what your policy should be.</dd>
+<dt><strong>Note:</strong> On create, this resource will overwrite members of any existing roles.</dt>
+<dd>Use <code class="docutils literal notranslate"><span class="pre">terraform</span> <span class="pre">import</span></code> and inspect the <code class="docutils literal notranslate"><span class="pre">terraform</span> <span class="pre">plan</span></code> output to ensure
+your existing members are preserved.</dd>
 </dl>
 </div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
@@ -20,7 +23,7 @@ what your policy should be.</dd>
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>billing_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The billing account id.</li>
-<li><strong>members</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of users that the role should apply to.</li>
+<li><strong>members</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of users that the role should apply to. For more details on format and restrictions see <a class="reference external" href="https://cloud.google.com/billing/reference/rest/v1/Policy#Binding">https://cloud.google.com/billing/reference/rest/v1/Policy#Binding</a></li>
 <li><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied.</li>
 </ul>
 </td>
@@ -42,7 +45,7 @@ what your policy should be.</dd>
 <dl class="attribute">
 <dt id="pulumi_gcp.billing.AccountIamBinding.members">
 <code class="descname">members</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.billing.AccountIamBinding.members" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of users that the role should apply to.</p>
+<dd><p>A list of users that the role should apply to. For more details on format and restrictions see <a class="reference external" href="https://cloud.google.com/billing/reference/rest/v1/Policy#Binding">https://cloud.google.com/billing/reference/rest/v1/Policy#Binding</a></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -111,7 +114,7 @@ what your policy should be.</dd>
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>billing_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The billing account id.</li>
-<li><strong>member</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user that the role should apply to.</li>
+<li><strong>member</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user that the role should apply to. For more details on format and restrictions see <a class="reference external" href="https://cloud.google.com/billing/reference/rest/v1/Policy#Binding">https://cloud.google.com/billing/reference/rest/v1/Policy#Binding</a></li>
 <li><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied.</li>
 </ul>
 </td>
@@ -133,7 +136,7 @@ what your policy should be.</dd>
 <dl class="attribute">
 <dt id="pulumi_gcp.billing.AccountIamMember.member">
 <code class="descname">member</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.billing.AccountIamMember.member" title="Permalink to this definition">¶</a></dt>
-<dd><p>The user that the role should apply to.</p>
+<dd><p>The user that the role should apply to. For more details on format and restrictions see <a class="reference external" href="https://cloud.google.com/billing/reference/rest/v1/Policy#Binding">https://cloud.google.com/billing/reference/rest/v1/Policy#Binding</a></p>
 </dd></dl>
 
 <dl class="attribute">

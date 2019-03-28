@@ -2,7 +2,7 @@
 <span id="cloudfunctions"></span><h1>cloudfunctions<a class="headerlink" href="#module-pulumi_gcp.cloudfunctions" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.cloudfunctions.Function">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.cloudfunctions.</code><code class="descname">Function</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>available_memory_mb=None</em>, <em>description=None</em>, <em>entry_point=None</em>, <em>environment_variables=None</em>, <em>event_trigger=None</em>, <em>https_trigger_url=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>retry_on_failure=None</em>, <em>runtime=None</em>, <em>source_archive_bucket=None</em>, <em>source_archive_object=None</em>, <em>timeout=None</em>, <em>trigger_bucket=None</em>, <em>trigger_http=None</em>, <em>trigger_topic=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.cloudfunctions.</code><code class="descname">Function</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>available_memory_mb=None</em>, <em>description=None</em>, <em>entry_point=None</em>, <em>environment_variables=None</em>, <em>event_trigger=None</em>, <em>https_trigger_url=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>runtime=None</em>, <em>service_account_email=None</em>, <em>source_archive_bucket=None</em>, <em>source_archive_object=None</em>, <em>source_repository=None</em>, <em>timeout=None</em>, <em>trigger_http=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new Cloud Function. For more information see
 <a class="reference external" href="https://cloud.google.com/functions/docs/">the official documentation</a>
 and
@@ -14,9 +14,9 @@ and
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>available_memory_mb</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, and 2048MB.</li>
+<li><strong>available_memory_mb</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, and 2048MB.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the function.</li>
-<li><strong>entry_point</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of a JavaScript function that will be executed when the Google Cloud Function is triggered.</li>
+<li><strong>entry_point</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the function that will be executed when the Google Cloud Function is triggered.</li>
 <li><strong>environment_variables</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A set of key/value environment variable pairs to assign to the function.</li>
 <li><strong>event_trigger</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with <code class="docutils literal notranslate"><span class="pre">trigger_http</span></code>.</li>
 <li><strong>https_trigger_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL which triggers function execution. Returned only if <code class="docutils literal notranslate"><span class="pre">trigger_http</span></code> is used.</li>
@@ -24,17 +24,14 @@ and
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A user-defined name of the function. Function names must be unique globally.</li>
 <li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Project of the function. If it is not provided, the provider project is used.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Region of function. Currently can be only “us-central1”. If it is not provided, the provider region is used.</li>
-<li><strong>retry_on_failure</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the function should be retried on failure. This only applies to bucket and topic triggers, not HTTPS triggers.
-Deprecated. Use <code class="docutils literal notranslate"><span class="pre">event_trigger.failure_policy.retry</span></code> instead.</li>
 <li><strong>runtime</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The runtime in which the function is going to run. If empty, defaults to <code class="docutils literal notranslate"><span class="pre">&quot;nodejs6&quot;</span></code>.</li>
+<li><strong>service_account_email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If provided, the self-provided service account to run the function with.</li>
 <li><strong>source_archive_bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GCS bucket containing the zip archive which contains the function.</li>
 <li><strong>source_archive_object</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source archive object (file) in archive bucket.</li>
-<li><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.</li>
-<li><strong>trigger_bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Google Cloud Storage bucket name. Every change in files in this bucket will trigger function execution. Cannot be used with <code class="docutils literal notranslate"><span class="pre">trigger_http</span></code> and <code class="docutils literal notranslate"><span class="pre">trigger_topic</span></code>.
-Deprecated. Use <code class="docutils literal notranslate"><span class="pre">event_trigger</span></code> instead.</li>
+<li><strong>source_repository</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Represents parameters related to source repository where a function is hosted.
+Cannot be set alongside <code class="docutils literal notranslate"><span class="pre">source_archive_bucket</span></code> or <code class="docutils literal notranslate"><span class="pre">source_archive_object</span></code>. Structure is documented below.</li>
+<li><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.</li>
 <li><strong>trigger_http</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as <code class="docutils literal notranslate"><span class="pre">https_trigger_url</span></code>. Cannot be used with <code class="docutils literal notranslate"><span class="pre">trigger_bucket</span></code> and <code class="docutils literal notranslate"><span class="pre">trigger_topic</span></code>.</li>
-<li><strong>trigger_topic</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of Pub/Sub topic. Every message published in this topic will trigger function execution with message contents passed as input data. Cannot be used with <code class="docutils literal notranslate"><span class="pre">trigger_http</span></code> and <code class="docutils literal notranslate"><span class="pre">trigger_bucket</span></code>.
-Deprecated. Use <code class="docutils literal notranslate"><span class="pre">event_trigger</span></code> instead.</li>
 </ul>
 </td>
 </tr>
@@ -55,7 +52,7 @@ Deprecated. Use <code class="docutils literal notranslate"><span class="pre">eve
 <dl class="attribute">
 <dt id="pulumi_gcp.cloudfunctions.Function.entry_point">
 <code class="descname">entry_point</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function.entry_point" title="Permalink to this definition">¶</a></dt>
-<dd><p>Name of a JavaScript function that will be executed when the Google Cloud Function is triggered.</p>
+<dd><p>Name of the function that will be executed when the Google Cloud Function is triggered.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -101,16 +98,15 @@ Deprecated. Use <code class="docutils literal notranslate"><span class="pre">eve
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_gcp.cloudfunctions.Function.retry_on_failure">
-<code class="descname">retry_on_failure</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function.retry_on_failure" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether the function should be retried on failure. This only applies to bucket and topic triggers, not HTTPS triggers.
-Deprecated. Use <code class="docutils literal notranslate"><span class="pre">event_trigger.failure_policy.retry</span></code> instead.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_gcp.cloudfunctions.Function.runtime">
 <code class="descname">runtime</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function.runtime" title="Permalink to this definition">¶</a></dt>
 <dd><p>The runtime in which the function is going to run. If empty, defaults to <code class="docutils literal notranslate"><span class="pre">&quot;nodejs6&quot;</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.cloudfunctions.Function.service_account_email">
+<code class="descname">service_account_email</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function.service_account_email" title="Permalink to this definition">¶</a></dt>
+<dd><p>If provided, the self-provided service account to run the function with.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -126,29 +122,22 @@ Deprecated. Use <code class="docutils literal notranslate"><span class="pre">eve
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_gcp.cloudfunctions.Function.source_repository">
+<code class="descname">source_repository</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function.source_repository" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents parameters related to source repository where a function is hosted.
+Cannot be set alongside <code class="docutils literal notranslate"><span class="pre">source_archive_bucket</span></code> or <code class="docutils literal notranslate"><span class="pre">source_archive_object</span></code>. Structure is documented below.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gcp.cloudfunctions.Function.timeout">
 <code class="descname">timeout</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function.timeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_gcp.cloudfunctions.Function.trigger_bucket">
-<code class="descname">trigger_bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function.trigger_bucket" title="Permalink to this definition">¶</a></dt>
-<dd><p>Google Cloud Storage bucket name. Every change in files in this bucket will trigger function execution. Cannot be used with <code class="docutils literal notranslate"><span class="pre">trigger_http</span></code> and <code class="docutils literal notranslate"><span class="pre">trigger_topic</span></code>.
-Deprecated. Use <code class="docutils literal notranslate"><span class="pre">event_trigger</span></code> instead.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_gcp.cloudfunctions.Function.trigger_http">
 <code class="descname">trigger_http</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function.trigger_http" title="Permalink to this definition">¶</a></dt>
 <dd><p>Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as <code class="docutils literal notranslate"><span class="pre">https_trigger_url</span></code>. Cannot be used with <code class="docutils literal notranslate"><span class="pre">trigger_bucket</span></code> and <code class="docutils literal notranslate"><span class="pre">trigger_topic</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.cloudfunctions.Function.trigger_topic">
-<code class="descname">trigger_topic</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function.trigger_topic" title="Permalink to this definition">¶</a></dt>
-<dd><p>Name of Pub/Sub topic. Every message published in this topic will trigger function execution with message contents passed as input data. Cannot be used with <code class="docutils literal notranslate"><span class="pre">trigger_http</span></code> and <code class="docutils literal notranslate"><span class="pre">trigger_bucket</span></code>.
-Deprecated. Use <code class="docutils literal notranslate"><span class="pre">event_trigger</span></code> instead.</p>
 </dd></dl>
 
 <dl class="method">
@@ -193,7 +182,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.cloudfunctions.GetFunctionResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.cloudfunctions.</code><code class="descname">GetFunctionResult</code><span class="sig-paren">(</span><em>available_memory_mb=None</em>, <em>description=None</em>, <em>entry_point=None</em>, <em>environment_variables=None</em>, <em>event_triggers=None</em>, <em>https_trigger_url=None</em>, <em>labels=None</em>, <em>retry_on_failure=None</em>, <em>runtime=None</em>, <em>source_archive_bucket=None</em>, <em>source_archive_object=None</em>, <em>timeout=None</em>, <em>trigger_bucket=None</em>, <em>trigger_http=None</em>, <em>trigger_topic=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudfunctions.GetFunctionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.cloudfunctions.</code><code class="descname">GetFunctionResult</code><span class="sig-paren">(</span><em>available_memory_mb=None</em>, <em>description=None</em>, <em>entry_point=None</em>, <em>environment_variables=None</em>, <em>event_triggers=None</em>, <em>https_trigger_url=None</em>, <em>labels=None</em>, <em>retry_on_failure=None</em>, <em>runtime=None</em>, <em>service_account_email=None</em>, <em>source_archive_bucket=None</em>, <em>source_archive_object=None</em>, <em>source_repositories=None</em>, <em>timeout=None</em>, <em>trigger_bucket=None</em>, <em>trigger_http=None</em>, <em>trigger_topic=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudfunctions.GetFunctionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getFunction.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.cloudfunctions.GetFunctionResult.available_memory_mb">
@@ -256,21 +245,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_gcp.cloudfunctions.GetFunctionResult.trigger_bucket">
-<code class="descname">trigger_bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.GetFunctionResult.trigger_bucket" title="Permalink to this definition">¶</a></dt>
-<dd><p>If function is triggered by bucket, bucket name is set here. Deprecated. Use <code class="docutils literal notranslate"><span class="pre">event_trigger</span></code> instead.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_gcp.cloudfunctions.GetFunctionResult.trigger_http">
 <code class="descname">trigger_http</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.GetFunctionResult.trigger_http" title="Permalink to this definition">¶</a></dt>
 <dd><p>If function is triggered by HTTP, this boolean is set.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.cloudfunctions.GetFunctionResult.trigger_topic">
-<code class="descname">trigger_topic</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.GetFunctionResult.trigger_topic" title="Permalink to this definition">¶</a></dt>
-<dd><p>If function is triggered by Pub/Sub topic, name of topic is set here. Deprecated. Use <code class="docutils literal notranslate"><span class="pre">event_trigger</span></code> instead.</p>
 </dd></dl>
 
 <dl class="attribute">

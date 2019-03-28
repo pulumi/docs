@@ -76,7 +76,7 @@ operations in this cluster. Can be one of <code class="docutils literal notransl
 <li><strong>dpm_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable DPM support for DRS in this cluster.
 Requires <code class="docutils literal notranslate"><span class="pre">drs_enabled</span></code> to be <code class="docutils literal notranslate"><span class="pre">true</span></code> in order to be effective.
 Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
-<li><strong>dpm_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – A value between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">5</span></code> indicating the
+<li><strong>dpm_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – A value between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">5</span></code> indicating the
 threshold of load within the cluster that influences host power operations.
 This affects both power on and power off operations - a lower setting will
 tolerate more of a surplus/deficit than a higher setting. Default: <code class="docutils literal notranslate"><span class="pre">3</span></code>.</li>
@@ -91,7 +91,7 @@ recommendations. <span class="raw-html-m2r"><sup>\*</sup></span></li>
 <li><strong>drs_enable_vm_overrides</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow individual DRS overrides to be
 set for virtual machines in the cluster. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</li>
 <li><strong>drs_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable DRS for this cluster. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
-<li><strong>drs_migration_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – A value between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">5</span></code> indicating
+<li><strong>drs_migration_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – A value between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">5</span></code> indicating
 the threshold of imbalance tolerated between hosts. A lower setting will
 tolerate more imbalance while a higher setting will tolerate less. Default:
 <code class="docutils literal notranslate"><span class="pre">3</span></code>.</li>
@@ -111,12 +111,12 @@ option and should only be used for testing. Default: <code class="docutils liter
 hosts. These hosts are kept as available as possible - admission control will
 block access to the host, and DRS will ignore the host when making
 recommendations.</li>
-<li><strong>ha_admission_control_host_failure_tolerance</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum number
+<li><strong>ha_admission_control_host_failure_tolerance</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number
 of failed hosts that admission control tolerates when making decisions on
 whether to permit virtual machine operations. The maximum is one less than
 the number of hosts in the cluster. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.
 <span class="raw-html-m2r"><sup>\*</sup></span></li>
-<li><strong>ha_admission_control_performance_tolerance</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The percentage of
+<li><strong>ha_admission_control_performance_tolerance</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The percentage of
 resource reduction that a cluster of virtual machines can tolerate in case of
 a failover. A value of 0 produces warnings only, whereas a value of 100
 disables the setting. Default: <code class="docutils literal notranslate"><span class="pre">100</span></code> (disabled).</li>
@@ -129,15 +129,15 @@ average number of host resources represented by the
 setting from the total amount of resources in the cluster. Disable to supply
 user-defined values. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.
 <span class="raw-html-m2r"><sup>\*</sup></span></li>
-<li><strong>ha_admission_control_resource_percentage_cpu</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Controls the
+<li><strong>ha_admission_control_resource_percentage_cpu</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Controls the
 user-defined percentage of CPU resources in the cluster to reserve for
 failover. Default: <code class="docutils literal notranslate"><span class="pre">100</span></code>.</li>
-<li><strong>ha_admission_control_resource_percentage_memory</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Controls the
+<li><strong>ha_admission_control_resource_percentage_memory</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Controls the
 user-defined percentage of memory resources in the cluster to reserve for
 failover. Default: <code class="docutils literal notranslate"><span class="pre">100</span></code>.</li>
-<li><strong>ha_admission_control_slot_policy_explicit_cpu</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Controls the
+<li><strong>ha_admission_control_slot_policy_explicit_cpu</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Controls the
 user-defined CPU slot size, in MHz. Default: <code class="docutils literal notranslate"><span class="pre">32</span></code>.</li>
-<li><strong>ha_admission_control_slot_policy_explicit_memory</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Controls the
+<li><strong>ha_admission_control_slot_policy_explicit_memory</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Controls the
 user-defined memory slot size, in MB. Default: <code class="docutils literal notranslate"><span class="pre">100</span></code>.</li>
 <li><strong>ha_admission_control_slot_policy_use_explicit_size</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Controls
 whether or not you wish to supply explicit values to CPU and memory slot
@@ -154,7 +154,7 @@ virtual machines when the cluster has detected loss to all paths to a
 relevant datastore. Can be one of <code class="docutils literal notranslate"><span class="pre">disabled</span></code>, <code class="docutils literal notranslate"><span class="pre">warning</span></code>,
 <code class="docutils literal notranslate"><span class="pre">restartConservative</span></code>, or <code class="docutils literal notranslate"><span class="pre">restartAggressive</span></code>.  Default: <code class="docutils literal notranslate"><span class="pre">disabled</span></code>.
 <span class="raw-html-m2r"><sup>\*</sup></span></li>
-<li><strong>ha_datastore_apd_response_delay</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Controls the delay in minutes
+<li><strong>ha_datastore_apd_response_delay</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Controls the delay in minutes
 to wait after an APD timeout event to execute the response action defined in
 <code class="docutils literal notranslate"><span class="pre">ha_datastore_apd_response</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">3</span></code>
 minutes. <span class="raw-html-m2r"><sup>\*</sup></span></li>
@@ -191,34 +191,34 @@ priority. Can be one of <code class="docutils literal notranslate"><span class="
 <code class="docutils literal notranslate"><span class="pre">appHbStatusGreen</span></code>. The default is <code class="docutils literal notranslate"><span class="pre">none</span></code>, which means that a virtual machine
 is considered ready immediately after a host is found to start it on.
 <span class="raw-html-m2r"><sup>\*</sup></span></li>
-<li><strong>ha_vm_failure_interval</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – If a heartbeat from a virtual machine
+<li><strong>ha_vm_failure_interval</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – If a heartbeat from a virtual machine
 is not received within this configured interval, the virtual machine is
 marked as failed. The value is in seconds. Default: <code class="docutils literal notranslate"><span class="pre">30</span></code>.</li>
-<li><strong>ha_vm_maximum_failure_window</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The length of the reset window in
+<li><strong>ha_vm_maximum_failure_window</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The length of the reset window in
 which <code class="docutils literal notranslate"><span class="pre">ha_vm_maximum_resets</span></code> can operate. When this
 window expires, no more resets are attempted regardless of the setting
 configured in <code class="docutils literal notranslate"><span class="pre">ha_vm_maximum_resets</span></code>. <code class="docutils literal notranslate"><span class="pre">-1</span></code> means no window, meaning an
 unlimited reset time is allotted. The value is specified in seconds. Default:
 <code class="docutils literal notranslate"><span class="pre">-1</span></code> (no window).</li>
-<li><strong>ha_vm_maximum_resets</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum number of resets that HA will
+<li><strong>ha_vm_maximum_resets</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of resets that HA will
 perform to a virtual machine when responding to a failure event. Default: <code class="docutils literal notranslate"><span class="pre">3</span></code></li>
-<li><strong>ha_vm_minimum_uptime</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time, in seconds, that HA waits after
+<li><strong>ha_vm_minimum_uptime</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time, in seconds, that HA waits after
 powering on a virtual machine before monitoring for heartbeats. Default:
 <code class="docutils literal notranslate"><span class="pre">120</span></code> (2 minutes).</li>
 <li><strong>ha_vm_monitoring</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of virtual machine monitoring to use
 when HA is enabled in the cluster. Can be one of <code class="docutils literal notranslate"><span class="pre">vmMonitoringDisabled</span></code>,
 <code class="docutils literal notranslate"><span class="pre">vmMonitoringOnly</span></code>, or <code class="docutils literal notranslate"><span class="pre">vmAndAppMonitoring</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">vmMonitoringDisabled</span></code>.</li>
-<li><strong>ha_vm_restart_additional_delay</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Additional delay in seconds
+<li><strong>ha_vm_restart_additional_delay</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Additional delay in seconds
 after ready condition is met. A VM is considered ready at this point.
 Default: <code class="docutils literal notranslate"><span class="pre">0</span></code> (no delay). <span class="raw-html-m2r"><sup>\*</sup></span></li>
 <li><strong>ha_vm_restart_priority</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default restart priority
 for affected virtual machines when vSphere detects a host failure. Can be one
 of <code class="docutils literal notranslate"><span class="pre">lowest</span></code>, <code class="docutils literal notranslate"><span class="pre">low</span></code>, <code class="docutils literal notranslate"><span class="pre">medium</span></code>, <code class="docutils literal notranslate"><span class="pre">high</span></code>, or <code class="docutils literal notranslate"><span class="pre">highest</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">medium</span></code>.</li>
-<li><strong>ha_vm_restart_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum time, in seconds,
+<li><strong>ha_vm_restart_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum time, in seconds,
 that vSphere HA will wait for virtual machines in one priority to be ready
 before proceeding with the next priority. Default: <code class="docutils literal notranslate"><span class="pre">600</span></code> (10 minutes).
 <span class="raw-html-m2r"><sup>\*</sup></span></li>
-<li><strong>host_cluster_exit_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The timeout for each host maintenance mode
+<li><strong>host_cluster_exit_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The timeout for each host maintenance mode
 operation when removing hosts from a cluster. The value is specified in
 seconds. Default: <code class="docutils literal notranslate"><span class="pre">3600</span></code> (1 hour).</li>
 <li><strong>host_system_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The [managed object IDs][docs-about-morefs] of
@@ -1684,42 +1684,30 @@ virtual machines in this datastore cluster. Default: <code class="docutils liter
 single virtual machine will be kept on the same datastore. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</li>
 <li><strong>sdrs_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable Storage DRS for this datastore cluster.
 Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
-<li><strong>sdrs_free_space_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The free space threshold to use.
+<li><strong>sdrs_free_space_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The free space threshold to use.
 When set to <code class="docutils literal notranslate"><span class="pre">utilization</span></code>, <code class="docutils literal notranslate"><span class="pre">drs_space_utilization_threshold</span></code> is used, and
 when set to <code class="docutils literal notranslate"><span class="pre">freeSpace</span></code>, <code class="docutils literal notranslate"><span class="pre">drs_free_space_threshold</span></code> is used. Default:
 <code class="docutils literal notranslate"><span class="pre">utilization</span></code>.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[str] sdrs_free_space_threshold_mode
-:param pulumi.Input[int] sdrs_free_space_utilization_difference: The threshold, in</p>
-<blockquote>
-<div>percent, of difference between space utilization in datastores before storage
-DRS makes decisions to balance the space. Default: <code class="docutils literal notranslate"><span class="pre">5</span></code> percent.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>sdrs_free_space_utilization_difference</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The threshold, in
+percent, of difference between space utilization in datastores before storage
+DRS makes decisions to balance the space. Default: <code class="docutils literal notranslate"><span class="pre">5</span></code> percent.</li>
 <li><strong>sdrs_io_balance_automation_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Overrides the default
 automation settings when correcting I/O load imbalances.</li>
-<li><strong>sdrs_io_latency_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The I/O latency threshold, in
+<li><strong>sdrs_io_latency_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The I/O latency threshold, in
 milliseconds, that storage DRS uses to make recommendations to move disks
 from this datastore. Default: <code class="docutils literal notranslate"><span class="pre">15</span></code> seconds.</li>
 <li><strong>sdrs_io_load_balance_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable I/O load balancing for
 this datastore cluster. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</li>
-<li><strong>sdrs_io_load_imbalance_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The difference between load
+<li><strong>sdrs_io_load_imbalance_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The difference between load
 in datastores in the cluster before storage DRS makes recommendations to
 balance the load. Default: <code class="docutils literal notranslate"><span class="pre">5</span></code> percent.</li>
-<li><strong>sdrs_io_reservable_iops_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The threshold of reservable
+<li><strong>sdrs_io_reservable_iops_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The threshold of reservable
 IOPS of all virtual machines on the datastore before storage DRS makes
 recommendations to move VMs off of a datastore. Note that this setting should
 only be set if <code class="docutils literal notranslate"><span class="pre">sdrs_io_reservable_percent_threshold</span></code> cannot make an accurate
 estimate of the capacity of the datastores in your cluster, and should be set
 to roughly 50-60% of the worst case peak performance of the backing LUNs.</li>
-<li><strong>sdrs_io_reservable_percent_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The threshold, in
+<li><strong>sdrs_io_reservable_percent_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The threshold, in
 percent, of actual estimated performance of the datastore (in IOPS) that
 storage DRS uses to make recommendations to move VMs off of a datastore when
 the total reservable IOPS exceeds the threshold. Default: <code class="docutils literal notranslate"><span class="pre">60</span></code> percent.</li>
@@ -1727,7 +1715,7 @@ the total reservable IOPS exceeds the threshold. Default: <code class="docutils 
 threshold setting to use, <code class="docutils literal notranslate"><span class="pre">sdrs_io_reservable_percent_threshold</span></code> in the event
 of <code class="docutils literal notranslate"><span class="pre">automatic</span></code>, or <code class="docutils literal notranslate"><span class="pre">sdrs_io_reservable_iops_threshold</span></code> in the event of
 <code class="docutils literal notranslate"><span class="pre">manual</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">automatic</span></code>.</li>
-<li><strong>sdrs_load_balance_interval</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The storage DRS poll interval, in
+<li><strong>sdrs_load_balance_interval</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The storage DRS poll interval, in
 minutes. Default: <code class="docutils literal notranslate"><span class="pre">480</span></code> minutes.</li>
 <li><strong>sdrs_policy_enforcement_automation_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Overrides the default
 automation settings when correcting storage and VM policy violations.</li>
@@ -1735,21 +1723,12 @@ automation settings when correcting storage and VM policy violations.</li>
 automation settings when correcting affinity rule violations.</li>
 <li><strong>sdrs_space_balance_automation_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Overrides the default
 automation settings when correcting disk space imbalances.</li>
+<li><strong>sdrs_vm_evacuation_automation_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Overrides the default
+automation settings when generating recommendations for datastore evacuation.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The IDs of any tags to attach to this resource. See
+[here][docs-applying-tags] for a reference on how to apply tags.</li>
 </ul>
 </td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[int] sdrs_space_utilization_threshold
-:param pulumi.Input[str] sdrs_vm_evacuation_automation_level: Overrides the default</p>
-<blockquote>
-<div>automation settings when generating recommendations for datastore evacuation.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The IDs of any tags to attach to this resource. See
-[here][docs-applying-tags] for a reference on how to apply tags.</td>
 </tr>
 </tbody>
 </table>
@@ -2110,140 +2089,54 @@ connections.</div></blockquote>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[list] active_uplinks
-:param pulumi.Input[bool] allow_forged_transmits
-:param pulumi.Input[bool] allow_mac_changes
-:param pulumi.Input[bool] allow_promiscuous
-:param pulumi.Input[bool] auto_expand: Allows the port group to create additional ports</p>
-<blockquote>
-<div>past the limit specified in <code class="docutils literal notranslate"><span class="pre">number_of_ports</span></code> if necessary. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</div></blockquote>
-<p>:param pulumi.Input[bool] block_all_ports
-:param pulumi.Input[bool] block_override_allowed: Allow the [port shutdown</p>
-<blockquote>
-<div>policy][port-shutdown-policy] to be overridden on an individual port.</div></blockquote>
-<p>:param pulumi.Input[bool] check_beacon
-:param pulumi.Input[dict] custom_attributes: Map of custom attribute ids to attribute</p>
-<blockquote>
-<div>value string to set for port group. See [here][docs-setting-custom-attributes]
-for a reference on how to set values for custom attributes.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description for the port group.</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[bool] directpath_gen2_allowed
-:param pulumi.Input[str] distributed_virtual_switch_uuid: The ID of the DVS to add the</p>
-<blockquote>
-<div>port group to. Forces a new resource if changed.</div></blockquote>
-<p>:param pulumi.Input[int] egress_shaping_average_bandwidth
-:param pulumi.Input[int] egress_shaping_burst_size
-:param pulumi.Input[bool] egress_shaping_enabled
-:param pulumi.Input[int] egress_shaping_peak_bandwidth
-:param pulumi.Input[bool] failback
-:param pulumi.Input[int] ingress_shaping_average_bandwidth
-:param pulumi.Input[int] ingress_shaping_burst_size
-:param pulumi.Input[bool] ingress_shaping_enabled
-:param pulumi.Input[int] ingress_shaping_peak_bandwidth
-:param pulumi.Input[bool] lacp_enabled
-:param pulumi.Input[str] lacp_mode
-:param pulumi.Input[bool] live_port_moving_allowed: Allow a port in this port group to be</p>
-<blockquote>
-<div>moved to another port group while it is connected.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the port group.</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[bool] netflow_enabled
-:param pulumi.Input[bool] netflow_override_allowed: Allow the [Netflow</p>
-<blockquote>
-<div>policy][netflow-policy] on this port group to be overridden on an individual
-port.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>auto_expand</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allows the port group to create additional ports
+past the limit specified in <code class="docutils literal notranslate"><span class="pre">number_of_ports</span></code> if necessary. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</li>
+<li><strong>block_override_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the [port shutdown
+policy][port-shutdown-policy] to be overridden on an individual port.</li>
+<li><strong>custom_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of custom attribute ids to attribute
+value string to set for port group. See [here][docs-setting-custom-attributes]
+for a reference on how to set values for custom attributes.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description for the port group.</li>
+<li><strong>distributed_virtual_switch_uuid</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the DVS to add the
+port group to. Forces a new resource if changed.</li>
+<li><strong>live_port_moving_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow a port in this port group to be
+moved to another port group while it is connected.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the port group.</li>
+<li><strong>netflow_override_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the [Netflow
+policy][netflow-policy] on this port group to be overridden on an individual
+port.</li>
 <li><strong>network_resource_pool_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The key of a network resource pool
 to associate with this port group. The default is <code class="docutils literal notranslate"><span class="pre">-1</span></code>, which implies no
 association.</li>
 <li><strong>network_resource_pool_override_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the network
 resource pool set on this port group to be overridden on an individual port.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[bool] notify_switches
-:param pulumi.Input[int] number_of_ports: The number of ports available on this port</p>
-<blockquote>
-<div>group. Cannot be decreased below the amount of used ports on the port group.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>number_of_ports</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of ports available on this port
+group. Cannot be decreased below the amount of used ports on the port group.</li>
 <li><strong>port_config_reset_at_disconnect</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Reset a port’s settings to the
 settings defined on this port group policy when the port disconnects.</li>
 <li><strong>port_name_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional formatting policy for naming of
 the ports in this port group. See the <code class="docutils literal notranslate"><span class="pre">portNameFormat</span></code> attribute listed
 [here][ext-vsphere-portname-format] for details on the format syntax.</li>
+<li><strong>security_policy_override_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the [security policy
+settings][sec-policy-settings] defined in this port group policy to be
+overridden on an individual port.</li>
+<li><strong>shaping_override_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the [traffic shaping
+options][traffic-shaping-settings] on this port group policy to be overridden
+on an individual port.</li>
+<li><strong>traffic_filter_override_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow any traffic filters on
+this port group to be overridden on an individual port.</li>
+<li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The port group type. Can be one of <code class="docutils literal notranslate"><span class="pre">earlyBinding</span></code> (static
+binding) or <code class="docutils literal notranslate"><span class="pre">ephemeral</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">earlyBinding</span></code>.</li>
+<li><strong>uplink_teaming_override_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the [uplink teaming
+options][uplink-teaming-settings] on this port group to be overridden on an
+individual port.</li>
+<li><strong>vlan_override_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the [VLAN settings][vlan-settings]
+on this port group to be overridden on an individual port.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[int] port_private_secondary_vlan_id
-:param pulumi.Input[bool] security_policy_override_allowed: Allow the [security policy</p>
-<blockquote>
-<div>settings][sec-policy-settings] defined in this port group policy to be
-overridden on an individual port.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>shaping_override_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the [traffic shaping
-options][traffic-shaping-settings] on this port group policy to be overridden
-on an individual port.</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[list] standby_uplinks
-:param pulumi.Input[list] tags
-:param pulumi.Input[str] teaming_policy
-:param pulumi.Input[bool] traffic_filter_override_allowed: Allow any traffic filters on</p>
-<blockquote>
-<div>this port group to be overridden on an individual port.</div></blockquote>
-<p>:param pulumi.Input[bool] tx_uplink
-:param pulumi.Input[str] type: The port group type. Can be one of <code class="docutils literal notranslate"><span class="pre">earlyBinding</span></code> (static</p>
-<blockquote>
-<div>binding) or <code class="docutils literal notranslate"><span class="pre">ephemeral</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">earlyBinding</span></code>.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>uplink_teaming_override_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the [uplink teaming
-options][uplink-teaming-settings] on this port group to be overridden on an
-individual port.</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[int] vlan_id
-:param pulumi.Input[bool] vlan_override_allowed: Allow the [VLAN settings][vlan-settings]</p>
-<blockquote>
-<div>on this port group to be overridden on an individual port.</div></blockquote>
-<p>:param pulumi.Input[list] vlan_ranges</p>
 <dl class="attribute">
 <dt id="pulumi_vsphere.DistributedPortGroup.auto_expand">
 <code class="descname">auto_expand</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.auto_expand" title="Permalink to this definition">¶</a></dt>
@@ -2476,69 +2369,34 @@ virtual switch will be created. Forces a new resource if changed.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A detailed description for the DVS.</li>
 <li><strong>directpath_gen2_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow VMDirectPath Gen2 for the ports
 for which this policy applies to.</li>
-<li><strong>egress_shaping_average_bandwidth</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The average bandwidth in bits
+<li><strong>egress_shaping_average_bandwidth</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The average bandwidth in bits
 per second if egress traffic shaping is enabled on the port.</li>
-<li><strong>egress_shaping_burst_size</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum burst size allowed in
+<li><strong>egress_shaping_burst_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum burst size allowed in
 bytes if egress traffic shaping is enabled on the port.</li>
 <li><strong>egress_shaping_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">true</span></code> if the traffic shaper is enabled
 on the port for egress traffic.</li>
-<li><strong>egress_shaping_peak_bandwidth</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The peak bandwidth during bursts
+<li><strong>egress_shaping_peak_bandwidth</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The peak bandwidth during bursts
 in bits per second if egress traffic shaping is enabled on the port.</li>
 <li><strong>failback</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the teaming policy will re-activate failed
 uplinks higher in precedence when they come back up.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[int] faulttolerance_maximum_mbit
-:param pulumi.Input[int] faulttolerance_reservation_mbit
-:param pulumi.Input[int] faulttolerance_share_count
-:param pulumi.Input[str] faulttolerance_share_level
-:param pulumi.Input[str] folder: The folder to create the DVS in. Forces a new resource</p>
-<blockquote>
-<div>if changed.</div></blockquote>
-<p>:param pulumi.Input[int] hbr_maximum_mbit
-:param pulumi.Input[int] hbr_reservation_mbit
-:param pulumi.Input[int] hbr_share_count
-:param pulumi.Input[str] hbr_share_level
-:param pulumi.Input[list] hosts: Use the <code class="docutils literal notranslate"><span class="pre">host</span></code> block to declare a host specification. The</p>
-<blockquote>
-<div>options are:</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>ingress_shaping_average_bandwidth</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The average bandwidth in
+<li><strong>folder</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The folder to create the DVS in. Forces a new resource
+if changed.</li>
+<li><strong>hosts</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Use the <code class="docutils literal notranslate"><span class="pre">host</span></code> block to declare a host specification. The
+options are:</li>
+<li><strong>ingress_shaping_average_bandwidth</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The average bandwidth in
 bits per second if ingress traffic shaping is enabled on the port.</li>
-<li><strong>ingress_shaping_burst_size</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum burst size allowed in
+<li><strong>ingress_shaping_burst_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum burst size allowed in
 bytes if ingress traffic shaping is enabled on the port.</li>
 <li><strong>ingress_shaping_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">true</span></code> if the traffic shaper is
 enabled on the port for ingress traffic.</li>
-<li><strong>ingress_shaping_peak_bandwidth</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The peak bandwidth during
+<li><strong>ingress_shaping_peak_bandwidth</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The peak bandwidth during
 bursts in bits per second if ingress traffic shaping is enabled on the port.</li>
 <li><strong>ipv4_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An IPv4 address to identify the switch. This is
 mostly useful when used with the Netflow arguments found
 below.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[int] iscsi_maximum_mbit
-:param pulumi.Input[int] iscsi_reservation_mbit
-:param pulumi.Input[int] iscsi_share_count
-:param pulumi.Input[str] iscsi_share_level
-:param pulumi.Input[str] lacp_api_version: The Link Aggregation Control Protocol group</p>
-<blockquote>
-<div>version to use with the switch. Possible values are <code class="docutils literal notranslate"><span class="pre">singleLag</span></code> and
-<code class="docutils literal notranslate"><span class="pre">multipleLag</span></code>.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>lacp_api_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Link Aggregation Control Protocol group
+version to use with the switch. Possible values are <code class="docutils literal notranslate"><span class="pre">singleLag</span></code> and
+<code class="docutils literal notranslate"><span class="pre">multipleLag</span></code>.</li>
 <li><strong>lacp_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables LACP for the ports that this policy
 applies to.</li>
 <li><strong>lacp_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The LACP mode. Can be one of <code class="docutils literal notranslate"><span class="pre">active</span></code> or <code class="docutils literal notranslate"><span class="pre">passive</span></code>.</li>
@@ -2546,45 +2404,30 @@ applies to.</li>
 for link discovery traffic.</li>
 <li><strong>link_discovery_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The discovery protocol type. Valid
 types are <code class="docutils literal notranslate"><span class="pre">cdp</span></code> and <code class="docutils literal notranslate"><span class="pre">lldp</span></code>.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[int] management_maximum_mbit
-:param pulumi.Input[int] management_reservation_mbit
-:param pulumi.Input[int] management_share_count
-:param pulumi.Input[str] management_share_level
-:param pulumi.Input[int] max_mtu: The maximum transmission unit (MTU) for the virtual</p>
-<blockquote>
-<div>switch.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>max_mtu</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum transmission unit (MTU) for the virtual
+switch.</li>
 <li><strong>multicast_filtering_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The multicast filtering mode to use
 with the switch. Can be one of <code class="docutils literal notranslate"><span class="pre">legacyFiltering</span></code> or <code class="docutils literal notranslate"><span class="pre">snooping</span></code>.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the distributed virtual switch.</li>
-<li><strong>netflow_active_flow_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of seconds after which
+<li><strong>netflow_active_flow_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of seconds after which
 active flows are forced to be exported to the collector. Allowed range is
 <code class="docutils literal notranslate"><span class="pre">60</span></code> to <code class="docutils literal notranslate"><span class="pre">3600</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">60</span></code>.</li>
 <li><strong>netflow_collector_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IP address for the Netflow
 collector, using IPv4 or IPv6. IPv6 is supported in vSphere Distributed
 Switch Version 6.0 or later. Must be set before Netflow can be enabled.</li>
-<li><strong>netflow_collector_port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Port for the Netflow collector. This
+<li><strong>netflow_collector_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Port for the Netflow collector. This
 must be set before Netflow can be enabled.</li>
 <li><strong>netflow_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables Netflow on all ports that this policy
 applies to.</li>
-<li><strong>netflow_idle_flow_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of seconds after which
+<li><strong>netflow_idle_flow_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of seconds after which
 idle flows are forced to be exported to the collector. Allowed range is <code class="docutils literal notranslate"><span class="pre">10</span></code>
 to <code class="docutils literal notranslate"><span class="pre">600</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">15</span></code>.</li>
 <li><strong>netflow_internal_flows_only</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to limit analysis to
 traffic that has both source and destination served by the same host.
 Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
-<li><strong>netflow_observation_domain_id</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The observation domain ID for
+<li><strong>netflow_observation_domain_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The observation domain ID for
 the Netflow collector.</li>
-<li><strong>netflow_sampling_rate</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The ratio of total number of packets to
+<li><strong>netflow_sampling_rate</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The ratio of total number of packets to
 the number of packets analyzed. The default is <code class="docutils literal notranslate"><span class="pre">0</span></code>, which indicates that the
 switch should analyze all packets. The maximum value is <code class="docutils literal notranslate"><span class="pre">1000</span></code>, which
 indicates an analysis rate of 0.001%.</li>
@@ -2592,24 +2435,9 @@ indicates an analysis rate of 0.001%.</li>
 network I/O control. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>network_resource_control_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of network I/O
 control to use. Can be one of <code class="docutils literal notranslate"><span class="pre">version2</span></code> or <code class="docutils literal notranslate"><span class="pre">version3</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">version2</span></code>.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[int] nfs_maximum_mbit
-:param pulumi.Input[int] nfs_reservation_mbit
-:param pulumi.Input[int] nfs_share_count
-:param pulumi.Input[str] nfs_share_level
-:param pulumi.Input[bool] notify_switches: If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the teaming policy will notify the</p>
-<blockquote>
-<div>broadcast network of an uplink failover, triggering cache updates.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>port_private_secondary_vlan_id</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Used to define a secondary VLAN
+<li><strong>notify_switches</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the teaming policy will notify the
+broadcast network of an uplink failover, triggering cache updates.</li>
+<li><strong>port_private_secondary_vlan_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Used to define a secondary VLAN
 ID when using private VLANs.</li>
 <li><strong>standby_uplinks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of standby uplinks to be used in
 failover. These uplinks need to match the definitions in the
@@ -2627,38 +2455,22 @@ of the uplinks on the DVS across hosts. The number of items in this list
 controls the number of uplinks that exist on the DVS, in addition to the
 names.  See here for an example on how to
 use this option.</li>
+<li><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <ul>
+<li>The version of the DVS to create. The default is to</li>
+</ul>
+<p>create the DVS at the latest version supported by the version of vSphere
+being used. A DVS can be upgraded to another version, but cannot be
+downgraded.</p>
+</li>
+<li><strong>vlan_ranges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Used to denote VLAN trunking. Use the <code class="docutils literal notranslate"><span class="pre">min_vlan</span></code>
+and <code class="docutils literal notranslate"><span class="pre">max_vlan</span></code> sub-arguments to define the tagged VLAN range. Multiple
+<code class="docutils literal notranslate"><span class="pre">vlan_range</span></code> definitions are allowed, but they must not overlap. Example
+below:</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[int] vdp_maximum_mbit
-:param pulumi.Input[int] vdp_reservation_mbit
-:param pulumi.Input[int] vdp_share_count
-:param pulumi.Input[str] vdp_share_level
-:param pulumi.Input[str] version: - The version of the DVS to create. The default is to</p>
-<blockquote>
-<div>create the DVS at the latest version supported by the version of vSphere
-being used. A DVS can be upgraded to another version, but cannot be
-downgraded.</div></blockquote>
-<p>:param pulumi.Input[int] virtualmachine_maximum_mbit
-:param pulumi.Input[int] virtualmachine_reservation_mbit
-:param pulumi.Input[int] virtualmachine_share_count
-:param pulumi.Input[str] virtualmachine_share_level
-:param pulumi.Input[int] vlan_id
-:param pulumi.Input[list] vlan_ranges: Used to denote VLAN trunking. Use the <code class="docutils literal notranslate"><span class="pre">min_vlan</span></code></p>
-<blockquote>
-<div>and <code class="docutils literal notranslate"><span class="pre">max_vlan</span></code> sub-arguments to define the tagged VLAN range. Multiple
-<code class="docutils literal notranslate"><span class="pre">vlan_range</span></code> definitions are allowed, but they must not overlap. Example
-below:</div></blockquote>
-<p>:param pulumi.Input[int] vmotion_maximum_mbit
-:param pulumi.Input[int] vmotion_reservation_mbit
-:param pulumi.Input[int] vmotion_share_count
-:param pulumi.Input[str] vmotion_share_level
-:param pulumi.Input[int] vsan_maximum_mbit
-:param pulumi.Input[int] vsan_reservation_mbit
-:param pulumi.Input[int] vsan_share_count
-:param pulumi.Input[str] vsan_share_level</p>
 <dl class="attribute">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.active_uplinks">
 <code class="descname">active_uplinks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.active_uplinks" title="Permalink to this definition">¶</a></dt>
@@ -3113,7 +2925,6 @@ operations on this host. Can be one of <code class="docutils literal notranslate
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] host_system_id</p>
 <dl class="attribute">
 <dt id="pulumi_vsphere.DpmHostOverride.compute_cluster_id">
 <code class="descname">compute_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DpmHostOverride.compute_cluster_id" title="Permalink to this definition">¶</a></dt>
@@ -3611,6 +3422,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_vsphere.GetFolderResult">
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">GetFolderResult</code><span class="sig-paren">(</span><em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetFolderResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getFolder.</p>
+<dl class="attribute">
+<dt id="pulumi_vsphere.GetFolderResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.GetFolderResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_vsphere.GetHostResult">
 <em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">GetHostResult</code><span class="sig-paren">(</span><em>resource_pool_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetHostResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getHost.</p>
@@ -3810,7 +3633,7 @@ virtual machine when the cluster has detected loss to all paths to a relevant
 datastore. Can be one of <code class="docutils literal notranslate"><span class="pre">clusterDefault</span></code>, <code class="docutils literal notranslate"><span class="pre">disabled</span></code>, <code class="docutils literal notranslate"><span class="pre">warning</span></code>,
 <code class="docutils literal notranslate"><span class="pre">restartConservative</span></code>, or <code class="docutils literal notranslate"><span class="pre">restartAggressive</span></code>.  Default: <code class="docutils literal notranslate"><span class="pre">clusterDefault</span></code>.
 <span class="raw-html-m2r"><sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup></span></li>
-<li><strong>ha_datastore_apd_response_delay</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Controls the delay in minutes
+<li><strong>ha_datastore_apd_response_delay</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Controls the delay in minutes
 to wait after an APD timeout event to execute the response action defined in
 <code class="docutils literal notranslate"><span class="pre">ha_datastore_apd_response</span></code>. Use <code class="docutils literal notranslate"><span class="pre">-1</span></code> to use
 the cluster default. Default: <code class="docutils literal notranslate"><span class="pre">-1</span></code>.
@@ -3824,19 +3647,19 @@ relevant datastore. Can be one of <code class="docutils literal notranslate"><sp
 machine when a host has detected that it has been isolated from the rest of
 the cluster. Can be one of <code class="docutils literal notranslate"><span class="pre">clusterIsolationResponse</span></code>, <code class="docutils literal notranslate"><span class="pre">none</span></code>, <code class="docutils literal notranslate"><span class="pre">powerOff</span></code>, or
 <code class="docutils literal notranslate"><span class="pre">shutdown</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">clusterIsolationResponse</span></code>.</li>
-<li><strong>ha_vm_failure_interval</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – If a heartbeat from this virtual
+<li><strong>ha_vm_failure_interval</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – If a heartbeat from this virtual
 machine is not received within this configured interval, the virtual machine
 is marked as failed. The value is in seconds. Default: <code class="docutils literal notranslate"><span class="pre">30</span></code>.</li>
-<li><strong>ha_vm_maximum_failure_window</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The length of the reset window in
+<li><strong>ha_vm_maximum_failure_window</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The length of the reset window in
 which <code class="docutils literal notranslate"><span class="pre">ha_vm_maximum_resets</span></code> can operate. When this
 window expires, no more resets are attempted regardless of the setting
 configured in <code class="docutils literal notranslate"><span class="pre">ha_vm_maximum_resets</span></code>. <code class="docutils literal notranslate"><span class="pre">-1</span></code> means no window, meaning an
 unlimited reset time is allotted. The value is specified in seconds. Default:
 <code class="docutils literal notranslate"><span class="pre">-1</span></code> (no window).</li>
-<li><strong>ha_vm_maximum_resets</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum number of resets that HA will
+<li><strong>ha_vm_maximum_resets</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of resets that HA will
 perform to this virtual machine when responding to a failure event. Default:
 <code class="docutils literal notranslate"><span class="pre">3</span></code></li>
-<li><strong>ha_vm_minimum_uptime</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time, in seconds, that HA waits after
+<li><strong>ha_vm_minimum_uptime</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time, in seconds, that HA waits after
 powering on this virtual machine before monitoring for heartbeats. Default:
 <code class="docutils literal notranslate"><span class="pre">120</span></code> (2 minutes).</li>
 <li><strong>ha_vm_monitoring</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of virtual machine monitoring to use
@@ -3850,7 +3673,7 @@ this resource are used for virtual machine monitoring. The default is <code clas
 machine when vSphere detects a host failure. Can be one of
 <code class="docutils literal notranslate"><span class="pre">clusterRestartPriority</span></code>, <code class="docutils literal notranslate"><span class="pre">lowest</span></code>, <code class="docutils literal notranslate"><span class="pre">low</span></code>, <code class="docutils literal notranslate"><span class="pre">medium</span></code>, <code class="docutils literal notranslate"><span class="pre">high</span></code>, or <code class="docutils literal notranslate"><span class="pre">highest</span></code>.
 Default: <code class="docutils literal notranslate"><span class="pre">clusterRestartPriority</span></code>.</li>
-<li><strong>ha_vm_restart_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum time, in seconds, that
+<li><strong>ha_vm_restart_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum time, in seconds, that
 vSphere HA will wait for this virtual machine to be ready. Use <code class="docutils literal notranslate"><span class="pre">-1</span></code> to
 specify the cluster default.  Default: <code class="docutils literal notranslate"><span class="pre">-1</span></code>.
 <span class="raw-html-m2r"><sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup></span></li>
@@ -4050,47 +3873,18 @@ virtual switches, which can be managed by the
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[list] active_nics
-:param pulumi.Input[bool] allow_forged_transmits
-:param pulumi.Input[bool] allow_mac_changes
-:param pulumi.Input[bool] allow_promiscuous
-:param pulumi.Input[bool] check_beacon
-:param pulumi.Input[bool] failback
-:param pulumi.Input[str] host_system_id: The [managed object ID][docs-about-morefs] of</p>
-<blockquote>
-<div>the host to set the port group up on. Forces a new resource if changed.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the port group.  Forces a new resource if
-changed.</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[bool] notify_switches
-:param pulumi.Input[int] shaping_average_bandwidth
-:param pulumi.Input[int] shaping_burst_size
-:param pulumi.Input[bool] shaping_enabled
-:param pulumi.Input[int] shaping_peak_bandwidth
-:param pulumi.Input[list] standby_nics
-:param pulumi.Input[str] teaming_policy
-:param pulumi.Input[str] virtual_switch_name: The name of the virtual switch to bind</p>
-<blockquote>
-<div>this port group to. Forces a new resource if changed.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>vlan_id</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The VLAN ID/trunk mode for this port group.  An ID of
+<li><strong>host_system_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object ID][docs-about-morefs] of
+the host to set the port group up on. Forces a new resource if changed.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the port group.  Forces a new resource if
+changed.</li>
+<li><strong>virtual_switch_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the virtual switch to bind
+this port group to. Forces a new resource if changed.</li>
+<li><strong>vlan_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The VLAN ID/trunk mode for this port group.  An ID of
 <code class="docutils literal notranslate"><span class="pre">0</span></code> denotes no tagging, an ID of <code class="docutils literal notranslate"><span class="pre">1</span></code>-<code class="docutils literal notranslate"><span class="pre">4094</span></code> tags with the specific ID, and an
 ID of <code class="docutils literal notranslate"><span class="pre">4095</span></code> enables trunk mode, allowing the guest to manage its own
-tagging. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code>.</td>
+tagging. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code>.</li>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>
@@ -4210,7 +4004,7 @@ Control (MAC) address can be changed. Default: <code class="docutils literal not
 <li><strong>allow_promiscuous</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port. Default:
 <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
-<li><strong>beacon_interval</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The interval, in seconds, that a NIC beacon
+<li><strong>beacon_interval</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The interval, in seconds, that a NIC beacon
 packet is sent out. This can be used with <code class="docutils literal notranslate"><span class="pre">check_beacon</span></code> to
 offer link failure capability beyond link status only. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</li>
 <li><strong>check_beacon</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable beacon probing - this requires that the
@@ -4226,7 +4020,7 @@ the host to set the virtual switch up on. Forces a new resource if changed.</li>
 for link discovery traffic. Default: <code class="docutils literal notranslate"><span class="pre">listen</span></code>.</li>
 <li><strong>link_discovery_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The discovery protocol type.  Valid
 types are <code class="docutils literal notranslate"><span class="pre">cpd</span></code> and <code class="docutils literal notranslate"><span class="pre">lldp</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">cdp</span></code>.</li>
-<li><strong>mtu</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum transmission unit (MTU) for the virtual
+<li><strong>mtu</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum transmission unit (MTU) for the virtual
 switch. Default: <code class="docutils literal notranslate"><span class="pre">1500</span></code>.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the virtual switch. Forces a new resource if
 changed.</li>
@@ -4234,15 +4028,15 @@ changed.</li>
 <li><strong>notify_switches</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the teaming policy will
 notify the broadcast network of a NIC failover, triggering cache updates.
 Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</li>
-<li><strong>number_of_ports</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of ports to create with this
+<li><strong>number_of_ports</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of ports to create with this
 virtual switch. Default: <code class="docutils literal notranslate"><span class="pre">128</span></code>.</li>
-<li><strong>shaping_average_bandwidth</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The average bandwidth in bits per
+<li><strong>shaping_average_bandwidth</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The average bandwidth in bits per
 second if traffic shaping is enabled. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></li>
-<li><strong>shaping_burst_size</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum burst size allowed in bytes if
+<li><strong>shaping_burst_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum burst size allowed in bytes if
 shaping is enabled. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></li>
 <li><strong>shaping_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to enable the traffic shaper for
 ports managed by this virtual switch. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
-<li><strong>shaping_peak_bandwidth</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The peak bandwidth during bursts in
+<li><strong>shaping_peak_bandwidth</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The peak bandwidth during bursts in
 bits per second if traffic shaping is enabled. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></li>
 <li><strong>standby_nics</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of standby network adapters used for
 failover.</li>
@@ -4801,17 +4595,6 @@ construction to achieve fine-grained programmatic control over provider settings
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[bool] allow_unverified_ssl
-:param pulumi.Input[bool] client_debug
-:param pulumi.Input[str] client_debug_path
-:param pulumi.Input[str] client_debug_path_run
-:param pulumi.Input[str] password
-:param pulumi.Input[bool] persist_session
-:param pulumi.Input[str] rest_session_path
-:param pulumi.Input[str] user
-:param pulumi.Input[str] vcenter_server
-:param pulumi.Input[str] vim_session_path
-:param pulumi.Input[str] vsphere_server</p>
 <dl class="method">
 <dt id="pulumi_vsphere.Provider.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Provider.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -4869,45 +4652,33 @@ page</a>.</p>
 <li><strong>cpu_expandable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code></li>
-<li><strong>cpu_limit</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The CPU utilization of a resource pool will not exceed
+<li><strong>cpu_limit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to <code class="docutils literal notranslate"><span class="pre">-1</span></code> for unlimited.
 Default: <code class="docutils literal notranslate"><span class="pre">-1</span></code></li>
-<li><strong>cpu_reservation</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Amount of CPU (MHz) that is guaranteed
+<li><strong>cpu_reservation</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></li>
 <li><strong>cpu_share_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
 values for shares. Can be one of <code class="docutils literal notranslate"><span class="pre">low</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, <code class="docutils literal notranslate"><span class="pre">high</span></code>, or <code class="docutils literal notranslate"><span class="pre">custom</span></code>. When
 <code class="docutils literal notranslate"><span class="pre">low</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, or <code class="docutils literal notranslate"><span class="pre">high</span></code> are specified values in <code class="docutils literal notranslate"><span class="pre">cpu_shares</span></code> will be
 ignored.  Default: <code class="docutils literal notranslate"><span class="pre">normal</span></code></li>
-<li><strong>cpu_shares</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of shares allocated for CPU. Used to
+<li><strong>cpu_shares</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 <code class="docutils literal notranslate"><span class="pre">cpu_share_level</span></code> must be <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[dict] custom_attributes
-:param pulumi.Input[bool] memory_expandable: Determines if the reservation on a resource</p>
-<blockquote>
-<div>pool can grow beyond the specified value if the parent resource pool has
-unreserved resources. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code></div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>memory_limit</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The CPU utilization of a resource pool will not exceed
+<li><strong>memory_expandable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if the reservation on a resource
+pool can grow beyond the specified value if the parent resource pool has
+unreserved resources. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code></li>
+<li><strong>memory_limit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to <code class="docutils literal notranslate"><span class="pre">-1</span></code> for unlimited.
 Default: <code class="docutils literal notranslate"><span class="pre">-1</span></code></li>
-<li><strong>memory_reservation</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Amount of CPU (MHz) that is guaranteed
+<li><strong>memory_reservation</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></li>
 <li><strong>memory_share_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
 values for shares. Can be one of <code class="docutils literal notranslate"><span class="pre">low</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, <code class="docutils literal notranslate"><span class="pre">high</span></code>, or <code class="docutils literal notranslate"><span class="pre">custom</span></code>. When
 <code class="docutils literal notranslate"><span class="pre">low</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, or <code class="docutils literal notranslate"><span class="pre">high</span></code> are specified values in <code class="docutils literal notranslate"><span class="pre">memory_shares</span></code> will be
 ignored.  Default: <code class="docutils literal notranslate"><span class="pre">normal</span></code></li>
-<li><strong>memory_shares</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of shares allocated for CPU. Used to
+<li><strong>memory_shares</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 <code class="docutils literal notranslate"><span class="pre">memory_share_level</span></code> must be <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource pool.</li>
@@ -5395,47 +5166,35 @@ page</a>.</p>
 <li><strong>cpu_expandable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if the reservation on a vApp
 container can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code></li>
-<li><strong>cpu_limit</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The CPU utilization of a vApp container will not
+<li><strong>cpu_limit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The CPU utilization of a vApp container will not
 exceed this limit, even if there are available resources. Set to <code class="docutils literal notranslate"><span class="pre">-1</span></code> for
 unlimited.
 Default: <code class="docutils literal notranslate"><span class="pre">-1</span></code></li>
-<li><strong>cpu_reservation</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Amount of CPU (MHz) that is guaranteed
+<li><strong>cpu_reservation</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></li>
 <li><strong>cpu_share_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
 values for shares. Can be one of <code class="docutils literal notranslate"><span class="pre">low</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, <code class="docutils literal notranslate"><span class="pre">high</span></code>, or <code class="docutils literal notranslate"><span class="pre">custom</span></code>. When
 <code class="docutils literal notranslate"><span class="pre">low</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, or <code class="docutils literal notranslate"><span class="pre">high</span></code> are specified values in <code class="docutils literal notranslate"><span class="pre">cpu_shares</span></code> will be
 ignored.  Default: <code class="docutils literal notranslate"><span class="pre">normal</span></code></li>
-<li><strong>cpu_shares</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of shares allocated for CPU. Used to
+<li><strong>cpu_shares</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 <code class="docutils literal notranslate"><span class="pre">cpu_share_level</span></code> must be <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[dict] custom_attributes
-:param pulumi.Input[bool] memory_expandable: Determines if the reservation on a vApp</p>
-<blockquote>
-<div>container can grow beyond the specified value if the parent resource pool has
-unreserved resources. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code></div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>memory_limit</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The CPU utilization of a vApp container will not
+<li><strong>memory_expandable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if the reservation on a vApp
+container can grow beyond the specified value if the parent resource pool has
+unreserved resources. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code></li>
+<li><strong>memory_limit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The CPU utilization of a vApp container will not
 exceed this limit, even if there are available resources. Set to <code class="docutils literal notranslate"><span class="pre">-1</span></code> for
 unlimited.
 Default: <code class="docutils literal notranslate"><span class="pre">-1</span></code></li>
-<li><strong>memory_reservation</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Amount of CPU (MHz) that is guaranteed
+<li><strong>memory_reservation</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></li>
 <li><strong>memory_share_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
 values for shares. Can be one of <code class="docutils literal notranslate"><span class="pre">low</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, <code class="docutils literal notranslate"><span class="pre">high</span></code>, or <code class="docutils literal notranslate"><span class="pre">custom</span></code>. When
 <code class="docutils literal notranslate"><span class="pre">low</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, or <code class="docutils literal notranslate"><span class="pre">high</span></code> are specified values in <code class="docutils literal notranslate"><span class="pre">memory_shares</span></code> will be
 ignored.  Default: <code class="docutils literal notranslate"><span class="pre">normal</span></code></li>
-<li><strong>memory_shares</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of shares allocated for CPU. Used to
+<li><strong>memory_shares</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 <code class="docutils literal notranslate"><span class="pre">memory_share_level</span></code> must be <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the vApp container.</li>
@@ -5623,46 +5382,25 @@ page</a>.</p>
 <li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>container_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – [Managed object ID|docs-about-morefs] of the vApp
 container the entity is a member of.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[dict] custom_attributes
-:param pulumi.Input[str] start_action: How to start the entity. Valid settings are none</p>
-<blockquote>
-<div>or powerOn. If set to none, then the entity does not participate in auto-start.
-Default: powerOn</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>start_delay</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Delay in seconds before continuing with the next
+<li><strong>start_action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – How to start the entity. Valid settings are none
+or powerOn. If set to none, then the entity does not participate in auto-start.
+Default: powerOn</li>
+<li><strong>start_delay</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Delay in seconds before continuing with the next
 entity in the order of entities to be started. Default: 120</li>
-<li><strong>start_order</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Order to start and stop target in vApp. Default: 1</li>
+<li><strong>start_order</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Order to start and stop target in vApp. Default: 1</li>
 <li><strong>stop_action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines the stop action for the entity. Can be set
 to none, powerOff, guestShutdown, or suspend. If set to none, then the entity
 does not participate in auto-stop. Default: powerOff</li>
-<li><strong>stop_delay</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Delay in seconds before continuing with the next
+<li><strong>stop_delay</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Delay in seconds before continuing with the next
 entity in the order sequence. This is only used if the stopAction is
 guestShutdown. Default: 120</li>
+<li><strong>target_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – [Managed object ID|docs-about-morefs] of the entity
+to power on or power off. This can be a virtual machine or a vApp.</li>
+<li><strong>wait_for_guest</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if the VM should be marked as being
+started when VMware Tools are ready instead of waiting for <code class="docutils literal notranslate"><span class="pre">start_delay</span></code>. This
+property has no effect for vApps. Default: false</li>
 </ul>
 </td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[list] tags
-:param pulumi.Input[str] target_id: [Managed object ID|docs-about-morefs] of the entity</p>
-<blockquote>
-<div>to power on or power off. This can be a virtual machine or a vApp.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>wait_for_guest</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if the VM should be marked as being
-started when VMware Tools are ready instead of waiting for <code class="docutils literal notranslate"><span class="pre">start_delay</span></code>. This
-property has no effect for vApps. Default: false</td>
 </tr>
 </tbody>
 </table>
@@ -5789,7 +5527,7 @@ disk. Can be omitted when when ESXi or if there is only one datacenter in
 your infrastructure.</li>
 <li><strong>datastore</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the datastore in which to create the
 disk.</li>
-<li><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Size of the disk (in GB).</li>
+<li><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Size of the disk (in GB).</li>
 <li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of disk to create. Can be one of
 <code class="docutils literal notranslate"><span class="pre">eagerZeroedThick</span></code>, <code class="docutils literal notranslate"><span class="pre">lazy</span></code>, or <code class="docutils literal notranslate"><span class="pre">thin</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">eagerZeroedThick</span></code>. For
 information on what each kind of disk provisioning policy means, click
@@ -5895,7 +5633,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.VirtualMachine">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">VirtualMachine</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>alternate_guest_name=None</em>, <em>annotation=None</em>, <em>boot_delay=None</em>, <em>boot_retry_delay=None</em>, <em>boot_retry_enabled=None</em>, <em>cdrom=None</em>, <em>clone=None</em>, <em>cpu_hot_add_enabled=None</em>, <em>cpu_hot_remove_enabled=None</em>, <em>cpu_limit=None</em>, <em>cpu_performance_counters_enabled=None</em>, <em>cpu_reservation=None</em>, <em>cpu_share_count=None</em>, <em>cpu_share_level=None</em>, <em>custom_attributes=None</em>, <em>datastore_cluster_id=None</em>, <em>datastore_id=None</em>, <em>disks=None</em>, <em>efi_secure_boot_enabled=None</em>, <em>enable_disk_uuid=None</em>, <em>enable_logging=None</em>, <em>ept_rvi_mode=None</em>, <em>extra_config=None</em>, <em>firmware=None</em>, <em>folder=None</em>, <em>force_power_off=None</em>, <em>guest_id=None</em>, <em>host_system_id=None</em>, <em>hv_mode=None</em>, <em>latency_sensitivity=None</em>, <em>memory=None</em>, <em>memory_hot_add_enabled=None</em>, <em>memory_limit=None</em>, <em>memory_reservation=None</em>, <em>memory_share_count=None</em>, <em>memory_share_level=None</em>, <em>migrate_wait_timeout=None</em>, <em>name=None</em>, <em>nested_hv_enabled=None</em>, <em>network_interfaces=None</em>, <em>num_cores_per_socket=None</em>, <em>num_cpus=None</em>, <em>resource_pool_id=None</em>, <em>run_tools_scripts_after_power_on=None</em>, <em>run_tools_scripts_after_resume=None</em>, <em>run_tools_scripts_before_guest_reboot=None</em>, <em>run_tools_scripts_before_guest_shutdown=None</em>, <em>run_tools_scripts_before_guest_standby=None</em>, <em>scsi_bus_sharing=None</em>, <em>scsi_controller_count=None</em>, <em>scsi_type=None</em>, <em>shutdown_wait_timeout=None</em>, <em>swap_placement_policy=None</em>, <em>sync_time_with_host=None</em>, <em>tags=None</em>, <em>vapp=None</em>, <em>wait_for_guest_net_routable=None</em>, <em>wait_for_guest_net_timeout=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualMachine" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">VirtualMachine</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>alternate_guest_name=None</em>, <em>annotation=None</em>, <em>boot_delay=None</em>, <em>boot_retry_delay=None</em>, <em>boot_retry_enabled=None</em>, <em>cdrom=None</em>, <em>clone=None</em>, <em>cpu_hot_add_enabled=None</em>, <em>cpu_hot_remove_enabled=None</em>, <em>cpu_limit=None</em>, <em>cpu_performance_counters_enabled=None</em>, <em>cpu_reservation=None</em>, <em>cpu_share_count=None</em>, <em>cpu_share_level=None</em>, <em>custom_attributes=None</em>, <em>datastore_cluster_id=None</em>, <em>datastore_id=None</em>, <em>disks=None</em>, <em>efi_secure_boot_enabled=None</em>, <em>enable_disk_uuid=None</em>, <em>enable_logging=None</em>, <em>ept_rvi_mode=None</em>, <em>extra_config=None</em>, <em>firmware=None</em>, <em>folder=None</em>, <em>force_power_off=None</em>, <em>guest_id=None</em>, <em>host_system_id=None</em>, <em>hv_mode=None</em>, <em>ignored_guest_ips=None</em>, <em>latency_sensitivity=None</em>, <em>memory=None</em>, <em>memory_hot_add_enabled=None</em>, <em>memory_limit=None</em>, <em>memory_reservation=None</em>, <em>memory_share_count=None</em>, <em>memory_share_level=None</em>, <em>migrate_wait_timeout=None</em>, <em>name=None</em>, <em>nested_hv_enabled=None</em>, <em>network_interfaces=None</em>, <em>num_cores_per_socket=None</em>, <em>num_cpus=None</em>, <em>resource_pool_id=None</em>, <em>run_tools_scripts_after_power_on=None</em>, <em>run_tools_scripts_after_resume=None</em>, <em>run_tools_scripts_before_guest_reboot=None</em>, <em>run_tools_scripts_before_guest_shutdown=None</em>, <em>run_tools_scripts_before_guest_standby=None</em>, <em>scsi_bus_sharing=None</em>, <em>scsi_controller_count=None</em>, <em>scsi_type=None</em>, <em>shutdown_wait_timeout=None</em>, <em>swap_placement_policy=None</em>, <em>sync_time_with_host=None</em>, <em>tags=None</em>, <em>vapp=None</em>, <em>wait_for_guest_ip_timeout=None</em>, <em>wait_for_guest_net_routable=None</em>, <em>wait_for_guest_net_timeout=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualMachine" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">vsphere_virtual_machine</span></code> resource can be used to manage the complex
 lifecycle of a virtual machine. It supports management of disk, network
 interface, and CDROM devices, creation from scratch or cloning from template,
@@ -5952,8 +5690,10 @@ waiter is necessary to ensure that correct IP information gets reported to
 the guest virtual machine, mainly to facilitate the availability of a valid,
 reachable default IP address for any <a class="reference external" href="/docs/provisioners/index.html">provisioners</a>.
 The behavior of the waiter can be controlled with the
-<code class="docutils literal notranslate"><span class="pre">wait_for_guest_net_timeout</span></code> and
-<code class="docutils literal notranslate"><span class="pre">wait_for_guest_net_routable</span></code> settings.</li>
+<code class="docutils literal notranslate"><span class="pre">wait_for_guest_net_timeout</span></code>,
+<code class="docutils literal notranslate"><span class="pre">wait_for_guest_net_routable</span></code>,
+<code class="docutils literal notranslate"><span class="pre">wait_for_guest_ip_timeout</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">ignored_guest_ips</span></code> settings.</li>
 </ul>
 <blockquote>
 <div><strong>NOTE:</strong> This section only applies to versions of this resource available
@@ -6096,9 +5836,9 @@ the virtual machine.</p>
 when <code class="docutils literal notranslate"><span class="pre">guest_id</span></code> is <code class="docutils literal notranslate"><span class="pre">other</span></code> or <code class="docutils literal notranslate"><span class="pre">other-64</span></code>.</li>
 <li><strong>annotation</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A user-provided description of the virtual machine.
 The default is no annotation.</li>
-<li><strong>boot_delay</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of milliseconds to wait before starting
+<li><strong>boot_delay</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of milliseconds to wait before starting
 the boot sequence. The default is no delay.</li>
-<li><strong>boot_retry_delay</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of milliseconds to wait before
+<li><strong>boot_retry_delay</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of milliseconds to wait before
 retrying the boot sequence. This only valid if <code class="docutils literal notranslate"><span class="pre">boot_retry_enabled</span></code> is true.
 Default: <code class="docutils literal notranslate"><span class="pre">10000</span></code> (10 seconds).</li>
 <li><strong>boot_retry_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to true, a virtual machine that
@@ -6114,14 +5854,14 @@ template for more details.</li>
 machine while it is running.</li>
 <li><strong>cpu_hot_remove_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow CPUs to be removed to this
 virtual machine while it is running.</li>
-<li><strong>cpu_limit</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum amount of CPU (in MHz) that this virtual
+<li><strong>cpu_limit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum amount of CPU (in MHz) that this virtual
 machine can consume, regardless of available resources. The default is no
 limit.</li>
 <li><strong>cpu_performance_counters_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable CPU performance
 counters on this virtual machine. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
-<li><strong>cpu_reservation</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The amount of CPU (in MHz) that this virtual
+<li><strong>cpu_reservation</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of CPU (in MHz) that this virtual
 machine is guaranteed. The default is no reservation.</li>
-<li><strong>cpu_share_count</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of CPU shares allocated to the
+<li><strong>cpu_share_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of CPU shares allocated to the
 virtual machine when the <code class="docutils literal notranslate"><span class="pre">cpu_share_level</span></code> is <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</li>
 <li><strong>cpu_share_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The allocation level for CPU resources. Can be
 one of <code class="docutils literal notranslate"><span class="pre">high</span></code>, <code class="docutils literal notranslate"><span class="pre">low</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, or <code class="docutils literal notranslate"><span class="pre">custom</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</li>
@@ -6169,25 +5909,29 @@ according to any defaults or DRS policies in place.</li>
 <li><strong>hv_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The (non-nested) hardware virtualization setting for
 this virtual machine. Can be one of <code class="docutils literal notranslate"><span class="pre">hvAuto</span></code>, <code class="docutils literal notranslate"><span class="pre">hvOn</span></code>, or <code class="docutils literal notranslate"><span class="pre">hvOff</span></code>. Default:
 <code class="docutils literal notranslate"><span class="pre">hvAuto</span></code>.</li>
+<li><strong>ignored_guest_ips</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of IP addresses to ignore while waiting
+for an available IP address using either of the waiters. Any IP addresses in
+this list will be ignored if they show up so that the waiter will continue to
+wait for a real IP address. Default: [].</li>
 <li><strong>latency_sensitivity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Controls the scheduling delay of the
 virtual machine. Use a higher sensitivity for applications that require lower
 latency, such as VOIP, media player applications, or applications that
 require frequent access to mouse or keyboard devices. Can be one of <code class="docutils literal notranslate"><span class="pre">low</span></code>,
 <code class="docutils literal notranslate"><span class="pre">normal</span></code>, <code class="docutils literal notranslate"><span class="pre">medium</span></code>, or <code class="docutils literal notranslate"><span class="pre">high</span></code>.</li>
-<li><strong>memory</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The size of the virtual machine’s memory, in MB.
+<li><strong>memory</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The size of the virtual machine’s memory, in MB.
 Default: <code class="docutils literal notranslate"><span class="pre">1024</span></code> (1 GB).</li>
 <li><strong>memory_hot_add_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow memory to be added to this
 virtual machine while it is running.</li>
-<li><strong>memory_limit</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum amount of memory (in MB) that this
+<li><strong>memory_limit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum amount of memory (in MB) that this
 virtual machine can consume, regardless of available resources. The default
 is no limit.</li>
-<li><strong>memory_reservation</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The amount of memory (in MB) that this
+<li><strong>memory_reservation</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of memory (in MB) that this
 virtual machine is guaranteed. The default is no reservation.</li>
-<li><strong>memory_share_count</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of memory shares allocated to
+<li><strong>memory_share_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of memory shares allocated to
 the virtual machine when the <code class="docutils literal notranslate"><span class="pre">memory_share_level</span></code> is <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</li>
 <li><strong>memory_share_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The allocation level for memory resources.
 Can be one of <code class="docutils literal notranslate"><span class="pre">high</span></code>, <code class="docutils literal notranslate"><span class="pre">low</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, or <code class="docutils literal notranslate"><span class="pre">custom</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</li>
-<li><strong>migrate_wait_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The amount of time, in minutes, to wait
+<li><strong>migrate_wait_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of time, in minutes, to wait
 for a virtual machine migration to complete before failing. Default: 10
 minutes. Also see the section on virtual machine
 migration.</li>
@@ -6199,10 +5943,10 @@ Default: <code class="docutils literal notranslate"><span class="pre">false</spa
 <li><strong>network_interfaces</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A specification for a virtual NIC on this
 virtual machine. See network interface options
 below.</li>
-<li><strong>num_cores_per_socket</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of cores to distribute among
+<li><strong>num_cores_per_socket</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of cores to distribute among
 the CPUs in this virtual machine. If specified, the value supplied to
 <code class="docutils literal notranslate"><span class="pre">num_cpus</span></code> must be evenly divisible by this value. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</li>
-<li><strong>num_cpus</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of virtual processors to assign to this
+<li><strong>num_cpus</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of virtual processors to assign to this
 virtual machine. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</li>
 <li><strong>resource_pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object reference
 ID][docs-about-morefs] of the resource pool to put this virtual machine in.
@@ -6220,14 +5964,14 @@ of pre-shutdown scripts when VMware tools is installed. Default: <code class="do
 pre-standby scripts when VMware tools is installed. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</li>
 <li><strong>scsi_bus_sharing</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Mode for sharing the SCSI bus. The modes are
 physicalSharing, virtualSharing, and noSharing. Default: <code class="docutils literal notranslate"><span class="pre">noSharing</span></code>.</li>
-<li><strong>scsi_controller_count</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of SCSI controllers that
+<li><strong>scsi_controller_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of SCSI controllers that
 Terraform manages on this virtual machine. This directly affects the amount
 of disks you can add to the virtual machine and the maximum disk unit number.
 Note that lowering this value does not remove controllers. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</li>
 <li><strong>scsi_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of SCSI bus this virtual machine will have.
 Can be one of lsilogic (LSI Logic Parallel), lsilogic-sas (LSI Logic SAS) or
 pvscsi (VMware Paravirtual). Defualt: <code class="docutils literal notranslate"><span class="pre">pvscsi</span></code>.</li>
-<li><strong>shutdown_wait_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The amount of time, in minutes, to wait
+<li><strong>shutdown_wait_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of time, in minutes, to wait
 for a graceful guest shutdown when making necessary updates to the virtual
 machine. If <code class="docutils literal notranslate"><span class="pre">force_power_off</span></code> is set to true, the VM will be force powered-off
 after this timeout, otherwise an error is returned. Default: 3 minutes.</li>
@@ -6243,13 +5987,23 @@ is <code class="docutils literal notranslate"><span class="pre">properties</span
 imported from OVF or OVA files. See Using vApp properties to supply OVF/OVA
 configuration for
 more details.</li>
+<li><strong>wait_for_guest_ip_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of time, in minutes, to
+wait for an available guest IP address on this virtual machine. This should
+only be used if your version of VMware Tools does not allow the
+<code class="docutils literal notranslate"><span class="pre">wait_for_guest_net_timeout</span></code> waiter to be
+used. A value less than 1 disables the waiter. Default: 0.</li>
 <li><strong>wait_for_guest_net_routable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Controls whether or not the guest
 network waiter waits for a routable address. When <code class="docutils literal notranslate"><span class="pre">false</span></code>, the waiter does
 not wait for a default gateway, nor are IP addresses checked against any
-discovered default gateways as part of its success criteria. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</li>
-<li><strong>wait_for_guest_net_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The amount of time, in minutes, to
-wait for an available IP address on this virtual machine. A value less than 1
-disables the waiter. Default: 5 minutes.</li>
+discovered default gateways as part of its success criteria. This property is
+ignored if the <code class="docutils literal notranslate"><span class="pre">wait_for_guest_ip_timeout</span></code>
+waiter is used. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</li>
+<li><strong>wait_for_guest_net_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of time, in minutes, to
+wait for an available IP address on this virtual machine’s NICs. Older
+versions of VMware Tools do not populate this property. In those cases, this
+waiter can be disabled and the
+<code class="docutils literal notranslate"><span class="pre">wait_for_guest_ip_timeout</span></code> waiter can be used
+instead. A value less than 1 disables the waiter. Default: 5 minutes.</li>
 </ul>
 </td>
 </tr>
@@ -6510,6 +6264,15 @@ this virtual machine. Can be one of <code class="docutils literal notranslate"><
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_vsphere.VirtualMachine.ignored_guest_ips">
+<code class="descname">ignored_guest_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.ignored_guest_ips" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of IP addresses to ignore while waiting
+for an available IP address using either of the waiters. Any IP addresses in
+this list will be ignored if they show up so that the waiter will continue to
+wait for a real IP address. Default: [].</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_vsphere.VirtualMachine.imported">
 <code class="descname">imported</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.imported" title="Permalink to this definition">¶</a></dt>
 <dd><p>This is flagged if the virtual machine has been imported, or the
@@ -6765,20 +6528,35 @@ datastore.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_vsphere.VirtualMachine.wait_for_guest_ip_timeout">
+<code class="descname">wait_for_guest_ip_timeout</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.wait_for_guest_ip_timeout" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amount of time, in minutes, to
+wait for an available guest IP address on this virtual machine. This should
+only be used if your version of VMware Tools does not allow the
+<code class="docutils literal notranslate"><span class="pre">wait_for_guest_net_timeout</span></code> waiter to be
+used. A value less than 1 disables the waiter. Default: 0.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_vsphere.VirtualMachine.wait_for_guest_net_routable">
 <code class="descname">wait_for_guest_net_routable</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.wait_for_guest_net_routable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Controls whether or not the guest
 network waiter waits for a routable address. When <code class="docutils literal notranslate"><span class="pre">false</span></code>, the waiter does
 not wait for a default gateway, nor are IP addresses checked against any
-discovered default gateways as part of its success criteria. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+discovered default gateways as part of its success criteria. This property is
+ignored if the <code class="docutils literal notranslate"><span class="pre">wait_for_guest_ip_timeout</span></code>
+waiter is used. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_vsphere.VirtualMachine.wait_for_guest_net_timeout">
 <code class="descname">wait_for_guest_net_timeout</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.wait_for_guest_net_timeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>The amount of time, in minutes, to
-wait for an available IP address on this virtual machine. A value less than 1
-disables the waiter. Default: 5 minutes.</p>
+wait for an available IP address on this virtual machine’s NICs. Older
+versions of VMware Tools do not populate this property. In those cases, this
+waiter can be disabled and the
+<code class="docutils literal notranslate"><span class="pre">wait_for_guest_ip_timeout</span></code> waiter can be used
+instead. A value less than 1 disables the waiter. Default: 5 minutes.</p>
 </dd></dl>
 
 <dl class="method">
@@ -7164,7 +6942,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_vsphere.get_compute_cluster">
-<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_compute_cluster</code><span class="sig-paren">(</span><em>datacenter_id=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_compute_cluster" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_compute_cluster</code><span class="sig-paren">(</span><em>datacenter_id=None</em>, <em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_compute_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">vsphere_compute_cluster</span></code> data source can be used to discover the ID of a
 cluster in vSphere. This is useful to fetch the ID of a cluster that you want
 to use for virtual machine placement via the
@@ -7180,7 +6958,7 @@ details about clusters or how to work with them in Terraform.</div></blockquote>
 
 <dl class="function">
 <dt id="pulumi_vsphere.get_custom_attribute">
-<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_custom_attribute</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_custom_attribute" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_custom_attribute</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_custom_attribute" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">vsphere_custom_attribute</span></code> data source can be used to reference custom 
 attributes that are not managed by Terraform. Its attributes are exactly the 
 same as the <cite>``vsphere_custom_attribute`</cite> resource &lt;/docs/providers/vsphere/r/custom_attribute.html&gt;`_, 
@@ -7193,7 +6971,7 @@ and require vCenter.</div></blockquote>
 
 <dl class="function">
 <dt id="pulumi_vsphere.get_datacenter">
-<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_datacenter</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_datacenter" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_datacenter</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_datacenter" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">vsphere_datacenter</span></code> data source can be used to discover the ID of a
 vSphere datacenter. This can then be used with resources or data sources that
 require a datacenter, such as the <cite>``vsphere_host`</cite> &lt;/docs/providers/vsphere/d/host.html&gt;`_
@@ -7202,7 +6980,7 @@ data source.</p>
 
 <dl class="function">
 <dt id="pulumi_vsphere.get_datastore">
-<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_datastore</code><span class="sig-paren">(</span><em>datacenter_id=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_datastore" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_datastore</code><span class="sig-paren">(</span><em>datacenter_id=None</em>, <em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_datastore" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">vsphere_datastore</span></code> data source can be used to discover the ID of a
 datastore in vSphere. This is useful to fetch the ID of a datastore that you
 want to use to create virtual machines in using the
@@ -7211,7 +6989,7 @@ want to use to create virtual machines in using the
 
 <dl class="function">
 <dt id="pulumi_vsphere.get_datastore_cluster">
-<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_datastore_cluster</code><span class="sig-paren">(</span><em>datacenter_id=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_datastore_cluster" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_datastore_cluster</code><span class="sig-paren">(</span><em>datacenter_id=None</em>, <em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_datastore_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">vsphere_datastore_cluster</span></code> data source can be used to discover the ID of a
 datastore cluster in vSphere. This is useful to fetch the ID of a datastore
 cluster that you want to use to assign datastores to using the
@@ -7223,7 +7001,7 @@ virtual machines in using the
 
 <dl class="function">
 <dt id="pulumi_vsphere.get_distributed_virtual_switch">
-<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_distributed_virtual_switch</code><span class="sig-paren">(</span><em>datacenter_id=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_distributed_virtual_switch" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_distributed_virtual_switch</code><span class="sig-paren">(</span><em>datacenter_id=None</em>, <em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_distributed_virtual_switch" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">vsphere_distributed_virtual_switch</span></code> data source can be used to discover
 the ID and uplink data of a of a vSphere distributed virtual switch (DVS). This
 can then be used with resources or data sources that require a DVS, such as the
@@ -7235,8 +7013,16 @@ ESXi connections.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
+<dt id="pulumi_vsphere.get_folder">
+<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_folder</code><span class="sig-paren">(</span><em>path=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_folder" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">vsphere_folder</span></code> data source can be used to get the general attributes of a
+vSphere inventory folder. Paths are absolute and include must include the
+datacenter.</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="pulumi_vsphere.get_host">
-<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_host</code><span class="sig-paren">(</span><em>datacenter_id=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_host" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_host</code><span class="sig-paren">(</span><em>datacenter_id=None</em>, <em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_host" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">vsphere_host</span></code> data source can be used to discover the ID of a vSphere
 host. This can then be used with resources or data sources that require a host
 managed object reference ID.</p>
@@ -7244,7 +7030,7 @@ managed object reference ID.</p>
 
 <dl class="function">
 <dt id="pulumi_vsphere.get_network">
-<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_network</code><span class="sig-paren">(</span><em>datacenter_id=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_network" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_network</code><span class="sig-paren">(</span><em>datacenter_id=None</em>, <em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_network" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">vsphere_network</span></code> data source can be used to discover the ID of a network
 in vSphere. This can be any network that can be used as the backing for a
 network interface for <code class="docutils literal notranslate"><span class="pre">vsphere_virtual_machine</span></code> or any other vSphere resource
@@ -7254,7 +7040,7 @@ port groups, or opaque networks such as those managed by NSX.</p>
 
 <dl class="function">
 <dt id="pulumi_vsphere.get_resource_pool">
-<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_resource_pool</code><span class="sig-paren">(</span><em>datacenter_id=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_resource_pool" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_resource_pool</code><span class="sig-paren">(</span><em>datacenter_id=None</em>, <em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_resource_pool" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">vsphere_resource_pool</span></code> data source can be used to discover the ID of a
 resource pool in vSphere. This is useful to fetch the ID of a resource pool
 that you want to use to create virtual machines in using the
@@ -7263,7 +7049,7 @@ that you want to use to create virtual machines in using the
 
 <dl class="function">
 <dt id="pulumi_vsphere.get_tag">
-<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_tag</code><span class="sig-paren">(</span><em>category_id=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_tag" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_tag</code><span class="sig-paren">(</span><em>category_id=None</em>, <em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_tag" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">vsphere_tag</span></code> data source can be used to reference tags that are not
 managed by Terraform. Its attributes are exactly the same as the <cite>``vsphere_tag`</cite>
 resource &lt;/docs/providers/vsphere/r/tag.html&gt;`_, and, like importing, the data source takes a name and
@@ -7276,7 +7062,7 @@ requires vCenter 6.0 or higher.</div></blockquote>
 
 <dl class="function">
 <dt id="pulumi_vsphere.get_tag_category">
-<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_tag_category</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_tag_category" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_tag_category</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_tag_category" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">vsphere_tag_category</span></code> data source can be used to reference tag categories
 that are not managed by Terraform. Its attributes are exactly the same as the
 <cite>``vsphere_tag_category`</cite> resource &lt;/docs/providers/vsphere/r/tag_category.html&gt;`_, and, like importing,
@@ -7289,7 +7075,7 @@ requires vCenter 6.0 or higher.</div></blockquote>
 
 <dl class="function">
 <dt id="pulumi_vsphere.get_vapp_container">
-<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_vapp_container</code><span class="sig-paren">(</span><em>datacenter_id=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_vapp_container" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_vapp_container</code><span class="sig-paren">(</span><em>datacenter_id=None</em>, <em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_vapp_container" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">vsphere_vapp_container</span></code> data source can be used to discover the ID of a
 vApp container in vSphere. This is useful to fetch the ID of a vApp container
 that you want to use to create virtual machines in using the
@@ -7298,7 +7084,7 @@ that you want to use to create virtual machines in using the
 
 <dl class="function">
 <dt id="pulumi_vsphere.get_virtual_machine">
-<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_virtual_machine</code><span class="sig-paren">(</span><em>datacenter_id=None</em>, <em>name=None</em>, <em>scsi_controller_scan_count=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_virtual_machine" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_virtual_machine</code><span class="sig-paren">(</span><em>datacenter_id=None</em>, <em>name=None</em>, <em>scsi_controller_scan_count=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_virtual_machine" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">vsphere_virtual_machine</span></code> data source can be used to find the UUID of an
 existing virtual machine or template. Its most relevant purpose is for finding
 the UUID of a template to be used as the source for cloning into a new
@@ -7308,7 +7094,7 @@ reads the guest ID so that can be supplied as well.</p>
 
 <dl class="function">
 <dt id="pulumi_vsphere.get_vmfs_disks">
-<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_vmfs_disks</code><span class="sig-paren">(</span><em>filter=None</em>, <em>host_system_id=None</em>, <em>rescan=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_vmfs_disks" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_vsphere.</code><code class="descname">get_vmfs_disks</code><span class="sig-paren">(</span><em>filter=None</em>, <em>host_system_id=None</em>, <em>rescan=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_vmfs_disks" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">vsphere_vmfs_disks</span></code> data source can be used to discover the storage
 devices available on an ESXi host. This data source can be combined with the
 <cite>``vsphere_vmfs_datastore`</cite> &lt;/docs/providers/vsphere/r/vmfs_datastore.html&gt;`_ resource to create VMFS

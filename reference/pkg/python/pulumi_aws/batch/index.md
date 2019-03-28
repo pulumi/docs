@@ -370,7 +370,7 @@ mapped to a job queue and their order.  The position of the compute environments
 in the list will dictate the order. You can associate up to 3 compute environments
 with a job queue.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the job queue.</li>
-<li><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The priority of the job queue. Job queues with a higher priority
+<li><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The priority of the job queue. Job queues with a higher priority
 are evaluated first when associated with the same compute environment.</li>
 <li><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The state of the job queue. Must be one of: <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> or <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code></li>
 </ul>

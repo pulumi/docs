@@ -187,24 +187,12 @@ For example, “2015-08-26” is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GM
 type based on the file extension and ignores the value sent in the Content-Type
 header, if present.</li>
 <li><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to trigger updates. The only meaningful value is ${md5(file(“path/to/file”))}.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[dict] metadata
-:param pulumi.Input[str] name: A unique name for the object.
-:param pulumi.Input[str] object_manifest: A string set to specify that this is a dynamic large</p>
-<blockquote>
-<div>object manifest object. The value is the container and object name prefix of the
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the object.</li>
+<li><strong>object_manifest</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string set to specify that this is a dynamic large 
+object manifest object. The value is the container and object name prefix of the
 segment objects in the form container/prefix. You must UTF-8-encode and then
 URL-encode the names of the container and prefix before you include them in this
-header.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+header.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to create the container. If
 omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
 creates a new container.</li>
@@ -421,15 +409,13 @@ Valid values are <code class="docutils literal notranslate"><span class="pre">GE
 it has expired. If set to true, this will create a new resource with a new
 ID and new URL. Defaults to false.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region the tempurl is located in.</li>
+<li><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The TTL, in seconds, for the URL. For how long it should
+be valid.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] split
-:param pulumi.Input[int] ttl: The TTL, in seconds, for the URL. For how long it should</p>
-<blockquote>
-<div>be valid.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.objectstorage.TempUrl.container">
 <code class="descname">container</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.objectstorage.TempUrl.container" title="Permalink to this definition">¶</a></dt>

@@ -85,8 +85,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
-<dt id="pulumi_gcp.runtimeconfig.Variavble">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.runtimeconfig.</code><code class="descname">Variavble</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>parent=None</em>, <em>project=None</em>, <em>text=None</em>, <em>value=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.runtimeconfig.Variavble" title="Permalink to this definition">¶</a></dt>
+<dt id="pulumi_gcp.runtimeconfig.Variable">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.runtimeconfig.</code><code class="descname">Variable</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>parent=None</em>, <em>project=None</em>, <em>text=None</em>, <em>value=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.runtimeconfig.Variable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a RuntimeConfig variable in Google Cloud. For more information, see the
 <a class="reference external" href="https://cloud.google.com/deployment-manager/runtime-configurator/">official documentation</a>,
 or the
@@ -110,37 +110,37 @@ is not provided, the provider project is used.</li>
 </tbody>
 </table>
 <dl class="attribute">
-<dt id="pulumi_gcp.runtimeconfig.Variavble.name">
-<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.runtimeconfig.Variavble.name" title="Permalink to this definition">¶</a></dt>
+<dt id="pulumi_gcp.runtimeconfig.Variable.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.runtimeconfig.Variable.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the variable to manage. Note that variable
 names can be hierarchical using slashes (e.g. “prod-variables/hostname”).</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_gcp.runtimeconfig.Variavble.parent">
-<code class="descname">parent</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.runtimeconfig.Variavble.parent" title="Permalink to this definition">¶</a></dt>
+<dt id="pulumi_gcp.runtimeconfig.Variable.parent">
+<code class="descname">parent</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.runtimeconfig.Variable.parent" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the RuntimeConfig resource containing this
 variable.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_gcp.runtimeconfig.Variavble.project">
-<code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.runtimeconfig.Variavble.project" title="Permalink to this definition">¶</a></dt>
+<dt id="pulumi_gcp.runtimeconfig.Variable.project">
+<code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.runtimeconfig.Variable.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_gcp.runtimeconfig.Variavble.update_time">
-<code class="descname">update_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.runtimeconfig.Variavble.update_time" title="Permalink to this definition">¶</a></dt>
+<dt id="pulumi_gcp.runtimeconfig.Variable.update_time">
+<code class="descname">update_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.runtimeconfig.Variable.update_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Computed) The timestamp in RFC3339 UTC “Zulu” format,
 accurate to nanoseconds, representing when the variable was last updated.
 Example: “2016-10-09T12:33:37.578138407Z”.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pulumi_gcp.runtimeconfig.Variavble.translate_output_property">
-<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.runtimeconfig.Variavble.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dt id="pulumi_gcp.runtimeconfig.Variable.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.runtimeconfig.Variable.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -158,8 +158,8 @@ into a format of their choosing before writing those properties to the resource 
 </dd></dl>
 
 <dl class="method">
-<dt id="pulumi_gcp.runtimeconfig.Variavble.translate_input_property">
-<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.runtimeconfig.Variavble.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dt id="pulumi_gcp.runtimeconfig.Variable.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.runtimeconfig.Variable.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <table class="docutils field-list" frame="void" rules="none">

@@ -619,7 +619,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>published</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is this Product Published?</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.</li>
 <li><strong>subscription_required</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is a Subscription required to access API’s included in this Product?</li>
-<li><strong>subscriptions_limit</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of subscriptions a user can have to this Product at the same time.</li>
+<li><strong>subscriptions_limit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of subscriptions a user can have to this Product at the same time.</li>
 <li><strong>terms</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Terms and Conditions for this Product, which must be accepted by Developers before they can begin the Subscription process.</li>
 </ul>
 </td>

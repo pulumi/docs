@@ -124,7 +124,7 @@ Conflicts w/ <code class="docutils literal notranslate"><span class="pre">policy
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A list of tags to associate with this stack.</li>
 <li><strong>template_body</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Structure containing the template body (max size: 51,200 bytes).</li>
 <li><strong>template_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Location of a file containing the template body (max size: 460,800 bytes).</li>
-<li><strong>timeout_in_minutes</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The amount of time that can pass before the stack status becomes <code class="docutils literal notranslate"><span class="pre">CREATE_FAILED</span></code>.</li>
+<li><strong>timeout_in_minutes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of time that can pass before the stack status becomes <code class="docutils literal notranslate"><span class="pre">CREATE_FAILED</span></code>.</li>
 </ul>
 </td>
 </tr>

@@ -2,14 +2,14 @@
 <span id="container"></span><h1>container<a class="headerlink" href="#module-pulumi_gcp.container" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.container.Cluster">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.container.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>additional_zones=None</em>, <em>addons_config=None</em>, <em>cluster_ipv4_cidr=None</em>, <em>description=None</em>, <em>enable_binary_authorization=None</em>, <em>enable_kubernetes_alpha=None</em>, <em>enable_legacy_abac=None</em>, <em>enable_tpu=None</em>, <em>initial_node_count=None</em>, <em>ip_allocation_policy=None</em>, <em>logging_service=None</em>, <em>maintenance_policy=None</em>, <em>master_auth=None</em>, <em>master_authorized_networks_config=None</em>, <em>master_ipv4_cidr_block=None</em>, <em>min_master_version=None</em>, <em>monitoring_service=None</em>, <em>name=None</em>, <em>network=None</em>, <em>network_policy=None</em>, <em>node_config=None</em>, <em>node_pools=None</em>, <em>node_version=None</em>, <em>pod_security_policy_config=None</em>, <em>private_cluster=None</em>, <em>private_cluster_config=None</em>, <em>project=None</em>, <em>region=None</em>, <em>remove_default_node_pool=None</em>, <em>resource_labels=None</em>, <em>subnetwork=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.Cluster" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a Google Kubernetes Engine (GKE) cluster. For more information see
+<em class="property">class </em><code class="descclassname">pulumi_gcp.container.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>additional_zones=None</em>, <em>addons_config=None</em>, <em>cluster_autoscaling=None</em>, <em>cluster_ipv4_cidr=None</em>, <em>default_max_pods_per_node=None</em>, <em>description=None</em>, <em>enable_binary_authorization=None</em>, <em>enable_kubernetes_alpha=None</em>, <em>enable_legacy_abac=None</em>, <em>enable_tpu=None</em>, <em>initial_node_count=None</em>, <em>ip_allocation_policy=None</em>, <em>logging_service=None</em>, <em>maintenance_policy=None</em>, <em>master_auth=None</em>, <em>master_authorized_networks_config=None</em>, <em>min_master_version=None</em>, <em>monitoring_service=None</em>, <em>name=None</em>, <em>network=None</em>, <em>network_policy=None</em>, <em>node_config=None</em>, <em>node_pools=None</em>, <em>node_version=None</em>, <em>pod_security_policy_config=None</em>, <em>private_cluster_config=None</em>, <em>project=None</em>, <em>region=None</em>, <em>remove_default_node_pool=None</em>, <em>resource_labels=None</em>, <em>subnetwork=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.Cluster" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a Google Kubernetes Engine (GKE) cluster. For more information see
 <a class="reference external" href="https://cloud.google.com/container-engine/docs/clusters">the official documentation</a>
-and
-<a class="reference external" href="https://cloud.google.com/container-engine/reference/rest/v1/projects.zones.clusters">API</a>.</p>
+and <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters">the API reference</a>.</p>
 <blockquote>
-<div><strong>Note:</strong> All arguments including the username and password will be stored in the raw state as plain-text.
-<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</div></blockquote>
+<div><strong>Note:</strong> All arguments and attributes, including basic auth username and
+passwords as well as certificate outputs will be stored in the raw state as
+plaintext. <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -23,13 +23,16 @@ configured, the number of nodes specified in <code class="docutils literal notra
 all specified zones.</li>
 <li><strong>addons_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The configuration for addons supported by GKE.
 Structure is documented below.</li>
+<li><strong>cluster_autoscaling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>)
+Configuration for cluster autoscaling (also called autoprovisioning), as described in
+<a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning">the docs</a>.
+Structure is documented below.</p>
+</li>
 <li><strong>cluster_ipv4_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address range of the kubernetes pods in
 this cluster. Default is an automatically assigned CIDR.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the cluster.</li>
-<li><strong>enable_binary_authorization</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable Binary Authorization for this cluster.
-If enabled, all container images will be validated by Google Binary Authorization.
-This property is in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta fields.</li>
+<li><strong>enable_binary_authorization</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – ) Enable Binary Authorization for this cluster.
+If enabled, all container images will be validated by Google Binary Authorization.</li>
 <li><strong>enable_kubernetes_alpha</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable Kubernetes Alpha features for
 this cluster. Note that when this option is enabled, the cluster cannot be upgraded
 and will be automatically deleted after 30 days.</li>
@@ -37,12 +40,9 @@ and will be automatically deleted after 30 days.</li>
 When enabled, identities in the system, including service accounts, nodes, and controllers,
 will have statically granted permissions beyond those provided by the RBAC configuration or IAM.
 Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code></li>
-<li><strong>enable_tpu</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Whether to enable Cloud TPU resources in this cluster.
-See the <a class="reference external" href="https://cloud.google.com/tpu/docs/kubernetes-engine-setup">official documentation</a>.
-This property is in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta fields.</p>
-</li>
-<li><strong>initial_node_count</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of nodes to create in this
+<li><strong>enable_tpu</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – ) Whether to enable Cloud TPU resources in this cluster.
+See the <a class="reference external" href="https://cloud.google.com/tpu/docs/kubernetes-engine-setup">official documentation</a>.</li>
+<li><strong>initial_node_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of nodes to create in this
 cluster (not including the Kubernetes master). Must be set if <code class="docutils literal notranslate"><span class="pre">node_pool</span></code> is not set.</li>
 <li><strong>ip_allocation_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Configuration for cluster IP allocation. As of now, only pre-allocated subnetworks (custom type with secondary ranges) are supported.
 This will activate IP aliases. See the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases">official documentation</a>
@@ -58,18 +58,17 @@ Kubernetes master. Structure is documented below.</li>
 <li><strong>master_authorized_networks_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The desired configuration options
 for master authorized networks. Omit the nested <code class="docutils literal notranslate"><span class="pre">cidr_blocks</span></code> attribute to disallow
 external access (except the cluster node IPs, which GKE automatically whitelists).</li>
-<li><strong>master_ipv4_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies a private
-<a class="reference external" href="https://tools.ietf.org/html/rfc1918">RFC1918</a> block for the master’s VPC. The master range must not overlap with any subnet in your cluster’s VPC.
-The master and your cluster use VPC peering. Must be specified in CIDR notation and must be <code class="docutils literal notranslate"><span class="pre">/28</span></code> subnet.
-This property is in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta fields.
-This field is deprecated, use <code class="docutils literal notranslate"><span class="pre">private_cluster_config.master_ipv4_cidr_block</span></code> instead.</p>
-</li>
-<li><strong>min_master_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The minimum version of the master. GKE
+<li><strong>min_master_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The minimum version of the master. GKE
 will auto-update the master to new versions, so this does not guarantee the
 current master version–use the read-only <code class="docutils literal notranslate"><span class="pre">master_version</span></code> field to obtain that.
 If unset, the cluster’s version will be set by GKE to the version of the most recent
-official release (which is not necessarily the latest version).</li>
+official release (which is not necessarily the latest version).  Most users will find
+the <code class="docutils literal notranslate"><span class="pre">google_container_engine_versions</span></code> data source useful - it indicates which versions
+are available, and can be use to approximate fuzzy versions in a
+Terraform-compatible way. If you intend to specify versions manually,
+<a class="reference external" href="https://cloud.google.com/kubernetes-engine/versioning-and-upgrades#specifying_cluster_version">the docs</a>
+describe the various acceptable formats for this field.</p>
+</li>
 <li><strong>monitoring_service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The monitoring service that the cluster
 should write metrics to.
 Automatically send metrics from pods in the cluster to the Google Cloud Monitoring API.
@@ -95,26 +94,17 @@ to say “these are the <em>only</em> node pools associated with this cluster”
 google_container_node_pool resource instead of this property.</li>
 <li><strong>node_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Kubernetes version on the nodes. Must either be unset
 or set to the same value as <code class="docutils literal notranslate"><span class="pre">min_master_version</span></code> on create. Defaults to the default
-version set by GKE which is not necessarily the latest version.</li>
-<li><strong>pod_security_policy_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Configuration for the
+version set by GKE which is not necessarily the latest version. This only affects
+nodes in the default node pool. While a fuzzy version can be specified, it’s
+recommended that you specify explicit versions as Terraform will see spurious diffs
+when fuzzy versions are used. See the <code class="docutils literal notranslate"><span class="pre">google_container_engine_versions</span></code> data source’s
+<code class="docutils literal notranslate"><span class="pre">version_prefix</span></code> field to approximate fuzzy versions in a Terraform-compatible way.
+To update nodes in other node pools, use the <code class="docutils literal notranslate"><span class="pre">version</span></code> attribute on the node pool.</li>
+<li><strong>pod_security_policy_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – ) Configuration for the
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies">PodSecurityPolicy</a> feature.
-Structure is documented below.
-This property is in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta fields.</p>
-</li>
-<li><strong>private_cluster</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>If true, a
-<a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters">private cluster</a> will be created, meaning
-nodes do not get public IP addresses. It is mandatory to specify <code class="docutils literal notranslate"><span class="pre">master_ipv4_cidr_block</span></code> and
-<code class="docutils literal notranslate"><span class="pre">ip_allocation_policy</span></code> with this option.
-This property is in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta fields.
-This field is deprecated, use <code class="docutils literal notranslate"><span class="pre">private_cluster_config.enable_private_nodes</span></code> instead.</p>
-</li>
-<li><strong>private_cluster_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>A set of options for creating
-a private cluster. Structure is documented below.
-This property is in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta fields.</p>
-</li>
+Structure is documented below.</li>
+<li><strong>private_cluster_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A set of options for creating
+a private cluster. Structure is documented below.</li>
 <li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.</li>
 <li><strong>remove_default_node_pool</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, deletes the default node pool upon cluster creation.</li>
@@ -146,6 +136,15 @@ Structure is documented below.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_gcp.container.Cluster.cluster_autoscaling">
+<code class="descname">cluster_autoscaling</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.cluster_autoscaling" title="Permalink to this definition">¶</a></dt>
+<dd><p>)
+Configuration for cluster autoscaling (also called autoprovisioning), as described in
+<a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning">the docs</a>.
+Structure is documented below.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gcp.container.Cluster.cluster_ipv4_cidr">
 <code class="descname">cluster_ipv4_cidr</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.cluster_ipv4_cidr" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IP address range of the kubernetes pods in
@@ -161,10 +160,8 @@ this cluster. Default is an automatically assigned CIDR.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.container.Cluster.enable_binary_authorization">
 <code class="descname">enable_binary_authorization</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.enable_binary_authorization" title="Permalink to this definition">¶</a></dt>
-<dd><p>Enable Binary Authorization for this cluster.
-If enabled, all container images will be validated by Google Binary Authorization.
-This property is in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta fields.</p>
+<dd><p>) Enable Binary Authorization for this cluster.
+If enabled, all container images will be validated by Google Binary Authorization.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -187,10 +184,8 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">false</
 <dl class="attribute">
 <dt id="pulumi_gcp.container.Cluster.enable_tpu">
 <code class="descname">enable_tpu</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.enable_tpu" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether to enable Cloud TPU resources in this cluster.
-See the <a class="reference external" href="https://cloud.google.com/tpu/docs/kubernetes-engine-setup">official documentation</a>.
-This property is in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta fields.</p>
+<dd><p>) Whether to enable Cloud TPU resources in this cluster.
+See the <a class="reference external" href="https://cloud.google.com/tpu/docs/kubernetes-engine-setup">official documentation</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -252,17 +247,6 @@ external access (except the cluster node IPs, which GKE automatically whitelists
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_gcp.container.Cluster.master_ipv4_cidr_block">
-<code class="descname">master_ipv4_cidr_block</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.master_ipv4_cidr_block" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies a private
-<a class="reference external" href="https://tools.ietf.org/html/rfc1918">RFC1918</a> block for the master’s VPC. The master range must not overlap with any subnet in your cluster’s VPC.
-The master and your cluster use VPC peering. Must be specified in CIDR notation and must be <code class="docutils literal notranslate"><span class="pre">/28</span></code> subnet.
-This property is in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta fields.
-This field is deprecated, use <code class="docutils literal notranslate"><span class="pre">private_cluster_config.master_ipv4_cidr_block</span></code> instead.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_gcp.container.Cluster.master_version">
 <code class="descname">master_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.master_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The current version of the master in the cluster. This may
@@ -277,7 +261,12 @@ has been updated by GKE.</p>
 will auto-update the master to new versions, so this does not guarantee the
 current master version–use the read-only <code class="docutils literal notranslate"><span class="pre">master_version</span></code> field to obtain that.
 If unset, the cluster’s version will be set by GKE to the version of the most recent
-official release (which is not necessarily the latest version).</p>
+official release (which is not necessarily the latest version).  Most users will find
+the <code class="docutils literal notranslate"><span class="pre">google_container_engine_versions</span></code> data source useful - it indicates which versions
+are available, and can be use to approximate fuzzy versions in a
+Terraform-compatible way. If you intend to specify versions manually,
+<a class="reference external" href="https://cloud.google.com/kubernetes-engine/versioning-and-upgrades#specifying_cluster_version">the docs</a>
+describe the various acceptable formats for this field.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -338,38 +327,27 @@ google_container_node_pool resource instead of this property.</p>
 <code class="descname">node_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.node_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Kubernetes version on the nodes. Must either be unset
 or set to the same value as <code class="docutils literal notranslate"><span class="pre">min_master_version</span></code> on create. Defaults to the default
-version set by GKE which is not necessarily the latest version.</p>
+version set by GKE which is not necessarily the latest version. This only affects
+nodes in the default node pool. While a fuzzy version can be specified, it’s
+recommended that you specify explicit versions as Terraform will see spurious diffs
+when fuzzy versions are used. See the <code class="docutils literal notranslate"><span class="pre">google_container_engine_versions</span></code> data source’s
+<code class="docutils literal notranslate"><span class="pre">version_prefix</span></code> field to approximate fuzzy versions in a Terraform-compatible way.
+To update nodes in other node pools, use the <code class="docutils literal notranslate"><span class="pre">version</span></code> attribute on the node pool.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.container.Cluster.pod_security_policy_config">
 <code class="descname">pod_security_policy_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.pod_security_policy_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>Configuration for the
+<dd><p>) Configuration for the
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies">PodSecurityPolicy</a> feature.
-Structure is documented below.
-This property is in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta fields.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.container.Cluster.private_cluster">
-<code class="descname">private_cluster</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.private_cluster" title="Permalink to this definition">¶</a></dt>
-<dd><p>If true, a
-<a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters">private cluster</a> will be created, meaning
-nodes do not get public IP addresses. It is mandatory to specify <code class="docutils literal notranslate"><span class="pre">master_ipv4_cidr_block</span></code> and
-<code class="docutils literal notranslate"><span class="pre">ip_allocation_policy</span></code> with this option.
-This property is in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta fields.
-This field is deprecated, use <code class="docutils literal notranslate"><span class="pre">private_cluster_config.enable_private_nodes</span></code> instead.</p>
+Structure is documented below.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.container.Cluster.private_cluster_config">
 <code class="descname">private_cluster_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.private_cluster_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>A set of options for creating
-a private cluster. Structure is documented below.
-This property is in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta fields.</p>
+a private cluster. Structure is documented below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -396,6 +374,14 @@ is not provided, the provider project is used.</p>
 <code class="descname">subnetwork</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.subnetwork" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name or self_link of the Google Compute Engine subnetwork in
 which the cluster’s instances are launched.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.container.Cluster.tpu_ipv4_cidr_block">
+<code class="descname">tpu_ipv4_cidr_block</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.tpu_ipv4_cidr_block" title="Permalink to this definition">¶</a></dt>
+<dd><p>(<a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Beta</a>) The IP address range of the Cloud TPUs in this cluster, in
+<a class="reference external" href="http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">CIDR</a>
+notation (e.g. <code class="docutils literal notranslate"><span class="pre">1.2.3.4/29</span></code>).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -448,7 +434,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.container.GetClusterResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.container.</code><code class="descname">GetClusterResult</code><span class="sig-paren">(</span><em>additional_zones=None</em>, <em>addons_configs=None</em>, <em>cluster_autoscalings=None</em>, <em>cluster_ipv4_cidr=None</em>, <em>description=None</em>, <em>enable_binary_authorization=None</em>, <em>enable_kubernetes_alpha=None</em>, <em>enable_legacy_abac=None</em>, <em>enable_tpu=None</em>, <em>endpoint=None</em>, <em>initial_node_count=None</em>, <em>instance_group_urls=None</em>, <em>ip_allocation_policies=None</em>, <em>logging_service=None</em>, <em>maintenance_policies=None</em>, <em>master_auths=None</em>, <em>master_authorized_networks_configs=None</em>, <em>master_ipv4_cidr_block=None</em>, <em>master_version=None</em>, <em>min_master_version=None</em>, <em>monitoring_service=None</em>, <em>network=None</em>, <em>network_policies=None</em>, <em>node_configs=None</em>, <em>node_pools=None</em>, <em>node_version=None</em>, <em>pod_security_policy_configs=None</em>, <em>private_cluster=None</em>, <em>private_cluster_configs=None</em>, <em>remove_default_node_pool=None</em>, <em>resource_labels=None</em>, <em>subnetwork=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.GetClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.container.</code><code class="descname">GetClusterResult</code><span class="sig-paren">(</span><em>additional_zones=None</em>, <em>addons_configs=None</em>, <em>cluster_autoscalings=None</em>, <em>cluster_ipv4_cidr=None</em>, <em>default_max_pods_per_node=None</em>, <em>description=None</em>, <em>enable_binary_authorization=None</em>, <em>enable_kubernetes_alpha=None</em>, <em>enable_legacy_abac=None</em>, <em>enable_tpu=None</em>, <em>endpoint=None</em>, <em>initial_node_count=None</em>, <em>instance_group_urls=None</em>, <em>ip_allocation_policies=None</em>, <em>logging_service=None</em>, <em>maintenance_policies=None</em>, <em>master_auths=None</em>, <em>master_authorized_networks_configs=None</em>, <em>master_ipv4_cidr_block=None</em>, <em>master_version=None</em>, <em>min_master_version=None</em>, <em>monitoring_service=None</em>, <em>network=None</em>, <em>network_policies=None</em>, <em>node_configs=None</em>, <em>node_pools=None</em>, <em>node_version=None</em>, <em>pod_security_policy_configs=None</em>, <em>private_cluster=None</em>, <em>private_cluster_configs=None</em>, <em>remove_default_node_pool=None</em>, <em>resource_labels=None</em>, <em>subnetwork=None</em>, <em>tpu_ipv4_cidr_block=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.GetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCluster.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.container.GetClusterResult.id">
@@ -527,10 +513,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.container.NodePool">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.container.</code><code class="descname">NodePool</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>autoscaling=None</em>, <em>cluster=None</em>, <em>initial_node_count=None</em>, <em>management=None</em>, <em>max_pods_per_node=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>node_config=None</em>, <em>node_count=None</em>, <em>project=None</em>, <em>region=None</em>, <em>version=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.NodePool" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages a Node Pool resource within GKE. For more information see
-<a class="reference external" href="https://cloud.google.com/container-engine/docs/node-pools">the official documentation</a>
-and
-<a class="reference external" href="https://cloud.google.com/container-engine/reference/rest/v1/projects.zones.clusters.nodePools">API</a>.</p>
+<dd><p>Manages a node pool in a Google Kubernetes Engine (GKE) cluster separately from
+the cluster control plane. For more information see <a class="reference external" href="https://cloud.google.com/container-engine/docs/node-pools">the official documentation</a>
+and <a class="reference external" href="https://cloud.google.com/container-engine/reference/rest/v1/projects.zones.clusters.nodePools">the API reference</a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -541,33 +526,28 @@ and
 <li><strong>autoscaling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration required by cluster autoscaler to adjust
 the size of the node pool to the current cluster usage. Structure is documented below.</li>
 <li><strong>cluster</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster to create the node pool for.  Cluster must be present in <code class="docutils literal notranslate"><span class="pre">zone</span></code> provided for zonal clusters.</li>
-<li><strong>initial_node_count</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The initial node count for the pool. Changing this will force
+<li><strong>initial_node_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The initial node count for the pool. Changing this will force
 recreation of the resource.</li>
 <li><strong>management</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Node management configuration, wherein auto-repair and
 auto-upgrade is configured. Structure is documented below.</li>
-<li><strong>max_pods_per_node</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – <p>The maximum number of pods per node in this node pool.
+<li><strong>max_pods_per_node</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – ) The maximum number of pods per node in this node pool.
 Note that this does not work on node pools which are “route-based” - that is, node
-pools belonging to clusters that do not have IP Aliasing enabled.
-This property is in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta fields.</p>
-</li>
+pools belonging to clusters that do not have IP Aliasing enabled.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the node pool. If left blank, Terraform will
 auto-generate a unique name.</li>
-<li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name for the node pool beginning
-with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
 <li><strong>node_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The node configuration of the pool. See
 google_container_cluster for schema.</li>
-<li><strong>node_count</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of nodes per instance group. This field can be used to
+<li><strong>node_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of nodes per instance group. This field can be used to
 update the number of nodes per instance group but should not be used alongside <code class="docutils literal notranslate"><span class="pre">autoscaling</span></code>.</li>
 <li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which to create the node pool. If blank,
 the provider-configured project will be used.</li>
-<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The region in which the cluster resides (for regional clusters).
-This property is in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta fields.</p>
-</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which the cluster resides (for regional clusters).</li>
 <li><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Kubernetes version for the nodes in this pool. Note that if this field
 and <code class="docutils literal notranslate"><span class="pre">auto_upgrade</span></code> are both specified, they will fight each other for what the node version should
-be, so setting both is highly discouraged.</li>
+be, so setting both is highly discouraged. While a fuzzy version can be specified, it’s
+recommended that you specify explicit versions as Terraform will see spurious diffs
+when fuzzy versions are used. See the <code class="docutils literal notranslate"><span class="pre">google_container_engine_versions</span></code> data source’s
+<code class="docutils literal notranslate"><span class="pre">version_prefix</span></code> field to approximate fuzzy versions in a Terraform-compatible way.</li>
 <li><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone in which the cluster resides.</li>
 </ul>
 </td>
@@ -604,11 +584,9 @@ auto-upgrade is configured. Structure is documented below.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.container.NodePool.max_pods_per_node">
 <code class="descname">max_pods_per_node</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.max_pods_per_node" title="Permalink to this definition">¶</a></dt>
-<dd><p>The maximum number of pods per node in this node pool.
+<dd><p>) The maximum number of pods per node in this node pool.
 Note that this does not work on node pools which are “route-based” - that is, node
-pools belonging to clusters that do not have IP Aliasing enabled.
-This property is in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta fields.</p>
+pools belonging to clusters that do not have IP Aliasing enabled.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -616,13 +594,6 @@ See <a class="reference external" href="https://terraform.io/docs/providers/goog
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the node pool. If left blank, Terraform will
 auto-generate a unique name.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.container.NodePool.name_prefix">
-<code class="descname">name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.name_prefix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a unique name for the node pool beginning
-with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -649,9 +620,7 @@ the provider-configured project will be used.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.container.NodePool.region">
 <code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.region" title="Permalink to this definition">¶</a></dt>
-<dd><p>The region in which the cluster resides (for regional clusters).
-This property is in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta fields.</p>
+<dd><p>The region in which the cluster resides (for regional clusters).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -659,7 +628,10 @@ See <a class="reference external" href="https://terraform.io/docs/providers/goog
 <code class="descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Kubernetes version for the nodes in this pool. Note that if this field
 and <code class="docutils literal notranslate"><span class="pre">auto_upgrade</span></code> are both specified, they will fight each other for what the node version should
-be, so setting both is highly discouraged.</p>
+be, so setting both is highly discouraged. While a fuzzy version can be specified, it’s
+recommended that you specify explicit versions as Terraform will see spurious diffs
+when fuzzy versions are used. See the <code class="docutils literal notranslate"><span class="pre">google_container_engine_versions</span></code> data source’s
+<code class="docutils literal notranslate"><span class="pre">version_prefix</span></code> field to approximate fuzzy versions in a Terraform-compatible way.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -716,8 +688,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_gcp.container.get_engine_versions">
-<code class="descclassname">pulumi_gcp.container.</code><code class="descname">get_engine_versions</code><span class="sig-paren">(</span><em>project=None</em>, <em>region=None</em>, <em>zone=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.get_engine_versions" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_gcp.container.</code><code class="descname">get_engine_versions</code><span class="sig-paren">(</span><em>project=None</em>, <em>region=None</em>, <em>version_prefix=None</em>, <em>zone=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.get_engine_versions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides access to available Google Container Engine versions in a zone or region for a given project.</p>
+<blockquote>
+<div>If you are using the <code class="docutils literal notranslate"><span class="pre">google_container_engine_versions</span></code> datasource with a regional cluster, ensure that you have provided a <code class="docutils literal notranslate"><span class="pre">region</span></code>
+to the datasource. A <code class="docutils literal notranslate"><span class="pre">region</span></code> can have a different set of supported versions than its corresponding <code class="docutils literal notranslate"><span class="pre">zone</span></code>s, and not all <code class="docutils literal notranslate"><span class="pre">zone</span></code>s in a 
+<code class="docutils literal notranslate"><span class="pre">region</span></code> are guaranteed to support the same version.</div></blockquote>
 </dd></dl>
 
 <dl class="function">

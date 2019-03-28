@@ -13,21 +13,9 @@
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>disk</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The amount of disk space in gigabytes to use for the root
 (/) partition. Changing this creates a new flavor.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[int] ephemeral
-:param pulumi.Input[dict] extra_specs: Key/Value pairs of metadata for the flavor.
-:param pulumi.Input[bool] is_public: Whether the flavor is public. Changing this creates</p>
-<blockquote>
-<div>a new flavor.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>extra_specs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key/Value pairs of metadata for the flavor.</li>
+<li><strong>is_public</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the flavor is public. Changing this creates
+a new flavor.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the flavor. Changing this creates a new
 flavor.</li>
 <li><strong>ram</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The amount of RAM to use, in megabytes. Changing this
@@ -439,6 +427,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.compute.GetAvailabilityZonesResult">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">GetAvailabilityZonesResult</code><span class="sig-paren">(</span><em>names=None</em>, <em>region=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.GetAvailabilityZonesResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getAvailabilityZones.</p>
+<dl class="attribute">
+<dt id="pulumi_openstack.compute.GetAvailabilityZonesResult.names">
+<code class="descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.GetAvailabilityZonesResult.names" title="Permalink to this definition">¶</a></dt>
+<dd><p>The names of the availability zones, ordered alphanumerically, that match the queried <code class="docutils literal notranslate"><span class="pre">state</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.compute.GetAvailabilityZonesResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.GetAvailabilityZonesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1357,14 +1363,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="function">
+<dt id="pulumi_openstack.compute.get_availability_zones">
+<code class="descclassname">pulumi_openstack.compute.</code><code class="descname">get_availability_zones</code><span class="sig-paren">(</span><em>region=None</em>, <em>state=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.get_availability_zones" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to get a list of availability zones from OpenStack</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="pulumi_openstack.compute.get_flavor">
-<code class="descclassname">pulumi_openstack.compute.</code><code class="descname">get_flavor</code><span class="sig-paren">(</span><em>disk=None</em>, <em>flavor_id=None</em>, <em>min_disk=None</em>, <em>min_ram=None</em>, <em>name=None</em>, <em>ram=None</em>, <em>region=None</em>, <em>rx_tx_factor=None</em>, <em>swap=None</em>, <em>vcpus=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.get_flavor" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_openstack.compute.</code><code class="descname">get_flavor</code><span class="sig-paren">(</span><em>disk=None</em>, <em>flavor_id=None</em>, <em>min_disk=None</em>, <em>min_ram=None</em>, <em>name=None</em>, <em>ram=None</em>, <em>region=None</em>, <em>rx_tx_factor=None</em>, <em>swap=None</em>, <em>vcpus=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.get_flavor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack flavor.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.compute.get_keypair">
-<code class="descclassname">pulumi_openstack.compute.</code><code class="descname">get_keypair</code><span class="sig-paren">(</span><em>name=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.get_keypair" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_openstack.compute.</code><code class="descname">get_keypair</code><span class="sig-paren">(</span><em>name=None</em>, <em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.get_keypair" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID and public key of an OpenStack keypair.</p>
 </dd></dl>
 

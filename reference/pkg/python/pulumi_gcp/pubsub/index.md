@@ -2,10 +2,17 @@
 <span id="pubsub"></span><h1>pubsub<a class="headerlink" href="#module-pulumi_gcp.pubsub" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.pubsub.Subscription">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.pubsub.</code><code class="descname">Subscription</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>ack_deadline_seconds=None</em>, <em>name=None</em>, <em>project=None</em>, <em>push_config=None</em>, <em>topic=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.pubsub.Subscription" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a subscription in Google’s pubsub queueing system. For more information see
-<a class="reference external" href="https://cloud.google.com/pubsub/docs">the official documentation</a> and
-<a class="reference external" href="https://cloud.google.com/pubsub/docs/reference/rest/v1/projects.subscriptions">API</a>.</p>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.pubsub.</code><code class="descname">Subscription</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>ack_deadline_seconds=None</em>, <em>labels=None</em>, <em>message_retention_duration=None</em>, <em>name=None</em>, <em>project=None</em>, <em>push_config=None</em>, <em>retain_acked_messages=None</em>, <em>topic=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.pubsub.Subscription" title="Permalink to this definition">¶</a></dt>
+<dd><p>A named resource representing the stream of messages from a single,
+specific topic, to be delivered to the subscribing application.</p>
+<p>To get more information about Subscription, see:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://cloud.google.com/pubsub/docs/reference/rest/v1/projects.subscriptions">API documentation</a></li>
+<li>How-to Guides<ul>
+<li><a class="reference external" href="https://cloud.google.com/pubsub/docs/admin#managing_subscriptions">Managing Subscriptions</a></li>
+</ul>
+</li>
+</ul>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -13,62 +20,18 @@
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>ack_deadline_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum number of seconds a
-subscriber has to acknowledge a received message, otherwise the message is
-redelivered. Changing this forces a new resource to be created.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the resource, required by pubsub.
-Changing this forces a new resource to be created.</li>
-<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.</li>
-<li><strong>push_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Block configuration for push options. More
-configuration options are detailed below.</li>
-<li><strong>topic</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The topic name or id to bind this subscription to, required by pubsub.
-Changing this forces a new resource to be created.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
 <dl class="attribute">
-<dt id="pulumi_gcp.pubsub.Subscription.ack_deadline_seconds">
-<code class="descname">ack_deadline_seconds</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.pubsub.Subscription.ack_deadline_seconds" title="Permalink to this definition">¶</a></dt>
-<dd><p>The maximum number of seconds a
-subscriber has to acknowledge a received message, otherwise the message is
-redelivered. Changing this forces a new resource to be created.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.pubsub.Subscription.name">
-<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.pubsub.Subscription.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>A unique name for the resource, required by pubsub.
-Changing this forces a new resource to be created.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.pubsub.Subscription.path">
-<code class="descname">path</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.pubsub.Subscription.path" title="Permalink to this definition">¶</a></dt>
-<dd><p>Path of the subscription in the format <code class="docutils literal notranslate"><span class="pre">projects/{project}/subscriptions/{sub}</span></code></p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_gcp.pubsub.Subscription.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.pubsub.Subscription.project" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.pubsub.Subscription.push_config">
-<code class="descname">push_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.pubsub.Subscription.push_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>Block configuration for push options. More
-configuration options are detailed below.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.pubsub.Subscription.topic">
-<code class="descname">topic</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.pubsub.Subscription.topic" title="Permalink to this definition">¶</a></dt>
-<dd><p>The topic name or id to bind this subscription to, required by pubsub.
-Changing this forces a new resource to be created.</p>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
 </dd></dl>
 
 <dl class="method">
@@ -405,38 +368,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.pubsub.Topic">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.pubsub.</code><code class="descname">Topic</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.pubsub.Topic" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a topic in Google’s pubsub queueing system. For more information see
-<a class="reference external" href="https://cloud.google.com/pubsub/docs">the official documentation</a> and
-<a class="reference external" href="https://cloud.google.com/pubsub/docs/reference/rest/v1/projects.topics">API</a>.</p>
-<table class="docutils field-list" frame="void" rules="none">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.pubsub.</code><code class="descname">Topic</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.pubsub.Topic" title="Permalink to this definition">¶</a></dt>
+<dd><p>A named resource to which messages are sent by publishers.</p>
+<p>To get more information about Topic, see:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://cloud.google.com/pubsub/docs/reference/rest/v1/projects.topics">API documentation</a></li>
+<li>How-to Guides<ul>
+<li><a class="reference external" href="https://cloud.google.com/pubsub/docs/admin#managing_topics">Managing Topics</a></li>
+</ul>
+</li>
+</ul>
+<div class = "oics-button" style="float: right; margin: 0 0 -15px">
+  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=pubsub_topic_basic&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
+    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
+  </a>
+</div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the pubsub topic.
-Changing this forces a new resource to be created.</li>
-<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
 <dl class="attribute">
-<dt id="pulumi_gcp.pubsub.Topic.name">
-<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.pubsub.Topic.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>A unique name for the pubsub topic.
-Changing this forces a new resource to be created.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_gcp.pubsub.Topic.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.pubsub.Topic.project" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.</p>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
 </dd></dl>
 
 <dl class="method">

@@ -194,9 +194,9 @@ in the official AWS docs.</p>
 <li><strong>allow_users_to_change_password</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to allow users to change their own password</li>
 <li><strong>hard_expiry</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether users are prevented from setting a new password after their password has expired
 (i.e. require administrator reset)</li>
-<li><strong>max_password_age</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of days that an user password is valid.</li>
-<li><strong>minimum_password_length</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Minimum length to require for user passwords.</li>
-<li><strong>password_reuse_prevention</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of previous passwords that users are prevented from reusing.</li>
+<li><strong>max_password_age</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of days that an user password is valid.</li>
+<li><strong>minimum_password_length</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Minimum length to require for user passwords.</li>
+<li><strong>password_reuse_prevention</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of previous passwords that users are prevented from reusing.</li>
 <li><strong>require_lowercase_characters</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to require lowercase characters for user passwords.</li>
 <li><strong>require_numbers</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to require numbers for user passwords.</li>
 <li><strong>require_symbols</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to require symbols for user passwords.</li>
@@ -462,7 +462,7 @@ was created.</p>
 
 <dl class="class">
 <dt id="pulumi_aws.iam.GetRoleResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">GetRoleResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>assume_role_policy=None</em>, <em>assume_role_policy_document=None</em>, <em>create_date=None</em>, <em>description=None</em>, <em>max_session_duration=None</em>, <em>path=None</em>, <em>permissions_boundary=None</em>, <em>role_id=None</em>, <em>unique_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.GetRoleResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">GetRoleResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>assume_role_policy=None</em>, <em>create_date=None</em>, <em>description=None</em>, <em>max_session_duration=None</em>, <em>path=None</em>, <em>permissions_boundary=None</em>, <em>unique_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.GetRoleResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRole.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.iam.GetRoleResult.arn">
@@ -474,6 +474,24 @@ was created.</p>
 <dt id="pulumi_aws.iam.GetRoleResult.assume_role_policy">
 <code class="descname">assume_role_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.GetRoleResult.assume_role_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>The policy document associated with the role.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.iam.GetRoleResult.create_date">
+<code class="descname">create_date</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.GetRoleResult.create_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creation date of the role in RFC 3339 format.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.iam.GetRoleResult.description">
+<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.GetRoleResult.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Description for the role.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.iam.GetRoleResult.max_session_duration">
+<code class="descname">max_session_duration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.GetRoleResult.max_session_duration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum session duration.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1281,7 +1299,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>assume_role_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy that grants an entity permission to assume the role.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the role.</li>
 <li><strong>force_detach_policies</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies to force detaching any policies the role has before destroying it. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
-<li><strong>max_session_duration</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.</li>
+<li><strong>max_session_duration</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the role. If omitted, Terraform will assign a random, unique name.</li>
 <li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
 <li><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The path to the role.
@@ -2170,9 +2188,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.iam.UserLoginProfile">
 <em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">UserLoginProfile</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>password_length=None</em>, <em>password_reset_required=None</em>, <em>pgp_key=None</em>, <em>user=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.UserLoginProfile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides one-time creation of a IAM user login profile, and uses PGP to
-encrypt the password for safe transport to the user. PGP keys can be
-obtained from Keybase.</p>
+<dd><p>Manages an IAM User Login Profile with limited support for password creation during Terraform resource creation. Uses PGP to encrypt the password for safe transport to the user. PGP keys can be obtained from Keybase.</p>
+<blockquote>
+<div>To reset an IAM User login password via Terraform, you can use the <cite>``terraform taint`</cite> command &lt;<a class="reference external" href="https://www.terraform.io/docs/commands/taint.html">https://www.terraform.io/docs/commands/taint.html</a>&gt;`_ or change any of the arguments.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2180,12 +2198,9 @@ obtained from Keybase.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>password_length</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The length of the generated
-password.</li>
-<li><strong>password_reset_required</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the
-user should be forced to reset the generated password on first login.</li>
-<li><strong>pgp_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Either a base-64 encoded PGP public key, or a
-keybase username in the form <code class="docutils literal notranslate"><span class="pre">keybase:username</span></code>.</li>
+<li><strong>password_length</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.</li>
+<li><strong>password_reset_required</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.</li>
+<li><strong>pgp_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Either a base-64 encoded PGP public key, or a keybase username in the form <code class="docutils literal notranslate"><span class="pre">keybase:username</span></code>. Only applies on resource creation. Drift detection is not possible with this argument.</li>
 <li><strong>user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM user’s name.</li>
 </ul>
 </td>
@@ -2195,35 +2210,31 @@ keybase username in the form <code class="docutils literal notranslate"><span cl
 <dl class="attribute">
 <dt id="pulumi_aws.iam.UserLoginProfile.encrypted_password">
 <code class="descname">encrypted_password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.UserLoginProfile.encrypted_password" title="Permalink to this definition">¶</a></dt>
-<dd><p>The encrypted password, base64 encoded.</p>
+<dd><p>The encrypted password, base64 encoded. Only available if password was handled on Terraform resource creation, not import.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.iam.UserLoginProfile.key_fingerprint">
 <code class="descname">key_fingerprint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.UserLoginProfile.key_fingerprint" title="Permalink to this definition">¶</a></dt>
-<dd><p>The fingerprint of the PGP key used to encrypt
-the password</p>
+<dd><p>The fingerprint of the PGP key used to encrypt the password. Only available if password was handled on Terraform resource creation, not import.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.iam.UserLoginProfile.password_length">
 <code class="descname">password_length</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.UserLoginProfile.password_length" title="Permalink to this definition">¶</a></dt>
-<dd><p>The length of the generated
-password.</p>
+<dd><p>The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.iam.UserLoginProfile.password_reset_required">
 <code class="descname">password_reset_required</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.UserLoginProfile.password_reset_required" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether the
-user should be forced to reset the generated password on first login.</p>
+<dd><p>Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.iam.UserLoginProfile.pgp_key">
 <code class="descname">pgp_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.UserLoginProfile.pgp_key" title="Permalink to this definition">¶</a></dt>
-<dd><p>Either a base-64 encoded PGP public key, or a
-keybase username in the form <code class="docutils literal notranslate"><span class="pre">keybase:username</span></code>.</p>
+<dd><p>Either a base-64 encoded PGP public key, or a keybase username in the form <code class="docutils literal notranslate"><span class="pre">keybase:username</span></code>. Only applies on resource creation. Drift detection is not possible with this argument.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2487,7 +2498,7 @@ like <code class="docutils literal notranslate"><span class="pre">type</span> <s
 
 <dl class="function">
 <dt id="pulumi_aws.iam.get_role">
-<code class="descclassname">pulumi_aws.iam.</code><code class="descname">get_role</code><span class="sig-paren">(</span><em>name=None</em>, <em>role_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.get_role" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.iam.</code><code class="descname">get_role</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.get_role" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source can be used to fetch information about a specific
 IAM role. By using this data source, you can reference IAM role
 properties without having to hard code ARNs as input.</p>

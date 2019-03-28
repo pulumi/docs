@@ -1,6 +1,80 @@
 <div class="section" id="module-pulumi_gcp.projects">
 <span id="projects"></span><h1>projects<a class="headerlink" href="#module-pulumi_gcp.projects" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
+<dt id="pulumi_gcp.projects.GetProjectResult">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.projects.</code><code class="descname">GetProjectResult</code><span class="sig-paren">(</span><em>projects=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.GetProjectResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getProject.</p>
+<dl class="attribute">
+<dt id="pulumi_gcp.projects.GetProjectResult.projects">
+<code class="descname">projects</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.projects.GetProjectResult.projects" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of projects matching the provided filter. Structure is defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.projects.GetProjectResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.projects.GetProjectResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gcp.projects.IAMAuditConfig">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.projects.</code><code class="descname">IAMAuditConfig</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>audit_log_configs=None</em>, <em>project=None</em>, <em>service=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.IAMAuditConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a IAMAuditConfig resource with the given unique name, props, and options.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pulumi_gcp.projects.IAMAuditConfig.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.IAMAuditConfig.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.projects.IAMAuditConfig.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.IAMAuditConfig.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_gcp.projects.IAMBinding">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.projects.</code><code class="descname">IAMBinding</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>members=None</em>, <em>project=None</em>, <em>role=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.IAMBinding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Three different resources help you manage your IAM policy for a project. Each of these resources serves a different use case:</p>
@@ -20,8 +94,10 @@
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project ID. If not specified, uses the
-ID of the project configured with the provider.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project ID. If not specified for <code class="docutils literal notranslate"><span class="pre">google_project_iam_binding</span></code>
+or <code class="docutils literal notranslate"><span class="pre">google_project_iam_member</span></code>, uses the ID of the project configured with the provider.
+Required for <code class="docutils literal notranslate"><span class="pre">google_project_iam_policy</span></code> - you must explicitly set the project, and it
+will not be inferred from the provider.</li>
 <li><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">google_project_iam_binding</span></code> can be used per role. Note that custom roles must be of the format
 <code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</li>
@@ -39,8 +115,10 @@ ID of the project configured with the provider.</li>
 <dl class="attribute">
 <dt id="pulumi_gcp.projects.IAMBinding.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.projects.IAMBinding.project" title="Permalink to this definition">¶</a></dt>
-<dd><p>The project ID. If not specified, uses the
-ID of the project configured with the provider.</p>
+<dd><p>The project ID. If not specified for <code class="docutils literal notranslate"><span class="pre">google_project_iam_binding</span></code>
+or <code class="docutils literal notranslate"><span class="pre">google_project_iam_member</span></code>, uses the ID of the project configured with the provider.
+Required for <code class="docutils literal notranslate"><span class="pre">google_project_iam_policy</span></code> - you must explicitly set the project, and it
+will not be inferred from the provider.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -93,7 +171,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.projects.IAMCustomRole">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.projects.</code><code class="descname">IAMCustomRole</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>deleted=None</em>, <em>description=None</em>, <em>permissions=None</em>, <em>project=None</em>, <em>role_id=None</em>, <em>stage=None</em>, <em>title=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.IAMCustomRole" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.projects.</code><code class="descname">IAMCustomRole</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>permissions=None</em>, <em>project=None</em>, <em>role_id=None</em>, <em>stage=None</em>, <em>title=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.IAMCustomRole" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows management of a customized Cloud IAM project role. For more information see
 <a class="reference external" href="https://cloud.google.com/iam/docs/understanding-custom-roles">the official documentation</a>
 and
@@ -129,6 +207,12 @@ List of possible stages is <a class="reference external" href="https://cloud.goo
 </tr>
 </tbody>
 </table>
+<dl class="attribute">
+<dt id="pulumi_gcp.projects.IAMCustomRole.deleted">
+<code class="descname">deleted</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.projects.IAMCustomRole.deleted" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Optional) The current deleted state of the role.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_gcp.projects.IAMCustomRole.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.projects.IAMCustomRole.description" title="Permalink to this definition">¶</a></dt>
@@ -228,8 +312,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project ID. If not specified, uses the
-ID of the project configured with the provider.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project ID. If not specified for <code class="docutils literal notranslate"><span class="pre">google_project_iam_binding</span></code>
+or <code class="docutils literal notranslate"><span class="pre">google_project_iam_member</span></code>, uses the ID of the project configured with the provider.
+Required for <code class="docutils literal notranslate"><span class="pre">google_project_iam_policy</span></code> - you must explicitly set the project, and it
+will not be inferred from the provider.</li>
 <li><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">google_project_iam_binding</span></code> can be used per role. Note that custom roles must be of the format
 <code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</li>
@@ -247,8 +333,10 @@ ID of the project configured with the provider.</li>
 <dl class="attribute">
 <dt id="pulumi_gcp.projects.IAMMember.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.projects.IAMMember.project" title="Permalink to this definition">¶</a></dt>
-<dd><p>The project ID. If not specified, uses the
-ID of the project configured with the provider.</p>
+<dd><p>The project ID. If not specified for <code class="docutils literal notranslate"><span class="pre">google_project_iam_binding</span></code>
+or <code class="docutils literal notranslate"><span class="pre">google_project_iam_member</span></code>, uses the ID of the project configured with the provider.
+Required for <code class="docutils literal notranslate"><span class="pre">google_project_iam_policy</span></code> - you must explicitly set the project, and it
+will not be inferred from the provider.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -301,7 +389,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.projects.IAMPolicy">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.projects.</code><code class="descname">IAMPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>authoritative=None</em>, <em>disable_project=None</em>, <em>policy_data=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.IAMPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.projects.</code><code class="descname">IAMPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>policy_data=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.IAMPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Three different resources help you manage your IAM policy for a project. Each of these resources serves a different use case:</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">google_project_iam_policy</span></code>: Authoritative. Sets the IAM policy for the project and replaces any existing policy already attached.</li>
@@ -319,54 +407,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>authoritative</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (Optional, only for <code class="docutils literal notranslate"><span class="pre">google_project_iam_policy</span></code>)
-A boolean value indicating if this policy
-should overwrite any existing IAM policy on the project. When set to true,
-<strong>any policies not in your config file will be removed</strong>. This can <strong>lock
-you out</strong> of your project until an Organization Administrator grants you
-access again, so please exercise caution. If this argument is <code class="docutils literal notranslate"><span class="pre">true</span></code> and you
-want to delete the resource, you must set the <code class="docutils literal notranslate"><span class="pre">disable_project</span></code> argument to
-<code class="docutils literal notranslate"><span class="pre">true</span></code>, acknowledging that the project will be inaccessible to anyone but the
-Organization Admins, as it will no longer have an IAM policy. Rather than using
-this, you should use <code class="docutils literal notranslate"><span class="pre">google_project_iam_binding</span></code> and
-<code class="docutils literal notranslate"><span class="pre">google_project_iam_member</span></code>.</li>
-<li><strong>disable_project</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (Optional, only for <code class="docutils literal notranslate"><span class="pre">google_project_iam_policy</span></code>)
-A boolean value that must be set to <code class="docutils literal notranslate"><span class="pre">true</span></code>
-if you want to delete a <code class="docutils literal notranslate"><span class="pre">google_project_iam_policy</span></code> that is authoritative.</li>
 <li><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <code class="docutils literal notranslate"><span class="pre">google_iam_policy</span></code> data source that represents
 the IAM policy that will be applied to the project. The policy will be
 merged with any existing policy applied to the project.</li>
-<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project ID. If not specified, uses the
-ID of the project configured with the provider.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project ID. If not specified for <code class="docutils literal notranslate"><span class="pre">google_project_iam_binding</span></code>
+or <code class="docutils literal notranslate"><span class="pre">google_project_iam_member</span></code>, uses the ID of the project configured with the provider.
+Required for <code class="docutils literal notranslate"><span class="pre">google_project_iam_policy</span></code> - you must explicitly set the project, and it
+will not be inferred from the provider.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<dl class="attribute">
-<dt id="pulumi_gcp.projects.IAMPolicy.authoritative">
-<code class="descname">authoritative</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.projects.IAMPolicy.authoritative" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Optional, only for <code class="docutils literal notranslate"><span class="pre">google_project_iam_policy</span></code>)
-A boolean value indicating if this policy
-should overwrite any existing IAM policy on the project. When set to true,
-<strong>any policies not in your config file will be removed</strong>. This can <strong>lock
-you out</strong> of your project until an Organization Administrator grants you
-access again, so please exercise caution. If this argument is <code class="docutils literal notranslate"><span class="pre">true</span></code> and you
-want to delete the resource, you must set the <code class="docutils literal notranslate"><span class="pre">disable_project</span></code> argument to
-<code class="docutils literal notranslate"><span class="pre">true</span></code>, acknowledging that the project will be inaccessible to anyone but the
-Organization Admins, as it will no longer have an IAM policy. Rather than using
-this, you should use <code class="docutils literal notranslate"><span class="pre">google_project_iam_binding</span></code> and
-<code class="docutils literal notranslate"><span class="pre">google_project_iam_member</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.projects.IAMPolicy.disable_project">
-<code class="descname">disable_project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.projects.IAMPolicy.disable_project" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Optional, only for <code class="docutils literal notranslate"><span class="pre">google_project_iam_policy</span></code>)
-A boolean value that must be set to <code class="docutils literal notranslate"><span class="pre">true</span></code>
-if you want to delete a <code class="docutils literal notranslate"><span class="pre">google_project_iam_policy</span></code> that is authoritative.</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_gcp.projects.IAMPolicy.etag">
 <code class="descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.projects.IAMPolicy.etag" title="Permalink to this definition">¶</a></dt>
@@ -384,16 +436,10 @@ merged with any existing policy applied to the project.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.projects.IAMPolicy.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.projects.IAMPolicy.project" title="Permalink to this definition">¶</a></dt>
-<dd><p>The project ID. If not specified, uses the
-ID of the project configured with the provider.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.projects.IAMPolicy.restore_policy">
-<code class="descname">restore_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.projects.IAMPolicy.restore_policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>(DEPRECATED) (Computed, only for <code class="docutils literal notranslate"><span class="pre">google_project_iam_policy</span></code>)
-The IAM policy that will be restored when a
-non-authoritative policy resource is deleted.</p>
+<dd><p>The project ID. If not specified for <code class="docutils literal notranslate"><span class="pre">google_project_iam_binding</span></code>
+or <code class="docutils literal notranslate"><span class="pre">google_project_iam_member</span></code>, uses the ID of the project configured with the provider.
+Required for <code class="docutils literal notranslate"><span class="pre">google_project_iam_policy</span></code> - you must explicitly set the project, and it
+will not be inferred from the provider.</p>
 </dd></dl>
 
 <dl class="method">
@@ -455,7 +501,7 @@ documentation</a> and
 <li><strong>list_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.</li>
 <li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project id of the project to set the policy for.</li>
 <li><strong>restore_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A restore policy is a constraint to restore the default policy. Structure is documented below.</li>
-<li><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Version of the Policy. Default version is 0.</li>
+<li><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Version of the Policy. Default version is 0.</li>
 </ul>
 </td>
 </tr>
@@ -551,7 +597,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.projects.Service">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.projects.</code><code class="descname">Service</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>disable_on_destroy=None</em>, <em>project=None</em>, <em>service=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.Service" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.projects.</code><code class="descname">Service</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>disable_dependent_services=None</em>, <em>disable_on_destroy=None</em>, <em>project=None</em>, <em>service=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.Service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows management of a single API service for an existing Google Cloud Platform project.</p>
 <p>For a list of services available, visit the
 <a class="reference external" href="https://console.cloud.google.com/apis/library">API library page</a> or run <code class="docutils literal notranslate"><span class="pre">gcloud</span> <span class="pre">services</span> <span class="pre">list</span></code>.</p>
@@ -568,6 +614,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>disable_dependent_services</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, services that are enabled and which depend on this service should also be disabled when this service is destroyed.
+If <code class="docutils literal notranslate"><span class="pre">false</span></code> or unset, an error will be generated if any enabled services depend on this service when destroying it.</li>
 <li><strong>disable_on_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, disable the service when the terraform resource is destroyed.  Defaults to true.  May be useful in the event that a project is long-lived but the infrastructure running in that project changes frequently.</li>
 <li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project ID. If not provided, the provider project is used.</li>
 <li><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service to enable.</li>
@@ -576,6 +624,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<dl class="attribute">
+<dt id="pulumi_gcp.projects.Service.disable_dependent_services">
+<code class="descname">disable_dependent_services</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.projects.Service.disable_dependent_services" title="Permalink to this definition">¶</a></dt>
+<dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, services that are enabled and which depend on this service should also be disabled when this service is destroyed.
+If <code class="docutils literal notranslate"><span class="pre">false</span></code> or unset, an error will be generated if any enabled services depend on this service when destroying it.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_gcp.projects.Service.disable_on_destroy">
 <code class="descname">disable_on_destroy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.projects.Service.disable_on_destroy" title="Permalink to this definition">¶</a></dt>
@@ -800,6 +855,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </table>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_gcp.projects.get_project">
+<code class="descclassname">pulumi_gcp.projects.</code><code class="descname">get_project</code><span class="sig-paren">(</span><em>filter=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.get_project" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve information about a set of projects based on a filter. See the
+<a class="reference external" href="https://cloud.google.com/resource-manager/reference/rest/v1/projects/list">REST API</a>
+for more details.</p>
 </dd></dl>
 
 </div>

@@ -2,7 +2,7 @@
 <span id="elasticache"></span><h1>elasticache<a class="headerlink" href="#module-pulumi_aws.elasticache" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.elasticache.Cluster">
-<em class="property">class </em><code class="descclassname">pulumi_aws.elasticache.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>apply_immediately=None</em>, <em>availability_zone=None</em>, <em>availability_zones=None</em>, <em>az_mode=None</em>, <em>cluster_id=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>maintenance_window=None</em>, <em>node_type=None</em>, <em>notification_topic_arn=None</em>, <em>num_cache_nodes=None</em>, <em>parameter_group_name=None</em>, <em>port=None</em>, <em>preferred_availability_zones=None</em>, <em>replication_group_id=None</em>, <em>security_group_ids=None</em>, <em>security_group_names=None</em>, <em>snapshot_arns=None</em>, <em>snapshot_name=None</em>, <em>snapshot_retention_limit=None</em>, <em>snapshot_window=None</em>, <em>subnet_group_name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticache.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>apply_immediately=None</em>, <em>availability_zone=None</em>, <em>az_mode=None</em>, <em>cluster_id=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>maintenance_window=None</em>, <em>node_type=None</em>, <em>notification_topic_arn=None</em>, <em>num_cache_nodes=None</em>, <em>parameter_group_name=None</em>, <em>port=None</em>, <em>preferred_availability_zones=None</em>, <em>replication_group_id=None</em>, <em>security_group_ids=None</em>, <em>security_group_names=None</em>, <em>snapshot_arns=None</em>, <em>snapshot_name=None</em>, <em>snapshot_retention_limit=None</em>, <em>snapshot_window=None</em>, <em>subnet_group_name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an ElastiCache Cluster resource, which manages a Memcached cluster or Redis instance.
 For working with Redis (Cluster Mode Enabled) replication groups, see the
 <cite>``aws_elasticache_replication_group`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/elasticache_replication_group.html">https://www.terraform.io/docs/providers/aws/r/elasticache_replication_group.html</a>&gt;`_.</p>
@@ -25,7 +25,6 @@ are applied immediately, or during the next maintenance window. Default is
 <code class="docutils literal notranslate"><span class="pre">false</span></code>. See [Amazon ElastiCache Documentation for more information.][1]
 (Available since v0.6.0)</li>
 <li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use <code class="docutils literal notranslate"><span class="pre">preferred_availability_zones</span></code> instead. Default: System chosen Availability Zone.</li>
-<li><strong>availability_zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Use <code class="docutils literal notranslate"><span class="pre">preferred_availability_zones</span></code> instead unless you want to create cache nodes in single-az, then use <code class="docutils literal notranslate"><span class="pre">availability_zone</span></code>. Set of Availability Zones in which the cache nodes will be created.</li>
 <li><strong>az_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies whether the nodes in this Memcached node group are created in a single Availability Zone or created across multiple Availability Zones in the cluster’s region. Valid values for this parameter are <code class="docutils literal notranslate"><span class="pre">single-az</span></code> or <code class="docutils literal notranslate"><span class="pre">cross-az</span></code>, default is <code class="docutils literal notranslate"><span class="pre">single-az</span></code>. If you want to choose <code class="docutils literal notranslate"><span class="pre">cross-az</span></code>, <code class="docutils literal notranslate"><span class="pre">num_cache_nodes</span></code> must be greater than <code class="docutils literal notranslate"><span class="pre">1</span></code></li>
 <li><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Group identifier. ElastiCache converts
 this name to lowercase</li>
@@ -43,13 +42,13 @@ supported node types</li>
 <li><strong>notification_topic_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An Amazon Resource Name (ARN) of an
 SNS topic to send ElastiCache notifications to. Example:
 <code class="docutils literal notranslate"><span class="pre">arn:aws:sns:us-east-1:012345678999:my_sns_topic</span></code></li>
-<li><strong>num_cache_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The initial number of cache nodes that the
+<li><strong>num_cache_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The initial number of cache nodes that the
 cache cluster will have. For Redis, this value must be 1. For Memcache, this
 value must be between 1 and 20. If this number is reduced on subsequent runs,
 the highest numbered nodes will be removed.</li>
 <li><strong>parameter_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the parameter group to associate
 with this cache cluster</li>
-<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379. Cannot be provided with <code class="docutils literal notranslate"><span class="pre">replication_group_id</span></code>.</li>
+<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379. Cannot be provided with <code class="docutils literal notranslate"><span class="pre">replication_group_id</span></code>.</li>
 <li><strong>preferred_availability_zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of the Availability Zones in which cache nodes are created. If you are creating your cluster in an Amazon VPC you can only locate nodes in Availability Zones that are associated with the subnets in the selected subnet group. The number of Availability Zones listed must equal the value of <code class="docutils literal notranslate"><span class="pre">num_cache_nodes</span></code>. If you want all the nodes in the same Availability Zone, use <code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> instead, or repeat the Availability Zone multiple times in the list. Default: System chosen Availability Zones. Detecting drift of existing node availability zone is not currently supported. Updating this argument by itself to migrate existing node availability zones is not currently supported and will show a perpetual difference.</li>
 <li><strong>replication_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the replication group to which this cluster should belong. If this parameter is specified, the cluster is added to the specified replication group as a read replica; otherwise, the cluster is a standalone primary that is not part of any replication group.</li>
 <li><strong>security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more VPC security groups associated
@@ -60,7 +59,7 @@ names to associate with this cache cluster</li>
 Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3.
 Example: <code class="docutils literal notranslate"><span class="pre">arn:aws:s3:::my_bucket/snapshot1.rdb</span></code></li>
 <li><strong>snapshot_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a snapshot from which to restore data into the new node group.  Changing the <code class="docutils literal notranslate"><span class="pre">snapshot_name</span></code> forces a new resource.</li>
-<li><strong>snapshot_retention_limit</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of days for which ElastiCache will
+<li><strong>snapshot_retention_limit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of days for which ElastiCache will
 retain automatic cache cluster snapshots before deleting them. For example, if you set
 SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days
 before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off.
@@ -88,12 +87,6 @@ are applied immediately, or during the next maintenance window. Default is
 <dt id="pulumi_aws.elasticache.Cluster.availability_zone">
 <code class="descname">availability_zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.availability_zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use <code class="docutils literal notranslate"><span class="pre">preferred_availability_zones</span></code> instead. Default: System chosen Availability Zone.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.elasticache.Cluster.availability_zones">
-<code class="descname">availability_zones</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.availability_zones" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use <code class="docutils literal notranslate"><span class="pre">preferred_availability_zones</span></code> instead unless you want to create cache nodes in single-az, then use <code class="docutils literal notranslate"><span class="pre">availability_zone</span></code>. Set of Availability Zones in which the cache nodes will be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -632,9 +625,9 @@ The minimum maintenance window is a 60 minute period. Example: <code class="docu
 <li><strong>notification_topic_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An Amazon Resource Name (ARN) of an
 SNS topic to send ElastiCache notifications to. Example:
 <code class="docutils literal notranslate"><span class="pre">arn:aws:sns:us-east-1:012345678999:my_sns_topic</span></code></li>
-<li><strong>number_cache_clusters</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of cache clusters (primary and replicas) this replication group will have. If Multi-AZ is enabled, the value of this parameter must be at least 2. Updates will occur before other modifications.</li>
+<li><strong>number_cache_clusters</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of cache clusters (primary and replicas) this replication group will have. If Multi-AZ is enabled, the value of this parameter must be at least 2. Updates will occur before other modifications.</li>
 <li><strong>parameter_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the parameter group to associate with this replication group. If this argument is omitted, the default cache parameter group for the specified engine is used.</li>
-<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379.</li>
+<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379.</li>
 <li><strong>replication_group_description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A user-created description for the replication group.</li>
 <li><strong>replication_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The replication group identifier. This parameter is stored as a lowercase string.</li>
 <li><strong>security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more Amazon VPC security groups associated with this replication group. Use this parameter only when you are creating a replication group in an Amazon Virtual Private Cloud</li>
@@ -643,7 +636,7 @@ SNS topic to send ElastiCache notifications to. Example:
 Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3.
 Example: <code class="docutils literal notranslate"><span class="pre">arn:aws:s3:::my_bucket/snapshot1.rdb</span></code></li>
 <li><strong>snapshot_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a snapshot from which to restore data into the new node group. Changing the <code class="docutils literal notranslate"><span class="pre">snapshot_name</span></code> forces a new resource.</li>
-<li><strong>snapshot_retention_limit</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of days for which ElastiCache will
+<li><strong>snapshot_retention_limit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of days for which ElastiCache will
 retain automatic cache cluster snapshots before deleting them. For example, if you set
 SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days
 before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off.

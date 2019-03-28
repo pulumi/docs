@@ -630,7 +630,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>end_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date and time at which the Capacity Reservation expires. When a Capacity Reservation expires, the reserved capacity is released and you can no longer launch instances into it. Valid values: <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339 time string</a> (<code class="docutils literal notranslate"><span class="pre">YYYY-MM-DDTHH:MM:SSZ</span></code>)</li>
 <li><strong>end_date_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates the way in which the Capacity Reservation ends. Specify either <code class="docutils literal notranslate"><span class="pre">unlimited</span></code> or <code class="docutils literal notranslate"><span class="pre">limited</span></code>.</li>
 <li><strong>ephemeral_storage</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.</li>
-<li><strong>instance_count</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of instances for which to reserve capacity.</li>
+<li><strong>instance_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of instances for which to reserve capacity.</li>
 <li><strong>instance_match_criteria</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates the type of instance launches that the Capacity Reservation accepts. Specify either <code class="docutils literal notranslate"><span class="pre">open</span></code> or <code class="docutils literal notranslate"><span class="pre">targeted</span></code>.</li>
 <li><strong>instance_platform</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of operating system for which to reserve capacity. Valid options are <code class="docutils literal notranslate"><span class="pre">Linux/UNIX</span></code>, <code class="docutils literal notranslate"><span class="pre">Red</span> <span class="pre">Hat</span> <span class="pre">Enterprise</span> <span class="pre">Linux</span></code>, <code class="docutils literal notranslate"><span class="pre">SUSE</span> <span class="pre">Linux</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">with</span> <span class="pre">SQL</span> <span class="pre">Server</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">with</span> <span class="pre">SQL</span> <span class="pre">Server</span> <span class="pre">Enterprise</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">with</span> <span class="pre">SQL</span> <span class="pre">Server</span> <span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">with</span> <span class="pre">SQL</span> <span class="pre">Server</span> <span class="pre">Web</span></code>.</li>
 <li><strong>instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The instance type for which to reserve capacity.</li>
@@ -758,7 +758,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>bgp_asn</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The gateway’s Border Gateway Protocol (BGP) Autonomous System Number (ASN).</li>
+<li><strong>bgp_asn</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The gateway’s Border Gateway Protocol (BGP) Autonomous System Number (ASN).</li>
 <li><strong>ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address of the gateway’s Internet-routable external interface.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Tags to apply to the gateway.</li>
 <li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of customer gateway. The only type AWS
@@ -1675,9 +1675,21 @@ the Elastic IP address is associated with the primary private IP address.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.ec2.Eip.private_dns">
+<code class="descname">private_dns</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Eip.private_dns" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Private DNS associated with the Elastic IP address (if in VPC).</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.ec2.Eip.private_ip">
 <code class="descname">private_ip</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Eip.private_ip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Contains the private IP address (if in VPC).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.Eip.public_dns">
+<code class="descname">public_dns</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Eip.public_dns" title="Permalink to this definition">¶</a></dt>
+<dd><p>Public DNS associated with the Elastic IP address.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3224,16 +3236,16 @@ and deleted. Instances also support <a class="reference external" href="https://
 <li><strong>ami</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AMI to use for the instance.</li>
 <li><strong>associate_public_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Associate a public ip address with an instance in a VPC.  Boolean value.</li>
 <li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AZ to start the instance in.</li>
-<li><strong>cpu_core_count</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Sets the number of CPU cores for an instance. This option is 
+<li><strong>cpu_core_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Sets the number of CPU cores for an instance. This option is
 only supported on creation of instance type that support CPU Options
 <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values">CPU Cores and Threads Per CPU Core Per Instance Type</a> - specifying this option for unsupported instance types will return an error from the EC2 API.</li>
-<li><strong>cpu_threads_per_core</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimizing CPU Options</a> for more information.</li>
+<li><strong>cpu_threads_per_core</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimizing CPU Options</a> for more information.</li>
 <li><strong>credit_specification</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Customize the credit specification of the instance. See Credit Specification below for more details.</li>
 <li><strong>disable_api_termination</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>If true, enables <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination">EC2 Instance
 Termination Protection</a></p>
 </li>
 <li><strong>ebs_block_devices</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Additional EBS block devices to attach to the
-instance.  See Block Devices below for details.</li>
+instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.</li>
 <li><strong>ebs_optimized</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the launched EC2 instance will be EBS-optimized.
 Note that if this is not set on an instance type that is optimized by default then
 this will show as disabled but if the instance type is optimized by default then
@@ -3312,7 +3324,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.Instance.cpu_core_count">
 <code class="descname">cpu_core_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Instance.cpu_core_count" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the number of CPU cores for an instance. This option is 
+<dd><p>Sets the number of CPU cores for an instance. This option is
 only supported on creation of instance type that support CPU Options
 <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values">CPU Cores and Threads Per CPU Core Per Instance Type</a> - specifying this option for unsupported instance types will return an error from the EC2 API.</p>
 </dd></dl>
@@ -3340,7 +3352,7 @@ Termination Protection</a></p>
 <dt id="pulumi_aws.ec2.Instance.ebs_block_devices">
 <code class="descname">ebs_block_devices</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Instance.ebs_block_devices" title="Permalink to this definition">¶</a></dt>
 <dd><p>Additional EBS block devices to attach to the
-instance.  See Block Devices below for details.</p>
+instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3419,12 +3431,6 @@ instances. See <a class="reference external" href="https://docs.aws.amazon.com/A
 <dt id="pulumi_aws.ec2.Instance.network_interfaces">
 <code class="descname">network_interfaces</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Instance.network_interfaces" title="Permalink to this definition">¶</a></dt>
 <dd><p>Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.ec2.Instance.network_interface_id">
-<code class="descname">network_interface_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Instance.network_interface_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of the network interface that was created with the instance.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4455,7 +4461,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.NetworkAcl">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">NetworkAcl</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>egress=None</em>, <em>ingress=None</em>, <em>subnet_id=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.NetworkAcl" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">NetworkAcl</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>egress=None</em>, <em>ingress=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.NetworkAcl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an network ACL resource. You might set up network ACLs with rules similar
 to your security groups in order to add an additional layer of security to your VPC.</p>
 <blockquote>
@@ -4473,8 +4479,6 @@ a conflict of rule settings and will overwrite rules.</div></blockquote>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>egress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies an egress rule. Parameters defined below.</li>
 <li><strong>ingress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies an ingress rule. Parameters defined below.</li>
-<li><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated Subnet. This
-attribute is deprecated, please use the <code class="docutils literal notranslate"><span class="pre">subnet_ids</span></code> attribute instead</li>
 <li><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Subnet IDs to apply the ACL to</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 <li><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated VPC.</li>
@@ -4499,13 +4503,6 @@ attribute is deprecated, please use the <code class="docutils literal notranslat
 <dt id="pulumi_aws.ec2.NetworkAcl.owner_id">
 <code class="descname">owner_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.NetworkAcl.owner_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the AWS account that owns the network ACL.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.ec2.NetworkAcl.subnet_id">
-<code class="descname">subnet_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.NetworkAcl.subnet_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of the associated Subnet. This
-attribute is deprecated, please use the <code class="docutils literal notranslate"><span class="pre">subnet_ids</span></code> attribute instead</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4585,15 +4582,15 @@ a conflict of rule settings and will overwrite rules.</div></blockquote>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network range to allow or deny, in CIDR notation (for example 172.16.0.0/24 ).</li>
 <li><strong>egress</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether this is an egress rule (rule is applied to traffic leaving the subnet). Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
-<li><strong>from_port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The from port to match.</li>
+<li><strong>from_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The from port to match.</li>
 <li><strong>icmp_code</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ICMP protocol: The ICMP code. Required if specifying ICMP for the protocol. e.g. -1</li>
 <li><strong>icmp_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ICMP protocol: The ICMP type. Required if specifying ICMP for the protocol. e.g. -1</li>
 <li><strong>ipv6_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IPv6 CIDR block to allow or deny.</li>
 <li><strong>network_acl_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the network ACL.</li>
 <li><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol. A value of -1 means all protocols.</li>
 <li><strong>rule_action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates whether to allow or deny the traffic that matches the rule. Accepted values: <code class="docutils literal notranslate"><span class="pre">allow</span></code> | <code class="docutils literal notranslate"><span class="pre">deny</span></code></li>
-<li><strong>rule_number</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The rule number for the entry (for example, 100). ACL entries are processed in ascending order by rule number.</li>
-<li><strong>to_port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The to port to match.</li>
+<li><strong>rule_number</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The rule number for the entry (for example, 100). ACL entries are processed in ascending order by rule number.</li>
+<li><strong>to_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The to port to match.</li>
 </ul>
 </td>
 </tr>
@@ -4719,7 +4716,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>attachments</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Block to define the attachment of the ENI. Documented below.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for the network interface.</li>
 <li><strong>private_ips</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of private IPs to assign to the ENI.</li>
-<li><strong>private_ips_count</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Number of private IPs to assign to the ENI.</li>
+<li><strong>private_ips_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of secondary private IPs to assign to the ENI. The total number of private IPs will be 1 + private_ips_count, as a primary private IP will be assiged to an ENI by default.</li>
 <li><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of security group IDs to assign to the ENI.</li>
 <li><strong>source_dest_check</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable source destination checking for the ENI. Default true.</li>
 <li><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subnet ID to create the ENI in.</li>
@@ -4750,7 +4747,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.NetworkInterface.private_ips_count">
 <code class="descname">private_ips_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.NetworkInterface.private_ips_count" title="Permalink to this definition">¶</a></dt>
-<dd><p>Number of private IPs to assign to the ENI.</p>
+<dd><p>Number of secondary private IPs to assign to the ENI. The total number of private IPs will be 1 + private_ips_count, as a primary private IP will be assiged to an ENI by default.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4828,7 +4825,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>device_index</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Network interface index (int).</li>
+<li><strong>device_index</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Network interface index (int).</li>
 <li><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Instance ID to attach.</li>
 <li><strong>network_interface_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ENI ID to attach.</li>
 </ul>
@@ -5719,7 +5716,7 @@ a conflict of rule settings and will overwrite rules.</p>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>cidr_blocks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of CIDR blocks. Cannot be specified with <code class="docutils literal notranslate"><span class="pre">source_security_group_id</span></code>.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the rule.</li>
-<li><strong>from_port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The start port (or ICMP type number if protocol is “icmp”).</li>
+<li><strong>from_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The start port (or ICMP type number if protocol is “icmp”).</li>
 <li><strong>ipv6_cidr_blocks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of IPv6 CIDR blocks.</li>
 <li><strong>prefix_list_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of prefix list IDs (for allowing access to VPC endpoints).
 Only valid with <code class="docutils literal notranslate"><span class="pre">egress</span></code>.</li>
@@ -5729,7 +5726,7 @@ Only valid with <code class="docutils literal notranslate"><span class="pre">egr
 a source to this ingress rule.</li>
 <li><strong>source_security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The security group id to allow access to/from,
 depending on the <code class="docutils literal notranslate"><span class="pre">type</span></code>. Cannot be specified with <code class="docutils literal notranslate"><span class="pre">cidr_blocks</span></code>.</li>
-<li><strong>to_port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The end port (or ICMP code if protocol is “icmp”).</li>
+<li><strong>to_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The end port (or ICMP code if protocol is “icmp”).</li>
 <li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of rule being created. Valid options are <code class="docutils literal notranslate"><span class="pre">ingress</span></code> (inbound)
 or <code class="docutils literal notranslate"><span class="pre">egress</span></code> (outbound).</li>
 </ul>
@@ -6017,7 +6014,7 @@ terminateInstancesWithExpiration.</li>
 <li><strong>instance_interruption_behaviour</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates whether a Spot
 instance stops or terminates when it is interrupted. Default is
 <code class="docutils literal notranslate"><span class="pre">terminate</span></code>.</li>
-<li><strong>instance_pools_to_use_count</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of Spot pools across which to allocate your target Spot capacity.
+<li><strong>instance_pools_to_use_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of Spot pools across which to allocate your target Spot capacity.
 Valid only when <code class="docutils literal notranslate"><span class="pre">allocation_strategy</span></code> is set to <code class="docutils literal notranslate"><span class="pre">lowestPrice</span></code>. Spot Fleet selects
 the cheapest Spot pools and evenly allocates your target Spot capacity across
 the number of Spot pools that you specify.</li>
@@ -6027,7 +6024,7 @@ across different markets and instance types.</li>
 <li><strong>load_balancers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of elastic load balancer names to add to the Spot fleet.</li>
 <li><strong>replace_unhealthy_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether Spot fleet should replace unhealthy instances. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>spot_price</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The maximum bid price per unit hour.</li>
-<li><strong>target_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of units to request. You can choose to set the
+<li><strong>target_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of units to request. You can choose to set the
 target capacity in terms of instances or a performance characteristic that is
 important to your application workload, such as vCPUs, memory, or I/O.</li>
 <li><strong>target_group_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of <code class="docutils literal notranslate"><span class="pre">aws_alb_target_group</span></code> ARNs, for use with Application Load Balancing.</li>
@@ -6238,21 +6235,21 @@ for more information.</div></blockquote>
 <li><strong>ami</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AMI to use for the instance.</li>
 <li><strong>associate_public_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Associate a public ip address with an instance in a VPC.  Boolean value.</li>
 <li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AZ to start the instance in.</li>
-<li><strong>block_duration_minutes</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360).
+<li><strong>block_duration_minutes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360).
 The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
 Note that you can’t specify an Availability Zone group or a launch group if you specify a duration.</li>
-<li><strong>cpu_core_count</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – <p>Sets the number of CPU cores for an instance. This option is 
+<li><strong>cpu_core_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <p>Sets the number of CPU cores for an instance. This option is
 only supported on creation of instance type that support CPU Options
 <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values">CPU Cores and Threads Per CPU Core Per Instance Type</a> - specifying this option for unsupported instance types will return an error from the EC2 API.</p>
 </li>
-<li><strong>cpu_threads_per_core</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – <p>If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimizing CPU Options</a> for more information.</p>
+<li><strong>cpu_threads_per_core</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <p>If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimizing CPU Options</a> for more information.</p>
 </li>
 <li><strong>credit_specification</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Customize the credit specification of the instance. See Credit Specification below for more details.</li>
 <li><strong>disable_api_termination</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>If true, enables <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination">EC2 Instance
 Termination Protection</a></p>
 </li>
 <li><strong>ebs_block_devices</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Additional EBS block devices to attach to the
-instance.  See Block Devices below for details.</li>
+instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.</li>
 <li><strong>ebs_optimized</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>If true, the launched EC2 instance will be EBS-optimized.
 Note that if this is not set on an instance type that is optimized by default then
 this will show as disabled but if the instance type is optimized by default then
@@ -6349,7 +6346,7 @@ Note that you can’t specify an Availability Zone group or a launch group if yo
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SpotInstanceRequest.cpu_core_count">
 <code class="descname">cpu_core_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest.cpu_core_count" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the number of CPU cores for an instance. This option is 
+<dd><p>Sets the number of CPU cores for an instance. This option is
 only supported on creation of instance type that support CPU Options
 <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values">CPU Cores and Threads Per CPU Core Per Instance Type</a> - specifying this option for unsupported instance types will return an error from the EC2 API.</p>
 </dd></dl>
@@ -6377,7 +6374,7 @@ Termination Protection</a></p>
 <dt id="pulumi_aws.ec2.SpotInstanceRequest.ebs_block_devices">
 <code class="descname">ebs_block_devices</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest.ebs_block_devices" title="Permalink to this definition">¶</a></dt>
 <dd><p>Additional EBS block devices to attach to the
-instance.  See Block Devices below for details.</p>
+instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8215,7 +8212,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.VpnConnection">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpnConnection</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>customer_gateway_configuration=None</em>, <em>customer_gateway_id=None</em>, <em>routes=None</em>, <em>static_routes_only=None</em>, <em>tags=None</em>, <em>transit_gateway_id=None</em>, <em>tunnel1_inside_cidr=None</em>, <em>tunnel1_preshared_key=None</em>, <em>tunnel2_inside_cidr=None</em>, <em>tunnel2_preshared_key=None</em>, <em>type=None</em>, <em>vgw_telemetries=None</em>, <em>vpn_gateway_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpnConnection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpnConnection</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>customer_gateway_id=None</em>, <em>static_routes_only=None</em>, <em>tags=None</em>, <em>transit_gateway_id=None</em>, <em>tunnel1_inside_cidr=None</em>, <em>tunnel1_preshared_key=None</em>, <em>tunnel2_inside_cidr=None</em>, <em>tunnel2_preshared_key=None</em>, <em>type=None</em>, <em>vpn_gateway_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpnConnection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an EC2 VPN connection. These objects can be connected to customer gateways, and allow you to establish tunnels between your network and Amazon.</p>
 <blockquote>
 <div><p><strong>Note:</strong> All arguments including <code class="docutils literal notranslate"><span class="pre">tunnel1_preshared_key</span></code> and <code class="docutils literal notranslate"><span class="pre">tunnel2_preshared_key</span></code> will be stored in the raw state as plain-text.
@@ -8230,7 +8227,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>customer_gateway_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The configuration information for the VPN connection’s customer gateway (in the native XML format).</li>
 <li><strong>customer_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the customer gateway.</li>
 <li><strong>static_routes_only</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the VPN connection uses static routes exclusively. Static routes must be used for devices that don’t support BGP.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Tags to apply to the connection.</li>

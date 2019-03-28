@@ -2,7 +2,7 @@
 <span id="storage"></span><h1>storage<a class="headerlink" href="#module-pulumi_gcp.storage" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.storage.Bucket">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">Bucket</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cors=None</em>, <em>encryption=None</em>, <em>force_destroy=None</em>, <em>labels=None</em>, <em>lifecycle_rules=None</em>, <em>location=None</em>, <em>logging=None</em>, <em>name=None</em>, <em>project=None</em>, <em>storage_class=None</em>, <em>versioning=None</em>, <em>websites=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.Bucket" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">Bucket</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cors=None</em>, <em>encryption=None</em>, <em>force_destroy=None</em>, <em>labels=None</em>, <em>lifecycle_rules=None</em>, <em>location=None</em>, <em>logging=None</em>, <em>name=None</em>, <em>project=None</em>, <em>requester_pays=None</em>, <em>storage_class=None</em>, <em>versioning=None</em>, <em>websites=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.Bucket" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new bucket in Google cloud storage service (GCS).
 Once a bucket has been created, its location can’t be changed.
 <a class="reference external" href="https://cloud.google.com/storage/docs/access-control/lists">ACLs</a> can be applied
@@ -11,6 +11,7 @@ using the <cite>``google_storage_bucket_acl`</cite> resource &lt;<a class="refer
 <a class="reference external" href="https://cloud.google.com/storage/docs/overview">the official documentation</a>
 and
 <a class="reference external" href="https://cloud.google.com/storage/docs/json_api/v1/buckets">API</a>.</p>
+<p><strong>Note</strong>: When importing a bucket or using only the default provider project for bucket creation, you will need to enable the Compute API and will otherwise get an error with a link to the API enablement page. If you would prefer not to enable the Compute API, make sure to explicitly set <code class="docutils literal notranslate"><span class="pre">project</span></code> on the bucket resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -30,6 +31,7 @@ bucket that contains objects, Terraform will fail that run.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket.</li>
 <li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.</li>
+<li><strong>requester_pays</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables <a class="reference external" href="https://cloud.google.com/storage/docs/requester-pays">Requester Pays</a> on a storage bucket.</li>
 <li><strong>storage_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes">Storage Class</a> of the new bucket. Supported values include: <code class="docutils literal notranslate"><span class="pre">MULTI_REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">NEARLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">COLDLINE</span></code>.</li>
 <li><strong>versioning</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The bucket’s <a class="reference external" href="https://cloud.google.com/storage/docs/object-versioning">Versioning</a> configuration.</li>
 <li><strong>websites</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Configuration if the bucket acts as a website. Structure is documented below.</li>
@@ -93,6 +95,12 @@ bucket that contains objects, Terraform will fail that run.</p>
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.Bucket.project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.Bucket.requester_pays">
+<code class="descname">requester_pays</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.Bucket.requester_pays" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enables <a class="reference external" href="https://cloud.google.com/storage/docs/requester-pays">Requester Pays</a> on a storage bucket.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -524,7 +532,7 @@ directive to specify caching behavior of object data. If omitted and object is a
 <li><strong>content_encoding</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-3.1.2.2">Content-Encoding</a> of the object data.</li>
 <li><strong>content_language</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-3.1.3.2">Content-Language</a> of the object data.</li>
 <li><strong>content_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-3.1.1.5">Content-Type</a> of the object data. Defaults to “application/octet-stream” or “text/plain; charset=utf-8”.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the object.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the object. If you’re interpolating the name of this object, see <code class="docutils literal notranslate"><span class="pre">output_name</span></code> instead.</li>
 <li><strong>source</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.Archive</em><em>]</em>) – A path to the data you want to upload. Must be defined
 if <code class="docutils literal notranslate"><span class="pre">content</span></code> is not.</li>
 <li><strong>storage_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes">StorageClass</a> of the new bucket object.
@@ -594,7 +602,20 @@ directive to specify caching behavior of object data. If omitted and object is a
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.BucketObject.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.BucketObject.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the object.</p>
+<dd><p>The name of the object. If you’re interpolating the name of this object, see <code class="docutils literal notranslate"><span class="pre">output_name</span></code> instead.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.BucketObject.output_name">
+<code class="descname">output_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.BucketObject.output_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) The name of the object. Use this field in interpolations with <code class="docutils literal notranslate"><span class="pre">google_storage_object_acl</span></code> to recreate
+<code class="docutils literal notranslate"><span class="pre">google_storage_object_acl</span></code> resources when your <code class="docutils literal notranslate"><span class="pre">google_storage_bucket_object</span></code> is recreated.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.BucketObject.self_link">
+<code class="descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.BucketObject.self_link" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) A url reference to this object.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -655,7 +676,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.storage.DefaultObjectACL">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">DefaultObjectACL</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bucket=None</em>, <em>role_entities=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.DefaultObjectACL" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a new default object ACL in Google Cloud Storage service (GCS). For more information see</p>
+<dd><p>Authoritatively manages the default object ACLs for a Google Cloud Storage bucket
+without managing the bucket itself.</p>
 <blockquote>
 <div>Note that for each object, its creator will have the <code class="docutils literal notranslate"><span class="pre">&quot;OWNER&quot;</span></code> role in addition
 to the default ACL that has been defined.</div></blockquote>
@@ -674,7 +696,9 @@ to control individual role entity pairs.</div></blockquote>
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket it applies to.</li>
-<li><strong>role_entities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of role/entity pairs in the form <code class="docutils literal notranslate"><span class="pre">ROLE:entity</span></code>. See <a class="reference external" href="https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls">GCS Object ACL documentation</a> for more details.</li>
+<li><strong>role_entities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of role/entity pairs in the form <code class="docutils literal notranslate"><span class="pre">ROLE:entity</span></code>.
+See <a class="reference external" href="https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls">GCS Object ACL documentation</a> for more details.
+Omitting the field is the same as providing an empty list.</li>
 </ul>
 </td>
 </tr>
@@ -689,7 +713,9 @@ to control individual role entity pairs.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.DefaultObjectACL.role_entities">
 <code class="descname">role_entities</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.DefaultObjectACL.role_entities" title="Permalink to this definition">¶</a></dt>
-<dd><p>List of role/entity pairs in the form <code class="docutils literal notranslate"><span class="pre">ROLE:entity</span></code>. See <a class="reference external" href="https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls">GCS Object ACL documentation</a> for more details.</p>
+<dd><p>List of role/entity pairs in the form <code class="docutils literal notranslate"><span class="pre">ROLE:entity</span></code>.
+See <a class="reference external" href="https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls">GCS Object ACL documentation</a> for more details.
+Omitting the field is the same as providing an empty list.</p>
 </dd></dl>
 
 <dl class="method">
@@ -811,6 +837,75 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_gcp.storage.GetBucketObjectResult">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">GetBucketObjectResult</code><span class="sig-paren">(</span><em>cache_control=None</em>, <em>content=None</em>, <em>content_disposition=None</em>, <em>content_encoding=None</em>, <em>content_language=None</em>, <em>content_type=None</em>, <em>crc32c=None</em>, <em>detect_md5hash=None</em>, <em>md5hash=None</em>, <em>output_name=None</em>, <em>predefined_acl=None</em>, <em>self_link=None</em>, <em>source=None</em>, <em>storage_class=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.GetBucketObjectResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getBucketObject.</p>
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.GetBucketObjectResult.cache_control">
+<code class="descname">cache_control</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.GetBucketObjectResult.cache_control" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) <a class="reference external" href="https://tools.ietf.org/html/rfc7234#section-5.2">Cache-Control</a>
+directive to specify caching behavior of object data. If omitted and object is accessible to all anonymous users, the default will be public, max-age=3600</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.GetBucketObjectResult.content_disposition">
+<code class="descname">content_disposition</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.GetBucketObjectResult.content_disposition" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) <a class="reference external" href="https://tools.ietf.org/html/rfc6266">Content-Disposition</a> of the object data.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.GetBucketObjectResult.content_encoding">
+<code class="descname">content_encoding</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.GetBucketObjectResult.content_encoding" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) <a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-3.1.2.2">Content-Encoding</a> of the object data.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.GetBucketObjectResult.content_language">
+<code class="descname">content_language</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.GetBucketObjectResult.content_language" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) <a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-3.1.3.2">Content-Language</a> of the object data.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.GetBucketObjectResult.content_type">
+<code class="descname">content_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.GetBucketObjectResult.content_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) <a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-3.1.1.5">Content-Type</a> of the object data. Defaults to “application/octet-stream” or “text/plain; charset=utf-8”.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.GetBucketObjectResult.crc32c">
+<code class="descname">crc32c</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.GetBucketObjectResult.crc32c" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) Base 64 CRC32 hash of the uploaded data.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.GetBucketObjectResult.md5hash">
+<code class="descname">md5hash</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.GetBucketObjectResult.md5hash" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) Base 64 MD5 hash of the uploaded data.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.GetBucketObjectResult.self_link">
+<code class="descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.GetBucketObjectResult.self_link" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) A url reference to this object.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.GetBucketObjectResult.storage_class">
+<code class="descname">storage_class</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.GetBucketObjectResult.storage_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Computed) The <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes">StorageClass</a> of the new bucket object.
+Supported values include: <code class="docutils literal notranslate"><span class="pre">MULTI_REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">NEARLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">COLDLINE</span></code>. If not provided, this defaults to the bucket’s default
+storage class or to a <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes#standard">standard</a> class.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.GetBucketObjectResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.GetBucketObjectResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_gcp.storage.GetObjectSignedUrlResult">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">GetObjectSignedUrlResult</code><span class="sig-paren">(</span><em>signed_url=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.GetObjectSignedUrlResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getObjectSignedUrl.</p>
@@ -842,6 +937,24 @@ in order to grant IAM permissions.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.GetProjectServiceAccountResult.id">
 <code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.GetProjectServiceAccountResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gcp.storage.GetTransferProjectServieAccountResult">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">GetTransferProjectServieAccountResult</code><span class="sig-paren">(</span><em>email=None</em>, <em>project=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.GetTransferProjectServieAccountResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getTransferProjectServieAccount.</p>
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.GetTransferProjectServieAccountResult.email">
+<code class="descname">email</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.GetTransferProjectServieAccountResult.email" title="Permalink to this definition">¶</a></dt>
+<dd><p>Email address of the default service account used by Storage Transfer Jobs running in this project</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.GetTransferProjectServieAccountResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.GetTransferProjectServieAccountResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -969,10 +1082,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.storage.ObjectACL">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">ObjectACL</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bucket=None</em>, <em>object=None</em>, <em>predefined_acl=None</em>, <em>role_entities=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.ObjectACL" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a new object ACL in Google cloud storage service (GCS). For more information see 
+<dd><p>Authoritatively manages the access control list (ACL) for an object in a Google
+Cloud Storage (GCS) bucket. Removing a <code class="docutils literal notranslate"><span class="pre">google_storage_object_acl</span></code> sets the
+acl to the <code class="docutils literal notranslate"><span class="pre">private</span></code> <a class="reference external" href="https://cloud.google.com/storage/docs/access-control#predefined-acl">predefined ACL</a>.</p>
+<p>For more information see
 <a class="reference external" href="https://cloud.google.com/storage/docs/access-control/lists">the official documentation</a> 
 and 
 <a class="reference external" href="https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls">API</a>.</p>
+<blockquote>
+<div>Want fine-grained control over object ACLs? Use <code class="docutils literal notranslate"><span class="pre">google_storage_object_access_control</span></code> to control individual
+role entity pairs.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -980,11 +1099,12 @@ and
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket it applies to.</li>
-<li><strong>object</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the object it applies to.</li>
-<li><strong>predefined_acl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The <a class="reference external" href="https://cloud.google.com/storage/docs/access-control#predefined-acl">canned GCS ACL</a> to apply. Must be set if <code class="docutils literal notranslate"><span class="pre">role_entity</span></code> is not.</p>
+<li><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket the object is stored in.</li>
+<li><strong>object</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the object to apply the acl to.</li>
+<li><strong>predefined_acl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The “canned” <a class="reference external" href="https://cloud.google.com/storage/docs/access-control#predefined-acl">predefined ACL</a> to apply. Must be set if <code class="docutils literal notranslate"><span class="pre">role_entity</span></code> is not.</p>
 </li>
-<li><strong>role_entities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>List of role/entity pairs in the form <code class="docutils literal notranslate"><span class="pre">ROLE:entity</span></code>. See <a class="reference external" href="https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls">GCS Object ACL documentation</a> for more details. Must be set if <code class="docutils literal notranslate"><span class="pre">predefined_acl</span></code> is not.</p>
+<li><strong>role_entities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>List of role/entity pairs in the form <code class="docutils literal notranslate"><span class="pre">ROLE:entity</span></code>. See <a class="reference external" href="https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls">GCS Object ACL documentation</a> for more details.
+Must be set if <code class="docutils literal notranslate"><span class="pre">predefined_acl</span></code> is not.</p>
 </li>
 </ul>
 </td>
@@ -994,25 +1114,26 @@ and
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.ObjectACL.bucket">
 <code class="descname">bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.ObjectACL.bucket" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the bucket it applies to.</p>
+<dd><p>The name of the bucket the object is stored in.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.ObjectACL.object">
 <code class="descname">object</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.ObjectACL.object" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the object it applies to.</p>
+<dd><p>The name of the object to apply the acl to.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.ObjectACL.predefined_acl">
 <code class="descname">predefined_acl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.ObjectACL.predefined_acl" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <a class="reference external" href="https://cloud.google.com/storage/docs/access-control#predefined-acl">canned GCS ACL</a> to apply. Must be set if <code class="docutils literal notranslate"><span class="pre">role_entity</span></code> is not.</p>
+<dd><p>The “canned” <a class="reference external" href="https://cloud.google.com/storage/docs/access-control#predefined-acl">predefined ACL</a> to apply. Must be set if <code class="docutils literal notranslate"><span class="pre">role_entity</span></code> is not.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.ObjectACL.role_entities">
 <code class="descname">role_entities</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.ObjectACL.role_entities" title="Permalink to this definition">¶</a></dt>
-<dd><p>List of role/entity pairs in the form <code class="docutils literal notranslate"><span class="pre">ROLE:entity</span></code>. See <a class="reference external" href="https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls">GCS Object ACL documentation</a> for more details. Must be set if <code class="docutils literal notranslate"><span class="pre">predefined_acl</span></code> is not.</p>
+<dd><p>List of role/entity pairs in the form <code class="docutils literal notranslate"><span class="pre">ROLE:entity</span></code>. See <a class="reference external" href="https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls">GCS Object ACL documentation</a> for more details.
+Must be set if <code class="docutils literal notranslate"><span class="pre">predefined_acl</span></code> is not.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1132,6 +1253,141 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
+<dl class="class">
+<dt id="pulumi_gcp.storage.TransferJob">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">TransferJob</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>project=None</em>, <em>schedule=None</em>, <em>status=None</em>, <em>transfer_spec=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.TransferJob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new Transfer Job in Google Cloud Storage Transfer.</p>
+<p>To get more information about Google Cloud Storage Transfer, see:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://cloud.google.com/storage-transfer/docs/overview">Overview</a></li>
+<li><a class="reference external" href="https://cloud.google.com/storage-transfer/docs/reference/rest/v1/transferJobs#TransferJob">API documentation</a></li>
+<li>How-to Guides<ul>
+<li><a class="reference external" href="https://cloud.google.com/storage-transfer/docs/configure-access">Configuring Access to Data Sources and Sinks</a></li>
+</ul>
+</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique description to identify the Transfer Job.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project in which the resource belongs. If it
+is not provided, the provider project is used.</li>
+<li><strong>schedule</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Schedule specification defining when the Transfer Job should be scheduled to start, end and and what time to run. Structure documented below.</li>
+<li><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Status of the job. Default: <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>. <strong>NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.</strong></li>
+<li><strong>transfer_spec</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Transfer specification. Structure documented below.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.TransferJob.creation_time">
+<code class="descname">creation_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.TransferJob.creation_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>When the Transfer Job was created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.TransferJob.deletion_time">
+<code class="descname">deletion_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.TransferJob.deletion_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>When the Transfer Job was deleted.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.TransferJob.description">
+<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.TransferJob.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unique description to identify the Transfer Job.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.TransferJob.last_modification_time">
+<code class="descname">last_modification_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.TransferJob.last_modification_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>When the Transfer Job was last modified.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.TransferJob.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.TransferJob.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Transfer Job.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.TransferJob.project">
+<code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.TransferJob.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The project in which the resource belongs. If it
+is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.TransferJob.schedule">
+<code class="descname">schedule</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.TransferJob.schedule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Schedule specification defining when the Transfer Job should be scheduled to start, end and and what time to run. Structure documented below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.TransferJob.status">
+<code class="descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.TransferJob.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Status of the job. Default: <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>. <strong>NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.storage.TransferJob.transfer_spec">
+<code class="descname">transfer_spec</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.TransferJob.transfer_spec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transfer specification. Structure documented below.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.storage.TransferJob.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.TransferJob.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.storage.TransferJob.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.TransferJob.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_gcp.storage.get_bucket_object">
+<code class="descclassname">pulumi_gcp.storage.</code><code class="descname">get_bucket_object</code><span class="sig-paren">(</span><em>bucket=None</em>, <em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.get_bucket_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets an existing object inside an existing bucket in Google Cloud Storage service (GCS).
+See <a class="reference external" href="https://cloud.google.com/storage/docs/key-terms#objects">the official documentation</a>
+and
+<a class="reference external" href="https://cloud.google.com/storage/docs/json_api/v1/objects">API</a>.</p>
+</dd></dl>
+
 <dl class="function">
 <dt id="pulumi_gcp.storage.get_object_signed_url">
 <code class="descclassname">pulumi_gcp.storage.</code><code class="descname">get_object_signed_url</code><span class="sig-paren">(</span><em>bucket=None</em>, <em>content_md5=None</em>, <em>content_type=None</em>, <em>credentials=None</em>, <em>duration=None</em>, <em>extension_headers=None</em>, <em>http_method=None</em>, <em>path=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.get_object_signed_url" title="Permalink to this definition">¶</a></dt>
@@ -1147,6 +1403,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 special service account can be used to set up <code class="docutils literal notranslate"><span class="pre">google_storage_notification</span></code> resources.</p>
 <p>For more information see
 <a class="reference external" href="https://cloud.google.com/storage/docs/json_api/v1/projects/serviceAccount">the API reference</a>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_gcp.storage.get_transfer_project_servie_account">
+<code class="descclassname">pulumi_gcp.storage.</code><code class="descname">get_transfer_project_servie_account</code><span class="sig-paren">(</span><em>project=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.get_transfer_project_servie_account" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to retrieve Storage Transfer service account for this project</p>
 </dd></dl>
 
 </div>
