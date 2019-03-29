@@ -27,6 +27,8 @@ just check the resulting files directly into the repo under `./packages/`.
 - Install a recent version of Go
 - Install mustache:
   ```go get -u github.com/cbroglie/mustache```
+- Install packr:
+  ```go get -u github.com/gobuffalo/packr```
 
 Run `make configure` to get the required Gem dependencies. (Assuming you have a recent Ruby
 installation on your system.

@@ -13,8 +13,6 @@ before_install:
 # pulumi
 - curl -L https://get.pulumi.com/ | bash
 - export PATH=$PATH:$HOME/.pulumi/bin
-# Remove after pulumi/pulumi/issues/2203 is resolved.
-- export PULUMI_RECORD_ENGINE_EVENTS=1
 # yarn
 - npm i -g yarn
 # Work around a current issue in bundler. See:
