@@ -8,4 +8,23 @@ title: Module types
 <a href="../index.html">@pulumi/kubernetes</a> &gt; types
 
 
+<div class="toggleVisible" markdown="1">
+<div class="collapsed" markdown="1">
+<h2 class="pdoc-module-header toggleButton" title="Click to show Modules">Modules ▹</h2>
+</div>
+<div class="expanded" markdown="1">
+<h2 class="pdoc-module-header toggleButton" title="Click to hide Modules">Modules ▾</h2>
+<div class="pdoc-module-contents" markdown="1">
+* <a href="runtime">types/runtime</a>
+* <a href="v1">types/v1</a>
+* <a href="v1alpha1">types/v1alpha1</a>
+* <a href="v1beta1">types/v1beta1</a>
+* <a href="v1beta2">types/v1beta2</a>
+* <a href="v2alpha1">types/v2alpha1</a>
+* <a href="v2beta1">types/v2beta1</a>
+* <a href="v2beta2">types/v2beta2</a>
+* <a href="version">types/version</a>
+</div>
+</div>
+</div>
 

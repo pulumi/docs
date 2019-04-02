@@ -14,1052 +14,85 @@ title: Module meta/v1
 <div class="expanded" markdown="1">
 <h2 class="pdoc-module-header toggleButton" title="Click to hide Index">Index ▾</h2>
 <div class="pdoc-module-contents" markdown="1">
-* <a href="#isAPIGroup">function isAPIGroup</a>
-* <a href="#isAPIGroupList">function isAPIGroupList</a>
-* <a href="#isAPIResourceList">function isAPIResourceList</a>
-* <a href="#isAPIVersions">function isAPIVersions</a>
-* <a href="#isDeleteOptions">function isDeleteOptions</a>
-* <a href="#isOwnerReference">function isOwnerReference</a>
-* <a href="#isStatus">function isStatus</a>
-* <a href="#APIGroup">interface APIGroup</a>
-* <a href="#APIGroupList">interface APIGroupList</a>
-* <a href="#APIResource">interface APIResource</a>
-* <a href="#APIResourceList">interface APIResourceList</a>
-* <a href="#APIVersions">interface APIVersions</a>
-* <a href="#DeleteOptions">interface DeleteOptions</a>
-* <a href="#GroupVersionForDiscovery">interface GroupVersionForDiscovery</a>
-* <a href="#Initializer">interface Initializer</a>
-* <a href="#Initializers">interface Initializers</a>
-* <a href="#LabelSelector">interface LabelSelector</a>
-* <a href="#LabelSelectorRequirement">interface LabelSelectorRequirement</a>
-* <a href="#ListMeta">interface ListMeta</a>
-* <a href="#ObjectMeta">interface ObjectMeta</a>
-* <a href="#OwnerReference">interface OwnerReference</a>
-* <a href="#Preconditions">interface Preconditions</a>
-* <a href="#ServerAddressByClientCIDR">interface ServerAddressByClientCIDR</a>
-* <a href="#Status">interface Status</a>
-* <a href="#StatusCause">interface StatusCause</a>
-* <a href="#StatusDetails">interface StatusDetails</a>
-* <a href="#WatchEvent">interface WatchEvent</a>
+* <a href="#Status">class Status</a>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts">types/input.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/meta/v1/Status.ts">meta/v1/Status.ts</a> 
 </div>
 </div>
 </div>
 
 
-<h2 class="pdoc-module-header" id="isAPIGroup">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L16555">function <b>isAPIGroup</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isAPIGroup(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isAPIGroupList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L16586">function <b>isAPIGroupList</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isAPIGroupList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isAPIResourceList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L16681">function <b>isAPIResourceList</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isAPIResourceList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isAPIVersions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L16724">function <b>isAPIVersions</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isAPIVersions(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isDeleteOptions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L16789">function <b>isDeleteOptions</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isDeleteOptions(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isOwnerReference">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L17132">function <b>isOwnerReference</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isOwnerReference(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L17226">function <b>isStatus</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isStatus(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="APIGroup">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15673">interface <b>APIGroup</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-APIGroup contains the name, the supported versions, and the preferred version of a group.
-
-<h3 class="pdoc-member-header" id="APIGroup-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15680">property <b>apiVersion</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-APIVersion defines the versioned schema of this representation of an object. Servers should
-convert recognized schemas to the latest internal value, and may reject unrecognized
-values. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
-
-</div>
-<h3 class="pdoc-member-header" id="APIGroup-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15688">property <b>kind</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Kind is a string value representing the REST resource this object represents. Servers may
-infer this from the endpoint the client submits requests to. Cannot be updated. In
-CamelCase. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
-
-</div>
-<h3 class="pdoc-member-header" id="APIGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15693">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-name is the name of the group.
-
-</div>
-<h3 class="pdoc-member-header" id="APIGroup-preferredVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15699">property <b>preferredVersion</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>preferredVersion: <a href='#GroupVersionForDiscovery'>GroupVersionForDiscovery</a>;</pre>
-
-preferredVersion is the version preferred by the API server, which probably is the storage
-version.
-
-</div>
-<h3 class="pdoc-member-header" id="APIGroup-serverAddressByClientCIDRs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15710">property <b>serverAddressByClientCIDRs</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>serverAddressByClientCIDRs: <a href='#ServerAddressByClientCIDR'>ServerAddressByClientCIDR</a>[];</pre>
-
-a map of client CIDR to server address that is serving this group. This is to help clients
-reach servers in the most network-efficient way possible. Clients can use the appropriate
-server address as per the CIDR that they match. In case of multiple matches, clients should
-use the longest matching CIDR. The server returns only those CIDRs that it thinks that the
-client can match. For example: the master will return an internal IP CIDR only, if the
-client reaches the server using an internal IP. Server looks at X-Forwarded-For header or
-X-Real-Ip header or request.RemoteAddr (in that order) to get the client IP.
-
-</div>
-<h3 class="pdoc-member-header" id="APIGroup-versions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15715">property <b>versions</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>versions: <a href='#GroupVersionForDiscovery'>GroupVersionForDiscovery</a>[];</pre>
-
-versions are the versions supported in this group.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="APIGroupList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15722">interface <b>APIGroupList</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-APIGroupList is a list of APIGroup, to allow clients to discover the API at /apis.
-
-<h3 class="pdoc-member-header" id="APIGroupList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15729">property <b>apiVersion</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-APIVersion defines the versioned schema of this representation of an object. Servers should
-convert recognized schemas to the latest internal value, and may reject unrecognized
-values. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
-
-</div>
-<h3 class="pdoc-member-header" id="APIGroupList-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15734">property <b>groups</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>groups: <a href='#APIGroup'>APIGroup</a>[];</pre>
-
-groups is a list of APIGroup.
-
-</div>
-<h3 class="pdoc-member-header" id="APIGroupList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15742">property <b>kind</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Kind is a string value representing the REST resource this object represents. Servers may
-infer this from the endpoint the client submits requests to. Cannot be updated. In
-CamelCase. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="APIResource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15749">interface <b>APIResource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-APIResource specifies the name of a resource and whether it is namespaced.
-
-<h3 class="pdoc-member-header" id="APIResource-categories">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15753">property <b>categories</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>categories: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-categories is a list of the grouped resources this resource belongs to (e.g. 'all')
-
-</div>
-<h3 class="pdoc-member-header" id="APIResource-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15759">property <b>group</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>group: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-group is the preferred group of the resource.  Empty implies the group of the containing
-resource list. For subresources, this may have a different value, for example: Scale".
-
-</div>
-<h3 class="pdoc-member-header" id="APIResource-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15764">property <b>kind</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-kind is the kind for the resource (e.g. 'Foo' is the kind for a resource 'foo')
-
-</div>
-<h3 class="pdoc-member-header" id="APIResource-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15769">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-name is the plural name of the resource.
-
-</div>
-<h3 class="pdoc-member-header" id="APIResource-namespaced">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15774">property <b>namespaced</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>namespaced: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-namespaced indicates if a resource is namespaced or not.
-
-</div>
-<h3 class="pdoc-member-header" id="APIResource-shortNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15779">property <b>shortNames</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>shortNames: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-shortNames is a list of suggested short names of the resource.
-
-</div>
-<h3 class="pdoc-member-header" id="APIResource-singularName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15786">property <b>singularName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>singularName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-singularName is the singular name of the resource.  This allows clients to handle plural
-and singular opaquely. The singularName is more correct for reporting status on a single
-item and both singular and plural are allowed from the kubectl CLI interface.
-
-</div>
-<h3 class="pdoc-member-header" id="APIResource-verbs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15792">property <b>verbs</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>verbs: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-verbs is a list of supported kube verbs (this includes get, list, watch, create, update,
-patch, delete, deletecollection, and proxy)
-
-</div>
-<h3 class="pdoc-member-header" id="APIResource-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15799">property <b>version</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-version is the preferred version of the resource.  Empty implies the version of the
-containing resource list For subresources, this may have a different value, for example: v1
-(while inside a v1beta1 version of the core resource's group)".
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="APIResourceList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15807">interface <b>APIResourceList</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-APIResourceList is a list of APIResource, it is used to expose the name of the resources
-supported in a specific group and version, and if the resource is namespaced.
-
-<h3 class="pdoc-member-header" id="APIResourceList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15814">property <b>apiVersion</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-APIVersion defines the versioned schema of this representation of an object. Servers should
-convert recognized schemas to the latest internal value, and may reject unrecognized
-values. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
-
-</div>
-<h3 class="pdoc-member-header" id="APIResourceList-groupVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15819">property <b>groupVersion</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>groupVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-groupVersion is the group and version this APIResourceList is for.
-
-</div>
-<h3 class="pdoc-member-header" id="APIResourceList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15827">property <b>kind</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Kind is a string value representing the REST resource this object represents. Servers may
-infer this from the endpoint the client submits requests to. Cannot be updated. In
-CamelCase. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
-
-</div>
-<h3 class="pdoc-member-header" id="APIResourceList-resources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15832">property <b>resources</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>resources: <a href='#APIResource'>APIResource</a>[];</pre>
-
-resources contains the name of the resources and if they are namespaced.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="APIVersions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15840">interface <b>APIVersions</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-APIVersions lists the versions that are available, to allow clients to discover the API at
-/api, which is the root path of the legacy v1 API.
-
-<h3 class="pdoc-member-header" id="APIVersions-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15847">property <b>apiVersion</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-APIVersion defines the versioned schema of this representation of an object. Servers should
-convert recognized schemas to the latest internal value, and may reject unrecognized
-values. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
-
-</div>
-<h3 class="pdoc-member-header" id="APIVersions-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15855">property <b>kind</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Kind is a string value representing the REST resource this object represents. Servers may
-infer this from the endpoint the client submits requests to. Cannot be updated. In
-CamelCase. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
-
-</div>
-<h3 class="pdoc-member-header" id="APIVersions-serverAddressByClientCIDRs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15866">property <b>serverAddressByClientCIDRs</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>serverAddressByClientCIDRs: <a href='#ServerAddressByClientCIDR'>ServerAddressByClientCIDR</a>[];</pre>
-
-a map of client CIDR to server address that is serving this group. This is to help clients
-reach servers in the most network-efficient way possible. Clients can use the appropriate
-server address as per the CIDR that they match. In case of multiple matches, clients should
-use the longest matching CIDR. The server returns only those CIDRs that it thinks that the
-client can match. For example: the master will return an internal IP CIDR only, if the
-client reaches the server using an internal IP. Server looks at X-Forwarded-For header or
-X-Real-Ip header or request.RemoteAddr (in that order) to get the client IP.
-
-</div>
-<h3 class="pdoc-member-header" id="APIVersions-versions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15871">property <b>versions</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>versions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-versions are the api versions that are available.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="DeleteOptions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15878">interface <b>DeleteOptions</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-DeleteOptions may be provided when deleting an API object.
-
-<h3 class="pdoc-member-header" id="DeleteOptions-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15885">property <b>apiVersion</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-APIVersion defines the versioned schema of this representation of an object. Servers should
-convert recognized schemas to the latest internal value, and may reject unrecognized
-values. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
-
-</div>
-<h3 class="pdoc-member-header" id="DeleteOptions-dryRun">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15892">property <b>dryRun</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>dryRun: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-When present, indicates that modifications should not be persisted. An invalid or
-unrecognized dryRun directive will result in an error response and no further processing of
-the request. Valid values are: - All: all dry run stages will be processed
-
-</div>
-<h3 class="pdoc-member-header" id="DeleteOptions-gracePeriodSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15900">property <b>gracePeriodSeconds</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>gracePeriodSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-The duration in seconds before the object should be deleted. Value must be non-negative
-integer. The value zero indicates delete immediately. If this value is nil, the default
-grace period for the specified type will be used. Defaults to a per object value if not
-specified. zero means delete immediately.
-
-</div>
-<h3 class="pdoc-member-header" id="DeleteOptions-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15908">property <b>kind</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Kind is a string value representing the REST resource this object represents. Servers may
-infer this from the endpoint the client submits requests to. Cannot be updated. In
-CamelCase. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
-
-</div>
-<h3 class="pdoc-member-header" id="DeleteOptions-orphanDependents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15916">property <b>orphanDependents</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>orphanDependents: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should
-the dependent objects be orphaned. If true/false, the "orphan" finalizer will be added
-to/removed from the object's finalizers list. Either this field or PropagationPolicy may be
-set, but not both.
-
-</div>
-<h3 class="pdoc-member-header" id="DeleteOptions-preconditions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15922">property <b>preconditions</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>preconditions: <a href='#Preconditions'>Preconditions</a>;</pre>
-
-Must be fulfilled before a deletion is carried out. If not possible, a 409 Conflict status
-will be returned.
-
-</div>
-<h3 class="pdoc-member-header" id="DeleteOptions-propagationPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15932">property <b>propagationPolicy</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>propagationPolicy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Whether and how garbage collection will be performed. Either this field or OrphanDependents
-may be set, but not both. The default policy is decided by the existing finalizer set in
-the metadata.finalizers and the resource-specific default policy. Acceptable values are:
-'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the
-dependents in the background; 'Foreground' - a cascading policy that deletes all dependents
-in the foreground.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="GroupVersionForDiscovery">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15940">interface <b>GroupVersionForDiscovery</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-GroupVersion contains the "group/version" and "version" string of a version. It is made a
-struct to keep extensibility.
-
-<h3 class="pdoc-member-header" id="GroupVersionForDiscovery-groupVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15944">property <b>groupVersion</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>groupVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-groupVersion specifies the API group and version in the form "group/version"
-
-</div>
-<h3 class="pdoc-member-header" id="GroupVersionForDiscovery-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15950">property <b>version</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-version specifies the version in the form of "version". This is to save the clients the
-trouble of splitting the GroupVersion.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="Initializer">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15957">interface <b>Initializer</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Initializer is information about an initializer that has not yet completed.
-
-<h3 class="pdoc-member-header" id="Initializer-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15961">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-name of the process that is responsible for initializing this object.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="Initializers">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15968">interface <b>Initializers</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Initializers tracks the progress of initialization.
-
-<h3 class="pdoc-member-header" id="Initializers-pending">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15975">property <b>pending</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>pending: <a href='#Initializer'>Initializer</a>[];</pre>
-
-Pending is a list of initializers that must execute in order before this object is visible.
-When the last pending initializer is removed, and no failing result is set, the
-initializers struct will be set to nil and the object is considered as initialized and
-visible to all clients.
-
-</div>
-<h3 class="pdoc-member-header" id="Initializers-result">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15981">property <b>result</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>result: <a href='#Status'>Status</a>;</pre>
-
-If result is set with the Failure field, the object will be persisted to storage and then
-deleted, ensuring that other clients can observe the deletion.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="LabelSelector">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15990">interface <b>LabelSelector</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-A label selector is a label query over a set of resources. The result of matchLabels and
-matchExpressions are ANDed. An empty label selector matches all objects. A null label
-selector matches no objects.
-
-<h3 class="pdoc-member-header" id="LabelSelector-matchExpressions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15994">property <b>matchExpressions</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>matchExpressions: <a href='#LabelSelectorRequirement'>LabelSelectorRequirement</a>[];</pre>
-
-matchExpressions is a list of label selector requirements. The requirements are ANDed.
-
-</div>
-<h3 class="pdoc-member-header" id="LabelSelector-matchLabels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16001">property <b>matchLabels</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>matchLabels: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</pre>
-
-matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is
-equivalent to an element of matchExpressions, whose key field is "key", the operator is
-"In", and the values array contains only "value". The requirements are ANDed.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="LabelSelectorRequirement">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16009">interface <b>LabelSelectorRequirement</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-A label selector requirement is a selector that contains values, a key, and an operator that
-relates the key and values.
-
-<h3 class="pdoc-member-header" id="LabelSelectorRequirement-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16013">property <b>key</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-key is the label key that the selector applies to.
-
-</div>
-<h3 class="pdoc-member-header" id="LabelSelectorRequirement-operator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16019">property <b>operator</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>operator: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-operator represents a key's relationship to a set of values. Valid operators are In, NotIn,
-Exists and DoesNotExist.
-
-</div>
-<h3 class="pdoc-member-header" id="LabelSelectorRequirement-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16026">property <b>values</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-values is an array of string values. If the operator is In or NotIn, the values array must
-be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty.
-This array is replaced during a strategic merge patch.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ListMeta">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16034">interface <b>ListMeta</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ListMeta describes metadata that synthetic resources must have, including lists and various
-status objects. A resource may have only one of {ObjectMeta, ListMeta}.
-
-<h3 class="pdoc-member-header" id="ListMeta-continue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16044">property <b>continue</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>continue: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-continue may be set if the user set a limit on the number of items returned, and indicates
-that the server has more data available. The value is opaque and may be used to issue
-another request to the endpoint that served this list to retrieve the next set of available
-objects. Continuing a consistent list may not be possible if the server configuration has
-changed or more than a few minutes have passed. The resourceVersion field returned when
-using this continue value will be identical to the value in the first response, unless you
-have received this token from an error message.
-
-</div>
-<h3 class="pdoc-member-header" id="ListMeta-resourceVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16052">property <b>resourceVersion</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>resourceVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-String that identifies the server's internal version of this object that can be used by
-clients to determine when objects have changed. Value must be treated as opaque by clients
-and passed unmodified back to the server. Populated by the system. Read-only. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
-
-</div>
-<h3 class="pdoc-member-header" id="ListMeta-selfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16057">property <b>selfLink</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>selfLink: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-selfLink is a URL representing this object. Populated by the system. Read-only.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ObjectMeta">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16065">interface <b>ObjectMeta</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ObjectMeta is metadata that all persisted resources must have, which includes all objects
-users must create.
-
-<h3 class="pdoc-member-header" id="ObjectMeta-annotations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16072">property <b>annotations</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>annotations: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</pre>
-
-Annotations is an unstructured key value map stored with a resource that may be set by
-external tools to store and retrieve arbitrary metadata. They are not queryable and should
-be preserved when modifying objects. More info:
-http://kubernetes.io/docs/user-guide/annotations
-
-</div>
-<h3 class="pdoc-member-header" id="ObjectMeta-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16079">property <b>clusterName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>clusterName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The name of the cluster which the object belongs to. This is used to distinguish resources
-with same name and namespace in different clusters. This field is not set anywhere right
-now and apiserver is going to ignore it if set in create or update request.
-
-</div>
-<h3 class="pdoc-member-header" id="ObjectMeta-creationTimestamp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16089">property <b>creationTimestamp</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>creationTimestamp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-CreationTimestamp is a timestamp representing the server time when this object was created.
-It is not guaranteed to be set in happens-before order across separate operations. Clients
-may not set this value. It is represented in RFC3339 form and is in UTC.
-
-Populated by the system. Read-only. Null for lists. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
-
-</div>
-<h3 class="pdoc-member-header" id="ObjectMeta-deletionGracePeriodSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16096">property <b>deletionGracePeriodSeconds</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>deletionGracePeriodSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-Number of seconds allowed for this object to gracefully terminate before it will be removed
-from the system. Only set when deletionTimestamp is also set. May only be shortened.
-Read-only.
-
-</div>
-<h3 class="pdoc-member-header" id="ObjectMeta-deletionTimestamp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16117">property <b>deletionTimestamp</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>deletionTimestamp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This
-field is set by the server when a graceful deletion is requested by the user, and is not
-directly settable by a client. The resource is expected to be deleted (no longer visible
-from resource lists, and not reachable by name) after the time in this field, once the
-finalizers list is empty. As long as the finalizers list contains items, deletion is
-blocked. Once the deletionTimestamp is set, this value may not be unset or be set further
-into the future, although it may be shortened or the resource may be deleted prior to this
-time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will
-react by sending a graceful termination signal to the containers in the pod. After that 30
-seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and
-after cleanup, remove the pod from the API. In the presence of network partitions, this
-object may still exist after this timestamp, until an administrator or automated process
-can determine the resource is fully terminated. If not set, graceful deletion of the object
-has not been requested.
-
-Populated by the system when a graceful deletion is requested. Read-only. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
-
-</div>
-<h3 class="pdoc-member-header" id="ObjectMeta-finalizers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16124">property <b>finalizers</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>finalizers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-Must be empty before the object is deleted from the registry. Each entry is an identifier
-for the responsible component that will remove the entry from the list. If the
-deletionTimestamp of the object is non-nil, entries in this list can only be removed.
-
-</div>
-<h3 class="pdoc-member-header" id="ObjectMeta-generateName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16141">property <b>generateName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>generateName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF
-the Name field has not been provided. If this field is used, the name returned to the
-client will be different than the name passed. This value will also be combined with a
-unique suffix. The provided value has the same validation rules as the Name field, and may
-be truncated by the length of the suffix required to make the value unique on the server.
-
-If this field is specified and the generated name exists, the server will NOT return a 409
-- instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a
-unique name could not be found in the time allotted, and the client should retry
-(optionally after the time indicated in the Retry-After header).
-
-Applied only if Name is not specified. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#idempotency
-
-</div>
-<h3 class="pdoc-member-header" id="ObjectMeta-generation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16147">property <b>generation</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>generation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-A sequence number representing a specific generation of the desired state. Populated by the
-system. Read-only.
-
-</div>
-<h3 class="pdoc-member-header" id="ObjectMeta-initializers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16160">property <b>initializers</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>initializers: <a href='#Initializers'>Initializers</a>;</pre>
-
-An initializer is a controller which enforces some system invariant at object creation
-time. This field is a list of initializers that have not yet acted on this object. If nil
-or empty, this object has been completely initialized. Otherwise, the object is considered
-uninitialized and is hidden (in list/watch and get calls) from clients that haven't
-explicitly asked to observe uninitialized objects.
-
-When an object is created, the system will populate this list with the current set of
-initializers. Only privileged users may set or modify this list. Once it is empty, it may
-not be modified further by any user.
-
-</div>
-<h3 class="pdoc-member-header" id="ObjectMeta-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16167">property <b>labels</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>labels: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</pre>
-
-Map of string keys and values that can be used to organize and categorize (scope and
-select) objects. May match selectors of replication controllers and services. More info:
-http://kubernetes.io/docs/user-guide/labels
-
-</div>
-<h3 class="pdoc-member-header" id="ObjectMeta-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16176">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Name must be unique within a namespace. Is required when creating resources, although some
-resources may allow a client to request the generation of an appropriate name
-automatically. Name is primarily intended for creation idempotence and configuration
-definition. Cannot be updated. More info:
-http://kubernetes.io/docs/user-guide/identifiers#names
-
-</div>
-<h3 class="pdoc-member-header" id="ObjectMeta-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16187">property <b>namespace</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Namespace defines the space within each name must be unique. An empty namespace is
-equivalent to the "default" namespace, but "default" is the canonical representation. Not
-all objects are required to be scoped to a namespace - the value of this field for those
-objects will be empty.
-
-Must be a DNS_LABEL. Cannot be updated. More info:
-http://kubernetes.io/docs/user-guide/namespaces
-
-</div>
-<h3 class="pdoc-member-header" id="ObjectMeta-ownerReferences">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16195">property <b>ownerReferences</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>ownerReferences: <a href='#OwnerReference'>OwnerReference</a>[];</pre>
-
-List of objects depended by this object. If ALL objects in the list have been deleted, this
-object will be garbage collected. If this object is managed by a controller, then an entry
-in this list will point to this controller, with the controller field set to true. There
-cannot be more than one managing controller.
-
-</div>
-<h3 class="pdoc-member-header" id="ObjectMeta-resourceVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16208">property <b>resourceVersion</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>resourceVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-An opaque value that represents the internal version of this object that can be used by
-clients to determine when objects have changed. May be used for optimistic concurrency,
-change detection, and the watch operation on a resource or set of resources. Clients must
-treat these values as opaque and passed unmodified back to the server. They may only be
-valid for a particular resource or set of resources.
-
-Populated by the system. Read-only. Value must be treated as opaque by clients and . More
-info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
-
-</div>
-<h3 class="pdoc-member-header" id="ObjectMeta-selfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16213">property <b>selfLink</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>selfLink: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-SelfLink is a URL representing this object. Populated by the system. Read-only.
-
-</div>
-<h3 class="pdoc-member-header" id="ObjectMeta-uid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16222">property <b>uid</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>uid: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-UID is the unique in time and space value for this object. It is typically generated by the
-server on successful creation of a resource and is not allowed to change on PUT operations.
-
-Populated by the system. Read-only. More info:
-http://kubernetes.io/docs/user-guide/identifiers#uids
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="OwnerReference">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16231">interface <b>OwnerReference</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-OwnerReference contains enough information to let you identify an owning object. An owning
-object must be in the same namespace as the dependent, or be cluster-scoped, so there is no
-namespace field.
-
-<h3 class="pdoc-member-header" id="OwnerReference-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16235">property <b>apiVersion</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-API version of the referent.
-
-</div>
-<h3 class="pdoc-member-header" id="OwnerReference-blockOwnerDeletion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16243">property <b>blockOwnerDeletion</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>blockOwnerDeletion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-If true, AND if the owner has the "foregroundDeletion" finalizer, then the owner cannot be
-deleted from the key-value store until this reference is removed. Defaults to false. To set
-this field, a user needs "delete" permission of the owner, otherwise 422 (Unprocessable
-Entity) will be returned.
-
-</div>
-<h3 class="pdoc-member-header" id="OwnerReference-controller">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16248">property <b>controller</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>controller: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-If true, this reference points to the managing controller.
-
-</div>
-<h3 class="pdoc-member-header" id="OwnerReference-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16254">property <b>kind</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Kind of the referent. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
-
-</div>
-<h3 class="pdoc-member-header" id="OwnerReference-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16259">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names
-
-</div>
-<h3 class="pdoc-member-header" id="OwnerReference-uid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16264">property <b>uid</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>uid: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="Preconditions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16271">interface <b>Preconditions</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Preconditions must be fulfilled before an operation (update, delete, etc.) is carried out.
-
-<h3 class="pdoc-member-header" id="Preconditions-uid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16275">property <b>uid</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>uid: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Specifies the target UID.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ServerAddressByClientCIDR">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16283">interface <b>ServerAddressByClientCIDR</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ServerAddressByClientCIDR helps the client to determine the server address that they should
-use, depending on the clientCIDR that they match.
-
-<h3 class="pdoc-member-header" id="ServerAddressByClientCIDR-clientCIDR">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16288">property <b>clientCIDR</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>clientCIDR: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The CIDR with which clients can match their IP to figure out the server address that they
-should use.
-
-</div>
-<h3 class="pdoc-member-header" id="ServerAddressByClientCIDR-serverAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16294">property <b>serverAddress</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>serverAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Address of this server, suitable for a client that matches the above CIDR. This can be a
-hostname, hostname:port, IP or IP:port.
-
-</div>
-</div>
 <h2 class="pdoc-module-header" id="Status">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16301">interface <b>Status</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/meta/v1/Status.ts#L11">class <b>Status</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 Status is a return value for calls that don't return other objects.
 
-<h3 class="pdoc-member-header" id="Status-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16308">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="Status-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/meta/v1/Status.ts#L81"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Status(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.meta.v1.Status, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a meta.v1.Status resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="Status-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/meta/v1/Status.ts#L76">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Status'>Status</a></pre>
+
+
+Get the state of an existing `Status` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="Status-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/meta/v1/Status.ts#L80">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.meta.v1.Status</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="Status-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="Status-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="Status-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/meta/v1/Status.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -1068,30 +101,40 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
 <h3 class="pdoc-member-header" id="Status-code">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16313">property <b>code</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/meta/v1/Status.ts#L23">property <b>code</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>code: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>code: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 
 Suggested HTTP return code for this status, 0 if not set.
 
 </div>
 <h3 class="pdoc-member-header" id="Status-details">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16320">property <b>details</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/meta/v1/Status.ts#L30">property <b>details</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>details: <a href='#StatusDetails'>StatusDetails</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>details: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.StatusDetails&gt;;</pre>
 
 Extended data associated with the reason.  Each reason may define its own extended details.
 This field is optional and the data returned is not guaranteed to conform to any schema
 except that defined by the reason type.
 
 </div>
-<h3 class="pdoc-member-header" id="Status-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16328">property <b>kind</b></a>
+<h3 class="pdoc-member-header" id="Status-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="Status-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/meta/v1/Status.ts#L38">property <b>kind</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"Status"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -1100,29 +143,29 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="Status-message">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16333">property <b>message</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/meta/v1/Status.ts#L43">property <b>message</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>message: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 A human-readable description of the status of this operation.
 
 </div>
 <h3 class="pdoc-member-header" id="Status-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16339">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/meta/v1/Status.ts#L49">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
 
 Standard list metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="Status-reason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16346">property <b>reason</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/meta/v1/Status.ts#L56">property <b>reason</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>reason: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>reason: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 A machine-readable description of why this operation is in the "Failure" status. If this
 value is empty there is no information available. A Reason clarifies an HTTP status code
@@ -1130,157 +173,23 @@ but does not override it.
 
 </div>
 <h3 class="pdoc-member-header" id="Status-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16352">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/meta/v1/Status.ts#L62">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>status: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 Status of the operation. One of: "Success" or "Failure". More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="StatusCause">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16360">interface <b>StatusCause</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-StatusCause provides more information about an api.Status failure, including cases when
-multiple errors are encountered.
-
-<h3 class="pdoc-member-header" id="StatusCause-field">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16371">property <b>field</b></a>
+<h3 class="pdoc-member-header" id="Status-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>field: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 
-The field of the resource that has caused this error, as named by its JSON serialization.
-May include dot and postfix notation for nested attributes. Arrays are zero-indexed.
-Fields may appear more than once in an array of causes due to fields having multiple
-errors. Optional.
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
-Examples:
-  "name" - the field "name" on the current resource
-  "items[0].name" - the field "name" on the first array entry in "items"
-
-</div>
-<h3 class="pdoc-member-header" id="StatusCause-message">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16377">property <b>message</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-A human-readable description of the cause of the error.  This field may be presented as-is
-to a reader.
-
-</div>
-<h3 class="pdoc-member-header" id="StatusCause-reason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16383">property <b>reason</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>reason: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-A machine-readable description of the cause of the error. If this value is empty there is
-no information available.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="StatusDetails">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16393">interface <b>StatusDetails</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-StatusDetails is a set of additional properties that MAY be set by the server to provide
-additional information about a response. The Reason field of a Status object defines what
-attributes will be set. Clients must ignore fields that do not match the defined type of each
-attribute, and should assume that any attribute may be empty, invalid, or under defined.
-
-<h3 class="pdoc-member-header" id="StatusDetails-causes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16398">property <b>causes</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>causes: <a href='#StatusCause'>StatusCause</a>[];</pre>
-
-The Causes array includes more details associated with the StatusReason failure. Not all
-StatusReasons may provide detailed causes.
-
-</div>
-<h3 class="pdoc-member-header" id="StatusDetails-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16403">property <b>group</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>group: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The group attribute of the resource associated with the status StatusReason.
-
-</div>
-<h3 class="pdoc-member-header" id="StatusDetails-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16410">property <b>kind</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The kind attribute of the resource associated with the status StatusReason. On some
-operations may differ from the requested resource Kind. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
-
-</div>
-<h3 class="pdoc-member-header" id="StatusDetails-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16416">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The name attribute of the resource associated with the status StatusReason (when there is a
-single name which can be described).
-
-</div>
-<h3 class="pdoc-member-header" id="StatusDetails-retryAfterSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16423">property <b>retryAfterSeconds</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>retryAfterSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-If specified, the time in seconds before the operation should be retried. Some errors may
-indicate the client must take an alternate action - for those errors this field may
-indicate how long to wait before taking the alternate action.
-
-</div>
-<h3 class="pdoc-member-header" id="StatusDetails-uid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16429">property <b>uid</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>uid: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-UID of the resource. (when there is a single resource which can be described). More info:
-http://kubernetes.io/docs/user-guide/identifiers#uids
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="WatchEvent">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16436">interface <b>WatchEvent</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Event represents a single event to a watched resource.
-
-<h3 class="pdoc-member-header" id="WatchEvent-object">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16444">property <b>object</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>object: <a href='#RawExtension'>RawExtension</a>;</pre>
-
-Object is:
- * If Type is Added or Modified: the new state of the object.
- * If Type is Deleted: the state of the object immediately before deletion.
- * If Type is Error: *Status is recommended; other types may make sense
-   depending on context.
-
-</div>
-<h3 class="pdoc-member-header" id="WatchEvent-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16447">property <b>type</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 </div>

@@ -14,786 +14,118 @@ title: Module core/v1
 <div class="expanded" markdown="1">
 <h2 class="pdoc-module-header toggleButton" title="Click to hide Index">Index ▾</h2>
 <div class="pdoc-module-contents" markdown="1">
-* <a href="#isBinding">function isBinding</a>
-* <a href="#isComponentStatus">function isComponentStatus</a>
-* <a href="#isComponentStatusList">function isComponentStatusList</a>
-* <a href="#isConfigMap">function isConfigMap</a>
-* <a href="#isConfigMapList">function isConfigMapList</a>
-* <a href="#isEndpoints">function isEndpoints</a>
-* <a href="#isEndpointsList">function isEndpointsList</a>
-* <a href="#isEvent">function isEvent</a>
-* <a href="#isEventList">function isEventList</a>
-* <a href="#isLimitRange">function isLimitRange</a>
-* <a href="#isLimitRangeList">function isLimitRangeList</a>
-* <a href="#isNamespace">function isNamespace</a>
-* <a href="#isNamespaceList">function isNamespaceList</a>
-* <a href="#isNode">function isNode</a>
-* <a href="#isNodeList">function isNodeList</a>
-* <a href="#isObjectFieldSelector">function isObjectFieldSelector</a>
-* <a href="#isObjectReference">function isObjectReference</a>
-* <a href="#isPersistentVolume">function isPersistentVolume</a>
-* <a href="#isPersistentVolumeClaim">function isPersistentVolumeClaim</a>
-* <a href="#isPersistentVolumeClaimList">function isPersistentVolumeClaimList</a>
-* <a href="#isPersistentVolumeList">function isPersistentVolumeList</a>
-* <a href="#isPod">function isPod</a>
-* <a href="#isPodList">function isPodList</a>
-* <a href="#isPodTemplate">function isPodTemplate</a>
-* <a href="#isPodTemplateList">function isPodTemplateList</a>
-* <a href="#isReplicationController">function isReplicationController</a>
-* <a href="#isReplicationControllerList">function isReplicationControllerList</a>
-* <a href="#isResourceQuota">function isResourceQuota</a>
-* <a href="#isResourceQuotaList">function isResourceQuotaList</a>
-* <a href="#isSecret">function isSecret</a>
-* <a href="#isSecretList">function isSecretList</a>
-* <a href="#isService">function isService</a>
-* <a href="#isServiceAccount">function isServiceAccount</a>
-* <a href="#isServiceAccountList">function isServiceAccountList</a>
-* <a href="#isServiceList">function isServiceList</a>
-* <a href="#AWSElasticBlockStoreVolumeSource">interface AWSElasticBlockStoreVolumeSource</a>
-* <a href="#Affinity">interface Affinity</a>
-* <a href="#AttachedVolume">interface AttachedVolume</a>
-* <a href="#AzureDiskVolumeSource">interface AzureDiskVolumeSource</a>
-* <a href="#AzureFilePersistentVolumeSource">interface AzureFilePersistentVolumeSource</a>
-* <a href="#AzureFileVolumeSource">interface AzureFileVolumeSource</a>
-* <a href="#Binding">interface Binding</a>
-* <a href="#CSIPersistentVolumeSource">interface CSIPersistentVolumeSource</a>
-* <a href="#Capabilities">interface Capabilities</a>
-* <a href="#CephFSPersistentVolumeSource">interface CephFSPersistentVolumeSource</a>
-* <a href="#CephFSVolumeSource">interface CephFSVolumeSource</a>
-* <a href="#CinderPersistentVolumeSource">interface CinderPersistentVolumeSource</a>
-* <a href="#CinderVolumeSource">interface CinderVolumeSource</a>
-* <a href="#ClientIPConfig">interface ClientIPConfig</a>
-* <a href="#ComponentCondition">interface ComponentCondition</a>
-* <a href="#ComponentStatus">interface ComponentStatus</a>
-* <a href="#ComponentStatusList">interface ComponentStatusList</a>
-* <a href="#ConfigMap">interface ConfigMap</a>
-* <a href="#ConfigMapEnvSource">interface ConfigMapEnvSource</a>
-* <a href="#ConfigMapKeySelector">interface ConfigMapKeySelector</a>
-* <a href="#ConfigMapList">interface ConfigMapList</a>
-* <a href="#ConfigMapNodeConfigSource">interface ConfigMapNodeConfigSource</a>
-* <a href="#ConfigMapProjection">interface ConfigMapProjection</a>
-* <a href="#ConfigMapVolumeSource">interface ConfigMapVolumeSource</a>
-* <a href="#Container">interface Container</a>
-* <a href="#ContainerImage">interface ContainerImage</a>
-* <a href="#ContainerPort">interface ContainerPort</a>
-* <a href="#ContainerState">interface ContainerState</a>
-* <a href="#ContainerStateRunning">interface ContainerStateRunning</a>
-* <a href="#ContainerStateTerminated">interface ContainerStateTerminated</a>
-* <a href="#ContainerStateWaiting">interface ContainerStateWaiting</a>
-* <a href="#ContainerStatus">interface ContainerStatus</a>
-* <a href="#DaemonEndpoint">interface DaemonEndpoint</a>
-* <a href="#DownwardAPIProjection">interface DownwardAPIProjection</a>
-* <a href="#DownwardAPIVolumeFile">interface DownwardAPIVolumeFile</a>
-* <a href="#DownwardAPIVolumeSource">interface DownwardAPIVolumeSource</a>
-* <a href="#EmptyDirVolumeSource">interface EmptyDirVolumeSource</a>
-* <a href="#EndpointAddress">interface EndpointAddress</a>
-* <a href="#EndpointPort">interface EndpointPort</a>
-* <a href="#EndpointSubset">interface EndpointSubset</a>
-* <a href="#Endpoints">interface Endpoints</a>
-* <a href="#EndpointsList">interface EndpointsList</a>
-* <a href="#EnvFromSource">interface EnvFromSource</a>
-* <a href="#EnvVar">interface EnvVar</a>
-* <a href="#EnvVarSource">interface EnvVarSource</a>
-* <a href="#Event">interface Event</a>
-* <a href="#EventList">interface EventList</a>
-* <a href="#EventSeries">interface EventSeries</a>
-* <a href="#EventSource">interface EventSource</a>
-* <a href="#ExecAction">interface ExecAction</a>
-* <a href="#FCVolumeSource">interface FCVolumeSource</a>
-* <a href="#FlexPersistentVolumeSource">interface FlexPersistentVolumeSource</a>
-* <a href="#FlexVolumeSource">interface FlexVolumeSource</a>
-* <a href="#FlockerVolumeSource">interface FlockerVolumeSource</a>
-* <a href="#GCEPersistentDiskVolumeSource">interface GCEPersistentDiskVolumeSource</a>
-* <a href="#GitRepoVolumeSource">interface GitRepoVolumeSource</a>
-* <a href="#GlusterfsPersistentVolumeSource">interface GlusterfsPersistentVolumeSource</a>
-* <a href="#GlusterfsVolumeSource">interface GlusterfsVolumeSource</a>
-* <a href="#HTTPGetAction">interface HTTPGetAction</a>
-* <a href="#HTTPHeader">interface HTTPHeader</a>
-* <a href="#Handler">interface Handler</a>
-* <a href="#HostAlias">interface HostAlias</a>
-* <a href="#HostPathVolumeSource">interface HostPathVolumeSource</a>
-* <a href="#ISCSIPersistentVolumeSource">interface ISCSIPersistentVolumeSource</a>
-* <a href="#ISCSIVolumeSource">interface ISCSIVolumeSource</a>
-* <a href="#KeyToPath">interface KeyToPath</a>
-* <a href="#Lifecycle">interface Lifecycle</a>
-* <a href="#LimitRange">interface LimitRange</a>
-* <a href="#LimitRangeItem">interface LimitRangeItem</a>
-* <a href="#LimitRangeList">interface LimitRangeList</a>
-* <a href="#LimitRangeSpec">interface LimitRangeSpec</a>
-* <a href="#LoadBalancerIngress">interface LoadBalancerIngress</a>
-* <a href="#LoadBalancerStatus">interface LoadBalancerStatus</a>
-* <a href="#LocalObjectReference">interface LocalObjectReference</a>
-* <a href="#LocalVolumeSource">interface LocalVolumeSource</a>
-* <a href="#NFSVolumeSource">interface NFSVolumeSource</a>
-* <a href="#Namespace">interface Namespace</a>
-* <a href="#NamespaceList">interface NamespaceList</a>
-* <a href="#NamespaceSpec">interface NamespaceSpec</a>
-* <a href="#NamespaceStatus">interface NamespaceStatus</a>
-* <a href="#Node">interface Node</a>
-* <a href="#NodeAddress">interface NodeAddress</a>
-* <a href="#NodeAffinity">interface NodeAffinity</a>
-* <a href="#NodeCondition">interface NodeCondition</a>
-* <a href="#NodeConfigSource">interface NodeConfigSource</a>
-* <a href="#NodeConfigStatus">interface NodeConfigStatus</a>
-* <a href="#NodeDaemonEndpoints">interface NodeDaemonEndpoints</a>
-* <a href="#NodeList">interface NodeList</a>
-* <a href="#NodeSelector">interface NodeSelector</a>
-* <a href="#NodeSelectorRequirement">interface NodeSelectorRequirement</a>
-* <a href="#NodeSelectorTerm">interface NodeSelectorTerm</a>
-* <a href="#NodeSpec">interface NodeSpec</a>
-* <a href="#NodeStatus">interface NodeStatus</a>
-* <a href="#NodeSystemInfo">interface NodeSystemInfo</a>
-* <a href="#ObjectFieldSelector">interface ObjectFieldSelector</a>
-* <a href="#ObjectReference">interface ObjectReference</a>
-* <a href="#PersistentVolume">interface PersistentVolume</a>
-* <a href="#PersistentVolumeClaim">interface PersistentVolumeClaim</a>
-* <a href="#PersistentVolumeClaimCondition">interface PersistentVolumeClaimCondition</a>
-* <a href="#PersistentVolumeClaimList">interface PersistentVolumeClaimList</a>
-* <a href="#PersistentVolumeClaimSpec">interface PersistentVolumeClaimSpec</a>
-* <a href="#PersistentVolumeClaimStatus">interface PersistentVolumeClaimStatus</a>
-* <a href="#PersistentVolumeClaimVolumeSource">interface PersistentVolumeClaimVolumeSource</a>
-* <a href="#PersistentVolumeList">interface PersistentVolumeList</a>
-* <a href="#PersistentVolumeSpec">interface PersistentVolumeSpec</a>
-* <a href="#PersistentVolumeStatus">interface PersistentVolumeStatus</a>
-* <a href="#PhotonPersistentDiskVolumeSource">interface PhotonPersistentDiskVolumeSource</a>
-* <a href="#Pod">interface Pod</a>
-* <a href="#PodAffinity">interface PodAffinity</a>
-* <a href="#PodAffinityTerm">interface PodAffinityTerm</a>
-* <a href="#PodAntiAffinity">interface PodAntiAffinity</a>
-* <a href="#PodCondition">interface PodCondition</a>
-* <a href="#PodDNSConfig">interface PodDNSConfig</a>
-* <a href="#PodDNSConfigOption">interface PodDNSConfigOption</a>
-* <a href="#PodList">interface PodList</a>
-* <a href="#PodReadinessGate">interface PodReadinessGate</a>
-* <a href="#PodSecurityContext">interface PodSecurityContext</a>
-* <a href="#PodSpec">interface PodSpec</a>
-* <a href="#PodStatus">interface PodStatus</a>
-* <a href="#PodTemplate">interface PodTemplate</a>
-* <a href="#PodTemplateList">interface PodTemplateList</a>
-* <a href="#PodTemplateSpec">interface PodTemplateSpec</a>
-* <a href="#PortworxVolumeSource">interface PortworxVolumeSource</a>
-* <a href="#PreferredSchedulingTerm">interface PreferredSchedulingTerm</a>
-* <a href="#Probe">interface Probe</a>
-* <a href="#ProjectedVolumeSource">interface ProjectedVolumeSource</a>
-* <a href="#QuobyteVolumeSource">interface QuobyteVolumeSource</a>
-* <a href="#RBDPersistentVolumeSource">interface RBDPersistentVolumeSource</a>
-* <a href="#RBDVolumeSource">interface RBDVolumeSource</a>
-* <a href="#ReplicationController">interface ReplicationController</a>
-* <a href="#ReplicationControllerCondition">interface ReplicationControllerCondition</a>
-* <a href="#ReplicationControllerList">interface ReplicationControllerList</a>
-* <a href="#ReplicationControllerSpec">interface ReplicationControllerSpec</a>
-* <a href="#ReplicationControllerStatus">interface ReplicationControllerStatus</a>
-* <a href="#ResourceFieldSelector">interface ResourceFieldSelector</a>
-* <a href="#ResourceQuota">interface ResourceQuota</a>
-* <a href="#ResourceQuotaList">interface ResourceQuotaList</a>
-* <a href="#ResourceQuotaSpec">interface ResourceQuotaSpec</a>
-* <a href="#ResourceQuotaStatus">interface ResourceQuotaStatus</a>
-* <a href="#ResourceRequirements">interface ResourceRequirements</a>
-* <a href="#SELinuxOptions">interface SELinuxOptions</a>
-* <a href="#ScaleIOPersistentVolumeSource">interface ScaleIOPersistentVolumeSource</a>
-* <a href="#ScaleIOVolumeSource">interface ScaleIOVolumeSource</a>
-* <a href="#ScopeSelector">interface ScopeSelector</a>
-* <a href="#ScopedResourceSelectorRequirement">interface ScopedResourceSelectorRequirement</a>
-* <a href="#Secret">interface Secret</a>
-* <a href="#SecretEnvSource">interface SecretEnvSource</a>
-* <a href="#SecretKeySelector">interface SecretKeySelector</a>
-* <a href="#SecretList">interface SecretList</a>
-* <a href="#SecretProjection">interface SecretProjection</a>
-* <a href="#SecretReference">interface SecretReference</a>
-* <a href="#SecretVolumeSource">interface SecretVolumeSource</a>
-* <a href="#SecurityContext">interface SecurityContext</a>
-* <a href="#Service">interface Service</a>
-* <a href="#ServiceAccount">interface ServiceAccount</a>
-* <a href="#ServiceAccountList">interface ServiceAccountList</a>
-* <a href="#ServiceAccountTokenProjection">interface ServiceAccountTokenProjection</a>
-* <a href="#ServiceList">interface ServiceList</a>
-* <a href="#ServicePort">interface ServicePort</a>
-* <a href="#ServiceSpec">interface ServiceSpec</a>
-* <a href="#ServiceStatus">interface ServiceStatus</a>
-* <a href="#SessionAffinityConfig">interface SessionAffinityConfig</a>
-* <a href="#StorageOSPersistentVolumeSource">interface StorageOSPersistentVolumeSource</a>
-* <a href="#StorageOSVolumeSource">interface StorageOSVolumeSource</a>
-* <a href="#Sysctl">interface Sysctl</a>
-* <a href="#TCPSocketAction">interface TCPSocketAction</a>
-* <a href="#Taint">interface Taint</a>
-* <a href="#Toleration">interface Toleration</a>
-* <a href="#TopologySelectorLabelRequirement">interface TopologySelectorLabelRequirement</a>
-* <a href="#TopologySelectorTerm">interface TopologySelectorTerm</a>
-* <a href="#TypedLocalObjectReference">interface TypedLocalObjectReference</a>
-* <a href="#Volume">interface Volume</a>
-* <a href="#VolumeDevice">interface VolumeDevice</a>
-* <a href="#VolumeMount">interface VolumeMount</a>
-* <a href="#VolumeNodeAffinity">interface VolumeNodeAffinity</a>
-* <a href="#VolumeProjection">interface VolumeProjection</a>
-* <a href="#VsphereVirtualDiskVolumeSource">interface VsphereVirtualDiskVolumeSource</a>
-* <a href="#WeightedPodAffinityTerm">interface WeightedPodAffinityTerm</a>
-
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts">types/input.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
-</div>
-</div>
-</div>
-
-
-<h2 class="pdoc-module-header" id="isBinding">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L8281">function <b>isBinding</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isBinding(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isComponentStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L8590">function <b>isComponentStatus</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isComponentStatus(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isComponentStatusList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L8627">function <b>isComponentStatusList</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isComponentStatusList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isConfigMap">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L8675">function <b>isConfigMap</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isConfigMap(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isConfigMapList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L8755">function <b>isConfigMapList</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isConfigMapList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isEndpoints">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L9472">function <b>isEndpoints</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isEndpoints(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isEndpointsList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L9509">function <b>isEndpointsList</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isEndpointsList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isEvent">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L9690">function <b>isEvent</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isEvent(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isEventList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L9727">function <b>isEventList</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isEventList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isLimitRange">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L10383">function <b>isLimitRange</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isLimitRange(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isLimitRangeList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L10461">function <b>isLimitRangeList</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isLimitRangeList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isNamespace">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L10610">function <b>isNamespace</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isNamespace(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isNamespaceList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L10648">function <b>isNamespaceList</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isNamespaceList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isNode">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L10719">function <b>isNode</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isNode(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isNodeList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L10916">function <b>isNodeList</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isNodeList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isObjectFieldSelector">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L11167">function <b>isObjectFieldSelector</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isObjectFieldSelector(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isObjectReference">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L11223">function <b>isObjectReference</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isObjectReference(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isPersistentVolume">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L11270">function <b>isPersistentVolume</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isPersistentVolume(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isPersistentVolumeClaim">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L11315">function <b>isPersistentVolumeClaim</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isPersistentVolumeClaim(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isPersistentVolumeClaimList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L11388">function <b>isPersistentVolumeClaimList</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isPersistentVolumeClaimList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isPersistentVolumeList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L11529">function <b>isPersistentVolumeList</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isPersistentVolumeList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isPod">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L11808">function <b>isPod</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isPod(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isPodList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L12013">function <b>isPodList</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isPodList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isPodTemplate">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L12443">function <b>isPodTemplate</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isPodTemplate(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isPodTemplateList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L12480">function <b>isPodTemplateList</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isPodTemplateList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isReplicationController">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L12815">function <b>isReplicationController</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isReplicationController(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isReplicationControllerList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L12886">function <b>isReplicationControllerList</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isReplicationControllerList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isResourceQuota">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L13030">function <b>isResourceQuota</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isResourceQuota(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isResourceQuotaList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L13068">function <b>isResourceQuotaList</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isResourceQuotaList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isSecret">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L13377">function <b>isSecret</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isSecret(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
+* <a href="#Binding">class Binding</a>
+* <a href="#ComponentStatus">class ComponentStatus</a>
+* <a href="#ComponentStatusList">class ComponentStatusList</a>
+* <a href="#ConfigMap">class ConfigMap</a>
+* <a href="#ConfigMapList">class ConfigMapList</a>
+* <a href="#Endpoints">class Endpoints</a>
+* <a href="#EndpointsList">class EndpointsList</a>
+* <a href="#Event">class Event</a>
+* <a href="#EventList">class EventList</a>
+* <a href="#LimitRange">class LimitRange</a>
+* <a href="#LimitRangeList">class LimitRangeList</a>
+* <a href="#Namespace">class Namespace</a>
+* <a href="#NamespaceList">class NamespaceList</a>
+* <a href="#Node">class Node</a>
+* <a href="#NodeList">class NodeList</a>
+* <a href="#PersistentVolume">class PersistentVolume</a>
+* <a href="#PersistentVolumeClaim">class PersistentVolumeClaim</a>
+* <a href="#PersistentVolumeClaimList">class PersistentVolumeClaimList</a>
+* <a href="#PersistentVolumeList">class PersistentVolumeList</a>
+* <a href="#Pod">class Pod</a>
+* <a href="#PodList">class PodList</a>
+* <a href="#PodTemplate">class PodTemplate</a>
+* <a href="#PodTemplateList">class PodTemplateList</a>
+* <a href="#ReplicationController">class ReplicationController</a>
+* <a href="#ReplicationControllerList">class ReplicationControllerList</a>
+* <a href="#ResourceQuota">class ResourceQuota</a>
+* <a href="#ResourceQuotaList">class ResourceQuotaList</a>
+* <a href="#Secret">class Secret</a>
+* <a href="#SecretList">class SecretList</a>
+* <a href="#Service">class Service</a>
+* <a href="#ServiceAccount">class ServiceAccount</a>
+* <a href="#ServiceAccountList">class ServiceAccountList</a>
+* <a href="#ServiceList">class ServiceList</a>
+
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Binding.ts">core/v1/Binding.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ComponentStatus.ts">core/v1/ComponentStatus.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ComponentStatusList.ts">core/v1/ComponentStatusList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ConfigMap.ts">core/v1/ConfigMap.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ConfigMapList.ts">core/v1/ConfigMapList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Endpoints.ts">core/v1/Endpoints.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/EndpointsList.ts">core/v1/EndpointsList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Event.ts">core/v1/Event.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/EventList.ts">core/v1/EventList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/LimitRange.ts">core/v1/LimitRange.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/LimitRangeList.ts">core/v1/LimitRangeList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Namespace.ts">core/v1/Namespace.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/NamespaceList.ts">core/v1/NamespaceList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Node.ts">core/v1/Node.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/NodeList.ts">core/v1/NodeList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolume.ts">core/v1/PersistentVolume.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolumeClaim.ts">core/v1/PersistentVolumeClaim.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolumeClaimList.ts">core/v1/PersistentVolumeClaimList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolumeList.ts">core/v1/PersistentVolumeList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Pod.ts">core/v1/Pod.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PodList.ts">core/v1/PodList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PodTemplate.ts">core/v1/PodTemplate.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PodTemplateList.ts">core/v1/PodTemplateList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ReplicationController.ts">core/v1/ReplicationController.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ReplicationControllerList.ts">core/v1/ReplicationControllerList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ResourceQuota.ts">core/v1/ResourceQuota.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ResourceQuotaList.ts">core/v1/ResourceQuotaList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Secret.ts">core/v1/Secret.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/SecretList.ts">core/v1/SecretList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Service.ts">core/v1/Service.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ServiceAccount.ts">core/v1/ServiceAccount.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ServiceAccountList.ts">core/v1/ServiceAccountList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ServiceList.ts">core/v1/ServiceList.ts</a> 
 </div>
-<h2 class="pdoc-module-header" id="isSecretList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L13459">function <b>isSecretList</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isSecretList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isService">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L13668">function <b>isService</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isService(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isServiceAccount">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L13723">function <b>isServiceAccount</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isServiceAccount(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isServiceAccountList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L13761">function <b>isServiceAccountList</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isServiceAccountList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isServiceList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L13828">function <b>isServiceList</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isServiceList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="AWSElasticBlockStoreVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7632">interface <b>AWSElasticBlockStoreVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Represents a Persistent Disk resource in AWS.
-
-An AWS EBS disk must exist before mounting to a container. The disk must also be in the same
-AWS zone as the kubelet. An AWS EBS disk can only be mounted as read/write once. AWS EBS
-volumes support ownership management and SELinux relabeling.
-
-<h3 class="pdoc-member-header" id="AWSElasticBlockStoreVolumeSource-fsType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7639">property <b>fsType</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type
-is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly
-inferred to be "ext4" if unspecified. More info:
-https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
-
-</div>
-<h3 class="pdoc-member-header" id="AWSElasticBlockStoreVolumeSource-partition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7646">property <b>partition</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>partition: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-The partition in the volume that you want to mount. If omitted, the default is to mount by
-volume name. Examples: For volume /dev/sda1, you specify the partition as "1". Similarly,
-the volume partition for /dev/sda is "0" (or you can leave the property empty).
-
-</div>
-<h3 class="pdoc-member-header" id="AWSElasticBlockStoreVolumeSource-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7653">property <b>readOnly</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Specify "true" to force and set the ReadOnly property in VolumeMounts to "true". If
-omitted, the default is "false". More info:
-https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
-
-</div>
-<h3 class="pdoc-member-header" id="AWSElasticBlockStoreVolumeSource-volumeID">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7659">property <b>volumeID</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>volumeID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Unique ID of the persistent disk resource in AWS (Amazon EBS volume). More info:
-https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="Affinity">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7666">interface <b>Affinity</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Affinity is a group of affinity scheduling rules.
-
-<h3 class="pdoc-member-header" id="Affinity-nodeAffinity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7670">property <b>nodeAffinity</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>nodeAffinity: <a href='#NodeAffinity'>NodeAffinity</a>;</pre>
-
-Describes node affinity scheduling rules for the pod.
-
-</div>
-<h3 class="pdoc-member-header" id="Affinity-podAffinity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7676">property <b>podAffinity</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>podAffinity: <a href='#PodAffinity'>PodAffinity</a>;</pre>
-
-Describes pod affinity scheduling rules (e.g. co-locate this pod in the same node, zone,
-etc. as some other pod(s)).
-
-</div>
-<h3 class="pdoc-member-header" id="Affinity-podAntiAffinity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7682">property <b>podAntiAffinity</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>podAntiAffinity: <a href='#PodAntiAffinity'>PodAntiAffinity</a>;</pre>
-
-Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod in the same node,
-zone, etc. as some other pod(s)).
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="AttachedVolume">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7689">interface <b>AttachedVolume</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-AttachedVolume describes a volume attached to a node
-
-<h3 class="pdoc-member-header" id="AttachedVolume-devicePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7693">property <b>devicePath</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>devicePath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-DevicePath represents the device path where the volume should be available
-
-</div>
-<h3 class="pdoc-member-header" id="AttachedVolume-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7698">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Name of the attached volume
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="AzureDiskVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7705">interface <b>AzureDiskVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.
-
-<h3 class="pdoc-member-header" id="AzureDiskVolumeSource-cachingMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7709">property <b>cachingMode</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>cachingMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Host Caching mode: None, Read Only, Read Write.
-
-</div>
-<h3 class="pdoc-member-header" id="AzureDiskVolumeSource-diskName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7714">property <b>diskName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>diskName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The Name of the data disk in the blob storage
-
-</div>
-<h3 class="pdoc-member-header" id="AzureDiskVolumeSource-diskURI">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7719">property <b>diskURI</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>diskURI: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The URI the data disk in the blob storage
-
-</div>
-<h3 class="pdoc-member-header" id="AzureDiskVolumeSource-fsType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7725">property <b>fsType</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Filesystem type to mount. Must be a filesystem type supported by the host operating system.
-Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
-
-</div>
-<h3 class="pdoc-member-header" id="AzureDiskVolumeSource-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7732">property <b>kind</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Expected values Shared: multiple blob disks per storage account  Dedicated: single blob
-disk per storage account  Managed: azure managed data disk (only in managed availability
-set). defaults to shared
-
-</div>
-<h3 class="pdoc-member-header" id="AzureDiskVolumeSource-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7738">property <b>readOnly</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in
-VolumeMounts.
-
-</div>
 </div>
-<h2 class="pdoc-module-header" id="AzureFilePersistentVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7745">interface <b>AzureFilePersistentVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-AzureFile represents an Azure File Service mount on the host and bind mount to the pod.
-
-<h3 class="pdoc-member-header" id="AzureFilePersistentVolumeSource-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7750">property <b>readOnly</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in
-VolumeMounts.
-
-</div>
-<h3 class="pdoc-member-header" id="AzureFilePersistentVolumeSource-secretName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7755">property <b>secretName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>secretName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-the name of secret that contains Azure Storage Account Name and Key
-
-</div>
-<h3 class="pdoc-member-header" id="AzureFilePersistentVolumeSource-secretNamespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7761">property <b>secretNamespace</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>secretNamespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-the namespace of the secret that contains Azure Storage Account Name and Key default is the
-same as the Pod
-
-</div>
-<h3 class="pdoc-member-header" id="AzureFilePersistentVolumeSource-shareName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7766">property <b>shareName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>shareName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Share Name
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="AzureFileVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7773">interface <b>AzureFileVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-AzureFile represents an Azure File Service mount on the host and bind mount to the pod.
-
-<h3 class="pdoc-member-header" id="AzureFileVolumeSource-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7778">property <b>readOnly</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in
-VolumeMounts.
-
-</div>
-<h3 class="pdoc-member-header" id="AzureFileVolumeSource-secretName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7783">property <b>secretName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>secretName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-the name of secret that contains Azure Storage Account Name and Key
-
 </div>
-<h3 class="pdoc-member-header" id="AzureFileVolumeSource-shareName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7788">property <b>shareName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>shareName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 
-Share Name
 
-</div>
-</div>
 <h2 class="pdoc-module-header" id="Binding">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7796">interface <b>Binding</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Binding.ts#L12">class <b>Binding</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 Binding ties one object to another; for example, a pod is bound to a node by a scheduler.
 Deprecated in 1.7, please use the bindings subresource of pods instead.
 
-<h3 class="pdoc-member-header" id="Binding-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7803">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="Binding-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Binding.ts#L57"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Binding(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.core.v1.Binding, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a core.v1.Binding resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="Binding-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Binding.ts#L52">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Binding'>Binding</a></pre>
+
+
+Get the state of an existing `Binding` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="Binding-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Binding.ts#L56">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.core.v1.Binding</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="Binding-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="Binding-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="Binding-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Binding.ts#L19">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -801,11 +133,21 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="Binding-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7811">property <b>kind</b></a>
+<h3 class="pdoc-member-header" id="Binding-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="Binding-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Binding.ts#L27">property <b>kind</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"Binding"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -814,457 +156,106 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="Binding-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7817">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Binding.ts#L33">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 
 Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 </div>
 <h3 class="pdoc-member-header" id="Binding-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7822">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Binding.ts#L38">property <b>target</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>target: <a href='#ObjectReference'>ObjectReference</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>target: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ObjectReference&gt;;</pre>
 
 The target object that you want to bind to the standard object.
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="CSIPersistentVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7829">interface <b>CSIPersistentVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Represents storage that is managed by an external CSI volume driver (Beta feature)
-
-<h3 class="pdoc-member-header" id="CSIPersistentVolumeSource-controllerPublishSecretRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7836">property <b>controllerPublishSecretRef</b></a>
+<h3 class="pdoc-member-header" id="Binding-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>controllerPublishSecretRef: <a href='#SecretReference'>SecretReference</a>;</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 
-ControllerPublishSecretRef is a reference to the secret object containing sensitive
-information to pass to the CSI driver to complete the CSI ControllerPublishVolume and
-ControllerUnpublishVolume calls. This field is optional, and may be empty if no secret is
-required. If the secret object contains more than one secret, all secrets are passed.
-
-</div>
-<h3 class="pdoc-member-header" id="CSIPersistentVolumeSource-driver">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7841">property <b>driver</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>driver: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Driver is the name of the driver to use for this volume. Required.
-
-</div>
-<h3 class="pdoc-member-header" id="CSIPersistentVolumeSource-fsType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7847">property <b>fsType</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Filesystem type to mount. Must be a filesystem type supported by the host operating system.
-Ex. "ext4", "xfs", "ntfs".
-
-</div>
-<h3 class="pdoc-member-header" id="CSIPersistentVolumeSource-nodePublishSecretRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7855">property <b>nodePublishSecretRef</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>nodePublishSecretRef: <a href='#SecretReference'>SecretReference</a>;</pre>
-
-NodePublishSecretRef is a reference to the secret object containing sensitive information
-to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume
-calls. This field is optional, and may be empty if no secret is required. If the secret
-object contains more than one secret, all secrets are passed.
-
-</div>
-<h3 class="pdoc-member-header" id="CSIPersistentVolumeSource-nodeStageSecretRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7863">property <b>nodeStageSecretRef</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>nodeStageSecretRef: <a href='#SecretReference'>SecretReference</a>;</pre>
-
-NodeStageSecretRef is a reference to the secret object containing sensitive information to
-pass to the CSI driver to complete the CSI NodeStageVolume and NodeStageVolume and
-NodeUnstageVolume calls. This field is optional, and may be empty if no secret is required.
-If the secret object contains more than one secret, all secrets are passed.
-
-</div>
-<h3 class="pdoc-member-header" id="CSIPersistentVolumeSource-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7869">property <b>readOnly</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Optional: The value to pass to ControllerPublishVolumeRequest. Defaults to false
-(read/write).
-
-</div>
-<h3 class="pdoc-member-header" id="CSIPersistentVolumeSource-volumeAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7874">property <b>volumeAttributes</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>volumeAttributes: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</pre>
-
-Attributes of the volume to publish.
-
-</div>
-<h3 class="pdoc-member-header" id="CSIPersistentVolumeSource-volumeHandle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7880">property <b>volumeHandle</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>volumeHandle: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-VolumeHandle is the unique volume name returned by the CSI volume plugin’s CreateVolume
-to refer to the volume on all subsequent calls. Required.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="Capabilities">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7887">interface <b>Capabilities</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Adds and removes POSIX capabilities from running containers.
-
-<h3 class="pdoc-member-header" id="Capabilities-add">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7891">property <b>add</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>add: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-Added capabilities
-
-</div>
-<h3 class="pdoc-member-header" id="Capabilities-drop">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7896">property <b>drop</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>drop: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-Removed capabilities
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="CephFSPersistentVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7904">interface <b>CephFSPersistentVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Represents a Ceph Filesystem mount that lasts the lifetime of a pod Cephfs volumes do not
-support ownership management or SELinux relabeling.
-
-<h3 class="pdoc-member-header" id="CephFSPersistentVolumeSource-monitors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7909">property <b>monitors</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>monitors: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-Required: Monitors is a collection of Ceph monitors More info:
-https://releases.k8s.io/HEAD/examples/volumes/cephfs/README.md#how-to-use-it
-
-</div>
-<h3 class="pdoc-member-header" id="CephFSPersistentVolumeSource-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7914">property <b>path</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Optional: Used as the mounted root, rather than the full Ceph tree, default is /
-
-</div>
-<h3 class="pdoc-member-header" id="CephFSPersistentVolumeSource-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7921">property <b>readOnly</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in
-VolumeMounts. More info:
-https://releases.k8s.io/HEAD/examples/volumes/cephfs/README.md#how-to-use-it
-
-</div>
-<h3 class="pdoc-member-header" id="CephFSPersistentVolumeSource-secretFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7927">property <b>secretFile</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>secretFile: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret
-More info: https://releases.k8s.io/HEAD/examples/volumes/cephfs/README.md#how-to-use-it
-
-</div>
-<h3 class="pdoc-member-header" id="CephFSPersistentVolumeSource-secretRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7933">property <b>secretRef</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>secretRef: <a href='#SecretReference'>SecretReference</a>;</pre>
-
-Optional: SecretRef is reference to the authentication secret for User, default is empty.
-More info: https://releases.k8s.io/HEAD/examples/volumes/cephfs/README.md#how-to-use-it
-
-</div>
-<h3 class="pdoc-member-header" id="CephFSPersistentVolumeSource-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7939">property <b>user</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>user: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Optional: User is the rados user name, default is admin More info:
-https://releases.k8s.io/HEAD/examples/volumes/cephfs/README.md#how-to-use-it
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="CephFSVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7947">interface <b>CephFSVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Represents a Ceph Filesystem mount that lasts the lifetime of a pod Cephfs volumes do not
-support ownership management or SELinux relabeling.
-
-<h3 class="pdoc-member-header" id="CephFSVolumeSource-monitors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7952">property <b>monitors</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>monitors: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-Required: Monitors is a collection of Ceph monitors More info:
-https://releases.k8s.io/HEAD/examples/volumes/cephfs/README.md#how-to-use-it
-
-</div>
-<h3 class="pdoc-member-header" id="CephFSVolumeSource-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7957">property <b>path</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Optional: Used as the mounted root, rather than the full Ceph tree, default is /
-
-</div>
-<h3 class="pdoc-member-header" id="CephFSVolumeSource-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7964">property <b>readOnly</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in
-VolumeMounts. More info:
-https://releases.k8s.io/HEAD/examples/volumes/cephfs/README.md#how-to-use-it
-
-</div>
-<h3 class="pdoc-member-header" id="CephFSVolumeSource-secretFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7970">property <b>secretFile</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>secretFile: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret
-More info: https://releases.k8s.io/HEAD/examples/volumes/cephfs/README.md#how-to-use-it
-
-</div>
-<h3 class="pdoc-member-header" id="CephFSVolumeSource-secretRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7976">property <b>secretRef</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>secretRef: <a href='#LocalObjectReference'>LocalObjectReference</a>;</pre>
-
-Optional: SecretRef is reference to the authentication secret for User, default is empty.
-More info: https://releases.k8s.io/HEAD/examples/volumes/cephfs/README.md#how-to-use-it
-
-</div>
-<h3 class="pdoc-member-header" id="CephFSVolumeSource-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7982">property <b>user</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>user: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Optional: User is the rados user name, default is admin More info:
-https://releases.k8s.io/HEAD/examples/volumes/cephfs/README.md#how-to-use-it
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="CinderPersistentVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7991">interface <b>CinderPersistentVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Represents a cinder volume resource in Openstack. A Cinder volume must exist before mounting
-to a container. The volume must also be in the same region as the kubelet. Cinder volumes
-support ownership management and SELinux relabeling.
-
-<h3 class="pdoc-member-header" id="CinderPersistentVolumeSource-fsType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L7997">property <b>fsType</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Filesystem type to mount. Must be a filesystem type supported by the host operating system.
-Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More
-info: https://releases.k8s.io/HEAD/examples/mysql-cinder-pd/README.md
-
-</div>
-<h3 class="pdoc-member-header" id="CinderPersistentVolumeSource-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8003">property <b>readOnly</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in
-VolumeMounts. More info: https://releases.k8s.io/HEAD/examples/mysql-cinder-pd/README.md
-
-</div>
-<h3 class="pdoc-member-header" id="CinderPersistentVolumeSource-secretRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8008">property <b>secretRef</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>secretRef: <a href='#SecretReference'>SecretReference</a>;</pre>
-
-Optional: points to a secret object containing parameters used to connect to OpenStack.
-
-</div>
-<h3 class="pdoc-member-header" id="CinderPersistentVolumeSource-volumeID">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8014">property <b>volumeID</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>volumeID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-volume id used to identify the volume in cinder More info:
-https://releases.k8s.io/HEAD/examples/mysql-cinder-pd/README.md
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="CinderVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8023">interface <b>CinderVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Represents a cinder volume resource in Openstack. A Cinder volume must exist before mounting
-to a container. The volume must also be in the same region as the kubelet. Cinder volumes
-support ownership management and SELinux relabeling.
-
-<h3 class="pdoc-member-header" id="CinderVolumeSource-fsType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8029">property <b>fsType</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Filesystem type to mount. Must be a filesystem type supported by the host operating system.
-Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More
-info: https://releases.k8s.io/HEAD/examples/mysql-cinder-pd/README.md
-
-</div>
-<h3 class="pdoc-member-header" id="CinderVolumeSource-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8035">property <b>readOnly</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in
-VolumeMounts. More info: https://releases.k8s.io/HEAD/examples/mysql-cinder-pd/README.md
-
-</div>
-<h3 class="pdoc-member-header" id="CinderVolumeSource-secretRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8040">property <b>secretRef</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>secretRef: <a href='#LocalObjectReference'>LocalObjectReference</a>;</pre>
-
-Optional: points to a secret object containing parameters used to connect to OpenStack.
-
-</div>
-<h3 class="pdoc-member-header" id="CinderVolumeSource-volumeID">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8046">property <b>volumeID</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>volumeID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-volume id used to identify the volume in cinder More info:
-https://releases.k8s.io/HEAD/examples/mysql-cinder-pd/README.md
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ClientIPConfig">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8053">interface <b>ClientIPConfig</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ClientIPConfig represents the configurations of Client IP based session affinity.
-
-<h3 class="pdoc-member-header" id="ClientIPConfig-timeoutSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8059">property <b>timeoutSeconds</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>timeoutSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-timeoutSeconds specifies the seconds of ClientIP type session sticky time. The value must
-be >0 && <=86400(for 1 day) if ServiceAffinity == "ClientIP". Default value is 10800(for 3
-hours).
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ComponentCondition">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8066">interface <b>ComponentCondition</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Information about the condition of a component.
-
-<h3 class="pdoc-member-header" id="ComponentCondition-error">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8070">property <b>error</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>error: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Condition error code for a component. For example, a health check error code.
-
-</div>
-<h3 class="pdoc-member-header" id="ComponentCondition-message">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8075">property <b>message</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Message about the condition for a component. For example, information about a health check.
-
-</div>
-<h3 class="pdoc-member-header" id="ComponentCondition-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8081">property <b>status</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Status of the condition for a component. Valid values for "Healthy": "True", "False", or
-"Unknown".
-
-</div>
-<h3 class="pdoc-member-header" id="ComponentCondition-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8086">property <b>type</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Type of condition for a component. Valid value: "Healthy"
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ComponentStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8093">interface <b>ComponentStatus</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ComponentStatus.ts#L11">class <b>ComponentStatus</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 ComponentStatus (and ComponentStatusList) holds the cluster validation info.
 
-<h3 class="pdoc-member-header" id="ComponentStatus-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8100">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="ComponentStatus-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ComponentStatus.ts#L56"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ComponentStatus(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.core.v1.ComponentStatus, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a core.v1.ComponentStatus resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="ComponentStatus-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ComponentStatus.ts#L51">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ComponentStatus'>ComponentStatus</a></pre>
+
+
+Get the state of an existing `ComponentStatus` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="ComponentStatus-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ComponentStatus.ts#L55">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.core.v1.ComponentStatus</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="ComponentStatus-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="ComponentStatus-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="ComponentStatus-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ComponentStatus.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -1273,19 +264,29 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
 <h3 class="pdoc-member-header" id="ComponentStatus-conditions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8105">property <b>conditions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ComponentStatus.ts#L23">property <b>conditions</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>conditions: <a href='#ComponentCondition'>ComponentCondition</a>[];</pre>
+<pre class="highlight"><span class='kd'>public </span>conditions: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ComponentCondition[]&gt;;</pre>
 
 List of component conditions observed
 
 </div>
-<h3 class="pdoc-member-header" id="ComponentStatus-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8113">property <b>kind</b></a>
+<h3 class="pdoc-member-header" id="ComponentStatus-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="ComponentStatus-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ComponentStatus.ts#L31">property <b>kind</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ComponentStatus"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -1294,28 +295,97 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="ComponentStatus-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8119">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ComponentStatus.ts#L37">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 
 Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 </div>
+<h3 class="pdoc-member-header" id="ComponentStatus-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+</div>
 </div>
 <h2 class="pdoc-module-header" id="ComponentStatusList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8126">interface <b>ComponentStatusList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ComponentStatusList.ts#L11">class <b>ComponentStatusList</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 Status of all the conditions for the component as a list of ComponentStatus objects.
 
-<h3 class="pdoc-member-header" id="ComponentStatusList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8133">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="ComponentStatusList-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ComponentStatusList.ts#L56"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ComponentStatusList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.core.v1.ComponentStatusList, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a core.v1.ComponentStatusList resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="ComponentStatusList-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ComponentStatusList.ts#L51">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ComponentStatusList'>ComponentStatusList</a></pre>
+
+
+Get the state of an existing `ComponentStatusList` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="ComponentStatusList-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ComponentStatusList.ts#L55">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.core.v1.ComponentStatusList</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="ComponentStatusList-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="ComponentStatusList-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="ComponentStatusList-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ComponentStatusList.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -1323,20 +393,30 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="ComponentStatusList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8138">property <b>items</b></a>
+<h3 class="pdoc-member-header" id="ComponentStatusList-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>items: <a href='#ComponentStatus'>ComponentStatus</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="ComponentStatusList-items">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ComponentStatusList.ts#L23">property <b>items</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>items: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ComponentStatus[]&gt;;</pre>
 
 List of ComponentStatus objects.
 
 </div>
 <h3 class="pdoc-member-header" id="ComponentStatusList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8146">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ComponentStatusList.ts#L31">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ComponentStatusList"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -1345,28 +425,97 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="ComponentStatusList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8152">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ComponentStatusList.ts#L37">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
 
 Standard list metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
+<h3 class="pdoc-member-header" id="ComponentStatusList-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+</div>
 </div>
 <h2 class="pdoc-module-header" id="ConfigMap">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8159">interface <b>ConfigMap</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ConfigMap.ts#L11">class <b>ConfigMap</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 ConfigMap holds configuration data for pods to consume.
 
-<h3 class="pdoc-member-header" id="ConfigMap-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8166">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="ConfigMap-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ConfigMap.ts#L67"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ConfigMap(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.core.v1.ConfigMap, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a core.v1.ConfigMap resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="ConfigMap-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ConfigMap.ts#L62">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ConfigMap'>ConfigMap</a></pre>
+
+
+Get the state of an existing `ConfigMap` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="ConfigMap-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ConfigMap.ts#L66">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.core.v1.ConfigMap</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="ConfigMap-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="ConfigMap-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="ConfigMap-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ConfigMap.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -1375,10 +524,10 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
 <h3 class="pdoc-member-header" id="ConfigMap-binaryData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8174">property <b>binaryData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ConfigMap.ts#L26">property <b>binaryData</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>binaryData: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>binaryData: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;;</pre>
 
 BinaryData contains the binary data. Each key must consist of alphanumeric characters, '-',
 '_' or '.'. BinaryData can contain byte sequences that are not in the UTF-8 range. The keys
@@ -1387,10 +536,10 @@ during validation process. Using this field will require 1.10+ apiserver and kub
 
 </div>
 <h3 class="pdoc-member-header" id="ConfigMap-data">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8182">property <b>data</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ConfigMap.ts#L34">property <b>data</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>data: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</pre>
+<pre class="highlight"><span class='kd'>public </span>data: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
 
 Data contains the configuration data. Each key must consist of alphanumeric characters,
 '-', '_' or '.'. Values with non-UTF-8 byte sequences must use the BinaryData field. The
@@ -1398,11 +547,21 @@ keys stored in Data must not overlap with the keys in the BinaryData field, this
 enforced during validation process.
 
 </div>
-<h3 class="pdoc-member-header" id="ConfigMap-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8190">property <b>kind</b></a>
+<h3 class="pdoc-member-header" id="ConfigMap-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="ConfigMap-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ConfigMap.ts#L42">property <b>kind</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ConfigMap"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -1411,94 +570,97 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="ConfigMap-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8196">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ConfigMap.ts#L48">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 
 Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="ConfigMapEnvSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8206">interface <b>ConfigMapEnvSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ConfigMapEnvSource selects a ConfigMap to populate the environment variables with.
-
-The contents of the target ConfigMap's Data field will represent the key-value pairs as
-environment variables.
-
-<h3 class="pdoc-member-header" id="ConfigMapEnvSource-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8211">property <b>name</b></a>
+<h3 class="pdoc-member-header" id="ConfigMap-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 
-Name of the referent. More info:
-https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
-
-</div>
-<h3 class="pdoc-member-header" id="ConfigMapEnvSource-optional">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8216">property <b>optional</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>optional: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Specify whether the ConfigMap must be defined
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ConfigMapKeySelector">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8223">interface <b>ConfigMapKeySelector</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Selects a key from a ConfigMap.
-
-<h3 class="pdoc-member-header" id="ConfigMapKeySelector-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8227">property <b>key</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The key to select.
-
-</div>
-<h3 class="pdoc-member-header" id="ConfigMapKeySelector-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8233">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Name of the referent. More info:
-https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
-
-</div>
-<h3 class="pdoc-member-header" id="ConfigMapKeySelector-optional">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8238">property <b>optional</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>optional: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Specify whether the ConfigMap or it's key must be defined
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConfigMapList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8245">interface <b>ConfigMapList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ConfigMapList.ts#L11">class <b>ConfigMapList</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 ConfigMapList is a resource containing a list of ConfigMap objects.
 
-<h3 class="pdoc-member-header" id="ConfigMapList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8252">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="ConfigMapList-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ConfigMapList.ts#L55"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ConfigMapList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.core.v1.ConfigMapList, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a core.v1.ConfigMapList resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="ConfigMapList-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ConfigMapList.ts#L50">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ConfigMapList'>ConfigMapList</a></pre>
+
+
+Get the state of an existing `ConfigMapList` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="ConfigMapList-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ConfigMapList.ts#L54">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.core.v1.ConfigMapList</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="ConfigMapList-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="ConfigMapList-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="ConfigMapList-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ConfigMapList.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -1506,20 +668,30 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="ConfigMapList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8257">property <b>items</b></a>
+<h3 class="pdoc-member-header" id="ConfigMapList-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>items: <a href='#ConfigMap'>ConfigMap</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="ConfigMapList-items">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ConfigMapList.ts#L23">property <b>items</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>items: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ConfigMap[]&gt;;</pre>
 
 Items is the list of ConfigMaps.
 
 </div>
 <h3 class="pdoc-member-header" id="ConfigMapList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8265">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ConfigMapList.ts#L31">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ConfigMapList"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -1528,1026 +700,30 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="ConfigMapList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8270">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ConfigMapList.ts#L36">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
 
 More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="ConfigMapNodeConfigSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8278">interface <b>ConfigMapNodeConfigSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ConfigMapNodeConfigSource contains the information to reference a ConfigMap as a config
-source for the Node.
-
-<h3 class="pdoc-member-header" id="ConfigMapNodeConfigSource-kubeletConfigKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8283">property <b>kubeletConfigKey</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kubeletConfigKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-KubeletConfigKey declares which key of the referenced ConfigMap corresponds to the
-KubeletConfiguration structure This field is required in all cases.
-
-</div>
-<h3 class="pdoc-member-header" id="ConfigMapNodeConfigSource-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8288">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Name is the metadata.name of the referenced ConfigMap. This field is required in all cases.
-
-</div>
-<h3 class="pdoc-member-header" id="ConfigMapNodeConfigSource-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8294">property <b>namespace</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Namespace is the metadata.namespace of the referenced ConfigMap. This field is required in
-all cases.
-
-</div>
-<h3 class="pdoc-member-header" id="ConfigMapNodeConfigSource-resourceVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8300">property <b>resourceVersion</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>resourceVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-ResourceVersion is the metadata.ResourceVersion of the referenced ConfigMap. This field is
-forbidden in Node.Spec, and required in Node.Status.
-
-</div>
-<h3 class="pdoc-member-header" id="ConfigMapNodeConfigSource-uid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8306">property <b>uid</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>uid: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-UID is the metadata.UID of the referenced ConfigMap. This field is forbidden in Node.Spec,
-and required in Node.Status.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ConfigMapProjection">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8318">interface <b>ConfigMapProjection</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Adapts a ConfigMap into a projected volume.
-
-The contents of the target ConfigMap's Data field will be presented in a projected volume as
-files using the keys in the Data field as the file names, unless the items element is
-populated with specific mappings of keys to paths. Note that this is identical to a configmap
-volume source without the default mode.
-
-<h3 class="pdoc-member-header" id="ConfigMapProjection-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8327">property <b>items</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>items: <a href='#KeyToPath'>KeyToPath</a>[];</pre>
-
-If unspecified, each key-value pair in the Data field of the referenced ConfigMap will be
-projected into the volume as a file whose name is the key and content is the value. If
-specified, the listed keys will be projected into the specified paths, and unlisted keys
-will not be present. If a key is specified which is not present in the ConfigMap, the
-volume setup will error unless it is marked optional. Paths must be relative and may not
-contain the '..' path or start with '..'.
-
-</div>
-<h3 class="pdoc-member-header" id="ConfigMapProjection-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8333">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Name of the referent. More info:
-https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
-
-</div>
-<h3 class="pdoc-member-header" id="ConfigMapProjection-optional">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8338">property <b>optional</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>optional: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Specify whether the ConfigMap or it's keys must be defined
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ConfigMapVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8350">interface <b>ConfigMapVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Adapts a ConfigMap into a volume.
-
-The contents of the target ConfigMap's Data field will be presented in a volume as files
-using the keys in the Data field as the file names, unless the items element is populated
-with specific mappings of keys to paths. ConfigMap volumes support ownership management and
-SELinux relabeling.
-
-<h3 class="pdoc-member-header" id="ConfigMapVolumeSource-defaultMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8357">property <b>defaultMode</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>defaultMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-Optional: mode bits to use on created files by default. Must be a value between 0 and 0777.
-Defaults to 0644. Directories within the path are not affected by this setting. This might
-be in conflict with other options that affect the file mode, like fsGroup, and the result
-can be other mode bits set.
-
-</div>
-<h3 class="pdoc-member-header" id="ConfigMapVolumeSource-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8367">property <b>items</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>items: <a href='#KeyToPath'>KeyToPath</a>[];</pre>
-
-If unspecified, each key-value pair in the Data field of the referenced ConfigMap will be
-projected into the volume as a file whose name is the key and content is the value. If
-specified, the listed keys will be projected into the specified paths, and unlisted keys
-will not be present. If a key is specified which is not present in the ConfigMap, the
-volume setup will error unless it is marked optional. Paths must be relative and may not
-contain the '..' path or start with '..'.
-
-</div>
-<h3 class="pdoc-member-header" id="ConfigMapVolumeSource-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8373">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Name of the referent. More info:
-https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
-
-</div>
-<h3 class="pdoc-member-header" id="ConfigMapVolumeSource-optional">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8378">property <b>optional</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>optional: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Specify whether the ConfigMap or it's keys must be defined
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="Container">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8385">interface <b>Container</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-A single application container that you want to run within a pod.
-
-<h3 class="pdoc-member-header" id="Container-args">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8395">property <b>args</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>args: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-Arguments to the entrypoint. The docker image's CMD is used if this is not provided.
-Variable references $(VAR_NAME) are expanded using the container's environment. If a
-variable cannot be resolved, the reference in the input string will be unchanged. The
-$(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references
-will never be expanded, regardless of whether the variable exists or not. Cannot be
-updated. More info:
-https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
-
-</div>
-<h3 class="pdoc-member-header" id="Container-command">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8406">property <b>command</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>command: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if
-this is not provided. Variable references $(VAR_NAME) are expanded using the container's
-environment. If a variable cannot be resolved, the reference in the input string will be
-unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME).
-Escaped references will never be expanded, regardless of whether the variable exists or
-not. Cannot be updated. More info:
-https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
-
-</div>
-<h3 class="pdoc-member-header" id="Container-env">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8411">property <b>env</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>env: <a href='#EnvVar'>EnvVar</a>[];</pre>
-
-List of environment variables to set in the container. Cannot be updated.
-
-</div>
-<h3 class="pdoc-member-header" id="Container-envFrom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8420">property <b>envFrom</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>envFrom: <a href='#EnvFromSource'>EnvFromSource</a>[];</pre>
-
-List of sources to populate environment variables in the container. The keys defined within
-a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the
-container is starting. When a key exists in multiple sources, the value associated with the
-last source will take precedence. Values defined by an Env with a duplicate key will take
-precedence. Cannot be updated.
-
-</div>
-<h3 class="pdoc-member-header" id="Container-image">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8427">property <b>image</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>image: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Docker image name. More info: https://kubernetes.io/docs/concepts/containers/images This
-field is optional to allow higher level config management to default or override container
-images in workload controllers like Deployments and StatefulSets.
-
-</div>
-<h3 class="pdoc-member-header" id="Container-imagePullPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8434">property <b>imagePullPolicy</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>imagePullPolicy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is
-specified, or IfNotPresent otherwise. Cannot be updated. More info:
-https://kubernetes.io/docs/concepts/containers/images#updating-images
-
-</div>
-<h3 class="pdoc-member-header" id="Container-lifecycle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8440">property <b>lifecycle</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>lifecycle: <a href='#Lifecycle'>Lifecycle</a>;</pre>
-
-Actions that the management system should take in response to container lifecycle events.
-Cannot be updated.
-
-</div>
-<h3 class="pdoc-member-header" id="Container-livenessProbe">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8447">property <b>livenessProbe</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>livenessProbe: <a href='#Probe'>Probe</a>;</pre>
-
-Periodic probe of container liveness. Container will be restarted if the probe fails.
-Cannot be updated. More info:
-https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
-
-</div>
-<h3 class="pdoc-member-header" id="Container-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8453">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Name of the container specified as a DNS_LABEL. Each container in a pod must have a unique
-name (DNS_LABEL). Cannot be updated.
-
-</div>
-<h3 class="pdoc-member-header" id="Container-ports">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8462">property <b>ports</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>ports: <a href='#ContainerPort'>ContainerPort</a>[];</pre>
-
-List of ports to expose from the container. Exposing a port here gives the system
-additional information about the network connections a container uses, but is primarily
-informational. Not specifying a port here DOES NOT prevent that port from being exposed.
-Any port which is listening on the default "0.0.0.0" address inside a container will be
-accessible from the network. Cannot be updated.
-
-</div>
-<h3 class="pdoc-member-header" id="Container-readinessProbe">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8469">property <b>readinessProbe</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readinessProbe: <a href='#Probe'>Probe</a>;</pre>
-
-Periodic probe of container service readiness. Container will be removed from service
-endpoints if the probe fails. Cannot be updated. More info:
-https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
-
-</div>
-<h3 class="pdoc-member-header" id="Container-resources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8475">property <b>resources</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>resources: <a href='#ResourceRequirements'>ResourceRequirements</a>;</pre>
-
-Compute Resources required by this container. Cannot be updated. More info:
-https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
-
-</div>
-<h3 class="pdoc-member-header" id="Container-securityContext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8482">property <b>securityContext</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>securityContext: <a href='#SecurityContext'>SecurityContext</a>;</pre>
-
-Security options the pod should run with. More info:
-https://kubernetes.io/docs/concepts/policy/security-context/ More info:
-https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
-
-</div>
-<h3 class="pdoc-member-header" id="Container-stdin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8488">property <b>stdin</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>stdin: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Whether this container should allocate a buffer for stdin in the container runtime. If this
-is not set, reads from stdin in the container will always result in EOF. Default is false.
-
-</div>
-<h3 class="pdoc-member-header" id="Container-stdinOnce">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8499">property <b>stdinOnce</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>stdinOnce: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Whether the container runtime should close the stdin channel after it has been opened by a
-single attach. When stdin is true the stdin stream will remain open across multiple attach
-sessions. If stdinOnce is set to true, stdin is opened on container start, is empty until
-the first client attaches to stdin, and then remains open and accepts data until the client
-disconnects, at which time stdin is closed and remains closed until the container is
-restarted. If this flag is false, a container processes that reads from stdin will never
-receive an EOF. Default is false
-
-</div>
-<h3 class="pdoc-member-header" id="Container-terminationMessagePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8508">property <b>terminationMessagePath</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>terminationMessagePath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Optional: Path at which the file to which the container's termination message will be
-written is mounted into the container's filesystem. Message written is intended to be brief
-final status, such as an assertion failure message. Will be truncated by the node if
-greater than 4096 bytes. The total message length across all containers will be limited to
-12kb. Defaults to /dev/termination-log. Cannot be updated.
-
-</div>
-<h3 class="pdoc-member-header" id="Container-terminationMessagePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8518">property <b>terminationMessagePolicy</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>terminationMessagePolicy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Indicate how the termination message should be populated. File will use the contents of
-terminationMessagePath to populate the container status message on both success and
-failure. FallbackToLogsOnError will use the last chunk of container log output if the
-termination message file is empty and the container exited with an error. The log output is
-limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be
-updated.
-
-</div>
-<h3 class="pdoc-member-header" id="Container-tty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8524">property <b>tty</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>tty: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Whether this container should allocate a TTY for itself, also requires 'stdin' to be true.
-Default is false.
-
-</div>
-<h3 class="pdoc-member-header" id="Container-volumeDevices">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8530">property <b>volumeDevices</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>volumeDevices: <a href='#VolumeDevice'>VolumeDevice</a>[];</pre>
-
-volumeDevices is the list of block devices to be used by the container. This is a beta
-feature.
-
-</div>
-<h3 class="pdoc-member-header" id="Container-volumeMounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8535">property <b>volumeMounts</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>volumeMounts: <a href='#VolumeMount'>VolumeMount</a>[];</pre>
-
-Pod volumes to mount into the container's filesystem. Cannot be updated.
-
-</div>
-<h3 class="pdoc-member-header" id="Container-workingDir">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8541">property <b>workingDir</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>workingDir: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Container's working directory. If not specified, the container runtime's default will be
-used, which might be configured in the container image. Cannot be updated.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ContainerImage">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8548">interface <b>ContainerImage</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Describe a container image
-
-<h3 class="pdoc-member-header" id="ContainerImage-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8553">property <b>names</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-Names by which this image is known. e.g. ["k8s.gcr.io/hyperkube:v1.0.7",
-"dockerhub.io/google_containers/hyperkube:v1.0.7"]
-
-</div>
-<h3 class="pdoc-member-header" id="ContainerImage-sizeBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8558">property <b>sizeBytes</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>sizeBytes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-The size of the image in bytes.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ContainerPort">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8565">interface <b>ContainerPort</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ContainerPort represents a network port in a single container.
-
-<h3 class="pdoc-member-header" id="ContainerPort-containerPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8570">property <b>containerPort</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>containerPort: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x <
-65536.
-
-</div>
-<h3 class="pdoc-member-header" id="ContainerPort-hostIP">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8575">property <b>hostIP</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>hostIP: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-What host IP to bind the external port to.
-
-</div>
-<h3 class="pdoc-member-header" id="ContainerPort-hostPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8582">property <b>hostPort</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>hostPort: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-Number of port to expose on the host. If specified, this must be a valid port number, 0 < x
-< 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not
-need this.
-
-</div>
-<h3 class="pdoc-member-header" id="ContainerPort-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8588">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a
-pod must have a unique name. Name for the port that can be referred to by services.
-
-</div>
-<h3 class="pdoc-member-header" id="ContainerPort-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8593">property <b>protocol</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>protocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Protocol for port. Must be UDP, TCP, or SCTP. Defaults to "TCP".
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ContainerState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8601">interface <b>ContainerState</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ContainerState holds a possible state of container. Only one of its members may be specified.
-If none of them is specified, the default one is ContainerStateWaiting.
-
-<h3 class="pdoc-member-header" id="ContainerState-running">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8605">property <b>running</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>running: <a href='#ContainerStateRunning'>ContainerStateRunning</a>;</pre>
-
-Details about a running container
-
-</div>
-<h3 class="pdoc-member-header" id="ContainerState-terminated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8610">property <b>terminated</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>terminated: <a href='#ContainerStateTerminated'>ContainerStateTerminated</a>;</pre>
-
-Details about a terminated container
-
-</div>
-<h3 class="pdoc-member-header" id="ContainerState-waiting">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8615">property <b>waiting</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>waiting: <a href='#ContainerStateWaiting'>ContainerStateWaiting</a>;</pre>
-
-Details about a waiting container
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ContainerStateRunning">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8622">interface <b>ContainerStateRunning</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ContainerStateRunning is a running state of a container.
-
-<h3 class="pdoc-member-header" id="ContainerStateRunning-startedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8626">property <b>startedAt</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>startedAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Time at which the container was last (re-)started
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ContainerStateTerminated">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8633">interface <b>ContainerStateTerminated</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ContainerStateTerminated is a terminated state of a container.
-
-<h3 class="pdoc-member-header" id="ContainerStateTerminated-containerID">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8637">property <b>containerID</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>containerID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Container's ID in the format 'docker://<container_id>'
-
-</div>
-<h3 class="pdoc-member-header" id="ContainerStateTerminated-exitCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8642">property <b>exitCode</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>exitCode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-Exit status from the last termination of the container
-
-</div>
-<h3 class="pdoc-member-header" id="ContainerStateTerminated-finishedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8647">property <b>finishedAt</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>finishedAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Time at which the container last terminated
-
-</div>
-<h3 class="pdoc-member-header" id="ContainerStateTerminated-message">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8652">property <b>message</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Message regarding the last termination of the container
-
-</div>
-<h3 class="pdoc-member-header" id="ContainerStateTerminated-reason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8657">property <b>reason</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>reason: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-(brief) reason from the last termination of the container
-
-</div>
-<h3 class="pdoc-member-header" id="ContainerStateTerminated-signal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8662">property <b>signal</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>signal: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-Signal from the last termination of the container
-
-</div>
-<h3 class="pdoc-member-header" id="ContainerStateTerminated-startedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8667">property <b>startedAt</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>startedAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Time at which previous execution of the container started
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ContainerStateWaiting">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8674">interface <b>ContainerStateWaiting</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ContainerStateWaiting is a waiting state of a container.
-
-<h3 class="pdoc-member-header" id="ContainerStateWaiting-message">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8678">property <b>message</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Message regarding why the container is not yet running.
-
-</div>
-<h3 class="pdoc-member-header" id="ContainerStateWaiting-reason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8683">property <b>reason</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>reason: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-(brief) reason the container is not yet running.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ContainerStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8690">interface <b>ContainerStatus</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ContainerStatus contains details for the current status of this container.
-
-<h3 class="pdoc-member-header" id="ContainerStatus-containerID">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8694">property <b>containerID</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>containerID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Container's ID in the format 'docker://<container_id>'.
-
-</div>
-<h3 class="pdoc-member-header" id="ContainerStatus-image">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8700">property <b>image</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>image: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The image the container is running. More info:
-https://kubernetes.io/docs/concepts/containers/images
-
-</div>
-<h3 class="pdoc-member-header" id="ContainerStatus-imageID">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8705">property <b>imageID</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>imageID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-ImageID of the container's image.
-
-</div>
-<h3 class="pdoc-member-header" id="ContainerStatus-lastState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8710">property <b>lastState</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>lastState: <a href='#ContainerState'>ContainerState</a>;</pre>
-
-Details about the container's last termination condition.
-
-</div>
-<h3 class="pdoc-member-header" id="ContainerStatus-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8716">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-This must be a DNS_LABEL. Each container in a pod must have a unique name. Cannot be
-updated.
-
-</div>
-<h3 class="pdoc-member-header" id="ContainerStatus-ready">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8721">property <b>ready</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>ready: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Specifies whether the container has passed its readiness probe.
-
-</div>
-<h3 class="pdoc-member-header" id="ContainerStatus-restartCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8729">property <b>restartCount</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>restartCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-The number of times the container has been restarted, currently based on the number of dead
-containers that have not yet been removed. Note that this is calculated from dead
-containers. But those containers are subject to garbage collection. This value will get
-capped at 5 by GC.
-
-</div>
-<h3 class="pdoc-member-header" id="ContainerStatus-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8734">property <b>state</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>state: <a href='#ContainerState'>ContainerState</a>;</pre>
-
-Details about the container's current condition.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="DaemonEndpoint">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8741">interface <b>DaemonEndpoint</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-DaemonEndpoint contains information about a single Daemon endpoint.
-
-<h3 class="pdoc-member-header" id="DaemonEndpoint-Port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8745">property <b>Port</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>Port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-Port number of the given endpoint.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="DownwardAPIProjection">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8753">interface <b>DownwardAPIProjection</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Represents downward API info for projecting into a projected volume. Note that this is
-identical to a downwardAPI volume source without the default mode.
-
-<h3 class="pdoc-member-header" id="DownwardAPIProjection-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8757">property <b>items</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>items: <a href='#DownwardAPIVolumeFile'>DownwardAPIVolumeFile</a>[];</pre>
-
-Items is a list of DownwardAPIVolume file
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="DownwardAPIVolumeFile">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8764">interface <b>DownwardAPIVolumeFile</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-DownwardAPIVolumeFile represents information to create the file containing the pod field
-
-<h3 class="pdoc-member-header" id="DownwardAPIVolumeFile-fieldRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8769">property <b>fieldRef</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>fieldRef: <a href='#ObjectFieldSelector'>ObjectFieldSelector</a>;</pre>
-
-Required: Selects a field of the pod: only annotations, labels, name and namespace are
-supported.
-
-</div>
-<h3 class="pdoc-member-header" id="DownwardAPIVolumeFile-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8776">property <b>mode</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>mode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-Optional: mode bits to use on this file, must be a value between 0 and 0777. If not
-specified, the volume defaultMode will be used. This might be in conflict with other
-options that affect the file mode, like fsGroup, and the result can be other mode bits set.
-
-</div>
-<h3 class="pdoc-member-header" id="DownwardAPIVolumeFile-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8783">property <b>path</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Required: Path is  the relative path name of the file to be created. Must not be absolute
-or contain the '..' path. Must be utf-8 encoded. The first item of the relative path must
-not start with '..'
-
-</div>
-<h3 class="pdoc-member-header" id="DownwardAPIVolumeFile-resourceFieldRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8789">property <b>resourceFieldRef</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>resourceFieldRef: <a href='#ResourceFieldSelector'>ResourceFieldSelector</a>;</pre>
-
-Selects a resource of the container: only resources limits and requests (limits.cpu,
-limits.memory, requests.cpu and requests.memory) are currently supported.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="DownwardAPIVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8797">interface <b>DownwardAPIVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-DownwardAPIVolumeSource represents a volume containing downward API info. Downward API
-volumes support ownership management and SELinux relabeling.
-
-<h3 class="pdoc-member-header" id="DownwardAPIVolumeSource-defaultMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8804">property <b>defaultMode</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>defaultMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-Optional: mode bits to use on created files by default. Must be a value between 0 and 0777.
-Defaults to 0644. Directories within the path are not affected by this setting. This might
-be in conflict with other options that affect the file mode, like fsGroup, and the result
-can be other mode bits set.
-
-</div>
-<h3 class="pdoc-member-header" id="DownwardAPIVolumeSource-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8809">property <b>items</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>items: <a href='#DownwardAPIVolumeFile'>DownwardAPIVolumeFile</a>[];</pre>
-
-Items is a list of downward API volume file
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="EmptyDirVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8817">interface <b>EmptyDirVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Represents an empty directory for a pod. Empty directory volumes support ownership management
-and SELinux relabeling.
-
-<h3 class="pdoc-member-header" id="EmptyDirVolumeSource-medium">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8823">property <b>medium</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>medium: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-What type of storage medium should back this directory. The default is "" which means to
-use the node's default medium. Must be an empty string (default) or Memory. More info:
-https://kubernetes.io/docs/concepts/storage/volumes#emptydir
-
-</div>
-<h3 class="pdoc-member-header" id="EmptyDirVolumeSource-sizeLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8832">property <b>sizeLimit</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>sizeLimit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Total amount of local storage required for this EmptyDir volume. The size limit is also
-applicable for memory medium. The maximum usage on memory medium EmptyDir would be the
-minimum value between the SizeLimit specified here and the sum of memory limits of all
-containers in a pod. The default is nil which means that the limit is undefined. More info:
-http://kubernetes.io/docs/user-guide/volumes#emptydir
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="EndpointAddress">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8839">interface <b>EndpointAddress</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-EndpointAddress is a tuple that describes single IP address.
-
-<h3 class="pdoc-member-header" id="EndpointAddress-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8843">property <b>hostname</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>hostname: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The Hostname of this endpoint
-
-</div>
-<h3 class="pdoc-member-header" id="EndpointAddress-ip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8850">property <b>ip</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>ip: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The IP of this endpoint. May not be loopback (127.0.0.0/8), link-local (169.254.0.0/16), or
-link-local multicast ((224.0.0.0/24). IPv6 is also accepted but not fully supported on all
-platforms. Also, certain kubernetes components, like kube-proxy, are not IPv6 ready.
-
-</div>
-<h3 class="pdoc-member-header" id="EndpointAddress-nodeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8856">property <b>nodeName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>nodeName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Optional: Node hosting this endpoint. This can be used to determine endpoints local to a
-node.
-
-</div>
-<h3 class="pdoc-member-header" id="EndpointAddress-targetRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8861">property <b>targetRef</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>targetRef: <a href='#ObjectReference'>ObjectReference</a>;</pre>
-
-Reference to object providing the endpoint.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="EndpointPort">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8868">interface <b>EndpointPort</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-EndpointPort is a tuple that describes a single port.
-
-<h3 class="pdoc-member-header" id="EndpointPort-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8873">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The name of this port (corresponds to ServicePort.Name). Must be a DNS_LABEL. Optional only
-if one port is defined.
-
-</div>
-<h3 class="pdoc-member-header" id="EndpointPort-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8878">property <b>port</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-The port number of the endpoint.
-
-</div>
-<h3 class="pdoc-member-header" id="EndpointPort-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8883">property <b>protocol</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>protocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The IP protocol for this port. Must be UDP, TCP, or SCTP. Default is TCP.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="EndpointSubset">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8898">interface <b>EndpointSubset</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-EndpointSubset is a group of addresses with a common set of ports. The expanded set of
-endpoints is the Cartesian product of Addresses x Ports. For example, given:
-  {
-    Addresses: [{"ip": "10.10.1.1"}, {"ip": "10.10.2.2"}],
-    Ports:     [{"name": "a", "port": 8675}, {"name": "b", "port": 309}]
-  }
-The resulting set of endpoints can be viewed as:
-    a: [ 10.10.1.1:8675, 10.10.2.2:8675 ],
-    b: [ 10.10.1.1:309, 10.10.2.2:309 ]
-
-<h3 class="pdoc-member-header" id="EndpointSubset-addresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8903">property <b>addresses</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>addresses: <a href='#EndpointAddress'>EndpointAddress</a>[];</pre>
-
-IP addresses which offer the related ports that are marked as ready. These endpoints should
-be considered safe for load balancers and clients to utilize.
-
-</div>
-<h3 class="pdoc-member-header" id="EndpointSubset-notReadyAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8910">property <b>notReadyAddresses</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>notReadyAddresses: <a href='#EndpointAddress'>EndpointAddress</a>[];</pre>
-
-IP addresses which offer the related ports but are not currently marked as ready because
-they have not yet finished starting, have recently failed a readiness check, or have
-recently failed a liveness check.
-
-</div>
-<h3 class="pdoc-member-header" id="EndpointSubset-ports">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8915">property <b>ports</b></a>
+<h3 class="pdoc-member-header" id="ConfigMapList-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>ports: <a href='#EndpointPort'>EndpointPort</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 
-Port numbers available on the related IP addresses.
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Endpoints">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8933">interface <b>Endpoints</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Endpoints.ts#L22">class <b>Endpoints</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 Endpoints is a collection of endpoints that implement the actual service. Example:
   Name: "mysvc",
@@ -2562,11 +738,69 @@ Endpoints is a collection of endpoints that implement the actual service. Exampl
     },
  ]
 
-<h3 class="pdoc-member-header" id="Endpoints-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8940">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="Endpoints-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Endpoints.ts#L72"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Endpoints(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.core.v1.Endpoints, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a core.v1.Endpoints resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="Endpoints-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Endpoints.ts#L67">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Endpoints'>Endpoints</a></pre>
+
+
+Get the state of an existing `Endpoints` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="Endpoints-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Endpoints.ts#L71">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.core.v1.Endpoints</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="Endpoints-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="Endpoints-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="Endpoints-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Endpoints.ts#L29">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -2574,11 +808,21 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="Endpoints-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8948">property <b>kind</b></a>
+<h3 class="pdoc-member-header" id="Endpoints-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="Endpoints-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Endpoints.ts#L37">property <b>kind</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"Endpoints"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -2587,20 +831,20 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="Endpoints-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8954">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Endpoints.ts#L43">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 
 Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 </div>
 <h3 class="pdoc-member-header" id="Endpoints-subsets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8964">property <b>subsets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Endpoints.ts#L53">property <b>subsets</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>subsets: <a href='#EndpointSubset'>EndpointSubset</a>[];</pre>
+<pre class="highlight"><span class='kd'>public </span>subsets: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.EndpointSubset[]&gt;;</pre>
 
 The set of all endpoints is the union of all subsets. Addresses are placed into subsets
 according to the IPs they share. A single address with multiple ports, some of which are
@@ -2610,19 +854,88 @@ will appear in both Addresses and NotReadyAddresses in the same subset. Sets of 
 and ports that comprise a service.
 
 </div>
+<h3 class="pdoc-member-header" id="Endpoints-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+</div>
 </div>
 <h2 class="pdoc-module-header" id="EndpointsList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8971">interface <b>EndpointsList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/EndpointsList.ts#L11">class <b>EndpointsList</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 EndpointsList is a list of endpoints.
 
-<h3 class="pdoc-member-header" id="EndpointsList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8978">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="EndpointsList-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/EndpointsList.ts#L56"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> EndpointsList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.core.v1.EndpointsList, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a core.v1.EndpointsList resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="EndpointsList-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/EndpointsList.ts#L51">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#EndpointsList'>EndpointsList</a></pre>
+
+
+Get the state of an existing `EndpointsList` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="EndpointsList-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/EndpointsList.ts#L55">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.core.v1.EndpointsList</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="EndpointsList-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="EndpointsList-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="EndpointsList-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/EndpointsList.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -2630,20 +943,30 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="EndpointsList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8983">property <b>items</b></a>
+<h3 class="pdoc-member-header" id="EndpointsList-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>items: <a href='#Endpoints'>Endpoints</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="EndpointsList-items">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/EndpointsList.ts#L23">property <b>items</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>items: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.Endpoints[]&gt;;</pre>
 
 List of endpoints.
 
 </div>
 <h3 class="pdoc-member-header" id="EndpointsList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8991">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/EndpointsList.ts#L31">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"EndpointsList"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -2652,158 +975,106 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="EndpointsList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L8997">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/EndpointsList.ts#L37">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
 
 Standard list metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="EnvFromSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9004">interface <b>EnvFromSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-EnvFromSource represents the source of a set of ConfigMaps
-
-<h3 class="pdoc-member-header" id="EnvFromSource-configMapRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9008">property <b>configMapRef</b></a>
+<h3 class="pdoc-member-header" id="EndpointsList-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>configMapRef: <a href='#ConfigMapEnvSource'>ConfigMapEnvSource</a>;</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 
-The ConfigMap to select from
-
-</div>
-<h3 class="pdoc-member-header" id="EnvFromSource-prefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9013">property <b>prefix</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>prefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.
-
-</div>
-<h3 class="pdoc-member-header" id="EnvFromSource-secretRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9018">property <b>secretRef</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>secretRef: <a href='#SecretEnvSource'>SecretEnvSource</a>;</pre>
-
-The Secret to select from
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="EnvVar">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9025">interface <b>EnvVar</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-EnvVar represents an environment variable present in a Container.
-
-<h3 class="pdoc-member-header" id="EnvVar-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9029">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Name of the environment variable. Must be a C_IDENTIFIER.
-
-</div>
-<h3 class="pdoc-member-header" id="EnvVar-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9038">property <b>value</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Variable references $(VAR_NAME) are expanded using the previous defined environment
-variables in the container and any service environment variables. If a variable cannot be
-resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can
-be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
-regardless of whether the variable exists or not. Defaults to "".
-
-</div>
-<h3 class="pdoc-member-header" id="EnvVar-valueFrom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9043">property <b>valueFrom</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>valueFrom: <a href='#EnvVarSource'>EnvVarSource</a>;</pre>
-
-Source for the environment variable's value. Cannot be used if value is not empty.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="EnvVarSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9050">interface <b>EnvVarSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-EnvVarSource represents a source for the value of an EnvVar.
-
-<h3 class="pdoc-member-header" id="EnvVarSource-configMapKeyRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9054">property <b>configMapKeyRef</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>configMapKeyRef: <a href='#ConfigMapKeySelector'>ConfigMapKeySelector</a>;</pre>
-
-Selects a key of a ConfigMap.
-
-</div>
-<h3 class="pdoc-member-header" id="EnvVarSource-fieldRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9060">property <b>fieldRef</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>fieldRef: <a href='#ObjectFieldSelector'>ObjectFieldSelector</a>;</pre>
-
-Selects a field of the pod: supports metadata.name, metadata.namespace, metadata.labels,
-metadata.annotations, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP.
-
-</div>
-<h3 class="pdoc-member-header" id="EnvVarSource-resourceFieldRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9067">property <b>resourceFieldRef</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>resourceFieldRef: <a href='#ResourceFieldSelector'>ResourceFieldSelector</a>;</pre>
-
-Selects a resource of the container: only resources limits and requests (limits.cpu,
-limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and
-requests.ephemeral-storage) are currently supported.
-
-</div>
-<h3 class="pdoc-member-header" id="EnvVarSource-secretKeyRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9072">property <b>secretKeyRef</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>secretKeyRef: <a href='#SecretKeySelector'>SecretKeySelector</a>;</pre>
-
-Selects a key of a secret in the pod's namespace
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Event">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9079">interface <b>Event</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Event.ts#L11">class <b>Event</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 Event is a report of an event somewhere in the cluster.
 
-<h3 class="pdoc-member-header" id="Event-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9083">property <b>action</b></a>
+<h3 class="pdoc-member-header" id="Event-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Event.ts#L122"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>action: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Event(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.core.v1.Event, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a core.v1.Event resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="Event-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Event.ts#L117">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Event'>Event</a></pre>
+
+
+Get the state of an existing `Event` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="Event-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Event.ts#L121">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.core.v1.Event</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="Event-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="Event-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="Event-action">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Event.ts#L15">property <b>action</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>action: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 What action was taken/failed regarding to the Regarding object.
 
 </div>
 <h3 class="pdoc-member-header" id="Event-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9091">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Event.ts#L23">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -2812,46 +1083,56 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
 <h3 class="pdoc-member-header" id="Event-count">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9096">property <b>count</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Event.ts#L28">property <b>count</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>count: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>count: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 
 The number of times this event has occurred.
 
 </div>
 <h3 class="pdoc-member-header" id="Event-eventTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9101">property <b>eventTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Event.ts#L33">property <b>eventTime</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>eventTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>eventTime: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 Time when this Event was first observed.
 
 </div>
 <h3 class="pdoc-member-header" id="Event-firstTimestamp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9106">property <b>firstTimestamp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Event.ts#L38">property <b>firstTimestamp</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>firstTimestamp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>firstTimestamp: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 The time at which the event was first recorded. (Time of server receipt is in TypeMeta.)
 
 </div>
-<h3 class="pdoc-member-header" id="Event-involvedObject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9111">property <b>involvedObject</b></a>
+<h3 class="pdoc-member-header" id="Event-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>involvedObject: <a href='#ObjectReference'>ObjectReference</a>;</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="Event-involvedObject">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Event.ts#L43">property <b>involvedObject</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>involvedObject: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ObjectReference&gt;;</pre>
 
 The object that this event is about.
 
 </div>
 <h3 class="pdoc-member-header" id="Event-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9119">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Event.ts#L51">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"Event"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -2860,110 +1141,179 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="Event-lastTimestamp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9124">property <b>lastTimestamp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Event.ts#L56">property <b>lastTimestamp</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>lastTimestamp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>lastTimestamp: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 The time at which the most recent occurrence of this event was recorded.
 
 </div>
 <h3 class="pdoc-member-header" id="Event-message">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9129">property <b>message</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Event.ts#L61">property <b>message</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>message: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 A human-readable description of the status of this operation.
 
 </div>
 <h3 class="pdoc-member-header" id="Event-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9135">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Event.ts#L67">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 
 Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 </div>
 <h3 class="pdoc-member-header" id="Event-reason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9141">property <b>reason</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Event.ts#L73">property <b>reason</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>reason: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>reason: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 This should be a short, machine understandable string that gives the reason for the
 transition into the object's current status.
 
 </div>
 <h3 class="pdoc-member-header" id="Event-related">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9146">property <b>related</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Event.ts#L78">property <b>related</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>related: <a href='#ObjectReference'>ObjectReference</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>related: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ObjectReference&gt;;</pre>
 
 Optional secondary object for more complex actions.
 
 </div>
 <h3 class="pdoc-member-header" id="Event-reportingComponent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9151">property <b>reportingComponent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Event.ts#L83">property <b>reportingComponent</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>reportingComponent: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>reportingComponent: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 Name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`.
 
 </div>
 <h3 class="pdoc-member-header" id="Event-reportingInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9156">property <b>reportingInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Event.ts#L88">property <b>reportingInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>reportingInstance: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>reportingInstance: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 ID of the controller instance, e.g. `kubelet-xyzf`.
 
 </div>
 <h3 class="pdoc-member-header" id="Event-series">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9161">property <b>series</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Event.ts#L93">property <b>series</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>series: <a href='#EventSeries'>EventSeries</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>series: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.EventSeries&gt;;</pre>
 
 Data about the Event series this event represents or nil if it's a singleton Event.
 
 </div>
 <h3 class="pdoc-member-header" id="Event-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9166">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Event.ts#L98">property <b>source</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>source: <a href='#EventSource'>EventSource</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>source: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.EventSource&gt;;</pre>
 
 The component reporting this event. Should be a short machine understandable string.
 
 </div>
 <h3 class="pdoc-member-header" id="Event-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9171">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Event.ts#L103">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>type: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 Type of this event (Normal, Warning), new types could be added in the future
 
 </div>
+<h3 class="pdoc-member-header" id="Event-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+</div>
 </div>
 <h2 class="pdoc-module-header" id="EventList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9178">interface <b>EventList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/EventList.ts#L11">class <b>EventList</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 EventList is a list of events.
 
-<h3 class="pdoc-member-header" id="EventList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9185">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="EventList-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/EventList.ts#L56"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> EventList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.core.v1.EventList, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a core.v1.EventList resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="EventList-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/EventList.ts#L51">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#EventList'>EventList</a></pre>
+
+
+Get the state of an existing `EventList` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="EventList-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/EventList.ts#L55">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.core.v1.EventList</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="EventList-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="EventList-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="EventList-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/EventList.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -2971,20 +1321,30 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="EventList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9190">property <b>items</b></a>
+<h3 class="pdoc-member-header" id="EventList-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>items: <a href='#Event'>Event</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="EventList-items">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/EventList.ts#L23">property <b>items</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>items: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.Event[]&gt;;</pre>
 
 List of events
 
 </div>
 <h3 class="pdoc-member-header" id="EventList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9198">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/EventList.ts#L31">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"EventList"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -2993,978 +1353,97 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="EventList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9204">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/EventList.ts#L37">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
 
 Standard list metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="EventSeries">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9212">interface <b>EventSeries</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-EventSeries contain information on series of events, i.e. thing that was/is happening
-continuously for some time.
-
-<h3 class="pdoc-member-header" id="EventSeries-count">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9216">property <b>count</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>count: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-Number of occurrences in this series up to the last heartbeat time
-
-</div>
-<h3 class="pdoc-member-header" id="EventSeries-lastObservedTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9221">property <b>lastObservedTime</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>lastObservedTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Time of the last occurrence observed
-
-</div>
-<h3 class="pdoc-member-header" id="EventSeries-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9226">property <b>state</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>state: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-State of this Series: Ongoing or Finished
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="EventSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9233">interface <b>EventSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-EventSource contains information for an event.
-
-<h3 class="pdoc-member-header" id="EventSource-component">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9237">property <b>component</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>component: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Component from which the event is generated.
-
-</div>
-<h3 class="pdoc-member-header" id="EventSource-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9242">property <b>host</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>host: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Node name on which the event is generated.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ExecAction">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9249">interface <b>ExecAction</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ExecAction describes a "run in container" action.
-
-<h3 class="pdoc-member-header" id="ExecAction-command">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9257">property <b>command</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>command: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-Command is the command line to execute inside the container, the working directory for the
-command  is root ('/') in the container's filesystem. The command is simply exec'd, it is
-not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a
-shell, you need to explicitly call out to that shell. Exit status of 0 is treated as
-live/healthy and non-zero is unhealthy.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="FCVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9265">interface <b>FCVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Represents a Fibre Channel volume. Fibre Channel volumes can only be mounted as read/write
-once. Fibre Channel volumes support ownership management and SELinux relabeling.
-
-<h3 class="pdoc-member-header" id="FCVolumeSource-fsType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9270">property <b>fsType</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Filesystem type to mount. Must be a filesystem type supported by the host operating system.
-Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
-
-</div>
-<h3 class="pdoc-member-header" id="FCVolumeSource-lun">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9275">property <b>lun</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>lun: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-Optional: FC target lun number
-
-</div>
-<h3 class="pdoc-member-header" id="FCVolumeSource-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9281">property <b>readOnly</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in
-VolumeMounts.
-
-</div>
-<h3 class="pdoc-member-header" id="FCVolumeSource-targetWWNs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9286">property <b>targetWWNs</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>targetWWNs: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-Optional: FC target worldwide names (WWNs)
-
-</div>
-<h3 class="pdoc-member-header" id="FCVolumeSource-wwids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9292">property <b>wwids</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>wwids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-Optional: FC volume world wide identifiers (wwids) Either wwids or combination of
-targetWWNs and lun must be set, but not both simultaneously.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="FlexPersistentVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9300">interface <b>FlexPersistentVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-FlexPersistentVolumeSource represents a generic persistent volume resource that is
-provisioned/attached using an exec based plugin.
-
-<h3 class="pdoc-member-header" id="FlexPersistentVolumeSource-driver">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9304">property <b>driver</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>driver: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Driver is the name of the driver to use for this volume.
-
-</div>
-<h3 class="pdoc-member-header" id="FlexPersistentVolumeSource-fsType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9310">property <b>fsType</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Filesystem type to mount. Must be a filesystem type supported by the host operating system.
-Ex. "ext4", "xfs", "ntfs". The default filesystem depends on FlexVolume script.
-
-</div>
-<h3 class="pdoc-member-header" id="FlexPersistentVolumeSource-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9315">property <b>options</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>options: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</pre>
-
-Optional: Extra command options if any.
-
-</div>
-<h3 class="pdoc-member-header" id="FlexPersistentVolumeSource-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9321">property <b>readOnly</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in
-VolumeMounts.
-
-</div>
-<h3 class="pdoc-member-header" id="FlexPersistentVolumeSource-secretRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9328">property <b>secretRef</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>secretRef: <a href='#SecretReference'>SecretReference</a>;</pre>
-
-Optional: SecretRef is reference to the secret object containing sensitive information to
-pass to the plugin scripts. This may be empty if no secret object is specified. If the
-secret object contains more than one secret, all secrets are passed to the plugin scripts.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="FlexVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9336">interface <b>FlexVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-FlexVolume represents a generic volume resource that is provisioned/attached using an exec
-based plugin.
-
-<h3 class="pdoc-member-header" id="FlexVolumeSource-driver">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9340">property <b>driver</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>driver: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Driver is the name of the driver to use for this volume.
-
-</div>
-<h3 class="pdoc-member-header" id="FlexVolumeSource-fsType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9346">property <b>fsType</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Filesystem type to mount. Must be a filesystem type supported by the host operating system.
-Ex. "ext4", "xfs", "ntfs". The default filesystem depends on FlexVolume script.
-
-</div>
-<h3 class="pdoc-member-header" id="FlexVolumeSource-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9351">property <b>options</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>options: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</pre>
-
-Optional: Extra command options if any.
-
-</div>
-<h3 class="pdoc-member-header" id="FlexVolumeSource-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9357">property <b>readOnly</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in
-VolumeMounts.
-
-</div>
-<h3 class="pdoc-member-header" id="FlexVolumeSource-secretRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9364">property <b>secretRef</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>secretRef: <a href='#LocalObjectReference'>LocalObjectReference</a>;</pre>
-
-Optional: SecretRef is reference to the secret object containing sensitive information to
-pass to the plugin scripts. This may be empty if no secret object is specified. If the
-secret object contains more than one secret, all secrets are passed to the plugin scripts.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="FlockerVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9373">interface <b>FlockerVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Represents a Flocker volume mounted by the Flocker agent. One and only one of datasetName and
-datasetUUID should be set. Flocker volumes do not support ownership management or SELinux
-relabeling.
-
-<h3 class="pdoc-member-header" id="FlockerVolumeSource-datasetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9378">property <b>datasetName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>datasetName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Name of the dataset stored as metadata -> name on the dataset for Flocker should be
-considered as deprecated
-
-</div>
-<h3 class="pdoc-member-header" id="FlockerVolumeSource-datasetUUID">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9383">property <b>datasetUUID</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>datasetUUID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-UUID of the dataset. This is unique identifier of a Flocker dataset
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="GCEPersistentDiskVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9394">interface <b>GCEPersistentDiskVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Represents a Persistent Disk resource in Google Compute Engine.
-
-A GCE PD must exist before mounting to a container. The disk must also be in the same GCE
-project and zone as the kubelet. A GCE PD can only be mounted as read/write once or read-only
-many times. GCE PDs support ownership management and SELinux relabeling.
-
-<h3 class="pdoc-member-header" id="GCEPersistentDiskVolumeSource-fsType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9401">property <b>fsType</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type
-is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly
-inferred to be "ext4" if unspecified. More info:
-https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
-
-</div>
-<h3 class="pdoc-member-header" id="GCEPersistentDiskVolumeSource-partition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9409">property <b>partition</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>partition: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-The partition in the volume that you want to mount. If omitted, the default is to mount by
-volume name. Examples: For volume /dev/sda1, you specify the partition as "1". Similarly,
-the volume partition for /dev/sda is "0" (or you can leave the property empty). More info:
-https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
-
-</div>
-<h3 class="pdoc-member-header" id="GCEPersistentDiskVolumeSource-pdName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9415">property <b>pdName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>pdName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Unique name of the PD resource in GCE. Used to identify the disk in GCE. More info:
-https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
-
-</div>
-<h3 class="pdoc-member-header" id="GCEPersistentDiskVolumeSource-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9421">property <b>readOnly</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More
-info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="GitRepoVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9433">interface <b>GitRepoVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Represents a volume that is populated with the contents of a git repository. Git repo volumes
-do not support ownership management. Git repo volumes support SELinux relabeling.
-
-DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an
-EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into
-the Pod's container.
-
-<h3 class="pdoc-member-header" id="GitRepoVolumeSource-directory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9439">property <b>directory</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>directory: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Target directory name. Must not contain or start with '..'.  If '.' is supplied, the volume
-directory will be the git repository.  Otherwise, if specified, the volume will contain the
-git repository in the subdirectory with the given name.
-
-</div>
-<h3 class="pdoc-member-header" id="GitRepoVolumeSource-repository">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9444">property <b>repository</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>repository: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Repository URL
-
-</div>
-<h3 class="pdoc-member-header" id="GitRepoVolumeSource-revision">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9449">property <b>revision</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>revision: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Commit hash for the specified revision.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="GlusterfsPersistentVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9457">interface <b>GlusterfsPersistentVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Represents a Glusterfs mount that lasts the lifetime of a pod. Glusterfs volumes do not
-support ownership management or SELinux relabeling.
-
-<h3 class="pdoc-member-header" id="GlusterfsPersistentVolumeSource-endpoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9462">property <b>endpoints</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>endpoints: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-EndpointsName is the endpoint name that details Glusterfs topology. More info:
-https://releases.k8s.io/HEAD/examples/volumes/glusterfs/README.md#create-a-pod
-
-</div>
-<h3 class="pdoc-member-header" id="GlusterfsPersistentVolumeSource-endpointsNamespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9469">property <b>endpointsNamespace</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>endpointsNamespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-EndpointsNamespace is the namespace that contains Glusterfs endpoint. If this field is
-empty, the EndpointNamespace defaults to the same namespace as the bound PVC. More info:
-https://releases.k8s.io/HEAD/examples/volumes/glusterfs/README.md#create-a-pod
-
-</div>
-<h3 class="pdoc-member-header" id="GlusterfsPersistentVolumeSource-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9475">property <b>path</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Path is the Glusterfs volume path. More info:
-https://releases.k8s.io/HEAD/examples/volumes/glusterfs/README.md#create-a-pod
-
-</div>
-<h3 class="pdoc-member-header" id="GlusterfsPersistentVolumeSource-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9482">property <b>readOnly</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-ReadOnly here will force the Glusterfs volume to be mounted with read-only permissions.
-Defaults to false. More info:
-https://releases.k8s.io/HEAD/examples/volumes/glusterfs/README.md#create-a-pod
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="GlusterfsVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9490">interface <b>GlusterfsVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Represents a Glusterfs mount that lasts the lifetime of a pod. Glusterfs volumes do not
-support ownership management or SELinux relabeling.
-
-<h3 class="pdoc-member-header" id="GlusterfsVolumeSource-endpoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9495">property <b>endpoints</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>endpoints: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-EndpointsName is the endpoint name that details Glusterfs topology. More info:
-https://releases.k8s.io/HEAD/examples/volumes/glusterfs/README.md#create-a-pod
-
-</div>
-<h3 class="pdoc-member-header" id="GlusterfsVolumeSource-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9501">property <b>path</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Path is the Glusterfs volume path. More info:
-https://releases.k8s.io/HEAD/examples/volumes/glusterfs/README.md#create-a-pod
-
-</div>
-<h3 class="pdoc-member-header" id="GlusterfsVolumeSource-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9508">property <b>readOnly</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-ReadOnly here will force the Glusterfs volume to be mounted with read-only permissions.
-Defaults to false. More info:
-https://releases.k8s.io/HEAD/examples/volumes/glusterfs/README.md#create-a-pod
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="HTTPGetAction">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9515">interface <b>HTTPGetAction</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-HTTPGetAction describes an action based on HTTP Get requests.
-
-<h3 class="pdoc-member-header" id="HTTPGetAction-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9520">property <b>host</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>host: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Host name to connect to, defaults to the pod IP. You probably want to set "Host" in
-httpHeaders instead.
-
-</div>
-<h3 class="pdoc-member-header" id="HTTPGetAction-httpHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9525">property <b>httpHeaders</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>httpHeaders: <a href='#HTTPHeader'>HTTPHeader</a>[];</pre>
-
-Custom headers to set in the request. HTTP allows repeated headers.
-
-</div>
-<h3 class="pdoc-member-header" id="HTTPGetAction-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9530">property <b>path</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Path to access on the HTTP server.
-
-</div>
-<h3 class="pdoc-member-header" id="HTTPGetAction-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9536">property <b>port</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Name or number of the port to access on the container. Number must be in the range 1 to
-65535. Name must be an IANA_SVC_NAME.
-
-</div>
-<h3 class="pdoc-member-header" id="HTTPGetAction-scheme">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9541">property <b>scheme</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>scheme: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Scheme to use for connecting to the host. Defaults to HTTP.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="HTTPHeader">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9548">interface <b>HTTPHeader</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-HTTPHeader describes a custom header to be used in HTTP probes
-
-<h3 class="pdoc-member-header" id="HTTPHeader-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9552">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The header field name
-
-</div>
-<h3 class="pdoc-member-header" id="HTTPHeader-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9557">property <b>value</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The header field value
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="Handler">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9564">interface <b>Handler</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Handler defines a specific action that should be taken
-
-<h3 class="pdoc-member-header" id="Handler-exec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9568">property <b>exec</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>exec: <a href='#ExecAction'>ExecAction</a>;</pre>
-
-One and only one of the following should be specified. Exec specifies the action to take.
-
-</div>
-<h3 class="pdoc-member-header" id="Handler-httpGet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9573">property <b>httpGet</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>httpGet: <a href='#HTTPGetAction'>HTTPGetAction</a>;</pre>
-
-HTTPGet specifies the http request to perform.
-
-</div>
-<h3 class="pdoc-member-header" id="Handler-tcpSocket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9578">property <b>tcpSocket</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>tcpSocket: <a href='#TCPSocketAction'>TCPSocketAction</a>;</pre>
-
-TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="HostAlias">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9586">interface <b>HostAlias</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-HostAlias holds the mapping between IP and hostnames that will be injected as an entry in the
-pod's hosts file.
-
-<h3 class="pdoc-member-header" id="HostAlias-hostnames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9590">property <b>hostnames</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>hostnames: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-Hostnames for the above IP address.
-
-</div>
-<h3 class="pdoc-member-header" id="HostAlias-ip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9595">property <b>ip</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>ip: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-IP address of the host file entry.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="HostPathVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9603">interface <b>HostPathVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Represents a host path mapped into a pod. Host path volumes do not support ownership
-management or SELinux relabeling.
-
-<h3 class="pdoc-member-header" id="HostPathVolumeSource-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9608">property <b>path</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Path of the directory on the host. If the path is a symlink, it will follow the link to the
-real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
-
-</div>
-<h3 class="pdoc-member-header" id="HostPathVolumeSource-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9614">property <b>type</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Type for HostPath Volume Defaults to "" More info:
-https://kubernetes.io/docs/concepts/storage/volumes#hostpath
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ISCSIPersistentVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9622">interface <b>ISCSIPersistentVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ISCSIPersistentVolumeSource represents an ISCSI disk. ISCSI volumes can only be mounted as
-read/write once. ISCSI volumes support ownership management and SELinux relabeling.
-
-<h3 class="pdoc-member-header" id="ISCSIPersistentVolumeSource-chapAuthDiscovery">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9626">property <b>chapAuthDiscovery</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>chapAuthDiscovery: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-whether support iSCSI Discovery CHAP authentication
-
-</div>
-<h3 class="pdoc-member-header" id="ISCSIPersistentVolumeSource-chapAuthSession">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9631">property <b>chapAuthSession</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>chapAuthSession: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-whether support iSCSI Session CHAP authentication
-
-</div>
-<h3 class="pdoc-member-header" id="ISCSIPersistentVolumeSource-fsType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9639">property <b>fsType</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type
-is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly
-inferred to be "ext4" if unspecified. More info:
-https://kubernetes.io/docs/concepts/storage/volumes#iscsi
-
-</div>
-<h3 class="pdoc-member-header" id="ISCSIPersistentVolumeSource-initiatorName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9646">property <b>initiatorName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>initiatorName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Custom iSCSI Initiator Name. If initiatorName is specified with iscsiInterface
-simultaneously, new iSCSI interface <target portal>:<volume name> will be created for the
-connection.
-
-</div>
-<h3 class="pdoc-member-header" id="ISCSIPersistentVolumeSource-iqn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9651">property <b>iqn</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>iqn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Target iSCSI Qualified Name.
-
-</div>
-<h3 class="pdoc-member-header" id="ISCSIPersistentVolumeSource-iscsiInterface">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9656">property <b>iscsiInterface</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>iscsiInterface: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-iSCSI Interface Name that uses an iSCSI transport. Defaults to 'default' (tcp).
-
-</div>
-<h3 class="pdoc-member-header" id="ISCSIPersistentVolumeSource-lun">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9661">property <b>lun</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>lun: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-iSCSI Target Lun number.
-
-</div>
-<h3 class="pdoc-member-header" id="ISCSIPersistentVolumeSource-portals">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9667">property <b>portals</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>portals: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-iSCSI Target Portal List. The Portal is either an IP or ip_addr:port if the port is other
-than default (typically TCP ports 860 and 3260).
-
-</div>
-<h3 class="pdoc-member-header" id="ISCSIPersistentVolumeSource-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9672">property <b>readOnly</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false.
-
-</div>
-<h3 class="pdoc-member-header" id="ISCSIPersistentVolumeSource-secretRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9677">property <b>secretRef</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>secretRef: <a href='#SecretReference'>SecretReference</a>;</pre>
-
-CHAP Secret for iSCSI target and initiator authentication
-
-</div>
-<h3 class="pdoc-member-header" id="ISCSIPersistentVolumeSource-targetPortal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9683">property <b>targetPortal</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>targetPortal: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is other than
-default (typically TCP ports 860 and 3260).
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ISCSIVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9691">interface <b>ISCSIVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Represents an ISCSI disk. ISCSI volumes can only be mounted as read/write once. ISCSI volumes
-support ownership management and SELinux relabeling.
-
-<h3 class="pdoc-member-header" id="ISCSIVolumeSource-chapAuthDiscovery">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9695">property <b>chapAuthDiscovery</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>chapAuthDiscovery: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-whether support iSCSI Discovery CHAP authentication
-
-</div>
-<h3 class="pdoc-member-header" id="ISCSIVolumeSource-chapAuthSession">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9700">property <b>chapAuthSession</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>chapAuthSession: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-whether support iSCSI Session CHAP authentication
-
-</div>
-<h3 class="pdoc-member-header" id="ISCSIVolumeSource-fsType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9708">property <b>fsType</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type
-is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly
-inferred to be "ext4" if unspecified. More info:
-https://kubernetes.io/docs/concepts/storage/volumes#iscsi
-
-</div>
-<h3 class="pdoc-member-header" id="ISCSIVolumeSource-initiatorName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9715">property <b>initiatorName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>initiatorName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Custom iSCSI Initiator Name. If initiatorName is specified with iscsiInterface
-simultaneously, new iSCSI interface <target portal>:<volume name> will be created for the
-connection.
-
-</div>
-<h3 class="pdoc-member-header" id="ISCSIVolumeSource-iqn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9720">property <b>iqn</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>iqn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Target iSCSI Qualified Name.
-
-</div>
-<h3 class="pdoc-member-header" id="ISCSIVolumeSource-iscsiInterface">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9725">property <b>iscsiInterface</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>iscsiInterface: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-iSCSI Interface Name that uses an iSCSI transport. Defaults to 'default' (tcp).
-
-</div>
-<h3 class="pdoc-member-header" id="ISCSIVolumeSource-lun">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9730">property <b>lun</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>lun: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-iSCSI Target Lun number.
-
-</div>
-<h3 class="pdoc-member-header" id="ISCSIVolumeSource-portals">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9736">property <b>portals</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>portals: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-iSCSI Target Portal List. The portal is either an IP or ip_addr:port if the port is other
-than default (typically TCP ports 860 and 3260).
-
-</div>
-<h3 class="pdoc-member-header" id="ISCSIVolumeSource-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9741">property <b>readOnly</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false.
-
-</div>
-<h3 class="pdoc-member-header" id="ISCSIVolumeSource-secretRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9746">property <b>secretRef</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>secretRef: <a href='#LocalObjectReference'>LocalObjectReference</a>;</pre>
-
-CHAP Secret for iSCSI target and initiator authentication
-
-</div>
-<h3 class="pdoc-member-header" id="ISCSIVolumeSource-targetPortal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9752">property <b>targetPortal</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>targetPortal: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is other than
-default (typically TCP ports 860 and 3260).
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="KeyToPath">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9759">interface <b>KeyToPath</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Maps a string key to a path within a volume.
-
-<h3 class="pdoc-member-header" id="KeyToPath-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9763">property <b>key</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The key to project.
-
-</div>
-<h3 class="pdoc-member-header" id="KeyToPath-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9770">property <b>mode</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>mode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-Optional: mode bits to use on this file, must be a value between 0 and 0777. If not
-specified, the volume defaultMode will be used. This might be in conflict with other
-options that affect the file mode, like fsGroup, and the result can be other mode bits set.
-
-</div>
-<h3 class="pdoc-member-header" id="KeyToPath-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9776">property <b>path</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The relative path of the file to map the key to. May not be an absolute path. May not
-contain the path element '..'. May not start with the string '..'.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="Lifecycle">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9786">interface <b>Lifecycle</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Lifecycle describes actions that the management system should take in response to container
-lifecycle events. For the PostStart and PreStop lifecycle handlers, management of the
-container blocks until the action is complete, unless the container process fails, in which
-case the handler is aborted.
-
-<h3 class="pdoc-member-header" id="Lifecycle-postStart">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9793">property <b>postStart</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>postStart: <a href='#Handler'>Handler</a>;</pre>
-
-PostStart is called immediately after a container is created. If the handler fails, the
-container is terminated and restarted according to its restart policy. Other management of
-the container blocks until the hook completes. More info:
-https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks
-
-</div>
-<h3 class="pdoc-member-header" id="Lifecycle-preStop">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9802">property <b>preStop</b></a>
+<h3 class="pdoc-member-header" id="EventList-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>preStop: <a href='#Handler'>Handler</a>;</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 
-PreStop is called immediately before a container is terminated. The container is terminated
-after the handler completes. The reason for termination is passed to the handler.
-Regardless of the outcome of the handler, the container is eventually terminated. Other
-management of the container blocks until the hook completes. More info:
-https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LimitRange">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9809">interface <b>LimitRange</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/LimitRange.ts#L11">class <b>LimitRange</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 LimitRange sets resource usage limits for each kind of resource in a Namespace.
 
-<h3 class="pdoc-member-header" id="LimitRange-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9816">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="LimitRange-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/LimitRange.ts#L57"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> LimitRange(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.core.v1.LimitRange, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a core.v1.LimitRange resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="LimitRange-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/LimitRange.ts#L52">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#LimitRange'>LimitRange</a></pre>
+
+
+Get the state of an existing `LimitRange` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="LimitRange-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/LimitRange.ts#L56">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.core.v1.LimitRange</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="LimitRange-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="LimitRange-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="LimitRange-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/LimitRange.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -3972,11 +1451,21 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="LimitRange-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9824">property <b>kind</b></a>
+<h3 class="pdoc-member-header" id="LimitRange-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="LimitRange-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/LimitRange.ts#L26">property <b>kind</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"LimitRange"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -3985,103 +1474,107 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="LimitRange-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9830">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/LimitRange.ts#L32">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 
 Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 </div>
 <h3 class="pdoc-member-header" id="LimitRange-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9836">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/LimitRange.ts#L38">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>spec: <a href='#LimitRangeSpec'>LimitRangeSpec</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.LimitRangeSpec&gt;;</pre>
 
 Spec defines the limits enforced. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="LimitRangeItem">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9843">interface <b>LimitRangeItem</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-LimitRangeItem defines a min/max usage limit for any resource that matches on kind.
-
-<h3 class="pdoc-member-header" id="LimitRangeItem-default">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9847">property <b>default</b></a>
+<h3 class="pdoc-member-header" id="LimitRange-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>default: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 
-Default resource requirement limit value by resource name if resource limit is omitted.
-
-</div>
-<h3 class="pdoc-member-header" id="LimitRangeItem-defaultRequest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9853">property <b>defaultRequest</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>defaultRequest: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
-
-DefaultRequest is the default resource requirement request value by resource name if
-resource request is omitted.
-
-</div>
-<h3 class="pdoc-member-header" id="LimitRangeItem-max">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9858">property <b>max</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>max: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
-
-Max usage constraints on this kind by resource name.
-
-</div>
-<h3 class="pdoc-member-header" id="LimitRangeItem-maxLimitRequestRatio">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9865">property <b>maxLimitRequestRatio</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>maxLimitRequestRatio: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
-
-MaxLimitRequestRatio if specified, the named resource must have a request and limit that
-are both non-zero where limit divided by request is less than or equal to the enumerated
-value; this represents the max burst for the named resource.
-
-</div>
-<h3 class="pdoc-member-header" id="LimitRangeItem-min">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9870">property <b>min</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>min: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
-
-Min usage constraints on this kind by resource name.
-
-</div>
-<h3 class="pdoc-member-header" id="LimitRangeItem-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9875">property <b>type</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Type of resource that this limit applies to.
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LimitRangeList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9882">interface <b>LimitRangeList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/LimitRangeList.ts#L11">class <b>LimitRangeList</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 LimitRangeList is a list of LimitRange items.
 
-<h3 class="pdoc-member-header" id="LimitRangeList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9889">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="LimitRangeList-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/LimitRangeList.ts#L57"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> LimitRangeList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.core.v1.LimitRangeList, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a core.v1.LimitRangeList resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="LimitRangeList-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/LimitRangeList.ts#L52">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#LimitRangeList'>LimitRangeList</a></pre>
+
+
+Get the state of an existing `LimitRangeList` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="LimitRangeList-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/LimitRangeList.ts#L56">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.core.v1.LimitRangeList</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="LimitRangeList-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="LimitRangeList-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="LimitRangeList-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/LimitRangeList.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -4089,21 +1582,31 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="LimitRangeList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9895">property <b>items</b></a>
+<h3 class="pdoc-member-header" id="LimitRangeList-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>items: <a href='#LimitRange'>LimitRange</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="LimitRangeList-items">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/LimitRangeList.ts#L24">property <b>items</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>items: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.LimitRange[]&gt;;</pre>
 
 Items is a list of LimitRange objects. More info:
 https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
 
 </div>
 <h3 class="pdoc-member-header" id="LimitRangeList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9903">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/LimitRangeList.ts#L32">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"LimitRangeList"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -4112,179 +1615,97 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="LimitRangeList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9909">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/LimitRangeList.ts#L38">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
 
 Standard list metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="LimitRangeSpec">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9916">interface <b>LimitRangeSpec</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-LimitRangeSpec defines a min/max usage limit for resources that match on kind.
-
-<h3 class="pdoc-member-header" id="LimitRangeSpec-limits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9920">property <b>limits</b></a>
+<h3 class="pdoc-member-header" id="LimitRangeList-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>limits: <a href='#LimitRangeItem'>LimitRangeItem</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 
-Limits is the list of LimitRangeItem objects that are enforced.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="LoadBalancerIngress">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9928">interface <b>LoadBalancerIngress</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-LoadBalancerIngress represents the status of a load-balancer ingress point: traffic intended
-for the service should be sent to an ingress point.
-
-<h3 class="pdoc-member-header" id="LoadBalancerIngress-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9933">property <b>hostname</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>hostname: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Hostname is set for load-balancer ingress points that are DNS based (typically AWS
-load-balancers)
-
-</div>
-<h3 class="pdoc-member-header" id="LoadBalancerIngress-ip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9939">property <b>ip</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>ip: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-IP is set for load-balancer ingress points that are IP based (typically GCE or OpenStack
-load-balancers)
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="LoadBalancerStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9946">interface <b>LoadBalancerStatus</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-LoadBalancerStatus represents the status of a load-balancer.
-
-<h3 class="pdoc-member-header" id="LoadBalancerStatus-ingress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9951">property <b>ingress</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>ingress: <a href='#LoadBalancerIngress'>LoadBalancerIngress</a>[];</pre>
-
-Ingress is a list containing ingress points for the load-balancer. Traffic intended for the
-service should be sent to these ingress points.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="LocalObjectReference">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9959">interface <b>LocalObjectReference</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-LocalObjectReference contains enough information to let you locate the referenced object
-inside the same namespace.
-
-<h3 class="pdoc-member-header" id="LocalObjectReference-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9964">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Name of the referent. More info:
-https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="LocalVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9971">interface <b>LocalVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Local represents directly-attached storage with node affinity (Beta feature)
-
-<h3 class="pdoc-member-header" id="LocalVolumeSource-fsType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9977">property <b>fsType</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Filesystem type to mount. It applies only when the Path is a block device. Must be a
-filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". The
-default value is to auto-select a fileystem if unspecified.
-
-</div>
-<h3 class="pdoc-member-header" id="LocalVolumeSource-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9983">property <b>path</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The full path to the volume on the node. It can be either a directory or block device
-(disk, partition, ...).
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="NFSVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9991">interface <b>NFSVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Represents an NFS mount that lasts the lifetime of a pod. NFS volumes do not support
-ownership management or SELinux relabeling.
-
-<h3 class="pdoc-member-header" id="NFSVolumeSource-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L9996">property <b>path</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Path that is exported by the NFS server. More info:
-https://kubernetes.io/docs/concepts/storage/volumes#nfs
-
-</div>
-<h3 class="pdoc-member-header" id="NFSVolumeSource-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10002">property <b>readOnly</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-ReadOnly here will force the NFS export to be mounted with read-only permissions. Defaults
-to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
-
-</div>
-<h3 class="pdoc-member-header" id="NFSVolumeSource-server">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10008">property <b>server</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>server: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Server is the hostname or IP address of the NFS server. More info:
-https://kubernetes.io/docs/concepts/storage/volumes#nfs
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Namespace">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10015">interface <b>Namespace</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Namespace.ts#L11">class <b>Namespace</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 Namespace provides a scope for Names. Use of multiple namespaces is optional.
 
-<h3 class="pdoc-member-header" id="Namespace-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10022">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="Namespace-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Namespace.ts#L63"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Namespace(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.core.v1.Namespace, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a core.v1.Namespace resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="Namespace-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Namespace.ts#L58">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Namespace'>Namespace</a></pre>
+
+
+Get the state of an existing `Namespace` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="Namespace-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Namespace.ts#L62">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.core.v1.Namespace</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="Namespace-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="Namespace-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="Namespace-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Namespace.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -4292,11 +1713,21 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="Namespace-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10030">property <b>kind</b></a>
+<h3 class="pdoc-member-header" id="Namespace-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="Namespace-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Namespace.ts#L26">property <b>kind</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"Namespace"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -4305,48 +1736,117 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="Namespace-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10036">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Namespace.ts#L32">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 
 Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 </div>
 <h3 class="pdoc-member-header" id="Namespace-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10042">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Namespace.ts#L38">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>spec: <a href='#NamespaceSpec'>NamespaceSpec</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.NamespaceSpec&gt;;</pre>
 
 Spec defines the behavior of the Namespace. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status
 
 </div>
 <h3 class="pdoc-member-header" id="Namespace-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10048">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Namespace.ts#L44">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>status: <a href='#NamespaceStatus'>NamespaceStatus</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>status: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.NamespaceStatus&gt;;</pre>
 
 Status describes the current status of a Namespace. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status
 
 </div>
+<h3 class="pdoc-member-header" id="Namespace-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+</div>
 </div>
 <h2 class="pdoc-module-header" id="NamespaceList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10055">interface <b>NamespaceList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/NamespaceList.ts#L11">class <b>NamespaceList</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 NamespaceList is a list of Namespaces.
 
-<h3 class="pdoc-member-header" id="NamespaceList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10062">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="NamespaceList-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/NamespaceList.ts#L57"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> NamespaceList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.core.v1.NamespaceList, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a core.v1.NamespaceList resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="NamespaceList-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/NamespaceList.ts#L52">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#NamespaceList'>NamespaceList</a></pre>
+
+
+Get the state of an existing `NamespaceList` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="NamespaceList-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/NamespaceList.ts#L56">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.core.v1.NamespaceList</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="NamespaceList-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="NamespaceList-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="NamespaceList-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/NamespaceList.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -4354,21 +1854,31 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="NamespaceList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10068">property <b>items</b></a>
+<h3 class="pdoc-member-header" id="NamespaceList-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>items: <a href='#Namespace'>Namespace</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="NamespaceList-items">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/NamespaceList.ts#L24">property <b>items</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>items: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.Namespace[]&gt;;</pre>
 
 Items is the list of Namespace objects in the list. More info:
 https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
 
 </div>
 <h3 class="pdoc-member-header" id="NamespaceList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10076">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/NamespaceList.ts#L32">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"NamespaceList"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -4377,65 +1887,98 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="NamespaceList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10082">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/NamespaceList.ts#L38">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
 
 Standard list metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="NamespaceSpec">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10089">interface <b>NamespaceSpec</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-NamespaceSpec describes the attributes on a Namespace.
-
-<h3 class="pdoc-member-header" id="NamespaceSpec-finalizers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10094">property <b>finalizers</b></a>
+<h3 class="pdoc-member-header" id="NamespaceList-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>finalizers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 
-Finalizers is an opaque list of values that must be empty to permanently remove object from
-storage. More info: https://kubernetes.io/docs/tasks/administer-cluster/namespaces/
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="NamespaceStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10101">interface <b>NamespaceStatus</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-NamespaceStatus is information about the current status of a Namespace.
-
-<h3 class="pdoc-member-header" id="NamespaceStatus-phase">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10106">property <b>phase</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>phase: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Phase is the current lifecycle phase of the namespace. More info:
-https://kubernetes.io/docs/tasks/administer-cluster/namespaces/
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Node">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10114">interface <b>Node</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Node.ts#L12">class <b>Node</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 Node is a worker node in Kubernetes. Each node will have a unique identifier in the cache
 (i.e. in etcd).
 
-<h3 class="pdoc-member-header" id="Node-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10121">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="Node-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Node.ts#L64"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Node(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.core.v1.Node, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a core.v1.Node resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="Node-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Node.ts#L59">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Node'>Node</a></pre>
+
+
+Get the state of an existing `Node` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="Node-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Node.ts#L63">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.core.v1.Node</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="Node-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="Node-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="Node-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Node.ts#L19">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -4443,11 +1986,21 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="Node-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10129">property <b>kind</b></a>
+<h3 class="pdoc-member-header" id="Node-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="Node-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Node.ts#L27">property <b>kind</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"Node"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -4456,278 +2009,117 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="Node-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10135">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Node.ts#L33">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 
 Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 </div>
 <h3 class="pdoc-member-header" id="Node-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10141">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Node.ts#L39">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>spec: <a href='#NodeSpec'>NodeSpec</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.NodeSpec&gt;;</pre>
 
 Spec defines the behavior of a node.
 https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status
 
 </div>
 <h3 class="pdoc-member-header" id="Node-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10147">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Node.ts#L45">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>status: <a href='#NodeStatus'>NodeStatus</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>status: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.NodeStatus&gt;;</pre>
 
 Most recently observed status of the node. Populated by the system. Read-only. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="NodeAddress">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10154">interface <b>NodeAddress</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-NodeAddress contains information for the node's address.
-
-<h3 class="pdoc-member-header" id="NodeAddress-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10158">property <b>address</b></a>
+<h3 class="pdoc-member-header" id="Node-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>address: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 
-The node address.
-
-</div>
-<h3 class="pdoc-member-header" id="NodeAddress-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10163">property <b>type</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Node address type, one of Hostname, ExternalIP or InternalIP.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="NodeAffinity">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10170">interface <b>NodeAffinity</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Node affinity is a group of node affinity scheduling rules.
-
-<h3 class="pdoc-member-header" id="NodeAffinity-preferredDuringSchedulingIgnoredDuringExecution">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10180">property <b>preferredDuringSchedulingIgnoredDuringExecution</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>preferredDuringSchedulingIgnoredDuringExecution: <a href='#PreferredSchedulingTerm'>PreferredSchedulingTerm</a>[];</pre>
-
-The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions
-specified by this field, but it may choose a node that violates one or more of the
-expressions. The node that is most preferred is the one with the greatest sum of weights,
-i.e. for each node that meets all of the scheduling requirements (resource request,
-requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through
-the elements of this field and adding "weight" to the sum if the node matches the
-corresponding matchExpressions; the node(s) with the highest sum are the most preferred.
-
-</div>
-<h3 class="pdoc-member-header" id="NodeAffinity-requiredDuringSchedulingIgnoredDuringExecution">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10188">property <b>requiredDuringSchedulingIgnoredDuringExecution</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>requiredDuringSchedulingIgnoredDuringExecution: <a href='#NodeSelector'>NodeSelector</a>;</pre>
-
-If the affinity requirements specified by this field are not met at scheduling time, the
-pod will not be scheduled onto the node. If the affinity requirements specified by this
-field cease to be met at some point during pod execution (e.g. due to an update), the
-system may or may not try to eventually evict the pod from its node.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="NodeCondition">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10195">interface <b>NodeCondition</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-NodeCondition contains condition information for a node.
-
-<h3 class="pdoc-member-header" id="NodeCondition-lastHeartbeatTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10199">property <b>lastHeartbeatTime</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>lastHeartbeatTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Last time we got an update on a given condition.
-
-</div>
-<h3 class="pdoc-member-header" id="NodeCondition-lastTransitionTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10204">property <b>lastTransitionTime</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>lastTransitionTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Last time the condition transit from one status to another.
-
-</div>
-<h3 class="pdoc-member-header" id="NodeCondition-message">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10209">property <b>message</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Human readable message indicating details about last transition.
-
-</div>
-<h3 class="pdoc-member-header" id="NodeCondition-reason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10214">property <b>reason</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>reason: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-(brief) reason for the condition's last transition.
-
-</div>
-<h3 class="pdoc-member-header" id="NodeCondition-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10219">property <b>status</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Status of the condition, one of True, False, Unknown.
-
-</div>
-<h3 class="pdoc-member-header" id="NodeCondition-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10224">property <b>type</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Type of node condition.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="NodeConfigSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10232">interface <b>NodeConfigSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-NodeConfigSource specifies a source of node configuration. Exactly one subfield (excluding
-metadata) must be non-nil.
-
-<h3 class="pdoc-member-header" id="NodeConfigSource-configMap">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10236">property <b>configMap</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>configMap: <a href='#ConfigMapNodeConfigSource'>ConfigMapNodeConfigSource</a>;</pre>
-
-ConfigMap is a reference to a Node's ConfigMap
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="NodeConfigStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10243">interface <b>NodeConfigStatus</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-NodeConfigStatus describes the status of the config assigned by Node.Spec.ConfigSource.
-
-<h3 class="pdoc-member-header" id="NodeConfigStatus-active">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10249">property <b>active</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>active: <a href='#NodeConfigSource'>NodeConfigSource</a>;</pre>
-
-Active reports the checkpointed config the node is actively using. Active will represent
-either the current version of the Assigned config, or the current LastKnownGood config,
-depending on whether attempting to use the Assigned config results in an error.
-
-</div>
-<h3 class="pdoc-member-header" id="NodeConfigStatus-assigned">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10260">property <b>assigned</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>assigned: <a href='#NodeConfigSource'>NodeConfigSource</a>;</pre>
-
-Assigned reports the checkpointed config the node will try to use. When
-Node.Spec.ConfigSource is updated, the node checkpoints the associated config payload to
-local disk, along with a record indicating intended config. The node refers to this record
-to choose its config checkpoint, and reports this record in Assigned. Assigned only updates
-in the status after the record has been checkpointed to disk. When the Kubelet is
-restarted, it tries to make the Assigned config the Active config by loading and validating
-the checkpointed payload identified by Assigned.
-
-</div>
-<h3 class="pdoc-member-header" id="NodeConfigStatus-error">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10276">property <b>error</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>error: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Error describes any problems reconciling the Spec.ConfigSource to the Active config. Errors
-may occur, for example, attempting to checkpoint Spec.ConfigSource to the local Assigned
-record, attempting to checkpoint the payload associated with Spec.ConfigSource, attempting
-to load or validate the Assigned config, etc. Errors may occur at different points while
-syncing config. Earlier errors (e.g. download or checkpointing errors) will not result in a
-rollback to LastKnownGood, and may resolve across Kubelet retries. Later errors (e.g.
-loading or validating a checkpointed config) will result in a rollback to LastKnownGood. In
-the latter case, it is usually possible to resolve the error by fixing the config assigned
-in Spec.ConfigSource. You can find additional information for debugging by searching the
-error message in the Kubelet log. Error is a human-readable description of the error state;
-machines can check whether or not Error is empty, but should not rely on the stability of
-the Error text across Kubelet versions.
-
-</div>
-<h3 class="pdoc-member-header" id="NodeConfigStatus-lastKnownGood">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10290">property <b>lastKnownGood</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>lastKnownGood: <a href='#NodeConfigSource'>NodeConfigSource</a>;</pre>
-
-LastKnownGood reports the checkpointed config the node will fall back to when it encounters
-an error attempting to use the Assigned config. The Assigned config becomes the
-LastKnownGood config when the node determines that the Assigned config is stable and
-correct. This is currently implemented as a 10-minute soak period starting when the local
-record of Assigned config is updated. If the Assigned config is Active at the end of this
-period, it becomes the LastKnownGood. Note that if Spec.ConfigSource is reset to nil (use
-local defaults), the LastKnownGood is also immediately reset to nil, because the local
-default config is always assumed good. You should not make assumptions about the node's
-method of determining config stability and correctness, as this may change or become
-configurable in the future.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="NodeDaemonEndpoints">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10297">interface <b>NodeDaemonEndpoints</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-NodeDaemonEndpoints lists ports opened by daemons running on the Node.
-
-<h3 class="pdoc-member-header" id="NodeDaemonEndpoints-kubeletEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10301">property <b>kubeletEndpoint</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kubeletEndpoint: <a href='#DaemonEndpoint'>DaemonEndpoint</a>;</pre>
-
-Endpoint on which Kubelet is listening.
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NodeList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10308">interface <b>NodeList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/NodeList.ts#L11">class <b>NodeList</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 NodeList is the whole list of all Nodes which have been registered with master.
 
-<h3 class="pdoc-member-header" id="NodeList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10315">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="NodeList-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/NodeList.ts#L56"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> NodeList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.core.v1.NodeList, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a core.v1.NodeList resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="NodeList-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/NodeList.ts#L51">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#NodeList'>NodeList</a></pre>
+
+
+Get the state of an existing `NodeList` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="NodeList-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/NodeList.ts#L55">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.core.v1.NodeList</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="NodeList-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="NodeList-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="NodeList-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/NodeList.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -4735,20 +2127,30 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="NodeList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10320">property <b>items</b></a>
+<h3 class="pdoc-member-header" id="NodeList-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>items: <a href='#Node'>Node</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="NodeList-items">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/NodeList.ts#L23">property <b>items</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>items: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.Node[]&gt;;</pre>
 
 List of nodes
 
 </div>
 <h3 class="pdoc-member-header" id="NodeList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10328">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/NodeList.ts#L31">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"NodeList"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -4757,506 +2159,98 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="NodeList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10334">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/NodeList.ts#L37">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
 
 Standard list metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="NodeSelector">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10343">interface <b>NodeSelector</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-A node selector represents the union of the results of one or more label queries over a set
-of nodes; that is, it represents the OR of the selectors represented by the node selector
-terms.
-
-<h3 class="pdoc-member-header" id="NodeSelector-nodeSelectorTerms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10347">property <b>nodeSelectorTerms</b></a>
+<h3 class="pdoc-member-header" id="NodeList-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>nodeSelectorTerms: <a href='#NodeSelectorTerm'>NodeSelectorTerm</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 
-Required. A list of node selector terms. The terms are ORed.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="NodeSelectorRequirement">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10355">interface <b>NodeSelectorRequirement</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-A node selector requirement is a selector that contains values, a key, and an operator that
-relates the key and values.
-
-<h3 class="pdoc-member-header" id="NodeSelectorRequirement-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10359">property <b>key</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The label key that the selector applies to.
-
-</div>
-<h3 class="pdoc-member-header" id="NodeSelectorRequirement-operator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10365">property <b>operator</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>operator: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists,
-DoesNotExist. Gt, and Lt.
-
-</div>
-<h3 class="pdoc-member-header" id="NodeSelectorRequirement-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10373">property <b>values</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-An array of string values. If the operator is In or NotIn, the values array must be
-non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If
-the operator is Gt or Lt, the values array must have a single element, which will be
-interpreted as an integer. This array is replaced during a strategic merge patch.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="NodeSelectorTerm">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10381">interface <b>NodeSelectorTerm</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-A null or empty node selector term matches no objects. The requirements of them are ANDed.
-The TopologySelectorTerm type implements a subset of the NodeSelectorTerm.
-
-<h3 class="pdoc-member-header" id="NodeSelectorTerm-matchExpressions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10385">property <b>matchExpressions</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>matchExpressions: <a href='#NodeSelectorRequirement'>NodeSelectorRequirement</a>[];</pre>
-
-A list of node selector requirements by node's labels.
-
-</div>
-<h3 class="pdoc-member-header" id="NodeSelectorTerm-matchFields">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10390">property <b>matchFields</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>matchFields: <a href='#NodeSelectorRequirement'>NodeSelectorRequirement</a>[];</pre>
-
-A list of node selector requirements by node's fields.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="NodeSpec">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10397">interface <b>NodeSpec</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-NodeSpec describes the attributes that a node is created with.
-
-<h3 class="pdoc-member-header" id="NodeSpec-configSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10402">property <b>configSource</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>configSource: <a href='#NodeConfigSource'>NodeConfigSource</a>;</pre>
-
-If specified, the source to get node configuration from The DynamicKubeletConfig feature
-gate must be enabled for the Kubelet to use this field
-
-</div>
-<h3 class="pdoc-member-header" id="NodeSpec-externalID">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10408">property <b>externalID</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>externalID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Deprecated. Not all kubelets will set this field. Remove field after 1.13. see:
-https://issues.k8s.io/61966
-
-</div>
-<h3 class="pdoc-member-header" id="NodeSpec-podCIDR">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10413">property <b>podCIDR</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>podCIDR: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-PodCIDR represents the pod IP range assigned to the node.
-
-</div>
-<h3 class="pdoc-member-header" id="NodeSpec-providerID">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10419">property <b>providerID</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>providerID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-ID of the node assigned by the cloud provider in the format:
-<ProviderName>://<ProviderSpecificNodeID>
-
-</div>
-<h3 class="pdoc-member-header" id="NodeSpec-taints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10424">property <b>taints</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>taints: <a href='#Taint'>Taint</a>[];</pre>
-
-If specified, the node's taints.
-
-</div>
-<h3 class="pdoc-member-header" id="NodeSpec-unschedulable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10430">property <b>unschedulable</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>unschedulable: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Unschedulable controls node schedulability of new pods. By default, node is schedulable.
-More info: https://kubernetes.io/docs/concepts/nodes/node/#manual-node-administration
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="NodeStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10437">interface <b>NodeStatus</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-NodeStatus is information about the current status of a node.
-
-<h3 class="pdoc-member-header" id="NodeStatus-addresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10442">property <b>addresses</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>addresses: <a href='#NodeAddress'>NodeAddress</a>[];</pre>
-
-List of addresses reachable to the node. Queried from cloud provider, if available. More
-info: https://kubernetes.io/docs/concepts/nodes/node/#addresses
-
-</div>
-<h3 class="pdoc-member-header" id="NodeStatus-allocatable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10448">property <b>allocatable</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>allocatable: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
-
-Allocatable represents the resources of a node that are available for scheduling. Defaults
-to Capacity.
-
-</div>
-<h3 class="pdoc-member-header" id="NodeStatus-capacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10454">property <b>capacity</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>capacity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
-
-Capacity represents the total resources of a node. More info:
-https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity
-
-</div>
-<h3 class="pdoc-member-header" id="NodeStatus-conditions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10460">property <b>conditions</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>conditions: <a href='#NodeCondition'>NodeCondition</a>[];</pre>
-
-Conditions is an array of current observed node conditions. More info:
-https://kubernetes.io/docs/concepts/nodes/node/#condition
-
-</div>
-<h3 class="pdoc-member-header" id="NodeStatus-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10465">property <b>config</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>config: <a href='#NodeConfigStatus'>NodeConfigStatus</a>;</pre>
-
-Status of the config assigned to the node via the dynamic Kubelet config feature.
-
-</div>
-<h3 class="pdoc-member-header" id="NodeStatus-daemonEndpoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10470">property <b>daemonEndpoints</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>daemonEndpoints: <a href='#NodeDaemonEndpoints'>NodeDaemonEndpoints</a>;</pre>
-
-Endpoints of daemons running on the Node.
-
-</div>
-<h3 class="pdoc-member-header" id="NodeStatus-images">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10475">property <b>images</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>images: <a href='#ContainerImage'>ContainerImage</a>[];</pre>
-
-List of container images on this node
-
-</div>
-<h3 class="pdoc-member-header" id="NodeStatus-nodeInfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10481">property <b>nodeInfo</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>nodeInfo: <a href='#NodeSystemInfo'>NodeSystemInfo</a>;</pre>
-
-Set of ids/uuids to uniquely identify the node. More info:
-https://kubernetes.io/docs/concepts/nodes/node/#info
-
-</div>
-<h3 class="pdoc-member-header" id="NodeStatus-phase">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10488">property <b>phase</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>phase: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-NodePhase is the recently observed lifecycle phase of the node. More info:
-https://kubernetes.io/docs/concepts/nodes/node/#phase The field is never populated, and now
-is deprecated.
-
-</div>
-<h3 class="pdoc-member-header" id="NodeStatus-volumesAttached">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10493">property <b>volumesAttached</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>volumesAttached: <a href='#AttachedVolume'>AttachedVolume</a>[];</pre>
-
-List of volumes that are attached to the node.
-
-</div>
-<h3 class="pdoc-member-header" id="NodeStatus-volumesInUse">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10498">property <b>volumesInUse</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>volumesInUse: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-List of attachable volumes in use (mounted) by the node.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="NodeSystemInfo">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10505">interface <b>NodeSystemInfo</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-NodeSystemInfo is a set of ids/uuids to uniquely identify the node.
-
-<h3 class="pdoc-member-header" id="NodeSystemInfo-architecture">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10509">property <b>architecture</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>architecture: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The Architecture reported by the node
-
-</div>
-<h3 class="pdoc-member-header" id="NodeSystemInfo-bootID">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10514">property <b>bootID</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>bootID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Boot ID reported by the node.
-
-</div>
-<h3 class="pdoc-member-header" id="NodeSystemInfo-containerRuntimeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10520">property <b>containerRuntimeVersion</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>containerRuntimeVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-ContainerRuntime Version reported by the node through runtime remote API (e.g.
-docker://1.5.0).
-
-</div>
-<h3 class="pdoc-member-header" id="NodeSystemInfo-kernelVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10525">property <b>kernelVersion</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kernelVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Kernel Version reported by the node from 'uname -r' (e.g. 3.16.0-0.bpo.4-amd64).
-
-</div>
-<h3 class="pdoc-member-header" id="NodeSystemInfo-kubeProxyVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10530">property <b>kubeProxyVersion</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kubeProxyVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-KubeProxy Version reported by the node.
-
-</div>
-<h3 class="pdoc-member-header" id="NodeSystemInfo-kubeletVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10535">property <b>kubeletVersion</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kubeletVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Kubelet Version reported by the node.
-
-</div>
-<h3 class="pdoc-member-header" id="NodeSystemInfo-machineID">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10542">property <b>machineID</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>machineID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-MachineID reported by the node. For unique machine identification in the cluster this field
-is preferred. Learn more from man(5) machine-id:
-http://man7.org/linux/man-pages/man5/machine-id.5.html
-
-</div>
-<h3 class="pdoc-member-header" id="NodeSystemInfo-operatingSystem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10547">property <b>operatingSystem</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>operatingSystem: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The Operating System reported by the node
-
-</div>
-<h3 class="pdoc-member-header" id="NodeSystemInfo-osImage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10552">property <b>osImage</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>osImage: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-OS Image reported by the node from /etc/os-release (e.g. Debian GNU/Linux 7 (wheezy)).
-
-</div>
-<h3 class="pdoc-member-header" id="NodeSystemInfo-systemUUID">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10559">property <b>systemUUID</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>systemUUID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-SystemUUID reported by the node. For unique machine identification MachineID is preferred.
-This field is specific to Red Hat hosts
-https://access.redhat.com/documentation/en-US/Red_Hat_Subscription_Management/1/html/RHSM/getting-system-uuid.html
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ObjectFieldSelector">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10566">interface <b>ObjectFieldSelector</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ObjectFieldSelector selects an APIVersioned field of an object.
-
-<h3 class="pdoc-member-header" id="ObjectFieldSelector-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10570">property <b>apiVersion</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Version of the schema the FieldPath is written in terms of, defaults to "v1".
-
-</div>
-<h3 class="pdoc-member-header" id="ObjectFieldSelector-fieldPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10575">property <b>fieldPath</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>fieldPath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Path of the field to select in the specified API version.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ObjectReference">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10582">interface <b>ObjectReference</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ObjectReference contains enough information to let you inspect or modify the referred object.
-
-<h3 class="pdoc-member-header" id="ObjectReference-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10586">property <b>apiVersion</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-API version of the referent.
-
-</div>
-<h3 class="pdoc-member-header" id="ObjectReference-fieldPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10597">property <b>fieldPath</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>fieldPath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-If referring to a piece of an object instead of an entire object, this string should
-contain a valid JSON/Go field access statement, such as
-desiredState.manifest.containers[2]. For example, if the object reference is to a container
-within a pod, this would take on a value like: "spec.containers{name}" (where "name" refers
-to the name of the container that triggered the event) or if no container name is specified
-"spec.containers[2]" (container with index 2 in this pod). This syntax is chosen only to
-have some well-defined way of referencing a part of an object.
-
-</div>
-<h3 class="pdoc-member-header" id="ObjectReference-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10603">property <b>kind</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Kind of the referent. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
-
-</div>
-<h3 class="pdoc-member-header" id="ObjectReference-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10609">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Name of the referent. More info:
-https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
-
-</div>
-<h3 class="pdoc-member-header" id="ObjectReference-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10615">property <b>namespace</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Namespace of the referent. More info:
-https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
-
-</div>
-<h3 class="pdoc-member-header" id="ObjectReference-resourceVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10621">property <b>resourceVersion</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>resourceVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Specific resourceVersion to which this reference is made, if any. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
-
-</div>
-<h3 class="pdoc-member-header" id="ObjectReference-uid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10627">property <b>uid</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>uid: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-UID of the referent. More info:
-https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#uids
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PersistentVolume">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10635">interface <b>PersistentVolume</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolume.ts#L12">class <b>PersistentVolume</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 PersistentVolume (PV) is a storage resource provisioned by an administrator. It is analogous
 to a node. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes
 
-<h3 class="pdoc-member-header" id="PersistentVolume-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10642">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="PersistentVolume-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolume.ts#L66"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PersistentVolume(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.core.v1.PersistentVolume, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a core.v1.PersistentVolume resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="PersistentVolume-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolume.ts#L61">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#PersistentVolume'>PersistentVolume</a></pre>
+
+
+Get the state of an existing `PersistentVolume` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="PersistentVolume-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolume.ts#L65">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.core.v1.PersistentVolume</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="PersistentVolume-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="PersistentVolume-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="PersistentVolume-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolume.ts#L19">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -5264,11 +2258,21 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="PersistentVolume-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10650">property <b>kind</b></a>
+<h3 class="pdoc-member-header" id="PersistentVolume-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="PersistentVolume-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolume.ts#L27">property <b>kind</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"PersistentVolume"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -5277,20 +2281,20 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolume-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10656">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolume.ts#L33">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 
 Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolume-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10663">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolume.ts#L40">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>spec: <a href='#PersistentVolumeSpec'>PersistentVolumeSpec</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.PersistentVolumeSpec&gt;;</pre>
 
 Spec defines a specification of a persistent volume owned by the cluster. Provisioned by an
 administrator. More info:
@@ -5298,29 +2302,98 @@ https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volume
 
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolume-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10670">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolume.ts#L47">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>status: <a href='#PersistentVolumeStatus'>PersistentVolumeStatus</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>status: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.PersistentVolumeStatus&gt;;</pre>
 
 Status represents the current information/status for the persistent volume. Populated by
 the system. Read-only. More info:
 https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes
 
 </div>
+<h3 class="pdoc-member-header" id="PersistentVolume-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+</div>
 </div>
 <h2 class="pdoc-module-header" id="PersistentVolumeClaim">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10677">interface <b>PersistentVolumeClaim</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolumeClaim.ts#L11">class <b>PersistentVolumeClaim</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 PersistentVolumeClaim is a user's request for and claim to a persistent volume
 
-<h3 class="pdoc-member-header" id="PersistentVolumeClaim-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10684">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="PersistentVolumeClaim-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolumeClaim.ts#L64"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PersistentVolumeClaim(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.core.v1.PersistentVolumeClaim, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a core.v1.PersistentVolumeClaim resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="PersistentVolumeClaim-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolumeClaim.ts#L59">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#PersistentVolumeClaim'>PersistentVolumeClaim</a></pre>
+
+
+Get the state of an existing `PersistentVolumeClaim` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="PersistentVolumeClaim-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolumeClaim.ts#L63">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.core.v1.PersistentVolumeClaim</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="PersistentVolumeClaim-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="PersistentVolumeClaim-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="PersistentVolumeClaim-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolumeClaim.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -5328,11 +2401,21 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="PersistentVolumeClaim-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10692">property <b>kind</b></a>
+<h3 class="pdoc-member-header" id="PersistentVolumeClaim-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="PersistentVolumeClaim-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolumeClaim.ts#L26">property <b>kind</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"PersistentVolumeClaim"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -5341,107 +2424,118 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaim-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10698">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolumeClaim.ts#L32">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 
 Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaim-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10704">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolumeClaim.ts#L38">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>spec: <a href='#PersistentVolumeClaimSpec'>PersistentVolumeClaimSpec</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.PersistentVolumeClaimSpec&gt;;</pre>
 
 Spec defines the desired characteristics of a volume requested by a pod author. More info:
 https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
 
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaim-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10711">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolumeClaim.ts#L45">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>status: <a href='#PersistentVolumeClaimStatus'>PersistentVolumeClaimStatus</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>status: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.PersistentVolumeClaimStatus&gt;;</pre>
 
 Status represents the current information/status of a persistent volume claim. Read-only.
 More info:
 https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="PersistentVolumeClaimCondition">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10718">interface <b>PersistentVolumeClaimCondition</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-PersistentVolumeClaimCondition contails details about state of pvc
-
-<h3 class="pdoc-member-header" id="PersistentVolumeClaimCondition-lastProbeTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10722">property <b>lastProbeTime</b></a>
+<h3 class="pdoc-member-header" id="PersistentVolumeClaim-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>lastProbeTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 
-Last time we probed the condition.
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeClaimCondition-lastTransitionTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10727">property <b>lastTransitionTime</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>lastTransitionTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Last time the condition transitioned from one status to another.
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeClaimCondition-message">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10732">property <b>message</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Human-readable message indicating details about last transition.
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeClaimCondition-reason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10739">property <b>reason</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>reason: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Unique, this should be a short, machine understandable string that gives the reason for
-condition's last transition. If it reports "ResizeStarted" that means the underlying
-persistent volume is being resized.
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeClaimCondition-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10742">property <b>status</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeClaimCondition-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10745">property <b>type</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PersistentVolumeClaimList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10752">interface <b>PersistentVolumeClaimList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolumeClaimList.ts#L11">class <b>PersistentVolumeClaimList</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 PersistentVolumeClaimList is a list of PersistentVolumeClaim items.
 
-<h3 class="pdoc-member-header" id="PersistentVolumeClaimList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10759">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="PersistentVolumeClaimList-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolumeClaimList.ts#L57"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PersistentVolumeClaimList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.core.v1.PersistentVolumeClaimList, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a core.v1.PersistentVolumeClaimList resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="PersistentVolumeClaimList-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolumeClaimList.ts#L52">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#PersistentVolumeClaimList'>PersistentVolumeClaimList</a></pre>
+
+
+Get the state of an existing `PersistentVolumeClaimList` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="PersistentVolumeClaimList-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolumeClaimList.ts#L56">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.core.v1.PersistentVolumeClaimList</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="PersistentVolumeClaimList-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="PersistentVolumeClaimList-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="PersistentVolumeClaimList-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolumeClaimList.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -5449,21 +2543,31 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="PersistentVolumeClaimList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10765">property <b>items</b></a>
+<h3 class="pdoc-member-header" id="PersistentVolumeClaimList-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>items: <a href='#PersistentVolumeClaim'>PersistentVolumeClaim</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="PersistentVolumeClaimList-items">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolumeClaimList.ts#L24">property <b>items</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>items: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.PersistentVolumeClaim[]&gt;;</pre>
 
 A list of persistent volume claims. More info:
 https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
 
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10773">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolumeClaimList.ts#L32">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"PersistentVolumeClaimList"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -5472,186 +2576,97 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10779">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolumeClaimList.ts#L38">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
 
 Standard list metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="PersistentVolumeClaimSpec">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10787">interface <b>PersistentVolumeClaimSpec</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-PersistentVolumeClaimSpec describes the common attributes of storage devices and allows a
-Source for provider-specific attributes
-
-<h3 class="pdoc-member-header" id="PersistentVolumeClaimSpec-accessModes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10792">property <b>accessModes</b></a>
+<h3 class="pdoc-member-header" id="PersistentVolumeClaimList-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>accessModes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 
-AccessModes contains the desired access modes the volume should have. More info:
-https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeClaimSpec-dataSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10802">property <b>dataSource</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>dataSource: <a href='#TypedLocalObjectReference'>TypedLocalObjectReference</a>;</pre>
-
-This field requires the VolumeSnapshotDataSource alpha feature gate to be enabled and
-currently VolumeSnapshot is the only supported data source. If the provisioner can support
-VolumeSnapshot data source, it will create a new volume and data will be restored to the
-volume at the same time. If the provisioner does not support VolumeSnapshot data source,
-volume will not be created and the failure will be reported as an event. In the future, we
-plan to support more data source types and the behavior of the provisioner may change.
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeClaimSpec-resources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10808">property <b>resources</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>resources: <a href='#ResourceRequirements'>ResourceRequirements</a>;</pre>
-
-Resources represents the minimum resources the volume should have. More info:
-https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeClaimSpec-selector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10813">property <b>selector</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>selector: <a href='#LabelSelector'>LabelSelector</a>;</pre>
-
-A label query over volumes to consider for binding.
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeClaimSpec-storageClassName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10819">property <b>storageClassName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>storageClassName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Name of the StorageClass required by the claim. More info:
-https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeClaimSpec-volumeMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10825">property <b>volumeMode</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>volumeMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-volumeMode defines what type of volume is required by the claim. Value of Filesystem is
-implied when not included in claim spec. This is a beta feature.
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeClaimSpec-volumeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10830">property <b>volumeName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>volumeName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-VolumeName is the binding reference to the PersistentVolume backing this claim.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="PersistentVolumeClaimStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10837">interface <b>PersistentVolumeClaimStatus</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-PersistentVolumeClaimStatus is the current status of a persistent volume claim.
-
-<h3 class="pdoc-member-header" id="PersistentVolumeClaimStatus-accessModes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10842">property <b>accessModes</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>accessModes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-AccessModes contains the actual access modes the volume backing the PVC has. More info:
-https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeClaimStatus-capacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10847">property <b>capacity</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>capacity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
-
-Represents the actual resources of the underlying volume.
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeClaimStatus-conditions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10853">property <b>conditions</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>conditions: <a href='#PersistentVolumeClaimCondition'>PersistentVolumeClaimCondition</a>[];</pre>
-
-Current Condition of persistent volume claim. If underlying persistent volume is being
-resized then the Condition will be set to 'ResizeStarted'.
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeClaimStatus-phase">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10858">property <b>phase</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>phase: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Phase represents the current phase of PersistentVolumeClaim.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="PersistentVolumeClaimVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10868">interface <b>PersistentVolumeClaimVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-PersistentVolumeClaimVolumeSource references the user's PVC in the same namespace. This
-volume finds the bound PV and mounts that volume for the pod. A
-PersistentVolumeClaimVolumeSource is, essentially, a wrapper around another type of volume
-that is owned by someone else (the system).
-
-<h3 class="pdoc-member-header" id="PersistentVolumeClaimVolumeSource-claimName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10874">property <b>claimName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>claimName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-ClaimName is the name of a PersistentVolumeClaim in the same namespace as the pod using
-this volume. More info:
-https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeClaimVolumeSource-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10879">property <b>readOnly</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Will force the ReadOnly setting in VolumeMounts. Default false.
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PersistentVolumeList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10886">interface <b>PersistentVolumeList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolumeList.ts#L11">class <b>PersistentVolumeList</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 PersistentVolumeList is a list of PersistentVolume items.
 
-<h3 class="pdoc-member-header" id="PersistentVolumeList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10893">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="PersistentVolumeList-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolumeList.ts#L57"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PersistentVolumeList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.core.v1.PersistentVolumeList, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a core.v1.PersistentVolumeList resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="PersistentVolumeList-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolumeList.ts#L52">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#PersistentVolumeList'>PersistentVolumeList</a></pre>
+
+
+Get the state of an existing `PersistentVolumeList` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="PersistentVolumeList-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolumeList.ts#L56">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.core.v1.PersistentVolumeList</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="PersistentVolumeList-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="PersistentVolumeList-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="PersistentVolumeList-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolumeList.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -5659,21 +2674,31 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="PersistentVolumeList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10899">property <b>items</b></a>
+<h3 class="pdoc-member-header" id="PersistentVolumeList-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>items: <a href='#PersistentVolume'>PersistentVolume</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="PersistentVolumeList-items">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolumeList.ts#L24">property <b>items</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>items: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.PersistentVolume[]&gt;;</pre>
 
 List of persistent volumes. More info:
 https://kubernetes.io/docs/concepts/storage/persistent-volumes
 
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10907">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolumeList.ts#L32">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"PersistentVolumeList"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -5682,405 +2707,98 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="PersistentVolumeList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10913">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PersistentVolumeList.ts#L38">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
 
 Standard list metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="PersistentVolumeSpec">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10920">interface <b>PersistentVolumeSpec</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-PersistentVolumeSpec is the specification of a persistent volume.
-
-<h3 class="pdoc-member-header" id="PersistentVolumeSpec-accessModes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10925">property <b>accessModes</b></a>
+<h3 class="pdoc-member-header" id="PersistentVolumeList-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>accessModes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 
-AccessModes contains all ways the volume can be mounted. More info:
-https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeSpec-awsElasticBlockStore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10932">property <b>awsElasticBlockStore</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>awsElasticBlockStore: <a href='#AWSElasticBlockStoreVolumeSource'>AWSElasticBlockStoreVolumeSource</a>;</pre>
-
-AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host
-machine and then exposed to the pod. More info:
-https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeSpec-azureDisk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10937">property <b>azureDisk</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>azureDisk: <a href='#AzureDiskVolumeSource'>AzureDiskVolumeSource</a>;</pre>
-
-AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeSpec-azureFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10942">property <b>azureFile</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>azureFile: <a href='#AzureFilePersistentVolumeSource'>AzureFilePersistentVolumeSource</a>;</pre>
-
-AzureFile represents an Azure File Service mount on the host and bind mount to the pod.
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeSpec-capacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10948">property <b>capacity</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>capacity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
-
-A description of the persistent volume's resources and capacity. More info:
-https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeSpec-cephfs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10953">property <b>cephfs</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>cephfs: <a href='#CephFSPersistentVolumeSource'>CephFSPersistentVolumeSource</a>;</pre>
-
-CephFS represents a Ceph FS mount on the host that shares a pod's lifetime
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeSpec-cinder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10959">property <b>cinder</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>cinder: <a href='#CinderPersistentVolumeSource'>CinderPersistentVolumeSource</a>;</pre>
-
-Cinder represents a cinder volume attached and mounted on kubelets host machine More info:
-https://releases.k8s.io/HEAD/examples/mysql-cinder-pd/README.md
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeSpec-claimRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10967">property <b>claimRef</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>claimRef: <a href='#ObjectReference'>ObjectReference</a>;</pre>
-
-ClaimRef is part of a bi-directional binding between PersistentVolume and
-PersistentVolumeClaim. Expected to be non-nil when bound. claim.VolumeName is the
-authoritative bind between PV and PVC. More info:
-https://kubernetes.io/docs/concepts/storage/persistent-volumes#binding
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeSpec-csi">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10972">property <b>csi</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>csi: <a href='#CSIPersistentVolumeSource'>CSIPersistentVolumeSource</a>;</pre>
-
-CSI represents storage that handled by an external CSI driver (Beta feature).
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeSpec-fc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10978">property <b>fc</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>fc: <a href='#FCVolumeSource'>FCVolumeSource</a>;</pre>
-
-FC represents a Fibre Channel resource that is attached to a kubelet's host machine and
-then exposed to the pod.
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeSpec-flexVolume">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10984">property <b>flexVolume</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>flexVolume: <a href='#FlexPersistentVolumeSource'>FlexPersistentVolumeSource</a>;</pre>
-
-FlexVolume represents a generic volume resource that is provisioned/attached using an exec
-based plugin.
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeSpec-flocker">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10990">property <b>flocker</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>flocker: <a href='#FlockerVolumeSource'>FlockerVolumeSource</a>;</pre>
-
-Flocker represents a Flocker volume attached to a kubelet's host machine and exposed to the
-pod for its usage. This depends on the Flocker control service being running
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeSpec-gcePersistentDisk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L10997">property <b>gcePersistentDisk</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>gcePersistentDisk: <a href='#GCEPersistentDiskVolumeSource'>GCEPersistentDiskVolumeSource</a>;</pre>
-
-GCEPersistentDisk represents a GCE Disk resource that is attached to a kubelet's host
-machine and then exposed to the pod. Provisioned by an admin. More info:
-https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeSpec-glusterfs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11004">property <b>glusterfs</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>glusterfs: <a href='#GlusterfsPersistentVolumeSource'>GlusterfsPersistentVolumeSource</a>;</pre>
-
-Glusterfs represents a Glusterfs volume that is attached to a host and exposed to the pod.
-Provisioned by an admin. More info:
-https://releases.k8s.io/HEAD/examples/volumes/glusterfs/README.md
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeSpec-hostPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11012">property <b>hostPath</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>hostPath: <a href='#HostPathVolumeSource'>HostPathVolumeSource</a>;</pre>
-
-HostPath represents a directory on the host. Provisioned by a developer or tester. This is
-useful for single-node development and testing only! On-host storage is not supported in
-any way and WILL NOT WORK in a multi-node cluster. More info:
-https://kubernetes.io/docs/concepts/storage/volumes#hostpath
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeSpec-iscsi">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11018">property <b>iscsi</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>iscsi: <a href='#ISCSIPersistentVolumeSource'>ISCSIPersistentVolumeSource</a>;</pre>
-
-ISCSI represents an ISCSI Disk resource that is attached to a kubelet's host machine and
-then exposed to the pod. Provisioned by an admin.
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeSpec-local">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11023">property <b>local</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>local: <a href='#LocalVolumeSource'>LocalVolumeSource</a>;</pre>
-
-Local represents directly-attached storage with node affinity
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeSpec-mountOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11030">property <b>mountOptions</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>mountOptions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-A list of mount options, e.g. ["ro", "soft"]. Not validated - mount will simply fail if one
-is invalid. More info:
-https://kubernetes.io/docs/concepts/storage/persistent-volumes/#mount-options
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeSpec-nfs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11036">property <b>nfs</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>nfs: <a href='#NFSVolumeSource'>NFSVolumeSource</a>;</pre>
-
-NFS represents an NFS mount on the host. Provisioned by an admin. More info:
-https://kubernetes.io/docs/concepts/storage/volumes#nfs
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeSpec-nodeAffinity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11042">property <b>nodeAffinity</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>nodeAffinity: <a href='#VolumeNodeAffinity'>VolumeNodeAffinity</a>;</pre>
-
-NodeAffinity defines constraints that limit what nodes this volume can be accessed from.
-This field influences the scheduling of pods that use this volume.
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeSpec-persistentVolumeReclaimPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11051">property <b>persistentVolumeReclaimPolicy</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>persistentVolumeReclaimPolicy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-What happens to a persistent volume when released from its claim. Valid options are Retain
-(default for manually created PersistentVolumes), Delete (default for dynamically
-provisioned PersistentVolumes), and Recycle (deprecated). Recycle must be supported by the
-volume plugin underlying this PersistentVolume. More info:
-https://kubernetes.io/docs/concepts/storage/persistent-volumes#reclaiming
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeSpec-photonPersistentDisk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11057">property <b>photonPersistentDisk</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>photonPersistentDisk: <a href='#PhotonPersistentDiskVolumeSource'>PhotonPersistentDiskVolumeSource</a>;</pre>
-
-PhotonPersistentDisk represents a PhotonController persistent disk attached and mounted on
-kubelets host machine
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeSpec-portworxVolume">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11062">property <b>portworxVolume</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>portworxVolume: <a href='#PortworxVolumeSource'>PortworxVolumeSource</a>;</pre>
-
-PortworxVolume represents a portworx volume attached and mounted on kubelets host machine
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeSpec-quobyte">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11067">property <b>quobyte</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>quobyte: <a href='#QuobyteVolumeSource'>QuobyteVolumeSource</a>;</pre>
-
-Quobyte represents a Quobyte mount on the host that shares a pod's lifetime
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeSpec-rbd">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11073">property <b>rbd</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>rbd: <a href='#RBDPersistentVolumeSource'>RBDPersistentVolumeSource</a>;</pre>
-
-RBD represents a Rados Block Device mount on the host that shares a pod's lifetime. More
-info: https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeSpec-scaleIO">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11078">property <b>scaleIO</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>scaleIO: <a href='#ScaleIOPersistentVolumeSource'>ScaleIOPersistentVolumeSource</a>;</pre>
-
-ScaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes.
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeSpec-storageClassName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11084">property <b>storageClassName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>storageClassName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Name of StorageClass to which this persistent volume belongs. Empty value means that this
-volume does not belong to any StorageClass.
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeSpec-storageos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11091">property <b>storageos</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>storageos: <a href='#StorageOSPersistentVolumeSource'>StorageOSPersistentVolumeSource</a>;</pre>
-
-StorageOS represents a StorageOS volume that is attached to the kubelet's host machine and
-mounted into the pod More info:
-https://releases.k8s.io/HEAD/examples/volumes/storageos/README.md
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeSpec-volumeMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11098">property <b>volumeMode</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>volumeMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-volumeMode defines if a volume is intended to be used with a formatted filesystem or to
-remain in raw block state. Value of Filesystem is implied when not included in spec. This
-is a beta feature.
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeSpec-vsphereVolume">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11103">property <b>vsphereVolume</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>vsphereVolume: <a href='#VsphereVirtualDiskVolumeSource'>VsphereVirtualDiskVolumeSource</a>;</pre>
-
-VsphereVolume represents a vSphere volume attached and mounted on kubelets host machine
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="PersistentVolumeStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11110">interface <b>PersistentVolumeStatus</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-PersistentVolumeStatus is the current status of a persistent volume.
-
-<h3 class="pdoc-member-header" id="PersistentVolumeStatus-message">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11114">property <b>message</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-A human-readable message indicating details about why the volume is in this state.
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeStatus-phase">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11120">property <b>phase</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>phase: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Phase indicates if a volume is available, bound to a claim, or released by a claim. More
-info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#phase
-
-</div>
-<h3 class="pdoc-member-header" id="PersistentVolumeStatus-reason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11126">property <b>reason</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>reason: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Reason is a brief CamelCase string that describes any failure and is meant for machine
-parsing and tidy display in the CLI.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="PhotonPersistentDiskVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11133">interface <b>PhotonPersistentDiskVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Represents a Photon Controller persistent disk resource.
-
-<h3 class="pdoc-member-header" id="PhotonPersistentDiskVolumeSource-fsType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11138">property <b>fsType</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Filesystem type to mount. Must be a filesystem type supported by the host operating system.
-Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
-
-</div>
-<h3 class="pdoc-member-header" id="PhotonPersistentDiskVolumeSource-pdID">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11143">property <b>pdID</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>pdID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-ID that identifies Photon Controller persistent disk
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Pod">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11151">interface <b>Pod</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Pod.ts#L12">class <b>Pod</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 Pod is a collection of containers that can run on a host. This resource is created by clients
 and scheduled onto hosts.
 
-<h3 class="pdoc-member-header" id="Pod-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11158">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="Pod-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Pod.ts#L65"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Pod(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.core.v1.Pod, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a core.v1.Pod resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="Pod-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Pod.ts#L60">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Pod'>Pod</a></pre>
+
+
+Get the state of an existing `Pod` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="Pod-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Pod.ts#L64">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.core.v1.Pod</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="Pod-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="Pod-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="Pod-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Pod.ts#L19">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -6088,11 +2806,21 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="Pod-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11166">property <b>kind</b></a>
+<h3 class="pdoc-member-header" id="Pod-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="Pod-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Pod.ts#L27">property <b>kind</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"Pod"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -6101,294 +2829,118 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="Pod-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11172">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Pod.ts#L33">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 
 Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 </div>
 <h3 class="pdoc-member-header" id="Pod-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11178">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Pod.ts#L39">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>spec: <a href='#PodSpec'>PodSpec</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.PodSpec&gt;;</pre>
 
 Specification of the desired behavior of the pod. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status
 
 </div>
 <h3 class="pdoc-member-header" id="Pod-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11185">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Pod.ts#L46">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>status: <a href='#PodStatus'>PodStatus</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>status: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.PodStatus&gt;;</pre>
 
 Most recently observed status of the pod. This data may not be up to date. Populated by the
 system. Read-only. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="PodAffinity">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11192">interface <b>PodAffinity</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Pod affinity is a group of inter pod affinity scheduling rules.
-
-<h3 class="pdoc-member-header" id="PodAffinity-preferredDuringSchedulingIgnoredDuringExecution">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11203">property <b>preferredDuringSchedulingIgnoredDuringExecution</b></a>
+<h3 class="pdoc-member-header" id="Pod-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>preferredDuringSchedulingIgnoredDuringExecution: <a href='#WeightedPodAffinityTerm'>WeightedPodAffinityTerm</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 
-The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions
-specified by this field, but it may choose a node that violates one or more of the
-expressions. The node that is most preferred is the one with the greatest sum of weights,
-i.e. for each node that meets all of the scheduling requirements (resource request,
-requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through
-the elements of this field and adding "weight" to the sum if the node has pods which
-matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most
-preferred.
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
-</div>
-<h3 class="pdoc-member-header" id="PodAffinity-requiredDuringSchedulingIgnoredDuringExecution">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11213">property <b>requiredDuringSchedulingIgnoredDuringExecution</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>requiredDuringSchedulingIgnoredDuringExecution: <a href='#PodAffinityTerm'>PodAffinityTerm</a>[];</pre>
-
-If the affinity requirements specified by this field are not met at scheduling time, the
-pod will not be scheduled onto the node. If the affinity requirements specified by this
-field cease to be met at some point during pod execution (e.g. due to a pod label update),
-the system may or may not try to eventually evict the pod from its node. When there are
-multiple elements, the lists of nodes corresponding to each podAffinityTerm are
-intersected, i.e. all terms must be satisfied.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="PodAffinityTerm">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11223">interface <b>PodAffinityTerm</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Defines a set of pods (namely those matching the labelSelector relative to the given
-namespace(s)) that this pod should be co-located (affinity) or not co-located (anti-affinity)
-with, where co-located is defined as running on a node whose value of the label with key
-<topologyKey> matches that of any node on which a pod of the set of pods is running
-
-<h3 class="pdoc-member-header" id="PodAffinityTerm-labelSelector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11227">property <b>labelSelector</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>labelSelector: <a href='#LabelSelector'>LabelSelector</a>;</pre>
-
-A label query over a set of resources, in this case pods.
-
-</div>
-<h3 class="pdoc-member-header" id="PodAffinityTerm-namespaces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11233">property <b>namespaces</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>namespaces: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-namespaces specifies which namespaces the labelSelector applies to (matches against); null
-or empty list means "this pod's namespace"
-
-</div>
-<h3 class="pdoc-member-header" id="PodAffinityTerm-topologyKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11241">property <b>topologyKey</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>topologyKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-This pod should be co-located (affinity) or not co-located (anti-affinity) with the pods
-matching the labelSelector in the specified namespaces, where co-located is defined as
-running on a node whose value of the label with key topologyKey matches that of any node on
-which any of the selected pods is running. Empty topologyKey is not allowed.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="PodAntiAffinity">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11248">interface <b>PodAntiAffinity</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Pod anti affinity is a group of inter pod anti affinity scheduling rules.
-
-<h3 class="pdoc-member-header" id="PodAntiAffinity-preferredDuringSchedulingIgnoredDuringExecution">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11259">property <b>preferredDuringSchedulingIgnoredDuringExecution</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>preferredDuringSchedulingIgnoredDuringExecution: <a href='#WeightedPodAffinityTerm'>WeightedPodAffinityTerm</a>[];</pre>
-
-The scheduler will prefer to schedule pods to nodes that satisfy the anti-affinity
-expressions specified by this field, but it may choose a node that violates one or more of
-the expressions. The node that is most preferred is the one with the greatest sum of
-weights, i.e. for each node that meets all of the scheduling requirements (resource
-request, requiredDuringScheduling anti-affinity expressions, etc.), compute a sum by
-iterating through the elements of this field and adding "weight" to the sum if the node has
-pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are
-the most preferred.
-
-</div>
-<h3 class="pdoc-member-header" id="PodAntiAffinity-requiredDuringSchedulingIgnoredDuringExecution">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11269">property <b>requiredDuringSchedulingIgnoredDuringExecution</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>requiredDuringSchedulingIgnoredDuringExecution: <a href='#PodAffinityTerm'>PodAffinityTerm</a>[];</pre>
-
-If the anti-affinity requirements specified by this field are not met at scheduling time,
-the pod will not be scheduled onto the node. If the anti-affinity requirements specified by
-this field cease to be met at some point during pod execution (e.g. due to a pod label
-update), the system may or may not try to eventually evict the pod from its node. When
-there are multiple elements, the lists of nodes corresponding to each podAffinityTerm are
-intersected, i.e. all terms must be satisfied.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="PodCondition">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11276">interface <b>PodCondition</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-PodCondition contains details for the current condition of this pod.
-
-<h3 class="pdoc-member-header" id="PodCondition-lastProbeTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11280">property <b>lastProbeTime</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>lastProbeTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Last time we probed the condition.
-
-</div>
-<h3 class="pdoc-member-header" id="PodCondition-lastTransitionTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11285">property <b>lastTransitionTime</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>lastTransitionTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Last time the condition transitioned from one status to another.
-
-</div>
-<h3 class="pdoc-member-header" id="PodCondition-message">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11290">property <b>message</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Human-readable message indicating details about last transition.
-
-</div>
-<h3 class="pdoc-member-header" id="PodCondition-reason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11295">property <b>reason</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>reason: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Unique, one-word, CamelCase reason for the condition's last transition.
-
-</div>
-<h3 class="pdoc-member-header" id="PodCondition-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11301">property <b>status</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Status is the status of the condition. Can be True, False, Unknown. More info:
-https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions
-
-</div>
-<h3 class="pdoc-member-header" id="PodCondition-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11307">property <b>type</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Type is the type of the condition. More info:
-https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="PodDNSConfig">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11315">interface <b>PodDNSConfig</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-PodDNSConfig defines the DNS parameters of a pod in addition to those generated from
-DNSPolicy.
-
-<h3 class="pdoc-member-header" id="PodDNSConfig-nameservers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11320">property <b>nameservers</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>nameservers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-A list of DNS name server IP addresses. This will be appended to the base nameservers
-generated from DNSPolicy. Duplicated nameservers will be removed.
-
-</div>
-<h3 class="pdoc-member-header" id="PodDNSConfig-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11327">property <b>options</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>options: <a href='#PodDNSConfigOption'>PodDNSConfigOption</a>[];</pre>
-
-A list of DNS resolver options. This will be merged with the base options generated from
-DNSPolicy. Duplicated entries will be removed. Resolution options given in Options will
-override those that appear in the base DNSPolicy.
-
-</div>
-<h3 class="pdoc-member-header" id="PodDNSConfig-searches">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11333">property <b>searches</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>searches: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-A list of DNS search domains for host-name lookup. This will be appended to the base search
-paths generated from DNSPolicy. Duplicated search paths will be removed.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="PodDNSConfigOption">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11340">interface <b>PodDNSConfigOption</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-PodDNSConfigOption defines DNS resolver options of a pod.
-
-<h3 class="pdoc-member-header" id="PodDNSConfigOption-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11344">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Required.
-
-</div>
-<h3 class="pdoc-member-header" id="PodDNSConfigOption-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11347">property <b>value</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11354">interface <b>PodList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PodList.ts#L11">class <b>PodList</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 PodList is a list of Pods.
 
-<h3 class="pdoc-member-header" id="PodList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11361">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="PodList-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PodList.ts#L56"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PodList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.core.v1.PodList, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a core.v1.PodList resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="PodList-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PodList.ts#L51">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#PodList'>PodList</a></pre>
+
+
+Get the state of an existing `PodList` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="PodList-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PodList.ts#L55">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.core.v1.PodList</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="PodList-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="PodList-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="PodList-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PodList.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -6396,20 +2948,30 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="PodList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11366">property <b>items</b></a>
+<h3 class="pdoc-member-header" id="PodList-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>items: <a href='#Pod'>Pod</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="PodList-items">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PodList.ts#L23">property <b>items</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>items: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.Pod[]&gt;;</pre>
 
 List of pods. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md
 
 </div>
 <h3 class="pdoc-member-header" id="PodList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11374">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PodList.ts#L31">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"PodList"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -6418,620 +2980,97 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="PodList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11380">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PodList.ts#L37">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
 
 Standard list metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="PodReadinessGate">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11387">interface <b>PodReadinessGate</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-PodReadinessGate contains the reference to a pod condition
-
-<h3 class="pdoc-member-header" id="PodReadinessGate-conditionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11391">property <b>conditionType</b></a>
+<h3 class="pdoc-member-header" id="PodList-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>conditionType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 
-ConditionType refers to a condition in the pod's condition list with matching type.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="PodSecurityContext">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11400">interface <b>PodSecurityContext</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-PodSecurityContext holds pod-level security attributes and common container settings. Some
-fields are also present in container.securityContext.  Field values of
-container.securityContext take precedence over field values of PodSecurityContext.
-
-<h3 class="pdoc-member-header" id="PodSecurityContext-fsGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11410">property <b>fsGroup</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>fsGroup: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-A special supplemental group that applies to all containers in a pod. Some volume types
-allow the Kubelet to change the ownership of that volume to be owned by the pod:
-
-1. The owning GID will be the FSGroup 2. The setgid bit is set (new files created in the
-volume will be owned by FSGroup) 3. The permission bits are OR'd with rw-rw----
-
-If unset, the Kubelet will not modify the ownership and permissions of any volume.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSecurityContext-runAsGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11417">property <b>runAsGroup</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>runAsGroup: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-The GID to run the entrypoint of the container process. Uses runtime default if unset. May
-also be set in SecurityContext.  If set in both SecurityContext and PodSecurityContext, the
-value specified in SecurityContext takes precedence for that container.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSecurityContext-runAsNonRoot">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11426">property <b>runAsNonRoot</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>runAsNonRoot: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Indicates that the container must run as a non-root user. If true, the Kubelet will
-validate the image at runtime to ensure that it does not run as UID 0 (root) and fail to
-start the container if it does. If unset or false, no such validation will be performed.
-May also be set in SecurityContext.  If set in both SecurityContext and PodSecurityContext,
-the value specified in SecurityContext takes precedence.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSecurityContext-runAsUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11434">property <b>runAsUser</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>runAsUser: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-The UID to run the entrypoint of the container process. Defaults to user specified in image
-metadata if unspecified. May also be set in SecurityContext.  If set in both
-SecurityContext and PodSecurityContext, the value specified in SecurityContext takes
-precedence for that container.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSecurityContext-seLinuxOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11442">property <b>seLinuxOptions</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>seLinuxOptions: <a href='#SELinuxOptions'>SELinuxOptions</a>;</pre>
-
-The SELinux context to be applied to all containers. If unspecified, the container runtime
-will allocate a random SELinux context for each container.  May also be set in
-SecurityContext.  If set in both SecurityContext and PodSecurityContext, the value
-specified in SecurityContext takes precedence for that container.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSecurityContext-supplementalGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11448">property <b>supplementalGroups</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>supplementalGroups: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[];</pre>
-
-A list of groups applied to the first process run in each container, in addition to the
-container's primary GID.  If unspecified, no groups will be added to any container.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSecurityContext-sysctls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11454">property <b>sysctls</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>sysctls: <a href='#Sysctl'>Sysctl</a>[];</pre>
-
-Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupported sysctls
-(by the container runtime) might fail to launch.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="PodSpec">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11461">interface <b>PodSpec</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-PodSpec is a description of a pod.
-
-<h3 class="pdoc-member-header" id="PodSpec-activeDeadlineSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11467">property <b>activeDeadlineSeconds</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>activeDeadlineSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-Optional duration in seconds the pod may be active on the node relative to StartTime before
-the system will actively try to mark it failed and kill associated containers. Value must
-be a positive integer.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSpec-affinity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11472">property <b>affinity</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>affinity: <a href='#Affinity'>Affinity</a>;</pre>
-
-If specified, the pod's scheduling constraints
-
-</div>
-<h3 class="pdoc-member-header" id="PodSpec-automountServiceAccountToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11478">property <b>automountServiceAccountToken</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>automountServiceAccountToken: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-AutomountServiceAccountToken indicates whether a service account token should be
-automatically mounted.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSpec-containers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11484">property <b>containers</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>containers: <a href='#Container'>Container</a>[];</pre>
-
-List of containers belonging to the pod. Containers cannot currently be added or removed.
-There must be at least one container in a Pod. Cannot be updated.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSpec-dnsConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11490">property <b>dnsConfig</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>dnsConfig: <a href='#PodDNSConfig'>PodDNSConfig</a>;</pre>
-
-Specifies the DNS parameters of a pod. Parameters specified here will be merged to the
-generated DNS configuration based on DNSPolicy.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSpec-dnsPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11499">property <b>dnsPolicy</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>dnsPolicy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Set DNS policy for the pod. Defaults to "ClusterFirst". Valid values are
-'ClusterFirstWithHostNet', 'ClusterFirst', 'Default' or 'None'. DNS parameters given in
-DNSConfig will be merged with the policy selected with DNSPolicy. To have DNS options set
-along with hostNetwork, you have to specify DNS policy explicitly to
-'ClusterFirstWithHostNet'.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSpec-enableServiceLinks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11505">property <b>enableServiceLinks</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>enableServiceLinks: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-EnableServiceLinks indicates whether information about services should be injected into
-pod's environment variables, matching the syntax of Docker links.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSpec-hostAliases">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11511">property <b>hostAliases</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>hostAliases: <a href='#HostAlias'>HostAlias</a>[];</pre>
-
-HostAliases is an optional list of hosts and IPs that will be injected into the pod's hosts
-file if specified. This is only valid for non-hostNetwork pods.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSpec-hostIPC">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11516">property <b>hostIPC</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>hostIPC: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Use the host's ipc namespace. Optional: Default to false.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSpec-hostNetwork">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11522">property <b>hostNetwork</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>hostNetwork: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Host networking requested for this pod. Use the host's network namespace. If this option is
-set, the ports that will be used must be specified. Default to false.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSpec-hostPID">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11527">property <b>hostPID</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>hostPID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Use the host's pid namespace. Optional: Default to false.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSpec-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11533">property <b>hostname</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>hostname: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Specifies the hostname of the Pod If not specified, the pod's hostname will be set to a
-system-defined value.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSpec-imagePullSecrets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11542">property <b>imagePullSecrets</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>imagePullSecrets: <a href='#LocalObjectReference'>LocalObjectReference</a>[];</pre>
-
-ImagePullSecrets is an optional list of references to secrets in the same namespace to use
-for pulling any of the images used by this PodSpec. If specified, these secrets will be
-passed to individual puller implementations for them to use. For example, in the case of
-docker, only DockerConfig type secrets are honored. More info:
-https://kubernetes.io/docs/concepts/containers/images#specifying-imagepullsecrets-on-a-pod
-
-</div>
-<h3 class="pdoc-member-header" id="PodSpec-initContainers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11556">property <b>initContainers</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>initContainers: <a href='#Container'>Container</a>[];</pre>
-
-List of initialization containers belonging to the pod. Init containers are executed in
-order prior to containers being started. If any init container fails, the pod is considered
-to have failed and is handled according to its restartPolicy. The name for an init
-container or normal container must be unique among all containers. Init containers may not
-have Lifecycle actions, Readiness probes, or Liveness probes. The resourceRequirements of
-an init container are taken into account during scheduling by finding the highest
-request/limit for each resource type, and then using the max of of that value or the sum of
-the normal containers. Limits are applied to init containers in a similar fashion. Init
-containers cannot currently be added or removed. Cannot be updated. More info:
-https://kubernetes.io/docs/concepts/workloads/pods/init-containers/
-
-</div>
-<h3 class="pdoc-member-header" id="PodSpec-nodeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11563">property <b>nodeName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>nodeName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-NodeName is a request to schedule this pod onto a specific node. If it is non-empty, the
-scheduler simply schedules this pod onto that node, assuming that it fits resource
-requirements.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSpec-nodeSelector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11570">property <b>nodeSelector</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>nodeSelector: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</pre>
-
-NodeSelector is a selector which must be true for the pod to fit on a node. Selector which
-must match a node's labels for the pod to be scheduled on that node. More info:
-https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
-
-</div>
-<h3 class="pdoc-member-header" id="PodSpec-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11578">property <b>priority</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>priority: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-The priority value. Various system components use this field to find the priority of the
-pod. When Priority Admission Controller is enabled, it prevents users from setting this
-field. The admission controller populates this field from PriorityClassName. The higher the
-value, the higher the priority.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSpec-priorityClassName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11587">property <b>priorityClassName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>priorityClassName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-If specified, indicates the pod's priority. "system-node-critical" and
-"system-cluster-critical" are two special keywords which indicate the highest priorities
-with the former being the highest priority. Any other name must be defined by creating a
-PriorityClass object with that name. If not specified, the pod priority will be default or
-zero if there is no default.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSpec-readinessGates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11595">property <b>readinessGates</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readinessGates: <a href='#PodReadinessGate'>PodReadinessGate</a>[];</pre>
-
-If specified, all readiness gates will be evaluated for pod readiness. A pod is ready when
-all its containers are ready AND all conditions specified in the readiness gates have
-status equal to "True" More info:
-https://github.com/kubernetes/community/blob/master/keps/sig-network/0007-pod-ready%2B%2B.md
-
-</div>
-<h3 class="pdoc-member-header" id="PodSpec-restartPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11602">property <b>restartPolicy</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>restartPolicy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Restart policy for all containers within the pod. One of Always, OnFailure, Never. Default
-to Always. More info:
-https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#restart-policy
-
-</div>
-<h3 class="pdoc-member-header" id="PodSpec-runtimeClassName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11612">property <b>runtimeClassName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>runtimeClassName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-RuntimeClassName refers to a RuntimeClass object in the node.k8s.io group, which should be
-used to run this pod.  If no RuntimeClass resource matches the named class, the pod will
-not be run. If unset or empty, the "legacy" RuntimeClass will be used, which is an implicit
-class with an empty definition that uses the default runtime handler. More info:
-https://github.com/kubernetes/community/blob/master/keps/sig-node/0014-runtime-class.md
-This is an alpha feature and may change in the future.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSpec-schedulerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11618">property <b>schedulerName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>schedulerName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-If specified, the pod will be dispatched by specified scheduler. If not specified, the pod
-will be dispatched by default scheduler.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSpec-securityContext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11624">property <b>securityContext</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>securityContext: <a href='#PodSecurityContext'>PodSecurityContext</a>;</pre>
-
-SecurityContext holds pod-level security attributes and common container settings.
-Optional: Defaults to empty.  See type description for default values of each field.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSpec-serviceAccount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11630">property <b>serviceAccount</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>serviceAccount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-DeprecatedServiceAccount is a depreciated alias for ServiceAccountName. Deprecated: Use
-serviceAccountName instead.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSpec-serviceAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11636">property <b>serviceAccountName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>serviceAccountName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-ServiceAccountName is the name of the ServiceAccount to use to run this pod. More info:
-https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
-
-</div>
-<h3 class="pdoc-member-header" id="PodSpec-shareProcessNamespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11645">property <b>shareProcessNamespace</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>shareProcessNamespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Share a single process namespace between all of the containers in a pod. When this is set
-containers will be able to view and signal processes from other containers in the same pod,
-and the first process in each container will not be assigned PID 1. HostPID and
-ShareProcessNamespace cannot both be set. Optional: Default to false. This field is
-beta-level and may be disabled with the PodShareProcessNamespace feature.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSpec-subdomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11652">property <b>subdomain</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>subdomain: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-If specified, the fully qualified Pod hostname will be "<hostname>.<subdomain>.<pod
-namespace>.svc.<cluster domain>". If not specified, the pod will not have a domainname at
-all.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSpec-terminationGracePeriodSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11663">property <b>terminationGracePeriodSeconds</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>terminationGracePeriodSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-Optional duration in seconds the pod needs to terminate gracefully. May be decreased in
-delete request. Value must be non-negative integer. The value zero indicates delete
-immediately. If this value is nil, the default grace period will be used instead. The grace
-period is the duration in seconds after the processes running in the pod are sent a
-termination signal and the time when the processes are forcibly halted with a kill signal.
-Set this value longer than the expected cleanup time for your process. Defaults to 30
-seconds.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSpec-tolerations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11668">property <b>tolerations</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>tolerations: <a href='#Toleration'>Toleration</a>[];</pre>
-
-If specified, the pod's tolerations.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSpec-volumes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11674">property <b>volumes</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>volumes: <a href='#Volume'>Volume</a>[];</pre>
-
-List of volumes that can be mounted by containers belonging to the pod. More info:
-https://kubernetes.io/docs/concepts/storage/volumes
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="PodStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11682">interface <b>PodStatus</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-PodStatus represents information about the status of a pod. Status may trail the actual state
-of a system, especially if the node that hosts the pod cannot contact the control plane.
-
-<h3 class="pdoc-member-header" id="PodStatus-conditions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11687">property <b>conditions</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>conditions: <a href='#PodCondition'>PodCondition</a>[];</pre>
-
-Current service state of pod. More info:
-https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions
-
-</div>
-<h3 class="pdoc-member-header" id="PodStatus-containerStatuses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11694">property <b>containerStatuses</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>containerStatuses: <a href='#ContainerStatus'>ContainerStatus</a>[];</pre>
-
-The list has one entry per container in the manifest. Each entry is currently the output of
-`docker inspect`. More info:
-https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-and-container-status
-
-</div>
-<h3 class="pdoc-member-header" id="PodStatus-hostIP">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11699">property <b>hostIP</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>hostIP: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-IP address of the host to which the pod is assigned. Empty if not yet scheduled.
-
-</div>
-<h3 class="pdoc-member-header" id="PodStatus-initContainerStatuses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11707">property <b>initContainerStatuses</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>initContainerStatuses: <a href='#ContainerStatus'>ContainerStatus</a>[];</pre>
-
-The list has one entry per init container in the manifest. The most recent successful init
-container will have ready = true, the most recently started container will have startTime
-set. More info:
-https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-and-container-status
-
-</div>
-<h3 class="pdoc-member-header" id="PodStatus-message">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11712">property <b>message</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-A human readable message indicating details about why the pod is in this condition.
-
-</div>
-<h3 class="pdoc-member-header" id="PodStatus-nominatedNodeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11723">property <b>nominatedNodeName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>nominatedNodeName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-nominatedNodeName is set only when this pod preempts other pods on the node, but it cannot
-be scheduled right away as preemption victims receive their graceful termination periods.
-This field does not guarantee that the pod will be scheduled on this node. Scheduler may
-decide to place the pod elsewhere if other nodes become available sooner. Scheduler may
-also decide to give the resources on this node to a higher priority pod that is created
-after preemption. As a result, this field may be different than PodSpec.nodeName when the
-pod is scheduled.
-
-</div>
-<h3 class="pdoc-member-header" id="PodStatus-phase">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11743">property <b>phase</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>phase: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The phase of a Pod is a simple, high-level summary of where the Pod is in its lifecycle.
-The conditions array, the reason and message fields, and the individual container status
-arrays contain more detail about the pod's status. There are five possible phase values:
-
-Pending: The pod has been accepted by the Kubernetes system, but one or more of the
-container images has not been created. This includes time before being scheduled as well as
-time spent downloading images over the network, which could take a while. Running: The pod
-has been bound to a node, and all of the containers have been created. At least one
-container is still running, or is in the process of starting or restarting. Succeeded: All
-containers in the pod have terminated in success, and will not be restarted. Failed: All
-containers in the pod have terminated, and at least one container has terminated in
-failure. The container either exited with non-zero status or was terminated by the system.
-Unknown: For some reason the state of the pod could not be obtained, typically due to an
-error in communicating with the host of the pod.
-
-More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-phase
-
-</div>
-<h3 class="pdoc-member-header" id="PodStatus-podIP">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11749">property <b>podIP</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>podIP: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-IP address allocated to the pod. Routable at least within the cluster. Empty if not yet
-allocated.
-
-</div>
-<h3 class="pdoc-member-header" id="PodStatus-qosClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11756">property <b>qosClass</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>qosClass: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The Quality of Service (QOS) classification assigned to the pod based on resource
-requirements See PodQOSClass type for available QOS classes More info:
-https://git.k8s.io/community/contributors/design-proposals/node/resource-qos.md
-
-</div>
-<h3 class="pdoc-member-header" id="PodStatus-reason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11762">property <b>reason</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>reason: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-A brief CamelCase message indicating details about why the pod is in this state. e.g.
-'Evicted'
-
-</div>
-<h3 class="pdoc-member-header" id="PodStatus-startTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11768">property <b>startTime</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>startTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-RFC 3339 date and time at which the object was acknowledged by the Kubelet. This is before
-the Kubelet pulled the container image(s) for the pod.
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodTemplate">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11775">interface <b>PodTemplate</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PodTemplate.ts#L11">class <b>PodTemplate</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 PodTemplate describes a template for creating copies of a predefined pod.
 
-<h3 class="pdoc-member-header" id="PodTemplate-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11782">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="PodTemplate-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PodTemplate.ts#L57"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PodTemplate(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.core.v1.PodTemplate, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a core.v1.PodTemplate resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="PodTemplate-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PodTemplate.ts#L52">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#PodTemplate'>PodTemplate</a></pre>
+
+
+Get the state of an existing `PodTemplate` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="PodTemplate-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PodTemplate.ts#L56">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.core.v1.PodTemplate</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="PodTemplate-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="PodTemplate-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="PodTemplate-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PodTemplate.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -7039,11 +3078,21 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="PodTemplate-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11790">property <b>kind</b></a>
+<h3 class="pdoc-member-header" id="PodTemplate-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="PodTemplate-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PodTemplate.ts#L26">property <b>kind</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"PodTemplate"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -7052,38 +3101,107 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="PodTemplate-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11796">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PodTemplate.ts#L32">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 
 Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 </div>
 <h3 class="pdoc-member-header" id="PodTemplate-template">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11802">property <b>template</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PodTemplate.ts#L38">property <b>template</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>template: <a href='#PodTemplateSpec'>PodTemplateSpec</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>template: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.PodTemplateSpec&gt;;</pre>
 
 Template defines the pods that will be created from this pod template.
 https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status
 
 </div>
+<h3 class="pdoc-member-header" id="PodTemplate-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+</div>
 </div>
 <h2 class="pdoc-module-header" id="PodTemplateList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11809">interface <b>PodTemplateList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PodTemplateList.ts#L11">class <b>PodTemplateList</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 PodTemplateList is a list of PodTemplates.
 
-<h3 class="pdoc-member-header" id="PodTemplateList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11816">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="PodTemplateList-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PodTemplateList.ts#L56"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PodTemplateList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.core.v1.PodTemplateList, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a core.v1.PodTemplateList resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="PodTemplateList-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PodTemplateList.ts#L51">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#PodTemplateList'>PodTemplateList</a></pre>
+
+
+Get the state of an existing `PodTemplateList` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="PodTemplateList-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PodTemplateList.ts#L55">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.core.v1.PodTemplateList</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="PodTemplateList-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="PodTemplateList-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="PodTemplateList-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PodTemplateList.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -7091,20 +3209,30 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="PodTemplateList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11821">property <b>items</b></a>
+<h3 class="pdoc-member-header" id="PodTemplateList-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>items: <a href='#PodTemplate'>PodTemplate</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="PodTemplateList-items">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PodTemplateList.ts#L23">property <b>items</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>items: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.PodTemplate[]&gt;;</pre>
 
 List of pod templates
 
 </div>
 <h3 class="pdoc-member-header" id="PodTemplateList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11829">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PodTemplateList.ts#L31">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"PodTemplateList"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -7113,477 +3241,97 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="PodTemplateList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11835">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/PodTemplateList.ts#L37">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
 
 Standard list metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="PodTemplateSpec">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11842">interface <b>PodTemplateSpec</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-PodTemplateSpec describes the data a pod should have when created from a template
-
-<h3 class="pdoc-member-header" id="PodTemplateSpec-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11847">property <b>metadata</b></a>
+<h3 class="pdoc-member-header" id="PodTemplateList-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 
-Standard object's metadata. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
-
-</div>
-<h3 class="pdoc-member-header" id="PodTemplateSpec-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11853">property <b>spec</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>spec: <a href='#PodSpec'>PodSpec</a>;</pre>
-
-Specification of the desired behavior of the pod. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="PortworxVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11860">interface <b>PortworxVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-PortworxVolumeSource represents a Portworx volume resource.
-
-<h3 class="pdoc-member-header" id="PortworxVolumeSource-fsType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11865">property <b>fsType</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-FSType represents the filesystem type to mount Must be a filesystem type supported by the
-host operating system. Ex. "ext4", "xfs". Implicitly inferred to be "ext4" if unspecified.
-
-</div>
-<h3 class="pdoc-member-header" id="PortworxVolumeSource-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11871">property <b>readOnly</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in
-VolumeMounts.
-
-</div>
-<h3 class="pdoc-member-header" id="PortworxVolumeSource-volumeID">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11876">property <b>volumeID</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>volumeID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-VolumeID uniquely identifies a Portworx volume
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="PreferredSchedulingTerm">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11884">interface <b>PreferredSchedulingTerm</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-An empty preferred scheduling term matches all objects with implicit weight 0 (i.e. it's a
-no-op). A null preferred scheduling term matches no objects (i.e. is also a no-op).
-
-<h3 class="pdoc-member-header" id="PreferredSchedulingTerm-preference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11888">property <b>preference</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>preference: <a href='#NodeSelectorTerm'>NodeSelectorTerm</a>;</pre>
-
-A node selector term, associated with the corresponding weight.
-
-</div>
-<h3 class="pdoc-member-header" id="PreferredSchedulingTerm-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11893">property <b>weight</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>weight: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-Weight associated with matching the corresponding nodeSelectorTerm, in the range 1-100.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="Probe">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11901">interface <b>Probe</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Probe describes a health check to be performed against a container to determine whether it is
-alive or ready to receive traffic.
-
-<h3 class="pdoc-member-header" id="Probe-exec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11905">property <b>exec</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>exec: <a href='#ExecAction'>ExecAction</a>;</pre>
-
-One and only one of the following should be specified. Exec specifies the action to take.
-
-</div>
-<h3 class="pdoc-member-header" id="Probe-failureThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11911">property <b>failureThreshold</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>failureThreshold: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-Minimum consecutive failures for the probe to be considered failed after having succeeded.
-Defaults to 3. Minimum value is 1.
-
-</div>
-<h3 class="pdoc-member-header" id="Probe-httpGet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11916">property <b>httpGet</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>httpGet: <a href='#HTTPGetAction'>HTTPGetAction</a>;</pre>
-
-HTTPGet specifies the http request to perform.
-
-</div>
-<h3 class="pdoc-member-header" id="Probe-initialDelaySeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11923">property <b>initialDelaySeconds</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>initialDelaySeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-Number of seconds after the container has started before liveness probes are initiated.
-More info:
-https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
-
-</div>
-<h3 class="pdoc-member-header" id="Probe-periodSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11928">property <b>periodSeconds</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>periodSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.
-
-</div>
-<h3 class="pdoc-member-header" id="Probe-successThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11934">property <b>successThreshold</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>successThreshold: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-Minimum consecutive successes for the probe to be considered successful after having
-failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.
-
-</div>
-<h3 class="pdoc-member-header" id="Probe-tcpSocket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11939">property <b>tcpSocket</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>tcpSocket: <a href='#TCPSocketAction'>TCPSocketAction</a>;</pre>
-
-TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported
-
-</div>
-<h3 class="pdoc-member-header" id="Probe-timeoutSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11946">property <b>timeoutSeconds</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>timeoutSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is
-1. More info:
-https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ProjectedVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11953">interface <b>ProjectedVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Represents a projected volume source
-
-<h3 class="pdoc-member-header" id="ProjectedVolumeSource-defaultMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11960">property <b>defaultMode</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>defaultMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-Mode bits to use on created files by default. Must be a value between 0 and 0777.
-Directories within the path are not affected by this setting. This might be in conflict
-with other options that affect the file mode, like fsGroup, and the result can be other
-mode bits set.
-
-</div>
-<h3 class="pdoc-member-header" id="ProjectedVolumeSource-sources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11965">property <b>sources</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>sources: <a href='#VolumeProjection'>VolumeProjection</a>[];</pre>
-
-list of volume projections
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="QuobyteVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11973">interface <b>QuobyteVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Represents a Quobyte mount that lasts the lifetime of a pod. Quobyte volumes do not support
-ownership management or SELinux relabeling.
-
-<h3 class="pdoc-member-header" id="QuobyteVolumeSource-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11977">property <b>group</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>group: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Group to map volume access to Default is no group
-
-</div>
-<h3 class="pdoc-member-header" id="QuobyteVolumeSource-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11983">property <b>readOnly</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-ReadOnly here will force the Quobyte volume to be mounted with read-only permissions.
-Defaults to false.
-
-</div>
-<h3 class="pdoc-member-header" id="QuobyteVolumeSource-registry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11990">property <b>registry</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>registry: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Registry represents a single or multiple Quobyte Registry services specified as a string as
-host:port pair (multiple entries are separated with commas) which acts as the central
-registry for volumes
-
-</div>
-<h3 class="pdoc-member-header" id="QuobyteVolumeSource-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L11995">property <b>user</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>user: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-User to map volume access to Defaults to serivceaccount user
-
-</div>
-<h3 class="pdoc-member-header" id="QuobyteVolumeSource-volume">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12000">property <b>volume</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>volume: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Volume is a string that references an already created Quobyte volume by name.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="RBDPersistentVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12008">interface <b>RBDPersistentVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Represents a Rados Block Device mount that lasts the lifetime of a pod. RBD volumes support
-ownership management and SELinux relabeling.
-
-<h3 class="pdoc-member-header" id="RBDPersistentVolumeSource-fsType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12015">property <b>fsType</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type
-is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly
-inferred to be "ext4" if unspecified. More info:
-https://kubernetes.io/docs/concepts/storage/volumes#rbd
-
-</div>
-<h3 class="pdoc-member-header" id="RBDPersistentVolumeSource-image">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12021">property <b>image</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>image: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The rados image name. More info:
-https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it
-
-</div>
-<h3 class="pdoc-member-header" id="RBDPersistentVolumeSource-keyring">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12027">property <b>keyring</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>keyring: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Keyring is the path to key ring for RBDUser. Default is /etc/ceph/keyring. More info:
-https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it
-
-</div>
-<h3 class="pdoc-member-header" id="RBDPersistentVolumeSource-monitors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12033">property <b>monitors</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>monitors: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-A collection of Ceph monitors. More info:
-https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it
-
-</div>
-<h3 class="pdoc-member-header" id="RBDPersistentVolumeSource-pool">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12039">property <b>pool</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>pool: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The rados pool name. Default is rbd. More info:
-https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it
-
-</div>
-<h3 class="pdoc-member-header" id="RBDPersistentVolumeSource-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12045">property <b>readOnly</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More
-info: https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it
-
-</div>
-<h3 class="pdoc-member-header" id="RBDPersistentVolumeSource-secretRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12052">property <b>secretRef</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>secretRef: <a href='#SecretReference'>SecretReference</a>;</pre>
-
-SecretRef is name of the authentication secret for RBDUser. If provided overrides keyring.
-Default is nil. More info:
-https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it
-
-</div>
-<h3 class="pdoc-member-header" id="RBDPersistentVolumeSource-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12058">property <b>user</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>user: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The rados user name. Default is admin. More info:
-https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="RBDVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12066">interface <b>RBDVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Represents a Rados Block Device mount that lasts the lifetime of a pod. RBD volumes support
-ownership management and SELinux relabeling.
-
-<h3 class="pdoc-member-header" id="RBDVolumeSource-fsType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12073">property <b>fsType</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type
-is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly
-inferred to be "ext4" if unspecified. More info:
-https://kubernetes.io/docs/concepts/storage/volumes#rbd
-
-</div>
-<h3 class="pdoc-member-header" id="RBDVolumeSource-image">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12079">property <b>image</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>image: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The rados image name. More info:
-https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it
-
-</div>
-<h3 class="pdoc-member-header" id="RBDVolumeSource-keyring">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12085">property <b>keyring</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>keyring: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Keyring is the path to key ring for RBDUser. Default is /etc/ceph/keyring. More info:
-https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it
-
-</div>
-<h3 class="pdoc-member-header" id="RBDVolumeSource-monitors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12091">property <b>monitors</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>monitors: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-A collection of Ceph monitors. More info:
-https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it
-
-</div>
-<h3 class="pdoc-member-header" id="RBDVolumeSource-pool">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12097">property <b>pool</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>pool: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The rados pool name. Default is rbd. More info:
-https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it
-
-</div>
-<h3 class="pdoc-member-header" id="RBDVolumeSource-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12103">property <b>readOnly</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More
-info: https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it
-
-</div>
-<h3 class="pdoc-member-header" id="RBDVolumeSource-secretRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12110">property <b>secretRef</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>secretRef: <a href='#LocalObjectReference'>LocalObjectReference</a>;</pre>
-
-SecretRef is name of the authentication secret for RBDUser. If provided overrides keyring.
-Default is nil. More info:
-https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it
-
-</div>
-<h3 class="pdoc-member-header" id="RBDVolumeSource-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12116">property <b>user</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>user: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The rados user name. Default is admin. More info:
-https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ReplicationController">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12123">interface <b>ReplicationController</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ReplicationController.ts#L11">class <b>ReplicationController</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 ReplicationController represents the configuration of a replication controller.
 
-<h3 class="pdoc-member-header" id="ReplicationController-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12130">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="ReplicationController-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ReplicationController.ts#L65"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ReplicationController(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.core.v1.ReplicationController, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a core.v1.ReplicationController resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="ReplicationController-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ReplicationController.ts#L60">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ReplicationController'>ReplicationController</a></pre>
+
+
+Get the state of an existing `ReplicationController` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="ReplicationController-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ReplicationController.ts#L64">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.core.v1.ReplicationController</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="ReplicationController-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="ReplicationController-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="ReplicationController-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ReplicationController.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -7591,11 +3339,21 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="ReplicationController-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12138">property <b>kind</b></a>
+<h3 class="pdoc-member-header" id="ReplicationController-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="ReplicationController-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ReplicationController.ts#L26">property <b>kind</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ReplicationController"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -7604,10 +3362,10 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="ReplicationController-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12145">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ReplicationController.ts#L33">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 
 If the Labels of a ReplicationController are empty, they are defaulted to be the same as
 the Pod(s) that the replication controller manages. Standard object's metadata. More info:
@@ -7615,93 +3373,108 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 </div>
 <h3 class="pdoc-member-header" id="ReplicationController-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12151">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ReplicationController.ts#L39">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>spec: <a href='#ReplicationControllerSpec'>ReplicationControllerSpec</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ReplicationControllerSpec&gt;;</pre>
 
 Spec defines the specification of the desired behavior of the replication controller. More
 info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status
 
 </div>
 <h3 class="pdoc-member-header" id="ReplicationController-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12158">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ReplicationController.ts#L46">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>status: <a href='#ReplicationControllerStatus'>ReplicationControllerStatus</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>status: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ReplicationControllerStatus&gt;;</pre>
 
 Status is the most recently observed status of the replication controller. This data may be
 out of date by some window of time. Populated by the system. Read-only. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="ReplicationControllerCondition">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12166">interface <b>ReplicationControllerCondition</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ReplicationControllerCondition describes the state of a replication controller at a certain
-point.
-
-<h3 class="pdoc-member-header" id="ReplicationControllerCondition-lastTransitionTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12170">property <b>lastTransitionTime</b></a>
+<h3 class="pdoc-member-header" id="ReplicationController-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>lastTransitionTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 
-The last time the condition transitioned from one status to another.
-
-</div>
-<h3 class="pdoc-member-header" id="ReplicationControllerCondition-message">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12175">property <b>message</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-A human readable message indicating details about the transition.
-
-</div>
-<h3 class="pdoc-member-header" id="ReplicationControllerCondition-reason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12180">property <b>reason</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>reason: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The reason for the condition's last transition.
-
-</div>
-<h3 class="pdoc-member-header" id="ReplicationControllerCondition-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12185">property <b>status</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Status of the condition, one of True, False, Unknown.
-
-</div>
-<h3 class="pdoc-member-header" id="ReplicationControllerCondition-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12190">property <b>type</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Type of replication controller condition.
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ReplicationControllerList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12197">interface <b>ReplicationControllerList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ReplicationControllerList.ts#L11">class <b>ReplicationControllerList</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 ReplicationControllerList is a collection of replication controllers.
 
-<h3 class="pdoc-member-header" id="ReplicationControllerList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12204">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="ReplicationControllerList-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ReplicationControllerList.ts#L57"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ReplicationControllerList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.core.v1.ReplicationControllerList, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a core.v1.ReplicationControllerList resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="ReplicationControllerList-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ReplicationControllerList.ts#L52">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ReplicationControllerList'>ReplicationControllerList</a></pre>
+
+
+Get the state of an existing `ReplicationControllerList` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="ReplicationControllerList-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ReplicationControllerList.ts#L56">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.core.v1.ReplicationControllerList</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="ReplicationControllerList-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="ReplicationControllerList-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="ReplicationControllerList-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ReplicationControllerList.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -7709,21 +3482,31 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="ReplicationControllerList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12210">property <b>items</b></a>
+<h3 class="pdoc-member-header" id="ReplicationControllerList-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>items: <a href='#ReplicationController'>ReplicationController</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="ReplicationControllerList-items">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ReplicationControllerList.ts#L24">property <b>items</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>items: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ReplicationController[]&gt;;</pre>
 
 List of replication controllers. More info:
 https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller
 
 </div>
 <h3 class="pdoc-member-header" id="ReplicationControllerList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12218">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ReplicationControllerList.ts#L32">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ReplicationControllerList"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -7732,183 +3515,97 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="ReplicationControllerList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12224">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ReplicationControllerList.ts#L38">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
 
 Standard list metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="ReplicationControllerSpec">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12231">interface <b>ReplicationControllerSpec</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ReplicationControllerSpec is the specification of a replication controller.
-
-<h3 class="pdoc-member-header" id="ReplicationControllerSpec-minReadySeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12237">property <b>minReadySeconds</b></a>
+<h3 class="pdoc-member-header" id="ReplicationControllerList-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>minReadySeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 
-Minimum number of seconds for which a newly created pod should be ready without any of its
-container crashing, for it to be considered available. Defaults to 0 (pod will be
-considered available as soon as it is ready)
-
-</div>
-<h3 class="pdoc-member-header" id="ReplicationControllerSpec-replicas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12244">property <b>replicas</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>replicas: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-Replicas is the number of desired replicas. This is a pointer to distinguish between
-explicit zero and unspecified. Defaults to 1. More info:
-https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#what-is-a-replicationcontroller
-
-</div>
-<h3 class="pdoc-member-header" id="ReplicationControllerSpec-selector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12253">property <b>selector</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>selector: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</pre>
-
-Selector is a label query over pods that should match the Replicas count. If Selector is
-empty, it is defaulted to the labels present on the Pod template. Label keys and values
-that must match in order to be controlled by this replication controller, if empty
-defaulted to labels on Pod template. More info:
-https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors
-
-</div>
-<h3 class="pdoc-member-header" id="ReplicationControllerSpec-template">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12260">property <b>template</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>template: <a href='#PodTemplateSpec'>PodTemplateSpec</a>;</pre>
-
-Template is the object that describes the pod that will be created if insufficient replicas
-are detected. This takes precedence over a TemplateRef. More info:
-https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#pod-template
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ReplicationControllerStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12267">interface <b>ReplicationControllerStatus</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ReplicationControllerStatus represents the current status of a replication controller.
-
-<h3 class="pdoc-member-header" id="ReplicationControllerStatus-availableReplicas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12272">property <b>availableReplicas</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>availableReplicas: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-The number of available replicas (ready for at least minReadySeconds) for this replication
-controller.
-
-</div>
-<h3 class="pdoc-member-header" id="ReplicationControllerStatus-conditions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12277">property <b>conditions</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>conditions: <a href='#ReplicationControllerCondition'>ReplicationControllerCondition</a>[];</pre>
-
-Represents the latest available observations of a replication controller's current state.
-
-</div>
-<h3 class="pdoc-member-header" id="ReplicationControllerStatus-fullyLabeledReplicas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12283">property <b>fullyLabeledReplicas</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>fullyLabeledReplicas: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-The number of pods that have labels matching the labels of the pod template of the
-replication controller.
-
-</div>
-<h3 class="pdoc-member-header" id="ReplicationControllerStatus-observedGeneration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12289">property <b>observedGeneration</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>observedGeneration: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-ObservedGeneration reflects the generation of the most recently observed replication
-controller.
-
-</div>
-<h3 class="pdoc-member-header" id="ReplicationControllerStatus-readyReplicas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12294">property <b>readyReplicas</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readyReplicas: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-The number of ready replicas for this replication controller.
-
-</div>
-<h3 class="pdoc-member-header" id="ReplicationControllerStatus-replicas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12300">property <b>replicas</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>replicas: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-Replicas is the most recently oberved number of replicas. More info:
-https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#what-is-a-replicationcontroller
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ResourceFieldSelector">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12307">interface <b>ResourceFieldSelector</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ResourceFieldSelector represents container resources (cpu, memory) and their output format
-
-<h3 class="pdoc-member-header" id="ResourceFieldSelector-containerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12311">property <b>containerName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>containerName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Container name: required for volumes, optional for env vars
-
-</div>
-<h3 class="pdoc-member-header" id="ResourceFieldSelector-divisor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12316">property <b>divisor</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>divisor: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Specifies the output format of the exposed resources, defaults to "1"
-
-</div>
-<h3 class="pdoc-member-header" id="ResourceFieldSelector-resource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12321">property <b>resource</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>resource: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Required: resource to select
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResourceQuota">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12328">interface <b>ResourceQuota</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ResourceQuota.ts#L11">class <b>ResourceQuota</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 ResourceQuota sets aggregate quota restrictions enforced per namespace
 
-<h3 class="pdoc-member-header" id="ResourceQuota-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12335">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="ResourceQuota-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ResourceQuota.ts#L63"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ResourceQuota(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.core.v1.ResourceQuota, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a core.v1.ResourceQuota resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="ResourceQuota-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ResourceQuota.ts#L58">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ResourceQuota'>ResourceQuota</a></pre>
+
+
+Get the state of an existing `ResourceQuota` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="ResourceQuota-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ResourceQuota.ts#L62">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.core.v1.ResourceQuota</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="ResourceQuota-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="ResourceQuota-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="ResourceQuota-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ResourceQuota.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -7916,11 +3613,21 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="ResourceQuota-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12343">property <b>kind</b></a>
+<h3 class="pdoc-member-header" id="ResourceQuota-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="ResourceQuota-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ResourceQuota.ts#L26">property <b>kind</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ResourceQuota"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -7929,48 +3636,117 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuota-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12349">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ResourceQuota.ts#L32">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 
 Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuota-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12355">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ResourceQuota.ts#L38">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>spec: <a href='#ResourceQuotaSpec'>ResourceQuotaSpec</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ResourceQuotaSpec&gt;;</pre>
 
 Spec defines the desired quota.
 https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status
 
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuota-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12361">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ResourceQuota.ts#L44">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>status: <a href='#ResourceQuotaStatus'>ResourceQuotaStatus</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>status: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ResourceQuotaStatus&gt;;</pre>
 
 Status defines the actual enforced quota and its current usage.
 https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status
 
 </div>
+<h3 class="pdoc-member-header" id="ResourceQuota-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+</div>
 </div>
 <h2 class="pdoc-module-header" id="ResourceQuotaList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12368">interface <b>ResourceQuotaList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ResourceQuotaList.ts#L11">class <b>ResourceQuotaList</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 ResourceQuotaList is a list of ResourceQuota items.
 
-<h3 class="pdoc-member-header" id="ResourceQuotaList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12375">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="ResourceQuotaList-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ResourceQuotaList.ts#L57"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ResourceQuotaList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.core.v1.ResourceQuotaList, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a core.v1.ResourceQuotaList resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="ResourceQuotaList-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ResourceQuotaList.ts#L52">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ResourceQuotaList'>ResourceQuotaList</a></pre>
+
+
+Get the state of an existing `ResourceQuotaList` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="ResourceQuotaList-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ResourceQuotaList.ts#L56">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.core.v1.ResourceQuotaList</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="ResourceQuotaList-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="ResourceQuotaList-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="ResourceQuotaList-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ResourceQuotaList.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -7978,21 +3754,31 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="ResourceQuotaList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12381">property <b>items</b></a>
+<h3 class="pdoc-member-header" id="ResourceQuotaList-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>items: <a href='#ResourceQuota'>ResourceQuota</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="ResourceQuotaList-items">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ResourceQuotaList.ts#L24">property <b>items</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>items: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ResourceQuota[]&gt;;</pre>
 
 Items is a list of ResourceQuota objects. More info:
 https://kubernetes.io/docs/concepts/policy/resource-quotas/
 
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuotaList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12389">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ResourceQuotaList.ts#L32">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ResourceQuotaList"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -8001,433 +3787,98 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="ResourceQuotaList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12395">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ResourceQuotaList.ts#L38">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
 
 Standard list metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="ResourceQuotaSpec">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12402">interface <b>ResourceQuotaSpec</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ResourceQuotaSpec defines the desired hard limits to enforce for Quota.
-
-<h3 class="pdoc-member-header" id="ResourceQuotaSpec-hard">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12407">property <b>hard</b></a>
+<h3 class="pdoc-member-header" id="ResourceQuotaList-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>hard: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 
-hard is the set of desired hard limits for each named resource. More info:
-https://kubernetes.io/docs/concepts/policy/resource-quotas/
-
-</div>
-<h3 class="pdoc-member-header" id="ResourceQuotaSpec-scopeSelector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12415">property <b>scopeSelector</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>scopeSelector: <a href='#ScopeSelector'>ScopeSelector</a>;</pre>
-
-scopeSelector is also a collection of filters like scopes that must match each object
-tracked by a quota but expressed using ScopeSelectorOperator in combination with possible
-values. For a resource to match, both scopes AND scopeSelector (if specified in spec), must
-be matched.
-
-</div>
-<h3 class="pdoc-member-header" id="ResourceQuotaSpec-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12421">property <b>scopes</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>scopes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-A collection of filters that must match each object tracked by a quota. If not specified,
-the quota matches all objects.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ResourceQuotaStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12428">interface <b>ResourceQuotaStatus</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ResourceQuotaStatus defines the enforced hard limits and observed use.
-
-<h3 class="pdoc-member-header" id="ResourceQuotaStatus-hard">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12433">property <b>hard</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>hard: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
-
-Hard is the set of enforced hard limits for each named resource. More info:
-https://kubernetes.io/docs/concepts/policy/resource-quotas/
-
-</div>
-<h3 class="pdoc-member-header" id="ResourceQuotaStatus-used">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12438">property <b>used</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>used: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
-
-Used is the current observed total usage of the resource in the namespace.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ResourceRequirements">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12445">interface <b>ResourceRequirements</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ResourceRequirements describes the compute resource requirements.
-
-<h3 class="pdoc-member-header" id="ResourceRequirements-limits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12450">property <b>limits</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>limits: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
-
-Limits describes the maximum amount of compute resources allowed. More info:
-https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
-
-</div>
-<h3 class="pdoc-member-header" id="ResourceRequirements-requests">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12458">property <b>requests</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>requests: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
-
-Requests describes the minimum amount of compute resources required. If Requests is omitted
-for a container, it defaults to Limits if that is explicitly specified, otherwise to an
-implementation-defined value. More info:
-https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="SELinuxOptions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12465">interface <b>SELinuxOptions</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-SELinuxOptions are the labels to be applied to the container
-
-<h3 class="pdoc-member-header" id="SELinuxOptions-level">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12469">property <b>level</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>level: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Level is SELinux level label that applies to the container.
-
-</div>
-<h3 class="pdoc-member-header" id="SELinuxOptions-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12474">property <b>role</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>role: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Role is a SELinux role label that applies to the container.
-
-</div>
-<h3 class="pdoc-member-header" id="SELinuxOptions-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12479">property <b>type</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Type is a SELinux type label that applies to the container.
-
-</div>
-<h3 class="pdoc-member-header" id="SELinuxOptions-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12484">property <b>user</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>user: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-User is a SELinux user label that applies to the container.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ScaleIOPersistentVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12491">interface <b>ScaleIOPersistentVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ScaleIOPersistentVolumeSource represents a persistent ScaleIO volume
-
-<h3 class="pdoc-member-header" id="ScaleIOPersistentVolumeSource-fsType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12496">property <b>fsType</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Filesystem type to mount. Must be a filesystem type supported by the host operating system.
-Ex. "ext4", "xfs", "ntfs". Default is "xfs"
-
-</div>
-<h3 class="pdoc-member-header" id="ScaleIOPersistentVolumeSource-gateway">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12501">property <b>gateway</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>gateway: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The host address of the ScaleIO API Gateway.
-
-</div>
-<h3 class="pdoc-member-header" id="ScaleIOPersistentVolumeSource-protectionDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12506">property <b>protectionDomain</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>protectionDomain: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The name of the ScaleIO Protection Domain for the configured storage.
-
-</div>
-<h3 class="pdoc-member-header" id="ScaleIOPersistentVolumeSource-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12512">property <b>readOnly</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in
-VolumeMounts.
-
-</div>
-<h3 class="pdoc-member-header" id="ScaleIOPersistentVolumeSource-secretRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12518">property <b>secretRef</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>secretRef: <a href='#SecretReference'>SecretReference</a>;</pre>
-
-SecretRef references to the secret for ScaleIO user and other sensitive information. If
-this is not provided, Login operation will fail.
-
-</div>
-<h3 class="pdoc-member-header" id="ScaleIOPersistentVolumeSource-sslEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12523">property <b>sslEnabled</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>sslEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Flag to enable/disable SSL communication with Gateway, default false
-
-</div>
-<h3 class="pdoc-member-header" id="ScaleIOPersistentVolumeSource-storageMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12529">property <b>storageMode</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>storageMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Indicates whether the storage for a volume should be ThickProvisioned or ThinProvisioned.
-Default is ThinProvisioned.
-
-</div>
-<h3 class="pdoc-member-header" id="ScaleIOPersistentVolumeSource-storagePool">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12534">property <b>storagePool</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>storagePool: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The ScaleIO Storage Pool associated with the protection domain.
-
-</div>
-<h3 class="pdoc-member-header" id="ScaleIOPersistentVolumeSource-system">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12539">property <b>system</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>system: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The name of the storage system as configured in ScaleIO.
-
-</div>
-<h3 class="pdoc-member-header" id="ScaleIOPersistentVolumeSource-volumeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12545">property <b>volumeName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>volumeName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The name of a volume already created in the ScaleIO system that is associated with this
-volume source.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ScaleIOVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12552">interface <b>ScaleIOVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ScaleIOVolumeSource represents a persistent ScaleIO volume
-
-<h3 class="pdoc-member-header" id="ScaleIOVolumeSource-fsType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12557">property <b>fsType</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Filesystem type to mount. Must be a filesystem type supported by the host operating system.
-Ex. "ext4", "xfs", "ntfs". Default is "xfs".
-
-</div>
-<h3 class="pdoc-member-header" id="ScaleIOVolumeSource-gateway">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12562">property <b>gateway</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>gateway: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The host address of the ScaleIO API Gateway.
-
-</div>
-<h3 class="pdoc-member-header" id="ScaleIOVolumeSource-protectionDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12567">property <b>protectionDomain</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>protectionDomain: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The name of the ScaleIO Protection Domain for the configured storage.
-
-</div>
-<h3 class="pdoc-member-header" id="ScaleIOVolumeSource-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12573">property <b>readOnly</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in
-VolumeMounts.
-
-</div>
-<h3 class="pdoc-member-header" id="ScaleIOVolumeSource-secretRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12579">property <b>secretRef</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>secretRef: <a href='#LocalObjectReference'>LocalObjectReference</a>;</pre>
-
-SecretRef references to the secret for ScaleIO user and other sensitive information. If
-this is not provided, Login operation will fail.
-
-</div>
-<h3 class="pdoc-member-header" id="ScaleIOVolumeSource-sslEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12584">property <b>sslEnabled</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>sslEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Flag to enable/disable SSL communication with Gateway, default false
-
-</div>
-<h3 class="pdoc-member-header" id="ScaleIOVolumeSource-storageMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12590">property <b>storageMode</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>storageMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Indicates whether the storage for a volume should be ThickProvisioned or ThinProvisioned.
-Default is ThinProvisioned.
-
-</div>
-<h3 class="pdoc-member-header" id="ScaleIOVolumeSource-storagePool">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12595">property <b>storagePool</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>storagePool: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The ScaleIO Storage Pool associated with the protection domain.
-
-</div>
-<h3 class="pdoc-member-header" id="ScaleIOVolumeSource-system">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12600">property <b>system</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>system: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The name of the storage system as configured in ScaleIO.
-
-</div>
-<h3 class="pdoc-member-header" id="ScaleIOVolumeSource-volumeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12606">property <b>volumeName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>volumeName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The name of a volume already created in the ScaleIO system that is associated with this
-volume source.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ScopeSelector">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12614">interface <b>ScopeSelector</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-A scope selector represents the AND of the selectors represented by the scoped-resource
-selector requirements.
-
-<h3 class="pdoc-member-header" id="ScopeSelector-matchExpressions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12618">property <b>matchExpressions</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>matchExpressions: <a href='#ScopedResourceSelectorRequirement'>ScopedResourceSelectorRequirement</a>[];</pre>
-
-A list of scope selector requirements by scope of the resources.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ScopedResourceSelectorRequirement">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12626">interface <b>ScopedResourceSelectorRequirement</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-A scoped-resource selector requirement is a selector that contains values, a scope name, and
-an operator that relates the scope name and values.
-
-<h3 class="pdoc-member-header" id="ScopedResourceSelectorRequirement-operator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12631">property <b>operator</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>operator: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Represents a scope's relationship to a set of values. Valid operators are In, NotIn,
-Exists, DoesNotExist.
-
-</div>
-<h3 class="pdoc-member-header" id="ScopedResourceSelectorRequirement-scopeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12636">property <b>scopeName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>scopeName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The name of the scope that the selector applies to.
-
-</div>
-<h3 class="pdoc-member-header" id="ScopedResourceSelectorRequirement-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12643">property <b>values</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-An array of string values. If the operator is In or NotIn, the values array must be
-non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This
-array is replaced during a strategic merge patch.
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Secret">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12651">interface <b>Secret</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Secret.ts#L12">class <b>Secret</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 Secret holds secret data of a certain type. The total bytes of the values in the Data field
 must be less than MaxSecretSize bytes.
 
-<h3 class="pdoc-member-header" id="Secret-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12658">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="Secret-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Secret.ts#L72"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Secret(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.core.v1.Secret, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a core.v1.Secret resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="Secret-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Secret.ts#L67">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Secret'>Secret</a></pre>
+
+
+Get the state of an existing `Secret` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="Secret-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Secret.ts#L71">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.core.v1.Secret</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="Secret-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="Secret-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="Secret-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Secret.ts#L19">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -8436,10 +3887,10 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
 <h3 class="pdoc-member-header" id="Secret-data">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12666">property <b>data</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Secret.ts#L27">property <b>data</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>data: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>data: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;;</pre>
 
 Data contains the secret data. Each key must consist of alphanumeric characters, '-', '_'
 or '.'. The serialized form of the secret data is a base64 encoded string, representing the
@@ -8447,11 +3898,21 @@ arbitrary (possibly non-string) data value here. Described in
 https://tools.ietf.org/html/rfc4648#section-4
 
 </div>
-<h3 class="pdoc-member-header" id="Secret-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12674">property <b>kind</b></a>
+<h3 class="pdoc-member-header" id="Secret-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="Secret-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Secret.ts#L35">property <b>kind</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"Secret"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -8460,20 +3921,20 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="Secret-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12680">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Secret.ts#L41">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 
 Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 </div>
 <h3 class="pdoc-member-header" id="Secret-stringData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12687">property <b>stringData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Secret.ts#L48">property <b>stringData</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>stringData: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</pre>
+<pre class="highlight"><span class='kd'>public </span>stringData: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
 
 stringData allows specifying non-binary secret data in string form. It is provided as a
 write-only convenience method. All keys and values are merged into the data field on write,
@@ -8481,93 +3942,96 @@ overwriting any existing values. It is never output when reading from the API.
 
 </div>
 <h3 class="pdoc-member-header" id="Secret-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12692">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Secret.ts#L53">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>type: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 Used to facilitate programmatic handling of secret data.
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="SecretEnvSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12702">interface <b>SecretEnvSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-SecretEnvSource selects a Secret to populate the environment variables with.
-
-The contents of the target Secret's Data field will represent the key-value pairs as
-environment variables.
-
-<h3 class="pdoc-member-header" id="SecretEnvSource-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12707">property <b>name</b></a>
+<h3 class="pdoc-member-header" id="Secret-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 
-Name of the referent. More info:
-https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
-
-</div>
-<h3 class="pdoc-member-header" id="SecretEnvSource-optional">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12712">property <b>optional</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>optional: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Specify whether the Secret must be defined
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="SecretKeySelector">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12719">interface <b>SecretKeySelector</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-SecretKeySelector selects a key of a Secret.
-
-<h3 class="pdoc-member-header" id="SecretKeySelector-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12723">property <b>key</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The key of the secret to select from.  Must be a valid secret key.
-
-</div>
-<h3 class="pdoc-member-header" id="SecretKeySelector-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12729">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Name of the referent. More info:
-https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
-
-</div>
-<h3 class="pdoc-member-header" id="SecretKeySelector-optional">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12734">property <b>optional</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>optional: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Specify whether the Secret or it's key must be defined
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SecretList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12741">interface <b>SecretList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/SecretList.ts#L11">class <b>SecretList</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 SecretList is a list of Secret.
 
-<h3 class="pdoc-member-header" id="SecretList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12748">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="SecretList-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/SecretList.ts#L57"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> SecretList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.core.v1.SecretList, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a core.v1.SecretList resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="SecretList-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/SecretList.ts#L52">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#SecretList'>SecretList</a></pre>
+
+
+Get the state of an existing `SecretList` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="SecretList-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/SecretList.ts#L56">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.core.v1.SecretList</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="SecretList-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="SecretList-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="SecretList-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/SecretList.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -8575,21 +4039,31 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="SecretList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12754">property <b>items</b></a>
+<h3 class="pdoc-member-header" id="SecretList-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>items: <a href='#Secret'>Secret</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="SecretList-items">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/SecretList.ts#L24">property <b>items</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>items: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.Secret[]&gt;;</pre>
 
 Items is a list of secret objects. More info:
 https://kubernetes.io/docs/concepts/configuration/secret
 
 </div>
 <h3 class="pdoc-member-header" id="SecretList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12762">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/SecretList.ts#L32">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"SecretList"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -8598,269 +4072,99 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="SecretList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12768">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/SecretList.ts#L38">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
 
 Standard list metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="SecretProjection">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12779">interface <b>SecretProjection</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Adapts a secret into a projected volume.
-
-The contents of the target Secret's Data field will be presented in a projected volume as
-files using the keys in the Data field as the file names. Note that this is identical to a
-secret volume source without the default mode.
-
-<h3 class="pdoc-member-header" id="SecretProjection-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12788">property <b>items</b></a>
+<h3 class="pdoc-member-header" id="SecretList-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>items: <a href='#KeyToPath'>KeyToPath</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 
-If unspecified, each key-value pair in the Data field of the referenced Secret will be
-projected into the volume as a file whose name is the key and content is the value. If
-specified, the listed keys will be projected into the specified paths, and unlisted keys
-will not be present. If a key is specified which is not present in the Secret, the volume
-setup will error unless it is marked optional. Paths must be relative and may not contain
-the '..' path or start with '..'.
-
-</div>
-<h3 class="pdoc-member-header" id="SecretProjection-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12794">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Name of the referent. More info:
-https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
-
-</div>
-<h3 class="pdoc-member-header" id="SecretProjection-optional">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12799">property <b>optional</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>optional: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Specify whether the Secret or its key must be defined
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="SecretReference">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12807">interface <b>SecretReference</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-SecretReference represents a Secret Reference. It has enough information to retrieve secret
-in any namespace
-
-<h3 class="pdoc-member-header" id="SecretReference-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12811">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Name is unique within a namespace to reference a secret resource.
-
-</div>
-<h3 class="pdoc-member-header" id="SecretReference-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12816">property <b>namespace</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Namespace defines the space within which the secret name must be unique.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="SecretVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12827">interface <b>SecretVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Adapts a Secret into a volume.
-
-The contents of the target Secret's Data field will be presented in a volume as files using
-the keys in the Data field as the file names. Secret volumes support ownership management and
-SELinux relabeling.
-
-<h3 class="pdoc-member-header" id="SecretVolumeSource-defaultMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12834">property <b>defaultMode</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>defaultMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-Optional: mode bits to use on created files by default. Must be a value between 0 and 0777.
-Defaults to 0644. Directories within the path are not affected by this setting. This might
-be in conflict with other options that affect the file mode, like fsGroup, and the result
-can be other mode bits set.
-
-</div>
-<h3 class="pdoc-member-header" id="SecretVolumeSource-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12844">property <b>items</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>items: <a href='#KeyToPath'>KeyToPath</a>[];</pre>
-
-If unspecified, each key-value pair in the Data field of the referenced Secret will be
-projected into the volume as a file whose name is the key and content is the value. If
-specified, the listed keys will be projected into the specified paths, and unlisted keys
-will not be present. If a key is specified which is not present in the Secret, the volume
-setup will error unless it is marked optional. Paths must be relative and may not contain
-the '..' path or start with '..'.
-
-</div>
-<h3 class="pdoc-member-header" id="SecretVolumeSource-optional">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12849">property <b>optional</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>optional: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Specify whether the Secret or it's keys must be defined
-
-</div>
-<h3 class="pdoc-member-header" id="SecretVolumeSource-secretName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12855">property <b>secretName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>secretName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Name of the secret in the pod's namespace to use. More info:
-https://kubernetes.io/docs/concepts/storage/volumes#secret
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="SecurityContext">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12864">interface <b>SecurityContext</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-SecurityContext holds security configuration that will be applied to a container. Some fields
-are present in both SecurityContext and PodSecurityContext.  When both are set, the values in
-SecurityContext take precedence.
-
-<h3 class="pdoc-member-header" id="SecurityContext-allowPrivilegeEscalation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12871">property <b>allowPrivilegeEscalation</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>allowPrivilegeEscalation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-AllowPrivilegeEscalation controls whether a process can gain more privileges than its
-parent process. This bool directly controls if the no_new_privs flag will be set on the
-container process. AllowPrivilegeEscalation is true always when the container is: 1) run as
-Privileged 2) has CAP_SYS_ADMIN
-
-</div>
-<h3 class="pdoc-member-header" id="SecurityContext-capabilities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12877">property <b>capabilities</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>capabilities: <a href='#Capabilities'>Capabilities</a>;</pre>
-
-The capabilities to add/drop when running containers. Defaults to the default set of
-capabilities granted by the container runtime.
-
-</div>
-<h3 class="pdoc-member-header" id="SecurityContext-privileged">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12883">property <b>privileged</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>privileged: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Run container in privileged mode. Processes in privileged containers are essentially
-equivalent to root on the host. Defaults to false.
-
-</div>
-<h3 class="pdoc-member-header" id="SecurityContext-procMount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12890">property <b>procMount</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>procMount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-procMount denotes the type of proc mount to use for the containers. The default is
-DefaultProcMount which uses the container runtime defaults for readonly paths and masked
-paths. This requires the ProcMountType feature flag to be enabled.
-
-</div>
-<h3 class="pdoc-member-header" id="SecurityContext-readOnlyRootFilesystem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12895">property <b>readOnlyRootFilesystem</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readOnlyRootFilesystem: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Whether this container has a read-only root filesystem. Default is false.
-
-</div>
-<h3 class="pdoc-member-header" id="SecurityContext-runAsGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12902">property <b>runAsGroup</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>runAsGroup: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-The GID to run the entrypoint of the container process. Uses runtime default if unset. May
-also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext,
-the value specified in SecurityContext takes precedence.
-
-</div>
-<h3 class="pdoc-member-header" id="SecurityContext-runAsNonRoot">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12911">property <b>runAsNonRoot</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>runAsNonRoot: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Indicates that the container must run as a non-root user. If true, the Kubelet will
-validate the image at runtime to ensure that it does not run as UID 0 (root) and fail to
-start the container if it does. If unset or false, no such validation will be performed.
-May also be set in PodSecurityContext.  If set in both SecurityContext and
-PodSecurityContext, the value specified in SecurityContext takes precedence.
-
-</div>
-<h3 class="pdoc-member-header" id="SecurityContext-runAsUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12919">property <b>runAsUser</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>runAsUser: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-The UID to run the entrypoint of the container process. Defaults to user specified in image
-metadata if unspecified. May also be set in PodSecurityContext.  If set in both
-SecurityContext and PodSecurityContext, the value specified in SecurityContext takes
-precedence.
-
-</div>
-<h3 class="pdoc-member-header" id="SecurityContext-seLinuxOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12927">property <b>seLinuxOptions</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>seLinuxOptions: <a href='#SELinuxOptions'>SELinuxOptions</a>;</pre>
-
-The SELinux context to be applied to the container. If unspecified, the container runtime
-will allocate a random SELinux context for each container.  May also be set in
-PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value
-specified in SecurityContext takes precedence.
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Service">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12936">interface <b>Service</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Service.ts#L13">class <b>Service</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 Service is a named abstraction of software service (for example, mysql) consisting of local
 port (for example 3306) that the proxy listens on, and the selector that determines which
 pods will answer requests sent through the proxy.
 
-<h3 class="pdoc-member-header" id="Service-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12943">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="Service-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Service.ts#L65"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Service(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.core.v1.Service, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a core.v1.Service resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="Service-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Service.ts#L60">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Service'>Service</a></pre>
+
+
+Get the state of an existing `Service` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="Service-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Service.ts#L64">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.core.v1.Service</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="Service-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="Service-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="Service-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Service.ts#L20">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -8868,11 +4172,21 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="Service-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12951">property <b>kind</b></a>
+<h3 class="pdoc-member-header" id="Service-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="Service-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Service.ts#L28">property <b>kind</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"Service"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -8881,50 +4195,119 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="Service-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12957">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Service.ts#L34">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 
 Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 </div>
 <h3 class="pdoc-member-header" id="Service-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12963">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Service.ts#L40">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>spec: <a href='#ServiceSpec'>ServiceSpec</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ServiceSpec&gt;;</pre>
 
 Spec defines the behavior of a service.
 https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status
 
 </div>
 <h3 class="pdoc-member-header" id="Service-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12969">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/Service.ts#L46">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>status: <a href='#ServiceStatus'>ServiceStatus</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>status: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ServiceStatus&gt;;</pre>
 
 Most recently observed status of the service. Populated by the system. Read-only. More
 info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status
 
 </div>
+<h3 class="pdoc-member-header" id="Service-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+</div>
 </div>
 <h2 class="pdoc-module-header" id="ServiceAccount">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12978">interface <b>ServiceAccount</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ServiceAccount.ts#L13">class <b>ServiceAccount</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 ServiceAccount binds together: * a name, understood by users, and perhaps by peripheral
 systems, for an identity * a principal that can be authenticated and authorized * a set of
 secrets
 
-<h3 class="pdoc-member-header" id="ServiceAccount-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12985">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="ServiceAccount-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ServiceAccount.ts#L74"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ServiceAccount(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.core.v1.ServiceAccount, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a core.v1.ServiceAccount resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="ServiceAccount-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ServiceAccount.ts#L69">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ServiceAccount'>ServiceAccount</a></pre>
+
+
+Get the state of an existing `ServiceAccount` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="ServiceAccount-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ServiceAccount.ts#L73">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.core.v1.ServiceAccount</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="ServiceAccount-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="ServiceAccount-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="ServiceAccount-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ServiceAccount.ts#L20">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -8933,20 +4316,30 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccount-automountServiceAccountToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L12991">property <b>automountServiceAccountToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ServiceAccount.ts#L26">property <b>automountServiceAccountToken</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>automountServiceAccountToken: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>automountServiceAccountToken: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
 
 AutomountServiceAccountToken indicates whether pods running as this service account should
 have an API token automatically mounted. Can be overridden at the pod level.
 
 </div>
-<h3 class="pdoc-member-header" id="ServiceAccount-imagePullSecrets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13000">property <b>imagePullSecrets</b></a>
+<h3 class="pdoc-member-header" id="ServiceAccount-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>imagePullSecrets: <a href='#LocalObjectReference'>LocalObjectReference</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="ServiceAccount-imagePullSecrets">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ServiceAccount.ts#L35">property <b>imagePullSecrets</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>imagePullSecrets: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.LocalObjectReference[]&gt;;</pre>
 
 ImagePullSecrets is a list of references to secrets in the same namespace to use for
 pulling any images in pods that reference this ServiceAccount. ImagePullSecrets are
@@ -8956,10 +4349,10 @@ https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecre
 
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccount-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13008">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ServiceAccount.ts#L43">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ServiceAccount"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -8968,38 +4361,107 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccount-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13014">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ServiceAccount.ts#L49">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 
 Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccount-secrets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13020">property <b>secrets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ServiceAccount.ts#L55">property <b>secrets</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>secrets: <a href='#ObjectReference'>ObjectReference</a>[];</pre>
+<pre class="highlight"><span class='kd'>public </span>secrets: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ObjectReference[]&gt;;</pre>
 
 Secrets is the list of secrets allowed to be used by pods running using this
 ServiceAccount. More info: https://kubernetes.io/docs/concepts/configuration/secret
 
 </div>
+<h3 class="pdoc-member-header" id="ServiceAccount-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+</div>
 </div>
 <h2 class="pdoc-module-header" id="ServiceAccountList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13027">interface <b>ServiceAccountList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ServiceAccountList.ts#L11">class <b>ServiceAccountList</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 ServiceAccountList is a list of ServiceAccount objects
 
-<h3 class="pdoc-member-header" id="ServiceAccountList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13034">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="ServiceAccountList-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ServiceAccountList.ts#L57"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ServiceAccountList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.core.v1.ServiceAccountList, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a core.v1.ServiceAccountList resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="ServiceAccountList-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ServiceAccountList.ts#L52">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ServiceAccountList'>ServiceAccountList</a></pre>
+
+
+Get the state of an existing `ServiceAccountList` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="ServiceAccountList-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ServiceAccountList.ts#L56">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.core.v1.ServiceAccountList</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="ServiceAccountList-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="ServiceAccountList-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="ServiceAccountList-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ServiceAccountList.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -9007,21 +4469,31 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="ServiceAccountList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13040">property <b>items</b></a>
+<h3 class="pdoc-member-header" id="ServiceAccountList-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>items: <a href='#ServiceAccount'>ServiceAccount</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="ServiceAccountList-items">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ServiceAccountList.ts#L24">property <b>items</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>items: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.ServiceAccount[]&gt;;</pre>
 
 List of ServiceAccounts. More info:
 https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
 
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccountList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13048">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ServiceAccountList.ts#L32">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ServiceAccountList"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -9030,71 +4502,97 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="ServiceAccountList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13054">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ServiceAccountList.ts#L38">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
 
 Standard list metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="ServiceAccountTokenProjection">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13063">interface <b>ServiceAccountTokenProjection</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ServiceAccountTokenProjection represents a projected service account token volume. This
-projection can be used to insert a service account token into the pods runtime filesystem for
-use against APIs (Kubernetes API Server or otherwise).
-
-<h3 class="pdoc-member-header" id="ServiceAccountTokenProjection-audience">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13069">property <b>audience</b></a>
+<h3 class="pdoc-member-header" id="ServiceAccountList-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>audience: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 
-Audience is the intended audience of the token. A recipient of a token must identify itself
-with an identifier specified in the audience of the token, and otherwise should reject the
-token. The audience defaults to the identifier of the apiserver.
-
-</div>
-<h3 class="pdoc-member-header" id="ServiceAccountTokenProjection-expirationSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13078">property <b>expirationSeconds</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>expirationSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-ExpirationSeconds is the requested duration of validity of the service account token. As
-the token approaches expiration, the kubelet volume plugin will proactively rotate the
-service account token. The kubelet will start trying to rotate the token if the token is
-older than 80 percent of its time to live or if the token is older than 24 hours.Defaults
-to 1 hour and must be at least 10 minutes.
-
-</div>
-<h3 class="pdoc-member-header" id="ServiceAccountTokenProjection-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13083">property <b>path</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Path is the path relative to the mount point of the file to project the token into.
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServiceList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13090">interface <b>ServiceList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ServiceList.ts#L11">class <b>ServiceList</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 ServiceList holds a list of services.
 
-<h3 class="pdoc-member-header" id="ServiceList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13097">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="ServiceList-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ServiceList.ts#L56"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ServiceList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.core.v1.ServiceList, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a core.v1.ServiceList resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="ServiceList-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ServiceList.ts#L51">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ServiceList'>ServiceList</a></pre>
+
+
+Get the state of an existing `ServiceList` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="ServiceList-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ServiceList.ts#L55">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.core.v1.ServiceList</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="ServiceList-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="ServiceList-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="ServiceList-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ServiceList.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -9102,20 +4600,30 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="ServiceList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13102">property <b>items</b></a>
+<h3 class="pdoc-member-header" id="ServiceList-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>items: <a href='#Service'>Service</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="ServiceList-items">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ServiceList.ts#L23">property <b>items</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>items: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.Service[]&gt;;</pre>
 
 List of services
 
 </div>
 <h3 class="pdoc-member-header" id="ServiceList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13110">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ServiceList.ts#L31">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ServiceList"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -9124,1150 +4632,23 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="ServiceList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13116">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/core/v1/ServiceList.ts#L37">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
 
 Standard list metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="ServicePort">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13123">interface <b>ServicePort</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ServicePort contains information on service's port.
-
-<h3 class="pdoc-member-header" id="ServicePort-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13129">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The name of this port within the service. This must be a DNS_LABEL. All ports within a
-ServiceSpec must have unique names. This maps to the 'Name' field in EndpointPort objects.
-Optional if only one ServicePort is defined on this service.
-
-</div>
-<h3 class="pdoc-member-header" id="ServicePort-nodePort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13138">property <b>nodePort</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>nodePort: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-The port on each node on which this service is exposed when type=NodePort or LoadBalancer.
-Usually assigned by the system. If specified, it will be allocated to the service if unused
-or else creation of the service will fail. Default is to auto-allocate a port if the
-ServiceType of this Service requires one. More info:
-https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport
-
-</div>
-<h3 class="pdoc-member-header" id="ServicePort-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13143">property <b>port</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-The port that will be exposed by this service.
-
-</div>
-<h3 class="pdoc-member-header" id="ServicePort-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13148">property <b>protocol</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>protocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The IP protocol for this port. Supports "TCP", "UDP", and "SCTP". Default is TCP.
-
-</div>
-<h3 class="pdoc-member-header" id="ServicePort-targetPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13158">property <b>targetPort</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>targetPort: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Number or name of the port to access on the pods targeted by the service. Number must be in
-the range 1 to 65535. Name must be an IANA_SVC_NAME. If this is a string, it will be looked
-up as a named port in the target Pod's container ports. If this is not specified, the value
-of the 'port' field is used (an identity map). This field is ignored for services with
-clusterIP=None, and should be omitted or set equal to the 'port' field. More info:
-https://kubernetes.io/docs/concepts/services-networking/service/#defining-a-service
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ServiceSpec">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13165">interface <b>ServiceSpec</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ServiceSpec describes the attributes that a user creates on a service.
-
-<h3 class="pdoc-member-header" id="ServiceSpec-clusterIP">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13175">property <b>clusterIP</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>clusterIP: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-clusterIP is the IP address of the service and is usually assigned randomly by the master.
-If an address is specified manually and is not in use by others, it will be allocated to
-the service; otherwise, creation of the service will fail. This field can not be changed
-through updates. Valid values are "None", empty string (""), or a valid IP address. "None"
-can be specified for headless services when proxying is not required. Only applies to types
-ClusterIP, NodePort, and LoadBalancer. Ignored if type is ExternalName. More info:
-https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies
-
-</div>
-<h3 class="pdoc-member-header" id="ServiceSpec-externalIPs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13183">property <b>externalIPs</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>externalIPs: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-externalIPs is a list of IP addresses for which nodes in the cluster will also accept
-traffic for this service.  These IPs are not managed by Kubernetes.  The user is
-responsible for ensuring that traffic arrives at a node with this IP.  A common example is
-external load-balancers that are not part of the Kubernetes system.
-
-</div>
-<h3 class="pdoc-member-header" id="ServiceSpec-externalName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13190">property <b>externalName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>externalName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-externalName is the external reference that kubedns or equivalent will return as a CNAME
-record for this service. No proxying will be involved. Must be a valid RFC-1123 hostname
-(https://tools.ietf.org/html/rfc1123) and requires Type to be ExternalName.
-
-</div>
-<h3 class="pdoc-member-header" id="ServiceSpec-externalTrafficPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13199">property <b>externalTrafficPolicy</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>externalTrafficPolicy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-externalTrafficPolicy denotes if this Service desires to route external traffic to
-node-local or cluster-wide endpoints. "Local" preserves the client source IP and avoids a
-second hop for LoadBalancer and Nodeport type services, but risks potentially imbalanced
-traffic spreading. "Cluster" obscures the client source IP and may cause a second hop to
-another node, but should have good overall load-spreading.
-
-</div>
-<h3 class="pdoc-member-header" id="ServiceSpec-healthCheckNodePort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13207">property <b>healthCheckNodePort</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>healthCheckNodePort: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-healthCheckNodePort specifies the healthcheck nodePort for the service. If not specified,
-HealthCheckNodePort is created by the service api backend with the allocated nodePort. Will
-use user-specified nodePort value if specified by the client. Only effects when Type is set
-to LoadBalancer and ExternalTrafficPolicy is set to Local.
-
-</div>
-<h3 class="pdoc-member-header" id="ServiceSpec-loadBalancerIP">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13215">property <b>loadBalancerIP</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>loadBalancerIP: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Only applies to Service Type: LoadBalancer LoadBalancer will get created with the IP
-specified in this field. This feature depends on whether the underlying cloud-provider
-supports specifying the loadBalancerIP when a load balancer is created. This field will be
-ignored if the cloud-provider does not support the feature.
-
-</div>
-<h3 class="pdoc-member-header" id="ServiceSpec-loadBalancerSourceRanges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13223">property <b>loadBalancerSourceRanges</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>loadBalancerSourceRanges: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-If specified and supported by the platform, this will restrict traffic through the
-cloud-provider load-balancer will be restricted to the specified client IPs. This field
-will be ignored if the cloud-provider does not support the feature." More info:
-https://kubernetes.io/docs/tasks/access-application-cluster/configure-cloud-provider-firewall/
-
-</div>
-<h3 class="pdoc-member-header" id="ServiceSpec-ports">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13229">property <b>ports</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>ports: <a href='#ServicePort'>ServicePort</a>[];</pre>
-
-The list of ports that are exposed by this service. More info:
-https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies
-
-</div>
-<h3 class="pdoc-member-header" id="ServiceSpec-publishNotReadyAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13238">property <b>publishNotReadyAddresses</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>publishNotReadyAddresses: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-publishNotReadyAddresses, when set to true, indicates that DNS implementations must publish
-the notReadyAddresses of subsets for the Endpoints associated with the Service. The default
-value is false. The primary use case for setting this field is to use a StatefulSet's
-Headless Service to propagate SRV records for its Pods without respect to their readiness
-for purpose of peer discovery.
-
-</div>
-<h3 class="pdoc-member-header" id="ServiceSpec-selector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13247">property <b>selector</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>selector: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</pre>
-
-Route service traffic to pods with label keys and values matching this selector. If empty
-or not present, the service is assumed to have an external process managing its endpoints,
-which Kubernetes will not modify. Only applies to types ClusterIP, NodePort, and
-LoadBalancer. Ignored if type is ExternalName. More info:
-https://kubernetes.io/docs/concepts/services-networking/service/
-
-</div>
-<h3 class="pdoc-member-header" id="ServiceSpec-sessionAffinity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13254">property <b>sessionAffinity</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>sessionAffinity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Supports "ClientIP" and "None". Used to maintain session affinity. Enable client IP based
-session affinity. Must be ClientIP or None. Defaults to None. More info:
-https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies
-
-</div>
-<h3 class="pdoc-member-header" id="ServiceSpec-sessionAffinityConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13259">property <b>sessionAffinityConfig</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>sessionAffinityConfig: <a href='#SessionAffinityConfig'>SessionAffinityConfig</a>;</pre>
-
-sessionAffinityConfig contains the configurations of session affinity.
-
-</div>
-<h3 class="pdoc-member-header" id="ServiceSpec-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13273">property <b>type</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-type determines how the Service is exposed. Defaults to ClusterIP. Valid options are
-ExternalName, ClusterIP, NodePort, and LoadBalancer. "ExternalName" maps to the specified
-externalName. "ClusterIP" allocates a cluster-internal IP address for load-balancing to
-endpoints. Endpoints are determined by the selector or if that is not specified, by manual
-construction of an Endpoints object. If clusterIP is "None", no virtual IP is allocated and
-the endpoints are published as a set of endpoints rather than a stable IP. "NodePort"
-builds on ClusterIP and allocates a port on every node which routes to the clusterIP.
-"LoadBalancer" builds on NodePort and creates an external load-balancer (if supported in
-the current cloud) which routes to the clusterIP. More info:
-https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services---service-types
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ServiceStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13280">interface <b>ServiceStatus</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ServiceStatus represents the current status of a service.
-
-<h3 class="pdoc-member-header" id="ServiceStatus-loadBalancer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13284">property <b>loadBalancer</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>loadBalancer: <a href='#LoadBalancerStatus'>LoadBalancerStatus</a>;</pre>
-
-LoadBalancer contains the current status of the load-balancer, if one is present.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="SessionAffinityConfig">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13291">interface <b>SessionAffinityConfig</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-SessionAffinityConfig represents the configurations of session affinity.
-
-<h3 class="pdoc-member-header" id="SessionAffinityConfig-clientIP">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13295">property <b>clientIP</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>clientIP: <a href='#ClientIPConfig'>ClientIPConfig</a>;</pre>
-
-clientIP contains the configurations of Client IP based session affinity.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="StorageOSPersistentVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13302">interface <b>StorageOSPersistentVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Represents a StorageOS persistent volume resource.
-
-<h3 class="pdoc-member-header" id="StorageOSPersistentVolumeSource-fsType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13307">property <b>fsType</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Filesystem type to mount. Must be a filesystem type supported by the host operating system.
-Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
-
-</div>
-<h3 class="pdoc-member-header" id="StorageOSPersistentVolumeSource-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13313">property <b>readOnly</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in
-VolumeMounts.
-
-</div>
-<h3 class="pdoc-member-header" id="StorageOSPersistentVolumeSource-secretRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13319">property <b>secretRef</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>secretRef: <a href='#ObjectReference'>ObjectReference</a>;</pre>
-
-SecretRef specifies the secret to use for obtaining the StorageOS API credentials.  If not
-specified, default values will be attempted.
-
-</div>
-<h3 class="pdoc-member-header" id="StorageOSPersistentVolumeSource-volumeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13325">property <b>volumeName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>volumeName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-VolumeName is the human-readable name of the StorageOS volume.  Volume names are only
-unique within a namespace.
-
-</div>
-<h3 class="pdoc-member-header" id="StorageOSPersistentVolumeSource-volumeNamespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13334">property <b>volumeNamespace</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>volumeNamespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-VolumeNamespace specifies the scope of the volume within StorageOS.  If no namespace is
-specified then the Pod's namespace will be used.  This allows the Kubernetes name scoping
-to be mirrored within StorageOS for tighter integration. Set VolumeName to any name to
-override the default behaviour. Set to "default" if you are not using namespaces within
-StorageOS. Namespaces that do not pre-exist within StorageOS will be created.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="StorageOSVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13341">interface <b>StorageOSVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Represents a StorageOS persistent volume resource.
-
-<h3 class="pdoc-member-header" id="StorageOSVolumeSource-fsType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13346">property <b>fsType</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Filesystem type to mount. Must be a filesystem type supported by the host operating system.
-Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
-
-</div>
-<h3 class="pdoc-member-header" id="StorageOSVolumeSource-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13352">property <b>readOnly</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in
-VolumeMounts.
-
-</div>
-<h3 class="pdoc-member-header" id="StorageOSVolumeSource-secretRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13358">property <b>secretRef</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>secretRef: <a href='#LocalObjectReference'>LocalObjectReference</a>;</pre>
-
-SecretRef specifies the secret to use for obtaining the StorageOS API credentials.  If not
-specified, default values will be attempted.
-
-</div>
-<h3 class="pdoc-member-header" id="StorageOSVolumeSource-volumeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13364">property <b>volumeName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>volumeName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-VolumeName is the human-readable name of the StorageOS volume.  Volume names are only
-unique within a namespace.
-
-</div>
-<h3 class="pdoc-member-header" id="StorageOSVolumeSource-volumeNamespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13373">property <b>volumeNamespace</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>volumeNamespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-VolumeNamespace specifies the scope of the volume within StorageOS.  If no namespace is
-specified then the Pod's namespace will be used.  This allows the Kubernetes name scoping
-to be mirrored within StorageOS for tighter integration. Set VolumeName to any name to
-override the default behaviour. Set to "default" if you are not using namespaces within
-StorageOS. Namespaces that do not pre-exist within StorageOS will be created.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="Sysctl">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13380">interface <b>Sysctl</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Sysctl defines a kernel parameter to be set
-
-<h3 class="pdoc-member-header" id="Sysctl-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13384">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Name of a property to set
-
-</div>
-<h3 class="pdoc-member-header" id="Sysctl-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13389">property <b>value</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Value of a property to set
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="TCPSocketAction">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13396">interface <b>TCPSocketAction</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-TCPSocketAction describes an action based on opening a socket
-
-<h3 class="pdoc-member-header" id="TCPSocketAction-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13400">property <b>host</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>host: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Optional: Host name to connect to, defaults to the pod IP.
-
-</div>
-<h3 class="pdoc-member-header" id="TCPSocketAction-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13406">property <b>port</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Number or name of the port to access on the container. Number must be in the range 1 to
-65535. Name must be an IANA_SVC_NAME.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="Taint">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13414">interface <b>Taint</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-The node this Taint is attached to has the "effect" on any pod that does not tolerate the
-Taint.
-
-<h3 class="pdoc-member-header" id="Taint-effect">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13419">property <b>effect</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>effect: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Required. The effect of the taint on pods that do not tolerate the taint. Valid effects are
-NoSchedule, PreferNoSchedule and NoExecute.
-
-</div>
-<h3 class="pdoc-member-header" id="Taint-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13424">property <b>key</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Required. The taint key to be applied to a node.
-
-</div>
-<h3 class="pdoc-member-header" id="Taint-timeAdded">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13430">property <b>timeAdded</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>timeAdded: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-TimeAdded represents the time at which the taint was added. It is only written for
-NoExecute taints.
-
-</div>
-<h3 class="pdoc-member-header" id="Taint-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13435">property <b>value</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Required. The taint value corresponding to the taint key.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="Toleration">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13443">interface <b>Toleration</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-The pod this Toleration is attached to tolerates any taint that matches the triple
-<key,value,effect> using the matching operator <operator>.
-
-<h3 class="pdoc-member-header" id="Toleration-effect">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13448">property <b>effect</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>effect: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Effect indicates the taint effect to match. Empty means match all taint effects. When
-specified, allowed values are NoSchedule, PreferNoSchedule and NoExecute.
-
-</div>
-<h3 class="pdoc-member-header" id="Toleration-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13455">property <b>key</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Key is the taint key that the toleration applies to. Empty means match all taint keys. If
-the key is empty, operator must be Exists; this combination means to match all values and
-all keys.
-
-</div>
-<h3 class="pdoc-member-header" id="Toleration-operator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13462">property <b>operator</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>operator: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Operator represents a key's relationship to the value. Valid operators are Exists and
-Equal. Defaults to Equal. Exists is equivalent to wildcard for value, so that a pod can
-tolerate all taints of a particular category.
-
-</div>
-<h3 class="pdoc-member-header" id="Toleration-tolerationSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13470">property <b>tolerationSeconds</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>tolerationSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-TolerationSeconds represents the period of time the toleration (which must be of effect
-NoExecute, otherwise this field is ignored) tolerates the taint. By default, it is not set,
-which means tolerate the taint forever (do not evict). Zero and negative values will be
-treated as 0 (evict immediately) by the system.
-
-</div>
-<h3 class="pdoc-member-header" id="Toleration-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13476">property <b>value</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Value is the taint value the toleration matches to. If the operator is Exists, the value
-should be empty, otherwise just a regular string.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="TopologySelectorLabelRequirement">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13484">interface <b>TopologySelectorLabelRequirement</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-A topology selector requirement is a selector that matches given label. This is an alpha
-feature and may change in the future.
-
-<h3 class="pdoc-member-header" id="TopologySelectorLabelRequirement-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13488">property <b>key</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The label key that the selector applies to.
-
-</div>
-<h3 class="pdoc-member-header" id="TopologySelectorLabelRequirement-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13494">property <b>values</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-An array of string values. One value must match the label to be selected. Each entry in
-Values is ORed.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="TopologySelectorTerm">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13503">interface <b>TopologySelectorTerm</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-A topology selector term represents the result of label queries. A null or empty topology
-selector term matches no objects. The requirements of them are ANDed. It provides a subset of
-functionality as NodeSelectorTerm. This is an alpha feature and may change in the future.
-
-<h3 class="pdoc-member-header" id="TopologySelectorTerm-matchLabelExpressions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13507">property <b>matchLabelExpressions</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>matchLabelExpressions: <a href='#TopologySelectorLabelRequirement'>TopologySelectorLabelRequirement</a>[];</pre>
-
-A list of topology selector requirements by labels.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="TypedLocalObjectReference">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13515">interface <b>TypedLocalObjectReference</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-TypedLocalObjectReference contains enough information to let you locate the typed referenced
-object inside the same namespace.
-
-<h3 class="pdoc-member-header" id="TypedLocalObjectReference-apiGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13521">property <b>apiGroup</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiGroup: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-APIGroup is the group for the resource being referenced. If APIGroup is not specified, the
-specified Kind must be in the core API group. For any other third-party types, APIGroup is
-required.
-
-</div>
-<h3 class="pdoc-member-header" id="TypedLocalObjectReference-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13526">property <b>kind</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Kind is the type of resource being referenced
-
-</div>
-<h3 class="pdoc-member-header" id="TypedLocalObjectReference-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13531">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Name is the name of resource being referenced
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="Volume">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13538">interface <b>Volume</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Volume represents a named volume in a pod that may be accessed by any container in the pod.
-
-<h3 class="pdoc-member-header" id="Volume-awsElasticBlockStore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13544">property <b>awsElasticBlockStore</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>awsElasticBlockStore: <a href='#AWSElasticBlockStoreVolumeSource'>AWSElasticBlockStoreVolumeSource</a>;</pre>
-
-AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host
-machine and then exposed to the pod. More info:
-https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
-
-</div>
-<h3 class="pdoc-member-header" id="Volume-azureDisk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13549">property <b>azureDisk</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>azureDisk: <a href='#AzureDiskVolumeSource'>AzureDiskVolumeSource</a>;</pre>
-
-AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.
-
-</div>
-<h3 class="pdoc-member-header" id="Volume-azureFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13554">property <b>azureFile</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>azureFile: <a href='#AzureFileVolumeSource'>AzureFileVolumeSource</a>;</pre>
-
-AzureFile represents an Azure File Service mount on the host and bind mount to the pod.
-
-</div>
-<h3 class="pdoc-member-header" id="Volume-cephfs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13559">property <b>cephfs</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>cephfs: <a href='#CephFSVolumeSource'>CephFSVolumeSource</a>;</pre>
-
-CephFS represents a Ceph FS mount on the host that shares a pod's lifetime
-
-</div>
-<h3 class="pdoc-member-header" id="Volume-cinder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13565">property <b>cinder</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>cinder: <a href='#CinderVolumeSource'>CinderVolumeSource</a>;</pre>
-
-Cinder represents a cinder volume attached and mounted on kubelets host machine More info:
-https://releases.k8s.io/HEAD/examples/mysql-cinder-pd/README.md
-
-</div>
-<h3 class="pdoc-member-header" id="Volume-configMap">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13570">property <b>configMap</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>configMap: <a href='#ConfigMapVolumeSource'>ConfigMapVolumeSource</a>;</pre>
-
-ConfigMap represents a configMap that should populate this volume
-
-</div>
-<h3 class="pdoc-member-header" id="Volume-downwardAPI">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13575">property <b>downwardAPI</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>downwardAPI: <a href='#DownwardAPIVolumeSource'>DownwardAPIVolumeSource</a>;</pre>
-
-DownwardAPI represents downward API about the pod that should populate this volume
-
-</div>
-<h3 class="pdoc-member-header" id="Volume-emptyDir">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13581">property <b>emptyDir</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>emptyDir: <a href='#EmptyDirVolumeSource'>EmptyDirVolumeSource</a>;</pre>
-
-EmptyDir represents a temporary directory that shares a pod's lifetime. More info:
-https://kubernetes.io/docs/concepts/storage/volumes#emptydir
-
-</div>
-<h3 class="pdoc-member-header" id="Volume-fc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13587">property <b>fc</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>fc: <a href='#FCVolumeSource'>FCVolumeSource</a>;</pre>
-
-FC represents a Fibre Channel resource that is attached to a kubelet's host machine and
-then exposed to the pod.
-
-</div>
-<h3 class="pdoc-member-header" id="Volume-flexVolume">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13593">property <b>flexVolume</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>flexVolume: <a href='#FlexVolumeSource'>FlexVolumeSource</a>;</pre>
-
-FlexVolume represents a generic volume resource that is provisioned/attached using an exec
-based plugin.
-
-</div>
-<h3 class="pdoc-member-header" id="Volume-flocker">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13599">property <b>flocker</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>flocker: <a href='#FlockerVolumeSource'>FlockerVolumeSource</a>;</pre>
-
-Flocker represents a Flocker volume attached to a kubelet's host machine. This depends on
-the Flocker control service being running
-
-</div>
-<h3 class="pdoc-member-header" id="Volume-gcePersistentDisk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13606">property <b>gcePersistentDisk</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>gcePersistentDisk: <a href='#GCEPersistentDiskVolumeSource'>GCEPersistentDiskVolumeSource</a>;</pre>
-
-GCEPersistentDisk represents a GCE Disk resource that is attached to a kubelet's host
-machine and then exposed to the pod. More info:
-https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
-
-</div>
-<h3 class="pdoc-member-header" id="Volume-gitRepo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13614">property <b>gitRepo</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>gitRepo: <a href='#GitRepoVolumeSource'>GitRepoVolumeSource</a>;</pre>
-
-GitRepo represents a git repository at a particular revision. DEPRECATED: GitRepo is
-deprecated. To provision a container with a git repo, mount an EmptyDir into an
-InitContainer that clones the repo using git, then mount the EmptyDir into the Pod's
-container.
-
-</div>
-<h3 class="pdoc-member-header" id="Volume-glusterfs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13620">property <b>glusterfs</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>glusterfs: <a href='#GlusterfsVolumeSource'>GlusterfsVolumeSource</a>;</pre>
-
-Glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime. More info:
-https://releases.k8s.io/HEAD/examples/volumes/glusterfs/README.md
-
-</div>
-<h3 class="pdoc-member-header" id="Volume-hostPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13628">property <b>hostPath</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>hostPath: <a href='#HostPathVolumeSource'>HostPathVolumeSource</a>;</pre>
-
-HostPath represents a pre-existing file or directory on the host machine that is directly
-exposed to the container. This is generally used for system agents or other privileged
-things that are allowed to see the host machine. Most containers will NOT need this. More
-info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
-
-</div>
-<h3 class="pdoc-member-header" id="Volume-iscsi">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13635">property <b>iscsi</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>iscsi: <a href='#ISCSIVolumeSource'>ISCSIVolumeSource</a>;</pre>
-
-ISCSI represents an ISCSI Disk resource that is attached to a kubelet's host machine and
-then exposed to the pod. More info:
-https://releases.k8s.io/HEAD/examples/volumes/iscsi/README.md
-
-</div>
-<h3 class="pdoc-member-header" id="Volume-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13641">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Volume's name. Must be a DNS_LABEL and unique within the pod. More info:
-https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
-
-</div>
-<h3 class="pdoc-member-header" id="Volume-nfs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13647">property <b>nfs</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>nfs: <a href='#NFSVolumeSource'>NFSVolumeSource</a>;</pre>
-
-NFS represents an NFS mount on the host that shares a pod's lifetime More info:
-https://kubernetes.io/docs/concepts/storage/volumes#nfs
-
-</div>
-<h3 class="pdoc-member-header" id="Volume-persistentVolumeClaim">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13654">property <b>persistentVolumeClaim</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>persistentVolumeClaim: <a href='#PersistentVolumeClaimVolumeSource'>PersistentVolumeClaimVolumeSource</a>;</pre>
-
-PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the
-same namespace. More info:
-https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
-
-</div>
-<h3 class="pdoc-member-header" id="Volume-photonPersistentDisk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13660">property <b>photonPersistentDisk</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>photonPersistentDisk: <a href='#PhotonPersistentDiskVolumeSource'>PhotonPersistentDiskVolumeSource</a>;</pre>
-
-PhotonPersistentDisk represents a PhotonController persistent disk attached and mounted on
-kubelets host machine
-
-</div>
-<h3 class="pdoc-member-header" id="Volume-portworxVolume">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13665">property <b>portworxVolume</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>portworxVolume: <a href='#PortworxVolumeSource'>PortworxVolumeSource</a>;</pre>
-
-PortworxVolume represents a portworx volume attached and mounted on kubelets host machine
-
-</div>
-<h3 class="pdoc-member-header" id="Volume-projected">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13670">property <b>projected</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>projected: <a href='#ProjectedVolumeSource'>ProjectedVolumeSource</a>;</pre>
-
-Items for all in one resources secrets, configmaps, and downward API
-
-</div>
-<h3 class="pdoc-member-header" id="Volume-quobyte">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13675">property <b>quobyte</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>quobyte: <a href='#QuobyteVolumeSource'>QuobyteVolumeSource</a>;</pre>
-
-Quobyte represents a Quobyte mount on the host that shares a pod's lifetime
-
-</div>
-<h3 class="pdoc-member-header" id="Volume-rbd">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13681">property <b>rbd</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>rbd: <a href='#RBDVolumeSource'>RBDVolumeSource</a>;</pre>
-
-RBD represents a Rados Block Device mount on the host that shares a pod's lifetime. More
-info: https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md
-
-</div>
-<h3 class="pdoc-member-header" id="Volume-scaleIO">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13686">property <b>scaleIO</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>scaleIO: <a href='#ScaleIOVolumeSource'>ScaleIOVolumeSource</a>;</pre>
-
-ScaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes.
-
-</div>
-<h3 class="pdoc-member-header" id="Volume-secret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13692">property <b>secret</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>secret: <a href='#SecretVolumeSource'>SecretVolumeSource</a>;</pre>
-
-Secret represents a secret that should populate this volume. More info:
-https://kubernetes.io/docs/concepts/storage/volumes#secret
-
-</div>
-<h3 class="pdoc-member-header" id="Volume-storageos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13697">property <b>storageos</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>storageos: <a href='#StorageOSVolumeSource'>StorageOSVolumeSource</a>;</pre>
-
-StorageOS represents a StorageOS volume attached and mounted on Kubernetes nodes.
-
-</div>
-<h3 class="pdoc-member-header" id="Volume-vsphereVolume">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13702">property <b>vsphereVolume</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>vsphereVolume: <a href='#VsphereVirtualDiskVolumeSource'>VsphereVirtualDiskVolumeSource</a>;</pre>
-
-VsphereVolume represents a vSphere volume attached and mounted on kubelets host machine
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="VolumeDevice">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13709">interface <b>VolumeDevice</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-volumeDevice describes a mapping of a raw block device within a container.
-
-<h3 class="pdoc-member-header" id="VolumeDevice-devicePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13713">property <b>devicePath</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>devicePath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-devicePath is the path inside of the container that the device will be mapped to.
-
-</div>
-<h3 class="pdoc-member-header" id="VolumeDevice-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13718">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-name must match the name of a persistentVolumeClaim in the pod
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="VolumeMount">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13725">interface <b>VolumeMount</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-VolumeMount describes a mounting of a Volume within a container.
-
-<h3 class="pdoc-member-header" id="VolumeMount-mountPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13729">property <b>mountPath</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>mountPath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Path within the container at which the volume should be mounted.  Must not contain ':'.
-
-</div>
-<h3 class="pdoc-member-header" id="VolumeMount-mountPropagation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13735">property <b>mountPropagation</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>mountPropagation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-mountPropagation determines how mounts are propagated from the host to container and the
-other way around. When not set, MountPropagationNone is used. This field is beta in 1.10.
-
-</div>
-<h3 class="pdoc-member-header" id="VolumeMount-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13740">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-This must match the Name of a Volume.
-
-</div>
-<h3 class="pdoc-member-header" id="VolumeMount-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13745">property <b>readOnly</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Mounted read-only if true, read-write otherwise (false or unspecified). Defaults to false.
-
-</div>
-<h3 class="pdoc-member-header" id="VolumeMount-subPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13751">property <b>subPath</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>subPath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Path within the volume from which the container's volume should be mounted. Defaults to ""
-(volume's root).
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="VolumeNodeAffinity">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13759">interface <b>VolumeNodeAffinity</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-VolumeNodeAffinity defines constraints that limit what nodes this volume can be accessed
-from.
-
-<h3 class="pdoc-member-header" id="VolumeNodeAffinity-required">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13763">property <b>required</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>required: <a href='#NodeSelector'>NodeSelector</a>;</pre>
-
-Required specifies hard node constraints that must be met.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="VolumeProjection">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13770">interface <b>VolumeProjection</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Projection that may be projected along with other supported volume types
-
-<h3 class="pdoc-member-header" id="VolumeProjection-configMap">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13774">property <b>configMap</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>configMap: <a href='#ConfigMapProjection'>ConfigMapProjection</a>;</pre>
-
-information about the configMap data to project
-
-</div>
-<h3 class="pdoc-member-header" id="VolumeProjection-downwardAPI">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13779">property <b>downwardAPI</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>downwardAPI: <a href='#DownwardAPIProjection'>DownwardAPIProjection</a>;</pre>
-
-information about the downwardAPI data to project
-
-</div>
-<h3 class="pdoc-member-header" id="VolumeProjection-secret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13784">property <b>secret</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>secret: <a href='#SecretProjection'>SecretProjection</a>;</pre>
-
-information about the secret data to project
-
-</div>
-<h3 class="pdoc-member-header" id="VolumeProjection-serviceAccountToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13789">property <b>serviceAccountToken</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>serviceAccountToken: <a href='#ServiceAccountTokenProjection'>ServiceAccountTokenProjection</a>;</pre>
-
-information about the serviceAccountToken data to project
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="VsphereVirtualDiskVolumeSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13796">interface <b>VsphereVirtualDiskVolumeSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Represents a vSphere volume resource.
-
-<h3 class="pdoc-member-header" id="VsphereVirtualDiskVolumeSource-fsType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13801">property <b>fsType</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>fsType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Filesystem type to mount. Must be a filesystem type supported by the host operating system.
-Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
-
-</div>
-<h3 class="pdoc-member-header" id="VsphereVirtualDiskVolumeSource-storagePolicyID">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13806">property <b>storagePolicyID</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>storagePolicyID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Storage Policy Based Management (SPBM) profile ID associated with the StoragePolicyName.
-
-</div>
-<h3 class="pdoc-member-header" id="VsphereVirtualDiskVolumeSource-storagePolicyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13811">property <b>storagePolicyName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>storagePolicyName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Storage Policy Based Management (SPBM) profile name.
-
-</div>
-<h3 class="pdoc-member-header" id="VsphereVirtualDiskVolumeSource-volumePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13816">property <b>volumePath</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>volumePath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Path that identifies vSphere volume vmdk
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="WeightedPodAffinityTerm">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13824">interface <b>WeightedPodAffinityTerm</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-The weights of all of the matched WeightedPodAffinityTerm fields are added per-node to find
-the most preferred node(s)
-
-<h3 class="pdoc-member-header" id="WeightedPodAffinityTerm-podAffinityTerm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13828">property <b>podAffinityTerm</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>podAffinityTerm: <a href='#PodAffinityTerm'>PodAffinityTerm</a>;</pre>
-
-Required. A pod affinity term, associated with the corresponding weight.
-
-</div>
-<h3 class="pdoc-member-header" id="WeightedPodAffinityTerm-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13833">property <b>weight</b></a>
+<h3 class="pdoc-member-header" id="ServiceList-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>weight: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 
-weight associated with matching the corresponding podAffinityTerm, in the range 1-100.
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 </div>
 </div>

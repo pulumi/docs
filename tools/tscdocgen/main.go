@@ -102,7 +102,14 @@ func emitMarkdownDocs(doc *typeDocNode, outdir string) error {
 	pkg := doc.Name
 	repoURL := gitHubBaseURLs[pkg]
 	e := newEmitter(pkg, repoURL, outdir)
-	root, err := e.gatherModules(doc, rootModule)
+
+	// The kubernetes package requires some special handling since the structure differs from
+	// the tf-generated providers.
+	k8s := false
+	if pkg == "@pulumi/kubernetes" {
+		k8s = true
+	}
+	root, err := e.gatherModules(doc, rootModule, k8s)
 	if err != nil {
 		return err
 	}
@@ -345,7 +352,7 @@ func transitiveSortByLabels(nodes []*typeDocNode) {
 }
 
 // gatherModules walks a Typedoc AST and turns it into a proper module structure, to ease Markdown emission.
-func (e *emitter) gatherModules(doc *typeDocNode, parentModule string) (*module, error) {
+func (e *emitter) gatherModules(doc *typeDocNode, parentModule string, k8s bool) (*module, error) {
 	// First gather up all modules.  Since the AST nodes may appear in arbitrary order, we need to perform this
 	// pass first, before we can build up a proper tree structure with parents/children.
 	mods := make(map[string]*module)
@@ -363,6 +370,16 @@ func (e *emitter) gatherModules(doc *typeDocNode, parentModule string) (*module,
 		// Simplify the module name, because we assume a simplified index-based re-export structure.  This will
 		// flatten out all inner submodules to their index, so that all children will aggregate naturally.
 		modname := simplifyModuleName(modnode, parentModule)
+
+		// Skip internal tests module in k8s provider.
+		if k8s && modname == "tests" {
+			continue
+		}
+		// k8s provider has common types files which are imported into multiple modules.
+		// TODO(levi): Split the input/output types into the same directory structure, and remove this skip.
+		if k8s && modname == "types" {
+			continue
+		}
 
 		// Lazy init the module if appropriate.
 		mod := mods[modname]
@@ -390,6 +407,7 @@ func (e *emitter) gatherModules(doc *typeDocNode, parentModule string) (*module,
 
 				for nsname, ns := range nss {
 					if exist, has := mods[nsname]; has {
+
 						if err := exist.Merge(ns); err != nil {
 							return nil, err
 						}
@@ -537,15 +555,15 @@ func getModuleParentName(m string) string {
 // simplifyModuleName turns a module AST's name into a simplified module name.
 func simplifyModuleName(modnode *typeDocNode, parentModule string) string {
 	// Remove the quotes that will always surround the name.
-	name := strings.Trim(modnode.Name, "\"")
+	name := strings.Trim(modnode.Name, `"`)
 
 	// If it begins with a "./", simplify it to just the parent name.
 	if strings.Index(name, "./") == 0 {
 		return parentModule
 	}
 
-	// If the name contains a "/", then it's a subm-module, and we choose to simplify to the parent name.
-	if slix := strings.IndexRune(name, '/'); slix != -1 {
+	// If the name contains a "/", then it's a sub-module, and we choose to simplify to the parent name.
+	if slix := strings.LastIndex(name, "/"); slix != -1 {
 		return name[:slix]
 	}
 
