@@ -15,7 +15,6 @@ title: Module admissionregistration
 <div class="expanded" markdown="1">
 <h2 class="pdoc-module-header toggleButton" title="Click to hide Modules">Modules ▾</h2>
 <div class="pdoc-module-contents" markdown="1">
-* <a href="v1alpha1">admissionregistration/v1alpha1</a>
 * <a href="v1beta1">admissionregistration/v1beta1</a>
 </div>
 </div>
