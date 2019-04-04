@@ -105,6 +105,8 @@ $ pulumi stack output publicIp
 18.218.85.197
 ```
 
+See also [Inter-Stack Dependencies](organizing-stacks-projects.html#inter-stack-dependencies), which allow one stack to reference the outputs of another stack.
+
 ## Import and export a stack deployment
 
 A stack can be exported to see the raw data associated with the stack.  This is useful when manual changes need to be applied to the stack due to changes made in the target cloud platform that Pulumi is not aware of.  The modified stack can then be imported to set the current state of the stack to the new values.
