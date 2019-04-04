@@ -25,13 +25,9 @@ import * as kubernetes from "@pulumi/kubernetes";
 <h2 class="pdoc-module-header toggleButton" title="Click to hide Index">Index ▾</h2>
 <div class="pdoc-module-contents" markdown="1">
 * <a href="#Provider">class Provider</a>
-* <a href="#fetch">function fetch</a>
-* <a href="#quotePath">function quotePath</a>
-* <a href="#quoteWindowsPath">function quoteWindowsPath</a>
-* <a href="#FetchOpts">interface FetchOpts</a>
 * <a href="#ProviderArgs">interface ProviderArgs</a>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts">helm.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/path.ts">path.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts">provider.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts">provider.ts</a> 
 </div>
 </div>
 </div>
@@ -57,24 +53,22 @@ import * as kubernetes from "@pulumi/kubernetes";
 * <a href="core">core</a>
 * <a href="events">events</a>
 * <a href="extensions">extensions</a>
+* <a href="helm">helm</a>
 * <a href="meta">meta</a>
 * <a href="networking">networking</a>
-* <a href="pkg">pkg</a>
+* <a href="node">node</a>
 * <a href="policy">policy</a>
 * <a href="rbac">rbac</a>
 * <a href="scheduling">scheduling</a>
 * <a href="settings">settings</a>
 * <a href="storage">storage</a>
-* <a href="tests">tests</a>
-* <a href="types">types</a>
-* <a href="v2">v2</a>
 * <a href="yaml">yaml</a>
 </div>
 </div>
 </div>
 
 <h2 class="pdoc-module-header" id="Provider">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L3368">class <b>Provider</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L6">class <b>Provider</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> ProviderResource</pre>
@@ -82,7 +76,7 @@ import * as kubernetes from "@pulumi/kubernetes";
 The provider type for the kubernetes package.
 
 <h3 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L3368"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L6"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -97,7 +91,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -105,7 +99,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -117,7 +111,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -127,7 +121,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -137,134 +131,15 @@ deployments.
 
 </div>
 </div>
-<h2 class="pdoc-module-header" id="fetch">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L324">function <b>fetch</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>fetch(chart: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, opts?: <a href='#ResolvedFetchOpts'>ResolvedFetchOpts</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="quotePath">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/path.ts#L3">function <b>quotePath</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>quotePath(path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="quoteWindowsPath">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/path.ts#L11">function <b>quoteWindowsPath</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>quoteWindowsPath(path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="FetchOpts">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L245">interface <b>FetchOpts</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<h3 class="pdoc-member-header" id="FetchOpts-caFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L250">property <b>caFile</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>caFile?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-</div>
-<h3 class="pdoc-member-header" id="FetchOpts-certFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L253">property <b>certFile</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>certFile?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-</div>
-<h3 class="pdoc-member-header" id="FetchOpts-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L260">property <b>destination</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>destination?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-</div>
-<h3 class="pdoc-member-header" id="FetchOpts-devel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L283">property <b>devel</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>devel?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-</div>
-<h3 class="pdoc-member-header" id="FetchOpts-home">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L279">property <b>home</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>home?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-</div>
-<h3 class="pdoc-member-header" id="FetchOpts-keyFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L256">property <b>keyFile</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>keyFile?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-</div>
-<h3 class="pdoc-member-header" id="FetchOpts-keyring">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L263">property <b>keyring</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>keyring?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-</div>
-<h3 class="pdoc-member-header" id="FetchOpts-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L266">property <b>password</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>password?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-</div>
-<h3 class="pdoc-member-header" id="FetchOpts-prov">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L286">property <b>prov</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>prov?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-</div>
-<h3 class="pdoc-member-header" id="FetchOpts-repo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L269">property <b>repo</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>repo?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-</div>
-<h3 class="pdoc-member-header" id="FetchOpts-untar">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L289">property <b>untar</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>untar?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-</div>
-<h3 class="pdoc-member-header" id="FetchOpts-untardir">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L273">property <b>untardir</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>untardir?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-</div>
-<h3 class="pdoc-member-header" id="FetchOpts-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L276">property <b>username</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>username?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-</div>
-<h3 class="pdoc-member-header" id="FetchOpts-verify">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L292">property <b>verify</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>verify?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-</div>
-<h3 class="pdoc-member-header" id="FetchOpts-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L247">property <b>version</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>version?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-</div>
-</div>
 <h2 class="pdoc-module-header" id="ProviderArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L3390">interface <b>ProviderArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L28">interface <b>ProviderArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a Provider.
 
 <h3 class="pdoc-member-header" id="ProviderArgs-cluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L3394">property <b>cluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L32">property <b>cluster</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>cluster?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -273,7 +148,7 @@ If present, the name of the kubeconfig cluster to use.
 
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-context">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L3398">property <b>context</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L36">property <b>context</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>context?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -282,7 +157,7 @@ If present, the name of the kubeconfig context to use.
 
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-kubeconfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L3402">property <b>kubeconfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L40">property <b>kubeconfig</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>kubeconfig?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -291,7 +166,7 @@ The contents of a kubeconfig file. If this is set, this config will be used inst
 
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L3406">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L44">property <b>namespace</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>namespace?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

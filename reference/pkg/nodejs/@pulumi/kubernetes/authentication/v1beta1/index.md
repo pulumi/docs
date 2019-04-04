@@ -14,39 +14,86 @@ title: Module authentication/v1beta1
 <div class="expanded" markdown="1">
 <h2 class="pdoc-module-header toggleButton" title="Click to hide Index">Index ▾</h2>
 <div class="pdoc-module-contents" markdown="1">
-* <a href="#isTokenReview">function isTokenReview</a>
-* <a href="#TokenReview">interface TokenReview</a>
-* <a href="#TokenReviewSpec">interface TokenReviewSpec</a>
-* <a href="#TokenReviewStatus">interface TokenReviewStatus</a>
-* <a href="#UserInfo">interface UserInfo</a>
+* <a href="#TokenReview">class TokenReview</a>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts">types/input.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/authentication/v1beta1/TokenReview.ts">authentication/v1beta1/TokenReview.ts</a> 
 </div>
 </div>
 </div>
 
 
-<h2 class="pdoc-module-header" id="isTokenReview">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L4934">function <b>isTokenReview</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isTokenReview(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
 <h2 class="pdoc-module-header" id="TokenReview">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4636">interface <b>TokenReview</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/authentication/v1beta1/TokenReview.ts#L12">class <b>TokenReview</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 TokenReview attempts to authenticate a token to a known user. Note: TokenReview requests may
 be cached by the webhook token authenticator plugin in the kube-apiserver.
 
-<h3 class="pdoc-member-header" id="TokenReview-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4643">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="TokenReview-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/authentication/v1beta1/TokenReview.ts#L59"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> TokenReview(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.authentication.v1beta1.TokenReview, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a authentication.v1beta1.TokenReview resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="TokenReview-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/authentication/v1beta1/TokenReview.ts#L54">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#TokenReview'>TokenReview</a></pre>
+
+
+Get the state of an existing `TokenReview` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="TokenReview-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/authentication/v1beta1/TokenReview.ts#L58">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.authentication.v1beta1.TokenReview</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="TokenReview-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="TokenReview-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="TokenReview-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/authentication/v1beta1/TokenReview.ts#L19">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"authentication.k8s.io/v1beta1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -54,11 +101,21 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="TokenReview-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4651">property <b>kind</b></a>
+<h3 class="pdoc-member-header" id="TokenReview-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="TokenReview-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/authentication/v1beta1/TokenReview.ts#L27">property <b>kind</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"TokenReview"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -67,151 +124,37 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="TokenReview-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4654">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/authentication/v1beta1/TokenReview.ts#L30">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="TokenReview-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4659">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/authentication/v1beta1/TokenReview.ts#L35">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>spec: <a href='#TokenReviewSpec'>TokenReviewSpec</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.authentication.v1beta1.TokenReviewSpec&gt;;</pre>
 
 Spec holds information about the request being evaluated
 
 </div>
 <h3 class="pdoc-member-header" id="TokenReview-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4664">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/authentication/v1beta1/TokenReview.ts#L40">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>status: <a href='#TokenReviewStatus'>TokenReviewStatus</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>status: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.authentication.v1beta1.TokenReviewStatus&gt;;</pre>
 
 Status is filled in by the server and indicates whether the request can be authenticated.
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="TokenReviewSpec">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4671">interface <b>TokenReviewSpec</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-TokenReviewSpec is a description of the token authentication request.
-
-<h3 class="pdoc-member-header" id="TokenReviewSpec-audiences">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4678">property <b>audiences</b></a>
+<h3 class="pdoc-member-header" id="TokenReview-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>audiences: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 
-Audiences is a list of the identifiers that the resource server presented with the token
-identifies as. Audience-aware token authenticators will verify that the token was intended
-for at least one of the audiences in this list. If no audiences are provided, the audience
-will default to the audience of the Kubernetes apiserver.
-
-</div>
-<h3 class="pdoc-member-header" id="TokenReviewSpec-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4683">property <b>token</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>token: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Token is the opaque bearer token.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="TokenReviewStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4690">interface <b>TokenReviewStatus</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-TokenReviewStatus is the result of the token authentication request.
-
-<h3 class="pdoc-member-header" id="TokenReviewStatus-audiences">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4700">property <b>audiences</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>audiences: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-Audiences are audience identifiers chosen by the authenticator that are compatible with
-both the TokenReview and token. An identifier is any identifier in the intersection of the
-TokenReviewSpec audiences and the token's audiences. A client of the TokenReview API that
-sets the spec.audiences field should validate that a compatible audience identifier is
-returned in the status.audiences field to ensure that the TokenReview server is audience
-aware. If a TokenReview returns an empty status.audience field where status.authenticated
-is "true", the token is valid against the audience of the Kubernetes API server.
-
-</div>
-<h3 class="pdoc-member-header" id="TokenReviewStatus-authenticated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4705">property <b>authenticated</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>authenticated: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Authenticated indicates that the token was associated with a known user.
-
-</div>
-<h3 class="pdoc-member-header" id="TokenReviewStatus-error">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4710">property <b>error</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>error: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Error indicates that the token couldn't be checked
-
-</div>
-<h3 class="pdoc-member-header" id="TokenReviewStatus-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4715">property <b>user</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>user: <a href='#UserInfo'>UserInfo</a>;</pre>
-
-User is the UserInfo associated with the provided token.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="UserInfo">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4722">interface <b>UserInfo</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-UserInfo holds the information about the user needed to implement the user.Info interface.
-
-<h3 class="pdoc-member-header" id="UserInfo-extra">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4726">property <b>extra</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>extra: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
-
-Any additional information provided by the authenticator.
-
-</div>
-<h3 class="pdoc-member-header" id="UserInfo-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4731">property <b>groups</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>groups: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-The names of groups this user is a part of.
-
-</div>
-<h3 class="pdoc-member-header" id="UserInfo-uid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4737">property <b>uid</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>uid: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-A unique value that identifies this user across time. If this user is deleted and another
-user by the same name is added, they will have different UIDs.
-
-</div>
-<h3 class="pdoc-member-header" id="UserInfo-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4742">property <b>username</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>username: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The name that uniquely identifies this user among all active users.
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 </div>
 </div>

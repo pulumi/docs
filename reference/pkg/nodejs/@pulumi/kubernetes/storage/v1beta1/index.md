@@ -14,61 +14,560 @@ title: Module storage/v1beta1
 <div class="expanded" markdown="1">
 <h2 class="pdoc-module-header toggleButton" title="Click to hide Index">Index ▾</h2>
 <div class="pdoc-module-contents" markdown="1">
-* <a href="#isStorageClass">function isStorageClass</a>
-* <a href="#isStorageClassList">function isStorageClassList</a>
-* <a href="#isVolumeAttachment">function isVolumeAttachment</a>
-* <a href="#isVolumeAttachmentList">function isVolumeAttachmentList</a>
-* <a href="#StorageClass">interface StorageClass</a>
-* <a href="#StorageClassList">interface StorageClassList</a>
-* <a href="#VolumeAttachment">interface VolumeAttachment</a>
-* <a href="#VolumeAttachmentList">interface VolumeAttachmentList</a>
-* <a href="#VolumeAttachmentSource">interface VolumeAttachmentSource</a>
-* <a href="#VolumeAttachmentSpec">interface VolumeAttachmentSpec</a>
-* <a href="#VolumeAttachmentStatus">interface VolumeAttachmentStatus</a>
-* <a href="#VolumeError">interface VolumeError</a>
+* <a href="#CSIDriver">class CSIDriver</a>
+* <a href="#CSIDriverList">class CSIDriverList</a>
+* <a href="#CSINode">class CSINode</a>
+* <a href="#CSINodeList">class CSINodeList</a>
+* <a href="#StorageClass">class StorageClass</a>
+* <a href="#StorageClassList">class StorageClassList</a>
+* <a href="#VolumeAttachment">class VolumeAttachment</a>
+* <a href="#VolumeAttachmentList">class VolumeAttachmentList</a>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts">types/input.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSIDriver.ts">storage/v1beta1/CSIDriver.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSIDriverList.ts">storage/v1beta1/CSIDriverList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSINode.ts">storage/v1beta1/CSINode.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSINodeList.ts">storage/v1beta1/CSINodeList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/StorageClass.ts">storage/v1beta1/StorageClass.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/StorageClassList.ts">storage/v1beta1/StorageClassList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/VolumeAttachment.ts">storage/v1beta1/VolumeAttachment.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/VolumeAttachmentList.ts">storage/v1beta1/VolumeAttachmentList.ts</a> 
 </div>
 </div>
 </div>
 
 
-<h2 class="pdoc-module-header" id="isStorageClass">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L20387">function <b>isStorageClass</b></a>
+<h2 class="pdoc-module-header" id="CSIDriver">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSIDriver.ts#L17">class <b>CSIDriver</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
-<pre class="highlight"><span class='kd'></span>isStorageClass(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+CSIDriver captures information about a Container Storage Interface (CSI) volume driver
+deployed on the cluster. CSI drivers do not need to create the CSIDriver object directly.
+Instead they may use the cluster-driver-registrar sidecar container. When deployed with a CSI
+driver it automatically creates a CSIDriver object representing the driver. Kubernetes attach
+detach controller uses this object to determine whether attach is required. Kubelet uses this
+object to determine whether pod information needs to be passed on mount. CSIDriver objects
+are non-namespaced.
+
+<h3 class="pdoc-member-header" id="CSIDriver-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSIDriver.ts#L65"> <b>constructor</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> CSIDriver(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.storage.v1beta1.CSIDriver, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a storage.v1beta1.CSIDriver resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
 
 </div>
-<h2 class="pdoc-module-header" id="isStorageClassList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L20424">function <b>isStorageClassList</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="CSIDriver-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSIDriver.ts#L60">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
-<pre class="highlight"><span class='kd'></span>isStorageClassList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#CSIDriver'>CSIDriver</a></pre>
+
+
+Get the state of an existing `CSIDriver` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 </div>
-<h2 class="pdoc-module-header" id="isVolumeAttachment">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L20471">function <b>isVolumeAttachment</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="CSIDriver-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSIDriver.ts#L64">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
-<pre class="highlight"><span class='kd'></span>isVolumeAttachment(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.storage.v1beta1.CSIDriver</pre>
 
 </div>
-<h2 class="pdoc-module-header" id="isVolumeAttachmentList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L20508">function <b>isVolumeAttachmentList</b></a>
+<h3 class="pdoc-member-header" id="CSIDriver-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="CSIDriver-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="CSIDriver-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSIDriver.ts#L24">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"storage.k8s.io/v1beta1"</span>&gt;;</pre>
+
+APIVersion defines the versioned schema of this representation of an object. Servers should
+convert recognized schemas to the latest internal value, and may reject unrecognized
+values. More info:
+https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
+
+</div>
+<h3 class="pdoc-member-header" id="CSIDriver-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="CSIDriver-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSIDriver.ts#L32">property <b>kind</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"CSIDriver"</span>&gt;;</pre>
+
+Kind is a string value representing the REST resource this object represents. Servers may
+infer this from the endpoint the client submits requests to. Cannot be updated. In
+CamelCase. More info:
+https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+
+</div>
+<h3 class="pdoc-member-header" id="CSIDriver-metadata">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSIDriver.ts#L41">property <b>metadata</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
+
+Standard object metadata. metadata.Name indicates the name of the CSI driver that this
+object refers to; it MUST be the same name returned by the CSI GetPluginName() call for
+that driver. The driver name must be 63 characters or less, beginning and ending with an
+alphanumeric character ([a-z0-9A-Z]) with dashes (-), dots (.), and alphanumerics between.
+More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
+
+</div>
+<h3 class="pdoc-member-header" id="CSIDriver-spec">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSIDriver.ts#L46">property <b>spec</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.storage.v1beta1.CSIDriverSpec&gt;;</pre>
+
+Specification of the CSI Driver.
+
+</div>
+<h3 class="pdoc-member-header" id="CSIDriver-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+</div>
+</div>
+<h2 class="pdoc-module-header" id="CSIDriverList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSIDriverList.ts#L11">class <b>CSIDriverList</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
-<pre class="highlight"><span class='kd'></span>isVolumeAttachmentList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+CSIDriverList is a collection of CSIDriver objects.
 
+<h3 class="pdoc-member-header" id="CSIDriverList-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSIDriverList.ts#L56"> <b>constructor</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> CSIDriverList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.storage.v1beta1.CSIDriverList, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a storage.v1beta1.CSIDriverList resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="CSIDriverList-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSIDriverList.ts#L51">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#CSIDriverList'>CSIDriverList</a></pre>
+
+
+Get the state of an existing `CSIDriverList` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="CSIDriverList-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSIDriverList.ts#L55">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.storage.v1beta1.CSIDriverList</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="CSIDriverList-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="CSIDriverList-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="CSIDriverList-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSIDriverList.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"storage.k8s.io/v1beta1"</span>&gt;;</pre>
+
+APIVersion defines the versioned schema of this representation of an object. Servers should
+convert recognized schemas to the latest internal value, and may reject unrecognized
+values. More info:
+https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
+
+</div>
+<h3 class="pdoc-member-header" id="CSIDriverList-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="CSIDriverList-items">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSIDriverList.ts#L23">property <b>items</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>items: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.storage.v1beta1.CSIDriver[]&gt;;</pre>
+
+items is the list of CSIDriver
+
+</div>
+<h3 class="pdoc-member-header" id="CSIDriverList-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSIDriverList.ts#L31">property <b>kind</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"CSIDriverList"</span>&gt;;</pre>
+
+Kind is a string value representing the REST resource this object represents. Servers may
+infer this from the endpoint the client submits requests to. Cannot be updated. In
+CamelCase. More info:
+https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+
+</div>
+<h3 class="pdoc-member-header" id="CSIDriverList-metadata">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSIDriverList.ts#L37">property <b>metadata</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
+
+Standard list metadata More info:
+https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
+
+</div>
+<h3 class="pdoc-member-header" id="CSIDriverList-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+</div>
+</div>
+<h2 class="pdoc-module-header" id="CSINode">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSINode.ts#L17">class <b>CSINode</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+
+CSINode holds information about all CSI drivers installed on a node. CSI drivers do not need
+to create the CSINode object directly. As long as they use the node-driver-registrar sidecar
+container, the kubelet will automatically populate the CSINode object for the CSI driver as
+part of kubelet plugin registration. CSINode has the same name as a node. If the object is
+missing, it means either there are no CSI Drivers available on the node, or the Kubelet
+version is low enough that it doesn't create this object. CSINode has an OwnerReference that
+points to the corresponding node object.
+
+<h3 class="pdoc-member-header" id="CSINode-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSINode.ts#L61"> <b>constructor</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> CSINode(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.storage.v1beta1.CSINode, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a storage.v1beta1.CSINode resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="CSINode-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSINode.ts#L56">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#CSINode'>CSINode</a></pre>
+
+
+Get the state of an existing `CSINode` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="CSINode-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSINode.ts#L60">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.storage.v1beta1.CSINode</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="CSINode-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="CSINode-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="CSINode-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSINode.ts#L24">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"storage.k8s.io/v1beta1"</span>&gt;;</pre>
+
+APIVersion defines the versioned schema of this representation of an object. Servers should
+convert recognized schemas to the latest internal value, and may reject unrecognized
+values. More info:
+https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
+
+</div>
+<h3 class="pdoc-member-header" id="CSINode-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="CSINode-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSINode.ts#L32">property <b>kind</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"CSINode"</span>&gt;;</pre>
+
+Kind is a string value representing the REST resource this object represents. Servers may
+infer this from the endpoint the client submits requests to. Cannot be updated. In
+CamelCase. More info:
+https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+
+</div>
+<h3 class="pdoc-member-header" id="CSINode-metadata">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSINode.ts#L37">property <b>metadata</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
+
+metadata.name must be the Kubernetes node name.
+
+</div>
+<h3 class="pdoc-member-header" id="CSINode-spec">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSINode.ts#L42">property <b>spec</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.storage.v1beta1.CSINodeSpec&gt;;</pre>
+
+spec is the specification of CSINode
+
+</div>
+<h3 class="pdoc-member-header" id="CSINode-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+</div>
+</div>
+<h2 class="pdoc-module-header" id="CSINodeList">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSINodeList.ts#L11">class <b>CSINodeList</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+
+CSINodeList is a collection of CSINode objects.
+
+<h3 class="pdoc-member-header" id="CSINodeList-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSINodeList.ts#L56"> <b>constructor</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> CSINodeList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.storage.v1beta1.CSINodeList, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a storage.v1beta1.CSINodeList resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="CSINodeList-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSINodeList.ts#L51">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#CSINodeList'>CSINodeList</a></pre>
+
+
+Get the state of an existing `CSINodeList` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="CSINodeList-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSINodeList.ts#L55">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.storage.v1beta1.CSINodeList</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="CSINodeList-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="CSINodeList-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="CSINodeList-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSINodeList.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"storage.k8s.io/v1beta1"</span>&gt;;</pre>
+
+APIVersion defines the versioned schema of this representation of an object. Servers should
+convert recognized schemas to the latest internal value, and may reject unrecognized
+values. More info:
+https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
+
+</div>
+<h3 class="pdoc-member-header" id="CSINodeList-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="CSINodeList-items">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSINodeList.ts#L23">property <b>items</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>items: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.storage.v1beta1.CSINode[]&gt;;</pre>
+
+items is the list of CSINode
+
+</div>
+<h3 class="pdoc-member-header" id="CSINodeList-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSINodeList.ts#L31">property <b>kind</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"CSINodeList"</span>&gt;;</pre>
+
+Kind is a string value representing the REST resource this object represents. Servers may
+infer this from the endpoint the client submits requests to. Cannot be updated. In
+CamelCase. More info:
+https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+
+</div>
+<h3 class="pdoc-member-header" id="CSINodeList-metadata">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/CSINodeList.ts#L37">property <b>metadata</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
+
+Standard list metadata More info:
+https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
+
+</div>
+<h3 class="pdoc-member-header" id="CSINodeList-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+</div>
 </div>
 <h2 class="pdoc-module-header" id="StorageClass">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19225">interface <b>StorageClass</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/StorageClass.ts#L15">class <b>StorageClass</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 StorageClass describes the parameters for a class of storage for which PersistentVolumes can
 be dynamically provisioned.
@@ -76,20 +575,78 @@ be dynamically provisioned.
 StorageClasses are non-namespaced; the name of the storage class according to etcd is in
 ObjectMeta.Name.
 
-<h3 class="pdoc-member-header" id="StorageClass-allowVolumeExpansion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19229">property <b>allowVolumeExpansion</b></a>
+<h3 class="pdoc-member-header" id="StorageClass-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/StorageClass.ts#L99"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>allowVolumeExpansion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> StorageClass(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.storage.v1beta1.StorageClass, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a storage.v1beta1.StorageClass resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="StorageClass-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/StorageClass.ts#L94">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#StorageClass'>StorageClass</a></pre>
+
+
+Get the state of an existing `StorageClass` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="StorageClass-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/StorageClass.ts#L98">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.storage.v1beta1.StorageClass</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="StorageClass-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="StorageClass-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="StorageClass-allowVolumeExpansion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/StorageClass.ts#L19">property <b>allowVolumeExpansion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>allowVolumeExpansion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
 
 AllowVolumeExpansion shows whether the storage class allow volume expand
 
 </div>
 <h3 class="pdoc-member-header" id="StorageClass-allowedTopologies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19237">property <b>allowedTopologies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/StorageClass.ts#L27">property <b>allowedTopologies</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>allowedTopologies: <a href='#TopologySelectorTerm'>TopologySelectorTerm</a>[];</pre>
+<pre class="highlight"><span class='kd'>public </span>allowedTopologies: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.core.v1.TopologySelectorTerm[]&gt;;</pre>
 
 Restrict the node topologies where volumes can be dynamically provisioned. Each volume
 plugin defines its own supported topology specifications. An empty TopologySelectorTerm
@@ -98,10 +655,10 @@ enable the VolumeScheduling feature.
 
 </div>
 <h3 class="pdoc-member-header" id="StorageClass-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19245">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/StorageClass.ts#L35">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"storage.k8s.io/v1beta1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -109,11 +666,21 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="StorageClass-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19253">property <b>kind</b></a>
+<h3 class="pdoc-member-header" id="StorageClass-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="StorageClass-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/StorageClass.ts#L43">property <b>kind</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"StorageClass"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -122,20 +689,20 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="StorageClass-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19259">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/StorageClass.ts#L49">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 
 Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 </div>
 <h3 class="pdoc-member-header" id="StorageClass-mountOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19266">property <b>mountOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/StorageClass.ts#L56">property <b>mountOptions</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>mountOptions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+<pre class="highlight"><span class='kd'>public </span>mountOptions: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
 
 Dynamically provisioned PersistentVolumes of this storage class are created with these
 mountOptions, e.g. ["ro", "soft"]. Not validated - mount of the PVs will simply fail if one
@@ -143,39 +710,49 @@ is invalid.
 
 </div>
 <h3 class="pdoc-member-header" id="StorageClass-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19272">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/StorageClass.ts#L62">property <b>parameters</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>parameters: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</pre>
+<pre class="highlight"><span class='kd'>public </span>parameters: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
 
 Parameters holds the parameters for the provisioner that should create volumes of this
 storage class.
 
 </div>
 <h3 class="pdoc-member-header" id="StorageClass-provisioner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19277">property <b>provisioner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/StorageClass.ts#L67">property <b>provisioner</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>provisioner: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>provisioner: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 Provisioner indicates the type of the provisioner.
 
 </div>
 <h3 class="pdoc-member-header" id="StorageClass-reclaimPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19283">property <b>reclaimPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/StorageClass.ts#L73">property <b>reclaimPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>reclaimPolicy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>reclaimPolicy: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 Dynamically provisioned PersistentVolumes of this storage class are created with this
 reclaimPolicy. Defaults to Delete.
 
 </div>
-<h3 class="pdoc-member-header" id="StorageClass-volumeBindingMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19290">property <b>volumeBindingMode</b></a>
+<h3 class="pdoc-member-header" id="StorageClass-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>volumeBindingMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+</div>
+<h3 class="pdoc-member-header" id="StorageClass-volumeBindingMode">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/StorageClass.ts#L80">property <b>volumeBindingMode</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>volumeBindingMode: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 VolumeBindingMode indicates how PersistentVolumeClaims should be provisioned and bound.
 When unset, VolumeBindingImmediate is used. This field is only honored by servers that
@@ -184,17 +761,76 @@ enable the VolumeScheduling feature.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="StorageClassList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19297">interface <b>StorageClassList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/StorageClassList.ts#L11">class <b>StorageClassList</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 StorageClassList is a collection of storage classes.
 
-<h3 class="pdoc-member-header" id="StorageClassList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19304">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="StorageClassList-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/StorageClassList.ts#L56"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> StorageClassList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.storage.v1beta1.StorageClassList, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a storage.v1beta1.StorageClassList resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="StorageClassList-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/StorageClassList.ts#L51">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#StorageClassList'>StorageClassList</a></pre>
+
+
+Get the state of an existing `StorageClassList` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="StorageClassList-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/StorageClassList.ts#L55">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.storage.v1beta1.StorageClassList</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="StorageClassList-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="StorageClassList-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="StorageClassList-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/StorageClassList.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"storage.k8s.io/v1beta1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -202,20 +838,30 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="StorageClassList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19309">property <b>items</b></a>
+<h3 class="pdoc-member-header" id="StorageClassList-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>items: <a href='#StorageClass'>StorageClass</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="StorageClassList-items">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/StorageClassList.ts#L23">property <b>items</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>items: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.storage.v1beta1.StorageClass[]&gt;;</pre>
 
 Items is the list of StorageClasses
 
 </div>
 <h3 class="pdoc-member-header" id="StorageClassList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19317">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/StorageClassList.ts#L31">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"StorageClassList"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -224,31 +870,100 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="StorageClassList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19323">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/StorageClassList.ts#L37">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
 
 Standard list metadata More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 </div>
+<h3 class="pdoc-member-header" id="StorageClassList-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+</div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeAttachment">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19333">interface <b>VolumeAttachment</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/VolumeAttachment.ts#L14">class <b>VolumeAttachment</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 VolumeAttachment captures the intent to attach or detach the specified volume to/from the
 specified node.
 
 VolumeAttachment objects are non-namespaced.
 
-<h3 class="pdoc-member-header" id="VolumeAttachment-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19340">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="VolumeAttachment-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/VolumeAttachment.ts#L66"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> VolumeAttachment(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.storage.v1beta1.VolumeAttachment, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a storage.v1beta1.VolumeAttachment resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="VolumeAttachment-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/VolumeAttachment.ts#L61">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#VolumeAttachment'>VolumeAttachment</a></pre>
+
+
+Get the state of an existing `VolumeAttachment` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="VolumeAttachment-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/VolumeAttachment.ts#L65">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.storage.v1beta1.VolumeAttachment</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="VolumeAttachment-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="VolumeAttachment-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="VolumeAttachment-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/VolumeAttachment.ts#L21">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"storage.k8s.io/v1beta1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -256,11 +971,21 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="VolumeAttachment-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19348">property <b>kind</b></a>
+<h3 class="pdoc-member-header" id="VolumeAttachment-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="VolumeAttachment-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/VolumeAttachment.ts#L29">property <b>kind</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"VolumeAttachment"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -269,48 +994,117 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachment-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19354">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/VolumeAttachment.ts#L35">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 
 Standard object metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachment-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19360">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/VolumeAttachment.ts#L41">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>spec: <a href='#VolumeAttachmentSpec'>VolumeAttachmentSpec</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.storage.v1beta1.VolumeAttachmentSpec&gt;;</pre>
 
 Specification of the desired attach/detach volume behavior. Populated by the Kubernetes
 system.
 
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachment-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19366">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/VolumeAttachment.ts#L47">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>status: <a href='#VolumeAttachmentStatus'>VolumeAttachmentStatus</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>status: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.storage.v1beta1.VolumeAttachmentStatus&gt;;</pre>
 
 Status of the VolumeAttachment request. Populated by the entity completing the attach or
 detach operation, i.e. the external-attacher.
 
 </div>
+<h3 class="pdoc-member-header" id="VolumeAttachment-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+</div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeAttachmentList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19373">interface <b>VolumeAttachmentList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/VolumeAttachmentList.ts#L11">class <b>VolumeAttachmentList</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 VolumeAttachmentList is a collection of VolumeAttachment objects.
 
-<h3 class="pdoc-member-header" id="VolumeAttachmentList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19380">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="VolumeAttachmentList-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/VolumeAttachmentList.ts#L56"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> VolumeAttachmentList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.storage.v1beta1.VolumeAttachmentList, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a storage.v1beta1.VolumeAttachmentList resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="VolumeAttachmentList-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/VolumeAttachmentList.ts#L51">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#VolumeAttachmentList'>VolumeAttachmentList</a></pre>
+
+
+Get the state of an existing `VolumeAttachmentList` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="VolumeAttachmentList-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/VolumeAttachmentList.ts#L55">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.storage.v1beta1.VolumeAttachmentList</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="VolumeAttachmentList-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="VolumeAttachmentList-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="VolumeAttachmentList-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/VolumeAttachmentList.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"storage.k8s.io/v1beta1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -318,20 +1112,30 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="VolumeAttachmentList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19385">property <b>items</b></a>
+<h3 class="pdoc-member-header" id="VolumeAttachmentList-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>items: <a href='#VolumeAttachment'>VolumeAttachment</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="VolumeAttachmentList-items">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/VolumeAttachmentList.ts#L23">property <b>items</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>items: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.storage.v1beta1.VolumeAttachment[]&gt;;</pre>
 
 Items is the list of VolumeAttachments
 
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachmentList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19393">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/VolumeAttachmentList.ts#L31">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"VolumeAttachmentList"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -340,144 +1144,23 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachmentList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19399">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/storage/v1beta1/VolumeAttachmentList.ts#L37">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
 
 Standard list metadata More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="VolumeAttachmentSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19408">interface <b>VolumeAttachmentSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-VolumeAttachmentSource represents a volume that should be attached. Right now only
-PersistenVolumes can be attached via external attacher, in future we may allow also inline
-volumes in pods. Exactly one member can be set.
-
-<h3 class="pdoc-member-header" id="VolumeAttachmentSource-persistentVolumeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19412">property <b>persistentVolumeName</b></a>
+<h3 class="pdoc-member-header" id="VolumeAttachmentList-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>persistentVolumeName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 
-Name of the persistent volume to attach.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="VolumeAttachmentSpec">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19419">interface <b>VolumeAttachmentSpec</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-VolumeAttachmentSpec is the specification of a VolumeAttachment request.
-
-<h3 class="pdoc-member-header" id="VolumeAttachmentSpec-attacher">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19424">property <b>attacher</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>attacher: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Attacher indicates the name of the volume driver that MUST handle this request. This is the
-name returned by GetPluginName().
-
-</div>
-<h3 class="pdoc-member-header" id="VolumeAttachmentSpec-nodeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19429">property <b>nodeName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>nodeName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The node that the volume should be attached to.
-
-</div>
-<h3 class="pdoc-member-header" id="VolumeAttachmentSpec-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19434">property <b>source</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>source: <a href='#VolumeAttachmentSource'>VolumeAttachmentSource</a>;</pre>
-
-Source represents the volume that should be attached.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="VolumeAttachmentStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19441">interface <b>VolumeAttachmentStatus</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-VolumeAttachmentStatus is the status of a VolumeAttachment request.
-
-<h3 class="pdoc-member-header" id="VolumeAttachmentStatus-attachError">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19446">property <b>attachError</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>attachError: <a href='#VolumeError'>VolumeError</a>;</pre>
-
-The last error encountered during attach operation, if any. This field must only be set by
-the entity completing the attach operation, i.e. the external-attacher.
-
-</div>
-<h3 class="pdoc-member-header" id="VolumeAttachmentStatus-attached">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19452">property <b>attached</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>attached: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-Indicates the volume is successfully attached. This field must only be set by the entity
-completing the attach operation, i.e. the external-attacher.
-
-</div>
-<h3 class="pdoc-member-header" id="VolumeAttachmentStatus-attachmentMetadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19459">property <b>attachmentMetadata</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>attachmentMetadata: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</pre>
-
-Upon successful attach, this field is populated with any information returned by the attach
-operation that must be passed into subsequent WaitForAttach or Mount calls. This field must
-only be set by the entity completing the attach operation, i.e. the external-attacher.
-
-</div>
-<h3 class="pdoc-member-header" id="VolumeAttachmentStatus-detachError">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19465">property <b>detachError</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>detachError: <a href='#VolumeError'>VolumeError</a>;</pre>
-
-The last error encountered during detach operation, if any. This field must only be set by
-the entity completing the detach operation, i.e. the external-attacher.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="VolumeError">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19472">interface <b>VolumeError</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-VolumeError captures an error encountered during a volume operation.
-
-<h3 class="pdoc-member-header" id="VolumeError-message">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19477">property <b>message</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-String detailing the error encountered during Attach or Detach operation. This string maybe
-logged, so it should not contain sensitive information.
-
-</div>
-<h3 class="pdoc-member-header" id="VolumeError-time">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L19482">property <b>time</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>time: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Time the error was encountered.
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 </div>
 </div>

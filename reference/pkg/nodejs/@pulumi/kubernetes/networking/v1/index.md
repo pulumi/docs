@@ -14,80 +14,86 @@ title: Module networking/v1
 <div class="expanded" markdown="1">
 <h2 class="pdoc-module-header toggleButton" title="Click to hide Index">Index ▾</h2>
 <div class="pdoc-module-contents" markdown="1">
-* <a href="#isNetworkPolicy">function isNetworkPolicy</a>
-* <a href="#isNetworkPolicyList">function isNetworkPolicyList</a>
-* <a href="#IPBlock">interface IPBlock</a>
-* <a href="#NetworkPolicy">interface NetworkPolicy</a>
-* <a href="#NetworkPolicyEgressRule">interface NetworkPolicyEgressRule</a>
-* <a href="#NetworkPolicyIngressRule">interface NetworkPolicyIngressRule</a>
-* <a href="#NetworkPolicyList">interface NetworkPolicyList</a>
-* <a href="#NetworkPolicyPeer">interface NetworkPolicyPeer</a>
-* <a href="#NetworkPolicyPort">interface NetworkPolicyPort</a>
-* <a href="#NetworkPolicySpec">interface NetworkPolicySpec</a>
+* <a href="#NetworkPolicy">class NetworkPolicy</a>
+* <a href="#NetworkPolicyList">class NetworkPolicyList</a>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts">types/input.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/networking/v1/NetworkPolicy.ts">networking/v1/NetworkPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/networking/v1/NetworkPolicyList.ts">networking/v1/NetworkPolicyList.ts</a> 
 </div>
 </div>
 </div>
 
 
-<h2 class="pdoc-module-header" id="isNetworkPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L17387">function <b>isNetworkPolicy</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isNetworkPolicy(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isNetworkPolicyList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L17476">function <b>isNetworkPolicyList</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isNetworkPolicyList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="IPBlock">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16462">interface <b>IPBlock</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-IPBlock describes a particular CIDR (Ex. "192.168.1.1/24") that is allowed to the pods
-matched by a NetworkPolicySpec's podSelector. The except entry describes CIDRs that should
-not be included within this rule.
-
-<h3 class="pdoc-member-header" id="IPBlock-cidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16466">property <b>cidr</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>cidr: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-CIDR is a string representing the IP Block Valid examples are "192.168.1.1/24"
-
-</div>
-<h3 class="pdoc-member-header" id="IPBlock-except">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16472">property <b>except</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>except: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-Except is a slice of CIDRs that should not be included within an IP Block Valid examples
-are "192.168.1.1/24" Except values will be rejected if they are outside the CIDR range
-
-</div>
-</div>
 <h2 class="pdoc-module-header" id="NetworkPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16479">interface <b>NetworkPolicy</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/networking/v1/NetworkPolicy.ts#L11">class <b>NetworkPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 NetworkPolicy describes what network traffic is allowed for a set of Pods
 
-<h3 class="pdoc-member-header" id="NetworkPolicy-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16486">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="NetworkPolicy-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/networking/v1/NetworkPolicy.ts#L56"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> NetworkPolicy(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.networking.v1.NetworkPolicy, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a networking.v1.NetworkPolicy resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="NetworkPolicy-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/networking/v1/NetworkPolicy.ts#L51">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#NetworkPolicy'>NetworkPolicy</a></pre>
+
+
+Get the state of an existing `NetworkPolicy` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="NetworkPolicy-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/networking/v1/NetworkPolicy.ts#L55">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.networking.v1.NetworkPolicy</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="NetworkPolicy-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="NetworkPolicy-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="NetworkPolicy-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/networking/v1/NetworkPolicy.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"networking.k8s.io/v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -95,11 +101,21 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="NetworkPolicy-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16494">property <b>kind</b></a>
+<h3 class="pdoc-member-header" id="NetworkPolicy-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="NetworkPolicy-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/networking/v1/NetworkPolicy.ts#L26">property <b>kind</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"NetworkPolicy"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -108,107 +124,106 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicy-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16500">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/networking/v1/NetworkPolicy.ts#L32">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 
 Standard object's metadata. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicy-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16505">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/networking/v1/NetworkPolicy.ts#L37">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>spec: <a href='#NetworkPolicySpec'>NetworkPolicySpec</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.networking.v1.NetworkPolicySpec&gt;;</pre>
 
 Specification of the desired behavior for this NetworkPolicy.
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="NetworkPolicyEgressRule">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16514">interface <b>NetworkPolicyEgressRule</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-NetworkPolicyEgressRule describes a particular set of traffic that is allowed out of pods
-matched by a NetworkPolicySpec's podSelector. The traffic must match both ports and to. This
-type is beta-level in 1.8
-
-<h3 class="pdoc-member-header" id="NetworkPolicyEgressRule-ports">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16521">property <b>ports</b></a>
+<h3 class="pdoc-member-header" id="NetworkPolicy-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>ports: <a href='#NetworkPolicyPort'>NetworkPolicyPort</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 
-List of destination ports for outgoing traffic. Each item in this list is combined using a
-logical OR. If this field is empty or missing, this rule matches all ports (traffic not
-restricted by port). If this field is present and contains at least one item, then this
-rule allows traffic only if the traffic matches at least one port in the list.
-
-</div>
-<h3 class="pdoc-member-header" id="NetworkPolicyEgressRule-to">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16530">property <b>to</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>to: <a href='#NetworkPolicyPeer'>NetworkPolicyPeer</a>[];</pre>
-
-List of destinations for outgoing traffic of pods selected for this rule. Items in this
-list are combined using a logical OR operation. If this field is empty or missing, this
-rule matches all destinations (traffic not restricted by destination). If this field is
-present and contains at least one item, this rule allows traffic only if the traffic
-matches at least one item in the to list.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="NetworkPolicyIngressRule">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16538">interface <b>NetworkPolicyIngressRule</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-NetworkPolicyIngressRule describes a particular set of traffic that is allowed to the pods
-matched by a NetworkPolicySpec's podSelector. The traffic must match both ports and from.
-
-<h3 class="pdoc-member-header" id="NetworkPolicyIngressRule-from">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16546">property <b>from</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>from: <a href='#NetworkPolicyPeer'>NetworkPolicyPeer</a>[];</pre>
-
-List of sources which should be able to access the pods selected for this rule. Items in
-this list are combined using a logical OR operation. If this field is empty or missing,
-this rule matches all sources (traffic not restricted by source). If this field is present
-and contains at least on item, this rule allows traffic only if the traffic matches at
-least one item in the from list.
-
-</div>
-<h3 class="pdoc-member-header" id="NetworkPolicyIngressRule-ports">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16555">property <b>ports</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>ports: <a href='#NetworkPolicyPort'>NetworkPolicyPort</a>[];</pre>
-
-List of ports which should be made accessible on the pods selected for this rule. Each item
-in this list is combined using a logical OR. If this field is empty or missing, this rule
-matches all ports (traffic not restricted by port). If this field is present and contains
-at least one item, then this rule allows traffic only if the traffic matches at least one
-port in the list.
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkPolicyList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16562">interface <b>NetworkPolicyList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/networking/v1/NetworkPolicyList.ts#L11">class <b>NetworkPolicyList</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 NetworkPolicyList is a list of NetworkPolicy objects.
 
-<h3 class="pdoc-member-header" id="NetworkPolicyList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16569">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="NetworkPolicyList-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/networking/v1/NetworkPolicyList.ts#L56"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> NetworkPolicyList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.networking.v1.NetworkPolicyList, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a networking.v1.NetworkPolicyList resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="NetworkPolicyList-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/networking/v1/NetworkPolicyList.ts#L51">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#NetworkPolicyList'>NetworkPolicyList</a></pre>
+
+
+Get the state of an existing `NetworkPolicyList` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="NetworkPolicyList-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/networking/v1/NetworkPolicyList.ts#L55">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.networking.v1.NetworkPolicyList</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="NetworkPolicyList-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="NetworkPolicyList-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="NetworkPolicyList-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/networking/v1/NetworkPolicyList.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"networking.k8s.io/v1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -216,20 +231,30 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="NetworkPolicyList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16574">property <b>items</b></a>
+<h3 class="pdoc-member-header" id="NetworkPolicyList-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>items: <a href='#NetworkPolicy'>NetworkPolicy</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="NetworkPolicyList-items">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/networking/v1/NetworkPolicyList.ts#L23">property <b>items</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>items: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.networking.v1.NetworkPolicy[]&gt;;</pre>
 
 Items is a list of schema objects.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicyList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16582">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/networking/v1/NetworkPolicyList.ts#L31">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"NetworkPolicyList"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -238,154 +263,23 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkPolicyList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16588">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/networking/v1/NetworkPolicyList.ts#L37">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
 
 Standard list metadata. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="NetworkPolicyPeer">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16596">interface <b>NetworkPolicyPeer</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-NetworkPolicyPeer describes a peer to allow traffic from. Only certain combinations of fields
-are allowed
-
-<h3 class="pdoc-member-header" id="NetworkPolicyPeer-ipBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16601">property <b>ipBlock</b></a>
+<h3 class="pdoc-member-header" id="NetworkPolicyList-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>ipBlock: <a href='#IPBlock'>IPBlock</a>;</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 
-IPBlock defines policy on a particular IPBlock. If this field is set then neither of the
-other fields can be.
-
-</div>
-<h3 class="pdoc-member-header" id="NetworkPolicyPeer-namespaceSelector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16611">property <b>namespaceSelector</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>namespaceSelector: <a href='#LabelSelector'>LabelSelector</a>;</pre>
-
-Selects Namespaces using cluster-scoped labels. This field follows standard label selector
-semantics; if present but empty, it selects all namespaces.
-
-If PodSelector is also set, then the NetworkPolicyPeer as a whole selects the Pods matching
-PodSelector in the Namespaces selected by NamespaceSelector. Otherwise it selects all Pods
-in the Namespaces selected by NamespaceSelector.
-
-</div>
-<h3 class="pdoc-member-header" id="NetworkPolicyPeer-podSelector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16621">property <b>podSelector</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>podSelector: <a href='#LabelSelector'>LabelSelector</a>;</pre>
-
-This is a label selector which selects Pods. This field follows standard label selector
-semantics; if present but empty, it selects all pods.
-
-If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects the Pods
-matching PodSelector in the Namespaces selected by NamespaceSelector. Otherwise it selects
-the Pods matching PodSelector in the policy's own Namespace.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="NetworkPolicyPort">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16628">interface <b>NetworkPolicyPort</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-NetworkPolicyPort describes a port to allow traffic on
-
-<h3 class="pdoc-member-header" id="NetworkPolicyPort-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16633">property <b>port</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The port on the given protocol. This can either be a numerical or named port on a pod. If
-this field is not provided, this matches all port names and numbers.
-
-</div>
-<h3 class="pdoc-member-header" id="NetworkPolicyPort-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16639">property <b>protocol</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>protocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The protocol (TCP, UDP, or SCTP) which traffic must match. If not specified, this field
-defaults to TCP.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="NetworkPolicySpec">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16646">interface <b>NetworkPolicySpec</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-NetworkPolicySpec provides the specification of a NetworkPolicy
-
-<h3 class="pdoc-member-header" id="NetworkPolicySpec-egress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16655">property <b>egress</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>egress: <a href='#NetworkPolicyEgressRule'>NetworkPolicyEgressRule</a>[];</pre>
-
-List of egress rules to be applied to the selected pods. Outgoing traffic is allowed if
-there are no NetworkPolicies selecting the pod (and cluster policy otherwise allows the
-traffic), OR if the traffic matches at least one egress rule across all of the
-NetworkPolicy objects whose podSelector matches the pod. If this field is empty then this
-NetworkPolicy limits all outgoing traffic (and serves solely to ensure that the pods it
-selects are isolated by default). This field is beta-level in 1.8
-
-</div>
-<h3 class="pdoc-member-header" id="NetworkPolicySpec-ingress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16665">property <b>ingress</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>ingress: <a href='#NetworkPolicyIngressRule'>NetworkPolicyIngressRule</a>[];</pre>
-
-List of ingress rules to be applied to the selected pods. Traffic is allowed to a pod if
-there are no NetworkPolicies selecting the pod (and cluster policy otherwise allows the
-traffic), OR if the traffic source is the pod's local node, OR if the traffic matches at
-least one ingress rule across all of the NetworkPolicy objects whose podSelector matches
-the pod. If this field is empty then this NetworkPolicy does not allow any traffic (and
-serves solely to ensure that the pods it selects are isolated by default)
-
-</div>
-<h3 class="pdoc-member-header" id="NetworkPolicySpec-podSelector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16674">property <b>podSelector</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>podSelector: <a href='#LabelSelector'>LabelSelector</a>;</pre>
-
-Selects the pods to which this NetworkPolicy object applies. The array of ingress rules is
-applied to any pods selected by this field. Multiple network policies can select the same
-set of pods. In this case, the ingress rules for each are combined additively. This field
-is NOT optional and follows standard label selector semantics. An empty podSelector matches
-all pods in this namespace.
-
-</div>
-<h3 class="pdoc-member-header" id="NetworkPolicySpec-policyTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16687">property <b>policyTypes</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>policyTypes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-List of rule types that the NetworkPolicy relates to. Valid options are Ingress, Egress, or
-Ingress,Egress. If this field is not specified, it will default based on the existence of
-Ingress or Egress rules; policies that contain an Egress section are assumed to affect
-Egress, and all policies (whether or not they contain an Ingress section) are assumed to
-affect Ingress. If you want to write an egress-only policy, you must explicitly specify
-policyTypes [ "Egress" ]. Likewise, if you want to write a policy that specifies that no
-egress is allowed, you must specify a policyTypes value that include "Egress" (since such a
-policy would not include an Egress section and would otherwise default to just [ "Ingress"
-]). This field is beta-level in 1.8
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 </div>
 </div>
