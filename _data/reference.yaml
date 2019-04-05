@@ -78,6 +78,8 @@ toc:
     path: /reference/cd-github-actions.html
   - title: GitLab CI
     path: /reference/cd-gitlab-ci.html
+  - title: Google Cloud Build
+    path: /reference/cd-google-cloud-build.html
   - title: Travis CI
     path: /reference/cd-travis.html
 - title: Supported Clouds

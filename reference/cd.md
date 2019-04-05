@@ -18,6 +18,7 @@ a subset of these code changes after specific gates have been passed (certain te
 * [CircleCI](./cd-circleci.html)
 * [GitHub Actions](./cd-github-actions.html)
 * [GitLab CI](./cd-gitlab-ci.html)
+* [Google Cloud Build](./cd-google-cloud-build.html)
 * [Travis](./cd-travis.html)
 
 
