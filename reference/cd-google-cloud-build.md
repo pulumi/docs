@@ -68,13 +68,3 @@ In the configuration above, we used custom substitutions. Cloud Build also has [
 ### Encrypted Variables
 
 If you have sensitive variables that may require encryption, you should create an encryption on Google KMS, then use that to encrypt your sensitive values. You may then use the encrypted strings in your cloud build configuration safely. Cloud Build can automatically decrypt sensitive strings at build time. See [this](https://cloud.google.com/cloud-build/docs/securing-builds/use-encrypted-secrets-credentials#using_the_encrypted_variable_in_build_requests) page to learn more.
-
-### Pulumi Cloud Build builder
-
-> The Pulumi builder is awaiting acceptance from the community repo maintainers. You can download the branch containing the builder while it is reviewed and merged.
-
-Cloud Build supports custom [builders](https://cloud.google.com/cloud-build/docs/cloud-builders), as well as those that are built by the [community](https://github.com/GoogleCloudPlatform/cloud-builders-community).
-
-The Pulumi builder is available for you to use in a cloud build step. Follow the steps in the repo to use it.
-
-**Got questions or feedback about this page?** Checkout our community [Slack](https://slack.pulumi.io).
