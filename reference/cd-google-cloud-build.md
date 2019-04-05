@@ -43,7 +43,9 @@ Set the appropriate `gcp:project` and `gcp:region` values. For example, if your 
 
 **Note**: Not all resources are available in all regions. Please check that GCP supports the region and resource combination [here](https://cloud.google.com/about/locations/).
 
-## `cloudbuild.yaml`
+## Build Configuration
+
+### `cloudbuild.yaml`
 
 The Cloud Build configuration file below is a sample, to show you how to install the Pulumi CLI and run pulumi commands such as `pulumi preview` or `pulumi up` as part of your CI/CD workflow.
 
@@ -55,16 +57,64 @@ steps:
   - '-c'
   - 'chmod +x *.sh && ./pulumi.sh'
   env:
-  - 'PULUMI_ACCESS_TOKEN=$_PULUMI_ACCESS_TOKEN'
+  # We use substitution for an example. Your Pulumi access token is sensitive and as such should be encrypted.
+  # See the Encrypted Variables section below on how to do that.
+  - 'PULUMI_ACCESS_TOKEN=$_INSECURE_SUBSTITUTION_PULUMI_ACCESS_TOKEN'
   - 'BUILD_TYPE=$_BUILD_TYPE'
 ```
 
+### `pulumi.sh`
+
+A basic bash script that does the following:
+- Restore the Node dependencies for your Pulumi program.
+- Perform a `pulumi login`.
+- Select your stack.
+- Run either `pulumi preview` or `pulumi up --yes` based on the `BUILD_TYPE` env var.
+
+```bash
+#!/bin/bash
+
+# exit if a command returns a non-zero exit code and also print the commands and their args as they are executed.
+set -e -x
+
+# Restore npm dependencies for our infra app.
+yarn install
+
+# Login into pulumi. This will require the PULUMI_ACCESS_TOKEN environment variable.
+pulumi login
+
+# Select the appropriate stack.
+pulumi stack select praneetloke/gcp-functions/dev
+
+case $BUILD_TYPE in
+  PullRequest)
+      pulumi preview
+    ;;
+  *)
+      pulumi up --yes
+    ;;
+esac
+```
+
+### Build Triggers
+
+Cloud Build supports triggers that can start a new instance of your cloud build using the configuration defined in your repo.
+To setup a build trigger, navigate to the Cloud Build service (or click [here](https://console.cloud.google.com/cloud-build/triggers) to go there now) in your GCP Console, making sure that you have the correct project selected.
+Click on **Add Trigger** and follow the prompts to setup a trigger for your repo. In the final step **Trigger settings**, select the following settings:
+
+- **Branch (regex)**: `[^master]`
+  - This will match any branch _except_ `master`.
+  - This means that this trigger will run for any branch other than `master`.
+  - Alternatively, you can set this to `master` if you want this trigger to only run for `master` branches.
+  - The default `.*` will match all branches, and therefore, the trigger will run for pushes against any branch.
+- **Build configuration**: `Cloud Build configuration`.
+
 ## Next Steps
-
-### Substitutions
-
-In the configuration above, we used custom substitutions. Cloud Build also has [default substitutions](https://cloud.google.com/cloud-build/docs/configuring-builds/substitute-variable-values). Using the default substitutions, you can make decisions in your CI or CD workflow.
 
 ### Encrypted Variables
 
 If you have sensitive variables that may require encryption, you should create an encryption on Google KMS, then use that to encrypt your sensitive values. You may then use the encrypted strings in your cloud build configuration safely. Cloud Build can automatically decrypt sensitive strings at build time. See [this](https://cloud.google.com/cloud-build/docs/securing-builds/use-encrypted-secrets-credentials#using_the_encrypted_variable_in_build_requests) page to learn more.
+
+### Substitutions
+
+In the configuration above, we used custom substitutions. Cloud Build also has [default substitutions](https://cloud.google.com/cloud-build/docs/configuring-builds/substitute-variable-values). Using the default substitutions, you can make decisions in your CI or CD workflow.
