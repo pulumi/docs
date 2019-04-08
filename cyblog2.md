@@ -29,9 +29,8 @@ Or perhaps respond to any uploads of new objects to your [storage](https://cloud
 
 ```typescript
 // Create a Storage Bucket
-let requests = new gcp.storage.Bucket("data");
-
-requests.onObjectFinalized("newobject", (data) => {
+let bucket = new gcp.storage.Bucket("data");
+bucket.onObjectFinalized("newobject", (data) => {
     // Print out a log message for every upload to the Bucket.
     // Change this code to fit your needs!
     console.log(`New file uploaded: ${data.name}`);
