@@ -6,7 +6,7 @@ Serverless has never been simpler than it is with Pulumi + Google Cloud Function
 import * as gcp from "@pulumi/gcp";
 
 let greeting = new gcp.cloudfunctions.HttpCallbackFunction("greeting", (req, res) => {
-    // Add or change this code as you see fit!
+    // Change this code to fit your needs!
     res.send(`Greetings from ${req.body.name || 'Google Cloud Functions'}!`);
 });
 
@@ -20,7 +20,7 @@ Or perhaps a [pubsub](https://cloud.google.com/pubsub/) topic that runs some cus
 let requests = new gcp.pubsub.Topic("requests");
 requests.onMessagePublished("newMessage", (data) => {
     // Print out a log message for every message on the Topic.
-    // Add or change this code as you see fit!
+    // Change this code to fit your needs!
     console.log(Buffer.from(data.data, "base64").toString());
 });
 ```
@@ -33,7 +33,7 @@ let requests = new gcp.storage.Bucket("data");
 
 requests.onObjectFinalized("newobject", (data) => {
     // Print out a log message for every upload to the Bucket.
-    // Add or change this code as you see fit!
+    // Change this code to fit your needs!
     console.log(`New file uploaded: ${data.name}`);
 });
 ```
