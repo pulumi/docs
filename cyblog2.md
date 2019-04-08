@@ -55,7 +55,7 @@ This is the real code for a complete SlackBot application running on GCP, from t
 Although it's a simple example, there are a lot of moving parts that you would normally be responsible for:
 
 1. figure out the shape (the input/output-types) for your Cloud Functions, and then create an appropriate program exporting the right entrypoint that matches.  In this case, because we've exposed the right abstractions (like `HttpCallbackFunction` and `Topic.onMessagePublished`), the arrow-functions you pass in will all have the right types, and your program will be typechecked by TypeScript.
-1. create separate Cloud Functions for each Serverless callback.  One for listening and responding to the initial Slack events, and the second for processing the messages in the Topic.  However, here you can write a single Pulumi App where all the code can be placed how you like it (in this case in a single file).
+1. Create separate Cloud Functions for each Serverless callback.  One for listening and responding to the initial Slack events, and the second for processing the messages in the Topic.  Here, you can write a single Pulumi App where all the code can be placed how you like it (in this case in a single file).
 1. [package](https://cloud.google.com/functions/docs/writing/) each callback up in the appropriate structure Cloud Functions expects, including how to include or reference your dependencies properly.
 1. create a [Storage Bucket](https://cloud.google.com/storage/docs/creating-buckets) for all of our packaged programs to live in.
 1. upload each packaged program to a [Bucket Object](https://cloud.google.com/storage/docs/uploading-objects) in that bucket.
