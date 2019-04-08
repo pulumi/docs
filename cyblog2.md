@@ -16,7 +16,7 @@ const verificationToken = config.get("verificationToken");
 // A topic that we can enqueue slack events to so they can be processed in batch later on
 const messageTopic = new gcp.pubsub.Topic("messages");
 
-// Create an http endpoint that slack will use to push events to us with.
+// Create an http endpoint that slack will use to push events to us.
 const endpoint = new gcp.cloudfunctions.HttpCallbackFunction("bot", {
     callbackFactory: () => {
         const app = express();
