@@ -83,27 +83,29 @@ messageTopic.onMessagePublished("processTopicMessage", async (data) => {
 export const url = endpoint.httpsTriggerUrl;
 ```
 
-This is the real code for a complete SlackBot application running on GCP, from the cloud resources to the Serverless code, all within a unified Pulumi application!  Customizing this for your own use case is as simple as changing the code in the two JavaScript arrow-functions.  To see the complete project, take a look at our [@mentionbot example](https://github.com/pulumi/examples/tree/master/gcp-ts-slackbot).  That example will listen for mentions of your name and will notify you of them in a channel of your choosing, giving you you a persistent timeline you can go back to look at to make sure you can find all these messages.
+This is the real code for a complete SlackBot application running on GCP, from the cloud resources to the Serverless code, all within a unified Pulumi application!  Customizing this for your own use case is as simple as changing the code in the two JavaScript arrow-functions.
 
-Although it's a simple example, there are a lot of moving parts that you would normally be responsible for:
+To see the complete project, take a look at our [@mentionbot example](https://github.com/pulumi/examples/tree/master/gcp-ts-slackbot).  That example will listen for mentions of your name and will notify you of them in a channel of your choosing, giving you you a persistent timeline you can go back to look at to make sure you can find all these messages.
 
-1. figure out the shape (the input/output-types) for your Cloud Functions, and then create an appropriate program exporting the right entrypoint that matches.  In this case, because we've exposed the right abstractions (like `HttpCallbackFunction` and `Topic.onMessagePublished`), the arrow-functions you pass in will all have the right types, and your program will be typechecked by TypeScript.
-1. Create separate Cloud Functions for each Serverless callback.  One for listening and responding to the initial Slack events, and the second for processing the messages in the Topic.  Here, you can write a single Pulumi App where all the code can be placed how you like it (in this case in a single file).
-1. [package](https://cloud.google.com/functions/docs/writing/) each callback up in the appropriate structure Cloud Functions expects, including how to include or reference your dependencies properly.
-1. create a [Storage Bucket](https://cloud.google.com/storage/docs/creating-buckets) for all of our packaged programs to live in.
-1. upload each packaged program to a [Bucket Object](https://cloud.google.com/storage/docs/uploading-objects) in that bucket.
-1. configure the appropriate triggers on your Cloud Function stating how it should be triggered (for example, in response to an [HTTP trigger](https://cloud.google.com/functions/docs/calling/http) or a [Pub/Sub trigger](https://cloud.google.com/functions/docs/calling/pubsub)).  
-1. include the right information in the function so you can interact with your other cloud resources in the Pulumi App.  Without this, you would need to find a way to include that data in each Cloud Function's [environment variables](https://cloud.google.com/functions/docs/env-var) (or just hardcode them in '1') so that your program can access the rest of your cloud infrastructure.  In the above example, you can see how you can just reference your resources directly (like the PubSub Topic) *directly* from your Cloud Function callback.  Pulumi makes sure this all works, and that the data you use is available in that Cloud Function.
-1. Figure out a safe and secure way to encode and access secrets for your Cloud Function.  Here, we can use Pulumi's [Config Secrets](https://pulumi.io/reference/config.html#secrets) to safely encrypt and manage secrets for your Cloud Function code.
+Although it's a simple example, there are a lot of moving parts this takes care of that you would normally be responsible for.  This includes:
 
-This is a lot to figure out and continually manage over the lifetime of your cloud application.  If you want to tweak things even slightly you might need to go make many manual changes and updates to ensure everything is properly updated.  With Pulumi, all this complexity is handled with a single update!  Let's just take a look at what Pulumi does when you tweak those `=>` functions in some way.
+1. Figuring out the shape (the input/output-types) for your Cloud Functions, and then creating an appropriate program that exports the right entrypoint that matches.  In this case, because we've exposed the right abstractions (like `HttpCallbackFunction` and `Topic.onMessagePublished`), the arrow-functions you pass in will all have the right types, and your program will be typechecked by TypeScript.
+1. Creating separate Cloud Functions for each Serverless callback.  One for listening and responding to the initial Slack events and the second for processing the messages in the Topic.  Here, you can write a single Pulumi App where all the code can be placed how you like it (in this case in a single file).
+1. [Packaging](https://cloud.google.com/functions/docs/writing/) each callback up in the appropriate structure Cloud Functions expects, including how to get all your dependencies in place.
+1. Creating a [Storage Bucket](https://cloud.google.com/storage/docs/creating-buckets) for all of your packaged programs to live in.
+1. Uploading each packaged program to a [Bucket Object](https://cloud.google.com/storage/docs/uploading-objects) in that bucket.
+1. Configuring the appropriate triggers on your Cloud Functions stating how they should be triggered (for example, in response to an [HTTP trigger](https://cloud.google.com/functions/docs/calling/http) or a [Pub/Sub trigger](https://cloud.google.com/functions/docs/calling/pubsub)).  
+1. Including the right information in the function so you can interact with your other cloud resources in the Pulumi App.  Without this, you would need to find a way to include that data in each Cloud Function's [environment variables](https://cloud.google.com/functions/docs/env-var) (or just hardcode them in '1') so that your program can access the rest of your cloud infrastructure.  In the above example, you can see how you can just reference your resources directly (like the PubSub Topic) *directly* from your Cloud Function callback.  Pulumi makes sure this all works, and that the data you use is available in that Cloud Function when it finally is triggered.
+1. Figuring out a safe and secure way to encode and access secrets for your Cloud Function.  Here, we can use Pulumi's [Config Secrets](https://pulumi.io/reference/config.html#secrets) to safely encrypt and manage secrets for your Cloud Function code.
+
+This is a lot to figure out and continually manage over the lifetime of your cloud application.  If you want to tweak things even slightly you might need to go make many manual changes and updates to ensure everything is properly updated.  With Pulumi, all this complexity is handled with a single update!  Let's just take a look at what Pulumi does when you tweak a few things in the program.
 
 ```bash
 $ pulumi up
 Updating (slackbot):
      Type                                       Name                        Status       Info
      pulumi:pulumi:Stack                        slackbot
- +-  ├─ gcp:pubsub:Topic                        messages                    replaced     [diff: +labels~name]
+ +-  ├─ gcp:pubsub:Topic                        messages                    replaced     [diff: +labels]
      │  └─ gcp:cloudfunctions:CallbackFunction  processTopicMessage
  +-  │     ├─ gcp:storage:BucketObject          processTopicMessage         replaced     [diff: ~name,source]
  ~   │     └─ gcp:cloudfunctions:Function       processTopicMessage         updated      [diff: ~eventTrigger,sourceArchiveObject]
@@ -121,6 +123,8 @@ Resources:
 
 Duration: 52s
 ```
+
+One command later, and your entire stack is updated properly!
 
 The cloud provides tremendous potential, and we want to make it easy for developers to tap into those resources. Using Pulumi, it's easy to mix and match cloud resources with your own business logic, bringing the focus back to the problems you care about. One codebase, from cloud infrastructure to app logic, that's easy to create, update, and maintain.
 
