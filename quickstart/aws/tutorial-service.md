@@ -27,6 +27,7 @@ In this tutorial, we'll use TypeScript to build and deploy a simple container us
 
     ```ts
     import * as pulumi from "@pulumi/pulumi";
+    import * as aws from "@pulumi/aws";
     import * as awsx from "@pulumi/awsx";
     
     // Create an elastic network listener to listen for requests and route them to the container.
