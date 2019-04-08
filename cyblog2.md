@@ -75,7 +75,7 @@ const endpoint = new gcp.cloudfunctions.HttpCallbackFunction("bot", {
 
 messageTopic.onMessagePublished("processTopicMessage", async (data) => {
     // Actually handle the 'data' in the pubsub message.
-            // Importantly: This is the code that will run in your serverless GCP cloud function!
+    // Importantly: This is the code that will run in your serverless GCP cloud function!
 });
 
 // Give this url to slack to let them know where to post their events to.
