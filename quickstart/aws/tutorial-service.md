@@ -42,7 +42,7 @@ In this tutorial, we'll use TypeScript to build and deploy a simple container us
         taskDefinitionArgs: {
             containers: {
                 nginx: {
-                    image: awsx.ecs.Image.fromPath("./app"),
+                    image: awsx.ecs.Image.fromPath("nginx", "./app"),
                     memory: 512,
                     portMappings: [listener],
                 },
