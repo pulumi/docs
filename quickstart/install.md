@@ -111,6 +111,15 @@ Subsequent updates can be installed in the usual way:
 ```bash
 $ brew upgrade pulumi
 ```
+
+### Additional Packages
+
+Many Pulumi tutorials requires NPM and Node.js to complete successfully, to install through the [Homebrew package manager](https://brew.sh/):
+
+```bash
+$ brew install node
+```
+
 </div>
 
 <div id="linux_installation" markdown="1">
