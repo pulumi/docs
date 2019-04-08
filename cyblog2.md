@@ -50,7 +50,7 @@ messageTopic.onMessagePublished("processTopicMessage", async (data) => {
 export const url = endpoint.httpsTriggerUrl;
 ```
 
-This is the real code for a complete SlackBot application running on GCP, from the cloud resources to the Serverless code, all within a unified Pulumi App!  Customizing this for your own use case is as simple as changing the code in the two JavaScript arrow-functions.  To see the complete project, take a look at our [@mentionbot example](https://github.com/pulumi/examples/tree/master/gcp-ts-slackbot).  That example will listen for mentions of your name and will notify you of them in a channel of your choosing.  This gives you a persistent timeline you can go back to look at to make sure you can find, and have responded to, all important messages.
+This is the real code for a complete SlackBot application running on GCP, from the cloud resources to the Serverless code, all within a unified Pulumi App!  Customizing this for your own use case is as simple as changing the code in the two JavaScript arrow-functions.  To see the complete project, take a look at our [@mentionbot example](https://github.com/pulumi/examples/tree/master/gcp-ts-slackbot).  That example will listen for mentions of your name and will notify you of them in a channel of your choosing, giving you you a persistent timeline you can go back to look at to make sure you can find all these messages.
 
 This example actually demonstrates a large amount of complexity that is now handled for you which you would normally be responsible for.  For example, instead of you having to manage it yourself, it will:
 
