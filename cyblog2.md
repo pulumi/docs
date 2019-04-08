@@ -26,7 +26,7 @@ const endpoint = new gcp.cloudfunctions.HttpCallbackFunction("bot", {
 
             const body = req.body;
             
-            // Process the body as appropriate.  if it's something we need to respond to immediately
+            // Process the body as appropriate.  If it's something we need to respond to immediately
             // (like a verification request), then do so. Otherwise, add the message to our pubsub
             // topic to be processed later:
             const pubSub = new PubSub();
