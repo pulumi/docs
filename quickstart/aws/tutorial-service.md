@@ -19,13 +19,17 @@ In this tutorial, we'll use TypeScript to build and deploy a simple container us
 1.  Run `pulumi new`:
 
     ```bash
-    $ pulumi new typescript --dir container-quickstart
+    $ pulumi new aws-typescript --dir container-quickstart
     $ cd container-quickstart
     ```
 
 1.  Replace the contents of `index.ts` with the following:
 
     ```ts
+    import * as pulumi from "@pulumi/pulumi";
+    import * as aws from "@pulumi/aws";
+    import * as awsx from "@pulumi/awsx";
+    
     // Create an elastic network listener to listen for requests and route them to the container.
     // See https://docs.aws.amazon.com/elasticloadbalancing/latest/network/introduction.html
     // for more details.
@@ -47,7 +51,7 @@ In this tutorial, we'll use TypeScript to build and deploy a simple container us
     });
 
     // export just the hostname property of the container frontend
-    export const hostname = listener.endpoint().apply(e => `http://${e.hostname}`);
+    export const hostname = listener.endpoint.apply(e => `http://${e.hostname}`);
     ```
 
     This example uses awsx.ecs.FargateService, which is a high-level, convenient interface for building containers and provisioning a fargate service in aws.
