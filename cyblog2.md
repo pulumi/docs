@@ -33,7 +33,7 @@ const endpoint = new gcp.cloudfunctions.HttpCallbackFunction("bot", {
             const topic = pubSub.topic(messageTopic.name.get());
             topic.publish(Buffer.from(JSON.stringify(body)));            
 
-            // quickly respond with success so that slack doesn't retry.
+            // Quickly respond with success so that slack doesn't retry.
             res.status(200).end();
         });
 
