@@ -6,7 +6,7 @@ Serverless has never been simpler than it is with Pulumi + Google Cloud Function
 import * as gcp from "@pulumi/gcp";
 
 let greeting = new gcp.cloudfunctions.HttpCallbackFunction("greeting", (req, res) => {
-    // Add more code here as you see fit!
+    // Add or change this code as you see fit!
     res.send(`Greetings from ${req.body.name || 'Google Cloud Functions'}!`);
 });
 
@@ -18,22 +18,22 @@ Or perhaps a [pubsub](https://cloud.google.com/pubsub/) topic that runs some cus
 ```typescript
 // Create a PubSub Topic
 let requests = new gcp.pubsub.Topic("requests");
-// Print out a log message for every message on the Topic
 requests.onMessagePublished("newMessage", (data) => {
-    // Add more code here as you see fit!
+    // Print out a log message for every message on the Topic.
+    // Add or change this code as you see fit!
     console.log(Buffer.from(data.data, "base64").toString());
 });
 ```
 
 Or perhaps respond to any uploads of new objects to your [storage](https://cloud.google.com/storage/) bucket:
 
-
 ```typescript
 // Create a Storage Bucket
 let requests = new gcp.storage.Bucket("data");
-// Print out a log message for every message on the Topic
+
 requests.onObjectFinalized("newobject", (data) => {
-    // Add more code here as you see fit!
+    // Print out a log message for every upload to the Bucket.
+    // Add or change this code as you see fit!
     console.log(`New file uploaded: ${data.name}`);
 });
 ```
@@ -41,7 +41,7 @@ requests.onObjectFinalized("newobject", (data) => {
 For an idea of how you might fit these together to make a real-world cloud application, let's look a simple skeleton structure for a SlackBot using Pulumi:
 
 ```ts
-// config tokens to use to validate incoming messages as well as properly authenticate ourserlf when sending messages to slack
+// secure config tokens to use to validate incoming messages as well as authenticate ourself to slack
 const config = new pulumi.Config("mentionbot");
 const slackToken = config.get("slackToken");
 const verificationToken = config.get("verificationToken");
@@ -83,7 +83,7 @@ messageTopic.onMessagePublished("processTopicMessage", async (data) => {
 export const url = endpoint.httpsTriggerUrl;
 ```
 
-This is the real code for a complete SlackBot application running on GCP, from the cloud resources to the Serverless code, all within a unified Pulumi App!  Customizing this for your own use case is as simple as changing the code in the two JavaScript arrow-functions.  To see the complete project, take a look at our [@mentionbot example](https://github.com/pulumi/examples/tree/master/gcp-ts-slackbot).  That example will listen for mentions of your name and will notify you of them in a channel of your choosing, giving you you a persistent timeline you can go back to look at to make sure you can find all these messages.
+This is the real code for a complete SlackBot application running on GCP, from the cloud resources to the Serverless code, all within a unified Pulumi application!  Customizing this for your own use case is as simple as changing the code in the two JavaScript arrow-functions.  To see the complete project, take a look at our [@mentionbot example](https://github.com/pulumi/examples/tree/master/gcp-ts-slackbot).  That example will listen for mentions of your name and will notify you of them in a channel of your choosing, giving you you a persistent timeline you can go back to look at to make sure you can find all these messages.
 
 Although it's a simple example, there are a lot of moving parts that you would normally be responsible for:
 
