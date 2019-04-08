@@ -37,7 +37,7 @@ bucket.onObjectFinalized("newobject", (data) => {
 });
 ```
 
-For an idea of how you might fit these together to make a real-world cloud application, let's look a simple skeleton structure for a SlackBot using Pulumi:
+For an idea of how you might fit these together to make a real-world cloud application, let's look a simple skeleton structure for a [Slack Bot](https://api.slack.com/bot-users) using Pulumi:
 
 ```ts
 // secure config tokens to use to validate incoming messages as well as authenticate ourself to slack
