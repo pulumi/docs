@@ -1,11 +1,44 @@
 Simple Serverless programming in Google Cloud using Pulumi.
 
-A main goal of Pulumi is to help simplify, or outright remove, the myriad forms of complexity around programming the cloud.  One of the main forms of complexity removed is needing to either manually create your infrastructure through cloud CLIs, or using different and esoteric languages to try to declare and maintain your cloud resources.  Instead, we think you should be able to use the programming languages you know and are already comfortable with to easily define and maintain using the language-features, libraries, patterns and abstractions you prefer.
+Serverless has never been simpler than it is with Pulumi + Google Cloud Functions.  Want to serve a simple HTTP API with no fixed costs?  It's just a few lines of code:
 
-The promise of Serverless programming is a stronger focus on the business logic you care about, and less focus on the infrastructure surrounding it. Users often just want to run some code in response to various events (http requests, bucket changes, pubsub messages, cron jobs, db events, etc.), and leave the nitty gritty details of the infrastructure up to the cloud provider. While cloud providers make it simple to scale infrastructure for your Serverless code, it's often complex to define the code you want to run, when you want to run it, and then tie it to the rest of your infrastructure. 
+```typescript
+import * as gcp from "@pulumi/gcp";
 
-With Pulumi, we've made it easy to do all on Google's cloud platform (GCP) directly from your Pulumi App.
-Let's start with a simple example that shows how you can do this in Pulumi today using the skeleton structure for a SlackBot:
+let greeting = new gcp.cloudfunctions.HttpCallbackFunction("greeting", (req, res) => {
+    // Add more code here as you see fit!
+    res.send(`Greetings from ${req.body.name || 'Google Cloud Functions'}!`);
+});
+
+export let url = greeting.httpsTriggerUrl;
+```
+
+Or perhaps a [pubsub](https://cloud.google.com/pubsub/) topic that runs some custom code on every message received:
+
+```typescript
+// Create a PubSub Topic
+let requests = new gcp.pubsub.Topic("requests");
+// Print out a log message for every message on the Topic
+requests.onMessagePublished("newMessage", (data) => {
+    // Add more code here as you see fit!
+    console.log(Buffer.from(data.data, "base64").toString());
+});
+```
+
+Or perhaps respond to any uploads of new objects to your [storage](https://cloud.google.com/storage/) bucket:
+
+
+```typescript
+// Create a Storage Bucket
+let requests = new gcp.storage.Bucket("data");
+// Print out a log message for every message on the Topic
+requests.onObjectFinalized("newobject", (data) => {
+    // Add more code here as you see fit!
+    console.log(`New file uploaded: ${data.name}`);
+});
+```
+
+For an idea of how you might fit these together to make a real-world cloud application, let's look a simple skeleton structure for a SlackBot using Pulumi:
 
 ```ts
 // config tokens to use to validate incoming messages as well as properly authenticate ourserlf when sending messages to slack
@@ -63,7 +96,31 @@ Although it's a simple example, there are a lot of moving parts that you would n
 1. include the right information in the function so you can interact with your other cloud resources in the Pulumi App.  Without this, you would need to find a way to include that data in each Cloud Function's [environment variables](https://cloud.google.com/functions/docs/env-var) (or just hardcode them in '1') so that your program can access the rest of your cloud infrastructure.  In the above example, you can see how you can just reference your resources directly (like the PubSub Topic) *directly* from your Cloud Function callback.  Pulumi makes sure this all works, and that the data you use is available in that Cloud Function.
 1. Figure out a safe and secure way to encode and access secrets for your Cloud Function.  Here, we can use Pulumi's [Config Secrets](https://pulumi.io/reference/config.html#secrets) to safely encrypt and manage secrets for your Cloud Function code.
 
-This is a lot to figure out and continually manage over the lifetime of your cloud application.  If you want to tweak things even slightly you might need to go make many manual changes and updates to ensure everything is properly updated.  With Pulumi, all this complexity is handled with a single update!  For this example, changing the application to use [Cloud Tasks](https://cloud.google.com/tasks/) instead of [PubSub](https://cloud.google.com/pubsub/) only requires changing the initial resource declaration, and updating the references later in the code. Since we're using TypeScript, all of your normal refactoring tools are available and make it clear what needs to be updated. Once you're done refactoring, a simple `pulumi up` reconciles the changes and takes care of all the complexities we discussed above!
+This is a lot to figure out and continually manage over the lifetime of your cloud application.  If you want to tweak things even slightly you might need to go make many manual changes and updates to ensure everything is properly updated.  With Pulumi, all this complexity is handled with a single update!  Let's just take a look at what Pulumi does when you tweak those `=>` functions in some way.
+
+```bash
+$ pulumi up
+Updating (slackbot):
+     Type                                       Name                        Status       Info
+     pulumi:pulumi:Stack                        slackbot
+ +-  ├─ gcp:pubsub:Topic                        messages                    replaced     [diff: +labels~name]
+     │  └─ gcp:cloudfunctions:CallbackFunction  processTopicMessage
+ +-  │     ├─ gcp:storage:BucketObject          processTopicMessage         replaced     [diff: ~name,source]
+ ~   │     └─ gcp:cloudfunctions:Function       processTopicMessage         updated      [diff: ~eventTrigger,sourceArchiveObject]
+     └─ gcp:cloudfunctions:CallbackFunction     mentionbot
+ +-     ├─ gcp:storage:BucketObject             mentionbot                  replaced     [diff: ~name,source]
+ ~      └─ gcp:cloudfunctions:Function          mentionbot                  updated      [diff: ~sourceArchiveObject]
+
+Outputs:
+    url: "https://***.cloudfunctions.net/mentionbot"
+
+Resources:
+    ~ 2 updated
+    +-3 replaced
+    2 changes. 5 unchanged
+
+Duration: 52s
+```
 
 The cloud provides tremendous potential, and we want to make it easy for developers to tap into those resources. Using Pulumi, it's easy to mix and match cloud resources with your own business logic, bringing the focus back to the problems you care about. One codebase, from cloud infrastructure to app logic, that's easy to create, update, and maintain.
 
