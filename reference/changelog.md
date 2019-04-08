@@ -24,6 +24,26 @@ redirect_from: /install/changelog.html
     </thead>
     <tbody>
         <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0175-released-april-8-2019">0.17.5</a></th>
+            <td>2019/04/08</td>
+            <td>{% include sdk-links.html version='0.17.5' %}</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0174-released-march-26-2019">0.17.4</a></th>
+            <td>2019/03/26</td>
+            <td>{% include sdk-links.html version='0.17.4' %}</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0173-released-march-26-2019">0.17.3</a></th>
+            <td>2019/03/26</td>
+            <td>{% include sdk-links.html version='0.17.3' %}</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0172-released-march-15-2019">0.17.2</a></th>
+            <td>2019/03/15</td>
+            <td>{% include sdk-links.html version='0.17.2' %}</td>
+        </tr>
+        <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0171-released-march-6-2019">0.17.1</a></th>
             <td>2019/03/06</td>
             <td>{% include sdk-links.html version='0.17.1' %}</td>
