@@ -5,7 +5,28 @@ redirect_from: /quickstart/gke-hello-world.html
 
 In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubernetes Engine (GKE) on GCP. The [code for this tutorial](https://github.com/pulumi/examples/tree/master/gcp-ts-gke-hello-world) is available on GitHub.
 
-{% include gcp-gke-prereqs.md %}
+## Prerequisites
+
+1. [Install Pulumi](https://pulumi.io/install)
+1. [Install Node.js version 6 or later](https://nodejs.org/en/download/)
+1. Install a package manager for Node.js, such as [npm](https://www.npmjs.com/get-npm) or [Yarn](https://yarnpkg.com/en/docs/install).
+1. [Install Google Cloud SDK (`gcloud`)](https://cloud.google.com/sdk/docs/downloads-interactive)
+1. Configure GCP Auth
+
+    * Login using `gcloud`
+
+        ```bash
+        $ gcloud auth login
+        $ gcloud config set project <YOUR_GCP_PROJECT_HERE>
+        $ gcloud auth application-default login
+        ```
+    > Note: This auth mechanism is meant for inner loop developer
+    > workflows. If you want to run this example in an unattended service
+    > account setting, such as in CI/CD, please [follow instructions to
+    > configure your service account](./service-account.html). The
+    > service account must have the role `Kubernetes Engine Admin` / `container.admin`.
+
+
 
 ## Create a new GKE cluster {#new-gke-cluster}
 
@@ -119,7 +140,7 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
           name: gcp
     `;
         });
-    
+
     // Create a Kubernetes provider instance that uses our cluster from above.
     const clusterProvider = new k8s.Provider(name, {
         kubeconfig: kubeconfig,
