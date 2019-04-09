@@ -48,10 +48,12 @@ Normally, we'd write some code to define resources for our cloud stack, but in t
 
 ```javascript
 // Import the [pulumi/aws](https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/index.html) package
+const pulumi = require("@pulumi/pulumi");
 const aws = require("@pulumi/aws");
+const awsx = require("@pulumi/awsx");
 
 // Create a public HTTP endpoint (using AWS APIGateway)
-const endpoint = new aws.apigateway.x.API("hello", {
+const endpoint = new awsx.apigateway.API("hello", {
     routes: [
         // Serve static files from the `www` folder (using AWS S3)
         {
