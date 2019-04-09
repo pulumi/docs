@@ -153,7 +153,7 @@ In cases where the two proprties above are not required, and where it would be u
 
 #### Resource get (#resource-get)
 
-A `get` method is available on any resource.  It and reads in the current value of an existing resource.  The shape it returns corresponds to the type of the resource.
+A `get` method is available on any resource, which reads in the current value of an existing resource.  The shape it returns corresponds to the type of the resource.
 
 ## Outputs and Inputs {#outputs}
 
