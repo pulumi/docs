@@ -35,10 +35,10 @@ In addition to the tutorials, several interesting examples are available complet
 
 ```javascript
 const cloud = require("@pulumi/cloud");
-
 const api = new cloud.API("my-api");
+
 api.get("/hello", (req, res) => {
-    res.
+    res.json({ message: "Hi, world!" });
 });
 
 exports.url = api.publish().url;
@@ -92,4 +92,3 @@ The AWS implementation of the Cloud framework accepts the following configuratio
 * `ecsAutoClusterPublicKey`: (Optional) Public key material for SSH access to the cluster. See [allowed formats](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html). If not provided, no SSH access is enabled on VMs.
 * `ecsAutoClusterECSOptimizedAMIName`: (Optional) The name of the ECS-optimzed AMI to use for the Container Instances in this cluster, e.g. `amzn-ami-2017.09.l-amazon-ecs-optimized`. See [valid values](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html).
 * `ecsAutoClusterUseEFS`: (Optional) Optionally auto-provision an Elastic File System for the Cluster.  Defaults to `false`.
-
