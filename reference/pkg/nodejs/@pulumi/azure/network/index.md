@@ -4396,14 +4396,14 @@ const testResourceGroup = new azure.core.ResourceGroup("test", {
     location: "West Europe",
     name: "resourceGroup1",
 });
-const testPublicIpPrefix = new azure.network.PublicIpPrefix("test", {
+const testPublicIpPrefix = new azure.PublicIpPrefix("test", {
     location: testResourceGroup.location,
     name: "acceptanceTestPublicIpPrefix1",
     prefixLength: 31,
     resourceGroupName: testResourceGroup.name,
-    tags: {
+    tags: [{
         environment: "Production",
-    },
+    }],
 });
 ```
 
@@ -6603,7 +6603,7 @@ Use this data source to access information about an existing ExpressRoute circui
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.all([azurerm_express_route_circuit_test.name, azurerm_resource_group_test.name]).apply(([azurerm_express_route_circuit_testName, azurerm_resource_group_testName]) => azure.network.getExpressRouteCircuit({
+const test = pulumi.all([azurerm_express_route_circuit_test.name, azurerm_resource_group_test.name]).apply(([azurerm_express_route_circuit_testName, azurerm_resource_group_testName]) => azure.ExpressRouteCircuit({
     name: azurerm_express_route_circuit_testName,
     resourceGroupName: azurerm_resource_group_testName,
 }));
@@ -6629,12 +6629,12 @@ Use this data source to access information about an existing Azure Firewall.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.network.getFirewall({
+const test = pulumi.output(azure.Firewall({
     name: "firewall1",
     resourceGroupName: "firewall-RG",
 }));
 
-export const firewallPrivateIp = test.apply(test => test.ipConfiguration.privateIpAddress);
+export const firewallPrivateIp = test.apply(test => test.ipConfiguration.0.privateIpAddress);
 ```
 
 </div>

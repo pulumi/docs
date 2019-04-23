@@ -63,20 +63,20 @@ const exampleResourceGroup = new azure.core.ResourceGroup("example", {
     location: "northeurope",
     name: "example",
 });
-const exampleFactory = new azure.datafactory.Factory("example", {
+const exampleDataFactory = new azure.DataFactory("example", {
     location: exampleResourceGroup.location,
     name: "example",
     resourceGroupName: exampleResourceGroup.name,
 });
-const exampleDatasetMysql = new azure.datafactory.DatasetMysql("example", {
-    dataFactoryName: exampleFactory.name,
+const exampleDataFactoryDatasetMysql = new azure.DataFactoryDatasetMysql("example", {
+    dataFactoryName: exampleDataFactory.name,
     linkedServiceName: azurerm_data_factory_linked_service_mysql_test.name,
     name: "example",
     resourceGroupName: exampleResourceGroup.name,
 });
-const exampleLinkedServiceMysql = new azure.datafactory.LinkedServiceMysql("example", {
+const exampleDataFactoryLinkedServiceMysql = new azure.DataFactoryLinkedServiceMysql("example", {
     connectionString: "Server=test;Port=3306;Database=test;User=test;SSLMode=1;UseSystemTrustStore=0;Password=test",
-    dataFactoryName: exampleFactory.name,
+    dataFactoryName: exampleDataFactory.name,
     name: "example",
     resourceGroupName: exampleResourceGroup.name,
 });
@@ -271,20 +271,20 @@ const exampleResourceGroup = new azure.core.ResourceGroup("example", {
     location: "northeurope",
     name: "example",
 });
-const exampleFactory = new azure.datafactory.Factory("example", {
+const exampleDataFactory = new azure.DataFactory("example", {
     location: exampleResourceGroup.location,
     name: "example",
     resourceGroupName: exampleResourceGroup.name,
 });
-const exampleDatasetPostgresql = new azure.datafactory.DatasetPostgresql("example", {
-    dataFactoryName: exampleFactory.name,
+const exampleDataFactoryDatasetPostgresql = new azure.DataFactoryDatasetPostgresql("example", {
+    dataFactoryName: exampleDataFactory.name,
     linkedServiceName: azurerm_data_factory_linked_service_postgresql_test.name,
     name: "example",
     resourceGroupName: exampleResourceGroup.name,
 });
-const exampleLinkedServicePostgresql = new azure.datafactory.LinkedServicePostgresql("example", {
+const exampleDataFactoryLinkedServicePostgresql = new azure.DataFactoryLinkedServicePostgresql("example", {
     connectionString: "Host=example;Port=5432;Database=example;UID=example;EncryptionMethod=0;Password=example",
-    dataFactoryName: exampleFactory.name,
+    dataFactoryName: exampleDataFactory.name,
     name: "example",
     resourceGroupName: exampleResourceGroup.name,
 });
@@ -479,20 +479,20 @@ const exampleResourceGroup = new azure.core.ResourceGroup("example", {
     location: "northeurope",
     name: "example",
 });
-const exampleFactory = new azure.datafactory.Factory("example", {
+const exampleDataFactory = new azure.DataFactory("example", {
     location: exampleResourceGroup.location,
     name: "example",
     resourceGroupName: exampleResourceGroup.name,
 });
-const exampleDatasetSqlServerTable = new azure.datafactory.DatasetSqlServerTable("example", {
-    dataFactoryName: exampleFactory.name,
+const exampleDataFactoryDatasetSqlServerTable = new azure.DataFactoryDatasetSqlServerTable("example", {
+    dataFactoryName: exampleDataFactory.name,
     linkedServiceName: azurerm_data_factory_linked_service_sql_server_test.name,
     name: "example",
     resourceGroupName: exampleResourceGroup.name,
 });
-const exampleLinkedServiceSqlServer = new azure.datafactory.LinkedServiceSqlServer("example", {
+const exampleDataFactoryLinkedServiceSqlServer = new azure.DataFactoryLinkedServiceSqlServer("example", {
     connectionString: "Integrated Security=False;Data Source=test;Initial Catalog=test;User ID=test;Password=test",
-    dataFactoryName: exampleFactory.name,
+    dataFactoryName: exampleDataFactory.name,
     name: "example",
     resourceGroupName: exampleResourceGroup.name,
 });
@@ -687,7 +687,7 @@ const exampleResourceGroup = new azure.core.ResourceGroup("example", {
     location: "northeurope",
     name: "example",
 });
-const exampleFactory = new azure.datafactory.Factory("example", {
+const exampleDataFactory = new azure.DataFactory("example", {
     location: exampleResourceGroup.location,
     name: "example",
     resourceGroupName: exampleResourceGroup.name,
@@ -858,7 +858,7 @@ Manage a Linked Service (connection) between MySQL and Azure Data Factory.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleLinkedServiceMysql = new azure.datafactory.LinkedServiceMysql("example", {
+const exampleDataFactoryLinkedServiceMysql = new azure.DataFactoryLinkedServiceMysql("example", {
     connectionString: "Server=test;Port=3306;Database=test;User=test;SSLMode=1;UseSystemTrustStore=0;Password=test",
     dataFactoryName: azurerm_data_factory_test.name,
     name: "example",
@@ -868,7 +868,7 @@ const exampleResourceGroup = new azure.core.ResourceGroup("example", {
     location: "northeurope",
     name: "example",
 });
-const exampleFactory = new azure.datafactory.Factory("example", {
+const exampleDataFactory = new azure.DataFactory("example", {
     location: exampleResourceGroup.location,
     name: "example",
     resourceGroupName: exampleResourceGroup.name,
@@ -1040,7 +1040,7 @@ Manage a Linked Service (connection) between PostgreSQL and Azure Data Factory.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleLinkedServicePostgresql = new azure.datafactory.LinkedServicePostgresql("example", {
+const exampleDataFactoryLinkedServicePostgresql = new azure.DataFactoryLinkedServicePostgresql("example", {
     connectionString: "Host=example;Port=5432;Database=example;UID=example;EncryptionMethod=0;Password=example",
     dataFactoryName: azurerm_data_factory_test.name,
     name: "example",
@@ -1050,7 +1050,7 @@ const exampleResourceGroup = new azure.core.ResourceGroup("example", {
     location: "northeurope",
     name: "example",
 });
-const exampleFactory = new azure.datafactory.Factory("example", {
+const exampleDataFactory = new azure.DataFactory("example", {
     location: exampleResourceGroup.location,
     name: "example",
     resourceGroupName: exampleResourceGroup.name,
@@ -1222,7 +1222,7 @@ Manage a Linked Service (connection) between a SQL Server and Azure Data Factory
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleLinkedServiceSqlServer = new azure.datafactory.LinkedServiceSqlServer("example", {
+const exampleDataFactoryLinkedServiceSqlServer = new azure.DataFactoryLinkedServiceSqlServer("example", {
     connectionString: "Integrated Security=False;Data Source=test;Initial Catalog=test;User ID=test;Password=test",
     dataFactoryName: azurerm_data_factory_test.name,
     name: "example",
@@ -1232,7 +1232,7 @@ const exampleResourceGroup = new azure.core.ResourceGroup("example", {
     location: "northeurope",
     name: "example",
 });
-const exampleFactory = new azure.datafactory.Factory("example", {
+const exampleDataFactory = new azure.DataFactory("example", {
     location: exampleResourceGroup.location,
     name: "example",
     resourceGroupName: exampleResourceGroup.name,
@@ -1406,13 +1406,13 @@ const exampleResourceGroup = new azure.core.ResourceGroup("example", {
     location: "northeurope",
     name: "example",
 });
-const exampleFactory = new azure.datafactory.Factory("example", {
+const exampleDataFactory = new azure.DataFactory("example", {
     location: exampleResourceGroup.location,
     name: "example",
     resourceGroupName: exampleResourceGroup.name,
 });
-const examplePipeline = new azure.datafactory.Pipeline("example", {
-    dataFactoryName: exampleFactory.name,
+const exampleDataFactoryPipeline = new azure.DataFactoryPipeline("example", {
+    dataFactoryName: exampleDataFactory.name,
     name: "example",
     resourceGroupName: exampleResourceGroup.name,
 });
