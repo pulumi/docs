@@ -261,7 +261,7 @@ const testAccount = new azure.batch.Account("test", {
         env: "test",
     },
 });
-const testBatchCertificate = new azure.BatchCertificate("test", {
+const testCertificate = new azure.batch.Certificate("test", {
     accountName: testAccount.name,
     certificate: Buffer.from(fs.readFileSync("certificate.pfx", "utf-8")).toString("base64"),
     format: "Pfx",
@@ -454,7 +454,7 @@ const testAccount = new azure.batch.Account("test", {
         env: "test",
     },
 });
-const testcer = new azure.BatchCertificate("testcer", {
+const testcer = new azure.batch.Certificate("testcer", {
     accountName: testAccount.name,
     certificate: Buffer.from(fs.readFileSync("certificate.cer", "utf-8")).toString("base64"),
     format: "Cer",
@@ -473,9 +473,9 @@ const testPool = new azure.batch.Pool("test", {
       $TargetDedicatedNodes=min(maxNumberofVMs, pendingTaskSamples);
 `,
     },
-    certificate: [{
+    certificates: [{
         id: testcer.id,
-        visibility: ["StartTask"],
+        visibilities: ["StartTask"],
     }],
     displayName: "Test Acc Pool Auto",
     name: "testaccpool",
@@ -766,7 +766,7 @@ Use this data source to access information about an existing certificate in a Ba
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = pulumi.output(azure.BatchCertificate({
+const example = pulumi.output(azure.batch.getCertificate({
     accountName: "examplebatchaccount",
     name: "SHA1-42C107874FD0E4A9583292A2F1098E8FE4B2EDDA",
     resourceGroupName: "example",

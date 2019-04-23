@@ -509,7 +509,7 @@ const exampleIoTHub = new azure.iot.IoTHub("example", {
         tier: "Standard",
     },
 });
-const exampleIothubSharedAccessPolicy = new azure.IothubSharedAccessPolicy("example", {
+const exampleSharedAccessPolicy = new azure.iot.SharedAccessPolicy("example", {
     iothubName: exampleIoTHub.name,
     name: "example",
     registryRead: true,

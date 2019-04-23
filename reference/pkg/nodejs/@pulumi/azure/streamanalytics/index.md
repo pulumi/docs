@@ -65,24 +65,24 @@ import * as azure from "@pulumi/azure";
 const exampleResourceGroup = pulumi.output(azure.core.getResourceGroup({
     name: "example-resources",
 }));
-const exampleStreamAnalyticsJob = azurerm_resource_group_example.name.apply(name => azure.StreamAnalyticsJob({
+const exampleJob = azurerm_resource_group_example.name.apply(name => azure.streamanalytics.getJob({
     name: "example-job",
     resourceGroupName: name,
 }));
-const test = new azure.StreamAnalyticsFunctionJavascriptUdf("test", {
-    input: [{
+const test = new azure.streamanalytics.FunctionJavaScriptUDF("test", {
+    inputs: [{
         type: "bigint",
     }],
     name: "example-javascript-function",
-    output: [{
+    output: {
         type: "bigint",
-    }],
-    resourceGroupName: exampleStreamAnalyticsJob.apply(exampleStreamAnalyticsJob => exampleStreamAnalyticsJob.resourceGroupName),
+    },
+    resourceGroupName: exampleJob.apply(exampleJob => exampleJob.resourceGroupName),
     script: `function getRandomNumber(in) {
   return in;
 }
 `,
-    streamAnalyticsJobName: exampleStreamAnalyticsJob.apply(exampleStreamAnalyticsJob => exampleStreamAnalyticsJob.name),
+    streamAnalyticsJobName: exampleJob.apply(exampleJob => exampleJob.name),
 });
 ```
 
@@ -230,7 +230,7 @@ const exampleResourceGroup = new azure.core.ResourceGroup("example", {
     location: "West Europe",
     name: "example-resources",
 });
-const exampleStreamAnalyticsJob = new azure.StreamAnalyticsJob("example", {
+const exampleJob = new azure.streamanalytics.Job("example", {
     compatibilityLevel: "1.1",
     dataLocale: "en-GB",
     eventsLateArrivalMaxDelayInSeconds: 60,
@@ -441,7 +441,7 @@ import * as azure from "@pulumi/azure";
 const exampleResourceGroup = pulumi.output(azure.core.getResourceGroup({
     name: "example-resources",
 }));
-const exampleStreamAnalyticsJob = azurerm_resource_group_example.name.apply(name => azure.StreamAnalyticsJob({
+const exampleJob = azurerm_resource_group_example.name.apply(name => azure.streamanalytics.getJob({
     name: "example-job",
     resourceGroupName: name,
 }));
@@ -458,20 +458,20 @@ const exampleContainer = new azure.storage.Container("example", {
     resourceGroupName: exampleResourceGroup.apply(exampleResourceGroup => exampleResourceGroup.name),
     storageAccountName: exampleAccount.name,
 });
-const exampleStreamAnalyticsOutputBlob = new azure.StreamAnalyticsOutputBlob("example", {
+const exampleOutputBlob = new azure.streamanalytics.OutputBlob("example", {
     dateFormat: "yyyy-MM-dd",
     name: "output-to-blob-storage",
     pathPattern: "some-pattern",
-    resourceGroupName: exampleStreamAnalyticsJob.apply(exampleStreamAnalyticsJob => exampleStreamAnalyticsJob.resourceGroupName),
-    serialization: [{
+    resourceGroupName: exampleJob.apply(exampleJob => exampleJob.resourceGroupName),
+    serialization: {
         encoding: "UTF8",
         fieldDelimiter: ",",
         type: "Csv",
-    }],
+    },
     storageAccountKey: exampleAccount.primaryAccessKey,
     storageAccountName: exampleAccount.name,
     storageContainerName: exampleContainer.name,
-    streamAnalyticsJobName: exampleStreamAnalyticsJob.apply(exampleStreamAnalyticsJob => exampleStreamAnalyticsJob.name),
+    streamAnalyticsJobName: exampleJob.apply(exampleJob => exampleJob.name),
     timeFormat: "HH",
 });
 ```
@@ -656,7 +656,7 @@ import * as azure from "@pulumi/azure";
 const exampleResourceGroup = pulumi.output(azure.core.getResourceGroup({
     name: "example-resources",
 }));
-const exampleStreamAnalyticsJob = azurerm_resource_group_example.name.apply(name => azure.StreamAnalyticsJob({
+const exampleJob = azurerm_resource_group_example.name.apply(name => azure.streamanalytics.getJob({
     name: "example-job",
     resourceGroupName: name,
 }));
@@ -675,17 +675,17 @@ const testEventHubNamespace = new azure.eventhub.EventHubNamespace("test", {
     resourceGroupName: exampleResourceGroup.apply(exampleResourceGroup => exampleResourceGroup.name),
     sku: "Standard",
 });
-const exampleStreamAnalyticsOutputEventhub = new azure.StreamAnalyticsOutputEventhub("example", {
+const exampleOutputEventHub = new azure.streamanalytics.OutputEventHub("example", {
     eventhubName: azurerm_eventhub_example.name,
     name: "output-to-eventhub",
-    resourceGroupName: exampleStreamAnalyticsJob.apply(exampleStreamAnalyticsJob => exampleStreamAnalyticsJob.resourceGroupName),
-    serialization: [{
+    resourceGroupName: exampleJob.apply(exampleJob => exampleJob.resourceGroupName),
+    serialization: {
         type: "Avro",
-    }],
+    },
     servicebusNamespace: azurerm_eventhub_namespace_example.name,
     sharedAccessPolicyKey: azurerm_eventhub_namespace_example.defaultPrimaryKey,
     sharedAccessPolicyName: "RootManageSharedAccessKey",
-    streamAnalyticsJobName: exampleStreamAnalyticsJob.apply(exampleStreamAnalyticsJob => exampleStreamAnalyticsJob.name),
+    streamAnalyticsJobName: exampleJob.apply(exampleJob => exampleJob.name),
 });
 ```
 
@@ -851,7 +851,7 @@ import * as azure from "@pulumi/azure";
 const exampleResourceGroup = pulumi.output(azure.core.getResourceGroup({
     name: "example-resources",
 }));
-const exampleStreamAnalyticsJob = azurerm_resource_group_example.name.apply(name => azure.StreamAnalyticsJob({
+const exampleJob = azurerm_resource_group_example.name.apply(name => azure.streamanalytics.getJob({
     name: "example-job",
     resourceGroupName: name,
 }));
@@ -867,17 +867,17 @@ const exampleQueue = new azure.eventhub.Queue("example", {
     namespaceName: exampleNamespace.name,
     resourceGroupName: exampleResourceGroup.apply(exampleResourceGroup => exampleResourceGroup.name),
 });
-const test = new azure.StreamAnalyticsOutputServicebusQueue("test", {
+const test = new azure.streamanalytics.OutputServiceBusQueue("test", {
     name: "blob-storage-output",
     queueName: exampleQueue.name,
-    resourceGroupName: exampleStreamAnalyticsJob.apply(exampleStreamAnalyticsJob => exampleStreamAnalyticsJob.resourceGroupName),
-    serialization: [{
+    resourceGroupName: exampleJob.apply(exampleJob => exampleJob.resourceGroupName),
+    serialization: {
         format: "Avro",
-    }],
+    },
     servicebusNamespace: exampleNamespace.name,
     sharedAccessPolicyKey: exampleNamespace.defaultPrimaryKey,
     sharedAccessPolicyName: "RootManageSharedAccessKey",
-    streamAnalyticsJobName: exampleStreamAnalyticsJob.apply(exampleStreamAnalyticsJob => exampleStreamAnalyticsJob.name),
+    streamAnalyticsJobName: exampleJob.apply(exampleJob => exampleJob.name),
 });
 ```
 
@@ -1050,7 +1050,7 @@ const exampleAccount = new azure.storage.Account("example", {
 const exampleResourceGroup = pulumi.output(azure.core.getResourceGroup({
     name: "example-resources",
 }));
-const exampleStreamAnalyticsJob = azurerm_resource_group_example.name.apply(name => azure.StreamAnalyticsJob({
+const exampleJob = azurerm_resource_group_example.name.apply(name => azure.streamanalytics.getJob({
     name: "example-job",
     resourceGroupName: name,
 }));
@@ -1060,19 +1060,19 @@ const exampleContainer = new azure.storage.Container("example", {
     resourceGroupName: azurerm_resource_group_example.name,
     storageAccountName: exampleAccount.name,
 });
-const test = new azure.StreamAnalyticsStreamInputEventhub("test", {
+const test = new azure.streamanalytics.StreamInputEventHub("test", {
     dateFormat: "yyyy/MM/dd",
     name: "eventhub-stream-input",
     pathPattern: "some-random-pattern",
-    resourceGroupName: exampleStreamAnalyticsJob.apply(exampleStreamAnalyticsJob => exampleStreamAnalyticsJob.resourceGroupName),
-    serialization: [{
+    resourceGroupName: exampleJob.apply(exampleJob => exampleJob.resourceGroupName),
+    serialization: {
         encoding: "UTF8",
         type: "Json",
-    }],
+    },
     storageAccountKey: exampleAccount.primaryAccessKey,
     storageAccountName: exampleAccount.name,
     storageContainerName: exampleContainer.name,
-    streamAnalyticsJobName: exampleStreamAnalyticsJob.apply(exampleStreamAnalyticsJob => exampleStreamAnalyticsJob.name),
+    streamAnalyticsJobName: exampleJob.apply(exampleJob => exampleJob.name),
     timeFormat: "HH",
 });
 ```
@@ -1262,7 +1262,7 @@ const testEventHubConsumerGroup = new azure.eventhub.EventHubConsumerGroup("test
 const exampleResourceGroup = pulumi.output(azure.core.getResourceGroup({
     name: "example-resources",
 }));
-const exampleStreamAnalyticsJob = azurerm_resource_group_example.name.apply(name => azure.StreamAnalyticsJob({
+const exampleJob = azurerm_resource_group_example.name.apply(name => azure.streamanalytics.getJob({
     name: "example-job",
     resourceGroupName: name,
 }));
@@ -1281,19 +1281,19 @@ const exampleEventHub = new azure.eventhub.EventHub("example", {
     partitionCount: 2,
     resourceGroupName: exampleResourceGroup.apply(exampleResourceGroup => exampleResourceGroup.name),
 });
-const testStreamAnalyticsStreamInputEventhub = new azure.StreamAnalyticsStreamInputEventhub("test", {
+const testStreamInputEventHub = new azure.streamanalytics.StreamInputEventHub("test", {
     eventhubConsumerGroupName: azurerm_eventhub_consumer_group_example.name,
     eventhubName: exampleEventHub.name,
     name: "eventhub-stream-input",
-    resourceGroupName: exampleStreamAnalyticsJob.apply(exampleStreamAnalyticsJob => exampleStreamAnalyticsJob.resourceGroupName),
-    serialization: [{
+    resourceGroupName: exampleJob.apply(exampleJob => exampleJob.resourceGroupName),
+    serialization: {
         encoding: "UTF8",
         type: "Json",
-    }],
+    },
     servicebusNamespace: exampleEventHubNamespace.name,
     sharedAccessPolicyKey: exampleEventHubNamespace.defaultPrimaryKey,
     sharedAccessPolicyName: "RootManageSharedAccessKey",
-    streamAnalyticsJobName: exampleStreamAnalyticsJob.apply(exampleStreamAnalyticsJob => exampleStreamAnalyticsJob.name),
+    streamAnalyticsJobName: exampleJob.apply(exampleJob => exampleJob.name),
 });
 ```
 
@@ -1477,23 +1477,23 @@ const testIoTHub = new azure.iot.IoTHub("test", {
 const exampleResourceGroup = pulumi.output(azure.core.getResourceGroup({
     name: "example-resources",
 }));
-const exampleStreamAnalyticsJob = azurerm_resource_group_example.name.apply(name => azure.StreamAnalyticsJob({
+const exampleJob = azurerm_resource_group_example.name.apply(name => azure.streamanalytics.getJob({
     name: "example-job",
     resourceGroupName: name,
 }));
-const testStreamAnalyticsStreamInputIothub = new azure.StreamAnalyticsStreamInputIothub("test", {
+const testStreamInputIotHub = new azure.streamanalytics.StreamInputIotHub("test", {
     endpoint: "messages/events",
     eventhubConsumerGroupName: "$Default",
     iothubNamespace: azurerm_iothub_example.name,
     name: "example-iothub-input",
-    resourceGroupName: exampleStreamAnalyticsJob.apply(exampleStreamAnalyticsJob => exampleStreamAnalyticsJob.resourceGroupName),
-    serialization: [{
+    resourceGroupName: exampleJob.apply(exampleJob => exampleJob.resourceGroupName),
+    serialization: {
         encoding: "UTF8",
         type: "Json",
-    }],
+    },
     sharedAccessPolicyKey: azurerm_iothub_example.sharedAccessPolicy.apply(sharedAccessPolicy => sharedAccessPolicy.0.primaryKey),
     sharedAccessPolicyName: "iothubowner",
-    streamAnalyticsJobName: exampleStreamAnalyticsJob.apply(exampleStreamAnalyticsJob => exampleStreamAnalyticsJob.name),
+    streamAnalyticsJobName: exampleJob.apply(exampleJob => exampleJob.name),
 });
 ```
 
@@ -1666,7 +1666,7 @@ Use this data source to access information about an existing Stream Analytics Jo
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.StreamAnalyticsJob({
+const test = pulumi.output(azure.streamanalytics.getJob({
     name: "example-job",
     resourceGroupName: "example-resources",
 }));

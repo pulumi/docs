@@ -83,12 +83,12 @@ const aci_helloworld = new azure.containerservice.Group("aci-helloworld", {
                 NODE_ENV: "testing",
             },
             image: "seanmckenna/aci-hellofiles",
-            livenessProbe: [{
-                exec: [
+            livenessProbe: {
+                execs: [
                     "cat",
                     "/tmp/healthy",
                 ],
-            }],
+            },
             memory: 1.5,
             name: "hw",
             ports: [
@@ -101,13 +101,13 @@ const aci_helloworld = new azure.containerservice.Group("aci-helloworld", {
                     protocol: "TCP",
                 },
             ],
-            readinessProbe: [{
-                exec: [
+            readinessProbe: {
+                execs: [
                     "/bin/sh",
                     "-c",
                     "touch /tmp/healthy; sleep 30; rm -rf /tmp/healthy; sleep 600",
                 ],
-            }],
+            },
             secureEnvironmentVariables: {
                 ACCESS_KEY: "secure_testing",
             },

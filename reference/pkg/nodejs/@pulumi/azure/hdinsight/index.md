@@ -79,38 +79,38 @@ const exampleContainer = new azure.storage.Container("example", {
     resourceGroupName: exampleResourceGroup.name,
     storageAccountName: exampleAccount.name,
 });
-const exampleHdinsightHbaseCluster = new azure.HdinsightHbaseCluster("example", {
+const exampleHBaseCluster = new azure.hdinsight.HBaseCluster("example", {
     clusterVersion: "3.6",
-    componentVersion: [{
+    componentVersion: {
         hbase: "1.1",
-    }],
-    gateway: [{
+    },
+    gateway: {
         enabled: true,
         password: "TerrAform123!",
         username: "acctestusrgw",
-    }],
+    },
     location: exampleResourceGroup.location,
     name: "example-hdicluster",
     resourceGroupName: exampleResourceGroup.name,
-    roles: [{
-        headNode: [{
+    roles: {
+        headNode: {
             password: "AccTestvdSC4daf986!",
             username: "acctestusrvm",
             vmSize: "Standard_D3_V2",
-        }],
-        workerNode: [{
+        },
+        workerNode: {
             password: "AccTestvdSC4daf986!",
             targetInstanceCount: 3,
             username: "acctestusrvm",
             vmSize: "Standard_D3_V2",
-        }],
-        zookeeperNode: [{
+        },
+        zookeeperNode: {
             password: "AccTestvdSC4daf986!",
             username: "acctestusrvm",
             vmSize: "Standard_D3_V2",
-        }],
-    }],
-    storageAccount: [{
+        },
+    },
+    storageAccounts: [{
         isDefault: true,
         storageAccountKey: exampleAccount.primaryAccessKey,
         storageContainerId: exampleContainer.id,
@@ -363,38 +363,38 @@ const exampleContainer = new azure.storage.Container("example", {
     resourceGroupName: exampleResourceGroup.name,
     storageAccountName: exampleAccount.name,
 });
-const exampleHdinsightHadoopCluster = new azure.HdinsightHadoopCluster("example", {
+const exampleHadoopCluster = new azure.hdinsight.HadoopCluster("example", {
     clusterVersion: "3.6",
-    componentVersion: [{
+    componentVersion: {
         hadoop: "2.7",
-    }],
-    gateway: [{
+    },
+    gateway: {
         enabled: true,
         password: "TerrAform123!",
         username: "acctestusrgw",
-    }],
+    },
     location: exampleResourceGroup.location,
     name: "example-hdicluster",
     resourceGroupName: exampleResourceGroup.name,
-    roles: [{
-        headNode: [{
+    roles: {
+        headNode: {
             password: "AccTestvdSC4daf986!",
             username: "acctestusrvm",
             vmSize: "Standard_D3_V2",
-        }],
-        workerNode: [{
+        },
+        workerNode: {
             password: "AccTestvdSC4daf986!",
             targetInstanceCount: 3,
             username: "acctestusrvm",
             vmSize: "Standard_D4_V2",
-        }],
-        zookeeperNode: [{
+        },
+        zookeeperNode: {
             password: "AccTestvdSC4daf986!",
             username: "acctestusrvm",
             vmSize: "Standard_D3_V2",
-        }],
-    }],
-    storageAccount: [{
+        },
+    },
+    storageAccounts: [{
         isDefault: true,
         storageAccountKey: exampleAccount.primaryAccessKey,
         storageContainerId: exampleContainer.id,
@@ -647,38 +647,38 @@ const exampleContainer = new azure.storage.Container("example", {
     resourceGroupName: exampleResourceGroup.name,
     storageAccountName: exampleAccount.name,
 });
-const exampleHdinsightInteractiveQueryCluster = new azure.HdinsightInteractiveQueryCluster("example", {
+const exampleInteractiveQueryCluster = new azure.hdinsight.InteractiveQueryCluster("example", {
     clusterVersion: "3.6",
-    componentVersion: [{
+    componentVersion: {
         interactiveHive: "2.1",
-    }],
-    gateway: [{
+    },
+    gateway: {
         enabled: true,
         password: "TerrAform123!",
         username: "acctestusrgw",
-    }],
+    },
     location: exampleResourceGroup.location,
     name: "example-hdicluster",
     resourceGroupName: exampleResourceGroup.name,
-    roles: [{
-        headNode: [{
+    roles: {
+        headNode: {
             password: "AccTestvdSC4daf986!",
             username: "acctestusrvm",
             vmSize: "Standard_D13_V2",
-        }],
-        workerNode: [{
+        },
+        workerNode: {
             password: "AccTestvdSC4daf986!",
             targetInstanceCount: 3,
             username: "acctestusrvm",
             vmSize: "Standard_D14_V2",
-        }],
-        zookeeperNode: [{
+        },
+        zookeeperNode: {
             password: "AccTestvdSC4daf986!",
             username: "acctestusrvm",
             vmSize: "Standard_A4_V2",
-        }],
-    }],
-    storageAccount: [{
+        },
+    },
+    storageAccounts: [{
         isDefault: true,
         storageAccountKey: exampleAccount.primaryAccessKey,
         storageContainerId: exampleContainer.id,
@@ -931,39 +931,39 @@ const exampleContainer = new azure.storage.Container("example", {
     resourceGroupName: exampleResourceGroup.name,
     storageAccountName: exampleAccount.name,
 });
-const exampleHdinsightKafkaCluster = new azure.HdinsightKafkaCluster("example", {
+const exampleKafkaCluster = new azure.hdinsight.KafkaCluster("example", {
     clusterVersion: "3.6",
-    componentVersion: [{
+    componentVersion: {
         kafka: "2.3",
-    }],
-    gateway: [{
+    },
+    gateway: {
         enabled: true,
         password: "TerrAform123!",
         username: "acctestusrgw",
-    }],
+    },
     location: exampleResourceGroup.location,
     name: "example-hdicluster",
     resourceGroupName: exampleResourceGroup.name,
-    roles: [{
-        headNode: [{
+    roles: {
+        headNode: {
             password: "AccTestvdSC4daf986!",
             username: "acctestusrvm",
             vmSize: "Standard_D3_V2",
-        }],
-        workerNode: [{
+        },
+        workerNode: {
             numberOfDisksPerNode: 3,
             password: "AccTestvdSC4daf986!",
             targetInstanceCount: 3,
             username: "acctestusrvm",
             vmSize: "Standard_D3_V2",
-        }],
-        zookeeperNode: [{
+        },
+        zookeeperNode: {
             password: "AccTestvdSC4daf986!",
             username: "acctestusrvm",
             vmSize: "Standard_D3_V2",
-        }],
-    }],
-    storageAccount: [{
+        },
+    },
+    storageAccounts: [{
         isDefault: true,
         storageAccountKey: exampleAccount.primaryAccessKey,
         storageContainerId: exampleContainer.id,
@@ -1217,41 +1217,41 @@ const exampleContainer = new azure.storage.Container("example", {
     resourceGroupName: exampleResourceGroup.name,
     storageAccountName: exampleAccount.name,
 });
-const exampleHdinsightMlServicesCluster = new azure.HdinsightMlServicesCluster("example", {
+const exampleMLServicesCluster = new azure.hdinsight.MLServicesCluster("example", {
     clusterVersion: "3.6",
-    gateway: [{
+    gateway: {
         enabled: true,
         password: "TerrAform123!",
         username: "acctestusrgw",
-    }],
+    },
     location: exampleResourceGroup.location,
     name: "example-hdicluster",
     resourceGroupName: exampleResourceGroup.name,
-    roles: [{
-        edgeNode: [{
+    roles: {
+        edgeNode: {
             password: "AccTestvdSC4daf986!",
             username: "acctestusrvm",
             vmSize: "Standard_D3_v2",
-        }],
-        headNode: [{
+        },
+        headNode: {
             password: "AccTestvdSC4daf986!",
             username: "acctestusrvm",
             vmSize: "Standard_D3_v2",
-        }],
-        workerNode: [{
+        },
+        workerNode: {
             password: "AccTestvdSC4daf986!",
             targetInstanceCount: 3,
             username: "acctestusrvm",
             vmSize: "Standard_D4_V2",
-        }],
-        zookeeperNode: [{
+        },
+        zookeeperNode: {
             password: "AccTestvdSC4daf986!",
             username: "acctestusrvm",
             vmSize: "Standard_D3_v2",
-        }],
-    }],
+        },
+    },
     rstudio: true,
-    storageAccount: [{
+    storageAccounts: [{
         isDefault: true,
         storageAccountKey: exampleAccount.primaryAccessKey,
         storageContainerId: exampleContainer.id,
@@ -1519,41 +1519,41 @@ const exampleContainer = new azure.storage.Container("example", {
     resourceGroupName: exampleResourceGroup.name,
     storageAccountName: exampleAccount.name,
 });
-const exampleHdinsightRserverCluster = new azure.HdinsightRserverCluster("example", {
+const exampleRServerCluster = new azure.hdinsight.RServerCluster("example", {
     clusterVersion: "3.6",
-    gateway: [{
+    gateway: {
         enabled: true,
         password: "TerrAform123!",
         username: "acctestusrgw",
-    }],
+    },
     location: exampleResourceGroup.location,
     name: "example-hdicluster",
     resourceGroupName: exampleResourceGroup.name,
-    roles: [{
-        edgeNode: [{
+    roles: {
+        edgeNode: {
             password: "AccTestvdSC4daf986!",
             username: "acctestusrvm",
             vmSize: "Standard_D3_v2",
-        }],
-        headNode: [{
+        },
+        headNode: {
             password: "AccTestvdSC4daf986!",
             username: "acctestusrvm",
             vmSize: "Standard_D3_v2",
-        }],
-        workerNode: [{
+        },
+        workerNode: {
             password: "AccTestvdSC4daf986!",
             targetInstanceCount: 3,
             username: "acctestusrvm",
             vmSize: "Standard_D4_V2",
-        }],
-        zookeeperNode: [{
+        },
+        zookeeperNode: {
             password: "AccTestvdSC4daf986!",
             username: "acctestusrvm",
             vmSize: "Standard_D3_v2",
-        }],
-    }],
+        },
+    },
     rstudio: true,
-    storageAccount: [{
+    storageAccounts: [{
         isDefault: true,
         storageAccountKey: exampleAccount.primaryAccessKey,
         storageContainerId: exampleContainer.id,
@@ -1821,38 +1821,38 @@ const exampleContainer = new azure.storage.Container("example", {
     resourceGroupName: exampleResourceGroup.name,
     storageAccountName: exampleAccount.name,
 });
-const exampleHdinsightSparkCluster = new azure.HdinsightSparkCluster("example", {
+const exampleSparkCluster = new azure.hdinsight.SparkCluster("example", {
     clusterVersion: "3.6",
-    componentVersion: [{
+    componentVersion: {
         spark: "2.3",
-    }],
-    gateway: [{
+    },
+    gateway: {
         enabled: true,
         password: "TerrAform123!",
         username: "acctestusrgw",
-    }],
+    },
     location: exampleResourceGroup.location,
     name: "example-hdicluster",
     resourceGroupName: exampleResourceGroup.name,
-    roles: [{
-        headNode: [{
+    roles: {
+        headNode: {
             password: "AccTestvdSC4daf986!",
             username: "acctestusrvm",
             vmSize: "Standard_A3",
-        }],
-        workerNode: [{
+        },
+        workerNode: {
             password: "AccTestvdSC4daf986!",
             targetInstanceCount: 3,
             username: "acctestusrvm",
             vmSize: "Standard_A3",
-        }],
-        zookeeperNode: [{
+        },
+        zookeeperNode: {
             password: "AccTestvdSC4daf986!",
             username: "acctestusrvm",
             vmSize: "Medium",
-        }],
-    }],
-    storageAccount: [{
+        },
+    },
+    storageAccounts: [{
         isDefault: true,
         storageAccountKey: exampleAccount.primaryAccessKey,
         storageContainerId: exampleContainer.id,
@@ -2105,38 +2105,38 @@ const exampleContainer = new azure.storage.Container("example", {
     resourceGroupName: exampleResourceGroup.name,
     storageAccountName: exampleAccount.name,
 });
-const exampleHdinsightStormCluster = new azure.HdinsightStormCluster("example", {
+const exampleStormCluster = new azure.hdinsight.StormCluster("example", {
     clusterVersion: "3.6",
-    componentVersion: [{
+    componentVersion: {
         storm: "1.1",
-    }],
-    gateway: [{
+    },
+    gateway: {
         enabled: true,
         password: "TerrAform123!",
         username: "acctestusrgw",
-    }],
+    },
     location: exampleResourceGroup.location,
     name: "example-hdicluster",
     resourceGroupName: exampleResourceGroup.name,
-    roles: [{
-        headNode: [{
+    roles: {
+        headNode: {
             password: "AccTestvdSC4daf986!",
             username: "acctestusrvm",
             vmSize: "Standard_A3",
-        }],
-        workerNode: [{
+        },
+        workerNode: {
             password: "AccTestvdSC4daf986!",
             targetInstanceCount: 3,
             username: "acctestusrvm",
             vmSize: "Standard_D3_V2",
-        }],
-        zookeeperNode: [{
+        },
+        zookeeperNode: {
             password: "AccTestvdSC4daf986!",
             username: "acctestusrvm",
             vmSize: "Standard_A4_V2",
-        }],
-    }],
-    storageAccount: [{
+        },
+    },
+    storageAccounts: [{
         isDefault: true,
         storageAccountKey: exampleAccount.primaryAccessKey,
         storageContainerId: exampleContainer.id,
@@ -2374,7 +2374,7 @@ Use this data source to access information about an existing HDInsight Cluster.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = pulumi.output(azure.HdinsightCluster({
+const example = pulumi.output(azure.hdinsight.getCluster({
     name: "example",
     resourceGroupName: "example-resources",
 }));

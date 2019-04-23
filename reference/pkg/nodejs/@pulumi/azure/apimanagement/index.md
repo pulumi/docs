@@ -102,7 +102,7 @@ const testResourceGroup = new azure.core.ResourceGroup("test", {
     location: "West Europe",
     name: "example-resources",
 });
-const testAPI = new azure.apimanagement.API("test", {
+const testService = new azure.apimanagement.Service("test", {
     location: testResourceGroup.location,
     name: "example-apim",
     publisherEmail: "company@terraform.io",
@@ -113,13 +113,13 @@ const testAPI = new azure.apimanagement.API("test", {
         name: "Developer",
     },
 });
-const testApiManagementApi = new azure.ApiManagementApi("test", {
-    apiManagementName: testAPI.name,
+const testApi = new azure.apimanagement.Api("test", {
+    apiManagementName: testService.name,
     displayName: "Example API",
-    import: [{
+    import: {
         contentFormat: "swagger-link-json",
         contentValue: "http://conferenceapi.azurewebsites.net/?format=json",
-    }],
+    },
     name: "example-api",
     path: "example",
     protocols: ["https"],
@@ -364,21 +364,21 @@ Manages an API Operation within an API Management Service.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleApiManagementApi = pulumi.output(azure.ApiManagementApi({
+const exampleApi = pulumi.output(azure.apimanagement.getApi({
     apiManagementName: "search-api-management",
     name: "search-api",
     resourceGroupName: "search-service",
     revision: "2",
 }));
-const exampleApiManagementApiOperation = new azure.ApiManagementApiOperation("example", {
-    apiManagementName: exampleApiManagementApi.apply(exampleApiManagementApi => exampleApiManagementApi.apiManagementName),
-    apiName: exampleApiManagementApi.apply(exampleApiManagementApi => exampleApiManagementApi.name),
+const exampleApiOperation = new azure.apimanagement.ApiOperation("example", {
+    apiManagementName: exampleApi.apply(exampleApi => exampleApi.apiManagementName),
+    apiName: exampleApi.apply(exampleApi => exampleApi.name),
     description: "This can only be done by the logged in user.",
     displayName: "Delete User Operation",
     method: "DELETE",
     operationId: "user-delete",
-    resourceGroupName: exampleApiManagementApi.apply(exampleApiManagementApi => exampleApiManagementApi.resourceGroupName),
-    response: [{
+    resourceGroupName: exampleApi.apply(exampleApi => exampleApi.resourceGroupName),
+    responses: [{
         statusCode: 200,
     }],
     urlTemplate: "/users/{id}/delete",
@@ -634,7 +634,7 @@ const exampleResourceGroup = new azure.core.ResourceGroup("example", {
     location: "West US",
     name: "example-resources",
 });
-const exampleAPI = new azure.apimanagement.API("example", {
+const exampleService = new azure.apimanagement.Service("example", {
     location: exampleResourceGroup.location,
     name: "example-apim",
     publisherEmail: "pub1@email.com",
@@ -646,7 +646,7 @@ const exampleAPI = new azure.apimanagement.API("example", {
     },
 });
 const exampleApiManagementVersionSet = new azure.ApiManagementVersionSet("example", {
-    apiManagementName: exampleAPI.name,
+    apiManagementName: exampleService.name,
     displayName: "ExampleAPIVersionSet",
     name: "example-apimapi-1.0.0",
     resourceGroupName: exampleResourceGroup.name,
@@ -808,7 +808,7 @@ Manages an Authorization Server within an API Management Service.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleApiManagementAuthorizationServer = new azure.ApiManagementAuthorizationServer("example", {
+const exampleAuthorizationServer = new azure.apimanagement.AuthorizationServer("example", {
     apiManagementName: azurerm_api_management_example.name.apply(name => name),
     authorizationEndpoint: "https://example.mydomain.com/client/authorize",
     clientId: "42424242-4242-4242-4242-424242424242",
@@ -818,7 +818,7 @@ const exampleApiManagementAuthorizationServer = new azure.ApiManagementAuthoriza
     name: "test-server",
     resourceGroupName: azurerm_api_management_example.resourceGroupName.apply(resourceGroupName => resourceGroupName),
 });
-const exampleApiManagementApi = pulumi.output(azure.ApiManagementApi({
+const exampleApi = pulumi.output(azure.apimanagement.getApi({
     apiManagementName: "search-api-management",
     name: "search-api",
     resourceGroupName: "search-service",
@@ -1084,7 +1084,7 @@ const testResourceGroup = new azure.core.ResourceGroup("test", {
     location: "West Europe",
     name: "example-resources",
 });
-const testAPI = new azure.apimanagement.API("test", {
+const testService = new azure.apimanagement.Service("test", {
     location: testResourceGroup.location,
     name: "example-apim",
     publisherEmail: "company@terraform.io",
@@ -1095,8 +1095,8 @@ const testAPI = new azure.apimanagement.API("test", {
         name: "Developer",
     },
 });
-const testApiManagementCertificate = new azure.ApiManagementCertificate("test", {
-    apiManagementName: testAPI.name,
+const testCertificate = new azure.apimanagement.Certificate("test", {
+    apiManagementName: testService.name,
     data: Buffer.from(fs.readFileSync("example.pfx", "utf-8")).toString("base64"),
     name: "example-cert",
     resourceGroupName: testResourceGroup.name,
@@ -1261,7 +1261,7 @@ const exampleResourceGroup = new azure.core.ResourceGroup("example", {
     location: "West US",
     name: "example-resources",
 });
-const exampleAPI = new azure.apimanagement.API("example", {
+const exampleService = new azure.apimanagement.Service("example", {
     location: exampleResourceGroup.location,
     name: "example-apim",
     publisherEmail: "pub1@email.com",
@@ -1273,7 +1273,7 @@ const exampleAPI = new azure.apimanagement.API("example", {
     },
 });
 const exampleGroup = new azure.apimanagement.Group("example", {
-    apiManagementName: exampleAPI.name,
+    apiManagementName: exampleService.name,
     description: "This is an example API management group.",
     displayName: "Example Group",
     name: "example-apimg",
@@ -1561,7 +1561,7 @@ const exampleResourceGroup = new azure.core.ResourceGroup("example", {
     location: "West US",
     name: "example-resources",
 });
-const exampleAPI = new azure.apimanagement.API("example", {
+const exampleService = new azure.apimanagement.Service("example", {
     location: exampleResourceGroup.location,
     name: "example-apim",
     publisherEmail: "company@terraform.io",
@@ -1578,11 +1578,11 @@ const exampleInsights = new azure.appinsights.Insights("example", {
     name: "example-appinsights",
     resourceGroupName: exampleResourceGroup.name,
 });
-const exampleApiManagementLogger = new azure.ApiManagementLogger("example", {
-    apiManagementName: exampleAPI.name,
-    applicationInsights: [{
+const exampleLogger = new azure.apimanagement.Logger("example", {
+    apiManagementName: exampleService.name,
+    applicationInsights: {
         instrumentationKey: exampleInsights.instrumentationKey,
-    }],
+    },
     name: "example-logger",
     resourceGroupName: exampleResourceGroup.name,
 });
@@ -1742,7 +1742,7 @@ const testResourceGroup = new azure.core.ResourceGroup("test", {
     location: "West Europe",
     name: "example-resources",
 });
-const testAPI = new azure.apimanagement.API("test", {
+const testService = new azure.apimanagement.Service("test", {
     location: testResourceGroup.location,
     name: "example-apim",
     publisherEmail: "company@terraform.io",
@@ -1753,8 +1753,8 @@ const testAPI = new azure.apimanagement.API("test", {
         name: "Developer",
     },
 });
-const testApiManagementOpenidConnectProvider = new azure.ApiManagementOpenidConnectProvider("test", {
-    apiManagementName: testAPI.name,
+const testOpenIdConnectProvider = new azure.apimanagement.OpenIdConnectProvider("test", {
+    apiManagementName: testService.name,
     clientId: "00001111-2222-3333-4444-555566667777",
     displayName: "Example Provider",
     metadataEndpoint: "https://example.com/example",
@@ -1921,7 +1921,7 @@ const testResourceGroup = new azure.core.ResourceGroup("test", {
     location: "West Europe",
     name: "example-resources",
 });
-const testAPI = new azure.apimanagement.API("test", {
+const testService = new azure.apimanagement.Service("test", {
     location: testResourceGroup.location,
     name: "example-apim",
     publisherEmail: "company@terraform.io",
@@ -1933,7 +1933,7 @@ const testAPI = new azure.apimanagement.API("test", {
     },
 });
 const testProduct = new azure.apimanagement.Product("test", {
-    apiManagementName: testAPI.name,
+    apiManagementName: testService.name,
     approvalRequired: true,
     displayName: "Test Product",
     productId: "test-product",
@@ -2115,26 +2115,26 @@ Manages an API Management API Assignment to a Product.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleAPI = pulumi.output(azure.apimanagement.getAPI({
+const exampleService = pulumi.output(azure.apimanagement.getService({
     name: "example-api",
     resourceGroupName: "example-resources",
 }));
-const exampleApiManagementApi = pulumi.all([exampleAPI, exampleAPI]).apply(([exampleAPI, exampleAPI1]) => azure.ApiManagementApi({
-    apiManagementName: exampleAPI.name,
+const exampleApi = pulumi.all([exampleService, exampleService]).apply(([exampleService, exampleService1]) => azure.apimanagement.getApi({
+    apiManagementName: exampleService.name,
     name: "search-api",
-    resourceGroupName: exampleAPI1.resourceGroupName,
+    resourceGroupName: exampleService1.resourceGroupName,
     revision: "2",
 }));
-const exampleApiManagementProductApi = new azure.ApiManagementProductApi("example", {
-    apiManagementName: exampleAPI.apply(exampleAPI => exampleAPI.name),
-    apiName: exampleApiManagementApi.apply(exampleApiManagementApi => exampleApiManagementApi.name),
+const exampleProductApi = new azure.apimanagement.ProductApi("example", {
+    apiManagementName: exampleService.apply(exampleService => exampleService.name),
+    apiName: exampleApi.apply(exampleApi => exampleApi.name),
     productId: azurerm_api_management_product_example.productId.apply(productId => productId),
-    resourceGroupName: exampleAPI.apply(exampleAPI => exampleAPI.resourceGroupName),
+    resourceGroupName: exampleService.apply(exampleService => exampleService.resourceGroupName),
 });
-const test = pulumi.all([exampleAPI, exampleAPI]).apply(([exampleAPI, exampleAPI1]) => azure.apimanagement.getProduct({
-    apiManagementName: exampleAPI.name,
+const test = pulumi.all([exampleService, exampleService]).apply(([exampleService, exampleService1]) => azure.apimanagement.getProduct({
+    apiManagementName: exampleService.name,
     productId: "my-product",
-    resourceGroupName: exampleAPI1.resourceGroupName,
+    resourceGroupName: exampleService1.resourceGroupName,
 }));
 ```
 
@@ -2256,25 +2256,25 @@ Manages an API Management Product Assignment to a Group.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleAPI = pulumi.output(azure.apimanagement.getAPI({
+const exampleService = pulumi.output(azure.apimanagement.getService({
     name: "example-api",
     resourceGroupName: "example-resources",
 }));
-const exampleGroup = pulumi.all([exampleAPI, exampleAPI]).apply(([exampleAPI, exampleAPI1]) => azure.apimanagement.getGroup({
-    apiManagementName: exampleAPI.name,
+const exampleGroup = pulumi.all([exampleService, exampleService]).apply(([exampleService, exampleService1]) => azure.apimanagement.getGroup({
+    apiManagementName: exampleService.name,
     name: "my-group",
-    resourceGroupName: exampleAPI1.resourceGroupName,
+    resourceGroupName: exampleService1.resourceGroupName,
 }));
 const exampleProductGroup = new azure.apimanagement.ProductGroup("example", {
-    apiManagementName: exampleAPI.apply(exampleAPI => exampleAPI.name),
+    apiManagementName: exampleService.apply(exampleService => exampleService.name),
     groupName: exampleGroup.apply(exampleGroup => exampleGroup.name),
     productId: azurerm_api_management_user_example.id.apply(id => id),
-    resourceGroupName: exampleAPI.apply(exampleAPI => exampleAPI.resourceGroupName),
+    resourceGroupName: exampleService.apply(exampleService => exampleService.resourceGroupName),
 });
-const exampleProduct = pulumi.all([exampleAPI, exampleAPI]).apply(([exampleAPI, exampleAPI1]) => azure.apimanagement.getProduct({
-    apiManagementName: exampleAPI.name,
+const exampleProduct = pulumi.all([exampleService, exampleService]).apply(([exampleService, exampleService1]) => azure.apimanagement.getProduct({
+    apiManagementName: exampleService.name,
     productId: "my-product",
-    resourceGroupName: exampleAPI1.resourceGroupName,
+    resourceGroupName: exampleService1.resourceGroupName,
 }));
 ```
 
@@ -2400,7 +2400,7 @@ const exampleResourceGroup = new azure.core.ResourceGroup("example", {
     location: "West US",
     name: "example-resources",
 });
-const exampleAPI = new azure.apimanagement.API("example", {
+const exampleService = new azure.apimanagement.Service("example", {
     location: exampleResourceGroup.location,
     name: "example-apim",
     publisherEmail: "pub1@email.com",
@@ -2412,7 +2412,7 @@ const exampleAPI = new azure.apimanagement.API("example", {
     },
 });
 const exampleProperty = new azure.apimanagement.Property("example", {
-    apiManagementName: exampleAPI.name,
+    apiManagementName: exampleService.name,
     displayName: "ExampleProperty",
     name: "example-apimg",
     resourceGroupName: exampleResourceGroup.name,
@@ -2569,7 +2569,7 @@ const testResourceGroup = new azure.core.ResourceGroup("test", {
     location: "West Europe",
     name: "example-resources",
 });
-const testAPI = new azure.apimanagement.API("test", {
+const testService = new azure.apimanagement.Service("test", {
     location: testResourceGroup.location,
     name: "example-apim",
     publisherEmail: "company@terraform.io",
@@ -2927,25 +2927,25 @@ Manages a Subscription within a API Management Service.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const testAPI = pulumi.output(azure.apimanagement.getAPI({
+const testService = pulumi.output(azure.apimanagement.getService({
     name: "example-apim",
     resourceGroupName: "example-resources",
 }));
-const testProduct = pulumi.all([testAPI, testAPI]).apply(([testAPI, testAPI1]) => azure.apimanagement.getProduct({
-    apiManagementName: testAPI.name,
+const testProduct = pulumi.all([testService, testService]).apply(([testService, testService1]) => azure.apimanagement.getProduct({
+    apiManagementName: testService.name,
     productId: "00000000-0000-0000-0000-000000000000",
-    resourceGroupName: testAPI1.resourceGroupName,
+    resourceGroupName: testService1.resourceGroupName,
 }));
-const testUser = pulumi.all([testAPI, testAPI]).apply(([testAPI, testAPI1]) => azure.apimanagement.getUser({
-    apiManagementName: testAPI.name,
-    resourceGroupName: testAPI1.resourceGroupName,
+const testUser = pulumi.all([testService, testService]).apply(([testService, testService1]) => azure.apimanagement.getUser({
+    apiManagementName: testService.name,
+    resourceGroupName: testService1.resourceGroupName,
     userId: "11111111-1111-1111-1111-111111111111",
 }));
-const testApiManagementSubscription = new azure.ApiManagementSubscription("test", {
-    apiManagementName: testAPI.apply(testAPI => testAPI.name),
+const testSubscription = new azure.apimanagement.Subscription("test", {
+    apiManagementName: testService.apply(testService => testService.name),
     displayName: "Parser API",
     productId: testProduct.apply(testProduct => testProduct.id),
-    resourceGroupName: testAPI.apply(testAPI => testAPI.resourceGroupName),
+    resourceGroupName: testService.apply(testService => testService.resourceGroupName),
     userId: testUser.apply(testUser => testUser.id),
 });
 ```
@@ -3111,7 +3111,7 @@ const testResourceGroup = new azure.core.ResourceGroup("test", {
     location: "West Europe",
     name: "example-resources",
 });
-const testAPI = new azure.apimanagement.API("test", {
+const testService = new azure.apimanagement.Service("test", {
     location: testResourceGroup.location,
     name: "example-apim",
     publisherEmail: "company@terraform.io",
@@ -3123,7 +3123,7 @@ const testAPI = new azure.apimanagement.API("test", {
     },
 });
 const testUser = new azure.apimanagement.User("test", {
-    apiManagementName: testAPI.name,
+    apiManagementName: testService.name,
     email: "tom+tfdev@hashicorp.com",
     firstName: "Example",
     lastName: "User",
@@ -3307,7 +3307,7 @@ Use this data source to access information about an existing API Management API.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.ApiManagementApi({
+const test = pulumi.output(azure.apimanagement.getApi({
     apiManagementName: "search-api-management",
     name: "search-api",
     resourceGroupName: "search-service",
@@ -3386,7 +3386,7 @@ Use this data source to access information about an existing API Management Serv
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = pulumi.output(azure.apimanagement.getAPI({
+const test = pulumi.output(azure.apimanagement.getService({
     name: "search-api",
     resourceGroupName: "search-service",
 }));
