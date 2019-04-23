@@ -2,7 +2,7 @@
 title: SAML Configuration &gt; Okta
 ---
 
-This guide walks through how to configure Okta as a SAML SSO identity provider (IdP) for use with
+This guide walks through how to configure Okta as a SAML SSO identity provider (IDP) for use with
 the Pulumi Cloud Console.
 
 > **NOTE:** The screen shots below are using the Okta _Classic UI_. You can switch to it by clicking the gear
@@ -51,7 +51,7 @@ tbody tr td {
 
 <p><!-- space between table and text --></p>
 In addition, there are two attribute statements that can optionally be provided so that users
-who log in with their Okta credentials will have proper user names.
+who sign in with their Okta credentials will have proper user names.
 
 | Attribute | Value | 
 | --------- | ----- |
@@ -90,8 +90,8 @@ a user's identity.
 
 ![SAML Application Metadata](../../images/reference/service/saml-okta/okta-xml-descriptor.png)
 
-With the block of XML text in your clipboard, open to the Pulumi Cloud Console and navigate to your SAML organization. Click the
-**Settings** tab, and then select **SAML SSO**.
+With the block of XML text in your clipboard, open the Pulumi Cloud Console and navigate to your SAML
+organization. Click the **Settings** tab, and then select **SAML SSO**.
 
 Paste the IDP metadata descriptor into the bottom card
 titled **SAML SSO Settings**. Then click the "SAVE" button at the bottom of the card.
@@ -102,7 +102,7 @@ Once the IDP metadata descriptor has been saved, you are all set to log into to 
 
 ### Signing into Pulumi using Okta
 
-Members of your Okta application can now log into Pulumi. Navigate to
+Members of your Okta application can now sign into Pulumi. Navigate to
 [https://app.pulumi.com/signin/sso/](https://app.pulumi.com/signin/sso/) and enter the
 name of your Pulumi organization.
 
@@ -110,5 +110,5 @@ name of your Pulumi organization.
 
 ## Troubleshooting
 
-If you run into any troubles configuring Okta, logging into Pulumi, or need some assistance please
+If you run into any troubles configuring Okta, signing into Pulumi, or need some assistance please
 [contact us](https://www.pulumi.com/about/#contact-us).

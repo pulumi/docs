@@ -3,7 +3,7 @@ title: SAML Configuration &gt; G Suite (Google)
 ---
 
 This guide explains how to configure your G Suite service as a SAML SSO identity provider
-(IdP) for use with the Pulumi Cloud Console.
+(IDP) for use with the Pulumi Cloud Console.
 
 ## Creating the SAML Application
 
@@ -25,7 +25,7 @@ and describes your G Suite domain as a SAML identity provider. We'll use this do
 to complete the process of configuring your Pulumi organization. For now, note the location of
 the downloaded file, then click **Next** to continue.
 
-    ![Step 2: Download IdP metadata](../../images/reference/service/saml-gsuite/gsuite-dialog-step-2.png)
+    ![Step 2: Download IDP metadata](../../images/reference/service/saml-gsuite/gsuite-dialog-step-2.png)
 
 1. Give your SAML application a name such as _Pulumi Cloud Console_ and an optional description
 and logo, then click **Next**.
@@ -71,9 +71,9 @@ provider.
 organization.
 
 1. Scroll to the SAML SSO Settings section, click into the **Identity Provider Metadata** field, and
-paste into that field the full contents of the XML IdP document you downloaded above.
+paste into that field the full contents of the XML IDP document you downloaded above.
 
-    ![Provide the XML IdP descriptor](../../images/reference/service/saml-gsuite/console-sso-1.png)
+    ![Provide the XML IDP descriptor](../../images/reference/service/saml-gsuite/console-sso-1.png)
 
     For example:
 
@@ -83,7 +83,7 @@ Your Pulumi organization is now configured to use Google as a SAML SSO identity 
 
 ## Signing into Pulumi with Google
 
-Members of your G Suite can now log into Pulumi. Navigate to
+Members of your G Suite can now sign into Pulumi. Navigate to
 [https://app.pulumi.com/signin/sso/](https://app.pulumi.com/signin/sso/) and enter the
 name of your Pulumi organization.
 

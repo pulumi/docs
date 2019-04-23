@@ -3,7 +3,7 @@ title: SAML Configuration &gt; Azure Active Directory
 ---
 
 This guide explains how to configure your Azure Active Directory (Azure AD) as a SAML SSO identity provider
-(IdP) for use with the Pulumi Cloud Console.
+(IDP) for use with the Pulumi Cloud Console.
 
 ## Add an application to your Azure AD tenant
 
@@ -90,18 +90,18 @@ download the SAML application's configuration data and then pass that to Pulumi.
 1. Open up the XML document you downloaded from the Azure AD portal, and paste its full contents
   into the **Identity Provider Metadata** field.
 
-    ![Provide the XML IdP descriptor](../../images/reference/service/saml-aad/pulumi-saml-settings-page.png)
+    ![Provide the XML IDP descriptor](../../images/reference/service/saml-aad/pulumi-saml-settings-page.png)
 
 1. Click **Save**.
 
 ## Signing into Pulumi using Azure AD
 
 Once your Azure AD application is created, and its configuration data passed to Pulumi, you can now
-log into the Pulumi Cloud Console using your SAML SSO credentials.
+sign into the Pulumi Cloud Console using your SAML SSO credentials.
 
 Navigate to [https://app.pulumi.com/signin/sso/](https://app.pulumi.com/signin/sso/) and enter the
 name of your Pulumi organization. If everything is configured correctly, you should be prompted to
-login to your Azure AD instance, and then immediately redirected back to the Pulumi Cloud Console.
+sign into to your Azure AD instance, and then immediately redirected back to the Pulumi Cloud Console.
 
 ![Pulumi Console](../../images/reference/service/saml-aad/pulumi-console-signin.png)
 
