@@ -423,8 +423,8 @@ const guestbook = new k8s.yaml.ConfigFile("guestbook",
 );
 
 // Export the Guestbook public LoadBalancer endpoint
-export const guestbookPublicIP =
-	guestbook.getResourceProperty("v1/Service", "frontend", "status").apply(s => s.loadBalancer.ingress[0].ip);
+export const guestbookPublicHostname =
+	guestbook.getResourceProperty("v1/Service", "frontend", "status").apply(s => s.loadBalancer.ingress[0].hostname);
 ```
 
 ## Clean up
