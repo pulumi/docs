@@ -17,6 +17,9 @@ title: Module transfer
 * <a href="#Server">class Server</a>
 * <a href="#SshKey">class SshKey</a>
 * <a href="#User">class User</a>
+* <a href="#getServer">function getServer</a>
+* <a href="#GetServerArgs">interface GetServerArgs</a>
+* <a href="#GetServerResult">interface GetServerResult</a>
 * <a href="#ServerArgs">interface ServerArgs</a>
 * <a href="#ServerState">interface ServerState</a>
 * <a href="#SshKeyArgs">interface SshKeyArgs</a>
@@ -24,7 +27,7 @@ title: Module transfer
 * <a href="#UserArgs">interface UserArgs</a>
 * <a href="#UserState">interface UserState</a>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/transfer/server.ts">transfer/server.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/transfer/sshKey.ts">transfer/sshKey.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/transfer/user.ts">transfer/user.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/transfer/getServer.ts">transfer/getServer.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/transfer/server.ts">transfer/server.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/transfer/sshKey.ts">transfer/sshKey.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/transfer/user.ts">transfer/user.ts</a> 
 </div>
 </div>
 </div>
@@ -569,6 +572,117 @@ deployments.
 <pre class="highlight"><span class='kd'>public </span>userName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 The name used for log in to your SFTP server.
+
+</div>
+</div>
+<h2 class="pdoc-module-header" id="getServer">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/transfer/getServer.ts#L22">function <b>getServer</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getServer(args: <a href='#GetServerArgs'>GetServerArgs</a>, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetServerResult'>GetServerResult</a>&gt;</pre>
+
+
+Use this data source to get the ARN of an AWS Transfer Server for use in other
+resources.
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = pulumi.output(aws.transfer.getServer({
+    serverId: "s-1234567",
+}));
+```
+
+</div>
+<h2 class="pdoc-module-header" id="GetServerArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/transfer/getServer.ts#L31">interface <b>GetServerArgs</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+
+A collection of arguments for invoking getServer.
+
+<h3 class="pdoc-member-header" id="GetServerArgs-serverId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/transfer/getServer.ts#L35">property <b>serverId</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>serverId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+ID for an SFTP server.
+
+</div>
+</div>
+<h2 class="pdoc-module-header" id="GetServerResult">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/transfer/getServer.ts#L41">interface <b>GetServerResult</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+
+A collection of values returned by getServer.
+
+<h3 class="pdoc-member-header" id="GetServerResult-arn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/transfer/getServer.ts#L45">property <b>arn</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+Amazon Resource Name (ARN) of Transfer Server
+
+</div>
+<h3 class="pdoc-member-header" id="GetServerResult-endpoint">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/transfer/getServer.ts#L49">property <b>endpoint</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>endpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+The endpoint of the Transfer Server (e.g. `s-12345678.server.transfer.REGION.amazonaws.com`)
+
+</div>
+<h3 class="pdoc-member-header" id="GetServerResult-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/transfer/getServer.ts#L69">property <b>id</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+id is the provider-assigned unique ID for this managed resource.
+
+</div>
+<h3 class="pdoc-member-header" id="GetServerResult-identityProviderType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/transfer/getServer.ts#L53">property <b>identityProviderType</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>identityProviderType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+The mode of authentication enabled for this service. The default value is `SERVICE_MANAGED`, which allows you to store and access SFTP user credentials within the service. `API_GATEWAY` indicates that user authentication requires a call to an API Gateway endpoint URL provided by you to integrate an identity provider of your choice.
+
+</div>
+<h3 class="pdoc-member-header" id="GetServerResult-invocationRole">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/transfer/getServer.ts#L57">property <b>invocationRole</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>invocationRole: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+Amazon Resource Name (ARN) of the IAM role used to authenticate the user account with an `identity_provider_type` of `API_GATEWAY`.
+
+</div>
+<h3 class="pdoc-member-header" id="GetServerResult-loggingRole">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/transfer/getServer.ts#L61">property <b>loggingRole</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>loggingRole: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.
+
+</div>
+<h3 class="pdoc-member-header" id="GetServerResult-url">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/transfer/getServer.ts#L65">property <b>url</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>url: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+URL of the service endpoint used to authenticate users with an `identity_provider_type` of `API_GATEWAY`.
 
 </div>
 </div>
