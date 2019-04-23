@@ -15,13 +15,13 @@ title: Module runtimeconfig
 <h2 class="pdoc-module-header toggleButton" title="Click to hide Index">Index ▾</h2>
 <div class="pdoc-module-contents" markdown="1">
 * <a href="#Config">class Config</a>
-* <a href="#Variavble">class Variavble</a>
+* <a href="#Variable">class Variable</a>
 * <a href="#ConfigArgs">interface ConfigArgs</a>
 * <a href="#ConfigState">interface ConfigState</a>
-* <a href="#VariavbleArgs">interface VariavbleArgs</a>
-* <a href="#VariavbleState">interface VariavbleState</a>
+* <a href="#VariableArgs">interface VariableArgs</a>
+* <a href="#VariableState">interface VariableState</a>
 
-<a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/config.ts">runtimeconfig/config.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts">runtimeconfig/variavble.ts</a> 
+<a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/config.ts">runtimeconfig/config.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variable.ts">runtimeconfig/variable.ts</a> 
 </div>
 </div>
 </div>
@@ -148,8 +148,8 @@ deployments.
 
 </div>
 </div>
-<h2 class="pdoc-module-header" id="Variavble">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L49">class <b>Variavble</b></a>
+<h2 class="pdoc-module-header" id="Variable">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variable.ts#L49">class <b>Variable</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -170,7 +170,7 @@ import * as gcp from "@pulumi/gcp";
 const my_runtime_config = new gcp.runtimeconfig.Config("my-runtime-config", {
     description: "Runtime configuration values for my service",
 });
-const environment = new gcp.runtimeconfig.Variavble("environment", {
+const environment = new gcp.runtimeconfig.Variable("environment", {
     parent: my_runtime_config.name,
     text: "example.com",
 });
@@ -189,40 +189,40 @@ import * as gcp from "@pulumi/gcp";
 const my_runtime_config = new gcp.runtimeconfig.Config("my-runtime-config", {
     description: "Runtime configuration values for my service",
 });
-const my_secret = new gcp.runtimeconfig.Variavble("my-secret", {
+const my_secret = new gcp.runtimeconfig.Variable("my-secret", {
     parent: my_runtime_config.name,
     value: Buffer.from(fs.readFileSync("my-encrypted-secret.dat", "utf-8")).toString("base64"),
 });
 ```
 
-<h3 class="pdoc-member-header" id="Variavble-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L84"> <b>constructor</b></a>
+<h3 class="pdoc-member-header" id="Variable-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variable.ts#L84"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Variavble(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#VariavbleArgs'>VariavbleArgs</a>, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Variable(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#VariableArgs'>VariableArgs</a>, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 
 
-Create a Variavble resource with the given unique name, arguments, and options.
+Create a Variable resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 </div>
-<h3 class="pdoc-member-header" id="Variavble-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L58">method <b>get</b></a>
+<h3 class="pdoc-member-header" id="Variable-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variable.ts#L58">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
-<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#VariavbleState'>VariavbleState</a>, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Variavble'>Variavble</a></pre>
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#VariableState'>VariableState</a>, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Variable'>Variable</a></pre>
 
 
-Get an existing Variavble resource's state with the given name, ID, and optional extra
+Get an existing Variable resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 </div>
-<h3 class="pdoc-member-header" id="Variavble-getProvider">
+<h3 class="pdoc-member-header" id="Variable-getProvider">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
@@ -230,7 +230,7 @@ properties used to qualify the lookup.
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
 
 </div>
-<h3 class="pdoc-member-header" id="Variavble-isInstance">
+<h3 class="pdoc-member-header" id="Variable-isInstance">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
@@ -242,7 +242,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
-<h3 class="pdoc-member-header" id="Variavble-id">
+<h3 class="pdoc-member-header" id="Variable-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
@@ -252,8 +252,8 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 </div>
-<h3 class="pdoc-member-header" id="Variavble-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L66">property <b>name</b></a>
+<h3 class="pdoc-member-header" id="Variable-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variable.ts#L66">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -262,8 +262,8 @@ The name of the variable to manage. Note that variable
 names can be hierarchical using slashes (e.g. "prod-variables/hostname").
 
 </div>
-<h3 class="pdoc-member-header" id="Variavble-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L71">property <b>parent</b></a>
+<h3 class="pdoc-member-header" id="Variable-parent">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variable.ts#L71">property <b>parent</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>parent: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -272,8 +272,8 @@ The name of the RuntimeConfig resource containing this
 variable.
 
 </div>
-<h3 class="pdoc-member-header" id="Variavble-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L76">property <b>project</b></a>
+<h3 class="pdoc-member-header" id="Variable-project">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variable.ts#L76">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -282,14 +282,14 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 </div>
-<h3 class="pdoc-member-header" id="Variavble-text">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L77">property <b>text</b></a>
+<h3 class="pdoc-member-header" id="Variable-text">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variable.ts#L77">property <b>text</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>text: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 </div>
-<h3 class="pdoc-member-header" id="Variavble-updateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L83">property <b>updateTime</b></a>
+<h3 class="pdoc-member-header" id="Variable-updateTime">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variable.ts#L83">property <b>updateTime</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>updateTime: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -299,7 +299,7 @@ accurate to nanoseconds, representing when the variable was last updated.
 Example: "2016-10-09T12:33:37.578138407Z".
 
 </div>
-<h3 class="pdoc-member-header" id="Variavble-urn">
+<h3 class="pdoc-member-header" id="Variable-urn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
@@ -309,8 +309,8 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 </div>
-<h3 class="pdoc-member-header" id="Variavble-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L84">property <b>value</b></a>
+<h3 class="pdoc-member-header" id="Variable-value">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variable.ts#L84">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>value: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -390,15 +390,15 @@ is not provided, the provider project is used.
 
 </div>
 </div>
-<h2 class="pdoc-module-header" id="VariavbleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L152">interface <b>VariavbleArgs</b></a>
+<h2 class="pdoc-module-header" id="VariableArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variable.ts#L152">interface <b>VariableArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
-The set of arguments for constructing a Variavble resource.
+The set of arguments for constructing a Variable resource.
 
-<h3 class="pdoc-member-header" id="VariavbleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L157">property <b>name</b></a>
+<h3 class="pdoc-member-header" id="VariableArgs-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variable.ts#L157">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -407,8 +407,8 @@ The name of the variable to manage. Note that variable
 names can be hierarchical using slashes (e.g. "prod-variables/hostname").
 
 </div>
-<h3 class="pdoc-member-header" id="VariavbleArgs-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L162">property <b>parent</b></a>
+<h3 class="pdoc-member-header" id="VariableArgs-parent">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variable.ts#L162">property <b>parent</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>parent: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -417,8 +417,8 @@ The name of the RuntimeConfig resource containing this
 variable.
 
 </div>
-<h3 class="pdoc-member-header" id="VariavbleArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L167">property <b>project</b></a>
+<h3 class="pdoc-member-header" id="VariableArgs-project">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variable.ts#L167">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>project?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -427,28 +427,28 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 </div>
-<h3 class="pdoc-member-header" id="VariavbleArgs-text">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L168">property <b>text</b></a>
+<h3 class="pdoc-member-header" id="VariableArgs-text">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variable.ts#L168">property <b>text</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>text?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
-<h3 class="pdoc-member-header" id="VariavbleArgs-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L169">property <b>value</b></a>
+<h3 class="pdoc-member-header" id="VariableArgs-value">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variable.ts#L169">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>value?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 </div>
-<h2 class="pdoc-module-header" id="VariavbleState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L123">interface <b>VariavbleState</b></a>
+<h2 class="pdoc-module-header" id="VariableState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variable.ts#L123">interface <b>VariableState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
-Input properties used for looking up and filtering Variavble resources.
+Input properties used for looking up and filtering Variable resources.
 
-<h3 class="pdoc-member-header" id="VariavbleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L128">property <b>name</b></a>
+<h3 class="pdoc-member-header" id="VariableState-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variable.ts#L128">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -457,8 +457,8 @@ The name of the variable to manage. Note that variable
 names can be hierarchical using slashes (e.g. "prod-variables/hostname").
 
 </div>
-<h3 class="pdoc-member-header" id="VariavbleState-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L133">property <b>parent</b></a>
+<h3 class="pdoc-member-header" id="VariableState-parent">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variable.ts#L133">property <b>parent</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>parent?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -467,8 +467,8 @@ The name of the RuntimeConfig resource containing this
 variable.
 
 </div>
-<h3 class="pdoc-member-header" id="VariavbleState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L138">property <b>project</b></a>
+<h3 class="pdoc-member-header" id="VariableState-project">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variable.ts#L138">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>project?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -477,14 +477,14 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 </div>
-<h3 class="pdoc-member-header" id="VariavbleState-text">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L139">property <b>text</b></a>
+<h3 class="pdoc-member-header" id="VariableState-text">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variable.ts#L139">property <b>text</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>text?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
-<h3 class="pdoc-member-header" id="VariavbleState-updateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L145">property <b>updateTime</b></a>
+<h3 class="pdoc-member-header" id="VariableState-updateTime">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variable.ts#L145">property <b>updateTime</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>updateTime?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -494,8 +494,8 @@ accurate to nanoseconds, representing when the variable was last updated.
 Example: "2016-10-09T12:33:37.578138407Z".
 
 </div>
-<h3 class="pdoc-member-header" id="VariavbleState-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variavble.ts#L146">property <b>value</b></a>
+<h3 class="pdoc-member-header" id="VariableState-value">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/runtimeconfig/variable.ts#L146">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>value?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

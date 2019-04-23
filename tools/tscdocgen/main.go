@@ -662,6 +662,10 @@ func (n *typeDocNode) Merge(o *typeDocNode) (*typeDocNode, error) {
 		p, s = n, o // class wins
 	} else if n.Kind == typeDocInterfaceNode && o.Kind == typeDocClassNode {
 		p, s = o, n // class wins
+	} else if n.Kind == typeDocInterfaceNode && o.Kind == typeDocVariableNode {
+		p, s = n, o // interface wins
+	} else if n.Kind == typeDocTypeAliasNode && o.Kind == typeDocVariableNode {
+		p, s = n, o // alias wins
 	} else {
 		return nil, errors.Errorf(
 			"cannot merge two nodes with same name '%s'; incompatible types %s and %s", n.Name, n.Kind, o.Kind)

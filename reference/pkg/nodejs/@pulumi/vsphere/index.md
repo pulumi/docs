@@ -66,6 +66,7 @@ import * as vsphere from "@pulumi/vsphere";
 * <a href="#getEnv">function getEnv</a>
 * <a href="#getEnvBoolean">function getEnvBoolean</a>
 * <a href="#getEnvNumber">function getEnvNumber</a>
+* <a href="#getFolder">function getFolder</a>
 * <a href="#getHost">function getHost</a>
 * <a href="#getNetwork">function getNetwork</a>
 * <a href="#getResourcePool">function getResourcePool</a>
@@ -121,6 +122,8 @@ import * as vsphere from "@pulumi/vsphere";
 * <a href="#GetDatastoreResult">interface GetDatastoreResult</a>
 * <a href="#GetDistributedVirtualSwitchArgs">interface GetDistributedVirtualSwitchArgs</a>
 * <a href="#GetDistributedVirtualSwitchResult">interface GetDistributedVirtualSwitchResult</a>
+* <a href="#GetFolderArgs">interface GetFolderArgs</a>
+* <a href="#GetFolderResult">interface GetFolderResult</a>
 * <a href="#GetHostArgs">interface GetHostArgs</a>
 * <a href="#GetHostResult">interface GetHostResult</a>
 * <a href="#GetNetworkArgs">interface GetNetworkArgs</a>
@@ -169,7 +172,7 @@ import * as vsphere from "@pulumi/vsphere";
 * <a href="#VmfsDatastoreArgs">interface VmfsDatastoreArgs</a>
 * <a href="#VmfsDatastoreState">interface VmfsDatastoreState</a>
 
-<a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/computeCluster.ts">computeCluster.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/computeClusterHostGroup.ts">computeClusterHostGroup.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/computeClusterVmAffinityRule.ts">computeClusterVmAffinityRule.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/computeClusterVmAntiAffinityRule.ts">computeClusterVmAntiAffinityRule.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/computeClusterVmDependencyRule.ts">computeClusterVmDependencyRule.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/computeClusterVmGroup.ts">computeClusterVmGroup.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/computeClusterVmHostRule.ts">computeClusterVmHostRule.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/customAttribute.ts">customAttribute.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/datacenter.ts">datacenter.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/datastoreCluster.ts">datastoreCluster.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/datastoreClusterVmAntiAffinityRule.ts">datastoreClusterVmAntiAffinityRule.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/distributedPortGroup.ts">distributedPortGroup.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/distributedVirtualSwitch.ts">distributedVirtualSwitch.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/dpmHostOverride.ts">dpmHostOverride.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/drsVmOverride.ts">drsVmOverride.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/file.ts">file.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/folder.ts">folder.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getComputeCluster.ts">getComputeCluster.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getCustomAttribute.ts">getCustomAttribute.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getDatacenter.ts">getDatacenter.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getDatastore.ts">getDatastore.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getDatastoreCluster.ts">getDatastoreCluster.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getDistributedVirtualSwitch.ts">getDistributedVirtualSwitch.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getHost.ts">getHost.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getNetwork.ts">getNetwork.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getResourcePool.ts">getResourcePool.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getTag.ts">getTag.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getTagCategory.ts">getTagCategory.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getVappContainer.ts">getVappContainer.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getVirtualMachine.ts">getVirtualMachine.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getVmfsDisks.ts">getVmfsDisks.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/haVmOverride.ts">haVmOverride.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostPortGroup.ts">hostPortGroup.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts">hostVirtualSwitch.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/license.ts">license.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/nasDatastore.ts">nasDatastore.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/provider.ts">provider.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/resourcePool.ts">resourcePool.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/storageDrsVmOverride.ts">storageDrsVmOverride.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tag.ts">tag.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts">tagCategory.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/utilities.ts">utilities.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappContainer.ts">vappContainer.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts">vappEntity.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualDisk.ts">virtualDisk.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts">virtualMachine.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachineSnapshot.ts">virtualMachineSnapshot.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vmfsDatastore.ts">vmfsDatastore.ts</a> 
+<a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/computeCluster.ts">computeCluster.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/computeClusterHostGroup.ts">computeClusterHostGroup.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/computeClusterVmAffinityRule.ts">computeClusterVmAffinityRule.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/computeClusterVmAntiAffinityRule.ts">computeClusterVmAntiAffinityRule.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/computeClusterVmDependencyRule.ts">computeClusterVmDependencyRule.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/computeClusterVmGroup.ts">computeClusterVmGroup.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/computeClusterVmHostRule.ts">computeClusterVmHostRule.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/customAttribute.ts">customAttribute.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/datacenter.ts">datacenter.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/datastoreCluster.ts">datastoreCluster.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/datastoreClusterVmAntiAffinityRule.ts">datastoreClusterVmAntiAffinityRule.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/distributedPortGroup.ts">distributedPortGroup.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/distributedVirtualSwitch.ts">distributedVirtualSwitch.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/dpmHostOverride.ts">dpmHostOverride.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/drsVmOverride.ts">drsVmOverride.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/file.ts">file.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/folder.ts">folder.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getComputeCluster.ts">getComputeCluster.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getCustomAttribute.ts">getCustomAttribute.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getDatacenter.ts">getDatacenter.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getDatastore.ts">getDatastore.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getDatastoreCluster.ts">getDatastoreCluster.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getDistributedVirtualSwitch.ts">getDistributedVirtualSwitch.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getFolder.ts">getFolder.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getHost.ts">getHost.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getNetwork.ts">getNetwork.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getResourcePool.ts">getResourcePool.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getTag.ts">getTag.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getTagCategory.ts">getTagCategory.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getVappContainer.ts">getVappContainer.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getVirtualMachine.ts">getVirtualMachine.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getVmfsDisks.ts">getVmfsDisks.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/haVmOverride.ts">haVmOverride.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostPortGroup.ts">hostPortGroup.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts">hostVirtualSwitch.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/license.ts">license.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/nasDatastore.ts">nasDatastore.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/provider.ts">provider.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/resourcePool.ts">resourcePool.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/storageDrsVmOverride.ts">storageDrsVmOverride.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tag.ts">tag.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts">tagCategory.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/utilities.ts">utilities.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappContainer.ts">vappContainer.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts">vappEntity.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualDisk.ts">virtualDisk.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts">virtualMachine.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachineSnapshot.ts">virtualMachineSnapshot.ts</a> <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vmfsDatastore.ts">vmfsDatastore.ts</a> 
 </div>
 </div>
 </div>
@@ -341,7 +344,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeCluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -872,7 +875,7 @@ the hosts to put in the cluster.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeCluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1088,7 +1091,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterHostGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1121,7 +1124,7 @@ the hosts to put in the cluster.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterHostGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1273,7 +1276,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmAffinityRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1305,7 +1308,7 @@ Enable this rule in the cluster. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmAffinityRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1477,7 +1480,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmAntiAffinityRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1509,7 +1512,7 @@ Enable this rule in the cluster. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmAntiAffinityRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1697,7 +1700,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmDependencyRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1741,7 +1744,7 @@ Enable this rule in the cluster. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmDependencyRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1909,7 +1912,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1932,7 +1935,7 @@ resource if changed.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2113,7 +2116,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmHostRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2167,7 +2170,7 @@ Enable this rule in the cluster. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmHostRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2218,7 +2221,7 @@ with this rule.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CustomAttribute">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/customAttribute.ts#L60">class <b>CustomAttribute</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/customAttribute.ts#L71">class <b>CustomAttribute</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2275,8 +2278,19 @@ unspecified.
 <tr><td>Virtual Machines</td><td>`VirtualMachine`</td></tr>
 </table>
 
+## Importing
+
+An existing custom attribute can be [imported][docs-import] into this resource
+via its name, using the following command:
+
+[docs-import]: https://www.terraform.io/docs/import/index.html
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+```
+
 <h3 class="pdoc-member-header" id="CustomAttribute-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/customAttribute.ts#L83"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/customAttribute.ts#L94"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2291,7 +2305,7 @@ Create a CustomAttribute resource with the given unique name, arguments, and opt
 
 </div>
 <h3 class="pdoc-member-header" id="CustomAttribute-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/customAttribute.ts#L69">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/customAttribute.ts#L80">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2311,7 +2325,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="CustomAttribute-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2323,7 +2337,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="CustomAttribute-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2333,7 +2347,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="CustomAttribute-managedObjectType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/customAttribute.ts#L79">property <b>managedObjectType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/customAttribute.ts#L90">property <b>managedObjectType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>managedObjectType: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2345,7 +2359,7 @@ resource if changed.
 
 </div>
 <h3 class="pdoc-member-header" id="CustomAttribute-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/customAttribute.ts#L83">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/customAttribute.ts#L94">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2431,7 +2445,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Datacenter-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2465,7 +2479,7 @@ Forces a new resource if changed.
 
 </div>
 <h3 class="pdoc-member-header" id="Datacenter-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2619,7 +2633,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="DatastoreCluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2669,7 +2683,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
 
 </div>
 <h3 class="pdoc-member-header" id="DatastoreCluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3035,7 +3049,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="DatastoreClusterVmAntiAffinityRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3067,7 +3081,7 @@ Enable this rule in the cluster. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="DatastoreClusterVmAntiAffinityRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3288,7 +3302,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="DistributedPortGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3468,7 +3482,7 @@ If true, the teaming policy will re-activate failed interfaces higher in precede
 
 </div>
 <h3 class="pdoc-member-header" id="DistributedPortGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3943,7 +3957,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="DistributedVirtualSwitch-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -4234,7 +4248,7 @@ options are:
 
 </div>
 <h3 class="pdoc-member-header" id="DistributedVirtualSwitch-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4961,7 +4975,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="DpmHostOverride-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -5014,7 +5028,7 @@ The managed object ID of the host.
 
 </div>
 <h3 class="pdoc-member-header" id="DpmHostOverride-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -5153,7 +5167,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="DrsVmOverride-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -5197,7 +5211,7 @@ machine. Can be either `true` or `false`. Default: `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="DrsVmOverride-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -5314,7 +5328,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="File-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -5366,7 +5380,7 @@ or copied to on vSphere.
 
 </div>
 <h3 class="pdoc-member-header" id="File-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -5514,7 +5528,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Folder-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -5548,7 +5562,7 @@ resource if changed.
 
 </div>
 <h3 class="pdoc-member-header" id="Folder-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -5719,7 +5733,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="HaVmOverride-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -5900,7 +5914,7 @@ specify the cluster default.  Default: `-1`.
 
 </div>
 <h3 class="pdoc-member-header" id="HaVmOverride-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -6048,7 +6062,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="HostPortGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -6137,7 +6151,7 @@ the host to set the port group up on. Forces a new resource if changed.
 
 </div>
 <h3 class="pdoc-member-header" id="HostPortGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -6276,7 +6290,7 @@ tagging. Default: `0`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HostVirtualSwitch">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L77">class <b>HostVirtualSwitch</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L94">class <b>HostVirtualSwitch</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -6350,8 +6364,25 @@ const switchHostVirtualSwitch = new vsphere.HostVirtualSwitch("switch", {
 });
 ```
 
+## Importing
+
+An existing vSwitch can be [imported][docs-import] into this resource by its ID.
+The convention of the id is a prefix, the host system [managed objectID][docs-about-morefs], and the virtual switch
+name. An example would be `tf-HostVirtualSwitch:host-10:vSwitchTerraformTest`.
+Import can the be done via the following command:
+
+[docs-import]: https://www.terraform.io/docs/import/index.html
+[docs-about-morefs]: /docs/providers/vsphere/index.html#use-of-managed-object-references-by-the-vsphere-provider
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+```
+
+The above would import the vSwtich named `vSwitchTerraformTest` that is located in the `host-10`
+vSphere host.
+
 <h3 class="pdoc-member-header" id="HostVirtualSwitch-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L201"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L218"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -6366,7 +6397,7 @@ Create a HostVirtualSwitch resource with the given unique name, arguments, and o
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitch-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L86">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L103">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -6386,7 +6417,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitch-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -6398,7 +6429,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitch-activeNics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L94">property <b>activeNics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L111">property <b>activeNics</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>activeNics: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -6408,7 +6439,7 @@ balancing.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitch-allowForgedTransmits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L100">property <b>allowForgedTransmits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L117">property <b>allowForgedTransmits</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>allowForgedTransmits: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -6419,7 +6450,7 @@ address than that of its own. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitch-allowMacChanges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L105">property <b>allowMacChanges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L122">property <b>allowMacChanges</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>allowMacChanges: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -6429,7 +6460,7 @@ Control (MAC) address can be changed. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitch-allowPromiscuous">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L111">property <b>allowPromiscuous</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L128">property <b>allowPromiscuous</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>allowPromiscuous: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -6440,7 +6471,7 @@ flag indicates whether or not all traffic is seen on a given port. Default:
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitch-beaconInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L117">property <b>beaconInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L134">property <b>beaconInterval</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>beaconInterval: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -6451,7 +6482,7 @@ offer link failure capability beyond link status only. Default: `1`.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitch-checkBeacon">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L124">property <b>checkBeacon</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L141">property <b>checkBeacon</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>checkBeacon: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -6463,7 +6494,7 @@ failed NICs.  Default: `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitch-failback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L130">property <b>failback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L147">property <b>failback</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>failback: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -6474,7 +6505,7 @@ failed interfaces higher in precedence when they come back up.  Default:
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitch-hostSystemId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L135">property <b>hostSystemId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L152">property <b>hostSystemId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>hostSystemId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6484,7 +6515,7 @@ the host to set the virtual switch up on. Forces a new resource if changed.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitch-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -6494,7 +6525,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitch-linkDiscoveryOperation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L140">property <b>linkDiscoveryOperation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L157">property <b>linkDiscoveryOperation</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>linkDiscoveryOperation: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -6504,7 +6535,7 @@ for link discovery traffic. Default: `listen`.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitch-linkDiscoveryProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L145">property <b>linkDiscoveryProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L162">property <b>linkDiscoveryProtocol</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>linkDiscoveryProtocol: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -6514,7 +6545,7 @@ types are `cpd` and `lldp`. Default: `cdp`.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitch-mtu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L150">property <b>mtu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L167">property <b>mtu</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>mtu: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -6524,7 +6555,7 @@ switch. Default: `1500`.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitch-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L155">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L172">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6534,7 +6565,7 @@ changed.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitch-networkAdapters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L159">property <b>networkAdapters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L176">property <b>networkAdapters</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>networkAdapters: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -6543,7 +6574,7 @@ The network interfaces to bind to the bridge.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitch-notifySwitches">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L165">property <b>notifySwitches</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L182">property <b>notifySwitches</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>notifySwitches: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -6554,7 +6585,7 @@ Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitch-numberOfPorts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L170">property <b>numberOfPorts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L187">property <b>numberOfPorts</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>numberOfPorts: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -6564,7 +6595,7 @@ virtual switch. Default: `128`.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitch-shapingAverageBandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L175">property <b>shapingAverageBandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L192">property <b>shapingAverageBandwidth</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>shapingAverageBandwidth: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -6574,7 +6605,7 @@ second if traffic shaping is enabled. Default: `0`
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitch-shapingBurstSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L180">property <b>shapingBurstSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L197">property <b>shapingBurstSize</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>shapingBurstSize: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -6584,7 +6615,7 @@ shaping is enabled. Default: `0`
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitch-shapingEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L185">property <b>shapingEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L202">property <b>shapingEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>shapingEnabled: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -6594,7 +6625,7 @@ ports managed by this virtual switch. Default: `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitch-shapingPeakBandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L190">property <b>shapingPeakBandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L207">property <b>shapingPeakBandwidth</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>shapingPeakBandwidth: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -6604,7 +6635,7 @@ bits per second if traffic shaping is enabled. Default: `0`
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitch-standbyNics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L195">property <b>standbyNics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L212">property <b>standbyNics</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>standbyNics: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -6614,7 +6645,7 @@ failover.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitch-teamingPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L201">property <b>teamingPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L218">property <b>teamingPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>teamingPolicy: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -6694,7 +6725,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="License-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -6715,7 +6746,7 @@ The product edition of the license key.
 
 </div>
 <h3 class="pdoc-member-header" id="License-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -6866,7 +6897,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="NasDatastore-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -6966,7 +6997,7 @@ the hosts to mount the datastore on.
 
 </div>
 <h3 class="pdoc-member-header" id="NasDatastore-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -7132,7 +7163,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -7144,7 +7175,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -7240,7 +7271,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ResourcePool-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -7317,7 +7348,7 @@ A list of custom attributes to set on this resource.
 
 </div>
 <h3 class="pdoc-member-header" id="ResourcePool-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -7540,7 +7571,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="StorageDrsVmOverride-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -7563,7 +7594,7 @@ Forces a new resource if changed.
 
 </div>
 <h3 class="pdoc-member-header" id="StorageDrsVmOverride-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -7711,7 +7742,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Tag-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -7742,7 +7773,7 @@ A description for the tag.
 
 </div>
 <h3 class="pdoc-member-header" id="Tag-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -7773,7 +7804,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TagCategory">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L43">class <b>TagCategory</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L54">class <b>TagCategory</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -7813,8 +7844,19 @@ const category = new vsphere.TagCategory("category", {
 });
 ```
 
+## Importing
+
+An existing tag category can be [imported][docs-import] into this resource via
+its name, using the following command:
+
+[docs-import]: https://www.terraform.io/docs/import/index.html
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+```
+
 <h3 class="pdoc-member-header" id="TagCategory-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L76"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L87"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -7829,7 +7871,7 @@ Create a TagCategory resource with the given unique name, arguments, and options
 
 </div>
 <h3 class="pdoc-member-header" id="TagCategory-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L63">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -7849,7 +7891,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="TagCategory-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -7861,7 +7903,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="TagCategory-associableTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L61">property <b>associableTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L72">property <b>associableTypes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>associableTypes: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -7872,7 +7914,7 @@ here.
 
 </div>
 <h3 class="pdoc-member-header" id="TagCategory-cardinality">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L68">property <b>cardinality</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L79">property <b>cardinality</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>cardinality: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7884,7 +7926,7 @@ multiple tags in this category). Forces a new resource if changed.
 
 </div>
 <h3 class="pdoc-member-header" id="TagCategory-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L72">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L83">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -7893,7 +7935,7 @@ A description for the category.
 
 </div>
 <h3 class="pdoc-member-header" id="TagCategory-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -7903,7 +7945,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="TagCategory-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L87">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8046,7 +8088,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="VappContainer-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -8124,7 +8166,7 @@ A list of custom attributes to set on this resource.
 
 </div>
 <h3 class="pdoc-member-header" id="VappContainer-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -8244,7 +8286,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VappEntity">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L69">class <b>VappEntity</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L84">class <b>VappEntity</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -8310,8 +8352,23 @@ const vm = new vsphere.VirtualMachine("vm", {
 });
 ```
 
+## Importing
+
+An existing vApp entity can be [imported][docs-import] into this resource via
+the ID of the vApp Entity.
+
+[docs-import]: https://www.terraform.io/docs/import/index.html
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+```
+
+The above would import the vApp entity that governs the behavior of the virtual
+machine with a [managed object ID][docs-about-morefs] of vm-123 in the vApp
+container with the [managed object ID][docs-about-morefs] res-456.
+
 <h3 class="pdoc-member-header" id="VappEntity-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L132"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L147"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -8326,7 +8383,7 @@ Create a VappEntity resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntity-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L78">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L93">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -8346,7 +8403,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntity-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -8358,7 +8415,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntity-containerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L86">property <b>containerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L101">property <b>containerId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>containerId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8368,7 +8425,7 @@ container the entity is a member of.
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntity-customAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L90">property <b>customAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L105">property <b>customAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>customAttributes: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -8377,7 +8434,7 @@ A list of custom attributes to set on this resource.
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntity-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -8387,7 +8444,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntity-startAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L96">property <b>startAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L111">property <b>startAction</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>startAction: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -8398,7 +8455,7 @@ Default: powerOn
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntity-startDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L101">property <b>startDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L116">property <b>startDelay</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>startDelay: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -8408,7 +8465,7 @@ entity in the order of entities to be started. Default: 120
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntity-startOrder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L105">property <b>startOrder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L120">property <b>startOrder</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>startOrder: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -8417,7 +8474,7 @@ Order to start and stop target in vApp. Default: 1
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntity-stopAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L111">property <b>stopAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L126">property <b>stopAction</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>stopAction: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -8428,7 +8485,7 @@ does not participate in auto-stop. Default: powerOff
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntity-stopDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L117">property <b>stopDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L132">property <b>stopDelay</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>stopDelay: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -8439,7 +8496,7 @@ guestShutdown. Default: 120
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntity-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L121">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L136">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -8448,7 +8505,7 @@ A list of tag IDs to apply to this object.
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntity-targetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L126">property <b>targetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L141">property <b>targetId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>targetId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8468,7 +8525,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntity-waitForGuest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L132">property <b>waitForGuest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L147">property <b>waitForGuest</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>waitForGuest: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -8544,7 +8601,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualDisk-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -8598,7 +8655,7 @@ disk.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualDisk-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -8650,7 +8707,7 @@ be created.  This needs to end in `.vmdk`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VirtualMachine">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L504">class <b>VirtualMachine</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L506">class <b>VirtualMachine</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -8728,8 +8785,10 @@ Two waiters of note are:
   the guest virtual machine, mainly to facilitate the availability of a valid,
   reachable default IP address for any [provisioners][tf-docs-provisioners].
   The behavior of the waiter can be controlled with the
-  `wait_for_guest_net_timeout` and
-  `wait_for_guest_net_routable` settings.
+  `wait_for_guest_net_timeout`,
+  `wait_for_guest_net_routable`,
+  `wait_for_guest_ip_timeout`, and
+  `ignored_guest_ips` settings.
 
 [tf-docs-provisioners]: /docs/provisioners/index.html
 
@@ -9152,7 +9211,7 @@ may need to plan maintenance accordingly for any necessary re-configuration of
 the virtual machine.
 
 <h3 class="pdoc-member-header" id="VirtualMachine-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L910"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L932"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -9167,7 +9226,7 @@ Create a VirtualMachine resource with the given unique name, arguments, and opti
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L513">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L515">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -9187,7 +9246,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -9199,7 +9258,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-alternateGuestName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L521">property <b>alternateGuestName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L523">property <b>alternateGuestName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>alternateGuestName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9209,7 +9268,7 @@ when `guest_id` is `other` or `other-64`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-annotation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L526">property <b>annotation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L528">property <b>annotation</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>annotation: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9219,7 +9278,7 @@ The default is no annotation.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-bootDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L531">property <b>bootDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L533">property <b>bootDelay</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>bootDelay: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9229,7 +9288,7 @@ the boot sequence. The default is no delay.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-bootRetryDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L537">property <b>bootRetryDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L539">property <b>bootRetryDelay</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>bootRetryDelay: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9240,7 +9299,7 @@ Default: `10000` (10 seconds).
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-bootRetryEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L543">property <b>bootRetryEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L545">property <b>bootRetryEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>bootRetryEnabled: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9251,7 +9310,7 @@ Default: `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-cdrom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L548">property <b>cdrom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L550">property <b>cdrom</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>cdrom: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -9267,7 +9326,7 @@ machine. See CDROM options below.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-changeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L554">property <b>changeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L556">property <b>changeVersion</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>changeVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -9278,7 +9337,7 @@ configuration.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-clone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L561">property <b>clone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L563">property <b>clone</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>clone: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -9331,7 +9390,7 @@ template for more details.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-cpuHotAddEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L566">property <b>cpuHotAddEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L568">property <b>cpuHotAddEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>cpuHotAddEnabled: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9341,7 +9400,7 @@ machine while it is running.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-cpuHotRemoveEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L571">property <b>cpuHotRemoveEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L573">property <b>cpuHotRemoveEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>cpuHotRemoveEnabled: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9351,7 +9410,7 @@ virtual machine while it is running.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-cpuLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L577">property <b>cpuLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L579">property <b>cpuLimit</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>cpuLimit: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9362,7 +9421,7 @@ limit.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-cpuPerformanceCountersEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L582">property <b>cpuPerformanceCountersEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L584">property <b>cpuPerformanceCountersEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>cpuPerformanceCountersEnabled: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9372,7 +9431,7 @@ counters on this virtual machine. Default: `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-cpuReservation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L587">property <b>cpuReservation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L589">property <b>cpuReservation</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>cpuReservation: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9382,7 +9441,7 @@ machine is guaranteed. The default is no reservation.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-cpuShareCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L592">property <b>cpuShareCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L594">property <b>cpuShareCount</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>cpuShareCount: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -9392,7 +9451,7 @@ virtual machine when the `cpu_share_level` is `custom`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-cpuShareLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L597">property <b>cpuShareLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L599">property <b>cpuShareLevel</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>cpuShareLevel: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9402,7 +9461,7 @@ one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-customAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L604">property <b>customAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L606">property <b>customAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>customAttributes: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9414,7 +9473,7 @@ for custom attributes.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-datastoreClusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L612">property <b>datastoreClusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L614">property <b>datastoreClusterId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>datastoreClusterId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9427,7 +9486,7 @@ migration for details on changing this value.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-datastoreId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L617">property <b>datastoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L619">property <b>datastoreId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>datastoreId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -9437,7 +9496,7 @@ Requried for using a datastore ISO. Conflicts with `client_device`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-defaultIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L627">property <b>defaultIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L629">property <b>defaultIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>defaultIpAddress: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -9452,7 +9511,7 @@ off, this value will be blank.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-disks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L632">property <b>disks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L634">property <b>disks</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>disks: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -9483,7 +9542,7 @@ machine. See disk options below.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-efiSecureBootEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L637">property <b>efiSecureBootEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L639">property <b>efiSecureBootEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>efiSecureBootEnabled: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9493,7 +9552,7 @@ When the `firmware` type is set to is
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-enableDiskUuid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L642">property <b>enableDiskUuid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L644">property <b>enableDiskUuid</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>enableDiskUuid: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9503,7 +9562,7 @@ the virtual machine, allowing access to them in the guest. Default: `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-enableLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L647">property <b>enableLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L649">property <b>enableLogging</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>enableLogging: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9513,7 +9572,7 @@ log file stored in the virtual machine directory. Default: `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-eptRviMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L653">property <b>eptRviMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L655">property <b>eptRviMode</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>eptRviMode: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9524,7 +9583,7 @@ Default: `automatic`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-extraConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L659">property <b>extraConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L661">property <b>extraConfig</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>extraConfig: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9535,7 +9594,7 @@ configuration, such as data for cloud-config (under the guestinfo namespace).
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-firmware">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L664">property <b>firmware</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L666">property <b>firmware</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>firmware: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9545,7 +9604,7 @@ Can be one of `bios` or `EFI`. Default: `bios`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-folder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L669">property <b>folder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L671">property <b>folder</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>folder: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9555,7 +9614,7 @@ relative to the datacenter that the resource pool is in.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-forcePowerOff">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L676">property <b>forcePowerOff</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L678">property <b>forcePowerOff</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>forcePowerOff: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9567,7 +9626,7 @@ the virtual machine. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-guestId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L681">property <b>guestId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L683">property <b>guestId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>guestId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9577,7 +9636,7 @@ full list of possible values, see [here][vmware-docs-guest-ids]. Default: `other
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-guestIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L689">property <b>guestIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L691">property <b>guestIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>guestIpAddresses: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -9590,7 +9649,7 @@ virtual machine.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-hostSystemId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L698">property <b>hostSystemId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L700">property <b>hostSystemId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>hostSystemId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -9604,7 +9663,7 @@ according to any defaults or DRS policies in place.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-hvMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L704">property <b>hvMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L706">property <b>hvMode</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>hvMode: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9615,7 +9674,7 @@ this virtual machine. Can be one of `hvAuto`, `hvOn`, or `hvOff`. Default:
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -9624,8 +9683,20 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 </div>
+<h3 class="pdoc-member-header" id="VirtualMachine-ignoredGuestIps">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L713">property <b>ignoredGuestIps</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>ignoredGuestIps: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+
+List of IP addresses to ignore while waiting
+for an available IP address using either of the waiters. Any IP addresses in
+this list will be ignored if they show up so that the waiter will continue to
+wait for a real IP address. Default: [].
+
+</div>
 <h3 class="pdoc-member-header" id="VirtualMachine-imported">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L711">property <b>imported</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L720">property <b>imported</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>imported: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -9637,7 +9708,7 @@ section on importing below.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-latencySensitivity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L719">property <b>latencySensitivity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L728">property <b>latencySensitivity</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>latencySensitivity: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9650,7 +9721,7 @@ require frequent access to mouse or keyboard devices. Can be one of `low`,
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-memory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L724">property <b>memory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L733">property <b>memory</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>memory: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9660,7 +9731,7 @@ Default: `1024` (1 GB).
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-memoryHotAddEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L729">property <b>memoryHotAddEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L738">property <b>memoryHotAddEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>memoryHotAddEnabled: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9670,7 +9741,7 @@ virtual machine while it is running.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-memoryLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L735">property <b>memoryLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L744">property <b>memoryLimit</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>memoryLimit: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9681,7 +9752,7 @@ is no limit.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-memoryReservation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L740">property <b>memoryReservation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L749">property <b>memoryReservation</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>memoryReservation: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9691,7 +9762,7 @@ virtual machine is guaranteed. The default is no reservation.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-memoryShareCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L745">property <b>memoryShareCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L754">property <b>memoryShareCount</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>memoryShareCount: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -9701,7 +9772,7 @@ the virtual machine when the `memory_share_level` is `custom`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-memoryShareLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L750">property <b>memoryShareLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L759">property <b>memoryShareLevel</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>memoryShareLevel: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9711,7 +9782,7 @@ Can be one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-migrateWaitTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L757">property <b>migrateWaitTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L766">property <b>migrateWaitTimeout</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>migrateWaitTimeout: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9723,7 +9794,7 @@ migration.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-moid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L761">property <b>moid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L770">property <b>moid</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>moid: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -9732,7 +9803,7 @@ The machine object ID from VMWare
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L766">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L775">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -9742,7 +9813,7 @@ using `attach`. Required if not using `label`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-nestedHvEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L772">property <b>nestedHvEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L781">property <b>nestedHvEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>nestedHvEnabled: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9753,7 +9824,7 @@ Default: `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-networkInterfaces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L778">property <b>networkInterfaces</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L787">property <b>networkInterfaces</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>networkInterfaces: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -9775,7 +9846,7 @@ below.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-numCoresPerSocket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L784">property <b>numCoresPerSocket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L793">property <b>numCoresPerSocket</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>numCoresPerSocket: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9786,7 +9857,7 @@ the CPUs in this virtual machine. If specified, the value supplied to
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-numCpus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L789">property <b>numCpus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L798">property <b>numCpus</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>numCpus: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9796,7 +9867,7 @@ virtual machine. Default: `1`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-rebootRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L795">property <b>rebootRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L804">property <b>rebootRequired</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>rebootRequired: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -9807,7 +9878,7 @@ an update process and gets reset on refresh.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-resourcePoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L802">property <b>resourcePoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L811">property <b>resourcePoolId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourcePoolId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -9819,7 +9890,7 @@ for details on changing this value.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-runToolsScriptsAfterPowerOn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L807">property <b>runToolsScriptsAfterPowerOn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L816">property <b>runToolsScriptsAfterPowerOn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>runToolsScriptsAfterPowerOn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9829,7 +9900,7 @@ post-power-on scripts when VMware tools is installed. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-runToolsScriptsAfterResume">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L812">property <b>runToolsScriptsAfterResume</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L821">property <b>runToolsScriptsAfterResume</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>runToolsScriptsAfterResume: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9839,7 +9910,7 @@ post-resume scripts when VMware tools is installed. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-runToolsScriptsBeforeGuestReboot">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L817">property <b>runToolsScriptsBeforeGuestReboot</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L826">property <b>runToolsScriptsBeforeGuestReboot</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>runToolsScriptsBeforeGuestReboot: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9849,7 +9920,7 @@ pre-reboot scripts when VMware tools is installed. Default: `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-runToolsScriptsBeforeGuestShutdown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L822">property <b>runToolsScriptsBeforeGuestShutdown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L831">property <b>runToolsScriptsBeforeGuestShutdown</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>runToolsScriptsBeforeGuestShutdown: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9859,7 +9930,7 @@ of pre-shutdown scripts when VMware tools is installed. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-runToolsScriptsBeforeGuestStandby">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L827">property <b>runToolsScriptsBeforeGuestStandby</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L836">property <b>runToolsScriptsBeforeGuestStandby</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>runToolsScriptsBeforeGuestStandby: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9869,7 +9940,7 @@ pre-standby scripts when VMware tools is installed. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-scsiBusSharing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L832">property <b>scsiBusSharing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L841">property <b>scsiBusSharing</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>scsiBusSharing: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9879,7 +9950,7 @@ physicalSharing, virtualSharing, and noSharing. Default: `noSharing`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-scsiControllerCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L839">property <b>scsiControllerCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L848">property <b>scsiControllerCount</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>scsiControllerCount: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9891,7 +9962,7 @@ Note that lowering this value does not remove controllers. Default: `1`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-scsiType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L845">property <b>scsiType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L854">property <b>scsiType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>scsiType: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9902,7 +9973,7 @@ pvscsi (VMware Paravirtual). Defualt: `pvscsi`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-shutdownWaitTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L852">property <b>shutdownWaitTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L861">property <b>shutdownWaitTimeout</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>shutdownWaitTimeout: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9914,7 +9985,7 @@ after this timeout, otherwise an error is returned. Default: 3 minutes.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-swapPlacementPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L858">property <b>swapPlacementPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L867">property <b>swapPlacementPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>swapPlacementPolicy: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9925,7 +9996,7 @@ Default: `inherit`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-syncTimeWithHost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L863">property <b>syncTimeWithHost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L872">property <b>syncTimeWithHost</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>syncTimeWithHost: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9935,7 +10006,7 @@ the host. Requires VMware tools to be installed. Default: `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L868">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L877">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -9955,7 +10026,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-uuid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L873">property <b>uuid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L882">property <b>uuid</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>uuid: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -9965,7 +10036,7 @@ virtual disk on the virtual machine.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-vapp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L881">property <b>vapp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L890">property <b>vapp</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>vapp: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -9980,7 +10051,7 @@ more details.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-vappTransports">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L887">property <b>vappTransports</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L896">property <b>vappTransports</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>vappTransports: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -9991,7 +10062,7 @@ machine or template.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-vmwareToolsStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L892">property <b>vmwareToolsStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L901">property <b>vmwareToolsStatus</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>vmwareToolsStatus: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10001,7 +10072,7 @@ determine the proper course of action for some device operations.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-vmxPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L897">property <b>vmxPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L906">property <b>vmxPath</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>vmxPath: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10010,8 +10081,21 @@ The path of the virtual machine's configuration file in the VM's
 datastore.
 
 </div>
+<h3 class="pdoc-member-header" id="VirtualMachine-waitForGuestIpTimeout">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L914">property <b>waitForGuestIpTimeout</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>waitForGuestIpTimeout: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+
+The amount of time, in minutes, to
+wait for an available guest IP address on this virtual machine. This should
+only be used if your version of VMware Tools does not allow the
+`wait_for_guest_net_timeout` waiter to be
+used. A value less than 1 disables the waiter. Default: 0.
+
+</div>
 <h3 class="pdoc-member-header" id="VirtualMachine-waitForGuestNetRoutable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L904">property <b>waitForGuestNetRoutable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L923">property <b>waitForGuestNetRoutable</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>waitForGuestNetRoutable: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -10019,18 +10103,23 @@ datastore.
 Controls whether or not the guest
 network waiter waits for a routable address. When `false`, the waiter does
 not wait for a default gateway, nor are IP addresses checked against any
-discovered default gateways as part of its success criteria. Default: `true`.
+discovered default gateways as part of its success criteria. This property is
+ignored if the `wait_for_guest_ip_timeout`
+waiter is used. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-waitForGuestNetTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L910">property <b>waitForGuestNetTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L932">property <b>waitForGuestNetTimeout</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>waitForGuestNetTimeout: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 
 The amount of time, in minutes, to
-wait for an available IP address on this virtual machine. A value less than 1
-disables the waiter. Default: 5 minutes.
+wait for an available IP address on this virtual machine's NICs. Older
+versions of VMware Tools do not populate this property. In those cases, this
+waiter can be disabled and the
+`wait_for_guest_ip_timeout` waiter can be used
+instead. A value less than 1 disables the waiter. Default: 5 minutes.
 
 </div>
 </div>
@@ -10116,7 +10205,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineSnapshot-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -10148,7 +10237,7 @@ A description for the snapshot.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineSnapshot-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -10364,7 +10453,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="VmfsDatastore-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -10464,7 +10553,7 @@ new resource if changed.
 
 </div>
 <h3 class="pdoc-member-header" id="VmfsDatastore-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -10775,6 +10864,30 @@ const pg = new vsphere.DistributedPortGroup("pg", {
 <div class="pdoc-module-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h2 class="pdoc-module-header" id="getFolder">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getFolder.ts#L23">function <b>getFolder</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getFolder(args: <a href='#GetFolderArgs'>GetFolderArgs</a>, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetFolderResult'>GetFolderResult</a>&gt;</pre>
+
+
+The `vsphere_folder` data source can be used to get the general attributes of a
+vSphere inventory folder. Paths are absolute and include must include the
+datacenter.
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
+
+const folder = pulumi.output(vsphere.getFolder({
+    path: "/dc1/datastore/folder1",
+}));
+```
 
 </div>
 <h2 class="pdoc-module-header" id="getHost">
@@ -12979,14 +13092,14 @@ with this rule.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CustomAttributeArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/customAttribute.ts#L128">interface <b>CustomAttributeArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/customAttribute.ts#L139">interface <b>CustomAttributeArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a CustomAttribute resource.
 
 <h3 class="pdoc-member-header" id="CustomAttributeArgs-managedObjectType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/customAttribute.ts#L135">property <b>managedObjectType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/customAttribute.ts#L146">property <b>managedObjectType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>managedObjectType?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12998,7 +13111,7 @@ resource if changed.
 
 </div>
 <h3 class="pdoc-member-header" id="CustomAttributeArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/customAttribute.ts#L139">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/customAttribute.ts#L150">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13008,14 +13121,14 @@ The name of the custom attribute.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CustomAttributeState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/customAttribute.ts#L111">interface <b>CustomAttributeState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/customAttribute.ts#L122">interface <b>CustomAttributeState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering CustomAttribute resources.
 
 <h3 class="pdoc-member-header" id="CustomAttributeState-managedObjectType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/customAttribute.ts#L118">property <b>managedObjectType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/customAttribute.ts#L129">property <b>managedObjectType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>managedObjectType?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13027,7 +13140,7 @@ resource if changed.
 
 </div>
 <h3 class="pdoc-member-header" id="CustomAttributeState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/customAttribute.ts#L122">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/customAttribute.ts#L133">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -17025,8 +17138,14 @@ The name or absolute path to the cluster.
 
 A collection of values returned by getComputeCluster.
 
+<h3 class="pdoc-member-header" id="GetComputeClusterResult-datacenterId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getComputeCluster.ts#L69">property <b>datacenterId</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>datacenterId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+</div>
 <h3 class="pdoc-member-header" id="GetComputeClusterResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getComputeCluster.ts#L73">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getComputeCluster.ts#L75">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -17034,8 +17153,14 @@ A collection of values returned by getComputeCluster.
 id is the provider-assigned unique ID for this managed resource.
 
 </div>
+<h3 class="pdoc-member-header" id="GetComputeClusterResult-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getComputeCluster.ts#L70">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+</div>
 <h3 class="pdoc-member-header" id="GetComputeClusterResult-resourcePoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getComputeCluster.ts#L69">property <b>resourcePoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getComputeCluster.ts#L71">property <b>resourcePoolId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourcePoolId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -17066,7 +17191,7 @@ The name of the custom attribute.
 A collection of values returned by getCustomAttribute.
 
 <h3 class="pdoc-member-header" id="GetCustomAttributeResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getCustomAttribute.ts#L54">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getCustomAttribute.ts#L55">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -17079,6 +17204,12 @@ id is the provider-assigned unique ID for this managed resource.
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>managedObjectType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+</div>
+<h3 class="pdoc-member-header" id="GetCustomAttributeResult-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getCustomAttribute.ts#L51">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetDatacenterArgs">
@@ -17107,13 +17238,19 @@ Can be omitted if there is only one datacenter in your inventory.
 A collection of values returned by getDatacenter.
 
 <h3 class="pdoc-member-header" id="GetDatacenterResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getDatacenter.ts#L51">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getDatacenter.ts#L52">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 
 id is the provider-assigned unique ID for this managed resource.
 
+</div>
+<h3 class="pdoc-member-header" id="GetDatacenterResult-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getDatacenter.ts#L48">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetDatastoreArgs">
@@ -17183,14 +17320,26 @@ The name or absolute path to the datastore cluster.
 
 A collection of values returned by getDatastoreCluster.
 
+<h3 class="pdoc-member-header" id="GetDatastoreClusterResult-datacenterId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getDatastoreCluster.ts#L64">property <b>datacenterId</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>datacenterId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+</div>
 <h3 class="pdoc-member-header" id="GetDatastoreClusterResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getDatastoreCluster.ts#L67">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getDatastoreCluster.ts#L69">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 
 id is the provider-assigned unique ID for this managed resource.
 
+</div>
+<h3 class="pdoc-member-header" id="GetDatastoreClusterResult-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getDatastoreCluster.ts#L65">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetDatastoreResult">
@@ -17200,14 +17349,26 @@ id is the provider-assigned unique ID for this managed resource.
 
 A collection of values returned by getDatastore.
 
+<h3 class="pdoc-member-header" id="GetDatastoreResult-datacenterId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getDatastore.ts#L59">property <b>datacenterId</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>datacenterId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+</div>
 <h3 class="pdoc-member-header" id="GetDatastoreResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getDatastore.ts#L62">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getDatastore.ts#L64">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 
 id is the provider-assigned unique ID for this managed resource.
 
+</div>
+<h3 class="pdoc-member-header" id="GetDatastoreResult-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getDatastore.ts#L60">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetDistributedVirtualSwitchArgs">
@@ -17248,8 +17409,14 @@ name or path.
 
 A collection of values returned by getDistributedVirtualSwitch.
 
+<h3 class="pdoc-member-header" id="GetDistributedVirtualSwitchResult-datacenterId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getDistributedVirtualSwitch.ts#L74">property <b>datacenterId</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>datacenterId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+</div>
 <h3 class="pdoc-member-header" id="GetDistributedVirtualSwitchResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getDistributedVirtualSwitch.ts#L78">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getDistributedVirtualSwitch.ts#L80">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -17257,11 +17424,61 @@ A collection of values returned by getDistributedVirtualSwitch.
 id is the provider-assigned unique ID for this managed resource.
 
 </div>
+<h3 class="pdoc-member-header" id="GetDistributedVirtualSwitchResult-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getDistributedVirtualSwitch.ts#L75">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+</div>
 <h3 class="pdoc-member-header" id="GetDistributedVirtualSwitchResult-uplinks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getDistributedVirtualSwitch.ts#L74">property <b>uplinks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getDistributedVirtualSwitch.ts#L76">property <b>uplinks</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>uplinks: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+</div>
+</div>
+<h2 class="pdoc-module-header" id="GetFolderArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getFolder.ts#L32">interface <b>GetFolderArgs</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+
+A collection of arguments for invoking getFolder.
+
+<h3 class="pdoc-member-header" id="GetFolderArgs-path">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getFolder.ts#L40">property <b>path</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+The absolute path of the folder. For example, given a
+default datacenter of `default-dc`, a folder of type `vm`, and a folder name
+of `terraform-test-folder`, the resulting path would be
+`/default-dc/vm/terraform-test-folder`. The valid folder types to be used in
+the path are: `vm`, `host`, `datacenter`, `datastore`, or `network`.
+
+</div>
+</div>
+<h2 class="pdoc-module-header" id="GetFolderResult">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getFolder.ts#L46">interface <b>GetFolderResult</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+
+A collection of values returned by getFolder.
+
+<h3 class="pdoc-member-header" id="GetFolderResult-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getFolder.ts#L51">property <b>id</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+id is the provider-assigned unique ID for this managed resource.
+
+</div>
+<h3 class="pdoc-member-header" id="GetFolderResult-path">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getFolder.ts#L47">property <b>path</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetHostArgs">
@@ -17299,8 +17516,14 @@ omitted if there is only one host in your inventory.
 
 A collection of values returned by getHost.
 
+<h3 class="pdoc-member-header" id="GetHostResult-datacenterId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getHost.ts#L54">property <b>datacenterId</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>datacenterId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+</div>
 <h3 class="pdoc-member-header" id="GetHostResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getHost.ts#L62">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getHost.ts#L64">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -17308,8 +17531,14 @@ A collection of values returned by getHost.
 id is the provider-assigned unique ID for this managed resource.
 
 </div>
+<h3 class="pdoc-member-header" id="GetHostResult-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getHost.ts#L55">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+</div>
 <h3 class="pdoc-member-header" id="GetHostResult-resourcePoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getHost.ts#L58">property <b>resourcePoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getHost.ts#L60">property <b>resourcePoolId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourcePoolId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -17356,8 +17585,14 @@ The name of the network. This can be a name or path.
 
 A collection of values returned by getNetwork.
 
+<h3 class="pdoc-member-header" id="GetNetworkResult-datacenterId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getNetwork.ts#L58">property <b>datacenterId</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>datacenterId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+</div>
 <h3 class="pdoc-member-header" id="GetNetworkResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getNetwork.ts#L62">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getNetwork.ts#L64">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -17365,8 +17600,14 @@ A collection of values returned by getNetwork.
 id is the provider-assigned unique ID for this managed resource.
 
 </div>
+<h3 class="pdoc-member-header" id="GetNetworkResult-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getNetwork.ts#L59">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+</div>
 <h3 class="pdoc-member-header" id="GetNetworkResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getNetwork.ts#L58">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getNetwork.ts#L60">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -17410,14 +17651,26 @@ path. This is required when using vCenter.
 
 A collection of values returned by getResourcePool.
 
+<h3 class="pdoc-member-header" id="GetResourcePoolResult-datacenterId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getResourcePool.ts#L89">property <b>datacenterId</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>datacenterId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+</div>
 <h3 class="pdoc-member-header" id="GetResourcePoolResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getResourcePool.ts#L92">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getResourcePool.ts#L94">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 
 id is the provider-assigned unique ID for this managed resource.
 
+</div>
+<h3 class="pdoc-member-header" id="GetResourcePoolResult-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getResourcePool.ts#L90">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetTagArgs">
@@ -17489,13 +17742,19 @@ A collection of values returned by getTagCategory.
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetTagCategoryResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getTagCategory.ts#L56">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getTagCategory.ts#L57">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 
 id is the provider-assigned unique ID for this managed resource.
 
+</div>
+<h3 class="pdoc-member-header" id="GetTagCategoryResult-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getTagCategory.ts#L53">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetTagResult">
@@ -17505,20 +17764,32 @@ id is the provider-assigned unique ID for this managed resource.
 
 A collection of values returned by getTag.
 
+<h3 class="pdoc-member-header" id="GetTagResult-categoryId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getTag.ts#L59">property <b>categoryId</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>categoryId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+</div>
 <h3 class="pdoc-member-header" id="GetTagResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getTag.ts#L59">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getTag.ts#L60">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetTagResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getTag.ts#L63">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getTag.ts#L65">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 
 id is the provider-assigned unique ID for this managed resource.
 
+</div>
+<h3 class="pdoc-member-header" id="GetTagResult-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getTag.ts#L61">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetVappContainerArgs">
@@ -17556,14 +17827,26 @@ path.
 
 A collection of values returned by getVappContainer.
 
+<h3 class="pdoc-member-header" id="GetVappContainerResult-datacenterId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getVappContainer.ts#L57">property <b>datacenterId</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>datacenterId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+</div>
 <h3 class="pdoc-member-header" id="GetVappContainerResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getVappContainer.ts#L60">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getVappContainer.ts#L62">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 
 id is the provider-assigned unique ID for this managed resource.
 
+</div>
+<h3 class="pdoc-member-header" id="GetVappContainerResult-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getVappContainer.ts#L58">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetVirtualMachineArgs">
@@ -17624,8 +17907,14 @@ The alternate guest name of the virtual machine when
 guest_id is a non-specific operating system, like `otherGuest`.
 
 </div>
+<h3 class="pdoc-member-header" id="GetVirtualMachineResult-datacenterId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getVirtualMachine.ts#L72">property <b>datacenterId</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>datacenterId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+</div>
 <h3 class="pdoc-member-header" id="GetVirtualMachineResult-disks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getVirtualMachine.ts#L82">property <b>disks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getVirtualMachine.ts#L83">property <b>disks</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>disks: {
@@ -17645,7 +17934,7 @@ are scanned for disks. The sub-attributes are:
 
 </div>
 <h3 class="pdoc-member-header" id="GetVirtualMachineResult-firmware">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getVirtualMachine.ts#L86">property <b>firmware</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getVirtualMachine.ts#L87">property <b>firmware</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>firmware: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -17654,7 +17943,7 @@ The firmware type for this virtual machine. Can be `bios` or `efi`.
 
 </div>
 <h3 class="pdoc-member-header" id="GetVirtualMachineResult-guestId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getVirtualMachine.ts#L90">property <b>guestId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getVirtualMachine.ts#L91">property <b>guestId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>guestId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -17663,7 +17952,7 @@ The guest ID of the virtual machine or template.
 
 </div>
 <h3 class="pdoc-member-header" id="GetVirtualMachineResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getVirtualMachine.ts#L114">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getVirtualMachine.ts#L117">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -17671,8 +17960,14 @@ The guest ID of the virtual machine or template.
 id is the provider-assigned unique ID for this managed resource.
 
 </div>
+<h3 class="pdoc-member-header" id="GetVirtualMachineResult-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getVirtualMachine.ts#L92">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+</div>
 <h3 class="pdoc-member-header" id="GetVirtualMachineResult-networkInterfaceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getVirtualMachine.ts#L96">property <b>networkInterfaceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getVirtualMachine.ts#L98">property <b>networkInterfaceTypes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>networkInterfaceTypes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -17683,7 +17978,7 @@ interface found on the virtual machine, in device bus order. Will be one of
 
 </div>
 <h3 class="pdoc-member-header" id="GetVirtualMachineResult-scsiBusSharing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getVirtualMachine.ts#L102">property <b>scsiBusSharing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getVirtualMachine.ts#L104">property <b>scsiBusSharing</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>scsiBusSharing: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -17693,8 +17988,14 @@ physicalSharing, virtualSharing, and noSharing. Only the first number of
 controllers defined by `scsi_controller_scan_count` are scanned.
 
 </div>
+<h3 class="pdoc-member-header" id="GetVirtualMachineResult-scsiControllerScanCount">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getVirtualMachine.ts#L105">property <b>scsiControllerScanCount</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>scsiControllerScanCount?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+</div>
 <h3 class="pdoc-member-header" id="GetVirtualMachineResult-scsiType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getVirtualMachine.ts#L110">property <b>scsiType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getVirtualMachine.ts#L113">property <b>scsiType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>scsiType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -17763,14 +18064,32 @@ A lexicographically sorted list of devices discovered by the
 operation, matching the supplied `filter`, if provided.
 
 </div>
+<h3 class="pdoc-member-header" id="GetVmfsDisksResult-filter">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getVmfsDisks.ts#L74">property <b>filter</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>filter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+</div>
+<h3 class="pdoc-member-header" id="GetVmfsDisksResult-hostSystemId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getVmfsDisks.ts#L75">property <b>hostSystemId</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>hostSystemId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+</div>
 <h3 class="pdoc-member-header" id="GetVmfsDisksResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getVmfsDisks.ts#L77">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getVmfsDisks.ts#L80">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 
 id is the provider-assigned unique ID for this managed resource.
 
+</div>
+<h3 class="pdoc-member-header" id="GetVmfsDisksResult-rescan">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/getVmfsDisks.ts#L76">property <b>rescan</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>rescan?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HaVmOverrideArgs">
@@ -18521,14 +18840,14 @@ tagging. Default: `0`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HostVirtualSwitchArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L397">interface <b>HostVirtualSwitchArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L414">interface <b>HostVirtualSwitchArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a HostVirtualSwitch resource.
 
 <h3 class="pdoc-member-header" id="HostVirtualSwitchArgs-activeNics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L402">property <b>activeNics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L419">property <b>activeNics</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>activeNics: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -18538,7 +18857,7 @@ balancing.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchArgs-allowForgedTransmits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L408">property <b>allowForgedTransmits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L425">property <b>allowForgedTransmits</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>allowForgedTransmits?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -18549,7 +18868,7 @@ address than that of its own. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchArgs-allowMacChanges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L413">property <b>allowMacChanges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L430">property <b>allowMacChanges</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>allowMacChanges?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -18559,7 +18878,7 @@ Control (MAC) address can be changed. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchArgs-allowPromiscuous">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L419">property <b>allowPromiscuous</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L436">property <b>allowPromiscuous</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>allowPromiscuous?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -18570,7 +18889,7 @@ flag indicates whether or not all traffic is seen on a given port. Default:
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchArgs-beaconInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L425">property <b>beaconInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L442">property <b>beaconInterval</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>beaconInterval?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -18581,7 +18900,7 @@ offer link failure capability beyond link status only. Default: `1`.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchArgs-checkBeacon">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L432">property <b>checkBeacon</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L449">property <b>checkBeacon</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>checkBeacon?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -18593,7 +18912,7 @@ failed NICs.  Default: `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchArgs-failback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L438">property <b>failback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L455">property <b>failback</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>failback?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -18604,7 +18923,7 @@ failed interfaces higher in precedence when they come back up.  Default:
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchArgs-hostSystemId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L443">property <b>hostSystemId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L460">property <b>hostSystemId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>hostSystemId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -18614,7 +18933,7 @@ the host to set the virtual switch up on. Forces a new resource if changed.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchArgs-linkDiscoveryOperation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L448">property <b>linkDiscoveryOperation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L465">property <b>linkDiscoveryOperation</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>linkDiscoveryOperation?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -18624,7 +18943,7 @@ for link discovery traffic. Default: `listen`.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchArgs-linkDiscoveryProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L453">property <b>linkDiscoveryProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L470">property <b>linkDiscoveryProtocol</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>linkDiscoveryProtocol?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -18634,7 +18953,7 @@ types are `cpd` and `lldp`. Default: `cdp`.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchArgs-mtu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L458">property <b>mtu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L475">property <b>mtu</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>mtu?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -18644,7 +18963,7 @@ switch. Default: `1500`.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L463">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L480">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -18654,7 +18973,7 @@ changed.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchArgs-networkAdapters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L467">property <b>networkAdapters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L484">property <b>networkAdapters</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>networkAdapters: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -18663,7 +18982,7 @@ The network interfaces to bind to the bridge.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchArgs-notifySwitches">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L473">property <b>notifySwitches</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L490">property <b>notifySwitches</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>notifySwitches?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -18674,7 +18993,7 @@ Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchArgs-numberOfPorts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L478">property <b>numberOfPorts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L495">property <b>numberOfPorts</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>numberOfPorts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -18684,7 +19003,7 @@ virtual switch. Default: `128`.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchArgs-shapingAverageBandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L483">property <b>shapingAverageBandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L500">property <b>shapingAverageBandwidth</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>shapingAverageBandwidth?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -18694,7 +19013,7 @@ second if traffic shaping is enabled. Default: `0`
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchArgs-shapingBurstSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L488">property <b>shapingBurstSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L505">property <b>shapingBurstSize</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>shapingBurstSize?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -18704,7 +19023,7 @@ shaping is enabled. Default: `0`
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchArgs-shapingEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L493">property <b>shapingEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L510">property <b>shapingEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>shapingEnabled?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -18714,7 +19033,7 @@ ports managed by this virtual switch. Default: `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchArgs-shapingPeakBandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L498">property <b>shapingPeakBandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L515">property <b>shapingPeakBandwidth</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>shapingPeakBandwidth?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -18724,7 +19043,7 @@ bits per second if traffic shaping is enabled. Default: `0`
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchArgs-standbyNics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L503">property <b>standbyNics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L520">property <b>standbyNics</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>standbyNics: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -18734,7 +19053,7 @@ failover.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchArgs-teamingPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L509">property <b>teamingPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L526">property <b>teamingPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>teamingPolicy?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -18746,14 +19065,14 @@ of `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HostVirtualSwitchState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L279">interface <b>HostVirtualSwitchState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L296">interface <b>HostVirtualSwitchState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering HostVirtualSwitch resources.
 
 <h3 class="pdoc-member-header" id="HostVirtualSwitchState-activeNics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L284">property <b>activeNics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L301">property <b>activeNics</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>activeNics?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -18763,7 +19082,7 @@ balancing.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchState-allowForgedTransmits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L290">property <b>allowForgedTransmits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L307">property <b>allowForgedTransmits</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>allowForgedTransmits?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -18774,7 +19093,7 @@ address than that of its own. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchState-allowMacChanges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L295">property <b>allowMacChanges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L312">property <b>allowMacChanges</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>allowMacChanges?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -18784,7 +19103,7 @@ Control (MAC) address can be changed. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchState-allowPromiscuous">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L301">property <b>allowPromiscuous</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L318">property <b>allowPromiscuous</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>allowPromiscuous?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -18795,7 +19114,7 @@ flag indicates whether or not all traffic is seen on a given port. Default:
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchState-beaconInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L307">property <b>beaconInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L324">property <b>beaconInterval</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>beaconInterval?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -18806,7 +19125,7 @@ offer link failure capability beyond link status only. Default: `1`.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchState-checkBeacon">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L314">property <b>checkBeacon</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L331">property <b>checkBeacon</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>checkBeacon?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -18818,7 +19137,7 @@ failed NICs.  Default: `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchState-failback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L320">property <b>failback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L337">property <b>failback</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>failback?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -18829,7 +19148,7 @@ failed interfaces higher in precedence when they come back up.  Default:
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchState-hostSystemId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L325">property <b>hostSystemId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L342">property <b>hostSystemId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>hostSystemId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -18839,7 +19158,7 @@ the host to set the virtual switch up on. Forces a new resource if changed.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchState-linkDiscoveryOperation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L330">property <b>linkDiscoveryOperation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L347">property <b>linkDiscoveryOperation</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>linkDiscoveryOperation?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -18849,7 +19168,7 @@ for link discovery traffic. Default: `listen`.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchState-linkDiscoveryProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L335">property <b>linkDiscoveryProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L352">property <b>linkDiscoveryProtocol</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>linkDiscoveryProtocol?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -18859,7 +19178,7 @@ types are `cpd` and `lldp`. Default: `cdp`.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchState-mtu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L340">property <b>mtu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L357">property <b>mtu</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>mtu?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -18869,7 +19188,7 @@ switch. Default: `1500`.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L345">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L362">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -18879,7 +19198,7 @@ changed.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchState-networkAdapters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L349">property <b>networkAdapters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L366">property <b>networkAdapters</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>networkAdapters?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -18888,7 +19207,7 @@ The network interfaces to bind to the bridge.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchState-notifySwitches">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L355">property <b>notifySwitches</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L372">property <b>notifySwitches</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>notifySwitches?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -18899,7 +19218,7 @@ Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchState-numberOfPorts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L360">property <b>numberOfPorts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L377">property <b>numberOfPorts</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>numberOfPorts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -18909,7 +19228,7 @@ virtual switch. Default: `128`.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchState-shapingAverageBandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L365">property <b>shapingAverageBandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L382">property <b>shapingAverageBandwidth</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>shapingAverageBandwidth?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -18919,7 +19238,7 @@ second if traffic shaping is enabled. Default: `0`
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchState-shapingBurstSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L370">property <b>shapingBurstSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L387">property <b>shapingBurstSize</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>shapingBurstSize?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -18929,7 +19248,7 @@ shaping is enabled. Default: `0`
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchState-shapingEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L375">property <b>shapingEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L392">property <b>shapingEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>shapingEnabled?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -18939,7 +19258,7 @@ ports managed by this virtual switch. Default: `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchState-shapingPeakBandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L380">property <b>shapingPeakBandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L397">property <b>shapingPeakBandwidth</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>shapingPeakBandwidth?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -18949,7 +19268,7 @@ bits per second if traffic shaping is enabled. Default: `0`
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchState-standbyNics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L385">property <b>standbyNics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L402">property <b>standbyNics</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>standbyNics?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -18959,7 +19278,7 @@ failover.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitchState-teamingPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L391">property <b>teamingPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/hostVirtualSwitch.ts#L408">property <b>teamingPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>teamingPolicy?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -19990,14 +20309,14 @@ within its category.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TagCategoryArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L141">interface <b>TagCategoryArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L152">interface <b>TagCategoryArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a TagCategory resource.
 
 <h3 class="pdoc-member-header" id="TagCategoryArgs-associableTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L147">property <b>associableTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L158">property <b>associableTypes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>associableTypes: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -20008,7 +20327,7 @@ here.
 
 </div>
 <h3 class="pdoc-member-header" id="TagCategoryArgs-cardinality">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L154">property <b>cardinality</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L165">property <b>cardinality</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>cardinality: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -20020,7 +20339,7 @@ multiple tags in this category). Forces a new resource if changed.
 
 </div>
 <h3 class="pdoc-member-header" id="TagCategoryArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L158">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L169">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>description?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -20029,7 +20348,7 @@ A description for the category.
 
 </div>
 <h3 class="pdoc-member-header" id="TagCategoryArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L162">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L173">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -20039,14 +20358,14 @@ The name of the category.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TagCategoryState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L114">interface <b>TagCategoryState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L125">interface <b>TagCategoryState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering TagCategory resources.
 
 <h3 class="pdoc-member-header" id="TagCategoryState-associableTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L120">property <b>associableTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L131">property <b>associableTypes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>associableTypes?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -20057,7 +20376,7 @@ here.
 
 </div>
 <h3 class="pdoc-member-header" id="TagCategoryState-cardinality">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L127">property <b>cardinality</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L138">property <b>cardinality</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>cardinality?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -20069,7 +20388,7 @@ multiple tags in this category). Forces a new resource if changed.
 
 </div>
 <h3 class="pdoc-member-header" id="TagCategoryState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L131">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L142">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>description?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -20078,7 +20397,7 @@ A description for the category.
 
 </div>
 <h3 class="pdoc-member-header" id="TagCategoryState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L135">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/tagCategory.ts#L146">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -20471,14 +20790,14 @@ The IDs of any tags to attach to this resource. See
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VappEntityArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L239">interface <b>VappEntityArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L254">interface <b>VappEntityArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a VappEntity resource.
 
 <h3 class="pdoc-member-header" id="VappEntityArgs-containerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L244">property <b>containerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L259">property <b>containerId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>containerId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -20488,7 +20807,7 @@ container the entity is a member of.
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntityArgs-customAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L248">property <b>customAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L263">property <b>customAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>customAttributes?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -20497,7 +20816,7 @@ A list of custom attributes to set on this resource.
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntityArgs-startAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L254">property <b>startAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L269">property <b>startAction</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>startAction?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -20508,7 +20827,7 @@ Default: powerOn
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntityArgs-startDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L259">property <b>startDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L274">property <b>startDelay</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>startDelay?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -20518,7 +20837,7 @@ entity in the order of entities to be started. Default: 120
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntityArgs-startOrder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L263">property <b>startOrder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L278">property <b>startOrder</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>startOrder?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -20527,7 +20846,7 @@ Order to start and stop target in vApp. Default: 1
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntityArgs-stopAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L269">property <b>stopAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L284">property <b>stopAction</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>stopAction?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -20538,7 +20857,7 @@ does not participate in auto-stop. Default: powerOff
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntityArgs-stopDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L275">property <b>stopDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L290">property <b>stopDelay</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>stopDelay?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -20549,7 +20868,7 @@ guestShutdown. Default: 120
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntityArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L279">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L294">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -20558,7 +20877,7 @@ A list of tag IDs to apply to this object.
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntityArgs-targetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L284">property <b>targetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L299">property <b>targetId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>targetId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -20568,7 +20887,7 @@ to power on or power off. This can be a virtual machine or a vApp.
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntityArgs-waitForGuest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L290">property <b>waitForGuest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L305">property <b>waitForGuest</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>waitForGuest?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -20580,14 +20899,14 @@ property has no effect for vApps. Default: false
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VappEntityState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L182">interface <b>VappEntityState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L197">interface <b>VappEntityState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering VappEntity resources.
 
 <h3 class="pdoc-member-header" id="VappEntityState-containerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L187">property <b>containerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L202">property <b>containerId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>containerId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -20597,7 +20916,7 @@ container the entity is a member of.
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntityState-customAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L191">property <b>customAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L206">property <b>customAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>customAttributes?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -20606,7 +20925,7 @@ A list of custom attributes to set on this resource.
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntityState-startAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L197">property <b>startAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L212">property <b>startAction</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>startAction?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -20617,7 +20936,7 @@ Default: powerOn
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntityState-startDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L202">property <b>startDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L217">property <b>startDelay</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>startDelay?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -20627,7 +20946,7 @@ entity in the order of entities to be started. Default: 120
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntityState-startOrder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L206">property <b>startOrder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L221">property <b>startOrder</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>startOrder?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -20636,7 +20955,7 @@ Order to start and stop target in vApp. Default: 1
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntityState-stopAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L212">property <b>stopAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L227">property <b>stopAction</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>stopAction?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -20647,7 +20966,7 @@ does not participate in auto-stop. Default: powerOff
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntityState-stopDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L218">property <b>stopDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L233">property <b>stopDelay</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>stopDelay?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -20658,7 +20977,7 @@ guestShutdown. Default: 120
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntityState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L222">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L237">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -20667,7 +20986,7 @@ A list of tag IDs to apply to this object.
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntityState-targetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L227">property <b>targetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L242">property <b>targetId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>targetId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -20677,7 +20996,7 @@ to power on or power off. This can be a virtual machine or a vApp.
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntityState-waitForGuest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L233">property <b>waitForGuest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/vappEntity.ts#L248">property <b>waitForGuest</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>waitForGuest?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -20851,14 +21170,14 @@ be created.  This needs to end in `.vmdk`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VirtualMachineArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1476">interface <b>VirtualMachineArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1522">interface <b>VirtualMachineArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a VirtualMachine resource.
 
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-alternateGuestName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1481">property <b>alternateGuestName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1527">property <b>alternateGuestName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>alternateGuestName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -20868,7 +21187,7 @@ when `guest_id` is `other` or `other-64`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-annotation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1486">property <b>annotation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1532">property <b>annotation</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>annotation?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -20878,7 +21197,7 @@ The default is no annotation.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-bootDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1491">property <b>bootDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1537">property <b>bootDelay</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>bootDelay?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -20888,7 +21207,7 @@ the boot sequence. The default is no delay.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-bootRetryDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1497">property <b>bootRetryDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1543">property <b>bootRetryDelay</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>bootRetryDelay?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -20899,7 +21218,7 @@ Default: `10000` (10 seconds).
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-bootRetryEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1503">property <b>bootRetryEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1549">property <b>bootRetryEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>bootRetryEnabled?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -20910,7 +21229,7 @@ Default: `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-cdrom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1508">property <b>cdrom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1554">property <b>cdrom</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>cdrom?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -20926,7 +21245,7 @@ machine. See CDROM options below.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-clone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1515">property <b>clone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1561">property <b>clone</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>clone?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -20979,7 +21298,7 @@ template for more details.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-cpuHotAddEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1520">property <b>cpuHotAddEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1566">property <b>cpuHotAddEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>cpuHotAddEnabled?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -20989,7 +21308,7 @@ machine while it is running.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-cpuHotRemoveEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1525">property <b>cpuHotRemoveEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1571">property <b>cpuHotRemoveEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>cpuHotRemoveEnabled?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -20999,7 +21318,7 @@ virtual machine while it is running.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-cpuLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1531">property <b>cpuLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1577">property <b>cpuLimit</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>cpuLimit?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -21010,7 +21329,7 @@ limit.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-cpuPerformanceCountersEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1536">property <b>cpuPerformanceCountersEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1582">property <b>cpuPerformanceCountersEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>cpuPerformanceCountersEnabled?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -21020,7 +21339,7 @@ counters on this virtual machine. Default: `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-cpuReservation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1541">property <b>cpuReservation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1587">property <b>cpuReservation</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>cpuReservation?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -21030,7 +21349,7 @@ machine is guaranteed. The default is no reservation.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-cpuShareCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1546">property <b>cpuShareCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1592">property <b>cpuShareCount</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>cpuShareCount?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -21040,7 +21359,7 @@ virtual machine when the `cpu_share_level` is `custom`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-cpuShareLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1551">property <b>cpuShareLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1597">property <b>cpuShareLevel</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>cpuShareLevel?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -21050,7 +21369,7 @@ one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-customAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1558">property <b>customAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1604">property <b>customAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>customAttributes?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -21062,7 +21381,7 @@ for custom attributes.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-datastoreClusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1566">property <b>datastoreClusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1612">property <b>datastoreClusterId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>datastoreClusterId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -21075,7 +21394,7 @@ migration for details on changing this value.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-datastoreId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1571">property <b>datastoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1617">property <b>datastoreId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>datastoreId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -21085,7 +21404,7 @@ Requried for using a datastore ISO. Conflicts with `client_device`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-disks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1576">property <b>disks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1622">property <b>disks</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>disks?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -21116,7 +21435,7 @@ machine. See disk options below.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-efiSecureBootEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1581">property <b>efiSecureBootEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1627">property <b>efiSecureBootEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>efiSecureBootEnabled?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -21126,7 +21445,7 @@ When the `firmware` type is set to is
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-enableDiskUuid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1586">property <b>enableDiskUuid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1632">property <b>enableDiskUuid</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>enableDiskUuid?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -21136,7 +21455,7 @@ the virtual machine, allowing access to them in the guest. Default: `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-enableLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1591">property <b>enableLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1637">property <b>enableLogging</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>enableLogging?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -21146,7 +21465,7 @@ log file stored in the virtual machine directory. Default: `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-eptRviMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1597">property <b>eptRviMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1643">property <b>eptRviMode</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>eptRviMode?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -21157,7 +21476,7 @@ Default: `automatic`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-extraConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1603">property <b>extraConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1649">property <b>extraConfig</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>extraConfig?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -21168,7 +21487,7 @@ configuration, such as data for cloud-config (under the guestinfo namespace).
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-firmware">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1608">property <b>firmware</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1654">property <b>firmware</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>firmware?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -21178,7 +21497,7 @@ Can be one of `bios` or `EFI`. Default: `bios`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-folder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1613">property <b>folder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1659">property <b>folder</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>folder?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -21188,7 +21507,7 @@ relative to the datacenter that the resource pool is in.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-forcePowerOff">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1620">property <b>forcePowerOff</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1666">property <b>forcePowerOff</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>forcePowerOff?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -21200,7 +21519,7 @@ the virtual machine. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-guestId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1625">property <b>guestId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1671">property <b>guestId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>guestId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -21210,7 +21529,7 @@ full list of possible values, see [here][vmware-docs-guest-ids]. Default: `other
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-hostSystemId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1634">property <b>hostSystemId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1680">property <b>hostSystemId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>hostSystemId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -21224,7 +21543,7 @@ according to any defaults or DRS policies in place.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-hvMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1640">property <b>hvMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1686">property <b>hvMode</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>hvMode?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -21234,8 +21553,20 @@ this virtual machine. Can be one of `hvAuto`, `hvOn`, or `hvOff`. Default:
 `hvAuto`.
 
 </div>
+<h3 class="pdoc-member-header" id="VirtualMachineArgs-ignoredGuestIps">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1693">property <b>ignoredGuestIps</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>ignoredGuestIps?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+
+List of IP addresses to ignore while waiting
+for an available IP address using either of the waiters. Any IP addresses in
+this list will be ignored if they show up so that the waiter will continue to
+wait for a real IP address. Default: [].
+
+</div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-latencySensitivity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1648">property <b>latencySensitivity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1701">property <b>latencySensitivity</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>latencySensitivity?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -21248,7 +21579,7 @@ require frequent access to mouse or keyboard devices. Can be one of `low`,
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-memory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1653">property <b>memory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1706">property <b>memory</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>memory?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -21258,7 +21589,7 @@ Default: `1024` (1 GB).
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-memoryHotAddEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1658">property <b>memoryHotAddEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1711">property <b>memoryHotAddEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>memoryHotAddEnabled?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -21268,7 +21599,7 @@ virtual machine while it is running.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-memoryLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1664">property <b>memoryLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1717">property <b>memoryLimit</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>memoryLimit?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -21279,7 +21610,7 @@ is no limit.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-memoryReservation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1669">property <b>memoryReservation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1722">property <b>memoryReservation</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>memoryReservation?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -21289,7 +21620,7 @@ virtual machine is guaranteed. The default is no reservation.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-memoryShareCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1674">property <b>memoryShareCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1727">property <b>memoryShareCount</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>memoryShareCount?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -21299,7 +21630,7 @@ the virtual machine when the `memory_share_level` is `custom`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-memoryShareLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1679">property <b>memoryShareLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1732">property <b>memoryShareLevel</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>memoryShareLevel?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -21309,7 +21640,7 @@ Can be one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-migrateWaitTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1686">property <b>migrateWaitTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1739">property <b>migrateWaitTimeout</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>migrateWaitTimeout?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -21321,7 +21652,7 @@ migration.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1691">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1744">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -21331,7 +21662,7 @@ using `attach`. Required if not using `label`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-nestedHvEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1697">property <b>nestedHvEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1750">property <b>nestedHvEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>nestedHvEnabled?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -21342,7 +21673,7 @@ Default: `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-networkInterfaces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1703">property <b>networkInterfaces</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1756">property <b>networkInterfaces</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>networkInterfaces: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -21364,7 +21695,7 @@ below.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-numCoresPerSocket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1709">property <b>numCoresPerSocket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1762">property <b>numCoresPerSocket</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>numCoresPerSocket?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -21375,7 +21706,7 @@ the CPUs in this virtual machine. If specified, the value supplied to
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-numCpus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1714">property <b>numCpus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1767">property <b>numCpus</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>numCpus?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -21385,7 +21716,7 @@ virtual machine. Default: `1`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-resourcePoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1721">property <b>resourcePoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1774">property <b>resourcePoolId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourcePoolId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -21397,7 +21728,7 @@ for details on changing this value.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-runToolsScriptsAfterPowerOn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1726">property <b>runToolsScriptsAfterPowerOn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1779">property <b>runToolsScriptsAfterPowerOn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>runToolsScriptsAfterPowerOn?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -21407,7 +21738,7 @@ post-power-on scripts when VMware tools is installed. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-runToolsScriptsAfterResume">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1731">property <b>runToolsScriptsAfterResume</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1784">property <b>runToolsScriptsAfterResume</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>runToolsScriptsAfterResume?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -21417,7 +21748,7 @@ post-resume scripts when VMware tools is installed. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-runToolsScriptsBeforeGuestReboot">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1736">property <b>runToolsScriptsBeforeGuestReboot</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1789">property <b>runToolsScriptsBeforeGuestReboot</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>runToolsScriptsBeforeGuestReboot?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -21427,7 +21758,7 @@ pre-reboot scripts when VMware tools is installed. Default: `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-runToolsScriptsBeforeGuestShutdown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1741">property <b>runToolsScriptsBeforeGuestShutdown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1794">property <b>runToolsScriptsBeforeGuestShutdown</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>runToolsScriptsBeforeGuestShutdown?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -21437,7 +21768,7 @@ of pre-shutdown scripts when VMware tools is installed. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-runToolsScriptsBeforeGuestStandby">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1746">property <b>runToolsScriptsBeforeGuestStandby</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1799">property <b>runToolsScriptsBeforeGuestStandby</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>runToolsScriptsBeforeGuestStandby?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -21447,7 +21778,7 @@ pre-standby scripts when VMware tools is installed. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-scsiBusSharing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1751">property <b>scsiBusSharing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1804">property <b>scsiBusSharing</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>scsiBusSharing?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -21457,7 +21788,7 @@ physicalSharing, virtualSharing, and noSharing. Default: `noSharing`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-scsiControllerCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1758">property <b>scsiControllerCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1811">property <b>scsiControllerCount</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>scsiControllerCount?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -21469,7 +21800,7 @@ Note that lowering this value does not remove controllers. Default: `1`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-scsiType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1764">property <b>scsiType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1817">property <b>scsiType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>scsiType?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -21480,7 +21811,7 @@ pvscsi (VMware Paravirtual). Defualt: `pvscsi`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-shutdownWaitTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1771">property <b>shutdownWaitTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1824">property <b>shutdownWaitTimeout</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>shutdownWaitTimeout?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -21492,7 +21823,7 @@ after this timeout, otherwise an error is returned. Default: 3 minutes.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-swapPlacementPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1777">property <b>swapPlacementPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1830">property <b>swapPlacementPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>swapPlacementPolicy?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -21503,7 +21834,7 @@ Default: `inherit`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-syncTimeWithHost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1782">property <b>syncTimeWithHost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1835">property <b>syncTimeWithHost</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>syncTimeWithHost?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -21513,7 +21844,7 @@ the host. Requires VMware tools to be installed. Default: `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1787">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1840">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -21523,7 +21854,7 @@ The IDs of any tags to attach to this resource. See
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-vapp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1795">property <b>vapp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1848">property <b>vapp</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>vapp?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -21537,8 +21868,21 @@ configuration for
 more details.
 
 </div>
+<h3 class="pdoc-member-header" id="VirtualMachineArgs-waitForGuestIpTimeout">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1856">property <b>waitForGuestIpTimeout</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>waitForGuestIpTimeout?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+
+The amount of time, in minutes, to
+wait for an available guest IP address on this virtual machine. This should
+only be used if your version of VMware Tools does not allow the
+`wait_for_guest_net_timeout` waiter to be
+used. A value less than 1 disables the waiter. Default: 0.
+
+</div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-waitForGuestNetRoutable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1802">property <b>waitForGuestNetRoutable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1865">property <b>waitForGuestNetRoutable</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>waitForGuestNetRoutable?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -21546,18 +21890,23 @@ more details.
 Controls whether or not the guest
 network waiter waits for a routable address. When `false`, the waiter does
 not wait for a default gateway, nor are IP addresses checked against any
-discovered default gateways as part of its success criteria. Default: `true`.
+discovered default gateways as part of its success criteria. This property is
+ignored if the `wait_for_guest_ip_timeout`
+waiter is used. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-waitForGuestNetTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1808">property <b>waitForGuestNetTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1874">property <b>waitForGuestNetTimeout</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>waitForGuestNetTimeout?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 
 The amount of time, in minutes, to
-wait for an available IP address on this virtual machine. A value less than 1
-disables the waiter. Default: 5 minutes.
+wait for an available IP address on this virtual machine's NICs. Older
+versions of VMware Tools do not populate this property. In those cases, this
+waiter can be disabled and the
+`wait_for_guest_ip_timeout` waiter can be used
+instead. A value less than 1 disables the waiter. Default: 5 minutes.
 
 </div>
 </div>
@@ -21716,14 +22065,14 @@ The virtual machine UUID.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VirtualMachineState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1076">interface <b>VirtualMachineState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1102">interface <b>VirtualMachineState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering VirtualMachine resources.
 
 <h3 class="pdoc-member-header" id="VirtualMachineState-alternateGuestName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1081">property <b>alternateGuestName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1107">property <b>alternateGuestName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>alternateGuestName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -21733,7 +22082,7 @@ when `guest_id` is `other` or `other-64`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-annotation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1086">property <b>annotation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1112">property <b>annotation</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>annotation?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -21743,7 +22092,7 @@ The default is no annotation.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-bootDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1091">property <b>bootDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1117">property <b>bootDelay</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>bootDelay?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -21753,7 +22102,7 @@ the boot sequence. The default is no delay.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-bootRetryDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1097">property <b>bootRetryDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1123">property <b>bootRetryDelay</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>bootRetryDelay?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -21764,7 +22113,7 @@ Default: `10000` (10 seconds).
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-bootRetryEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1103">property <b>bootRetryEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1129">property <b>bootRetryEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>bootRetryEnabled?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -21775,7 +22124,7 @@ Default: `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-cdrom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1108">property <b>cdrom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1134">property <b>cdrom</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>cdrom?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -21791,7 +22140,7 @@ machine. See CDROM options below.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-changeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1114">property <b>changeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1140">property <b>changeVersion</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>changeVersion?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -21802,7 +22151,7 @@ configuration.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-clone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1121">property <b>clone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1147">property <b>clone</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>clone?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -21855,7 +22204,7 @@ template for more details.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-cpuHotAddEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1126">property <b>cpuHotAddEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1152">property <b>cpuHotAddEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>cpuHotAddEnabled?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -21865,7 +22214,7 @@ machine while it is running.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-cpuHotRemoveEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1131">property <b>cpuHotRemoveEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1157">property <b>cpuHotRemoveEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>cpuHotRemoveEnabled?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -21875,7 +22224,7 @@ virtual machine while it is running.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-cpuLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1137">property <b>cpuLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1163">property <b>cpuLimit</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>cpuLimit?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -21886,7 +22235,7 @@ limit.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-cpuPerformanceCountersEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1142">property <b>cpuPerformanceCountersEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1168">property <b>cpuPerformanceCountersEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>cpuPerformanceCountersEnabled?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -21896,7 +22245,7 @@ counters on this virtual machine. Default: `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-cpuReservation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1147">property <b>cpuReservation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1173">property <b>cpuReservation</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>cpuReservation?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -21906,7 +22255,7 @@ machine is guaranteed. The default is no reservation.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-cpuShareCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1152">property <b>cpuShareCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1178">property <b>cpuShareCount</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>cpuShareCount?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -21916,7 +22265,7 @@ virtual machine when the `cpu_share_level` is `custom`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-cpuShareLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1157">property <b>cpuShareLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1183">property <b>cpuShareLevel</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>cpuShareLevel?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -21926,7 +22275,7 @@ one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-customAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1164">property <b>customAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1190">property <b>customAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>customAttributes?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -21938,7 +22287,7 @@ for custom attributes.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-datastoreClusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1172">property <b>datastoreClusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1198">property <b>datastoreClusterId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>datastoreClusterId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -21951,7 +22300,7 @@ migration for details on changing this value.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-datastoreId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1177">property <b>datastoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1203">property <b>datastoreId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>datastoreId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -21961,7 +22310,7 @@ Requried for using a datastore ISO. Conflicts with `client_device`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-defaultIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1187">property <b>defaultIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1213">property <b>defaultIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>defaultIpAddress?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -21976,7 +22325,7 @@ off, this value will be blank.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-disks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1192">property <b>disks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1218">property <b>disks</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>disks?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -22007,7 +22356,7 @@ machine. See disk options below.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-efiSecureBootEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1197">property <b>efiSecureBootEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1223">property <b>efiSecureBootEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>efiSecureBootEnabled?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -22017,7 +22366,7 @@ When the `firmware` type is set to is
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-enableDiskUuid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1202">property <b>enableDiskUuid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1228">property <b>enableDiskUuid</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>enableDiskUuid?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -22027,7 +22376,7 @@ the virtual machine, allowing access to them in the guest. Default: `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-enableLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1207">property <b>enableLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1233">property <b>enableLogging</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>enableLogging?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -22037,7 +22386,7 @@ log file stored in the virtual machine directory. Default: `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-eptRviMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1213">property <b>eptRviMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1239">property <b>eptRviMode</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>eptRviMode?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -22048,7 +22397,7 @@ Default: `automatic`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-extraConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1219">property <b>extraConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1245">property <b>extraConfig</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>extraConfig?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -22059,7 +22408,7 @@ configuration, such as data for cloud-config (under the guestinfo namespace).
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-firmware">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1224">property <b>firmware</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1250">property <b>firmware</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>firmware?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -22069,7 +22418,7 @@ Can be one of `bios` or `EFI`. Default: `bios`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-folder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1229">property <b>folder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1255">property <b>folder</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>folder?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -22079,7 +22428,7 @@ relative to the datacenter that the resource pool is in.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-forcePowerOff">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1236">property <b>forcePowerOff</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1262">property <b>forcePowerOff</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>forcePowerOff?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -22091,7 +22440,7 @@ the virtual machine. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-guestId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1241">property <b>guestId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1267">property <b>guestId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>guestId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -22101,7 +22450,7 @@ full list of possible values, see [here][vmware-docs-guest-ids]. Default: `other
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-guestIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1249">property <b>guestIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1275">property <b>guestIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>guestIpAddresses?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -22114,7 +22463,7 @@ virtual machine.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-hostSystemId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1258">property <b>hostSystemId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1284">property <b>hostSystemId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>hostSystemId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -22128,7 +22477,7 @@ according to any defaults or DRS policies in place.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-hvMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1264">property <b>hvMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1290">property <b>hvMode</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>hvMode?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -22138,8 +22487,20 @@ this virtual machine. Can be one of `hvAuto`, `hvOn`, or `hvOff`. Default:
 `hvAuto`.
 
 </div>
+<h3 class="pdoc-member-header" id="VirtualMachineState-ignoredGuestIps">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1297">property <b>ignoredGuestIps</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>ignoredGuestIps?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+
+List of IP addresses to ignore while waiting
+for an available IP address using either of the waiters. Any IP addresses in
+this list will be ignored if they show up so that the waiter will continue to
+wait for a real IP address. Default: [].
+
+</div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-imported">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1271">property <b>imported</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1304">property <b>imported</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>imported?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -22151,7 +22512,7 @@ section on importing below.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-latencySensitivity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1279">property <b>latencySensitivity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1312">property <b>latencySensitivity</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>latencySensitivity?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -22164,7 +22525,7 @@ require frequent access to mouse or keyboard devices. Can be one of `low`,
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-memory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1284">property <b>memory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1317">property <b>memory</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>memory?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -22174,7 +22535,7 @@ Default: `1024` (1 GB).
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-memoryHotAddEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1289">property <b>memoryHotAddEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1322">property <b>memoryHotAddEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>memoryHotAddEnabled?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -22184,7 +22545,7 @@ virtual machine while it is running.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-memoryLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1295">property <b>memoryLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1328">property <b>memoryLimit</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>memoryLimit?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -22195,7 +22556,7 @@ is no limit.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-memoryReservation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1300">property <b>memoryReservation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1333">property <b>memoryReservation</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>memoryReservation?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -22205,7 +22566,7 @@ virtual machine is guaranteed. The default is no reservation.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-memoryShareCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1305">property <b>memoryShareCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1338">property <b>memoryShareCount</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>memoryShareCount?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -22215,7 +22576,7 @@ the virtual machine when the `memory_share_level` is `custom`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-memoryShareLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1310">property <b>memoryShareLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1343">property <b>memoryShareLevel</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>memoryShareLevel?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -22225,7 +22586,7 @@ Can be one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-migrateWaitTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1317">property <b>migrateWaitTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1350">property <b>migrateWaitTimeout</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>migrateWaitTimeout?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -22237,7 +22598,7 @@ migration.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-moid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1321">property <b>moid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1354">property <b>moid</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>moid?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -22246,7 +22607,7 @@ The machine object ID from VMWare
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1326">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1359">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -22256,7 +22617,7 @@ using `attach`. Required if not using `label`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-nestedHvEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1332">property <b>nestedHvEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1365">property <b>nestedHvEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>nestedHvEnabled?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -22267,7 +22628,7 @@ Default: `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-networkInterfaces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1338">property <b>networkInterfaces</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1371">property <b>networkInterfaces</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>networkInterfaces?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -22289,7 +22650,7 @@ below.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-numCoresPerSocket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1344">property <b>numCoresPerSocket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1377">property <b>numCoresPerSocket</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>numCoresPerSocket?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -22300,7 +22661,7 @@ the CPUs in this virtual machine. If specified, the value supplied to
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-numCpus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1349">property <b>numCpus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1382">property <b>numCpus</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>numCpus?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -22310,7 +22671,7 @@ virtual machine. Default: `1`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-rebootRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1355">property <b>rebootRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1388">property <b>rebootRequired</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>rebootRequired?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -22321,7 +22682,7 @@ an update process and gets reset on refresh.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-resourcePoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1362">property <b>resourcePoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1395">property <b>resourcePoolId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourcePoolId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -22333,7 +22694,7 @@ for details on changing this value.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-runToolsScriptsAfterPowerOn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1367">property <b>runToolsScriptsAfterPowerOn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1400">property <b>runToolsScriptsAfterPowerOn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>runToolsScriptsAfterPowerOn?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -22343,7 +22704,7 @@ post-power-on scripts when VMware tools is installed. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-runToolsScriptsAfterResume">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1372">property <b>runToolsScriptsAfterResume</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1405">property <b>runToolsScriptsAfterResume</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>runToolsScriptsAfterResume?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -22353,7 +22714,7 @@ post-resume scripts when VMware tools is installed. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-runToolsScriptsBeforeGuestReboot">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1377">property <b>runToolsScriptsBeforeGuestReboot</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1410">property <b>runToolsScriptsBeforeGuestReboot</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>runToolsScriptsBeforeGuestReboot?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -22363,7 +22724,7 @@ pre-reboot scripts when VMware tools is installed. Default: `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-runToolsScriptsBeforeGuestShutdown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1382">property <b>runToolsScriptsBeforeGuestShutdown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1415">property <b>runToolsScriptsBeforeGuestShutdown</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>runToolsScriptsBeforeGuestShutdown?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -22373,7 +22734,7 @@ of pre-shutdown scripts when VMware tools is installed. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-runToolsScriptsBeforeGuestStandby">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1387">property <b>runToolsScriptsBeforeGuestStandby</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1420">property <b>runToolsScriptsBeforeGuestStandby</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>runToolsScriptsBeforeGuestStandby?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -22383,7 +22744,7 @@ pre-standby scripts when VMware tools is installed. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-scsiBusSharing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1392">property <b>scsiBusSharing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1425">property <b>scsiBusSharing</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>scsiBusSharing?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -22393,7 +22754,7 @@ physicalSharing, virtualSharing, and noSharing. Default: `noSharing`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-scsiControllerCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1399">property <b>scsiControllerCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1432">property <b>scsiControllerCount</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>scsiControllerCount?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -22405,7 +22766,7 @@ Note that lowering this value does not remove controllers. Default: `1`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-scsiType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1405">property <b>scsiType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1438">property <b>scsiType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>scsiType?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -22416,7 +22777,7 @@ pvscsi (VMware Paravirtual). Defualt: `pvscsi`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-shutdownWaitTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1412">property <b>shutdownWaitTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1445">property <b>shutdownWaitTimeout</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>shutdownWaitTimeout?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -22428,7 +22789,7 @@ after this timeout, otherwise an error is returned. Default: 3 minutes.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-swapPlacementPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1418">property <b>swapPlacementPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1451">property <b>swapPlacementPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>swapPlacementPolicy?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -22439,7 +22800,7 @@ Default: `inherit`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-syncTimeWithHost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1423">property <b>syncTimeWithHost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1456">property <b>syncTimeWithHost</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>syncTimeWithHost?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -22449,7 +22810,7 @@ the host. Requires VMware tools to be installed. Default: `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1428">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1461">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -22459,7 +22820,7 @@ The IDs of any tags to attach to this resource. See
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-uuid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1433">property <b>uuid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1466">property <b>uuid</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>uuid?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -22469,7 +22830,7 @@ virtual disk on the virtual machine.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-vapp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1441">property <b>vapp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1474">property <b>vapp</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>vapp?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -22484,7 +22845,7 @@ more details.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-vappTransports">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1447">property <b>vappTransports</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1480">property <b>vappTransports</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>vappTransports?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -22495,7 +22856,7 @@ machine or template.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-vmwareToolsStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1452">property <b>vmwareToolsStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1485">property <b>vmwareToolsStatus</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>vmwareToolsStatus?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -22505,7 +22866,7 @@ determine the proper course of action for some device operations.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-vmxPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1457">property <b>vmxPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1490">property <b>vmxPath</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>vmxPath?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -22514,8 +22875,21 @@ The path of the virtual machine's configuration file in the VM's
 datastore.
 
 </div>
+<h3 class="pdoc-member-header" id="VirtualMachineState-waitForGuestIpTimeout">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1498">property <b>waitForGuestIpTimeout</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>waitForGuestIpTimeout?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+
+The amount of time, in minutes, to
+wait for an available guest IP address on this virtual machine. This should
+only be used if your version of VMware Tools does not allow the
+`wait_for_guest_net_timeout` waiter to be
+used. A value less than 1 disables the waiter. Default: 0.
+
+</div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-waitForGuestNetRoutable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1464">property <b>waitForGuestNetRoutable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1507">property <b>waitForGuestNetRoutable</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>waitForGuestNetRoutable?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -22523,18 +22897,23 @@ datastore.
 Controls whether or not the guest
 network waiter waits for a routable address. When `false`, the waiter does
 not wait for a default gateway, nor are IP addresses checked against any
-discovered default gateways as part of its success criteria. Default: `true`.
+discovered default gateways as part of its success criteria. This property is
+ignored if the `wait_for_guest_ip_timeout`
+waiter is used. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-waitForGuestNetTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1470">property <b>waitForGuestNetTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/virtualMachine.ts#L1516">property <b>waitForGuestNetTimeout</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>waitForGuestNetTimeout?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
 
 The amount of time, in minutes, to
-wait for an available IP address on this virtual machine. A value less than 1
-disables the waiter. Default: 5 minutes.
+wait for an available IP address on this virtual machine's NICs. Older
+versions of VMware Tools do not populate this property. In those cases, this
+waiter can be disabled and the
+`wait_for_guest_ip_timeout` waiter can be used
+instead. A value less than 1 disables the waiter. Default: 5 minutes.
 
 </div>
 </div>

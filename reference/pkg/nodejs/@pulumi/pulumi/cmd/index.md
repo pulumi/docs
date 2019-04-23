@@ -7,35 +7,17 @@ title: Module cmd
 
 <a href="../index.html">@pulumi/pulumi</a> &gt; cmd
 
+
 <div class="toggleVisible" markdown="1">
 <div class="collapsed" markdown="1">
-<h2 class="pdoc-module-header toggleButton" title="Click to show Index">Index ▹</h2>
+<h2 class="pdoc-module-header toggleButton" title="Click to show Modules">Modules ▹</h2>
 </div>
 <div class="expanded" markdown="1">
-<h2 class="pdoc-module-header toggleButton" title="Click to hide Index">Index ▾</h2>
+<h2 class="pdoc-module-header toggleButton" title="Click to hide Modules">Modules ▾</h2>
 <div class="pdoc-module-contents" markdown="1">
-* <a href="#main">function main</a>
-* <a href="#run">function run</a>
-
-<a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts">cmd/dynamic-provider/index.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/run/run.ts">cmd/run/run.ts</a> 
+* <a href="dynamic-provider">cmd/dynamic-provider</a>
+* <a href="run">cmd/run</a>
 </div>
 </div>
 </div>
 
-
-<h2 class="pdoc-module-header" id="main">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L288">function <b>main</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>main(args: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="run">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/run/run.ts#L120">function <b>run</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>run(argv: ParsedArgs, programStarted: () => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
-
-</div>
