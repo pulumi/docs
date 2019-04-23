@@ -58,12 +58,14 @@ import * as azure from "@pulumi/azure";
 * <a href="core">core</a>
 * <a href="cosmosdb">cosmosdb</a>
 * <a href="databricks">databricks</a>
+* <a href="datafactory">datafactory</a>
 * <a href="datalake">datalake</a>
 * <a href="ddosprotection">ddosprotection</a>
 * <a href="devspace">devspace</a>
 * <a href="devtest">devtest</a>
 * <a href="dns">dns</a>
 * <a href="eventhub">eventhub</a>
+* <a href="hdinsight">hdinsight</a>
 * <a href="iot">iot</a>
 * <a href="keyvault">keyvault</a>
 * <a href="lb">lb</a>
@@ -72,6 +74,7 @@ import * as azure from "@pulumi/azure";
 * <a href="managementgroups">managementgroups</a>
 * <a href="managementresource">managementresource</a>
 * <a href="mariadb">mariadb</a>
+* <a href="mediaservices">mediaservices</a>
 * <a href="monitoring">monitoring</a>
 * <a href="msi">msi</a>
 * <a href="mssql">mssql</a>
@@ -92,6 +95,7 @@ import * as azure from "@pulumi/azure";
 * <a href="signalr">signalr</a>
 * <a href="sql">sql</a>
 * <a href="storage">storage</a>
+* <a href="streamanalytics">streamanalytics</a>
 * <a href="trafficmanager">trafficmanager</a>
 </div>
 </div>

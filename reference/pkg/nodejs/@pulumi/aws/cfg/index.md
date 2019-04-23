@@ -325,7 +325,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DeliveryChannel">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L65">class <b>DeliveryChannel</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L64">class <b>DeliveryChannel</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -357,7 +357,6 @@ const role = new aws.iam.Role("r", {
 `,
 });
 const bucket = new aws.s3.Bucket("b", {
-    bucket: "example-awsconfig",
     forceDestroy: true,
 });
 const fooRecorder = new aws.cfg.Recorder("foo", {
@@ -388,7 +387,7 @@ const rolePolicy = new aws.iam.RolePolicy("p", {
 ```
 
 <h3 class="pdoc-member-header" id="DeliveryChannel-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L97"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L96"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -403,7 +402,7 @@ Create a DeliveryChannel resource with the given unique name, arguments, and opt
 
 </div>
 <h3 class="pdoc-member-header" id="DeliveryChannel-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L74">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L73">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -445,7 +444,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="DeliveryChannel-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L81">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L80">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -454,7 +453,7 @@ The name of the delivery channel. Defaults to `default`. Changing it recreates t
 
 </div>
 <h3 class="pdoc-member-header" id="DeliveryChannel-s3BucketName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L85">property <b>s3BucketName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L84">property <b>s3BucketName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>s3BucketName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -463,7 +462,7 @@ The name of the S3 bucket used to store the configuration history.
 
 </div>
 <h3 class="pdoc-member-header" id="DeliveryChannel-s3KeyPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L89">property <b>s3KeyPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L88">property <b>s3KeyPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>s3KeyPrefix: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -472,7 +471,7 @@ The prefix for the specified S3 bucket.
 
 </div>
 <h3 class="pdoc-member-header" id="DeliveryChannel-snapshotDeliveryProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L93">property <b>snapshotDeliveryProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L92">property <b>snapshotDeliveryProperties</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>snapshotDeliveryProperties: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -483,7 +482,7 @@ Options for how AWS Config delivers configuration snapshots. See below
 
 </div>
 <h3 class="pdoc-member-header" id="DeliveryChannel-snsTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L97">property <b>snsTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L96">property <b>snsTopicArn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>snsTopicArn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -641,7 +640,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RecorderStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L71">class <b>RecorderStatus</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L69">class <b>RecorderStatus</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -672,9 +671,7 @@ const role = new aws.iam.Role("r", {
 }
 `,
 });
-const bucket = new aws.s3.Bucket("b", {
-    bucket: "awsconfig-example",
-});
+const bucket = new aws.s3.Bucket("b", {});
 const fooRecorder = new aws.cfg.Recorder("foo", {
     roleArn: role.arn,
 });
@@ -710,7 +707,7 @@ const rolePolicyAttachment = new aws.iam.RolePolicyAttachment("a", {
 ```
 
 <h3 class="pdoc-member-header" id="RecorderStatus-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L91"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L89"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -725,7 +722,7 @@ Create a RecorderStatus resource with the given unique name, arguments, and opti
 
 </div>
 <h3 class="pdoc-member-header" id="RecorderStatus-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L80">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L78">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -767,7 +764,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="RecorderStatus-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L87">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L85">property <b>isEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>isEnabled: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -776,7 +773,7 @@ Whether the configuration recorder should be enabled or disabled.
 
 </div>
 <h3 class="pdoc-member-header" id="RecorderStatus-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L91">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L89">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1165,14 +1162,14 @@ The organization to aggregate config data from as documented below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DeliveryChannelArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L160">interface <b>DeliveryChannelArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L159">interface <b>DeliveryChannelArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a DeliveryChannel resource.
 
 <h3 class="pdoc-member-header" id="DeliveryChannelArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L164">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L163">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1181,7 +1178,7 @@ The name of the delivery channel. Defaults to `default`. Changing it recreates t
 
 </div>
 <h3 class="pdoc-member-header" id="DeliveryChannelArgs-s3BucketName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L168">property <b>s3BucketName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L167">property <b>s3BucketName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>s3BucketName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1190,7 +1187,7 @@ The name of the S3 bucket used to store the configuration history.
 
 </div>
 <h3 class="pdoc-member-header" id="DeliveryChannelArgs-s3KeyPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L172">property <b>s3KeyPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L171">property <b>s3KeyPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>s3KeyPrefix?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1199,7 +1196,7 @@ The prefix for the specified S3 bucket.
 
 </div>
 <h3 class="pdoc-member-header" id="DeliveryChannelArgs-snapshotDeliveryProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L176">property <b>snapshotDeliveryProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L175">property <b>snapshotDeliveryProperties</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>snapshotDeliveryProperties?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1210,7 +1207,7 @@ Options for how AWS Config delivers configuration snapshots. See below
 
 </div>
 <h3 class="pdoc-member-header" id="DeliveryChannelArgs-snsTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L180">property <b>snsTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L179">property <b>snsTopicArn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>snsTopicArn?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1220,14 +1217,14 @@ The ARN of the SNS topic that AWS Config delivers notifications to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DeliveryChannelState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L134">interface <b>DeliveryChannelState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L133">interface <b>DeliveryChannelState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering DeliveryChannel resources.
 
 <h3 class="pdoc-member-header" id="DeliveryChannelState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L138">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L137">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1236,7 +1233,7 @@ The name of the delivery channel. Defaults to `default`. Changing it recreates t
 
 </div>
 <h3 class="pdoc-member-header" id="DeliveryChannelState-s3BucketName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L142">property <b>s3BucketName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L141">property <b>s3BucketName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>s3BucketName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1245,7 +1242,7 @@ The name of the S3 bucket used to store the configuration history.
 
 </div>
 <h3 class="pdoc-member-header" id="DeliveryChannelState-s3KeyPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L146">property <b>s3KeyPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L145">property <b>s3KeyPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>s3KeyPrefix?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1254,7 +1251,7 @@ The prefix for the specified S3 bucket.
 
 </div>
 <h3 class="pdoc-member-header" id="DeliveryChannelState-snapshotDeliveryProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L150">property <b>snapshotDeliveryProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L149">property <b>snapshotDeliveryProperties</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>snapshotDeliveryProperties?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1265,7 +1262,7 @@ Options for how AWS Config delivers configuration snapshots. See below
 
 </div>
 <h3 class="pdoc-member-header" id="DeliveryChannelState-snsTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L154">property <b>snsTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/deliveryChannel.ts#L153">property <b>snsTopicArn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>snsTopicArn?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1357,14 +1354,14 @@ See [AWS Docs](http://docs.aws.amazon.com/config/latest/developerguide/iamrole-p
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RecorderStatusArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L136">interface <b>RecorderStatusArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L134">interface <b>RecorderStatusArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a RecorderStatus resource.
 
 <h3 class="pdoc-member-header" id="RecorderStatusArgs-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L140">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L138">property <b>isEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>isEnabled: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1373,7 +1370,7 @@ Whether the configuration recorder should be enabled or disabled.
 
 </div>
 <h3 class="pdoc-member-header" id="RecorderStatusArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L144">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L142">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1383,14 +1380,14 @@ The name of the recorder
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RecorderStatusState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L122">interface <b>RecorderStatusState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L120">interface <b>RecorderStatusState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering RecorderStatus resources.
 
 <h3 class="pdoc-member-header" id="RecorderStatusState-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L126">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L124">property <b>isEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>isEnabled?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1399,7 +1396,7 @@ Whether the configuration recorder should be enabled or disabled.
 
 </div>
 <h3 class="pdoc-member-header" id="RecorderStatusState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L130">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cfg/recorderStatus.ts#L128">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

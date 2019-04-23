@@ -14,16 +14,17 @@ title: Module runtime
 <div class="expanded" markdown="1">
 <h2 class="pdoc-module-header toggleButton" title="Click to hide Index">Index ▾</h2>
 <div class="pdoc-module-contents" markdown="1">
-* <a href="#getFunctionLocationAsync">const getFunctionLocationAsync</a>
-* <a href="#lookupCapturedVariableValueAsync">const lookupCapturedVariableValueAsync</a>
 * <a href="#rootPulumiStackTypeName">const rootPulumiStackTypeName</a>
 * <a href="#specialArchiveSig">const specialArchiveSig</a>
 * <a href="#specialAssetSig">const specialAssetSig</a>
 * <a href="#specialSecretSig">const specialSecretSig</a>
 * <a href="#specialSigKey">const specialSigKey</a>
 * <a href="#unknownValue">const unknownValue</a>
+* <a href="#_setIsDryRun">function _setIsDryRun</a>
+* <a href="#_setProject">function _setProject</a>
+* <a href="#_setStack">function _setStack</a>
+* <a href="#_setTestModeEnabled">function _setTestModeEnabled</a>
 * <a href="#allConfig">function allConfig</a>
-* <a href="#createFunctionInfoAsync">function createFunctionInfoAsync</a>
 * <a href="#debuggablePromise">function debuggablePromise</a>
 * <a href="#deserializeProperties">function deserializeProperties</a>
 * <a href="#deserializeProperty">function deserializeProperty</a>
@@ -39,69 +40,41 @@ title: Module runtime
 * <a href="#hasMonitor">function hasMonitor</a>
 * <a href="#invoke">function invoke</a>
 * <a href="#isDryRun">function isDryRun</a>
-* <a href="#parseFunction">function parseFunction</a>
+* <a href="#isTestModeEnabled">function isTestModeEnabled</a>
 * <a href="#readResource">function readResource</a>
 * <a href="#registerResource">function registerResource</a>
 * <a href="#registerResourceOutputs">function registerResourceOutputs</a>
 * <a href="#resolveProperties">function resolveProperties</a>
-* <a href="#rewriteSuperReferences">function rewriteSuperReferences</a>
 * <a href="#rpcKeepAlive">function rpcKeepAlive</a>
 * <a href="#runInPulumiStack">function runInPulumiStack</a>
 * <a href="#serialize">function serialize</a>
-* <a href="#serializeFunction">function serializeFunction</a>
-* <a href="#serializeFunctionAsync">function serializeFunctionAsync</a>
 * <a href="#serializeProperties">function serializeProperties</a>
 * <a href="#serializeProperty">function serializeProperty</a>
 * <a href="#serializeResourceProperties">function serializeResourceProperties</a>
 * <a href="#setConfig">function setConfig</a>
-* <a href="#setIsDryRun">function setIsDryRun</a>
 * <a href="#setRootResource">function setRootResource</a>
 * <a href="#transferProperties">function transferProperties</a>
-* <a href="#CapturedPropertyChain">interface CapturedPropertyChain</a>
-* <a href="#CapturedPropertyInfo">interface CapturedPropertyInfo</a>
-* <a href="#CapturedVariables">interface CapturedVariables</a>
-* <a href="#Entry">interface Entry</a>
-* <a href="#FunctionInfo">interface FunctionInfo</a>
-* <a href="#ObjectInfo">interface ObjectInfo</a>
 * <a href="#Options">interface Options</a>
-* <a href="#ParsedFunction">interface ParsedFunction</a>
-* <a href="#ParsedFunctionCode">interface ParsedFunctionCode</a>
-* <a href="#PropertyInfo">interface PropertyInfo</a>
-* <a href="#PropertyInfoAndValue">interface PropertyInfoAndValue</a>
-* <a href="#PropertyMap">interface PropertyMap</a>
-* <a href="#SerializeFunctionArgs">interface SerializeFunctionArgs</a>
-* <a href="#SerializedFunction">interface SerializedFunction</a>
 * <a href="#excessiveDebugOutput">let excessiveDebugOutput</a>
-* <a href="#CapturedVariableMap">type CapturedVariableMap</a>
 * <a href="#OutputResolvers">type OutputResolvers</a>
 
-<a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts">runtime/closure/createClosure.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/parseFunction.ts">runtime/closure/parseFunction.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/rewriteSuper.ts">runtime/closure/rewriteSuper.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/serializeClosure.ts">runtime/closure/serializeClosure.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts">runtime/closure/v8.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/config.ts">runtime/config.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/debuggable.ts">runtime/debuggable.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/invoke.ts">runtime/invoke.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts">runtime/resource.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts">runtime/rpc.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts">runtime/settings.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/stack.ts">runtime/stack.ts</a> 
+<a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/config.ts">runtime/config.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/debuggable.ts">runtime/debuggable.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/invoke.ts">runtime/invoke.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts">runtime/resource.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts">runtime/rpc.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts">runtime/settings.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/stack.ts">runtime/stack.ts</a> 
 </div>
 </div>
 </div>
 
-
-<h2 class="pdoc-module-header" id="getFunctionLocationAsync">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L51">const <b>getFunctionLocationAsync</b></a>
-</h2>
+<div class="toggleVisible" markdown="1">
+<div class="collapsed" markdown="1">
+<h2 class="pdoc-module-header toggleButton" title="Click to show Modules">Modules ▹</h2>
+</div>
+<div class="expanded" markdown="1">
+<h2 class="pdoc-module-header toggleButton" title="Click to hide Modules">Modules ▾</h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> getFunctionLocationAsync: getFunctionLocationAsync = <span class='s2'> versionSpecificV8Module.getFunctionLocationAsync</span>;</pre>
-
-Given a function, returns the file, line and column number in the file where this function was
-defined. Returns { "", 0, 0 } if the location cannot be found or if the given function has no Script.
-
+* <a href="closure">runtime/closure</a>
 </div>
-<h2 class="pdoc-module-header" id="lookupCapturedVariableValueAsync">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/v8.ts#L45">const <b>lookupCapturedVariableValueAsync</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> lookupCapturedVariableValueAsync: lookupCapturedVariableValueAsync = <span class='s2'> versionSpecificV8Module.lookupCapturedVariableValueAsync</span>;</pre>
-
-Given a function and a free variable name, lookupCapturedVariableValue looks up the value of that free variable
-in the scope chain of the provided function. If the free variable is not found, `throwOnFailure` indicates
-whether or not this function should throw or return `undefined.
-
 </div>
+</div>
+
 <h2 class="pdoc-module-header" id="rootPulumiStackTypeName">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/stack.ts#L26">const <b>rootPulumiStackTypeName</b></a>
 </h2>
@@ -158,6 +131,38 @@ specialSigKey is sometimes used to encode type identity inside of a map. See pkg
 Unknown values are encoded as a distinguished string value.
 
 </div>
+<h2 class="pdoc-module-header" id="_setIsDryRun">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L49">function <b>_setIsDryRun</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>_setIsDryRun(val: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+
+</div>
+<h2 class="pdoc-module-header" id="_setProject">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L100">function <b>_setProject</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>_setProject(val: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+
+</div>
+<h2 class="pdoc-module-header" id="_setStack">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L120">function <b>_setStack</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>_setStack(val: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+
+</div>
+<h2 class="pdoc-module-header" id="_setTestModeEnabled">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L63">function <b>_setTestModeEnabled</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>_setTestModeEnabled(val: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+
+</div>
 <h2 class="pdoc-module-header" id="allConfig">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/config.ts#L25">function <b>allConfig</b></a>
 </h2>
@@ -167,20 +172,6 @@ Unknown values are encoded as a distinguished string value.
 
 
 allConfig returns a copy of the full config map.
-
-</div>
-<h2 class="pdoc-module-header" id="createFunctionInfoAsync">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L213">function <b>createFunctionInfoAsync</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>createFunctionInfoAsync(func: Function, serialize: (o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>) => <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>, logResource: resource.Resource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#FunctionInfo'>FunctionInfo</a>&gt;</pre>
-
-
-createFunctionInfo serializes a function and its closure environment into a form that is
-amenable to persistence as simple JSON.  Like toString, it includes the full text of the
-function's source code, suitable for execution. Unlike toString, it actually includes information
-about the captured environment.
 
 </div>
 <h2 class="pdoc-module-header" id="debuggablePromise">
@@ -217,7 +208,7 @@ deserializeProperty unpacks some special types, reversing the above process.
 
 </div>
 <h2 class="pdoc-module-header" id="disconnect">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L162">function <b>disconnect</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L213">function <b>disconnect</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -229,7 +220,7 @@ queue to drain.  If any RPCs come in afterwards, however, they will crash the pr
 
 </div>
 <h2 class="pdoc-module-header" id="disconnectSync">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L180">function <b>disconnectSync</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L231">function <b>disconnectSync</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -263,7 +254,7 @@ getConfig returns a configuration variable's value or undefined if it is unset.
 
 </div>
 <h2 class="pdoc-module-header" id="getEngine">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L111">function <b>getEngine</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L161">function <b>getEngine</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -274,29 +265,29 @@ getEngine returns the current engine, if any, for RPC communications back to the
 
 </div>
 <h2 class="pdoc-module-header" id="getMonitor">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L88">function <b>getMonitor</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L139">function <b>getMonitor</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
-<pre class="highlight"><span class='kd'></span>getMonitor(): Object</pre>
+<pre class="highlight"><span class='kd'></span>getMonitor(): Object | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
 
 
 getMonitor returns the current resource monitoring service client for RPC communications.
 
 </div>
 <h2 class="pdoc-module-header" id="getProject">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L62">function <b>getProject</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L87">function <b>getProject</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
-<pre class="highlight"><span class='kd'></span>getProject(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+<pre class="highlight"><span class='kd'></span>getProject(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></pre>
 
 
 Get the project being run by the current update.
 
 </div>
 <h2 class="pdoc-module-header" id="getRootResource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L224">function <b>getRootResource</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L275">function <b>getRootResource</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -308,18 +299,18 @@ can be used to ensure that all resources without explicit parents are parented t
 
 </div>
 <h2 class="pdoc-module-header" id="getStack">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L69">function <b>getStack</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L107">function <b>getStack</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
-<pre class="highlight"><span class='kd'></span>getStack(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+<pre class="highlight"><span class='kd'></span>getStack(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></pre>
 
 
 Get the stack being targeted by the current update.
 
 </div>
 <h2 class="pdoc-module-header" id="hasMonitor">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L81">function <b>hasMonitor</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L132">function <b>hasMonitor</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -343,26 +334,31 @@ resolves when the invoke finishes.
 
 </div>
 <h2 class="pdoc-module-header" id="isDryRun">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L55">function <b>isDryRun</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L58">function <b>isDryRun</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>isDryRun(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
 
 
-Returns true if we're currently performing a dry-run, or false if this is a true update.
+Returns true if we're currently performing a dry-run, or false if this is a true update. Note that we
+always consider executions in test mode to be "dry-runs", since we will never actually carry out an update,
+and therefore certain output properties will never be resolved.
 
 </div>
-<h2 class="pdoc-module-header" id="parseFunction">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/parseFunction.ts#L97">function <b>parseFunction</b></a>
+<h2 class="pdoc-module-header" id="isTestModeEnabled">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L70">function <b>isTestModeEnabled</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
-<pre class="highlight"><span class='kd'></span>parseFunction(funcString: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): [, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='#ParsedFunction'>ParsedFunction</a>]</pre>
+<pre class="highlight"><span class='kd'></span>isTestModeEnabled(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if test mode is enabled (PULUMI_TEST_MODE).
 
 </div>
 <h2 class="pdoc-module-header" id="readResource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L63">function <b>readResource</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L86">function <b>readResource</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -374,7 +370,7 @@ will not be part of the resulting stack's state, as they are presumed to belong 
 
 </div>
 <h2 class="pdoc-module-header" id="registerResource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L120">function <b>registerResource</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L153">function <b>registerResource</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -387,7 +383,7 @@ objects that the registration operation will resolve at the right time (or remai
 
 </div>
 <h2 class="pdoc-module-header" id="registerResourceOutputs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L407">function <b>registerResourceOutputs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L455">function <b>registerResourceOutputs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -413,16 +409,8 @@ output properties to work correctly w.r.t. knowns/unknowns: this function assume
 `allProps`represents an unknown value that was returned by an engine operation.
 
 </div>
-<h2 class="pdoc-module-header" id="rewriteSuperReferences">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/rewriteSuper.ts#L19">function <b>rewriteSuperReferences</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>rewriteSuperReferences(code: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, isStatic: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></pre>
-
-</div>
 <h2 class="pdoc-module-header" id="rpcKeepAlive">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L211">function <b>rpcKeepAlive</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L262">function <b>rpcKeepAlive</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -446,7 +434,7 @@ returned by the callback will be stored as output properties on this resulting S
 
 </div>
 <h2 class="pdoc-module-header" id="serialize">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L125">function <b>serialize</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L175">function <b>serialize</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -454,36 +442,6 @@ returned by the callback will be stored as output properties on this resulting S
 
 
 serialize returns true if resource operations should be serialized.
-
-</div>
-<h2 class="pdoc-module-header" id="serializeFunction">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/serializeClosure.ts#L84">function <b>serializeFunction</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>serializeFunction(func: Function, args: <a href='#SerializeFunctionArgs'>SerializeFunctionArgs</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#SerializedFunction'>SerializedFunction</a>&gt;</pre>
-
-
-serializeFunction serializes a JavaScript function into a text form that can be loaded in another execution context,
-for example as part of a function callback associated with an AWS Lambda.  The function serialization captures any
-variables captured by the function body and serializes those values into the generated text along with the function
-body.  This process is recursive, so that functions referenced by the body of the serialized function will themselves
-be serialized as well.  This process also deeply serializes captured object values, including prototype chains and
-property descriptors, such that the semantics of the function when deserialized should match the original function.
-
-There are several known limitations:
-- If a native function is captured either directly or indirectly, closure serialization will return an error.
-- Captured values will be serialized based on their values at the time that `serializeFunction` is called.  Mutations
-  to these values after that (but before the deserialized function is used) will not be observed by the deserialized
-  function.
-
-</div>
-<h2 class="pdoc-module-header" id="serializeFunctionAsync">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/serializeClosure.ts#L100">function <b>serializeFunctionAsync</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>serializeFunctionAsync(func: Function, serialize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | (o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>) => <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;</pre>
 
 </div>
 <h2 class="pdoc-module-header" id="serializeProperties">
@@ -515,7 +473,7 @@ appropriate, in addition to translating certain "special" values so that they ar
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
-<pre class="highlight"><span class='kd'></span>serializeResourceProperties(label: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, props: <a href='#Inputs'>Inputs</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'>Object</span>&gt;</pre>
+<pre class="highlight"><span class='kd'></span>serializeResourceProperties(label: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, props: <a href='#Inputs'>Inputs</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;[, { ... }, <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map'>Map</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set'>Set</a>&lt;<a href='#Resource'>Resource</a>&gt;&gt;]&gt;</pre>
 
 
 serializeResourceProperties walks the props object passed in, awaiting all interior promises besides those for `id`
@@ -533,16 +491,8 @@ and `urn`, creating a reasonable POJO object that can be remoted over to registe
 setConfig sets a configuration variable.
 
 </div>
-<h2 class="pdoc-module-header" id="setIsDryRun">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L48">function <b>setIsDryRun</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>setIsDryRun(val: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
-
-</div>
 <h2 class="pdoc-module-header" id="setRootResource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L261">function <b>setRootResource</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L312">function <b>setRootResource</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -572,177 +522,8 @@ that the engine actualy produced will be used to resolve all the unresolved prom
 'onto'.
 
 </div>
-<h2 class="pdoc-module-header" id="CapturedPropertyChain">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/parseFunction.ts#L57">interface <b>CapturedPropertyChain</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<h3 class="pdoc-member-header" id="CapturedPropertyChain-infos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/parseFunction.ts#L58">property <b>infos</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>infos: <a href='#CapturedPropertyInfo'>CapturedPropertyInfo</a>[];</pre>
-</div>
-</div>
-<h2 class="pdoc-module-header" id="CapturedPropertyInfo">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/parseFunction.ts#L49">interface <b>CapturedPropertyInfo</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<h3 class="pdoc-member-header" id="CapturedPropertyInfo-invoked">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/parseFunction.ts#L51">property <b>invoked</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>invoked: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-</div>
-<h3 class="pdoc-member-header" id="CapturedPropertyInfo-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/parseFunction.ts#L50">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-</div>
-</div>
-<h2 class="pdoc-module-header" id="CapturedVariables">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/parseFunction.ts#L75">interface <b>CapturedVariables</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<h3 class="pdoc-member-header" id="CapturedVariables-optional">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/parseFunction.ts#L77">property <b>optional</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>optional: <a href='#CapturedVariableMap'>CapturedVariableMap</a>;</pre>
-</div>
-<h3 class="pdoc-member-header" id="CapturedVariables-required">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/parseFunction.ts#L76">property <b>required</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>required: <a href='#CapturedVariableMap'>CapturedVariableMap</a>;</pre>
-</div>
-</div>
-<h2 class="pdoc-module-header" id="Entry">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L87">interface <b>Entry</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Entry is the environment slot for a named lexically captured variable.
-
-<h3 class="pdoc-member-header" id="Entry-array">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L102">property <b>array</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>array?: <a href='#Entry'>Entry</a>[];</pre>
-</div>
-<h3 class="pdoc-member-header" id="Entry-expr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L116">property <b>expr</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>expr?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-</div>
-<h3 class="pdoc-member-header" id="Entry-function">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L95">property <b>function</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>function?: <a href='#FunctionInfo'>FunctionInfo</a>;</pre>
-</div>
-<h3 class="pdoc-member-header" id="Entry-json">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L89">property <b>json</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>json?: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>;</pre>
-</div>
-<h3 class="pdoc-member-header" id="Entry-module">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L105">property <b>module</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>module?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-</div>
-<h3 class="pdoc-member-header" id="Entry-object">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L99">property <b>object</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>object?: <a href='#ObjectInfo'>ObjectInfo</a>;</pre>
-</div>
-<h3 class="pdoc-member-header" id="Entry-output">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L113">property <b>output</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>output?: <a href='#Entry'>Entry</a>;</pre>
-</div>
-<h3 class="pdoc-member-header" id="Entry-promise">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L109">property <b>promise</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>promise?: <a href='#Entry'>Entry</a>;</pre>
-</div>
-<h3 class="pdoc-member-header" id="Entry-regexp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L92">property <b>regexp</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>regexp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-    flags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    source: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-};</pre>
-</div>
-</div>
-<h2 class="pdoc-module-header" id="FunctionInfo">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L40">interface <b>FunctionInfo</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#ObjectInfo'>ObjectInfo</a></pre>
-<h3 class="pdoc-member-header" id="FunctionInfo-capturedValues">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L45">property <b>capturedValues</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>capturedValues: <a href='#PropertyMap'>PropertyMap</a>;</pre>
-</div>
-<h3 class="pdoc-member-header" id="FunctionInfo-code">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L42">property <b>code</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>code: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-</div>
-<h3 class="pdoc-member-header" id="FunctionInfo-env">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L35">property <b>env</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>env: <a href='#PropertyMap'>PropertyMap</a>;</pre>
-</div>
-<h3 class="pdoc-member-header" id="FunctionInfo-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L52">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</pre>
-</div>
-<h3 class="pdoc-member-header" id="FunctionInfo-proto">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L31">property <b>proto</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>proto?: <a href='#Entry'>Entry</a>;</pre>
-</div>
-<h3 class="pdoc-member-header" id="FunctionInfo-usesNonLexicalThis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L48">property <b>usesNonLexicalThis</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>usesNonLexicalThis: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ObjectInfo">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L27">interface <b>ObjectInfo</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<h3 class="pdoc-member-header" id="ObjectInfo-env">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L35">property <b>env</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>env: <a href='#PropertyMap'>PropertyMap</a>;</pre>
-</div>
-<h3 class="pdoc-member-header" id="ObjectInfo-proto">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L31">property <b>proto</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>proto?: <a href='#Entry'>Entry</a>;</pre>
-</div>
-</div>
 <h2 class="pdoc-module-header" id="Options">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L32">interface <b>Options</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L33">interface <b>Options</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -755,375 +536,50 @@ Options is a bag of settings that controls the behavior of previews and deployme
 <pre class="highlight"><span class='kd'></span>dryRun?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="Options-engineAddr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L36">property <b>engineAddr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L37">property <b>engineAddr</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>engineAddr?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="Options-monitorAddr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L37">property <b>monitorAddr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L38">property <b>monitorAddr</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>monitorAddr?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="Options-parallel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L35">property <b>parallel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L36">property <b>parallel</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>parallel?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="Options-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L33">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L34">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="Options-stack">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L34">property <b>stack</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L35">property <b>stack</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>stack?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
-</div>
-<h2 class="pdoc-module-header" id="ParsedFunction">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/parseFunction.ts#L39">interface <b>ParsedFunction</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#ParsedFunctionCode'>ParsedFunctionCode</a></pre>
-<h3 class="pdoc-member-header" id="ParsedFunction-capturedVariables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/parseFunction.ts#L41">property <b>capturedVariables</b></a>
+<h3 class="pdoc-member-header" id="Options-testModeEnabled">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L40">property <b>testModeEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>capturedVariables: <a href='#CapturedVariables'>CapturedVariables</a>;</pre>
-</div>
-<h3 class="pdoc-member-header" id="ParsedFunction-funcExprWithName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/parseFunction.ts#L27">property <b>funcExprWithName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>funcExprWithName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-</div>
-<h3 class="pdoc-member-header" id="ParsedFunction-funcExprWithoutName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/parseFunction.ts#L23">property <b>funcExprWithoutName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>funcExprWithoutName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-</div>
-<h3 class="pdoc-member-header" id="ParsedFunction-functionDeclarationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/parseFunction.ts#L33">property <b>functionDeclarationName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>functionDeclarationName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-</div>
-<h3 class="pdoc-member-header" id="ParsedFunction-isArrowFunction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/parseFunction.ts#L36">property <b>isArrowFunction</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>isArrowFunction: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-</div>
-<h3 class="pdoc-member-header" id="ParsedFunction-usesNonLexicalThis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/parseFunction.ts#L44">property <b>usesNonLexicalThis</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>usesNonLexicalThis: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ParsedFunctionCode">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/parseFunction.ts#L20">interface <b>ParsedFunctionCode</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<h3 class="pdoc-member-header" id="ParsedFunctionCode-funcExprWithName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/parseFunction.ts#L27">property <b>funcExprWithName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>funcExprWithName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-</div>
-<h3 class="pdoc-member-header" id="ParsedFunctionCode-funcExprWithoutName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/parseFunction.ts#L23">property <b>funcExprWithoutName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>funcExprWithoutName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-</div>
-<h3 class="pdoc-member-header" id="ParsedFunctionCode-functionDeclarationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/parseFunction.ts#L33">property <b>functionDeclarationName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>functionDeclarationName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-</div>
-<h3 class="pdoc-member-header" id="ParsedFunctionCode-isArrowFunction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/parseFunction.ts#L36">property <b>isArrowFunction</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>isArrowFunction: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-</div>
-</div>
-<h2 class="pdoc-module-header" id="PropertyInfo">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L57">interface <b>PropertyInfo</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<h3 class="pdoc-member-header" id="PropertyInfo-configurable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L62">property <b>configurable</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>configurable?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
-</div>
-<h3 class="pdoc-member-header" id="PropertyInfo-enumerable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L63">property <b>enumerable</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>enumerable?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
-</div>
-<h3 class="pdoc-member-header" id="PropertyInfo-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L68">property <b>get</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>get?: <a href='#Entry'>Entry</a>;</pre>
-</div>
-<h3 class="pdoc-member-header" id="PropertyInfo-hasValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L59">property <b>hasValue</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>hasValue: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-</div>
-<h3 class="pdoc-member-header" id="PropertyInfo-set">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L69">property <b>set</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>set?: <a href='#Entry'>Entry</a>;</pre>
-</div>
-<h3 class="pdoc-member-header" id="PropertyInfo-writable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L64">property <b>writable</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>writable?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
-</div>
-</div>
-<h2 class="pdoc-module-header" id="PropertyInfoAndValue">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L74">interface <b>PropertyInfoAndValue</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<h3 class="pdoc-member-header" id="PropertyInfoAndValue-entry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L76">property <b>entry</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>entry: <a href='#Entry'>Entry</a>;</pre>
-</div>
-<h3 class="pdoc-member-header" id="PropertyInfoAndValue-info">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L75">property <b>info</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>info?: <a href='#PropertyInfo'>PropertyInfo</a>;</pre>
-</div>
-</div>
-<h2 class="pdoc-module-header" id="PropertyMap">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L81">interface <b>PropertyMap</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>extends</span> <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map'>Map</a>&lt;<a href='#Entry'>Entry</a>, <a href='#PropertyInfoAndValue'>PropertyInfoAndValue</a>&gt;</pre>
-<h3 class="pdoc-member-header" id="PropertyMap-__@iterator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L81">method <b>__@iterator</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>__@iterator(): IterableIterator&lt;[, <a href='#Entry'>Entry</a>, <a href='#PropertyInfoAndValue'>PropertyInfoAndValue</a>]&gt;</pre>
-
-
-Returns an iterable of entries in the map.
-
-</div>
-<h3 class="pdoc-member-header" id="PropertyMap-clear">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L81">method <b>clear</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>clear(): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
-
-</div>
-<h3 class="pdoc-member-header" id="PropertyMap-delete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L81">method <b>delete</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>delete(key: <a href='#Entry'>Entry</a>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h3 class="pdoc-member-header" id="PropertyMap-entries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L81">method <b>entries</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>entries(): IterableIterator&lt;[, <a href='#Entry'>Entry</a>, <a href='#PropertyInfoAndValue'>PropertyInfoAndValue</a>]&gt;</pre>
-
-
-Returns an iterable of key, value pairs for every entry in the map.
-
-</div>
-<h3 class="pdoc-member-header" id="PropertyMap-forEach">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L81">method <b>forEach</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>forEach(callbackfn: (value: <a href='#PropertyInfoAndValue'>PropertyInfoAndValue</a>, key: <a href='#Entry'>Entry</a>, map: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map'>Map</a>&lt;<a href='#Entry'>Entry</a>, <a href='#PropertyInfoAndValue'>PropertyInfoAndValue</a>&gt;) => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>, thisArg?: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
-
-</div>
-<h3 class="pdoc-member-header" id="PropertyMap-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L81">method <b>get</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>get(key: <a href='#Entry'>Entry</a>): <a href='#PropertyInfoAndValue'>PropertyInfoAndValue</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-
-</div>
-<h3 class="pdoc-member-header" id="PropertyMap-has">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L81">method <b>has</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>has(key: <a href='#Entry'>Entry</a>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h3 class="pdoc-member-header" id="PropertyMap-keys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L81">method <b>keys</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>keys(): IterableIterator&lt;<a href='#Entry'>Entry</a>&gt;</pre>
-
-
-Returns an iterable of keys in the map
-
-</div>
-<h3 class="pdoc-member-header" id="PropertyMap-set">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L81">method <b>set</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>set(key: <a href='#Entry'>Entry</a>, value: <a href='#PropertyInfoAndValue'>PropertyInfoAndValue</a>): <span class='kd'>this</span></pre>
-
-</div>
-<h3 class="pdoc-member-header" id="PropertyMap-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L81">method <b>values</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>values(): IterableIterator&lt;<a href='#PropertyInfoAndValue'>PropertyInfoAndValue</a>&gt;</pre>
-
-
-Returns an iterable of values in the map
-
-</div>
-<h3 class="pdoc-member-header" id="PropertyMap-Map">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L81">property <b>Map</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>Map: MapConstructor;</pre>
-</div>
-<h3 class="pdoc-member-header" id="PropertyMap-__@toStringTag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L81">property <b>__@toStringTag</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>__@toStringTag: <span class='s2'>"Map"</span>;</pre>
-</div>
-<h3 class="pdoc-member-header" id="PropertyMap-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L81">property <b>size</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-</div>
-</div>
-<h2 class="pdoc-module-header" id="SerializeFunctionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/serializeClosure.ts#L22">interface <b>SerializeFunctionArgs</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-SerializeFunctionArgs are arguments used to serialize a JavaScript function
-
-<h3 class="pdoc-member-header" id="SerializeFunctionArgs-exportName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/serializeClosure.ts#L26">property <b>exportName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>exportName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The name to export from the module defined by the generated module text.  Defaults to 'handler'.
-
-</div>
-<h3 class="pdoc-member-header" id="SerializeFunctionArgs-isFactoryFunction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/serializeClosure.ts#L43">property <b>isFactoryFunction</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>isFactoryFunction?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
-
-If this is a function which, when invoked, will produce the actual entrypoint function.
-Useful for when serializing a function that has high startup cost that only wants to be
-run once. The signature of this function should be:  () => (provider_handler_args...) => provider_result
-
-This will then be emitted as: `exports.[exportName] = serialized_func_name();`
-
-In other words, the function will be invoked (once) and the resulting inner function will
-be what is exported.
-
-</div>
-<h3 class="pdoc-member-header" id="SerializeFunctionArgs-logResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/serializeClosure.ts#L48">property <b>logResource</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>logResource?: <a href='#Resource'>Resource</a>;</pre>
-
-The resource to log any errors we encounter against.
-
-</div>
-<h3 class="pdoc-member-header" id="SerializeFunctionArgs-serialize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/serializeClosure.ts#L31">property <b>serialize</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>serialize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | (o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>) => <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-A function to prevent serialization of certain objects captured during the serialization.  Primarily used to
-prevent potential cycles.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="SerializedFunction">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/serializeClosure.ts#L54">interface <b>SerializedFunction</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-SerializeFunction is a representation of a serialized JavaScript function.
-
-<h3 class="pdoc-member-header" id="SerializedFunction-exportName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/serializeClosure.ts#L64">property <b>exportName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>exportName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The name of the exported module member.
-
-</div>
-<h3 class="pdoc-member-header" id="SerializedFunction-text">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/serializeClosure.ts#L60">property <b>text</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>text: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-The text of a JavaScript module which exports a single name bound to an appropriate value.
-In the case of a normal function, this value will just be serialized function.  In the case
-of a factory function this value will be the result of invoking the factory function.
-
+<pre class="highlight"><span class='kd'></span>testModeEnabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="excessiveDebugOutput">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L27">let <b>excessiveDebugOutput</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L28">let <b>excessiveDebugOutput</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>let</span> excessiveDebugOutput: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> = <span class='s2'>false</span>;</pre>
 
 excessiveDebugOutput enables, well, pretty excessive debug output pertaining to resources and properties.
 
-</div>
-<h2 class="pdoc-module-header" id="CapturedVariableMap">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/parseFunction.ts#L69">type <b>CapturedVariableMap</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>type</span> CapturedVariableMap = <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map'>Map</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='#CapturedPropertyChain'>CapturedPropertyChain</a>[]&gt;;</pre>
 </div>
 <h2 class="pdoc-module-header" id="OutputResolvers">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts#L24">type <b>OutputResolvers</b></a>

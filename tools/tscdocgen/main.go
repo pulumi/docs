@@ -615,7 +615,7 @@ type typeDocNode struct {
 	// DefaultValue is an optional default value for this entry (or nil if none).
 	DefaultValue *string `json:"defaultValue,omitempty"`
 	// IndexSignature is used to represent indexed types (e.g., `{[key: string]: any}`).
-	IndexSignature *typeDocNode `json:"indexSignature,omitempty"`
+	IndexSignatures []*typeDocNode `json:"indexSignature,omitempty"`
 	// Children is a list of one or more child members of this node.
 	Children []*typeDocNode `json:"children,omitempty"`
 	// TypeParameter includes all the type parameters for this node.
@@ -662,6 +662,10 @@ func (n *typeDocNode) Merge(o *typeDocNode) (*typeDocNode, error) {
 		p, s = n, o // class wins
 	} else if n.Kind == typeDocInterfaceNode && o.Kind == typeDocClassNode {
 		p, s = o, n // class wins
+	} else if n.Kind == typeDocInterfaceNode && o.Kind == typeDocVariableNode {
+		p, s = n, o // interface wins
+	} else if n.Kind == typeDocTypeAliasNode && o.Kind == typeDocVariableNode {
+		p, s = n, o // alias wins
 	} else {
 		return nil, errors.Errorf(
 			"cannot merge two nodes with same name '%s'; incompatible types %s and %s", n.Name, n.Kind, o.Kind)
@@ -948,11 +952,15 @@ func createTypeLabel(t typeDocType, indent int) string {
 			}
 			indent--
 			return fmt.Sprintf("%s%s}", label, strings.Repeat(" ", indent*4))
-		} else if index := decl.IndexSignature; index != nil && len(index.Parameters) == 1 {
-			return fmt.Sprintf("{[%s: %s]: %s}",
-				index.Parameters[0].Name,
-				createTypeLabel(index.Parameters[0].Type, indent),
-				createTypeLabel(index.Type, indent))
+		} else if len(decl.IndexSignatures) == 1 {
+			index := decl.IndexSignatures[0]
+			if len(index.Parameters) == 1 {
+				return fmt.Sprintf("{[%s: %s]: %s}",
+					index.Parameters[0].Name,
+					createTypeLabel(index.Parameters[0].Type, indent),
+					createTypeLabel(index.Type, indent))
+			}
+			return "{ ... }"
 		} else {
 			return "{ ... }"
 		}

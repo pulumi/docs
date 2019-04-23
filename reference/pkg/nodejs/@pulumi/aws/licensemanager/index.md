@@ -28,7 +28,7 @@ title: Module licensemanager
 
 
 <h2 class="pdoc-module-header" id="Association">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/licensemanager/association.ts#L44">class <b>Association</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/licensemanager/association.ts#L39">class <b>Association</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -47,17 +47,12 @@ const exampleLicenseConfiguration = new aws.licensemanager.LicenseConfiguration(
     licenseCountingType: "Instance",
 });
 const exampleAmi = pulumi.output(aws.getAmi({
-    filters: [
-        {
-            name: "owner-alias",
-            values: ["amazon"],
-        },
-        {
-            name: "name",
-            values: ["amzn-ami-vpc-nat*"],
-        },
-    ],
+    filters: [{
+        name: "name",
+        values: ["amzn-ami-vpc-nat*"],
+    }],
     mostRecent: true,
+    owners: ["amazon"],
 }));
 const exampleInstance = new aws.ec2.Instance("example", {
     ami: exampleAmi.apply(exampleAmi => exampleAmi.id),
@@ -70,7 +65,7 @@ const exampleAssociation = new aws.licensemanager.Association("example", {
 ```
 
 <h3 class="pdoc-member-header" id="Association-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/licensemanager/association.ts#L64"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/licensemanager/association.ts#L59"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -85,7 +80,7 @@ Create a Association resource with the given unique name, arguments, and options
 
 </div>
 <h3 class="pdoc-member-header" id="Association-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/licensemanager/association.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/licensemanager/association.ts#L48">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -127,7 +122,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="Association-licenseConfigurationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/licensemanager/association.ts#L60">property <b>licenseConfigurationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/licensemanager/association.ts#L55">property <b>licenseConfigurationArn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>licenseConfigurationArn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -136,7 +131,7 @@ ARN of the license configuration.
 
 </div>
 <h3 class="pdoc-member-header" id="Association-resourceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/licensemanager/association.ts#L64">property <b>resourceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/licensemanager/association.ts#L59">property <b>resourceArn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceArn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -327,14 +322,14 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AssociationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/licensemanager/association.ts#L112">interface <b>AssociationArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/licensemanager/association.ts#L107">interface <b>AssociationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a Association resource.
 
 <h3 class="pdoc-member-header" id="AssociationArgs-licenseConfigurationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/licensemanager/association.ts#L116">property <b>licenseConfigurationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/licensemanager/association.ts#L111">property <b>licenseConfigurationArn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>licenseConfigurationArn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -343,7 +338,7 @@ ARN of the license configuration.
 
 </div>
 <h3 class="pdoc-member-header" id="AssociationArgs-resourceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/licensemanager/association.ts#L120">property <b>resourceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/licensemanager/association.ts#L115">property <b>resourceArn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceArn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -353,14 +348,14 @@ ARN of the resource associated with the license configuration.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AssociationState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/licensemanager/association.ts#L98">interface <b>AssociationState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/licensemanager/association.ts#L93">interface <b>AssociationState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering Association resources.
 
 <h3 class="pdoc-member-header" id="AssociationState-licenseConfigurationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/licensemanager/association.ts#L102">property <b>licenseConfigurationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/licensemanager/association.ts#L97">property <b>licenseConfigurationArn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>licenseConfigurationArn?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -369,7 +364,7 @@ ARN of the license configuration.
 
 </div>
 <h3 class="pdoc-member-header" id="AssociationState-resourceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/licensemanager/association.ts#L106">property <b>resourceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/licensemanager/association.ts#L101">property <b>resourceArn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceArn?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

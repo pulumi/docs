@@ -22,6 +22,7 @@ title: Module pubsub
 * <a href="#TopicIAMBinding">class TopicIAMBinding</a>
 * <a href="#TopicIAMMember">class TopicIAMMember</a>
 * <a href="#TopicIAMPolicy">class TopicIAMPolicy</a>
+* <a href="#__unused">const __unused</a>
 * <a href="#SubscriptionArgs">interface SubscriptionArgs</a>
 * <a href="#SubscriptionIAMBindingArgs">interface SubscriptionIAMBindingArgs</a>
 * <a href="#SubscriptionIAMBindingState">interface SubscriptionIAMBindingState</a>
@@ -31,65 +32,104 @@ title: Module pubsub
 * <a href="#SubscriptionIAMPolicyState">interface SubscriptionIAMPolicyState</a>
 * <a href="#SubscriptionState">interface SubscriptionState</a>
 * <a href="#TopicArgs">interface TopicArgs</a>
+* <a href="#TopicContext">interface TopicContext</a>
+* <a href="#TopicData">interface TopicData</a>
+* <a href="#TopicEventCallbackFunctionArgs">interface TopicEventCallbackFunctionArgs</a>
 * <a href="#TopicIAMBindingArgs">interface TopicIAMBindingArgs</a>
 * <a href="#TopicIAMBindingState">interface TopicIAMBindingState</a>
 * <a href="#TopicIAMMemberArgs">interface TopicIAMMemberArgs</a>
 * <a href="#TopicIAMMemberState">interface TopicIAMMemberState</a>
 * <a href="#TopicIAMPolicyArgs">interface TopicIAMPolicyArgs</a>
 * <a href="#TopicIAMPolicyState">interface TopicIAMPolicyState</a>
+* <a href="#TopicMessagePublishedArgs">interface TopicMessagePublishedArgs</a>
 * <a href="#TopicState">interface TopicState</a>
+* <a href="#TopicEventHandler">type TopicEventHandler</a>
 
-<a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts">pubsub/subscription.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts">pubsub/subscriptionIAMBinding.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts">pubsub/subscriptionIAMMember.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts">pubsub/subscriptionIAMPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts">pubsub/topic.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts">pubsub/topicIAMBinding.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts">pubsub/topicIAMMember.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts">pubsub/topicIAMPolicy.ts</a> 
+<a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts">pubsub/subscription.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts">pubsub/subscriptionIAMBinding.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts">pubsub/subscriptionIAMMember.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts">pubsub/subscriptionIAMPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts">pubsub/topic.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts">pubsub/topicIAMBinding.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts">pubsub/topicIAMMember.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts">pubsub/topicIAMPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/zMixins.ts">pubsub/zMixins.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Subscription">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L46">class <b>Subscription</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L80">class <b>Subscription</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
-Creates a subscription in Google's pubsub queueing system. For more information see
-[the official documentation](https://cloud.google.com/pubsub/docs) and
-[API](https://cloud.google.com/pubsub/docs/reference/rest/v1/projects.subscriptions).
+A named resource representing the stream of messages from a single,
+specific topic, to be delivered to the subscribing application.
 
-## Example Usage
+To get more information about Subscription, see:
+
+* [API documentation](https://cloud.google.com/pubsub/docs/reference/rest/v1/projects.subscriptions)
+* How-to Guides
+    * [Managing Subscriptions](https://cloud.google.com/pubsub/docs/admin#managing_subscriptions)
+
+## Example Usage - Pubsub Subscription Push
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const default_topic = new gcp.pubsub.Topic("default-topic", {});
-const defaultSubscription = new gcp.pubsub.Subscription("default", {
+const exampleTopic = new gcp.pubsub.Topic("example", {});
+const exampleSubscription = new gcp.pubsub.Subscription("example", {
     ackDeadlineSeconds: 20,
+    labels: {
+        foo: "bar",
+    },
     pushConfig: {
         attributes: {
             "x-goog-version": "v1",
         },
         pushEndpoint: "https://example.com/push",
     },
-    topic: default_topic.name,
+    topic: exampleTopic.name,
 });
 ```
+<div class = "oics-button" style="float: right; margin: 0 0 -15px">
+  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=pubsub_subscription_pull&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
+    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
+  </a>
+</div>
+## Example Usage - Pubsub Subscription Pull
 
-If the subscription has a topic in a different project:
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const topic_different_project = new gcp.pubsub.Topic("topic-different-project", {
-    project: "another-project",
+const exampleTopic = new gcp.pubsub.Topic("example", {});
+const exampleSubscription = new gcp.pubsub.Subscription("example", {
+    ackDeadlineSeconds: 20,
+    labels: {
+        foo: "bar",
+    },
+    // 20 minutes
+    messageRetentionDuration: "1200s",
+    retainAckedMessages: true,
+    topic: exampleTopic.name,
 });
-const defaultSubscription = new gcp.pubsub.Subscription("default", {
-    topic: topic_different_project.id,
+```
+## Example Usage - Pubsub Subscription Different Project
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const exampleTopic = new gcp.pubsub.Topic("example", {
+    project: "topic-project",
+});
+const exampleSubscription = new gcp.pubsub.Subscription("example", {
+    project: "subscription-project",
+    topic: exampleTopic.id,
 });
 ```
 
 <h3 class="pdoc-member-header" id="Subscription-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L88"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L105"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -104,7 +144,7 @@ Create a Subscription resource with the given unique name, arguments, and option
 
 </div>
 <h3 class="pdoc-member-header" id="Subscription-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L55">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L89">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -136,15 +176,10 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="Subscription-ackDeadlineSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L64">property <b>ackDeadlineSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L93">property <b>ackDeadlineSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>ackDeadlineSeconds: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-
-The maximum number of seconds a
-subscriber has to acknowledge a received message, otherwise the message is
-redelivered. Changing this forces a new resource to be created.
-
 </div>
 <h3 class="pdoc-member-header" id="Subscription-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
@@ -156,57 +191,60 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 </div>
+<h3 class="pdoc-member-header" id="Subscription-labels">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L94">property <b>labels</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>labels: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+</div>
+<h3 class="pdoc-member-header" id="Subscription-messageRetentionDuration">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L95">property <b>messageRetentionDuration</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>messageRetentionDuration: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+</div>
 <h3 class="pdoc-member-header" id="Subscription-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L69">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L96">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-
-A unique name for the resource, required by pubsub.
-Changing this forces a new resource to be created.
-
 </div>
 <h3 class="pdoc-member-header" id="Subscription-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L73">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L97">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>path: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-
-Path of the subscription in the format `projects/{project}/subscriptions/{sub}`
-
 </div>
 <h3 class="pdoc-member-header" id="Subscription-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L78">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L102">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
-The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.
+The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.
 
 </div>
 <h3 class="pdoc-member-header" id="Subscription-pushConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L83">property <b>pushConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L103">property <b>pushConfig</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>pushConfig: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
     attributes: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};
     pushEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 } | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-
-Block configuration for push options. More
-configuration options are detailed below.
-
+</div>
+<h3 class="pdoc-member-header" id="Subscription-retainAckedMessages">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L104">property <b>retainAckedMessages</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>retainAckedMessages: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="Subscription-topic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L88">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L105">property <b>topic</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>topic: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-
-The topic name or id to bind this subscription to, required by pubsub.
-Changing this forces a new resource to be created.
-
 </div>
 <h3 class="pdoc-member-header" id="Subscription-urn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
@@ -732,26 +770,40 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Topic">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L22">class <b>Topic</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L36">class <b>Topic</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
-Creates a topic in Google's pubsub queueing system. For more information see
-[the official documentation](https://cloud.google.com/pubsub/docs) and
-[API](https://cloud.google.com/pubsub/docs/reference/rest/v1/projects.topics).
+A named resource to which messages are sent by publishers.
 
-## Example Usage
+To get more information about Topic, see:
+
+* [API documentation](https://cloud.google.com/pubsub/docs/reference/rest/v1/projects.topics)
+* How-to Guides
+    * [Managing Topics](https://cloud.google.com/pubsub/docs/admin#managing_topics)
+
+<div class = "oics-button" style="float: right; margin: 0 0 -15px">
+  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=pubsub_topic_basic&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
+    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
+  </a>
+</div>
+## Example Usage - Pubsub Topic Basic
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const mytopic = new gcp.pubsub.Topic("mytopic", {});
+const example = new gcp.pubsub.Topic("example", {
+    labels: {
+        foo: "bar",
+    },
+});
 ```
 
 <h3 class="pdoc-member-header" id="Topic-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L44"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L55"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -766,11 +818,11 @@ Create a Topic resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="Topic-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L31">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L45">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
-<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#TopicState'>TopicState</a>, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Topic'>Topic</a></pre>
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#TopicState'>TopicState</a>, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): Topic</pre>
 
 
 Get an existing Topic resource's state with the given name, ID, and optional extra
@@ -797,6 +849,22 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
+<h3 class="pdoc-member-header" id="Topic-onMessagePublished">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/zMixins.ts#L78">method <b>onMessagePublished</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>onMessagePublished(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#TopicEventHandler'>TopicEventHandler</a> | <a href='#TopicEventCallbackFunctionArgs'>TopicEventCallbackFunctionArgs</a>, args?: <a href='#TopicMessagePublishedArgs'>TopicMessagePublishedArgs</a>, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): cloudfunctions.CallbackFunction</pre>
+
+
+Creates and publishes a Cloud Functions that will be triggered by messages published to
+Cloud Pub/Sub topics in the same GCP project as the Function. Cloud Pub/Sub is a globally
+distributed message bus that automatically scales as you need it and provides a
+foundation for building your own robust, global services.
+
+See https://cloud.google.com/functions/docs/calling/pubsub for more details.
+
+</div>
 <h3 class="pdoc-member-header" id="Topic-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
@@ -807,24 +875,26 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 </div>
+<h3 class="pdoc-member-header" id="Topic-labels">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L49">property <b>labels</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>labels: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+</div>
 <h3 class="pdoc-member-header" id="Topic-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L39">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L50">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-
-A unique name for the pubsub topic.
-Changing this forces a new resource to be created.
-
 </div>
 <h3 class="pdoc-member-header" id="Topic-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L44">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L55">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
-The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.
+The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.
 
 </div>
 <h3 class="pdoc-member-header" id="Topic-urn">
@@ -1350,66 +1420,73 @@ deployments.
 
 </div>
 </div>
+<h2 class="pdoc-module-header" id="__unused">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/zMixins.ts#L99">const <b>__unused</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>const</span> __unused: 0 = <span class='s2'>0</span>;</pre>
+</div>
 <h2 class="pdoc-module-header" id="SubscriptionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L163">interface <b>SubscriptionArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L169">interface <b>SubscriptionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a Subscription resource.
 
 <h3 class="pdoc-member-header" id="SubscriptionArgs-ackDeadlineSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L169">property <b>ackDeadlineSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L170">property <b>ackDeadlineSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ackDeadlineSeconds?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-
-The maximum number of seconds a
-subscriber has to acknowledge a received message, otherwise the message is
-redelivered. Changing this forces a new resource to be created.
-
+</div>
+<h3 class="pdoc-member-header" id="SubscriptionArgs-labels">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L171">property <b>labels</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>labels?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
+</div>
+<h3 class="pdoc-member-header" id="SubscriptionArgs-messageRetentionDuration">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L172">property <b>messageRetentionDuration</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>messageRetentionDuration?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L174">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L173">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-
-A unique name for the resource, required by pubsub.
-Changing this forces a new resource to be created.
-
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L179">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L178">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>project?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
-The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.
+The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.
 
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionArgs-pushConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L184">property <b>pushConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L179">property <b>pushConfig</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>pushConfig?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     attributes: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;
     pushEndpoint: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 }&gt;;</pre>
-
-Block configuration for push options. More
-configuration options are detailed below.
-
+</div>
+<h3 class="pdoc-member-header" id="SubscriptionArgs-retainAckedMessages">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L180">property <b>retainAckedMessages</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>retainAckedMessages?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionArgs-topic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L189">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L181">property <b>topic</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>topic: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-
-The topic name or id to bind this subscription to, required by pubsub.
-Changing this forces a new resource to be created.
-
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubscriptionIAMBindingArgs">
@@ -1690,102 +1767,313 @@ The subscription name or id to bind to attach IAM policy to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubscriptionState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L127">interface <b>SubscriptionState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L150">interface <b>SubscriptionState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering Subscription resources.
 
 <h3 class="pdoc-member-header" id="SubscriptionState-ackDeadlineSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L133">property <b>ackDeadlineSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L151">property <b>ackDeadlineSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ackDeadlineSeconds?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-
-The maximum number of seconds a
-subscriber has to acknowledge a received message, otherwise the message is
-redelivered. Changing this forces a new resource to be created.
-
+</div>
+<h3 class="pdoc-member-header" id="SubscriptionState-labels">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L152">property <b>labels</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>labels?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
+</div>
+<h3 class="pdoc-member-header" id="SubscriptionState-messageRetentionDuration">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L153">property <b>messageRetentionDuration</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>messageRetentionDuration?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L138">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L154">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-
-A unique name for the resource, required by pubsub.
-Changing this forces a new resource to be created.
-
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L142">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L155">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>path?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-
-Path of the subscription in the format `projects/{project}/subscriptions/{sub}`
-
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L147">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L160">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>project?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
-The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.
+The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.
 
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionState-pushConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L152">property <b>pushConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L161">property <b>pushConfig</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>pushConfig?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     attributes: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;
     pushEndpoint: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 }&gt;;</pre>
-
-Block configuration for push options. More
-configuration options are detailed below.
-
+</div>
+<h3 class="pdoc-member-header" id="SubscriptionState-retainAckedMessages">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L162">property <b>retainAckedMessages</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>retainAckedMessages?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionState-topic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L157">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L163">property <b>topic</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>topic?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-
-The topic name or id to bind this subscription to, required by pubsub.
-Changing this forces a new resource to be created.
-
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TopicArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L88">interface <b>TopicArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L98">interface <b>TopicArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a Topic resource.
 
+<h3 class="pdoc-member-header" id="TopicArgs-labels">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L99">property <b>labels</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>labels?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
+</div>
 <h3 class="pdoc-member-header" id="TopicArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L93">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L100">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-
-A unique name for the pubsub topic.
-Changing this forces a new resource to be created.
-
 </div>
 <h3 class="pdoc-member-header" id="TopicArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L98">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L105">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>project?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
-The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.
+The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.
 
+</div>
+</div>
+<h2 class="pdoc-module-header" id="TopicContext">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/zMixins.ts#L36">interface <b>TopicContext</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='#Context'>Context</a></pre>
+
+Shape of the [context] object passed to a Cloud Function when a topic event fires.
+
+<h3 class="pdoc-member-header" id="TopicContext-eventId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/zMixins.ts#L31">property <b>eventId</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>eventId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+A unique ID for the event. For example: "70172329041928".
+
+</div>
+<h3 class="pdoc-member-header" id="TopicContext-eventType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/zMixins.ts#L37">property <b>eventType</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>eventType: <span class='s2'>"google.pubsub.topic.publish"</span>;</pre>
+</div>
+<h3 class="pdoc-member-header" id="TopicContext-resource">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/zMixins.ts#L39">property <b>resource</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>resource: {
+    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    service: <span class='s2'>"pubsub.googleapis.com"</span>;
+    type: <span class='s2'>"type.googleapis.com/google.pubsub.v1.PubsubMessage"</span>;
+};</pre>
+</div>
+<h3 class="pdoc-member-header" id="TopicContext-timestamp">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/zMixins.ts#L34">property <b>timestamp</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>timestamp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+The date/time this event was created. For example: "2018-04-09T07:56:12.975Z".
+
+</div>
+</div>
+<h2 class="pdoc-module-header" id="TopicData">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/zMixins.ts#L51">interface <b>TopicData</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+
+Shape of the [data] object passed to a Cloud Function when a topic event fires.
+
+See https://cloud.google.com/pubsub/docs/reference/rest/v1/PubsubMessage for more details.
+
+<h3 class="pdoc-member-header" id="TopicData-@type">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/zMixins.ts#L52">property <b>@type</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>@type: <span class='s2'>"type.googleapis.com/google.pubsub.v1.PubsubMessage"</span>;</pre>
+</div>
+<h3 class="pdoc-member-header" id="TopicData-attributes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/zMixins.ts#L57">property <b>attributes</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>attributes: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+key/value pairs included with the topic even.
+
+</div>
+<h3 class="pdoc-member-header" id="TopicData-data">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/zMixins.ts#L63">property <b>data</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>data: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+Base64 encoded data.  Use `Buffer.from(pubSubMessage.data, 'base64')` to get raw bytes of the
+message.
+
+</div>
+</div>
+<h2 class="pdoc-module-header" id="TopicEventCallbackFunctionArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/zMixins.ts#L12">interface <b>TopicEventCallbackFunctionArgs</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='#CallbackFunctionArgs'>CallbackFunctionArgs</a></pre>
+
+Arguments that can be provided to control the Cloud Function created as the serverless endpoint
+for a topic event.
+
+<h3 class="pdoc-member-header" id="TopicEventCallbackFunctionArgs-availableMemoryMb">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/zMixins.ts#L283">property <b>availableMemoryMb</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>availableMemoryMb?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+
+Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, and 2048MB.
+
+</div>
+<h3 class="pdoc-member-header" id="TopicEventCallbackFunctionArgs-bucket">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/zMixins.ts#L349">property <b>bucket</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>bucket?: storage.Bucket;</pre>
+
+The bucket to use as the sourceArchiveBucket for the generated CloudFunctions Function source
+to be placed in.  A fresh [storage.BucketObject] will be made there containing the serialized
+code.
+
+</div>
+<h3 class="pdoc-member-header" id="TopicEventCallbackFunctionArgs-callback">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/zMixins.ts#L13">property <b>callback</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>callback?: <a href='#TopicEventHandler'>TopicEventHandler</a>;</pre>
+</div>
+<h3 class="pdoc-member-header" id="TopicEventCallbackFunctionArgs-callbackFactory">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/zMixins.ts#L14">property <b>callbackFactory</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>callbackFactory?: () => <a href='#TopicEventHandler'>TopicEventHandler</a>;</pre>
+</div>
+<h3 class="pdoc-member-header" id="TopicEventCallbackFunctionArgs-codePathOptions">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/zMixins.ts#L279">property <b>codePathOptions</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>codePathOptions?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/runtime/#CodePathOptions'>pulumi.runtime.CodePathOptions</a>;</pre>
+
+Options to control which paths/packages should be included or excluded in the zip file containing
+the code for the GCP Function.
+
+</div>
+<h3 class="pdoc-member-header" id="TopicEventCallbackFunctionArgs-description">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/zMixins.ts#L287">property <b>description</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>description?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+Description of the function.
+
+</div>
+<h3 class="pdoc-member-header" id="TopicEventCallbackFunctionArgs-environmentVariables">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/zMixins.ts#L291">property <b>environmentVariables</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>environmentVariables?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+
+A set of key/value environment variable pairs to assign to the function.
+
+</div>
+<h3 class="pdoc-member-header" id="TopicEventCallbackFunctionArgs-eventTrigger">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/zMixins.ts#L21">property <b>eventTrigger</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>eventTrigger?: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#never'>never</a></span>;</pre>
+</div>
+<h3 class="pdoc-member-header" id="TopicEventCallbackFunctionArgs-httpsTriggerUrl">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/zMixins.ts#L19">property <b>httpsTriggerUrl</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>httpsTriggerUrl?: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#never'>never</a></span>;</pre>
+</div>
+<h3 class="pdoc-member-header" id="TopicEventCallbackFunctionArgs-labels">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/zMixins.ts#L304">property <b>labels</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>labels?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+
+A set of key/value label pairs to assign to the function.
+
+</div>
+<h3 class="pdoc-member-header" id="TopicEventCallbackFunctionArgs-project">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/zMixins.ts#L308">property <b>project</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>project?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+Project of the function. If it is not provided, the provider project is used.
+
+</div>
+<h3 class="pdoc-member-header" id="TopicEventCallbackFunctionArgs-region">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/zMixins.ts#L312">property <b>region</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>region?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
+
+</div>
+<h3 class="pdoc-member-header" id="TopicEventCallbackFunctionArgs-serviceAccountEmail">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/zMixins.ts#L316">property <b>serviceAccountEmail</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>serviceAccountEmail?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+If provided, the self-provided service account to run the function with.
+
+</div>
+<h3 class="pdoc-member-header" id="TopicEventCallbackFunctionArgs-timeout">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/zMixins.ts#L320">property <b>timeout</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>timeout?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+
+Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.
+
+</div>
+<h3 class="pdoc-member-header" id="TopicEventCallbackFunctionArgs-triggerHttp">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/zMixins.ts#L20">property <b>triggerHttp</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>triggerHttp?: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#never'>never</a></span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TopicIAMBindingArgs">
@@ -2065,31 +2353,55 @@ The topic name or id to bind to attach IAM policy to.
 
 </div>
 </div>
+<h2 class="pdoc-module-header" id="TopicMessagePublishedArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/zMixins.ts#L29">interface <b>TopicMessagePublishedArgs</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+
+Arguments to control how GCP will respond if the Cloud Function fails.  Currently, the only
+specialized behavior supported is to attempt retrying the Cloud Function.
+See [cloudfunctions.FailurePolicy] for more information on this.
+
+<h3 class="pdoc-member-header" id="TopicMessagePublishedArgs-failurePolicy">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/zMixins.ts#L30">property <b>failurePolicy</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>failurePolicy?: cloudfunctions.FailurePolicy;</pre>
+</div>
+</div>
 <h2 class="pdoc-module-header" id="TopicState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L72">interface <b>TopicState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L85">interface <b>TopicState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering Topic resources.
 
+<h3 class="pdoc-member-header" id="TopicState-labels">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L86">property <b>labels</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>labels?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
+</div>
 <h3 class="pdoc-member-header" id="TopicState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L77">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L87">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-
-A unique name for the pubsub topic.
-Changing this forces a new resource to be created.
-
 </div>
 <h3 class="pdoc-member-header" id="TopicState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L82">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts#L92">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>project?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
-The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.
+The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.
 
 </div>
+</div>
+<h2 class="pdoc-module-header" id="TopicEventHandler">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/zMixins.ts#L66">type <b>TopicEventHandler</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>type</span> TopicEventHandler = cloudfunctions.Callback&lt;<a href='#TopicData'>TopicData</a>, <a href='#TopicContext'>TopicContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;;</pre>
 </div>

@@ -306,14 +306,14 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ListenerPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/listenerPolicy.ts#L54">class <b>ListenerPolicy</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/listenerPolicy.ts#L91">class <b>ListenerPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 Attaches a load balancer policy to an ELB Listener.
 
-## Example Usage
+## Example Usage for Custom Policy
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -356,8 +356,45 @@ const wu_tang_listener_policies_443 = new aws.elasticloadbalancing.ListenerPolic
 
 This example shows how to customize the TLS settings of an HTTPS listener.
 
+## Example Usage for AWS Predefined Security Policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const wu_tang = new aws.elasticloadbalancing.LoadBalancer("wu-tang", {
+    availabilityZones: ["us-east-1a"],
+    listeners: [{
+        instancePort: 443,
+        instanceProtocol: "http",
+        lbPort: 443,
+        lbProtocol: "https",
+        sslCertificateId: "arn:aws:iam::000000000000:server-certificate/wu-tang.net",
+    }],
+    tags: {
+        Name: "wu-tang",
+    },
+});
+const wu_tang_ssl_tls_1_1 = new aws.elasticloadbalancing.LoadBalancerPolicy("wu-tang-ssl-tls-1-1", {
+    loadBalancerName: wu_tang.name,
+    policyAttributes: [{
+        name: "Reference-Security-Policy",
+        value: "ELBSecurityPolicy-TLS-1-1-2017-01",
+    }],
+    policyName: "wu-tang-ssl",
+    policyTypeName: "SSLNegotiationPolicyType",
+});
+const wu_tang_listener_policies_443 = new aws.elasticloadbalancing.ListenerPolicy("wu-tang-listener-policies-443", {
+    loadBalancerName: wu_tang.name,
+    loadBalancerPort: 443,
+    policyNames: [wu_tang_ssl_tls_1_1.policyName],
+});
+```
+
+This example shows how to add a [Predefined Security Policy for ELBs](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-security-policy-table.html)
+
 <h3 class="pdoc-member-header" id="ListenerPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/listenerPolicy.ts#L78"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/listenerPolicy.ts#L115"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -372,7 +409,7 @@ Create a ListenerPolicy resource with the given unique name, arguments, and opti
 
 </div>
 <h3 class="pdoc-member-header" id="ListenerPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/listenerPolicy.ts#L63">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/listenerPolicy.ts#L100">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -414,7 +451,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="ListenerPolicy-loadBalancerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/listenerPolicy.ts#L70">property <b>loadBalancerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/listenerPolicy.ts#L107">property <b>loadBalancerName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>loadBalancerName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -423,7 +460,7 @@ The load balancer to attach the policy to.
 
 </div>
 <h3 class="pdoc-member-header" id="ListenerPolicy-loadBalancerPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/listenerPolicy.ts#L74">property <b>loadBalancerPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/listenerPolicy.ts#L111">property <b>loadBalancerPort</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>loadBalancerPort: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -432,7 +469,7 @@ The load balancer listener port to apply the policy to.
 
 </div>
 <h3 class="pdoc-member-header" id="ListenerPolicy-policyNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/listenerPolicy.ts#L78">property <b>policyNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/listenerPolicy.ts#L115">property <b>policyNames</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>policyNames: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -799,15 +836,68 @@ The canonical hosted zone ID of the ELB (to be used in a Route 53 Alias record)
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LoadBalancerBackendServerPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerBackendServerPolicy.ts#L10">class <b>LoadBalancerBackendServerPolicy</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerBackendServerPolicy.ts#L64">class <b>LoadBalancerBackendServerPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 Attaches a load balancer policy to an ELB backend server.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * as fs from "fs";
+
+const wu_tang = new aws.elasticloadbalancing.LoadBalancer("wu-tang", {
+    availabilityZones: ["us-east-1a"],
+    listeners: [{
+        instancePort: 443,
+        instanceProtocol: "http",
+        lbPort: 443,
+        lbProtocol: "https",
+        sslCertificateId: "arn:aws:iam::000000000000:server-certificate/wu-tang.net",
+    }],
+    tags: {
+        Name: "wu-tang",
+    },
+});
+const wu_tang_root_ca_backend_auth_policy = new aws.elasticloadbalancing.LoadBalancerPolicy("wu-tang-root-ca-backend-auth-policy", {
+    loadBalancerName: wu_tang.name,
+    policyAttributes: [{
+        name: "PublicKeyPolicyName",
+        value: aws_load_balancer_policy_wu_tang_root_ca_pubkey_policy.policyName,
+    }],
+    policyName: "wu-tang-root-ca-backend-auth-policy",
+    policyTypeName: "BackendServerAuthenticationPolicyType",
+});
+const wu_tang_backend_auth_policies_443 = new aws.elasticloadbalancing.LoadBalancerBackendServerPolicy("wu-tang-backend-auth-policies-443", {
+    instancePort: 443,
+    loadBalancerName: wu_tang.name,
+    policyNames: [wu_tang_root_ca_backend_auth_policy.policyName],
+});
+const wu_tang_ca_pubkey_policy = new aws.elasticloadbalancing.LoadBalancerPolicy("wu-tang-ca-pubkey-policy", {
+    loadBalancerName: wu_tang.name,
+    policyAttributes: [{
+        name: "PublicKey",
+        value: fs.readFileSync("wu-tang-pubkey", "utf-8"),
+    }],
+    policyName: "wu-tang-ca-pubkey-policy",
+    policyTypeName: "PublicKeyPolicyType",
+});
+```
+
+Where the file `pubkey` in the current directory contains only the _public key_ of the certificate.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+```
+
+This example shows how to enable backend authentication for an ELB as well as customize the TLS settings.
+
 <h3 class="pdoc-member-header" id="LoadBalancerBackendServerPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerBackendServerPolicy.ts#L34"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerBackendServerPolicy.ts#L88"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -822,7 +912,7 @@ Create a LoadBalancerBackendServerPolicy resource with the given unique name, ar
 
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerBackendServerPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerBackendServerPolicy.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerBackendServerPolicy.ts#L73">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -864,7 +954,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerBackendServerPolicy-instancePort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerBackendServerPolicy.ts#L26">property <b>instancePort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerBackendServerPolicy.ts#L80">property <b>instancePort</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>instancePort: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -873,7 +963,7 @@ The instance port to apply the policy to.
 
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerBackendServerPolicy-loadBalancerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerBackendServerPolicy.ts#L30">property <b>loadBalancerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerBackendServerPolicy.ts#L84">property <b>loadBalancerName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>loadBalancerName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -882,7 +972,7 @@ The load balancer to attach the policy to.
 
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerBackendServerPolicy-policyNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerBackendServerPolicy.ts#L34">property <b>policyNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerBackendServerPolicy.ts#L88">property <b>policyNames</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>policyNames: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1040,15 +1130,97 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LoadBalancerPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L10">class <b>LoadBalancerPolicy</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L92">class <b>LoadBalancerPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 Provides a load balancer policy, which can be attached to an ELB listener or backend server.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * as fs from "fs";
+
+const wu_tang = new aws.elasticloadbalancing.LoadBalancer("wu-tang", {
+    availabilityZones: ["us-east-1a"],
+    listeners: [{
+        instancePort: 443,
+        instanceProtocol: "http",
+        lbPort: 443,
+        lbProtocol: "https",
+        sslCertificateId: "arn:aws:iam::000000000000:server-certificate/wu-tang.net",
+    }],
+    tags: {
+        Name: "wu-tang",
+    },
+});
+const wu_tang_root_ca_backend_auth_policy = new aws.elasticloadbalancing.LoadBalancerPolicy("wu-tang-root-ca-backend-auth-policy", {
+    loadBalancerName: wu_tang.name,
+    policyAttributes: [{
+        name: "PublicKeyPolicyName",
+        value: aws_load_balancer_policy_wu_tang_root_ca_pubkey_policy.policyName,
+    }],
+    policyName: "wu-tang-root-ca-backend-auth-policy",
+    policyTypeName: "BackendServerAuthenticationPolicyType",
+});
+const wu_tang_backend_auth_policies_443 = new aws.elasticloadbalancing.LoadBalancerBackendServerPolicy("wu-tang-backend-auth-policies-443", {
+    instancePort: 443,
+    loadBalancerName: wu_tang.name,
+    policyNames: [wu_tang_root_ca_backend_auth_policy.policyName],
+});
+const wu_tang_ssl = new aws.elasticloadbalancing.LoadBalancerPolicy("wu-tang-ssl", {
+    loadBalancerName: wu_tang.name,
+    policyAttributes: [
+        {
+            name: "ECDHE-ECDSA-AES128-GCM-SHA256",
+            value: "true",
+        },
+        {
+            name: "Protocol-TLSv1.2",
+            value: "true",
+        },
+    ],
+    policyName: "wu-tang-ssl",
+    policyTypeName: "SSLNegotiationPolicyType",
+});
+const wu_tang_listener_policies_443 = new aws.elasticloadbalancing.ListenerPolicy("wu-tang-listener-policies-443", {
+    loadBalancerName: wu_tang.name,
+    loadBalancerPort: 443,
+    policyNames: [wu_tang_ssl.policyName],
+});
+const wu_tang_ca_pubkey_policy = new aws.elasticloadbalancing.LoadBalancerPolicy("wu-tang-ca-pubkey-policy", {
+    loadBalancerName: wu_tang.name,
+    policyAttributes: [{
+        name: "PublicKey",
+        value: fs.readFileSync("wu-tang-pubkey", "utf-8"),
+    }],
+    policyName: "wu-tang-ca-pubkey-policy",
+    policyTypeName: "PublicKeyPolicyType",
+});
+const wu_tang_ssl_tls_1_1 = new aws.elasticloadbalancing.LoadBalancerPolicy("wu-tang-ssl-tls-1-1", {
+    loadBalancerName: wu_tang.name,
+    policyAttributes: [{
+        name: "Reference-Security-Policy",
+        value: "ELBSecurityPolicy-TLS-1-1-2017-01",
+    }],
+    policyName: "wu-tang-ssl",
+    policyTypeName: "SSLNegotiationPolicyType",
+});
+```
+
+Where the file `pubkey` in the current directory contains only the _public key_ of the certificate.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+```
+
+This example shows how to enable backend authentication for an ELB as well as customize the TLS settings.
+
 <h3 class="pdoc-member-header" id="LoadBalancerPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L38"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L120"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1063,7 +1235,7 @@ Create a LoadBalancerPolicy resource with the given unique name, arguments, and 
 
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L101">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1105,7 +1277,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPolicy-loadBalancerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L26">property <b>loadBalancerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L108">property <b>loadBalancerName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>loadBalancerName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1114,7 +1286,7 @@ The load balancer on which the policy is defined.
 
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPolicy-policyAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L30">property <b>policyAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L112">property <b>policyAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>policyAttributes: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1126,7 +1298,7 @@ Policy attribute to apply to the policy.
 
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPolicy-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L34">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L116">property <b>policyName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>policyName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1135,7 +1307,7 @@ The name of the load balancer policy.
 
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPolicy-policyTypeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L38">property <b>policyTypeName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L120">property <b>policyTypeName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>policyTypeName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1386,7 +1558,7 @@ const test = pulumi.output(aws.elasticloadbalancing.getLoadBalancer({
 
 </div>
 <h2 class="pdoc-module-header" id="getServiceAccount">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/getServiceAccount.ts#L56">function <b>getServiceAccount</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/getServiceAccount.ts#L55">function <b>getServiceAccount</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -1405,7 +1577,6 @@ import * as aws from "@pulumi/aws";
 const main = pulumi.output(aws.elasticloadbalancing.getServiceAccount({}));
 const elbLogs = new aws.s3.Bucket("elb_logs", {
     acl: "private",
-    bucket: "my-elb-tf-test-bucket",
     policy: main.apply(main => `{
   "Id": "Policy",
   "Version": "2012-10-17",
@@ -1783,14 +1954,14 @@ id is the provider-assigned unique ID for this managed resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetServiceAccountArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/getServiceAccount.ts#L66">interface <b>GetServiceAccountArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/getServiceAccount.ts#L65">interface <b>GetServiceAccountArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of arguments for invoking getServiceAccount.
 
 <h3 class="pdoc-member-header" id="GetServiceAccountArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/getServiceAccount.ts#L71">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/getServiceAccount.ts#L70">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1801,14 +1972,14 @@ Defaults to the region from the AWS provider configuration.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetServiceAccountResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/getServiceAccount.ts#L77">interface <b>GetServiceAccountResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/getServiceAccount.ts#L76">interface <b>GetServiceAccountResult</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of values returned by getServiceAccount.
 
 <h3 class="pdoc-member-header" id="GetServiceAccountResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/getServiceAccount.ts#L81">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/getServiceAccount.ts#L80">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1817,7 +1988,7 @@ The ARN of the AWS ELB service account in the selected region.
 
 </div>
 <h3 class="pdoc-member-header" id="GetServiceAccountResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/getServiceAccount.ts#L85">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/getServiceAccount.ts#L84">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1827,14 +1998,14 @@ id is the provider-assigned unique ID for this managed resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ListenerPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/listenerPolicy.ts#L132">interface <b>ListenerPolicyArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/listenerPolicy.ts#L169">interface <b>ListenerPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a ListenerPolicy resource.
 
 <h3 class="pdoc-member-header" id="ListenerPolicyArgs-loadBalancerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/listenerPolicy.ts#L136">property <b>loadBalancerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/listenerPolicy.ts#L173">property <b>loadBalancerName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>loadBalancerName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1843,7 +2014,7 @@ The load balancer to attach the policy to.
 
 </div>
 <h3 class="pdoc-member-header" id="ListenerPolicyArgs-loadBalancerPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/listenerPolicy.ts#L140">property <b>loadBalancerPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/listenerPolicy.ts#L177">property <b>loadBalancerPort</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>loadBalancerPort: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1852,7 +2023,7 @@ The load balancer listener port to apply the policy to.
 
 </div>
 <h3 class="pdoc-member-header" id="ListenerPolicyArgs-policyNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/listenerPolicy.ts#L144">property <b>policyNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/listenerPolicy.ts#L181">property <b>policyNames</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>policyNames?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1862,14 +2033,14 @@ List of Policy Names to apply to the backend server.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ListenerPolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/listenerPolicy.ts#L114">interface <b>ListenerPolicyState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/listenerPolicy.ts#L151">interface <b>ListenerPolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering ListenerPolicy resources.
 
 <h3 class="pdoc-member-header" id="ListenerPolicyState-loadBalancerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/listenerPolicy.ts#L118">property <b>loadBalancerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/listenerPolicy.ts#L155">property <b>loadBalancerName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>loadBalancerName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1878,7 +2049,7 @@ The load balancer to attach the policy to.
 
 </div>
 <h3 class="pdoc-member-header" id="ListenerPolicyState-loadBalancerPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/listenerPolicy.ts#L122">property <b>loadBalancerPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/listenerPolicy.ts#L159">property <b>loadBalancerPort</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>loadBalancerPort?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1887,7 +2058,7 @@ The load balancer listener port to apply the policy to.
 
 </div>
 <h3 class="pdoc-member-header" id="ListenerPolicyState-policyNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/listenerPolicy.ts#L126">property <b>policyNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/listenerPolicy.ts#L163">property <b>policyNames</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>policyNames?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2070,14 +2241,14 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LoadBalancerBackendServerPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerBackendServerPolicy.ts#L88">interface <b>LoadBalancerBackendServerPolicyArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerBackendServerPolicy.ts#L142">interface <b>LoadBalancerBackendServerPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a LoadBalancerBackendServerPolicy resource.
 
 <h3 class="pdoc-member-header" id="LoadBalancerBackendServerPolicyArgs-instancePort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerBackendServerPolicy.ts#L92">property <b>instancePort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerBackendServerPolicy.ts#L146">property <b>instancePort</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>instancePort: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2086,7 +2257,7 @@ The instance port to apply the policy to.
 
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerBackendServerPolicyArgs-loadBalancerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerBackendServerPolicy.ts#L96">property <b>loadBalancerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerBackendServerPolicy.ts#L150">property <b>loadBalancerName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>loadBalancerName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2095,7 +2266,7 @@ The load balancer to attach the policy to.
 
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerBackendServerPolicyArgs-policyNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerBackendServerPolicy.ts#L100">property <b>policyNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerBackendServerPolicy.ts#L154">property <b>policyNames</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>policyNames?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2105,14 +2276,14 @@ List of Policy Names to apply to the backend server.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LoadBalancerBackendServerPolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerBackendServerPolicy.ts#L70">interface <b>LoadBalancerBackendServerPolicyState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerBackendServerPolicy.ts#L124">interface <b>LoadBalancerBackendServerPolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering LoadBalancerBackendServerPolicy resources.
 
 <h3 class="pdoc-member-header" id="LoadBalancerBackendServerPolicyState-instancePort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerBackendServerPolicy.ts#L74">property <b>instancePort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerBackendServerPolicy.ts#L128">property <b>instancePort</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>instancePort?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2121,7 +2292,7 @@ The instance port to apply the policy to.
 
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerBackendServerPolicyState-loadBalancerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerBackendServerPolicy.ts#L78">property <b>loadBalancerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerBackendServerPolicy.ts#L132">property <b>loadBalancerName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>loadBalancerName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2130,7 +2301,7 @@ The load balancer to attach the policy to.
 
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerBackendServerPolicyState-policyNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerBackendServerPolicy.ts#L82">property <b>policyNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerBackendServerPolicy.ts#L136">property <b>policyNames</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>policyNames?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2236,14 +2407,14 @@ The name of the stickiness policy.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LoadBalancerPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L101">interface <b>LoadBalancerPolicyArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L183">interface <b>LoadBalancerPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a LoadBalancerPolicy resource.
 
 <h3 class="pdoc-member-header" id="LoadBalancerPolicyArgs-loadBalancerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L105">property <b>loadBalancerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L187">property <b>loadBalancerName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>loadBalancerName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2252,7 +2423,7 @@ The load balancer on which the policy is defined.
 
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPolicyArgs-policyAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L109">property <b>policyAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L191">property <b>policyAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>policyAttributes?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2264,7 +2435,7 @@ Policy attribute to apply to the policy.
 
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPolicyArgs-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L113">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L195">property <b>policyName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>policyName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2273,7 +2444,7 @@ The name of the load balancer policy.
 
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPolicyArgs-policyTypeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L117">property <b>policyTypeName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L199">property <b>policyTypeName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>policyTypeName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2283,14 +2454,14 @@ The policy type.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LoadBalancerPolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L79">interface <b>LoadBalancerPolicyState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L161">interface <b>LoadBalancerPolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering LoadBalancerPolicy resources.
 
 <h3 class="pdoc-member-header" id="LoadBalancerPolicyState-loadBalancerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L83">property <b>loadBalancerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L165">property <b>loadBalancerName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>loadBalancerName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2299,7 +2470,7 @@ The load balancer on which the policy is defined.
 
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPolicyState-policyAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L87">property <b>policyAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L169">property <b>policyAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>policyAttributes?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2311,7 +2482,7 @@ Policy attribute to apply to the policy.
 
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPolicyState-policyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L91">property <b>policyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L173">property <b>policyName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>policyName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2320,7 +2491,7 @@ The name of the load balancer policy.
 
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPolicyState-policyTypeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L95">property <b>policyTypeName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/loadBalancerPolicy.ts#L177">property <b>policyTypeName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>policyTypeName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

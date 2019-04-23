@@ -23,12 +23,15 @@ title: Module ec2transitgateway
 * <a href="#getRouteTable">function getRouteTable</a>
 * <a href="#getTransitGateway">function getTransitGateway</a>
 * <a href="#getVpcAttachment">function getVpcAttachment</a>
+* <a href="#getVpnAttachment">function getVpnAttachment</a>
 * <a href="#GetRouteTableArgs">interface GetRouteTableArgs</a>
 * <a href="#GetRouteTableResult">interface GetRouteTableResult</a>
 * <a href="#GetTransitGatewayArgs">interface GetTransitGatewayArgs</a>
 * <a href="#GetTransitGatewayResult">interface GetTransitGatewayResult</a>
 * <a href="#GetVpcAttachmentArgs">interface GetVpcAttachmentArgs</a>
 * <a href="#GetVpcAttachmentResult">interface GetVpcAttachmentResult</a>
+* <a href="#GetVpnAttachmentArgs">interface GetVpnAttachmentArgs</a>
+* <a href="#GetVpnAttachmentResult">interface GetVpnAttachmentResult</a>
 * <a href="#RouteArgs">interface RouteArgs</a>
 * <a href="#RouteState">interface RouteState</a>
 * <a href="#RouteTableArgs">interface RouteTableArgs</a>
@@ -42,7 +45,7 @@ title: Module ec2transitgateway
 * <a href="#VpcAttachmentArgs">interface VpcAttachmentArgs</a>
 * <a href="#VpcAttachmentState">interface VpcAttachmentState</a>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2transitgateway/getRouteTable.ts">ec2transitgateway/getRouteTable.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2transitgateway/getTransitGateway.ts">ec2transitgateway/getTransitGateway.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts">ec2transitgateway/getVpcAttachment.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2transitgateway/route.ts">ec2transitgateway/route.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2transitgateway/routeTable.ts">ec2transitgateway/routeTable.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts">ec2transitgateway/routeTableAssociation.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts">ec2transitgateway/routeTablePropagation.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2transitgateway/transitGateway.ts">ec2transitgateway/transitGateway.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2transitgateway/vpcAttachment.ts">ec2transitgateway/vpcAttachment.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2transitgateway/getRouteTable.ts">ec2transitgateway/getRouteTable.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2transitgateway/getTransitGateway.ts">ec2transitgateway/getTransitGateway.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2transitgateway/getVpcAttachment.ts">ec2transitgateway/getVpcAttachment.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2transitgateway/getVpnAttachment.ts">ec2transitgateway/getVpnAttachment.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2transitgateway/route.ts">ec2transitgateway/route.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2transitgateway/routeTable.ts">ec2transitgateway/routeTable.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2transitgateway/routeTableAssociation.ts">ec2transitgateway/routeTableAssociation.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2transitgateway/routeTablePropagation.ts">ec2transitgateway/routeTablePropagation.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2transitgateway/transitGateway.ts">ec2transitgateway/transitGateway.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2transitgateway/vpcAttachment.ts">ec2transitgateway/vpcAttachment.ts</a> 
 </div>
 </div>
 </div>
@@ -850,7 +853,7 @@ Key-value tags for the EC2 Transit Gateway VPC Attachment.
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>transitGatewayDefaultRouteTableAssociation: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 
-Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. Default value: `true`.
+Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. This cannot be configured or perform drift detection with Resource Access Manager shared EC2 Transit Gateways. Default value: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="VpcAttachment-transitGatewayDefaultRouteTablePropagation">
@@ -859,7 +862,7 @@ Boolean whether the VPC Attachment should be associated with the EC2 Transit Gat
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>transitGatewayDefaultRouteTablePropagation: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 
-Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. Default value: `true`.
+Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. This cannot be configured or perform drift detection with Resource Access Manager shared EC2 Transit Gateways. Default value: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="VpcAttachment-transitGatewayId">
@@ -1016,6 +1019,31 @@ import * as aws from "@pulumi/aws";
 
 const example = pulumi.output(aws.ec2transitgateway.getVpcAttachment({
     id: "tgw-attach-12345678",
+}));
+```
+
+</div>
+<h2 class="pdoc-module-header" id="getVpnAttachment">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2transitgateway/getVpnAttachment.ts#L24">function <b>getVpnAttachment</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getVpnAttachment(args: <a href='#GetVpnAttachmentArgs'>GetVpnAttachmentArgs</a>, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetVpnAttachmentResult'>GetVpnAttachmentResult</a>&gt;</pre>
+
+
+Get information on an EC2 Transit Gateway VPN Attachment.
+
+## Example Usage
+
+### By Transit Gateway and VPN Connection Identifiers
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = pulumi.all([aws_ec2_transit_gateway_example.id, aws_vpn_connection_example.id]).apply(([aws_ec2_transit_gateway_exampleId, aws_vpn_connection_exampleId]) => aws.ec2transitgateway.getVpnAttachment({
+    transitGatewayId: aws_ec2_transit_gateway_exampleId,
+    vpnConnectionId: aws_vpn_connection_exampleId,
 }));
 ```
 
@@ -1353,6 +1381,64 @@ Identifier of EC2 VPC.
 <pre class="highlight"><span class='kd'></span>vpcOwnerId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 
 Identifier of the AWS account that owns the EC2 VPC.
+
+</div>
+</div>
+<h2 class="pdoc-module-header" id="GetVpnAttachmentArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2transitgateway/getVpnAttachment.ts#L35">interface <b>GetVpnAttachmentArgs</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+
+A collection of arguments for invoking getVpnAttachment.
+
+<h3 class="pdoc-member-header" id="GetVpnAttachmentArgs-tags">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2transitgateway/getVpnAttachment.ts#L36">property <b>tags</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>tags?: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
+</div>
+<h3 class="pdoc-member-header" id="GetVpnAttachmentArgs-transitGatewayId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2transitgateway/getVpnAttachment.ts#L40">property <b>transitGatewayId</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>transitGatewayId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+Identifier of the EC2 Transit Gateway.
+
+</div>
+<h3 class="pdoc-member-header" id="GetVpnAttachmentArgs-vpnConnectionId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2transitgateway/getVpnAttachment.ts#L44">property <b>vpnConnectionId</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>vpnConnectionId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+Identifier of the EC2 VPN Connection.
+
+</div>
+</div>
+<h2 class="pdoc-module-header" id="GetVpnAttachmentResult">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2transitgateway/getVpnAttachment.ts#L50">interface <b>GetVpnAttachmentResult</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+
+A collection of values returned by getVpnAttachment.
+
+<h3 class="pdoc-member-header" id="GetVpnAttachmentResult-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2transitgateway/getVpnAttachment.ts#L58">property <b>id</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+id is the provider-assigned unique ID for this managed resource.
+
+</div>
+<h3 class="pdoc-member-header" id="GetVpnAttachmentResult-tags">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2transitgateway/getVpnAttachment.ts#L54">property <b>tags</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
+
+Key-value tags for the EC2 Transit Gateway VPN Attachment
 
 </div>
 </div>
@@ -1881,7 +1967,7 @@ Key-value tags for the EC2 Transit Gateway VPC Attachment.
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>transitGatewayDefaultRouteTableAssociation?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
 
-Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. Default value: `true`.
+Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. This cannot be configured or perform drift detection with Resource Access Manager shared EC2 Transit Gateways. Default value: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="VpcAttachmentArgs-transitGatewayDefaultRouteTablePropagation">
@@ -1890,7 +1976,7 @@ Boolean whether the VPC Attachment should be associated with the EC2 Transit Gat
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>transitGatewayDefaultRouteTablePropagation?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
 
-Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. Default value: `true`.
+Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. This cannot be configured or perform drift detection with Resource Access Manager shared EC2 Transit Gateways. Default value: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="VpcAttachmentArgs-transitGatewayId">
@@ -1961,7 +2047,7 @@ Key-value tags for the EC2 Transit Gateway VPC Attachment.
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>transitGatewayDefaultRouteTableAssociation?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
 
-Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. Default value: `true`.
+Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. This cannot be configured or perform drift detection with Resource Access Manager shared EC2 Transit Gateways. Default value: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="VpcAttachmentState-transitGatewayDefaultRouteTablePropagation">
@@ -1970,7 +2056,7 @@ Boolean whether the VPC Attachment should be associated with the EC2 Transit Gat
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>transitGatewayDefaultRouteTablePropagation?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
 
-Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. Default value: `true`.
+Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. This cannot be configured or perform drift detection with Resource Access Manager shared EC2 Transit Gateways. Default value: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="VpcAttachmentState-transitGatewayId">

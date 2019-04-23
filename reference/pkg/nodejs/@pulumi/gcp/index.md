@@ -28,10 +28,11 @@ import * as gcp from "@pulumi/gcp";
 * <a href="#getEnv">function getEnv</a>
 * <a href="#getEnvBoolean">function getEnvBoolean</a>
 * <a href="#getEnvNumber">function getEnvNumber</a>
+* <a href="#ifUndefined">function ifUndefined</a>
 * <a href="#requireWithDefault">function requireWithDefault</a>
 * <a href="#ProviderArgs">interface ProviderArgs</a>
 
-<a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/provider.ts">provider.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/utilities.ts">utilities.ts</a> 
+<a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/provider.ts">provider.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/utilities.ts">utilities.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/utils.ts">utils.ts</a> 
 </div>
 </div>
 </div>
@@ -43,6 +44,7 @@ import * as gcp from "@pulumi/gcp";
 <div class="expanded" markdown="1">
 <h2 class="pdoc-module-header toggleButton" title="Click to hide Modules">Modules ▾</h2>
 <div class="pdoc-module-contents" markdown="1">
+* <a href="accesscontextmanager">accesscontextmanager</a>
 * <a href="appengine">appengine</a>
 * <a href="bigquery">bigquery</a>
 * <a href="bigtable">bigtable</a>
@@ -50,6 +52,7 @@ import * as gcp from "@pulumi/gcp";
 * <a href="binaryauthorization">binaryauthorization</a>
 * <a href="cloudbuild">cloudbuild</a>
 * <a href="cloudfunctions">cloudfunctions</a>
+* <a href="cloudscheduler">cloudscheduler</a>
 * <a href="composer">composer</a>
 * <a href="compute">compute</a>
 * <a href="config">config</a>
@@ -73,10 +76,12 @@ import * as gcp from "@pulumi/gcp";
 * <a href="runtimeconfig">runtimeconfig</a>
 * <a href="serverless">serverless</a>
 * <a href="serviceAccount">serviceAccount</a>
+* <a href="servicenetworking">servicenetworking</a>
 * <a href="sourcerepo">sourcerepo</a>
 * <a href="spanner">spanner</a>
 * <a href="sql">sql</a>
 * <a href="storage">storage</a>
+* <a href="tpu">tpu</a>
 </div>
 </div>
 </div>
@@ -87,7 +92,7 @@ import * as gcp from "@pulumi/gcp";
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> ProviderResource</pre>
 
-The provider type for the google package. By default, resources use package-wide configuration
+The provider type for the google-beta package. By default, resources use package-wide configuration
 settings, however an explicit `Provider` instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
 [documentation](https://pulumi.io/reference/programming-model.html#providers) for more information.
@@ -172,6 +177,14 @@ deployments.
 <pre class="highlight"><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
 
 </div>
+<h2 class="pdoc-module-header" id="ifUndefined">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/utils.ts#L18">function <b>ifUndefined</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>ifUndefined&lt;T&gt;(input: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;T&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, value: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;T&gt;): OutputInstance&lt;Unwrap<T>&gt; &amp; Lifted<Unwrap<T>></pre>
+
+</div>
 <h2 class="pdoc-module-header" id="requireWithDefault">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/utilities.ts#L43">function <b>requireWithDefault</b></a>
 </h2>
@@ -181,32 +194,44 @@ deployments.
 
 </div>
 <h2 class="pdoc-module-header" id="ProviderArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/provider.ts#L37">interface <b>ProviderArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/provider.ts#L39">interface <b>ProviderArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a Provider resource.
 
+<h3 class="pdoc-member-header" id="ProviderArgs-accessToken">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/provider.ts#L40">property <b>accessToken</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>accessToken?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+</div>
 <h3 class="pdoc-member-header" id="ProviderArgs-credentials">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/provider.ts#L38">property <b>credentials</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/provider.ts#L41">property <b>credentials</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>credentials?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/provider.ts#L39">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/provider.ts#L42">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>project?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/provider.ts#L40">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/provider.ts#L43">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>region?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
+<h3 class="pdoc-member-header" id="ProviderArgs-scopes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/provider.ts#L44">property <b>scopes</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>scopes?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+</div>
 <h3 class="pdoc-member-header" id="ProviderArgs-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/provider.ts#L41">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/provider.ts#L45">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>zone?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
