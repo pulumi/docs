@@ -20,7 +20,7 @@ Adding a new Pulumi organization can be done directly from the Pulumi Cloud Cons
 
 ## Imported Organizations
 
-Organizations using the Pulumi Team and Enterprise editions may be backed by an external service.
+Organizations using Pulumi Team or Enterprise editions may be backed by an external service.
 This enables you to manage user access and team permissions by using your existing access controls.
 
 Here's a table that shows you the mapping between the supported 3rd-party services and Pulumi.
@@ -88,7 +88,13 @@ those members to Pulumi, their membership in the GitLab group must still be acti
 ## SAML 2.0 based Organizations
 
 The Pulumi Enterprise edition provides more options for identity and access, including support for
-any SAML 2.0 based identity provider. For example Azure Active Directory (Azure AD), Active Directory
-Federation Services (AD FS), Okta, and others.
+any SAML 2.0 based identity provider.
 
-To create a Pulumi organization using SAML SSO, please [contact us](https://www.pulumi.com/about/#contact-us).
+We officially support and internally test the following providers:
+
+- [Azure Active Directory](./saml-aad.html)
+- [G Suite](./saml-gsuite.html)
+- [Okta](./saml-okta.html)
+
+> If you need help configuring or would like us to officially support another SAML identity provider,
+> please [contact us](https://www.pulumi.com/about/#contact-us).
