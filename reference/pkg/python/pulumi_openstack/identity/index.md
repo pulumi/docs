@@ -200,22 +200,21 @@
 
 <dl class="class">
 <dt id="pulumi_openstack.identity.Project">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.identity.</code><code class="descname">Project</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>domain_id=None</em>, <em>enabled=None</em>, <em>is_domain=None</em>, <em>name=None</em>, <em>parent_id=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.Project" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.identity.</code><code class="descname">Project</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>domain_id=None</em>, <em>enabled=None</em>, <em>is_domain=None</em>, <em>name=None</em>, <em>parent_id=None</em>, <em>region=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.Project" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V3 Project resource within OpenStack Keystone.</p>
 <p>Note: You <em>must</em> have admin privileges in your OpenStack cloud to use
 this resource.</p>
-<p>:param str <strong>name</strong>: The name of the resource.
-:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
-:param pulumi.Input[str] description: A description of the project.
-:param pulumi.Input[str] domain_id: The domain this project belongs to.
-:param pulumi.Input[bool] enabled: Whether the project is enabled or disabled. Valid</p>
-<blockquote>
-<div>values are <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the project.</li>
+<li><strong>domain_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain this project belongs to.</li>
+<li><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the project is enabled or disabled. Valid
+values are <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>is_domain</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether this project is a domain. Valid values
 are <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the project.</li>
@@ -316,18 +315,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.identity.Role">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.identity.</code><code class="descname">Role</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>domain_id=None</em>, <em>name=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.Role" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.identity.</code><code class="descname">Role</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>domain_id=None</em>, <em>name=None</em>, <em>region=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.Role" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V3 Role resource within OpenStack Keystone.</p>
 <p>Note: You <em>must</em> have admin privileges in your OpenStack cloud to use
 this resource.</p>
-<p>:param str <strong>name</strong>: The name of the resource.
-:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
-:param pulumi.Input[str] domain_id: The domain the role belongs to.
-:param pulumi.Input[str] name: The name of the role.
-:param pulumi.Input[str] region: The region in which to obtain the V3 Keystone client.</p>
-<blockquote>
-<div>If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
-creates a new Role.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>domain_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain the role belongs to.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the role.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V3 Keystone client.
+If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
+creates a new Role.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 <dl class="attribute">
 <dt id="pulumi_openstack.identity.Role.domain_id">
 <code class="descname">domain_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.Role.domain_id" title="Permalink to this definition">¶</a></dt>
@@ -390,17 +398,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.identity.RoleAssignment">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.identity.</code><code class="descname">RoleAssignment</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>domain_id=None</em>, <em>group_id=None</em>, <em>project_id=None</em>, <em>role_id=None</em>, <em>user_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.RoleAssignment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.identity.</code><code class="descname">RoleAssignment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>domain_id=None</em>, <em>group_id=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>role_id=None</em>, <em>user_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.RoleAssignment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V3 Role assignment within OpenStack Keystone.</p>
 <p>Note: You <em>must</em> have admin privileges in your OpenStack cloud to use
 this resource.</p>
-<p>:param str <strong>name</strong>: The name of the resource.
-:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
-:param pulumi.Input[str] domain_id: The domain to assign the role in.
-:param pulumi.Input[str] group_id: The group to assign the role to.
-:param pulumi.Input[str] project_id: The project to assign the role in.
-:param pulumi.Input[str] role_id: The role to assign.
-:param pulumi.Input[str] user_id: The user to assign the role to.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>domain_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain to assign the role in.</li>
+<li><strong>group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The group to assign the role to.</li>
+<li><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project to assign the role in.</li>
+<li><strong>role_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role to assign.</li>
+<li><strong>user_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user to assign the role to.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 <dl class="attribute">
 <dt id="pulumi_openstack.identity.RoleAssignment.domain_id">
 <code class="descname">domain_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.RoleAssignment.domain_id" title="Permalink to this definition">¶</a></dt>
@@ -473,23 +491,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.identity.User">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.identity.</code><code class="descname">User</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>default_project_id=None</em>, <em>description=None</em>, <em>domain_id=None</em>, <em>enabled=None</em>, <em>extra=None</em>, <em>ignore_change_password_upon_first_use=None</em>, <em>ignore_lockout_failure_attempts=None</em>, <em>ignore_password_expiry=None</em>, <em>multi_factor_auth_enabled=None</em>, <em>multi_factor_auth_rules=None</em>, <em>name=None</em>, <em>password=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.User" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.identity.</code><code class="descname">User</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>default_project_id=None</em>, <em>description=None</em>, <em>domain_id=None</em>, <em>enabled=None</em>, <em>extra=None</em>, <em>ignore_change_password_upon_first_use=None</em>, <em>ignore_lockout_failure_attempts=None</em>, <em>ignore_password_expiry=None</em>, <em>multi_factor_auth_enabled=None</em>, <em>multi_factor_auth_rules=None</em>, <em>name=None</em>, <em>password=None</em>, <em>region=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.User" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V3 User resource within OpenStack Keystone.</p>
 <p>Note: You <em>must</em> have admin privileges in your OpenStack cloud to use
 this resource.</p>
-<p>:param str <strong>name</strong>: The name of the resource.
-:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
-:param pulumi.Input[str] default_project_id: The default project this user belongs to.
-:param pulumi.Input[str] description: A description of the user.
-:param pulumi.Input[str] domain_id: The domain this user belongs to.
-:param pulumi.Input[bool] enabled: Whether the user is enabled or disabled. Valid</p>
-<blockquote>
-<div>values are <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>default_project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default project this user belongs to.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the user.</li>
+<li><strong>domain_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain this user belongs to.</li>
+<li><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the user is enabled or disabled. Valid
+values are <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>extra</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Free-form key/value pairs of extra information.</li>
 <li><strong>ignore_change_password_upon_first_use</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – User will not have to
 change their password upon first use. Valid values are <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
@@ -643,7 +660,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_openstack.identity.get_auth_scope">
-<code class="descclassname">pulumi_openstack.identity.</code><code class="descname">get_auth_scope</code><span class="sig-paren">(</span><em>name=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.get_auth_scope" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_openstack.identity.</code><code class="descname">get_auth_scope</code><span class="sig-paren">(</span><em>name=None</em>, <em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.get_auth_scope" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get authentication information about the current
 auth scope in use. This can be used as self-discovery or introspection of
 the username or project name currently in use.</p>
@@ -651,33 +668,33 @@ the username or project name currently in use.</p>
 
 <dl class="function">
 <dt id="pulumi_openstack.identity.get_endpoint">
-<code class="descclassname">pulumi_openstack.identity.</code><code class="descname">get_endpoint</code><span class="sig-paren">(</span><em>interface=None</em>, <em>region=None</em>, <em>service_id=None</em>, <em>service_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.get_endpoint" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_openstack.identity.</code><code class="descname">get_endpoint</code><span class="sig-paren">(</span><em>interface=None</em>, <em>region=None</em>, <em>service_id=None</em>, <em>service_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.get_endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an OpenStack endpoint.</p>
 <p>Note: This usually requires admin privileges.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.identity.get_group">
-<code class="descclassname">pulumi_openstack.identity.</code><code class="descname">get_group</code><span class="sig-paren">(</span><em>domain_id=None</em>, <em>name=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.get_group" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_openstack.identity.</code><code class="descname">get_group</code><span class="sig-paren">(</span><em>domain_id=None</em>, <em>name=None</em>, <em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.get_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an OpenStack group.</p>
 <p>Note: This usually requires admin privileges.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.identity.get_project">
-<code class="descclassname">pulumi_openstack.identity.</code><code class="descname">get_project</code><span class="sig-paren">(</span><em>domain_id=None</em>, <em>enabled=None</em>, <em>is_domain=None</em>, <em>name=None</em>, <em>parent_id=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.get_project" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_openstack.identity.</code><code class="descname">get_project</code><span class="sig-paren">(</span><em>domain_id=None</em>, <em>enabled=None</em>, <em>is_domain=None</em>, <em>name=None</em>, <em>parent_id=None</em>, <em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.get_project" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an OpenStack project.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.identity.get_role">
-<code class="descclassname">pulumi_openstack.identity.</code><code class="descname">get_role</code><span class="sig-paren">(</span><em>domain_id=None</em>, <em>name=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.get_role" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_openstack.identity.</code><code class="descname">get_role</code><span class="sig-paren">(</span><em>domain_id=None</em>, <em>name=None</em>, <em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.get_role" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an OpenStack role.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.identity.get_user">
-<code class="descclassname">pulumi_openstack.identity.</code><code class="descname">get_user</code><span class="sig-paren">(</span><em>domain_id=None</em>, <em>enabled=None</em>, <em>idp_id=None</em>, <em>name=None</em>, <em>password_expires_at=None</em>, <em>protocol_id=None</em>, <em>region=None</em>, <em>unique_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.get_user" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_openstack.identity.</code><code class="descname">get_user</code><span class="sig-paren">(</span><em>domain_id=None</em>, <em>enabled=None</em>, <em>idp_id=None</em>, <em>name=None</em>, <em>password_expires_at=None</em>, <em>protocol_id=None</em>, <em>region=None</em>, <em>unique_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.get_user" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an OpenStack user.</p>
 </dd></dl>
 

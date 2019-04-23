@@ -162,7 +162,6 @@ in all regions - available regions are listed
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[list] triggers</p>
 <dl class="attribute">
 <dt id="pulumi_aws.codecommit.Trigger.repository_name">
 <code class="descname">repository_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.codecommit.Trigger.repository_name" title="Permalink to this definition">¶</a></dt>
@@ -211,7 +210,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.codecommit.get_repository">
-<code class="descclassname">pulumi_aws.codecommit.</code><code class="descname">get_repository</code><span class="sig-paren">(</span><em>repository_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codecommit.get_repository" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.codecommit.</code><code class="descname">get_repository</code><span class="sig-paren">(</span><em>repository_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codecommit.get_repository" title="Permalink to this definition">¶</a></dt>
 <dd><p>The CodeCommit Repository data source allows the ARN, Repository ID, Repository URL for HTTP and Repository URL for SSH to be retrieved for an CodeCommit repository.</p>
 </dd></dl>
 

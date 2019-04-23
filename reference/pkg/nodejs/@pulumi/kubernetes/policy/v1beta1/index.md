@@ -14,269 +14,89 @@ title: Module policy/v1beta1
 <div class="expanded" markdown="1">
 <h2 class="pdoc-module-header toggleButton" title="Click to hide Index">Index ▾</h2>
 <div class="pdoc-module-contents" markdown="1">
-* <a href="#isEviction">function isEviction</a>
-* <a href="#isPodDisruptionBudget">function isPodDisruptionBudget</a>
-* <a href="#isPodDisruptionBudgetList">function isPodDisruptionBudgetList</a>
-* <a href="#isPodSecurityPolicy">function isPodSecurityPolicy</a>
-* <a href="#isPodSecurityPolicyList">function isPodSecurityPolicyList</a>
-* <a href="#AllowedFlexVolume">interface AllowedFlexVolume</a>
-* <a href="#AllowedHostPath">interface AllowedHostPath</a>
-* <a href="#Eviction">interface Eviction</a>
-* <a href="#FSGroupStrategyOptions">interface FSGroupStrategyOptions</a>
-* <a href="#HostPortRange">interface HostPortRange</a>
-* <a href="#IDRange">interface IDRange</a>
-* <a href="#PodDisruptionBudget">interface PodDisruptionBudget</a>
-* <a href="#PodDisruptionBudgetList">interface PodDisruptionBudgetList</a>
-* <a href="#PodDisruptionBudgetSpec">interface PodDisruptionBudgetSpec</a>
-* <a href="#PodDisruptionBudgetStatus">interface PodDisruptionBudgetStatus</a>
-* <a href="#PodSecurityPolicy">interface PodSecurityPolicy</a>
-* <a href="#PodSecurityPolicyList">interface PodSecurityPolicyList</a>
-* <a href="#PodSecurityPolicySpec">interface PodSecurityPolicySpec</a>
-* <a href="#RunAsGroupStrategyOptions">interface RunAsGroupStrategyOptions</a>
-* <a href="#RunAsUserStrategyOptions">interface RunAsUserStrategyOptions</a>
-* <a href="#SELinuxStrategyOptions">interface SELinuxStrategyOptions</a>
-* <a href="#SupplementalGroupsStrategyOptions">interface SupplementalGroupsStrategyOptions</a>
+* <a href="#PodDisruptionBudget">class PodDisruptionBudget</a>
+* <a href="#PodDisruptionBudgetList">class PodDisruptionBudgetList</a>
+* <a href="#PodSecurityPolicy">class PodSecurityPolicy</a>
+* <a href="#PodSecurityPolicyList">class PodSecurityPolicyList</a>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts">types/input.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodDisruptionBudget.ts">policy/v1beta1/PodDisruptionBudget.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodDisruptionBudgetList.ts">policy/v1beta1/PodDisruptionBudgetList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodSecurityPolicy.ts">policy/v1beta1/PodSecurityPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodSecurityPolicyList.ts">policy/v1beta1/PodSecurityPolicyList.ts</a> 
 </div>
 </div>
 </div>
 
 
-<h2 class="pdoc-module-header" id="isEviction">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L17747">function <b>isEviction</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isEviction(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isPodDisruptionBudget">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L17840">function <b>isPodDisruptionBudget</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isPodDisruptionBudget(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isPodDisruptionBudgetList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L17872">function <b>isPodDisruptionBudgetList</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isPodDisruptionBudgetList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isPodSecurityPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L17986">function <b>isPodSecurityPolicy</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isPodSecurityPolicy(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isPodSecurityPolicyList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L18023">function <b>isPodSecurityPolicyList</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isPodSecurityPolicyList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="AllowedFlexVolume">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16788">interface <b>AllowedFlexVolume</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-AllowedFlexVolume represents a single Flexvolume that is allowed to be used.
-
-<h3 class="pdoc-member-header" id="AllowedFlexVolume-driver">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16792">property <b>driver</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>driver: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-driver is the name of the Flexvolume driver.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="AllowedHostPath">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16800">interface <b>AllowedHostPath</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-AllowedHostPath defines the host volume conditions that will be enabled by a policy for pods
-to use. It requires the path prefix to be defined.
-
-<h3 class="pdoc-member-header" id="AllowedHostPath-pathPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16808">property <b>pathPrefix</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>pathPrefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-pathPrefix is the path prefix that the host volume must match. It does not support `*`.
-Trailing slashes are trimmed when validating the path prefix with a host path.
-
-Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not allow `/food`
-or `/etc/foo`
-
-</div>
-<h3 class="pdoc-member-header" id="AllowedHostPath-readOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16814">property <b>readOnly</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-when set to true, will allow host volumes matching the pathPrefix only if all volume mounts
-are readOnly.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="Eviction">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16823">interface <b>Eviction</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Eviction evicts a pod from its node subject to certain policies and safety constraints. This
-is a subresource of Pod.  A request to cause such an eviction is created by POSTing to
-.../pods/<pod name>/evictions.
-
-<h3 class="pdoc-member-header" id="Eviction-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16830">property <b>apiVersion</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-APIVersion defines the versioned schema of this representation of an object. Servers should
-convert recognized schemas to the latest internal value, and may reject unrecognized
-values. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
-
-</div>
-<h3 class="pdoc-member-header" id="Eviction-deleteOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16835">property <b>deleteOptions</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>deleteOptions: <a href='#DeleteOptions'>DeleteOptions</a>;</pre>
-
-DeleteOptions may be provided
-
-</div>
-<h3 class="pdoc-member-header" id="Eviction-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16843">property <b>kind</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Kind is a string value representing the REST resource this object represents. Servers may
-infer this from the endpoint the client submits requests to. Cannot be updated. In
-CamelCase. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
-
-</div>
-<h3 class="pdoc-member-header" id="Eviction-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16848">property <b>metadata</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
-
-ObjectMeta describes the pod that is being evicted.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="FSGroupStrategyOptions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16855">interface <b>FSGroupStrategyOptions</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-FSGroupStrategyOptions defines the strategy type and options used to create the strategy.
-
-<h3 class="pdoc-member-header" id="FSGroupStrategyOptions-ranges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16860">property <b>ranges</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>ranges: <a href='#IDRange'>IDRange</a>[];</pre>
-
-ranges are the allowed ranges of fs groups.  If you would like to force a single fs group
-then supply a single range with the same start and end. Required for MustRunAs.
-
-</div>
-<h3 class="pdoc-member-header" id="FSGroupStrategyOptions-rule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16865">property <b>rule</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>rule: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-rule is the strategy that will dictate what FSGroup is used in the SecurityContext.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="HostPortRange">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16873">interface <b>HostPortRange</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-HostPortRange defines a range of host ports that will be enabled by a policy for pods to use.
-It requires both the start and end to be defined.
-
-<h3 class="pdoc-member-header" id="HostPortRange-max">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16877">property <b>max</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>max: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-max is the end of the range, inclusive.
-
-</div>
-<h3 class="pdoc-member-header" id="HostPortRange-min">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16882">property <b>min</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>min: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-min is the start of the range, inclusive.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="IDRange">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16889">interface <b>IDRange</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-IDRange provides a min/max of an allowed range of IDs.
-
-<h3 class="pdoc-member-header" id="IDRange-max">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16893">property <b>max</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>max: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-max is the end of the range, inclusive.
-
-</div>
-<h3 class="pdoc-member-header" id="IDRange-min">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16898">property <b>min</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>min: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-min is the start of the range, inclusive.
-
-</div>
-</div>
 <h2 class="pdoc-module-header" id="PodDisruptionBudget">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16906">interface <b>PodDisruptionBudget</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodDisruptionBudget.ts#L12">class <b>PodDisruptionBudget</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 PodDisruptionBudget is an object to define the max disruption that can be caused to a
 collection of pods
 
-<h3 class="pdoc-member-header" id="PodDisruptionBudget-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16913">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="PodDisruptionBudget-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodDisruptionBudget.ts#L59"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PodDisruptionBudget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.policy.v1beta1.PodDisruptionBudget, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a policy.v1beta1.PodDisruptionBudget resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="PodDisruptionBudget-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodDisruptionBudget.ts#L54">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#PodDisruptionBudget'>PodDisruptionBudget</a></pre>
+
+
+Get the state of an existing `PodDisruptionBudget` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="PodDisruptionBudget-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodDisruptionBudget.ts#L58">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.policy.v1beta1.PodDisruptionBudget</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="PodDisruptionBudget-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="PodDisruptionBudget-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="PodDisruptionBudget-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodDisruptionBudget.ts#L19">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"policy/v1beta1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -284,11 +104,21 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="PodDisruptionBudget-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16921">property <b>kind</b></a>
+<h3 class="pdoc-member-header" id="PodDisruptionBudget-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="PodDisruptionBudget-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodDisruptionBudget.ts#L27">property <b>kind</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"PodDisruptionBudget"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -297,42 +127,111 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="PodDisruptionBudget-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16924">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodDisruptionBudget.ts#L30">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="PodDisruptionBudget-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16929">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodDisruptionBudget.ts#L35">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>spec: <a href='#PodDisruptionBudgetSpec'>PodDisruptionBudgetSpec</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.policy.v1beta1.PodDisruptionBudgetSpec&gt;;</pre>
 
 Specification of the desired behavior of the PodDisruptionBudget.
 
 </div>
 <h3 class="pdoc-member-header" id="PodDisruptionBudget-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16934">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodDisruptionBudget.ts#L40">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>status: <a href='#PodDisruptionBudgetStatus'>PodDisruptionBudgetStatus</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>status: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.policy.v1beta1.PodDisruptionBudgetStatus&gt;;</pre>
 
 Most recently observed status of the PodDisruptionBudget.
 
 </div>
+<h3 class="pdoc-member-header" id="PodDisruptionBudget-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+</div>
 </div>
 <h2 class="pdoc-module-header" id="PodDisruptionBudgetList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16941">interface <b>PodDisruptionBudgetList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodDisruptionBudgetList.ts#L11">class <b>PodDisruptionBudgetList</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 PodDisruptionBudgetList is a collection of PodDisruptionBudgets.
 
-<h3 class="pdoc-member-header" id="PodDisruptionBudgetList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16948">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="PodDisruptionBudgetList-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodDisruptionBudgetList.ts#L51"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PodDisruptionBudgetList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.policy.v1beta1.PodDisruptionBudgetList, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a policy.v1beta1.PodDisruptionBudgetList resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="PodDisruptionBudgetList-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodDisruptionBudgetList.ts#L46">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#PodDisruptionBudgetList'>PodDisruptionBudgetList</a></pre>
+
+
+Get the state of an existing `PodDisruptionBudgetList` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="PodDisruptionBudgetList-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodDisruptionBudgetList.ts#L50">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.policy.v1beta1.PodDisruptionBudgetList</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="PodDisruptionBudgetList-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="PodDisruptionBudgetList-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="PodDisruptionBudgetList-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodDisruptionBudgetList.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"policy/v1beta1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -340,17 +239,27 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="PodDisruptionBudgetList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16951">property <b>items</b></a>
+<h3 class="pdoc-member-header" id="PodDisruptionBudgetList-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>items: <a href='#PodDisruptionBudget'>PodDisruptionBudget</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="PodDisruptionBudgetList-items">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodDisruptionBudgetList.ts#L21">property <b>items</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>items: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.policy.v1beta1.PodDisruptionBudget[]&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="PodDisruptionBudgetList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16959">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodDisruptionBudgetList.ts#L29">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"PodDisruptionBudgetList"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -359,139 +268,94 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="PodDisruptionBudgetList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16962">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodDisruptionBudgetList.ts#L32">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
 </div>
-</div>
-<h2 class="pdoc-module-header" id="PodDisruptionBudgetSpec">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16969">interface <b>PodDisruptionBudgetSpec</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-PodDisruptionBudgetSpec is a description of a PodDisruptionBudget.
-
-<h3 class="pdoc-member-header" id="PodDisruptionBudgetSpec-maxUnavailable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16976">property <b>maxUnavailable</b></a>
+<h3 class="pdoc-member-header" id="PodDisruptionBudgetList-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>maxUnavailable: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 
-An eviction is allowed if at most "maxUnavailable" pods selected by "selector" are
-unavailable after the eviction, i.e. even in absence of the evicted pod. For example, one
-can prevent all voluntary evictions by specifying 0. This is a mutually exclusive setting
-with "minAvailable".
-
-</div>
-<h3 class="pdoc-member-header" id="PodDisruptionBudgetSpec-minAvailable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16983">property <b>minAvailable</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>minAvailable: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-An eviction is allowed if at least "minAvailable" pods selected by "selector" will still be
-available after the eviction, i.e. even in the absence of the evicted pod.  So for example
-you can prevent all voluntary evictions by specifying "100%".
-
-</div>
-<h3 class="pdoc-member-header" id="PodDisruptionBudgetSpec-selector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16988">property <b>selector</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>selector: <a href='#LabelSelector'>LabelSelector</a>;</pre>
-
-Label query over pods whose evictions are managed by the disruption budget.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="PodDisruptionBudgetStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16996">interface <b>PodDisruptionBudgetStatus</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-PodDisruptionBudgetStatus represents information about the status of a PodDisruptionBudget.
-Status may trail the actual state of a system.
-
-<h3 class="pdoc-member-header" id="PodDisruptionBudgetStatus-currentHealthy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17000">property <b>currentHealthy</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>currentHealthy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-current number of healthy pods
-
-</div>
-<h3 class="pdoc-member-header" id="PodDisruptionBudgetStatus-desiredHealthy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17005">property <b>desiredHealthy</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>desiredHealthy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-minimum desired number of healthy pods
-
-</div>
-<h3 class="pdoc-member-header" id="PodDisruptionBudgetStatus-disruptedPods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17019">property <b>disruptedPods</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>disruptedPods: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>object</a></span>;</pre>
-
-DisruptedPods contains information about pods whose eviction was processed by the API
-server eviction subresource handler but has not yet been observed by the
-PodDisruptionBudget controller. A pod will be in this map from the time when the API server
-processed the eviction request to the time when the pod is seen by PDB controller as having
-been marked for deletion (or after a timeout). The key in the map is the name of the pod
-and the value is the time when the API server processed the eviction request. If the
-deletion didn't occur and a pod is still there it will be removed from the list
-automatically by PodDisruptionBudget controller after some time. If everything goes smooth
-this map should be empty for the most of the time. Large number of entries in the map may
-indicate problems with pod deletions.
-
-</div>
-<h3 class="pdoc-member-header" id="PodDisruptionBudgetStatus-disruptionsAllowed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17024">property <b>disruptionsAllowed</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>disruptionsAllowed: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-Number of pod disruptions that are currently allowed.
-
-</div>
-<h3 class="pdoc-member-header" id="PodDisruptionBudgetStatus-expectedPods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17029">property <b>expectedPods</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>expectedPods: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-total number of pods counted by this disruption budget
-
-</div>
-<h3 class="pdoc-member-header" id="PodDisruptionBudgetStatus-observedGeneration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17036">property <b>observedGeneration</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>observedGeneration: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-Most recent generation observed when updating this PDB status. PodDisruptionsAllowed and
-other status informatio is valid only if observedGeneration equals to PDB's object
-generation.
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PodSecurityPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17044">interface <b>PodSecurityPolicy</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodSecurityPolicy.ts#L12">class <b>PodSecurityPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 PodSecurityPolicy governs the ability to make requests that affect the Security Context that
 will be applied to a pod and container.
 
-<h3 class="pdoc-member-header" id="PodSecurityPolicy-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17051">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="PodSecurityPolicy-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodSecurityPolicy.ts#L57"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PodSecurityPolicy(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.policy.v1beta1.PodSecurityPolicy, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a policy.v1beta1.PodSecurityPolicy resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="PodSecurityPolicy-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodSecurityPolicy.ts#L52">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#PodSecurityPolicy'>PodSecurityPolicy</a></pre>
+
+
+Get the state of an existing `PodSecurityPolicy` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="PodSecurityPolicy-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodSecurityPolicy.ts#L56">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.policy.v1beta1.PodSecurityPolicy</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="PodSecurityPolicy-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="PodSecurityPolicy-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="PodSecurityPolicy-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodSecurityPolicy.ts#L19">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"policy/v1beta1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -499,11 +363,21 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="PodSecurityPolicy-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17059">property <b>kind</b></a>
+<h3 class="pdoc-member-header" id="PodSecurityPolicy-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="PodSecurityPolicy-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodSecurityPolicy.ts#L27">property <b>kind</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"PodSecurityPolicy"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -512,37 +386,106 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicy-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17065">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodSecurityPolicy.ts#L33">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 
 Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicy-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17070">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodSecurityPolicy.ts#L38">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>spec: <a href='#PodSecurityPolicySpec'>PodSecurityPolicySpec</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.policy.v1beta1.PodSecurityPolicySpec&gt;;</pre>
 
 spec defines the policy enforced.
 
 </div>
+<h3 class="pdoc-member-header" id="PodSecurityPolicy-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+</div>
 </div>
 <h2 class="pdoc-module-header" id="PodSecurityPolicyList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17077">interface <b>PodSecurityPolicyList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodSecurityPolicyList.ts#L11">class <b>PodSecurityPolicyList</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 PodSecurityPolicyList is a list of PodSecurityPolicy objects.
 
-<h3 class="pdoc-member-header" id="PodSecurityPolicyList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17084">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="PodSecurityPolicyList-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodSecurityPolicyList.ts#L56"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PodSecurityPolicyList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.policy.v1beta1.PodSecurityPolicyList, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a policy.v1beta1.PodSecurityPolicyList resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="PodSecurityPolicyList-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodSecurityPolicyList.ts#L51">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#PodSecurityPolicyList'>PodSecurityPolicyList</a></pre>
+
+
+Get the state of an existing `PodSecurityPolicyList` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="PodSecurityPolicyList-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodSecurityPolicyList.ts#L55">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.policy.v1beta1.PodSecurityPolicyList</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="PodSecurityPolicyList-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="PodSecurityPolicyList-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="PodSecurityPolicyList-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodSecurityPolicyList.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"policy/v1beta1"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -550,20 +493,30 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="PodSecurityPolicyList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17089">property <b>items</b></a>
+<h3 class="pdoc-member-header" id="PodSecurityPolicyList-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>items: <a href='#PodSecurityPolicy'>PodSecurityPolicy</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="PodSecurityPolicyList-items">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodSecurityPolicyList.ts#L23">property <b>items</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>items: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.policy.v1beta1.PodSecurityPolicy[]&gt;;</pre>
 
 items is a list of schema objects.
 
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicyList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17097">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodSecurityPolicyList.ts#L31">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"PodSecurityPolicyList"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -572,363 +525,23 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="PodSecurityPolicyList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17103">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/policy/v1beta1/PodSecurityPolicyList.ts#L37">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
 
 Standard list metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="PodSecurityPolicySpec">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17110">interface <b>PodSecurityPolicySpec</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-PodSecurityPolicySpec defines the policy enforced.
-
-<h3 class="pdoc-member-header" id="PodSecurityPolicySpec-allowPrivilegeEscalation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17115">property <b>allowPrivilegeEscalation</b></a>
+<h3 class="pdoc-member-header" id="PodSecurityPolicyList-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>allowPrivilegeEscalation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 
-allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If
-unspecified, defaults to true.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSecurityPolicySpec-allowedCapabilities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17122">property <b>allowedCapabilities</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>allowedCapabilities: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-allowedCapabilities is a list of capabilities that can be requested to add to the
-container. Capabilities in this field may be added at the pod author's discretion. You must
-not list a capability in both allowedCapabilities and requiredDropCapabilities.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSecurityPolicySpec-allowedFlexVolumes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17129">property <b>allowedFlexVolumes</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>allowedFlexVolumes: <a href='#AllowedFlexVolume'>AllowedFlexVolume</a>[];</pre>
-
-allowedFlexVolumes is a whitelist of allowed Flexvolumes.  Empty or nil indicates that all
-Flexvolumes may be used.  This parameter is effective only when the usage of the
-Flexvolumes is allowed in the "volumes" field.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSecurityPolicySpec-allowedHostPaths">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17135">property <b>allowedHostPaths</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>allowedHostPaths: <a href='#AllowedHostPath'>AllowedHostPath</a>[];</pre>
-
-allowedHostPaths is a white list of allowed host paths. Empty indicates that all host paths
-may be used.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSecurityPolicySpec-allowedProcMountTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17142">property <b>allowedProcMountTypes</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>allowedProcMountTypes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-AllowedProcMountTypes is a whitelist of allowed ProcMountTypes. Empty or nil indicates that
-only the DefaultProcMountType may be used. This requires the ProcMountType feature flag to
-be enabled.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSecurityPolicySpec-allowedUnsafeSysctls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17153">property <b>allowedUnsafeSysctls</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>allowedUnsafeSysctls: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-allowedUnsafeSysctls is a list of explicitly allowed unsafe sysctls, defaults to none. Each
-entry is either a plain sysctl name or ends in "*" in which case it is considered as a
-prefix of allowed sysctls. Single * means all unsafe sysctls are allowed. Kubelet has to
-whitelist all allowed unsafe sysctls explicitly to avoid rejection.
-
-Examples: e.g. "foo/*" allows "foo/bar", "foo/baz", etc. e.g. "foo.*" allows "foo.bar",
-"foo.baz", etc.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSecurityPolicySpec-defaultAddCapabilities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17161">property <b>defaultAddCapabilities</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>defaultAddCapabilities: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-defaultAddCapabilities is the default set of capabilities that will be added to the
-container unless the pod spec specifically drops the capability.  You may not list a
-capability in both defaultAddCapabilities and requiredDropCapabilities. Capabilities added
-here are implicitly allowed, and need not be included in the allowedCapabilities list.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSecurityPolicySpec-defaultAllowPrivilegeEscalation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17167">property <b>defaultAllowPrivilegeEscalation</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>defaultAllowPrivilegeEscalation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-defaultAllowPrivilegeEscalation controls the default setting for whether a process can gain
-more privileges than its parent process.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSecurityPolicySpec-forbiddenSysctls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17177">property <b>forbiddenSysctls</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>forbiddenSysctls: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-forbiddenSysctls is a list of explicitly forbidden sysctls, defaults to none. Each entry is
-either a plain sysctl name or ends in "*" in which case it is considered as a prefix of
-forbidden sysctls. Single * means all sysctls are forbidden.
-
-Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "foo.bar",
-"foo.baz", etc.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSecurityPolicySpec-fsGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17182">property <b>fsGroup</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>fsGroup: <a href='#FSGroupStrategyOptions'>FSGroupStrategyOptions</a>;</pre>
-
-fsGroup is the strategy that will dictate what fs group is used by the SecurityContext.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSecurityPolicySpec-hostIPC">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17187">property <b>hostIPC</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>hostIPC: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-hostIPC determines if the policy allows the use of HostIPC in the pod spec.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSecurityPolicySpec-hostNetwork">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17192">property <b>hostNetwork</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>hostNetwork: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-hostNetwork determines if the policy allows the use of HostNetwork in the pod spec.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSecurityPolicySpec-hostPID">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17197">property <b>hostPID</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>hostPID: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-hostPID determines if the policy allows the use of HostPID in the pod spec.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSecurityPolicySpec-hostPorts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17202">property <b>hostPorts</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>hostPorts: <a href='#HostPortRange'>HostPortRange</a>[];</pre>
-
-hostPorts determines which host port ranges are allowed to be exposed.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSecurityPolicySpec-privileged">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17207">property <b>privileged</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>privileged: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-privileged determines if a pod can request to be run as privileged.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSecurityPolicySpec-readOnlyRootFilesystem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17215">property <b>readOnlyRootFilesystem</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>readOnlyRootFilesystem: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-
-readOnlyRootFilesystem when set to true will force containers to run with a read only root
-file system.  If the container specifically requests to run with a non-read only root file
-system the PSP should deny the pod. If set to false the container may run with a read only
-root file system if it wishes but it will not be forced to.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSecurityPolicySpec-requiredDropCapabilities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17221">property <b>requiredDropCapabilities</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>requiredDropCapabilities: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-requiredDropCapabilities are the capabilities that will be dropped from the container.
-These are required to be dropped and cannot be added.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSecurityPolicySpec-runAsGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17228">property <b>runAsGroup</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>runAsGroup: <a href='#RunAsGroupStrategyOptions'>RunAsGroupStrategyOptions</a>;</pre>
-
-RunAsGroup is the strategy that will dictate the allowable RunAsGroup values that may be
-set. If this field is omitted, the pod's RunAsGroup can take any value. This field requires
-the RunAsGroup feature gate to be enabled.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSecurityPolicySpec-runAsUser">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17233">property <b>runAsUser</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>runAsUser: <a href='#RunAsUserStrategyOptions'>RunAsUserStrategyOptions</a>;</pre>
-
-runAsUser is the strategy that will dictate the allowable RunAsUser values that may be set.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSecurityPolicySpec-seLinux">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17238">property <b>seLinux</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>seLinux: <a href='#SELinuxStrategyOptions'>SELinuxStrategyOptions</a>;</pre>
-
-seLinux is the strategy that will dictate the allowable labels that may be set.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSecurityPolicySpec-supplementalGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17244">property <b>supplementalGroups</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>supplementalGroups: <a href='#SupplementalGroupsStrategyOptions'>SupplementalGroupsStrategyOptions</a>;</pre>
-
-supplementalGroups is the strategy that will dictate what supplemental groups are used by
-the SecurityContext.
-
-</div>
-<h3 class="pdoc-member-header" id="PodSecurityPolicySpec-volumes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17250">property <b>volumes</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>volumes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-
-volumes is a white list of allowed volume plugins. Empty indicates that no volumes may be
-used. To allow all volumes you may use '*'.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="RunAsGroupStrategyOptions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17258">interface <b>RunAsGroupStrategyOptions</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-RunAsGroupStrategyOptions defines the strategy type and any options used to create the
-strategy.
-
-<h3 class="pdoc-member-header" id="RunAsGroupStrategyOptions-ranges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17263">property <b>ranges</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>ranges: <a href='#IDRange'>IDRange</a>[];</pre>
-
-ranges are the allowed ranges of gids that may be used. If you would like to force a single
-gid then supply a single range with the same start and end. Required for MustRunAs.
-
-</div>
-<h3 class="pdoc-member-header" id="RunAsGroupStrategyOptions-rule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17268">property <b>rule</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>rule: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-rule is the strategy that will dictate the allowable RunAsGroup values that may be set.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="RunAsUserStrategyOptions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17276">interface <b>RunAsUserStrategyOptions</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-RunAsUserStrategyOptions defines the strategy type and any options used to create the
-strategy.
-
-<h3 class="pdoc-member-header" id="RunAsUserStrategyOptions-ranges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17281">property <b>ranges</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>ranges: <a href='#IDRange'>IDRange</a>[];</pre>
-
-ranges are the allowed ranges of uids that may be used. If you would like to force a single
-uid then supply a single range with the same start and end. Required for MustRunAs.
-
-</div>
-<h3 class="pdoc-member-header" id="RunAsUserStrategyOptions-rule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17286">property <b>rule</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>rule: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-rule is the strategy that will dictate the allowable RunAsUser values that may be set.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="SELinuxStrategyOptions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17293">interface <b>SELinuxStrategyOptions</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-SELinuxStrategyOptions defines the strategy type and any options used to create the strategy.
-
-<h3 class="pdoc-member-header" id="SELinuxStrategyOptions-rule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17297">property <b>rule</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>rule: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-rule is the strategy that will dictate the allowable labels that may be set.
-
-</div>
-<h3 class="pdoc-member-header" id="SELinuxStrategyOptions-seLinuxOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17303">property <b>seLinuxOptions</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>seLinuxOptions: <a href='#SELinuxOptions'>SELinuxOptions</a>;</pre>
-
-seLinuxOptions required to run as; required for MustRunAs More info:
-https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="SupplementalGroupsStrategyOptions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17311">interface <b>SupplementalGroupsStrategyOptions</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-SupplementalGroupsStrategyOptions defines the strategy type and options used to create the
-strategy.
-
-<h3 class="pdoc-member-header" id="SupplementalGroupsStrategyOptions-ranges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17317">property <b>ranges</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>ranges: <a href='#IDRange'>IDRange</a>[];</pre>
-
-ranges are the allowed ranges of supplemental groups.  If you would like to force a single
-supplemental group then supply a single range with the same start and end. Required for
-MustRunAs.
-
-</div>
-<h3 class="pdoc-member-header" id="SupplementalGroupsStrategyOptions-rule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L17323">property <b>rule</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>rule: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-rule is the strategy that will dictate what supplemental groups is used in the
-SecurityContext.
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 </div>
 </div>

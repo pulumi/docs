@@ -112,7 +112,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Log Analytics Workspace. Workspace name should include 4-63 letters, digits or ‘-‘. The ‘-‘ shouldn’t be the first or the last symbol. Changing this forces a new resource to be created.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the Log Analytics workspace is created. Changing this forces a new resource to be created.</li>
-<li><strong>retention_in_days</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The workspace data retention in days. Possible values range between 30 and 730.</li>
+<li><strong>retention_in_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The workspace data retention in days. Possible values range between 30 and 730.</li>
 <li><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Sku of the Log Analytics Workspace. Possible values are <code class="docutils literal notranslate"><span class="pre">Free</span></code>, <code class="docutils literal notranslate"><span class="pre">PerNode</span></code>, <code class="docutils literal notranslate"><span class="pre">Premium</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code>, <code class="docutils literal notranslate"><span class="pre">Standalone</span></code>, <code class="docutils literal notranslate"><span class="pre">Unlimited</span></code>, and <code class="docutils literal notranslate"><span class="pre">PerGB2018</span></code> (new Sku as of <code class="docutils literal notranslate"><span class="pre">2018-04-03</span></code>).</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
@@ -382,7 +382,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_azure.operationalinsights.get_analytics_workspace">
-<code class="descclassname">pulumi_azure.operationalinsights.</code><code class="descname">get_analytics_workspace</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.operationalinsights.get_analytics_workspace" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.operationalinsights.</code><code class="descname">get_analytics_workspace</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.operationalinsights.get_analytics_workspace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Log Analytics (formally Operational Insights) Workspace.</p>
 </dd></dl>
 

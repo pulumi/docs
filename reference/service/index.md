@@ -18,7 +18,7 @@ sign in with your GitHub or GitLab account.
 
 The Pulumi Cloud Console manages stacks by placing them within _Organizations_.
 
-When you first log in, a Pulum organization is created with the same name as your GitHub account.
+When you first log in, a Pulumi organization is created with the same name as your GitHub account.
 That organization is implied whenever you run commands like `pulumi stack init` or
 `pulumi stack select`. For example, `pulumi stack init my-devstack` will create a new stack in
 the organization associated with your GitHub account. e.g. `octocruise/my-devstack`.

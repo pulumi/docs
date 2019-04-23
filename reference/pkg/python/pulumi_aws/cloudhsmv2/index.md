@@ -277,7 +277,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.cloudhsmv2.get_cluster">
-<code class="descclassname">pulumi_aws.cloudhsmv2.</code><code class="descname">get_cluster</code><span class="sig-paren">(</span><em>cluster_id=None</em>, <em>cluster_state=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudhsmv2.get_cluster" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.cloudhsmv2.</code><code class="descname">get_cluster</code><span class="sig-paren">(</span><em>cluster_id=None</em>, <em>cluster_state=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudhsmv2.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a CloudHSM v2 cluster</p>
 </dd></dl>
 

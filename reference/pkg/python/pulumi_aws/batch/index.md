@@ -370,7 +370,7 @@ mapped to a job queue and their order.  The position of the compute environments
 in the list will dictate the order. You can associate up to 3 compute environments
 with a job queue.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the job queue.</li>
-<li><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The priority of the job queue. Job queues with a higher priority
+<li><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The priority of the job queue. Job queues with a higher priority
 are evaluated first when associated with the same compute environment.</li>
 <li><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The state of the job queue. Must be one of: <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> or <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code></li>
 </ul>
@@ -454,14 +454,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.batch.get_compute_environment">
-<code class="descclassname">pulumi_aws.batch.</code><code class="descname">get_compute_environment</code><span class="sig-paren">(</span><em>compute_environment_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.get_compute_environment" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.batch.</code><code class="descname">get_compute_environment</code><span class="sig-paren">(</span><em>compute_environment_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.get_compute_environment" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Batch Compute Environment data source allows access to details of a specific
 compute environment within AWS Batch.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.batch.get_job_queue">
-<code class="descclassname">pulumi_aws.batch.</code><code class="descname">get_job_queue</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.get_job_queue" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.batch.</code><code class="descname">get_job_queue</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.get_job_queue" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Batch Job Queue data source allows access to details of a specific
 job queue within AWS Batch.</p>
 </dd></dl>

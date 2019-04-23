@@ -124,7 +124,7 @@ Conflicts w/ <code class="docutils literal notranslate"><span class="pre">policy
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A list of tags to associate with this stack.</li>
 <li><strong>template_body</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Structure containing the template body (max size: 51,200 bytes).</li>
 <li><strong>template_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Location of a file containing the template body (max size: 460,800 bytes).</li>
-<li><strong>timeout_in_minutes</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The amount of time that can pass before the stack status becomes <code class="docutils literal notranslate"><span class="pre">CREATE_FAILED</span></code>.</li>
+<li><strong>timeout_in_minutes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of time that can pass before the stack status becomes <code class="docutils literal notranslate"><span class="pre">CREATE_FAILED</span></code>.</li>
 </ul>
 </td>
 </tr>
@@ -261,7 +261,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.cloudformation.get_export">
-<code class="descclassname">pulumi_aws.cloudformation.</code><code class="descname">get_export</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.get_export" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.cloudformation.</code><code class="descname">get_export</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.get_export" title="Permalink to this definition">¶</a></dt>
 <dd><p>The CloudFormation Export data source allows access to stack
 exports specified in the <a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html">Output</a> section of the Cloudformation Template using the optional Export Property.</p>
 <blockquote>
@@ -270,7 +270,7 @@ exports specified in the <a class="reference external" href="http://docs.aws.ama
 
 <dl class="function">
 <dt id="pulumi_aws.cloudformation.get_stack">
-<code class="descclassname">pulumi_aws.cloudformation.</code><code class="descname">get_stack</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.get_stack" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.cloudformation.</code><code class="descname">get_stack</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.get_stack" title="Permalink to this definition">¶</a></dt>
 <dd><p>The CloudFormation Stack data source allows access to stack
 outputs and other useful data including the template body.</p>
 </dd></dl>

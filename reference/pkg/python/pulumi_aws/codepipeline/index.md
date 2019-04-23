@@ -31,7 +31,6 @@
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[list] stages</p>
 <dl class="attribute">
 <dt id="pulumi_aws.codepipeline.Pipeline.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.codepipeline.Pipeline.arn" title="Permalink to this definition">¶</a></dt>

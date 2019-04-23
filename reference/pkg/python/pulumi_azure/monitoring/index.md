@@ -828,7 +828,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Metric Alert. Changing this forces a new resource to be created.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Metric Alert instance.</li>
 <li><strong>scopes</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource ID at which the metric criteria should be applied.</li>
-<li><strong>severity</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The severity of this Metric Alert. Possible values are <code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">3</span></code> and <code class="docutils literal notranslate"><span class="pre">4</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">3</span></code>.</li>
+<li><strong>severity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The severity of this Metric Alert. Possible values are <code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">3</span></code> and <code class="docutils literal notranslate"><span class="pre">4</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">3</span></code>.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 <li><strong>window_size</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The period of time that is used to monitor alert activity, represented in ISO 8601 duration format. This value must be greater than <code class="docutils literal notranslate"><span class="pre">frequency</span></code>. Possible values are <code class="docutils literal notranslate"><span class="pre">PT1M</span></code>, <code class="docutils literal notranslate"><span class="pre">PT5M</span></code>, <code class="docutils literal notranslate"><span class="pre">PT15M</span></code>, <code class="docutils literal notranslate"><span class="pre">PT30M</span></code>, <code class="docutils literal notranslate"><span class="pre">PT1H</span></code>, <code class="docutils literal notranslate"><span class="pre">PT6H</span></code>, <code class="docutils literal notranslate"><span class="pre">PT12H</span></code> and <code class="docutils literal notranslate"><span class="pre">P1D</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">PT5M</span></code>.</li>
 </ul>
@@ -1105,19 +1105,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_azure.monitoring.get_action_group">
-<code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">get_action_group</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.get_action_group" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">get_action_group</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.get_action_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access the properties of an Action Group.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.monitoring.get_diagnostic_categories">
-<code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">get_diagnostic_categories</code><span class="sig-paren">(</span><em>resource_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.get_diagnostic_categories" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">get_diagnostic_categories</code><span class="sig-paren">(</span><em>resource_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.get_diagnostic_categories" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about the Monitor Diagnostics Categories supported by an existing Resource.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.monitoring.get_log_profile">
-<code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">get_log_profile</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.get_log_profile" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">get_log_profile</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.get_log_profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access the properties of a Log Profile.</p>
 </dd></dl>
 

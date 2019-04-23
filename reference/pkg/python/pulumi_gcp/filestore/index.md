@@ -33,14 +33,6 @@ See <a class="reference external" href="https://terraform.io/docs/providers/goog
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] description
-:param pulumi.Input[dict] file_shares
-:param pulumi.Input[dict] labels
-:param pulumi.Input[str] name
-:param pulumi.Input[list] networks
-:param pulumi.Input[str] project
-:param pulumi.Input[str] tier
-:param pulumi.Input[str] zone</p>
 <dl class="method">
 <dt id="pulumi_gcp.filestore.Instance.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.filestore.Instance.translate_output_property" title="Permalink to this definition">¶</a></dt>

@@ -30,7 +30,7 @@ SNS topic to send DAX notifications to. Example:
 <code class="docutils literal notranslate"><span class="pre">arn:aws:sns:us-east-1:012345678999:my_sns_topic</span></code></li>
 <li><strong>parameter_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the parameter group to associate
 with this DAX cluster</li>
-<li><strong>replication_factor</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of nodes in the DAX cluster. A
+<li><strong>replication_factor</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of nodes in the DAX cluster. A
 replication factor of 1 will create a single-node cluster, without any read
 replicas</li>
 <li><strong>security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more VPC security groups associated

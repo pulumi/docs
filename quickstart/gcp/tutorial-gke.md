@@ -5,17 +5,37 @@ redirect_from: /quickstart/gke-hello-world.html
 
 In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubernetes Engine (GKE) on GCP. The [code for this tutorial](https://github.com/pulumi/examples/tree/master/gcp-ts-gke-hello-world) is available on GitHub.
 
-{% include gcp-gke-prereqs.md %}
+## Prerequisites
+
+1. [Install Pulumi](https://pulumi.io/install)
+1. [Install Node.js version 6 or later](https://nodejs.org/en/download/)
+1. Install a package manager for Node.js, such as [npm](https://www.npmjs.com/get-npm) or [Yarn](https://yarnpkg.com/en/docs/install).
+1. [Install Google Cloud SDK (`gcloud`)](https://cloud.google.com/sdk/docs/downloads-interactive)
+1. Configure GCP Auth
+
+    * Login using `gcloud`
+
+        ```bash
+        $ gcloud auth login
+        $ gcloud config set project <YOUR_GCP_PROJECT_HERE>
+        $ gcloud auth application-default login
+        ```
+    > Note: This auth mechanism is meant for inner loop developer
+    > workflows. If you want to run this example in an unattended service
+    > account setting, such as in CI/CD, please [follow instructions to
+    > configure your service account](./service-account.html). The
+    > service account must have the role `Kubernetes Engine Admin` / `container.admin`.
+
+
 
 ## Create a new GKE cluster {#new-gke-cluster}
 
 1.  In a new folder `gke-hello-world`, create an empty project with `pulumi new`.
 
-    This will create a base Pulumi program in TypeScript, and is great
-    recommendation to begin your journey.
+    Alternatively, the following command will create a base Pulumi program in TypeScript as well as the `gke-hello-world` folder:
 
     ```bash
-    $ pulumi new typescript --dir gke-hello-world
+    pulumi new typescript --dir gke-hello-world
     ```
 
     * Enter in a Pulumi project name, and description to detail what this
@@ -27,7 +47,7 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
     Change directories to the newly created Pulumi project.
 
     ```bash
-    $ cd gke-hello-world
+    cd gke-hello-world
     ```
 
 1. Add the required dependencies:
@@ -35,7 +55,7 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
     This installs the dependent packages [needed](https://pulumi.io/reference/how.html) for our Pulumi program.
 
 	```bash
-	$ npm install --save @pulumi/pulumi @pulumi/gcp @pulumi/kubernetes
+	npm install --save @pulumi/pulumi @pulumi/gcp @pulumi/kubernetes
 	```
 
 1. Set the required GCP configuration variables:
@@ -45,8 +65,8 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
     defaults, and differentiate between settings across several Pulumi stacks.
 
     ```bash
-    $ pulumi config set gcp:project <YOUR_GCP_PROJECT_HERE>
-    $ pulumi config set gcp:zone us-west1-a     // any valid GCP Zone here
+    pulumi config set gcp:project <YOUR_GCP_PROJECT_HERE>
+    pulumi config set gcp:zone us-west1-a     // any valid GCP Zone here
     ```
 
 1.  Open the existing file `index.ts`, and replace the contents with the following below.
@@ -120,7 +140,7 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
           name: gcp
     `;
         });
-    
+
     // Create a Kubernetes provider instance that uses our cluster from above.
     const clusterProvider = new k8s.Provider(name, {
         kubeconfig: kubeconfig,
@@ -173,7 +193,7 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
 
 Now that we have an instance of Kubernetes running, we may want to create API resources in Kubernetes to manage our workloads through Pulumi.
 
-We can do this by configuring a Pulumi provider for our newly created cluster, and instantiating a new Kubernetes resource object in our Pulumi program. The concept of a provider allows us to abstract away Kubernetes clusters in Pulumi that are indendent of their underyling cloud provider, so that you can operate on and work with your Kubernetes clusters in a standard manner.
+We can do this by configuring a Pulumi provider for our newly created cluster, and instantiating a new Kubernetes resource object in our Pulumi program. The concept of a provider allows us to abstract away Kubernetes clusters in Pulumi that are independent of their underlying cloud provider, so that you can operate on and work with your Kubernetes clusters in a standard manner.
 
 1.  Create a new Kubernetes Namespace and Deployment:
 
@@ -276,34 +296,38 @@ We can do this by configuring a Pulumi provider for our newly created cluster, a
 
 ## Access the Kubernetes Cluster using `kubectl`
 
-To access your new Kubernetes cluster using `kubectl`, we need to setup the
-`kubeconfig` file and download `kubectl`. We can leverage the Pulumi
-stack output in the CLI, as Pulumi faciliates exporting these objects for us.
+You may access your new Kubernetes cluster using `kubectl`. Install `kubectl` as follows:
 
 ```bash
-$ pulumi stack output kubeconfig > kubeconfig
-$ export KUBECONFIG=$PWD/kubeconfig
-$ export KUBERNETES_VERSION=1.11.6 && sudo curl -s -o /usr/local/bin/kubectl https://storage.googleapis.com/kubernetes-release/release/v${KUBERNETES_VERSION}/bin/linux/amd64/kubectl && sudo chmod +x /usr/local/bin/kubectl
+export KUBERNETES_VERSION=1.11.6 && sudo curl -s -o /usr/local/bin/kubectl https://storage.googleapis.com/kubernetes-release/release/v${KUBERNETES_VERSION}/bin/linux/amd64/kubectl && sudo chmod +x /usr/local/bin/kubectl
+```
 
-$ kubectl version
-$ kubectl cluster-info
-$ kubectl get nodes
+Next, we need to setup the `kubeconfig` file to configure `kubectl`. We can leverage the Pulumi
+stack output in the CLI, as Pulumi facilitates exporting these objects for us.
+
+```bash
+pulumi stack output kubeconfig > kubeconfig
+export KUBECONFIG=$PWD/kubeconfig
+
+kubectl version
+kubectl cluster-info
+kubectl get nodes
 ```
 
 We can also use the stack output to query the cluster for our newly created Deployment:
 
 ```bash
-$ kubectl get deployment $(pulumi stack output deploymentName) --namespace=$(pulumi stack output namespaceName)
-$ kubectl get service $(pulumi stack output serviceName) --namespace=$(pulumi stack output namespaceName)
+kubectl get deployment $(pulumi stack output deploymentName) --namespace=$(pulumi stack output namespaceName)
+kubectl get service $(pulumi stack output serviceName) --namespace=$(pulumi stack output namespaceName)
 ```
 
 We can also create another NGINX Deployment into the `default` namespace using
 `kubectl` natively:
 
 ```bash
-$ kubectl create deployment my-nginx --image=nginx
-$ kubectl get pods
-$ kubectl delete deployment my-nginx
+kubectl create deployment my-nginx --image=nginx
+kubectl get pods
+kubectl delete deployment my-nginx
 ```
 
 Of course, by doing so, resources are outside of Pulumi's purview, but this simply
@@ -320,16 +344,16 @@ Pulumi to aid in your transition, append the following code block to the existin
 `index.ts` file and run `pulumi up`.
 
 This is an example of how to create the standard Kubernetes Guestbook manifests in
-Pulumi using the Guestbook YAML manifests. We take the additional steps of transforming
-its properties to use the same Namespace and metadata labels that
-the NGINX stack uses, and also make its frontend service use a
+Pulumi using the [Guestbook YAML manifests][guestbook]. We take the additional
+steps of transforming its properties to use the same Namespace and metadata labels
+that the NGINX stack uses, and also make its frontend service use a
 LoadBalancer typed Service to expose it publicly.
 
 ```typescript
 // Create resources for the Kubernetes Guestbook from its YAML manifests
 const guestbook = new k8s.yaml.ConfigFile("guestbook",
     {
-        file: "https://raw.githubusercontent.com/pulumi/pulumi-kubernetes/master/examples/yaml-guestbook/yaml/guestbook.yaml",
+        file: "https://raw.githubusercontent.com/pulumi/pulumi-kubernetes/master/tests/examples/yaml-guestbook/yaml/guestbook.yaml",
         transformations: [
             (obj: any) => {
                 // Do transformations on the YAML to use the same namespace and
@@ -385,3 +409,5 @@ take Pulumi for a spin in an episode of [TGIK8s](https://github.com/heptio/tgik)
 src="https://www.youtube.com/embed/ILMK65YVSKw" frameborder="0"
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen></iframe>
+
+[guestbook]: https://raw.githubusercontent.com/pulumi/pulumi-kubernetes/master/tests/examples/yaml-guestbook/yaml/guestbook.yaml

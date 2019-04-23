@@ -33,10 +33,10 @@ export let ipAddress = server.publicIp;
 ```python
 import pulumi
 from pulumi_aws import ec2
-server = ec2.Instance('my-vm', {
+server = ec2.Instance('my-vm',
     ami='ami-7172b611',
-    instanceType='t2.micro')
-pulumi.output('ipAddress', server.publicIp)
+    instance_type='t2.micro')
+pulumi.export('ipAddress', server.public_ip)
 ```
 
 ```go

@@ -396,7 +396,7 @@ LoadBalancer typed Service to expose it publicly.
 // Create resources for the Kubernetes Guestbook from its YAML manifests
 const guestbook = new k8s.yaml.ConfigFile("guestbook",
     {
-        file: "https://raw.githubusercontent.com/pulumi/pulumi-kubernetes/master/examples/yaml-guestbook/yaml/guestbook.yaml",
+        file: "https://raw.githubusercontent.com/pulumi/pulumi-kubernetes/master/tests/examples/yaml-guestbook/yaml/guestbook.yaml",
         transformations: [
             (obj: any) => {
                 // Do transformations on the YAML to use the same namespace and
@@ -423,8 +423,8 @@ const guestbook = new k8s.yaml.ConfigFile("guestbook",
 );
 
 // Export the Guestbook public LoadBalancer endpoint
-export const guestbookPublicIP =
-	guestbook.getResourceProperty("v1/Service", "frontend", "status").apply(s => s.loadBalancer.ingress[0].ip);
+export const guestbookPublicHostname =
+	guestbook.getResourceProperty("v1/Service", "frontend", "status").apply(s => s.loadBalancer.ingress[0].hostname);
 ```
 
 ## Clean up

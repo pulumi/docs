@@ -1,21 +1,23 @@
 #!/bin/bash
-# Usage: update_repos 
+# Usage: update_repos
 
 set -o nounset -o errexit -o pipefail
 
 TOOLS_REPOS=(
     "pulumi"
     "pulumi-aws"
-    "pulumi-aws-infra"
-    "pulumi-aws-serverless"
+    "pulumi-awsx"
     "pulumi-azure"
     "pulumi-azure-serverless"
     "pulumi-cloud"
+    "pulumi-cloudflare"
     "pulumi-docker"
     "pulumi-eks"
+    "pulumi-f5bigip"
     "pulumi-gcp"
     "pulumi-kubernetes"
     "pulumi-openstack"
+    "pulumi-packet"
     "pulumi-random"
     "pulumi-terraform"
     "pulumi-vsphere"
@@ -34,5 +36,5 @@ do
     LATEST_RELEASE=$(git describe --tags `git rev-list --max-count=1 --tags --not --tags='*-dev'`)
     git -c advice.detachedHead=false checkout $LATEST_RELEASE >/dev/null
     echo -e "\033[0;96m$LATEST_RELEASE\033[0m"
-    popd . >/dev/null 2>&1
+    popd >/dev/null 2>&1
 done

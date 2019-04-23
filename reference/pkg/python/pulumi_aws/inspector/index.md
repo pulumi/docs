@@ -87,7 +87,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>duration</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The duration of the inspector run.</li>
+<li><strong>duration</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The duration of the inspector run.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the assessment template.</li>
 <li><strong>rules_package_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The rules to be used during the run.</li>
 <li><strong>target_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The assessment target ARN to attach the template to.</li>
@@ -255,7 +255,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.inspector.get_rules_packages">
-<code class="descclassname">pulumi_aws.inspector.</code><code class="descname">get_rules_packages</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.inspector.get_rules_packages" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.inspector.</code><code class="descname">get_rules_packages</code><span class="sig-paren">(</span><em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.inspector.get_rules_packages" title="Permalink to this definition">¶</a></dt>
 <dd><p>The AWS Inspector Rules Packages data source allows access to the list of AWS
 Inspector Rules Packages which can be used by AWS Inspector within the region
 configured in the provider.</p>

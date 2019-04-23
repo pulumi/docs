@@ -14,165 +14,88 @@ title: Module autoscaling/v2beta2
 <div class="expanded" markdown="1">
 <h2 class="pdoc-module-header toggleButton" title="Click to hide Index">Index ▾</h2>
 <div class="pdoc-module-contents" markdown="1">
-* <a href="#isCrossVersionObjectReference">function isCrossVersionObjectReference</a>
-* <a href="#isHorizontalPodAutoscaler">function isHorizontalPodAutoscaler</a>
-* <a href="#isHorizontalPodAutoscalerList">function isHorizontalPodAutoscalerList</a>
-* <a href="#CrossVersionObjectReference">interface CrossVersionObjectReference</a>
-* <a href="#ExternalMetricSource">interface ExternalMetricSource</a>
-* <a href="#ExternalMetricStatus">interface ExternalMetricStatus</a>
-* <a href="#HorizontalPodAutoscaler">interface HorizontalPodAutoscaler</a>
-* <a href="#HorizontalPodAutoscalerCondition">interface HorizontalPodAutoscalerCondition</a>
-* <a href="#HorizontalPodAutoscalerList">interface HorizontalPodAutoscalerList</a>
-* <a href="#HorizontalPodAutoscalerSpec">interface HorizontalPodAutoscalerSpec</a>
-* <a href="#HorizontalPodAutoscalerStatus">interface HorizontalPodAutoscalerStatus</a>
-* <a href="#MetricIdentifier">interface MetricIdentifier</a>
-* <a href="#MetricSpec">interface MetricSpec</a>
-* <a href="#MetricStatus">interface MetricStatus</a>
-* <a href="#MetricTarget">interface MetricTarget</a>
-* <a href="#MetricValueStatus">interface MetricValueStatus</a>
-* <a href="#ObjectMetricSource">interface ObjectMetricSource</a>
-* <a href="#ObjectMetricStatus">interface ObjectMetricStatus</a>
-* <a href="#PodsMetricSource">interface PodsMetricSource</a>
-* <a href="#PodsMetricStatus">interface PodsMetricStatus</a>
-* <a href="#ResourceMetricSource">interface ResourceMetricSource</a>
-* <a href="#ResourceMetricStatus">interface ResourceMetricStatus</a>
+* <a href="#HorizontalPodAutoscaler">class HorizontalPodAutoscaler</a>
+* <a href="#HorizontalPodAutoscalerList">class HorizontalPodAutoscalerList</a>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts">types/input.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/autoscaling/v2beta2/HorizontalPodAutoscaler.ts">autoscaling/v2beta2/HorizontalPodAutoscaler.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/autoscaling/v2beta2/HorizontalPodAutoscalerList.ts">autoscaling/v2beta2/HorizontalPodAutoscalerList.ts</a> 
 </div>
 </div>
 </div>
 
 
-<h2 class="pdoc-module-header" id="isCrossVersionObjectReference">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L6709">function <b>isCrossVersionObjectReference</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isCrossVersionObjectReference(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isHorizontalPodAutoscaler">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L6791">function <b>isHorizontalPodAutoscaler</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isHorizontalPodAutoscaler(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="isHorizontalPodAutoscalerList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L6860">function <b>isHorizontalPodAutoscalerList</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isHorizontalPodAutoscalerList(o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-</div>
-<h2 class="pdoc-module-header" id="CrossVersionObjectReference">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6322">interface <b>CrossVersionObjectReference</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-CrossVersionObjectReference contains enough information to let you identify the referred
-resource.
-
-<h3 class="pdoc-member-header" id="CrossVersionObjectReference-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6326">property <b>apiVersion</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-API version of the referent
-
-</div>
-<h3 class="pdoc-member-header" id="CrossVersionObjectReference-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6332">property <b>kind</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Kind of the referent; More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds"
-
-</div>
-<h3 class="pdoc-member-header" id="CrossVersionObjectReference-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6337">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Name of the referent; More info: http://kubernetes.io/docs/user-guide/identifiers#names
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ExternalMetricSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6346">interface <b>ExternalMetricSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ExternalMetricSource indicates how to scale on a metric not associated with any Kubernetes
-object (for example length of queue in cloud messaging service, or QPS from loadbalancer
-running outside of cluster).
-
-<h3 class="pdoc-member-header" id="ExternalMetricSource-metric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6350">property <b>metric</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metric: <a href='#MetricIdentifier'>MetricIdentifier</a>;</pre>
-
-metric identifies the target metric by name and selector
-
-</div>
-<h3 class="pdoc-member-header" id="ExternalMetricSource-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6355">property <b>target</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>target: <a href='#MetricTarget'>MetricTarget</a>;</pre>
-
-target specifies the target value for the given metric
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ExternalMetricStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6363">interface <b>ExternalMetricStatus</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ExternalMetricStatus indicates the current value of a global metric not associated with any
-Kubernetes object.
-
-<h3 class="pdoc-member-header" id="ExternalMetricStatus-current">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6367">property <b>current</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>current: <a href='#MetricValueStatus'>MetricValueStatus</a>;</pre>
-
-current contains the current value for the given metric
-
-</div>
-<h3 class="pdoc-member-header" id="ExternalMetricStatus-metric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6372">property <b>metric</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metric: <a href='#MetricIdentifier'>MetricIdentifier</a>;</pre>
-
-metric identifies the target metric by name and selector
-
-</div>
-</div>
 <h2 class="pdoc-module-header" id="HorizontalPodAutoscaler">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6381">interface <b>HorizontalPodAutoscaler</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/autoscaling/v2beta2/HorizontalPodAutoscaler.ts#L13">class <b>HorizontalPodAutoscaler</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 HorizontalPodAutoscaler is the configuration for a horizontal pod autoscaler, which
 automatically manages the replica count of any resource implementing the scale subresource
 based on the metrics specified.
 
-<h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6388">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/autoscaling/v2beta2/HorizontalPodAutoscaler.ts#L64"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> HorizontalPodAutoscaler(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.autoscaling.v2beta2.HorizontalPodAutoscaler, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a autoscaling.v2beta2.HorizontalPodAutoscaler resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/autoscaling/v2beta2/HorizontalPodAutoscaler.ts#L59">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#HorizontalPodAutoscaler'>HorizontalPodAutoscaler</a></pre>
+
+
+Get the state of an existing `HorizontalPodAutoscaler` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/autoscaling/v2beta2/HorizontalPodAutoscaler.ts#L63">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.autoscaling.v2beta2.HorizontalPodAutoscaler</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/autoscaling/v2beta2/HorizontalPodAutoscaler.ts#L20">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"autoscaling/v2beta2"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -180,11 +103,21 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6396">property <b>kind</b></a>
+<h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-kind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/autoscaling/v2beta2/HorizontalPodAutoscaler.ts#L28">property <b>kind</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"HorizontalPodAutoscaler"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -193,101 +126,116 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6402">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/autoscaling/v2beta2/HorizontalPodAutoscaler.ts#L34">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ObjectMeta'>ObjectMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
 
 metadata is the standard object metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6408">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/autoscaling/v2beta2/HorizontalPodAutoscaler.ts#L40">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>spec: <a href='#HorizontalPodAutoscalerSpec'>HorizontalPodAutoscalerSpec</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.autoscaling.v2beta2.HorizontalPodAutoscalerSpec&gt;;</pre>
 
 spec is the specification for the behaviour of the autoscaler. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status.
 
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6413">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/autoscaling/v2beta2/HorizontalPodAutoscaler.ts#L45">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>status: <a href='#HorizontalPodAutoscalerStatus'>HorizontalPodAutoscalerStatus</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>status: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.autoscaling.v2beta2.HorizontalPodAutoscalerStatus&gt;;</pre>
 
 status is the current information about the autoscaler.
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="HorizontalPodAutoscalerCondition">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6421">interface <b>HorizontalPodAutoscalerCondition</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-HorizontalPodAutoscalerCondition describes the state of a HorizontalPodAutoscaler at a
-certain point.
-
-<h3 class="pdoc-member-header" id="HorizontalPodAutoscalerCondition-lastTransitionTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6425">property <b>lastTransitionTime</b></a>
+<h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>lastTransitionTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 
-lastTransitionTime is the last time the condition transitioned from one status to another
-
-</div>
-<h3 class="pdoc-member-header" id="HorizontalPodAutoscalerCondition-message">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6430">property <b>message</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-message is a human-readable explanation containing details about the transition
-
-</div>
-<h3 class="pdoc-member-header" id="HorizontalPodAutoscalerCondition-reason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6435">property <b>reason</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>reason: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-reason is the reason for the condition's last transition.
-
-</div>
-<h3 class="pdoc-member-header" id="HorizontalPodAutoscalerCondition-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6440">property <b>status</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-status is the status of the condition (True, False, Unknown)
-
-</div>
-<h3 class="pdoc-member-header" id="HorizontalPodAutoscalerCondition-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6445">property <b>type</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-type describes the current condition
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HorizontalPodAutoscalerList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6452">interface <b>HorizontalPodAutoscalerList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/autoscaling/v2beta2/HorizontalPodAutoscalerList.ts#L11">class <b>HorizontalPodAutoscalerList</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 HorizontalPodAutoscalerList is a list of horizontal pod autoscaler objects.
 
-<h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6459">property <b>apiVersion</b></a>
+<h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/autoscaling/v2beta2/HorizontalPodAutoscalerList.ts#L55"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>apiVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> HorizontalPodAutoscalerList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: inputApi.autoscaling.v2beta2.HorizontalPodAutoscalerList, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+
+
+Create a autoscaling.v2beta2.HorizontalPodAutoscalerList resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+</div>
+<h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/autoscaling/v2beta2/HorizontalPodAutoscalerList.ts#L50">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#HorizontalPodAutoscalerList'>HorizontalPodAutoscalerList</a></pre>
+
+
+Get the state of an existing `HorizontalPodAutoscalerList` resource, as identified by `id`.
+Typically this ID  is of the form <namespace>/<name>; if <namespace> is omitted, then (per
+Kubernetes convention) the ID becomes default/<name>.
+
+Pulumi will keep track of this resource using `name` as the Pulumi ID.
+
+</div>
+<h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-getInputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/autoscaling/v2beta2/HorizontalPodAutoscalerList.ts#L54">method <b>getInputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.autoscaling.v2beta2.HorizontalPodAutoscalerList</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-apiVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/autoscaling/v2beta2/HorizontalPodAutoscalerList.ts#L18">property <b>apiVersion</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"autoscaling/v2beta2"</span>&gt;;</pre>
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
@@ -295,20 +243,30 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
-<h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6464">property <b>items</b></a>
+<h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>items: <a href='#HorizontalPodAutoscaler'>HorizontalPodAutoscaler</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-items">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/autoscaling/v2beta2/HorizontalPodAutoscalerList.ts#L23">property <b>items</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>items: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.autoscaling.v2beta2.HorizontalPodAutoscaler[]&gt;;</pre>
 
 items is the list of horizontal pod autoscaler objects.
 
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6472">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/autoscaling/v2beta2/HorizontalPodAutoscalerList.ts#L31">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"HorizontalPodAutoscalerList"</span>&gt;;</pre>
 
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
@@ -317,554 +275,22 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6477">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/autoscaling/v2beta2/HorizontalPodAutoscalerList.ts#L36">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metadata: <a href='#ListMeta'>ListMeta</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
 
 metadata is the standard list metadata.
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="HorizontalPodAutoscalerSpec">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6485">interface <b>HorizontalPodAutoscalerSpec</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-HorizontalPodAutoscalerSpec describes the desired functionality of the
-HorizontalPodAutoscaler.
-
-<h3 class="pdoc-member-header" id="HorizontalPodAutoscalerSpec-maxReplicas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6490">property <b>maxReplicas</b></a>
+<h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>maxReplicas: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
 
-maxReplicas is the upper limit for the number of replicas to which the autoscaler can scale
-up. It cannot be less that minReplicas.
-
-</div>
-<h3 class="pdoc-member-header" id="HorizontalPodAutoscalerSpec-metrics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6501">property <b>metrics</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metrics: <a href='#MetricSpec'>MetricSpec</a>[];</pre>
-
-metrics contains the specifications for which to use to calculate the desired replica count
-(the maximum replica count across all metrics will be used).  The desired replica count is
-calculated multiplying the ratio between the target value and the current value by the
-current number of pods.  Ergo, metrics used must decrease as the pod count is increased,
-and vice-versa.  See the individual metric source types for more information about how each
-type of metric must respond. If not set, the default metric will be set to 80% average CPU
-utilization.
-
-</div>
-<h3 class="pdoc-member-header" id="HorizontalPodAutoscalerSpec-minReplicas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6507">property <b>minReplicas</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>minReplicas: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-minReplicas is the lower limit for the number of replicas to which the autoscaler can scale
-down. It defaults to 1 pod.
-
-</div>
-<h3 class="pdoc-member-header" id="HorizontalPodAutoscalerSpec-scaleTargetRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6513">property <b>scaleTargetRef</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>scaleTargetRef: <a href='#CrossVersionObjectReference'>CrossVersionObjectReference</a>;</pre>
-
-scaleTargetRef points to the target resource to scale, and is used to the pods for which
-metrics should be collected, as well as to actually change the replica count.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="HorizontalPodAutoscalerStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6520">interface <b>HorizontalPodAutoscalerStatus</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-HorizontalPodAutoscalerStatus describes the current status of a horizontal pod autoscaler.
-
-<h3 class="pdoc-member-header" id="HorizontalPodAutoscalerStatus-conditions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6525">property <b>conditions</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>conditions: <a href='#HorizontalPodAutoscalerCondition'>HorizontalPodAutoscalerCondition</a>[];</pre>
-
-conditions is the set of conditions required for this autoscaler to scale its target, and
-indicates whether or not those conditions are met.
-
-</div>
-<h3 class="pdoc-member-header" id="HorizontalPodAutoscalerStatus-currentMetrics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6530">property <b>currentMetrics</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>currentMetrics: <a href='#MetricStatus'>MetricStatus</a>[];</pre>
-
-currentMetrics is the last read state of the metrics used by this autoscaler.
-
-</div>
-<h3 class="pdoc-member-header" id="HorizontalPodAutoscalerStatus-currentReplicas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6536">property <b>currentReplicas</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>currentReplicas: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-currentReplicas is current number of replicas of pods managed by this autoscaler, as last
-seen by the autoscaler.
-
-</div>
-<h3 class="pdoc-member-header" id="HorizontalPodAutoscalerStatus-desiredReplicas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6542">property <b>desiredReplicas</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>desiredReplicas: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-desiredReplicas is the desired number of replicas of pods managed by this autoscaler, as
-last calculated by the autoscaler.
-
-</div>
-<h3 class="pdoc-member-header" id="HorizontalPodAutoscalerStatus-lastScaleTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6548">property <b>lastScaleTime</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>lastScaleTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-lastScaleTime is the last time the HorizontalPodAutoscaler scaled the number of pods, used
-by the autoscaler to control how often the number of pods is changed.
-
-</div>
-<h3 class="pdoc-member-header" id="HorizontalPodAutoscalerStatus-observedGeneration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6553">property <b>observedGeneration</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>observedGeneration: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-observedGeneration is the most recent generation observed by this autoscaler.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="MetricIdentifier">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6560">interface <b>MetricIdentifier</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-MetricIdentifier defines the name and optionally selector for a metric
-
-<h3 class="pdoc-member-header" id="MetricIdentifier-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6564">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-name is the name of the given metric
-
-</div>
-<h3 class="pdoc-member-header" id="MetricIdentifier-selector">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6571">property <b>selector</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>selector: <a href='#LabelSelector'>LabelSelector</a>;</pre>
-
-selector is the string-encoded form of a standard kubernetes label selector for the given
-metric When set, it is passed as an additional parameter to the metrics server for more
-specific metrics scoping. When unset, just the metricName will be used to gather metrics.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="MetricSpec">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6579">interface <b>MetricSpec</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-MetricSpec specifies how to scale based on a single metric (only `type` and one other
-matching field should be set at once).
-
-<h3 class="pdoc-member-header" id="MetricSpec-external">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6586">property <b>external</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>external: <a href='#ExternalMetricSource'>ExternalMetricSource</a>;</pre>
-
-external refers to a global metric that is not associated with any Kubernetes object. It
-allows autoscaling based on information coming from components running outside of cluster
-(for example length of queue in cloud messaging service, or QPS from loadbalancer running
-outside of cluster).
-
-</div>
-<h3 class="pdoc-member-header" id="MetricSpec-object">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6592">property <b>object</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>object: <a href='#ObjectMetricSource'>ObjectMetricSource</a>;</pre>
-
-object refers to a metric describing a single kubernetes object (for example,
-hits-per-second on an Ingress object).
-
-</div>
-<h3 class="pdoc-member-header" id="MetricSpec-pods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6599">property <b>pods</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>pods: <a href='#PodsMetricSource'>PodsMetricSource</a>;</pre>
-
-pods refers to a metric describing each pod in the current scale target (for example,
-transactions-processed-per-second).  The values will be averaged together before being
-compared to the target value.
-
-</div>
-<h3 class="pdoc-member-header" id="MetricSpec-resource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6607">property <b>resource</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>resource: <a href='#ResourceMetricSource'>ResourceMetricSource</a>;</pre>
-
-resource refers to a resource metric (such as those specified in requests and limits) known
-to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such
-metrics are built in to Kubernetes, and have special scaling options on top of those
-available to normal per-pod metrics using the "pods" source.
-
-</div>
-<h3 class="pdoc-member-header" id="MetricSpec-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6613">property <b>type</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-type is the type of metric source.  It should be one of "Object", "Pods" or "Resource",
-each mapping to a matching field in the object.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="MetricStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6620">interface <b>MetricStatus</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-MetricStatus describes the last-read state of a single metric.
-
-<h3 class="pdoc-member-header" id="MetricStatus-external">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6627">property <b>external</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>external: <a href='#ExternalMetricStatus'>ExternalMetricStatus</a>;</pre>
-
-external refers to a global metric that is not associated with any Kubernetes object. It
-allows autoscaling based on information coming from components running outside of cluster
-(for example length of queue in cloud messaging service, or QPS from loadbalancer running
-outside of cluster).
-
-</div>
-<h3 class="pdoc-member-header" id="MetricStatus-object">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6633">property <b>object</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>object: <a href='#ObjectMetricStatus'>ObjectMetricStatus</a>;</pre>
-
-object refers to a metric describing a single kubernetes object (for example,
-hits-per-second on an Ingress object).
-
-</div>
-<h3 class="pdoc-member-header" id="MetricStatus-pods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6640">property <b>pods</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>pods: <a href='#PodsMetricStatus'>PodsMetricStatus</a>;</pre>
-
-pods refers to a metric describing each pod in the current scale target (for example,
-transactions-processed-per-second).  The values will be averaged together before being
-compared to the target value.
-
-</div>
-<h3 class="pdoc-member-header" id="MetricStatus-resource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6648">property <b>resource</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>resource: <a href='#ResourceMetricStatus'>ResourceMetricStatus</a>;</pre>
-
-resource refers to a resource metric (such as those specified in requests and limits) known
-to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such
-metrics are built in to Kubernetes, and have special scaling options on top of those
-available to normal per-pod metrics using the "pods" source.
-
-</div>
-<h3 class="pdoc-member-header" id="MetricStatus-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6654">property <b>type</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-type is the type of metric source.  It will be one of "Object", "Pods" or "Resource", each
-corresponds to a matching field in the object.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="MetricTarget">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6662">interface <b>MetricTarget</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-MetricTarget defines the target value, average value, or average utilization of a specific
-metric
-
-<h3 class="pdoc-member-header" id="MetricTarget-averageUtilization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6668">property <b>averageUtilization</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>averageUtilization: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-averageUtilization is the target value of the average of the resource metric across all
-relevant pods, represented as a percentage of the requested value of the resource for the
-pods. Currently only valid for Resource metric source type
-
-</div>
-<h3 class="pdoc-member-header" id="MetricTarget-averageValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6674">property <b>averageValue</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>averageValue: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-averageValue is the target value of the average of the metric across all relevant pods (as
-a quantity)
-
-</div>
-<h3 class="pdoc-member-header" id="MetricTarget-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6679">property <b>type</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-type represents whether the metric type is Utilization, Value, or AverageValue
-
-</div>
-<h3 class="pdoc-member-header" id="MetricTarget-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6684">property <b>value</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-value is the target value of the metric (as a quantity).
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="MetricValueStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6691">interface <b>MetricValueStatus</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-MetricValueStatus holds the current value for a metric
-
-<h3 class="pdoc-member-header" id="MetricValueStatus-averageUtilization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6697">property <b>averageUtilization</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>averageUtilization: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-
-currentAverageUtilization is the current value of the average of the resource metric across
-all relevant pods, represented as a percentage of the requested value of the resource for
-the pods.
-
-</div>
-<h3 class="pdoc-member-header" id="MetricValueStatus-averageValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6703">property <b>averageValue</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>averageValue: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-averageValue is the current value of the average of the metric across all relevant pods (as
-a quantity)
-
-</div>
-<h3 class="pdoc-member-header" id="MetricValueStatus-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6708">property <b>value</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-value is the current value of the metric (as a quantity).
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ObjectMetricSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6716">interface <b>ObjectMetricSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ObjectMetricSource indicates how to scale on a metric describing a kubernetes object (for
-example, hits-per-second on an Ingress object).
-
-<h3 class="pdoc-member-header" id="ObjectMetricSource-describedObject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6718">property <b>describedObject</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>describedObject: <a href='#CrossVersionObjectReference'>CrossVersionObjectReference</a>;</pre>
-</div>
-<h3 class="pdoc-member-header" id="ObjectMetricSource-metric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6723">property <b>metric</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metric: <a href='#MetricIdentifier'>MetricIdentifier</a>;</pre>
-
-metric identifies the target metric by name and selector
-
-</div>
-<h3 class="pdoc-member-header" id="ObjectMetricSource-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6728">property <b>target</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>target: <a href='#MetricTarget'>MetricTarget</a>;</pre>
-
-target specifies the target value for the given metric
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ObjectMetricStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6736">interface <b>ObjectMetricStatus</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ObjectMetricStatus indicates the current value of a metric describing a kubernetes object
-(for example, hits-per-second on an Ingress object).
-
-<h3 class="pdoc-member-header" id="ObjectMetricStatus-current">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6740">property <b>current</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>current: <a href='#MetricValueStatus'>MetricValueStatus</a>;</pre>
-
-current contains the current value for the given metric
-
-</div>
-<h3 class="pdoc-member-header" id="ObjectMetricStatus-describedObject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6743">property <b>describedObject</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>describedObject: <a href='#CrossVersionObjectReference'>CrossVersionObjectReference</a>;</pre>
-</div>
-<h3 class="pdoc-member-header" id="ObjectMetricStatus-metric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6748">property <b>metric</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metric: <a href='#MetricIdentifier'>MetricIdentifier</a>;</pre>
-
-metric identifies the target metric by name and selector
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="PodsMetricSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6757">interface <b>PodsMetricSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-PodsMetricSource indicates how to scale on a metric describing each pod in the current scale
-target (for example, transactions-processed-per-second). The values will be averaged together
-before being compared to the target value.
-
-<h3 class="pdoc-member-header" id="PodsMetricSource-metric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6761">property <b>metric</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metric: <a href='#MetricIdentifier'>MetricIdentifier</a>;</pre>
-
-metric identifies the target metric by name and selector
-
-</div>
-<h3 class="pdoc-member-header" id="PodsMetricSource-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6766">property <b>target</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>target: <a href='#MetricTarget'>MetricTarget</a>;</pre>
-
-target specifies the target value for the given metric
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="PodsMetricStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6774">interface <b>PodsMetricStatus</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-PodsMetricStatus indicates the current value of a metric describing each pod in the current
-scale target (for example, transactions-processed-per-second).
-
-<h3 class="pdoc-member-header" id="PodsMetricStatus-current">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6778">property <b>current</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>current: <a href='#MetricValueStatus'>MetricValueStatus</a>;</pre>
-
-current contains the current value for the given metric
-
-</div>
-<h3 class="pdoc-member-header" id="PodsMetricStatus-metric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6783">property <b>metric</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>metric: <a href='#MetricIdentifier'>MetricIdentifier</a>;</pre>
-
-metric identifies the target metric by name and selector
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ResourceMetricSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6795">interface <b>ResourceMetricSource</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ResourceMetricSource indicates how to scale on a resource metric known to Kubernetes, as
-specified in requests and limits, describing each pod in the current scale target (e.g. CPU
-or memory).  The values will be averaged together before being compared to the target.  Such
-metrics are built in to Kubernetes, and have special scaling options on top of those
-available to normal per-pod metrics using the "pods" source.  Only one "target" type should
-be set.
-
-<h3 class="pdoc-member-header" id="ResourceMetricSource-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6799">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-name is the name of the resource in question.
-
-</div>
-<h3 class="pdoc-member-header" id="ResourceMetricSource-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6804">property <b>target</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>target: <a href='#MetricTarget'>MetricTarget</a>;</pre>
-
-target specifies the target value for the given metric
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ResourceMetricStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6814">interface <b>ResourceMetricStatus</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-ResourceMetricStatus indicates the current value of a resource metric known to Kubernetes, as
-specified in requests and limits, describing each pod in the current scale target (e.g. CPU
-or memory).  Such metrics are built in to Kubernetes, and have special scaling options on top
-of those available to normal per-pod metrics using the "pods" source.
-
-<h3 class="pdoc-member-header" id="ResourceMetricStatus-current">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6818">property <b>current</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>current: <a href='#MetricValueStatus'>MetricValueStatus</a>;</pre>
-
-current contains the current value for the given metric
-
-</div>
-<h3 class="pdoc-member-header" id="ResourceMetricStatus-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6823">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Name is the name of the resource in question.
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 </div>
 </div>

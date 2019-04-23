@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 set -o errexit -o pipefail
 set -x
@@ -7,6 +7,7 @@ PACKAGES=(
   "pulumi"
   "pulumi_aws"
   "pulumi_azure"
+  "pulumi_cloudflare"
   "pulumi_gcp"
   "pulumi_random"
   "pulumi_vsphere"

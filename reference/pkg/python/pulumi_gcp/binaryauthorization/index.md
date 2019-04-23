@@ -27,10 +27,6 @@ See <a class="reference external" href="https://terraform.io/docs/providers/goog
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[dict] attestation_authority_note
-:param pulumi.Input[str] description
-:param pulumi.Input[str] name
-:param pulumi.Input[str] project</p>
 <dl class="method">
 <dt id="pulumi_gcp.binaryauthorization.Attestor.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.binaryauthorization.Attestor.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -98,11 +94,6 @@ See <a class="reference external" href="https://terraform.io/docs/providers/goog
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[list] admission_whitelist_patterns
-:param pulumi.Input[list] cluster_admission_rules
-:param pulumi.Input[dict] default_admission_rule
-:param pulumi.Input[str] description
-:param pulumi.Input[str] project</p>
 <dl class="method">
 <dt id="pulumi_gcp.binaryauthorization.Policy.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.binaryauthorization.Policy.translate_output_property" title="Permalink to this definition">¶</a></dt>

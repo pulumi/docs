@@ -82,3 +82,13 @@ to the constructor of `new kubernetes.Provider` to construct a specific instance
 * `namespace`: (Optional) Override the namespace to use. This works with both kubeconfig files that
   are taken from the system, and those that are supplied with the `kubeconfig` configuration
   variable.
+
+## Pulumi Service Dashboard Links
+
+Each Kubernetes resource managed by Pulumi will have a link on the corresponding Pulumi Service webpage
+to view the Kubernetes Dashboard page for that resource. These links are only valid after the following
+prerequisite steps are taken:
+
+1. Install the [Kubernetes Dashboard](https://github.com/kubernetes/dashboard).
+1. Use `kubectl proxy` to expose the Dashboard on `localhost`.
+1. [Authenticate](https://github.com/kubernetes/dashboard/wiki/Access-control#authentication) to the Dashboard.

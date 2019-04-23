@@ -296,25 +296,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_azure.core.get_client_config">
-<code class="descclassname">pulumi_azure.core.</code><code class="descname">get_client_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.get_client_config" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.core.</code><code class="descname">get_client_config</code><span class="sig-paren">(</span><em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.get_client_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access the configuration of the AzureRM provider.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.core.get_resource_group">
-<code class="descclassname">pulumi_azure.core.</code><code class="descname">get_resource_group</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.get_resource_group" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.core.</code><code class="descname">get_resource_group</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.get_resource_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Resource Group.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.core.get_subscription">
-<code class="descclassname">pulumi_azure.core.</code><code class="descname">get_subscription</code><span class="sig-paren">(</span><em>subscription_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.get_subscription" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.core.</code><code class="descname">get_subscription</code><span class="sig-paren">(</span><em>subscription_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.get_subscription" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Subscription.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.core.get_subscriptions">
-<code class="descclassname">pulumi_azure.core.</code><code class="descname">get_subscriptions</code><span class="sig-paren">(</span><em>display_name_contains=None</em>, <em>display_name_prefix=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.get_subscriptions" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.core.</code><code class="descname">get_subscriptions</code><span class="sig-paren">(</span><em>display_name_contains=None</em>, <em>display_name_prefix=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.get_subscriptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about all the Subscriptions currently available.</p>
 </dd></dl>
 

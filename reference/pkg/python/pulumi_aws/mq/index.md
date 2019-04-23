@@ -327,7 +327,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.mq.get_broker">
-<code class="descclassname">pulumi_aws.mq.</code><code class="descname">get_broker</code><span class="sig-paren">(</span><em>broker_id=None</em>, <em>broker_name=None</em>, <em>logs=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.get_broker" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.mq.</code><code class="descname">get_broker</code><span class="sig-paren">(</span><em>broker_id=None</em>, <em>broker_name=None</em>, <em>logs=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.get_broker" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a MQ Broker.</p>
 </dd></dl>
 

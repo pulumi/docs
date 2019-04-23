@@ -2,18 +2,17 @@
 <span id="vpnaas"></span><h1>vpnaas<a class="headerlink" href="#module-pulumi_openstack.vpnaas" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_openstack.vpnaas.EndpointGroup">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.vpnaas.</code><code class="descname">EndpointGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>endpoints=None</em>, <em>name=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>type=None</em>, <em>value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.vpnaas.EndpointGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.vpnaas.</code><code class="descname">EndpointGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>endpoints=None</em>, <em>name=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>type=None</em>, <em>value_specs=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.vpnaas.EndpointGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Neutron Endpoint Group resource within OpenStack.</p>
-<p>:param str <strong>name</strong>: The name of the resource.
-:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
-:param pulumi.Input[str] description: The human-readable description for the group.</p>
-<blockquote>
-<div>Changing this updates the description of the existing group.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The human-readable description for the group.
+Changing this updates the description of the existing group.</li>
 <li><strong>endpoints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of endpoints of the same type, for the endpoint group. The values will depend on the type.
 Changing this creates a new group.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the group. Changing this updates the name of
@@ -124,18 +123,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.vpnaas.IkePolicy">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.vpnaas.</code><code class="descname">IkePolicy</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>auth_algorithm=None</em>, <em>description=None</em>, <em>encryption_algorithm=None</em>, <em>ike_version=None</em>, <em>lifetimes=None</em>, <em>name=None</em>, <em>pfs=None</em>, <em>phase1_negotiation_mode=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.vpnaas.IkePolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.vpnaas.</code><code class="descname">IkePolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auth_algorithm=None</em>, <em>description=None</em>, <em>encryption_algorithm=None</em>, <em>ike_version=None</em>, <em>lifetimes=None</em>, <em>name=None</em>, <em>pfs=None</em>, <em>phase1_negotiation_mode=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.vpnaas.IkePolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Neutron IKE policy resource within OpenStack.</p>
-<p>:param str <strong>name</strong>: The name of the resource.
-:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
-:param pulumi.Input[str] auth_algorithm: The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512.</p>
-<blockquote>
-<div>Default is sha1. Changing this updates the algorithm of the existing policy.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>auth_algorithm</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512.
+Default is sha1. Changing this updates the algorithm of the existing policy.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The human-readable description for the policy.
 Changing this updates the description of the existing policy.</li>
 <li><strong>encryption_algorithm</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The encryption algorithm. Valid values are 3des, aes-128, aes-192 and so on.
@@ -296,18 +294,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.vpnaas.IpSecPolicy">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.vpnaas.</code><code class="descname">IpSecPolicy</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>auth_algorithm=None</em>, <em>description=None</em>, <em>encapsulation_mode=None</em>, <em>encryption_algorithm=None</em>, <em>lifetimes=None</em>, <em>name=None</em>, <em>pfs=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>transform_protocol=None</em>, <em>value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.vpnaas.IpSecPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.vpnaas.</code><code class="descname">IpSecPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auth_algorithm=None</em>, <em>description=None</em>, <em>encapsulation_mode=None</em>, <em>encryption_algorithm=None</em>, <em>lifetimes=None</em>, <em>name=None</em>, <em>pfs=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>transform_protocol=None</em>, <em>value_specs=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.vpnaas.IpSecPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Neutron IPSec policy resource within OpenStack.</p>
-<p>:param str <strong>name</strong>: The name of the resource.
-:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
-:param pulumi.Input[str] auth_algorithm: The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512.</p>
-<blockquote>
-<div>Default is sha1. Changing this updates the algorithm of the existing policy.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>auth_algorithm</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512.
+Default is sha1. Changing this updates the algorithm of the existing policy.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The human-readable description for the policy.
 Changing this updates the description of the existing policy.</li>
 <li><strong>encapsulation_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The encapsulation mode. Valid values are tunnel and transport. Default is tunnel.
@@ -468,18 +465,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.vpnaas.Service">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.vpnaas.</code><code class="descname">Service</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>admin_state_up=None</em>, <em>description=None</em>, <em>name=None</em>, <em>region=None</em>, <em>router_id=None</em>, <em>subnet_id=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.vpnaas.Service" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.vpnaas.</code><code class="descname">Service</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>description=None</em>, <em>name=None</em>, <em>region=None</em>, <em>router_id=None</em>, <em>subnet_id=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.vpnaas.Service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Neutron VPN service resource within OpenStack.</p>
-<p>:param str <strong>name</strong>: The name of the resource.
-:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
-:param pulumi.Input[bool] admin_state_up: The administrative state of the resource. Can either be up(true) or down(false).</p>
-<blockquote>
-<div>Changing this updates the administrative state of the existing service.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>admin_state_up</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The administrative state of the resource. Can either be up(true) or down(false).
+Changing this updates the administrative state of the existing service.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The human-readable description for the service.
 Changing this updates the description of the existing service.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the service. Changing this updates the name of
@@ -613,18 +609,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.vpnaas.SiteConnection">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.vpnaas.</code><code class="descname">SiteConnection</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>admin_state_up=None</em>, <em>description=None</em>, <em>dpds=None</em>, <em>ikepolicy_id=None</em>, <em>initiator=None</em>, <em>ipsecpolicy_id=None</em>, <em>local_ep_group_id=None</em>, <em>local_id=None</em>, <em>mtu=None</em>, <em>name=None</em>, <em>peer_address=None</em>, <em>peer_cidrs=None</em>, <em>peer_ep_group_id=None</em>, <em>peer_id=None</em>, <em>psk=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>vpnservice_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.vpnaas.SiteConnection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.vpnaas.</code><code class="descname">SiteConnection</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>description=None</em>, <em>dpds=None</em>, <em>ikepolicy_id=None</em>, <em>initiator=None</em>, <em>ipsecpolicy_id=None</em>, <em>local_ep_group_id=None</em>, <em>local_id=None</em>, <em>mtu=None</em>, <em>name=None</em>, <em>peer_address=None</em>, <em>peer_cidrs=None</em>, <em>peer_ep_group_id=None</em>, <em>peer_id=None</em>, <em>psk=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>vpnservice_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.vpnaas.SiteConnection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Neutron IPSec site connection resource within OpenStack.</p>
-<p>:param str <strong>name</strong>: The name of the resource.
-:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
-:param pulumi.Input[bool] admin_state_up: The administrative state of the resource. Can either be up(true) or down(false).</p>
-<blockquote>
-<div>Changing this updates the administrative state of the existing connection.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>admin_state_up</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The administrative state of the resource. Can either be up(true) or down(false).
+Changing this updates the administrative state of the existing connection.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The human-readable description for the connection.
 Changing this updates the description of the existing connection.</li>
 <li><strong>dpds</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A dictionary with dead peer detection (DPD) protocol controls.</li>

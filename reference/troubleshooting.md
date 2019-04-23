@@ -50,8 +50,9 @@ The Pulumi command-line tool interacts with the Pulumi web service throughout th
 service is unable to process an update, it is possible that users of the command-line tool may see this error message
 throughout the course of an update.
 
-We take great pride in service uptime and work rapidly to fix service interruption. You can follow our
-[official Twitter account](https://twitter.com/PulumiCorp) to keep up-to-date on service interruptions.
+We take great pride in service uptime and work rapidly to fix service interruption and use our [status page](https://status.pulumi.com) to
+communicate information about service incidents.
+
 
 ### post-step event returned an error {#post-step-event}
 
@@ -70,8 +71,8 @@ case, it is common for you to see an additional error indicating that some I/O o
 safely disregarded and it is safe to re-start the update. You may need to
 [recover from the interrupted update](#interrupted-update-recovery).
 
-In the second case, you may see an additional error message "after mutation of snapshot". This error 
-message is **always a bug in Pulumi**. If you see this error message, we would greatly appreciate a 
+In the second case, you may see an additional error message "after mutation of snapshot". This error
+message is **always a bug in Pulumi**. If you see this error message, we would greatly appreciate a
 bug report on our [official bug tracker](https://github.com/pulumi/pulumi/issues). We also
 recommend joining our [Pulumi Community Slack](https://slack.pulumi.io/) and sharing your problem
 if you experience this error message.
@@ -102,7 +103,7 @@ error: could not load plugin for aws provider 'urn:pulumi:<stack_name>::pulumi-s
 
 #### Quick Summary
 
-You may encounter an error when you downgrade provider versions _after_ your stack is already updated with a newer version. 
+You may encounter an error when you downgrade provider versions _after_ your stack is already updated with a newer version.
 If you must downgrade the version of a provider your `pulumi` program depends on, you will need to [manually edit your deployment](#editing-your-deployment)
 and change the version of the provider your stack depends on and then import that as the latest state of your stack.
 
@@ -258,7 +259,7 @@ we recommend you check-in with the [Pulumi Community Slack](https://slack.pulumi
 
 ## Provider-specific problems {#provider-problems}
 
-This section includes troubleshooting information specific to Pulumi providers. 
+This section includes troubleshooting information specific to Pulumi providers.
 
 ### Kubernetes {#provider-kubernetes}
 
@@ -273,6 +274,6 @@ field once the Ingress resource is ready to route traffic.
 
 *Traefik*
 
-For the Traefik controller, verify that the `kubernetes.ingressEndpoint` config 
+For the Traefik controller, verify that the `kubernetes.ingressEndpoint` config
 is [set properly](https://docs.traefik.io/configuration/backends/kubernetes/). This option was
 introduced in Traefik 1.7.0.

@@ -32,7 +32,7 @@
 
 <dl class="function">
 <dt id="pulumi_gcp.iam.get_rule">
-<code class="descclassname">pulumi_gcp.iam.</code><code class="descname">get_rule</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iam.get_rule" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_gcp.iam.</code><code class="descname">get_rule</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iam.get_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a Google IAM Role.</p>
 </dd></dl>
 

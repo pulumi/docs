@@ -2,7 +2,7 @@ FROM ruby AS builder
 
 COPY Gemfile* /src/
 WORKDIR /src
-RUN bundle install
+RUN gem install bundler -v '2.0.1' && bundle install
 
 RUN apt-get update && apt-get -y install \
   curl

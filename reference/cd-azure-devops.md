@@ -63,7 +63,7 @@ you can access a build variable correctly depending on your agent OS.
 
 ### User-Defined Output Variables
 
-You can set [job-scoped out variables](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=vsts&tabs=yaml%2Cbatch#set-a-job-scoped-variable-from-a-script) or [mult-job variables](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=vsts&tabs=yaml%2Cbatch#set-an-output-multi-job-variable). In this article, we demonstrate the use of multi-job variables with job dependencies, using the `dependsOn` job constraint.
+You can set [job-scoped out variables](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=vsts&tabs=yaml%2Cbatch#set-a-job-scoped-variable-from-a-script) or [multi-job variables](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=vsts&tabs=yaml%2Cbatch#set-an-output-multi-job-variable). In this article, we demonstrate the use of multi-job variables with job dependencies, using the `dependsOn` job constraint.
 
 ### Environment Variables
 
@@ -78,7 +78,7 @@ Ubuntu agent, and some on a Windows agent. `pulumi` can be installed on these ag
 
 ## Scripts
 
-For the YAML-driven DevOps pipline, the repository must contain the `azure-pipelines.yml` in the root.
+For the YAML-driven DevOps pipeline, the repository must contain the `azure-pipelines.yml` in the root of the repo for Azure DevOps to use it automatically.
 The following are samples only. You may choose to structure your configuration any way you like.
 
 The `run-pulumi.sh` script runs `pulumi preview` for PR builds and the `pulumi up --yes` command with explicit consent,

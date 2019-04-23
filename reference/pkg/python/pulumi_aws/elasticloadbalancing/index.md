@@ -12,7 +12,7 @@
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>cookie_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The application cookie whose lifetime the ELB’s cookie should follow.</li>
-<li><strong>lb_port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The load balancer port to which the policy
+<li><strong>lb_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The load balancer port to which the policy
 should be applied. This must be an active listener on the load
 balancer.</li>
 <li><strong>load_balancer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of load balancer to which the policy
@@ -221,7 +221,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>load_balancer_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The load balancer to attach the policy to.</li>
-<li><strong>load_balancer_port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The load balancer listener port to apply the policy to.</li>
+<li><strong>load_balancer_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The load balancer listener port to apply the policy to.</li>
 <li><strong>policy_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of Policy Names to apply to the backend server.</li>
 </ul>
 </td>
@@ -314,10 +314,10 @@ browser.</p>
 <li><strong>access_logs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An Access Logs block. Access Logs documented below.</li>
 <li><strong>availability_zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The AZ’s to serve traffic in.</li>
 <li><strong>connection_draining</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean to enable connection draining. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code></li>
-<li><strong>connection_draining_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time in seconds to allow for connections to drain. Default: <code class="docutils literal notranslate"><span class="pre">300</span></code></li>
+<li><strong>connection_draining_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time in seconds to allow for connections to drain. Default: <code class="docutils literal notranslate"><span class="pre">300</span></code></li>
 <li><strong>cross_zone_load_balancing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable cross-zone load balancing. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code></li>
 <li><strong>health_check</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A health_check block. Health Check documented below.</li>
-<li><strong>idle_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time in seconds that the connection is allowed to be idle. Default: <code class="docutils literal notranslate"><span class="pre">60</span></code></li>
+<li><strong>idle_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time in seconds that the connection is allowed to be idle. Default: <code class="docutils literal notranslate"><span class="pre">60</span></code></li>
 <li><strong>instances</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of instance ids to place in the ELB pool.</li>
 <li><strong>internal</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, ELB will be an internal ELB.</li>
 <li><strong>listeners</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of listener blocks. Listeners documented below.</li>
@@ -513,7 +513,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>instance_port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The instance port to apply the policy to.</li>
+<li><strong>instance_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The instance port to apply the policy to.</li>
 <li><strong>load_balancer_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The load balancer to attach the policy to.</li>
 <li><strong>policy_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of Policy Names to apply to the backend server.</li>
 </ul>
@@ -590,9 +590,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>cookie_expiration_period</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time period after which
+<li><strong>cookie_expiration_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time period after which
 the session cookie should be considered stale, expressed in seconds.</li>
-<li><strong>lb_port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The load balancer port to which the policy
+<li><strong>lb_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The load balancer port to which the policy
 should be applied. This must be an active listener on the load
 balancer.</li>
 <li><strong>load_balancer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The load balancer to which the policy
@@ -767,7 +767,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>attributes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An SSL Negotiation policy attribute. Each has two properties:</li>
-<li><strong>lb_port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The load balancer port to which the policy
+<li><strong>lb_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The load balancer port to which the policy
 should be applied. This must be an active listener on the load
 balancer.</li>
 <li><strong>load_balancer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The load balancer to which the policy
@@ -847,14 +847,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.elasticloadbalancing.get_hosted_zone_id">
-<code class="descclassname">pulumi_aws.elasticloadbalancing.</code><code class="descname">get_hosted_zone_id</code><span class="sig-paren">(</span><em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.get_hosted_zone_id" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.elasticloadbalancing.</code><code class="descname">get_hosted_zone_id</code><span class="sig-paren">(</span><em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.get_hosted_zone_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the HostedZoneId of the AWS Elastic Load Balancing HostedZoneId
 in a given region for the purpose of using in an AWS Route53 Alias.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.elasticloadbalancing.get_load_balancer">
-<code class="descclassname">pulumi_aws.elasticloadbalancing.</code><code class="descname">get_load_balancer</code><span class="sig-paren">(</span><em>name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.get_load_balancer" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.elasticloadbalancing.</code><code class="descname">get_load_balancer</code><span class="sig-paren">(</span><em>name=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.get_load_balancer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a “classic” Elastic Load Balancer (ELB).
 See <a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/lb.html">LB Data Source</a> if you are looking for “v2”
 Application Load Balancer (ALB) or Network Load Balancer (NLB).</p>
@@ -865,7 +865,7 @@ with it, etc.</p>
 
 <dl class="function">
 <dt id="pulumi_aws.elasticloadbalancing.get_service_account">
-<code class="descclassname">pulumi_aws.elasticloadbalancing.</code><code class="descname">get_service_account</code><span class="sig-paren">(</span><em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.get_service_account" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.elasticloadbalancing.</code><code class="descname">get_service_account</code><span class="sig-paren">(</span><em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.get_service_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the Account ID of the <a class="reference external" href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/enable-access-logs.html#attach-bucket-policy">AWS Elastic Load Balancing Service Account</a>
 in a given region for the purpose of whitelisting in S3 bucket policy.</p>
 </dd></dl>

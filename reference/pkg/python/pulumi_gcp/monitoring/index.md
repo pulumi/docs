@@ -2,7 +2,7 @@
 <span id="monitoring"></span><h1>monitoring<a class="headerlink" href="#module-pulumi_gcp.monitoring" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.monitoring.AlertPolicy">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.monitoring.</code><code class="descname">AlertPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>combiner=None</em>, <em>conditions=None</em>, <em>display_name=None</em>, <em>enabled=None</em>, <em>labels=None</em>, <em>notification_channels=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.AlertPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.monitoring.</code><code class="descname">AlertPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>combiner=None</em>, <em>conditions=None</em>, <em>display_name=None</em>, <em>documentation=None</em>, <em>enabled=None</em>, <em>labels=None</em>, <em>notification_channels=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.AlertPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A description of the conditions under which some aspect of your system is
 considered to be “unhealthy” and the ways to notify people or services
 about this state.</p>
@@ -14,7 +14,11 @@ about this state.</p>
 </ul>
 </li>
 </ul>
-<table class="docutils field-list" frame="void" rules="none">
+<div class = "oics-button" style="float: right; margin: 0 0 -15px">
+  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=monitoring_alert_policy_basic&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
+    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
+  </a>
+</div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -26,13 +30,6 @@ about this state.</p>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] combiner
-:param pulumi.Input[list] conditions
-:param pulumi.Input[str] display_name
-:param pulumi.Input[bool] enabled
-:param pulumi.Input[list] labels
-:param pulumi.Input[list] notification_channels
-:param pulumi.Input[str] project</p>
 <dl class="method">
 <dt id="pulumi_gcp.monitoring.AlertPolicy.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.AlertPolicy.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -99,18 +96,13 @@ resource, then that resource is a member of that group.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] display_name
-:param pulumi.Input[str] filter
-:param pulumi.Input[bool] is_cluster
-:param pulumi.Input[str] parent_name
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
-<blockquote>
-<div>If it is not provided, the provider project is used.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.monitoring.Group.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.Group.project" title="Permalink to this definition">¶</a></dt>
@@ -184,20 +176,13 @@ like authentication tokens or contact info are only partially populated on retri
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] description
-:param pulumi.Input[str] display_name
-:param pulumi.Input[bool] enabled
-:param pulumi.Input[dict] labels
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
-<blockquote>
-<div>If it is not provided, the provider project is used.</div></blockquote>
-<p>:param pulumi.Input[str] type
-:param pulumi.Input[dict] user_labels</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.monitoring.NotificationChannel.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.NotificationChannel.project" title="Permalink to this definition">¶</a></dt>
@@ -253,7 +238,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><a class="reference external" href="https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.uptimeCheckConfigs">API documentation</a></li>
 <li>How-to Guides<ul>
-<li><a class="reference external" href="https://cloud.google.com/monitoring/api/v3/">Official Documentation</a></li>
+<li><a class="reference external" href="https://cloud.google.com/monitoring/uptime-checks/">Official Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -268,25 +253,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[list] content_matchers
-:param pulumi.Input[str] display_name
-:param pulumi.Input[dict] http_check
-:param pulumi.Input[list] internal_checkers
-:param pulumi.Input[bool] is_internal
-:param pulumi.Input[dict] monitored_resource
-:param pulumi.Input[str] period
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
-<blockquote>
-<div>If it is not provided, the provider project is used.</div></blockquote>
-<p>:param pulumi.Input[dict] resource_group
-:param pulumi.Input[list] selected_regions
-:param pulumi.Input[dict] tcp_check
-:param pulumi.Input[str] timeout</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.monitoring.UptimeCheckConfig.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.UptimeCheckConfig.project" title="Permalink to this definition">¶</a></dt>

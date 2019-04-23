@@ -32,8 +32,8 @@ are applied immediately, or during the next maintenance window. Default is
 <code class="docutils literal notranslate"><span class="pre">false</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html">Amazon RDS Documentation for more information.</a></li>
 <li><strong>availability_zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of EC2 Availability Zones that
 instances in the DB cluster can be created in</li>
-<li><strong>backtrack_window</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The target backtrack window, in seconds. Only available for <code class="docutils literal notranslate"><span class="pre">aurora</span></code> engine currently. To disable backtracking, set this value to <code class="docutils literal notranslate"><span class="pre">0</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>. Must be between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">259200</span></code> (72 hours)</li>
-<li><strong>backup_retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The days to retain backups for. Default <code class="docutils literal notranslate"><span class="pre">1</span></code></li>
+<li><strong>backtrack_window</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The target backtrack window, in seconds. Only available for <code class="docutils literal notranslate"><span class="pre">aurora</span></code> engine currently. To disable backtracking, set this value to <code class="docutils literal notranslate"><span class="pre">0</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>. Must be between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">259200</span></code> (72 hours)</li>
+<li><strong>backup_retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The days to retain backups for. Default <code class="docutils literal notranslate"><span class="pre">1</span></code></li>
 <li><strong>cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster identifier. If omitted, Terraform will assign a random, unique identifier.</li>
 <li><strong>cluster_identifier_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique cluster identifier beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">cluster_identifier</span></code>.</li>
 <li><strong>cluster_members</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of RDS Instances that are a part of this cluster</li>
@@ -49,44 +49,31 @@ The following log types are supported: <code class="docutils literal notranslate
 <li><strong>final_snapshot_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of your final DB snapshot
 when this DB cluster is deleted. If omitted, no final snapshot will be
 made.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[str] global_cluster_identifier
-:param pulumi.Input[bool] iam_database_authentication_enabled: Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled. Please see [AWS Documentation][6] for availability and limitations.
-:param pulumi.Input[list] iam_roles: A List of ARNs for the IAM roles to associate to the RDS Cluster.
-:param pulumi.Input[str] kms_key_id: The ARN for the KMS encryption key. When specifying <code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code>, <code class="docutils literal notranslate"><span class="pre">storage_encrypted</span></code> needs to be set to true.
-:param pulumi.Input[str] master_password: Password for the master DB user. Note that this may</p>
-<blockquote>
-<div>show up in logs, and it will be stored in the state file. Please refer to the [RDS Naming Constraints][5]</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>global_cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The global cluster identifier specified on <cite>``aws_rds_global_cluster`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/rds_global_cluster.html">https://www.terraform.io/docs/providers/aws/r/rds_global_cluster.html</a>&gt;`_.</li>
+<li><strong>iam_database_authentication_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled. Please see <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html">AWS Documentation</a> for availability and limitations.</li>
+<li><strong>iam_roles</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A List of ARNs for the IAM roles to associate to the RDS Cluster.</li>
+<li><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN for the KMS encryption key. When specifying <code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code>, <code class="docutils literal notranslate"><span class="pre">storage_encrypted</span></code> needs to be set to true.</li>
+<li><strong>master_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Password for the master DB user. Note that this may
+show up in logs, and it will be stored in the state file. Please refer to the [RDS Naming Constraints][5]</li>
 <li><strong>master_username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Username for the master DB user. Please refer to the [RDS Naming Constraints][5]</li>
-<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The port on which the DB accepts connections</li>
+<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port on which the DB accepts connections</li>
 <li><strong>preferred_backup_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00</li>
 <li><strong>preferred_maintenance_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30</li>
 <li><strong>replication_source_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ARN of a source DB cluster or DB instance if this DB cluster is to be created as a Read Replica.</li>
+<li><strong>scaling_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested attribute with scaling properties. Only valid when <code class="docutils literal notranslate"><span class="pre">engine_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">serverless</span></code>. More details below.</li>
+<li><strong>skip_final_snapshot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from <code class="docutils literal notranslate"><span class="pre">final_snapshot_identifier</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>snapshot_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.</li>
+<li><strong>source_region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source region for an encrypted replica DB cluster.</li>
+<li><strong>storage_encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the DB cluster is encrypted. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code> for <code class="docutils literal notranslate"><span class="pre">provisioned</span></code> <code class="docutils literal notranslate"><span class="pre">engine_mode</span></code> and <code class="docutils literal notranslate"><span class="pre">true</span></code> for <code class="docutils literal notranslate"><span class="pre">serverless</span></code> <code class="docutils literal notranslate"><span class="pre">engine_mode</span></code>.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the DB cluster.</li>
+<li><strong>vpc_security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of VPC security groups to associate
+with the Cluster</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[dict] s3_import
-:param pulumi.Input[dict] scaling_configuration: Nested attribute with scaling properties. Only valid when <code class="docutils literal notranslate"><span class="pre">engine_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">serverless</span></code>. More details below.
-:param pulumi.Input[bool] skip_final_snapshot: Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from <code class="docutils literal notranslate"><span class="pre">final_snapshot_identifier</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[str] snapshot_identifier: Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
-:param pulumi.Input[str] source_region: The source region for an encrypted replica DB cluster.
-:param pulumi.Input[bool] storage_encrypted: Specifies whether the DB cluster is encrypted. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code> for <code class="docutils literal notranslate"><span class="pre">provisioned</span></code> <code class="docutils literal notranslate"><span class="pre">engine_mode</span></code> and <code class="docutils literal notranslate"><span class="pre">true</span></code> for <code class="docutils literal notranslate"><span class="pre">serverless</span></code> <code class="docutils literal notranslate"><span class="pre">engine_mode</span></code>.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the DB cluster.
-:param pulumi.Input[list] vpc_security_group_ids: List of VPC security groups to associate</p>
-<blockquote>
-<div>with the Cluster</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.rds.Cluster.apply_immediately">
 <code class="descname">apply_immediately</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Cluster.apply_immediately" title="Permalink to this definition">¶</a></dt>
@@ -208,6 +195,12 @@ made.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.rds.Cluster.global_cluster_identifier">
+<code class="descname">global_cluster_identifier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Cluster.global_cluster_identifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>The global cluster identifier specified on <cite>``aws_rds_global_cluster`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/rds_global_cluster.html">https://www.terraform.io/docs/providers/aws/r/rds_global_cluster.html</a>&gt;`_.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.rds.Cluster.hosted_zone_id">
 <code class="descname">hosted_zone_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Cluster.hosted_zone_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Route53 Hosted Zone ID of the endpoint</p>
@@ -216,7 +209,7 @@ made.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.rds.Cluster.iam_database_authentication_enabled">
 <code class="descname">iam_database_authentication_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Cluster.iam_database_authentication_enabled" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled. Please see [AWS Documentation][6] for availability and limitations.</p>
+<dd><p>Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled. Please see <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html">AWS Documentation</a> for availability and limitations.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -514,17 +507,18 @@ supports the below instance classes. Please see [AWS Documentation][7] for compl
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>monitoring_interval</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid Values: 0, 1, 5, 10, 15, 30, 60.</li>
-<li><strong>monitoring_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN for the IAM role that permits RDS to send
+<li><strong>monitoring_interval</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid Values: 0, 1, 5, 10, 15, 30, 60.</li>
+<li><strong>monitoring_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The ARN for the IAM role that permits RDS to send
 enhanced monitoring metrics to CloudWatch Logs. You can find more information on the <a class="reference external" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.html">AWS Documentation</a>
-what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.</li>
+what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.</p>
+</li>
 <li><strong>performance_insights_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether Performance Insights is enabled or not.</li>
 <li><strong>performance_insights_kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN for the KMS key to encrypt Performance Insights data. When specifying <code class="docutils literal notranslate"><span class="pre">performance_insights_kms_key_id</span></code>, <code class="docutils literal notranslate"><span class="pre">performance_insights_enabled</span></code> needs to be set to true.</li>
 <li><strong>preferred_backup_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The daily time range during which automated backups are created if automated backups are enabled.
 Eg: “04:00-09:00”</li>
 <li><strong>preferred_maintenance_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The window to perform maintenance in.
 Syntax: “ddd:hh24:mi-ddd:hh24:mi”. Eg: “Mon:00:00-Mon:03:00”.</li>
-<li><strong>promotion_tier</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.</li>
+<li><strong>promotion_tier</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.</li>
 <li><strong>publicly_accessible</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Bool to control if instance is publicly accessible.
 Default <code class="docutils literal notranslate"><span class="pre">false</span></code>. See the documentation on [Creating DB Instances][6] for more
 details on controlling this property.</li>
@@ -1599,13 +1593,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>deletion_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If the Global Cluster should have deletion protection enabled. The database can’t be deleted when this value is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the database engine to be used for this DB cluster. Valid values: <code class="docutils literal notranslate"><span class="pre">aurora</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">aurora</span></code>.</li>
 <li><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Engine version of the Aurora global database.</li>
+<li><strong>storage_encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the DB cluster is encrypted. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] global_cluster_identifier
-:param pulumi.Input[bool] storage_encrypted: Specifies whether the DB cluster is encrypted. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.rds.GlobalCluster.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.GlobalCluster.arn" title="Permalink to this definition">¶</a></dt>
@@ -1719,7 +1712,7 @@ about <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>allocated_storage</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – (Required unless a <code class="docutils literal notranslate"><span class="pre">snapshot_identifier</span></code> or
+<li><strong>allocated_storage</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – (Required unless a <code class="docutils literal notranslate"><span class="pre">snapshot_identifier</span></code> or
 <code class="docutils literal notranslate"><span class="pre">replicate_source_db</span></code> is provided) The allocated storage in gibibytes.</li>
 <li><strong>allow_major_version_upgrade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates that major version
 upgrades are allowed. Changing this parameter does not result in an outage and
@@ -1734,7 +1727,7 @@ for more information.</p>
 will be applied automatically to the DB instance during the maintenance window.
 Defaults to true.</li>
 <li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AZ for the RDS instance.</li>
-<li><strong>backup_retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The days to retain backups for. Must be
+<li><strong>backup_retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The days to retain backups for. Must be
 between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">35</span></code>. When creating a Read Replica the value must be greater than <code class="docutils literal notranslate"><span class="pre">0</span></code>. [See Read Replica][1].</li>
 <li><strong>backup_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The daily time range (in UTC) during which
 automated backups are created if they are enabled. Example: “09:46-10:16”. Must
@@ -1779,7 +1772,7 @@ if omitted, Terraform will assign a random, unique identifier.</li>
 <li><strong>identifier_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique
 identifier beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">identifier</span></code>.</li>
 <li><strong>instance_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The instance type of the RDS instance.</li>
-<li><strong>iops</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The amount of provisioned IOPS. Setting this implies a
+<li><strong>iops</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of provisioned IOPS. Setting this implies a
 storage_type of “io1”.</li>
 <li><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN for the KMS encryption key. If creating an
 encrypted replica, set this to the destination KMS ARN.</li>
@@ -1790,7 +1783,7 @@ Syntax: “ddd:hh24:mi-ddd:hh24:mi”. Eg: “Mon:00:00-Mon:03:00”. See <a cla
 Maintenance Window
 docs</a>
 for more information.</li>
-<li><strong>monitoring_interval</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The interval, in seconds, between points
+<li><strong>monitoring_interval</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The interval, in seconds, between points
 when Enhanced Monitoring metrics are collected for the DB instance. To disable
 collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid
 Values: 0, 1, 5, 10, 15, 30, 60.</li>
@@ -1809,7 +1802,7 @@ associate.</li>
 <li><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Required unless a <code class="docutils literal notranslate"><span class="pre">snapshot_identifier</span></code> or <code class="docutils literal notranslate"><span class="pre">replicate_source_db</span></code>
 is provided) Password for the master DB user. Note that this may show up in
 logs, and it will be stored in the state file.</li>
-<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The port on which the DB accepts connections.</li>
+<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port on which the DB accepts connections.</li>
 <li><strong>publicly_accessible</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Bool to control if instance is publicly
 accessible. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>replicate_source_db</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies that this resource is a Replicate
@@ -2875,13 +2868,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.rds.get_cluster">
-<code class="descclassname">pulumi_aws.rds.</code><code class="descname">get_cluster</code><span class="sig-paren">(</span><em>cluster_identifier=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.get_cluster" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.rds.</code><code class="descname">get_cluster</code><span class="sig-paren">(</span><em>cluster_identifier=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a RDS cluster.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.rds.get_cluster_snapshot">
-<code class="descclassname">pulumi_aws.rds.</code><code class="descname">get_cluster_snapshot</code><span class="sig-paren">(</span><em>db_cluster_identifier=None</em>, <em>db_cluster_snapshot_identifier=None</em>, <em>include_public=None</em>, <em>include_shared=None</em>, <em>most_recent=None</em>, <em>snapshot_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.get_cluster_snapshot" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.rds.</code><code class="descname">get_cluster_snapshot</code><span class="sig-paren">(</span><em>db_cluster_identifier=None</em>, <em>db_cluster_snapshot_identifier=None</em>, <em>include_public=None</em>, <em>include_shared=None</em>, <em>most_recent=None</em>, <em>snapshot_type=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.get_cluster_snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a DB Cluster Snapshot for use when provisioning DB clusters.</p>
 <blockquote>
 <div><strong>NOTE:</strong> This data source does not apply to snapshots created on DB Instances. 
@@ -2890,13 +2883,13 @@ See the <cite>``aws_db_snapshot`</cite> data source &lt;<a class="reference exte
 
 <dl class="function">
 <dt id="pulumi_aws.rds.get_instance">
-<code class="descclassname">pulumi_aws.rds.</code><code class="descname">get_instance</code><span class="sig-paren">(</span><em>db_instance_identifier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.get_instance" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.rds.</code><code class="descname">get_instance</code><span class="sig-paren">(</span><em>db_instance_identifier=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.get_instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an RDS instance</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.rds.get_snapshot">
-<code class="descclassname">pulumi_aws.rds.</code><code class="descname">get_snapshot</code><span class="sig-paren">(</span><em>db_instance_identifier=None</em>, <em>db_snapshot_identifier=None</em>, <em>include_public=None</em>, <em>include_shared=None</em>, <em>most_recent=None</em>, <em>snapshot_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.get_snapshot" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.rds.</code><code class="descname">get_snapshot</code><span class="sig-paren">(</span><em>db_instance_identifier=None</em>, <em>db_snapshot_identifier=None</em>, <em>include_public=None</em>, <em>include_shared=None</em>, <em>most_recent=None</em>, <em>snapshot_type=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.get_snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a DB Snapshot for use when provisioning DB instances</p>
 <blockquote>
 <div><strong>NOTE:</strong> This data source does not apply to snapshots created on Aurora DB clusters.

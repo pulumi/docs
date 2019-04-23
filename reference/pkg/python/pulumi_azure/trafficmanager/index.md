@@ -19,14 +19,14 @@ location of the Azure target resource.</li>
 <li><strong>endpoint_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the Endpoint, can be set to
 either <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> or <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>.</li>
 <li><strong>geo_mappings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Geographic Regions used to distribute traffic, such as <code class="docutils literal notranslate"><span class="pre">WORLD</span></code>, <code class="docutils literal notranslate"><span class="pre">UK</span></code> or <code class="docutils literal notranslate"><span class="pre">DE</span></code>. The same location can’t be specified in two endpoints. <a class="reference external" href="https://docs.microsoft.com/en-us/rest/api/trafficmanager/geographichierarchies/getdefault">See the Geographic Hierarchies documentation for more information</a>.</li>
-<li><strong>min_child_endpoints</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – This argument specifies the minimum number
+<li><strong>min_child_endpoints</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – This argument specifies the minimum number
 of endpoints that must be ‘online’ in the child profile in order for the
 parent profile to direct traffic to any of the endpoints in that child
 profile. This argument only applies to Endpoints of type <code class="docutils literal notranslate"><span class="pre">nestedEndpoints</span></code>
 and defaults to <code class="docutils literal notranslate"><span class="pre">1</span></code>.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Traffic Manager endpoint. Changing this forces a
 new resource to be created.</li>
-<li><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Specifies the priority of this Endpoint, this must be
+<li><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the priority of this Endpoint, this must be
 specified for Profiles using the <code class="docutils literal notranslate"><span class="pre">Priority</span></code> traffic routing method. Supports
 values between 1 and 1000, with no Endpoints sharing the same value. If
 omitted the value will be computed in order of creation.</li>
@@ -50,7 +50,7 @@ target. This argument must be provided for an endpoint of type
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>weight</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Specifies how much traffic should be distributed to this
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>weight</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies how much traffic should be distributed to this
 endpoint, this must be specified for Profiles using the  <code class="docutils literal notranslate"><span class="pre">Weighted</span></code> traffic
 routing method. Supports values between 1 and 1000.</td>
 </tr>
@@ -338,7 +338,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_azure.trafficmanager.get_geographical_location">
-<code class="descclassname">pulumi_azure.trafficmanager.</code><code class="descname">get_geographical_location</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.trafficmanager.get_geographical_location" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.trafficmanager.</code><code class="descname">get_geographical_location</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.trafficmanager.get_geographical_location" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access the ID of a specified Traffic Manager Geographical Location within the Geographical Hierarchy.</p>
 </dd></dl>
 

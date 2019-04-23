@@ -123,27 +123,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>force_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – By default, you can only delete inactive jobs within
 Dataproc. Setting this to true, and calling destroy, will ensure that the
 job is first cancelled before issuing the delete.</li>
+<li><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The list of labels (key/value pairs) to add to the job.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project in which the <code class="docutils literal notranslate"><span class="pre">cluster</span></code> can be found and jobs
+subsequently run against. If it is not provided, the provider project is used.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Cloud Dataproc region. This essentially determines which clusters are available
+for this job to be submitted to. If not specified, defaults to <code class="docutils literal notranslate"><span class="pre">global</span></code>.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[dict] hadoop_config
-:param pulumi.Input[dict] hive_config
-:param pulumi.Input[dict] labels: The list of labels (key/value pairs) to add to the job.
-:param pulumi.Input[dict] pig_config
-:param pulumi.Input[dict] placement
-:param pulumi.Input[str] project: The project in which the <code class="docutils literal notranslate"><span class="pre">cluster</span></code> can be found and jobs</p>
-<blockquote>
-<div>subsequently run against. If it is not provided, the provider project is used.</div></blockquote>
-<p>:param pulumi.Input[dict] pyspark_config
-:param pulumi.Input[dict] reference
-:param pulumi.Input[str] region: The Cloud Dataproc region. This essentially determines which clusters are available</p>
-<blockquote>
-<div>for this job to be submitted to. If not specified, defaults to <code class="docutils literal notranslate"><span class="pre">global</span></code>.</div></blockquote>
-<p>:param pulumi.Input[dict] scheduling
-:param pulumi.Input[dict] spark_config
-:param pulumi.Input[dict] sparksql_config</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.dataproc.Job.driver_controls_files_uri">
 <code class="descname">driver_controls_files_uri</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dataproc.Job.driver_controls_files_uri" title="Permalink to this definition">¶</a></dt>

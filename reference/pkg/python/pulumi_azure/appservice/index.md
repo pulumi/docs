@@ -96,12 +96,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>app_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A key-value pair of App Settings.</li>
 <li><strong>client_affinity_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the App Service send session affinity cookies, which route client requests in the same session to the same instance?</li>
 <li><strong>client_cert_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Does the App Service require client certificates for incoming requests? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
-<li><strong>connection_strings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">connection_string</span></code> block as defined below.</li>
+<li><strong>connection_strings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">connection_string</span></code> blocks as defined below.</li>
 <li><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is the App Service Enabled? Changing this forces a new resource to be created.</li>
 <li><strong>https_only</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Can the App Service only be accessed via HTTPS? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A Managed Service Identity block as defined below.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Connection String.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the App Service. Changing this forces a new resource to be created.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the App Service.</li>
 <li><strong>site_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">site_config</span></code> block as defined below.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
@@ -137,7 +137,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.appservice.AppService.connection_strings">
 <code class="descname">connection_strings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.AppService.connection_strings" title="Permalink to this definition">¶</a></dt>
-<dd><p>An <code class="docutils literal notranslate"><span class="pre">connection_string</span></code> block as defined below.</p>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">connection_string</span></code> blocks as defined below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -173,7 +173,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.appservice.AppService.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.AppService.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the Connection String.</p>
+<dd><p>Specifies the name of the App Service. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -668,16 +668,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the App Service Plan component. Changing this forces a new resource to be created.</li>
 <li><strong>per_site_scaling</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Can Apps assigned to this App Service Plan be scaled independently? If set to <code class="docutils literal notranslate"><span class="pre">false</span></code> apps assigned to this plan will scale to all instances of the plan.  Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>reserved</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is this App Service Plan <code class="docutils literal notranslate"><span class="pre">Reserved</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the App Service Plan component.</li>
+<li><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">sku</span></code> block as documented below.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[dict] properties
-:param pulumi.Input[bool] reserved: Is this App Service Plan <code class="docutils literal notranslate"><span class="pre">Reserved</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the App Service Plan component.
-:param pulumi.Input[dict] sku: A <code class="docutils literal notranslate"><span class="pre">sku</span></code> block as documented below.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.appservice.Plan.app_service_environment_id">
 <code class="descname">app_service_environment_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.Plan.app_service_environment_id" title="Permalink to this definition">¶</a></dt>
@@ -935,13 +934,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_azure.appservice.get_app_service">
-<code class="descclassname">pulumi_azure.appservice.</code><code class="descname">get_app_service</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>site_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.get_app_service" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.appservice.</code><code class="descname">get_app_service</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>site_config=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.get_app_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing App Service.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.appservice.get_app_service_plan">
-<code class="descclassname">pulumi_azure.appservice.</code><code class="descname">get_app_service_plan</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.get_app_service_plan" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.appservice.</code><code class="descname">get_app_service_plan</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.get_app_service_plan" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing App Service Plan (formerly known as a <code class="docutils literal notranslate"><span class="pre">Server</span> <span class="pre">Farm</span></code>).</p>
 </dd></dl>
 

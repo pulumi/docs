@@ -312,7 +312,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>destinations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of fleet/alias ARNs used by session queue for placing game sessions.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the session queue.</li>
 <li><strong>player_latency_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more policies used to choose fleet based on player latency. See below.</li>
-<li><strong>timeout_in_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Maximum time a game session request can remain in the queue.</li>
+<li><strong>timeout_in_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum time a game session request can remain in the queue.</li>
 </ul>
 </td>
 </tr>

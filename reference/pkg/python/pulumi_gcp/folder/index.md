@@ -10,6 +10,9 @@ an existing Google Cloud Platform folder.</p>
 <dt><strong>Note:</strong> This resource <em>must not</em> be used in conjunction with</dt>
 <dd><code class="docutils literal notranslate"><span class="pre">google_folder_iam_policy</span></code> or they will fight over what your policy
 should be.</dd>
+<dt><strong>Note:</strong> On create, this resource will overwrite members of any existing roles.</dt>
+<dd>Use <code class="docutils literal notranslate"><span class="pre">terraform</span> <span class="pre">import</span></code> and inspect the <code class="docutils literal notranslate"><span class="pre">terraform</span> <span class="pre">plan</span></code> output to ensure
+your existing members are preserved.</dd>
 </dl>
 </div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
@@ -55,10 +58,11 @@ Each entry can have one of the following values:</li>
 <dd><p>An array of identites that will be granted the privilege in the <code class="docutils literal notranslate"><span class="pre">role</span></code>.
 Each entry can have one of the following values:</p>
 <ul class="simple">
-<li><strong>user:{emailid}</strong>: An email address that represents a specific Google account. For example, <a class="reference external" href="mailto:alice&#37;&#52;&#48;gmail&#46;com">alice<span>&#64;</span>gmail<span>&#46;</span>com</a> or <a class="reference external" href="mailto:joe&#37;&#52;&#48;example&#46;com">joe<span>&#64;</span>example<span>&#46;</span>com</a>.</li>
+<li><strong>user:{emailid}</strong>: An email address that is associated with a specific Google account. For example, <a class="reference external" href="mailto:alice&#37;&#52;&#48;gmail&#46;com">alice<span>&#64;</span>gmail<span>&#46;</span>com</a>.</li>
 <li><strong>serviceAccount:{emailid}</strong>: An email address that represents a service account. For example, <a class="reference external" href="mailto:my-other-app&#37;&#52;&#48;appspot&#46;gserviceaccount&#46;com">my-other-app<span>&#64;</span>appspot<span>&#46;</span>gserviceaccount<span>&#46;</span>com</a>.</li>
 <li><strong>group:{emailid}</strong>: An email address that represents a Google group. For example, <a class="reference external" href="mailto:admins&#37;&#52;&#48;example&#46;com">admins<span>&#64;</span>example<span>&#46;</span>com</a>.</li>
 <li><strong>domain:{domain}</strong>: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.</li>
+<li>For more details on format and restrictions see <a class="reference external" href="https://cloud.google.com/billing/reference/rest/v1/Policy#Binding">https://cloud.google.com/billing/reference/rest/v1/Policy#Binding</a></li>
 </ul>
 </dd></dl>
 
@@ -131,7 +135,7 @@ should not be assigned to using <code class="docutils literal notranslate"><span
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>folder</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.</li>
-<li><strong>member</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identity that will be granted the privilege in the <code class="docutils literal notranslate"><span class="pre">role</span></code>.
+<li><strong>member</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identity that will be granted the privilege in the <code class="docutils literal notranslate"><span class="pre">role</span></code>. For more details on format and restrictions see <a class="reference external" href="https://cloud.google.com/billing/reference/rest/v1/Policy#Binding">https://cloud.google.com/billing/reference/rest/v1/Policy#Binding</a>
 This field can have one of the following values:</li>
 </ul>
 </td>
@@ -162,7 +166,7 @@ This field can have one of the following values:</li>
 <dl class="attribute">
 <dt id="pulumi_gcp.folder.IAMMember.member">
 <code class="descname">member</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.folder.IAMMember.member" title="Permalink to this definition">¶</a></dt>
-<dd><p>The identity that will be granted the privilege in the <code class="docutils literal notranslate"><span class="pre">role</span></code>.
+<dd><p>The identity that will be granted the privilege in the <code class="docutils literal notranslate"><span class="pre">role</span></code>. For more details on format and restrictions see <a class="reference external" href="https://cloud.google.com/billing/reference/rest/v1/Policy#Binding">https://cloud.google.com/billing/reference/rest/v1/Policy#Binding</a>
 This field can have one of the following values:</p>
 <ul class="simple">
 <li><strong>user:{emailid}</strong>: An email address that represents a specific Google account. For example, <a class="reference external" href="mailto:alice&#37;&#52;&#48;gmail&#46;com">alice<span>&#64;</span>gmail<span>&#46;</span>com</a> or <a class="reference external" href="mailto:joe&#37;&#52;&#48;example&#46;com">joe<span>&#64;</span>example<span>&#46;</span>com</a>.</li>
@@ -320,7 +324,7 @@ documentation</a> and
 <li><strong>list_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A policy that can define specific values that are allowed or denied for the given constraint. It 
 can also be used to allow or deny all values. Structure is documented below.</li>
 <li><strong>restore_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A restore policy is a constraint to restore the default policy. Structure is documented below.</li>
-<li><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Version of the Policy. Default version is 0.</li>
+<li><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Version of the Policy. Default version is 0.</li>
 </ul>
 </td>
 </tr>

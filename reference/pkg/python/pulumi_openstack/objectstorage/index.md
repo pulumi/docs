@@ -2,20 +2,19 @@
 <span id="objectstorage"></span><h1>objectstorage<a class="headerlink" href="#module-pulumi_openstack.objectstorage" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_openstack.objectstorage.Container">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.objectstorage.</code><code class="descname">Container</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>container_read=None</em>, <em>container_sync_key=None</em>, <em>container_sync_to=None</em>, <em>container_write=None</em>, <em>content_type=None</em>, <em>force_destroy=None</em>, <em>metadata=None</em>, <em>name=None</em>, <em>region=None</em>, <em>versioning=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.objectstorage.Container" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.objectstorage.</code><code class="descname">Container</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>container_read=None</em>, <em>container_sync_key=None</em>, <em>container_sync_to=None</em>, <em>container_write=None</em>, <em>content_type=None</em>, <em>force_destroy=None</em>, <em>metadata=None</em>, <em>name=None</em>, <em>region=None</em>, <em>versioning=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.objectstorage.Container" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V1 container resource within OpenStack.</p>
-<p>:param str <strong>name</strong>: The name of the resource.
-:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
-:param pulumi.Input[str] container_read: Sets an access control list (ACL) that grants</p>
-<blockquote>
-<div>read access. This header can contain a comma-delimited list of users that
-can read the container (allows the GET method for all objects in the
-container). Changing this updates the access control list read access.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>container_read</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Sets an access control list (ACL) that grants
+read access. This header can contain a comma-delimited list of users that
+can read the container (allows the GET method for all objects in the
+container). Changing this updates the access control list read access.</li>
 <li><strong>container_sync_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The secret key for container synchronization.
 Changing this updates container synchronization.</li>
 <li><strong>container_sync_to</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination for container synchronization.
@@ -151,22 +150,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.objectstorage.ContainerObject">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.objectstorage.</code><code class="descname">ContainerObject</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>container_name=None</em>, <em>content=None</em>, <em>content_disposition=None</em>, <em>content_encoding=None</em>, <em>content_type=None</em>, <em>copy_from=None</em>, <em>delete_after=None</em>, <em>delete_at=None</em>, <em>detect_content_type=None</em>, <em>etag=None</em>, <em>metadata=None</em>, <em>name=None</em>, <em>object_manifest=None</em>, <em>region=None</em>, <em>source=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.objectstorage.ContainerObject" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.objectstorage.</code><code class="descname">ContainerObject</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>container_name=None</em>, <em>content=None</em>, <em>content_disposition=None</em>, <em>content_encoding=None</em>, <em>content_type=None</em>, <em>copy_from=None</em>, <em>delete_after=None</em>, <em>delete_at=None</em>, <em>detect_content_type=None</em>, <em>etag=None</em>, <em>metadata=None</em>, <em>name=None</em>, <em>object_manifest=None</em>, <em>region=None</em>, <em>source=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.objectstorage.ContainerObject" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V1 container object resource within OpenStack.</p>
-<p>:param str <strong>name</strong>: The name of the resource.
-:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
-:param pulumi.Input[str] container_name: A unique (within an account) name for the container.</p>
-<blockquote>
-<div>The container name must be from 1 to 256 characters long and can start
-with any character and contain any pattern. Character set must be UTF-8.
-The container name cannot contain a slash (/) character because this
-character delimits the container and object name. For example, the path
-/v1/account/www/pages specifies the www container, not the www/pages container.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>container_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique (within an account) name for the container. 
+The container name must be from 1 to 256 characters long and can start
+with any character and contain any pattern. Character set must be UTF-8.
+The container name cannot contain a slash (/) character because this
+character delimits the container and object name. For example, the path
+/v1/account/www/pages specifies the www container, not the www/pages container.</li>
 <li><strong>content</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string representing the content of the object. Conflicts with
 <code class="docutils literal notranslate"><span class="pre">source</span></code> and <code class="docutils literal notranslate"><span class="pre">copy_from</span></code>.</li>
 <li><strong>content_disposition</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string which specifies the override behavior for 
@@ -189,24 +187,12 @@ For example, “2015-08-26” is equivalent to Mon, Wed, 26 Aug 2015 00:00:00 GM
 type based on the file extension and ignores the value sent in the Content-Type
 header, if present.</li>
 <li><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to trigger updates. The only meaningful value is ${md5(file(“path/to/file”))}.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[dict] metadata
-:param pulumi.Input[str] name: A unique name for the object.
-:param pulumi.Input[str] object_manifest: A string set to specify that this is a dynamic large</p>
-<blockquote>
-<div>object manifest object. The value is the container and object name prefix of the
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the object.</li>
+<li><strong>object_manifest</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string set to specify that this is a dynamic large 
+object manifest object. The value is the container and object name prefix of the
 segment objects in the form container/prefix. You must UTF-8-encode and then
 URL-encode the names of the container and prefix before you include them in this
-header.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+header.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to create the container. If
 omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
 creates a new container.</li>
@@ -401,38 +387,35 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.objectstorage.TempUrl">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.objectstorage.</code><code class="descname">TempUrl</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>container=None</em>, <em>method=None</em>, <em>object=None</em>, <em>regenerate=None</em>, <em>region=None</em>, <em>split=None</em>, <em>ttl=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.objectstorage.TempUrl" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.objectstorage.</code><code class="descname">TempUrl</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>container=None</em>, <em>method=None</em>, <em>object=None</em>, <em>regenerate=None</em>, <em>region=None</em>, <em>split=None</em>, <em>ttl=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.objectstorage.TempUrl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this resource to generate an OpenStack Object Storage temporary URL.</p>
 <p>The temporary URL will be valid for as long as TTL is set to (in seconds).
 Once the URL has expired, it will no longer be valid, but the resource
 will remain in place. If you wish to automatically regenerate a URL, set
 the <code class="docutils literal notranslate"><span class="pre">regenerate</span></code> argument to <code class="docutils literal notranslate"><span class="pre">true</span></code>. This will create a new resource with
 a new ID and URL.</p>
-<p>:param str <strong>name</strong>: The name of the resource.
-:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
-:param pulumi.Input[str] container: The container name the object belongs to.
-:param pulumi.Input[str] method: The method allowed when accessing this URL.</p>
-<blockquote>
-<div>Valid values are <code class="docutils literal notranslate"><span class="pre">GET</span></code>, and <code class="docutils literal notranslate"><span class="pre">POST</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">GET</span></code>.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>container</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The container name the object belongs to.</li>
+<li><strong>method</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The method allowed when accessing this URL.
+Valid values are <code class="docutils literal notranslate"><span class="pre">GET</span></code>, and <code class="docutils literal notranslate"><span class="pre">POST</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">GET</span></code>.</li>
 <li><strong>object</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The object name the tempurl is for.</li>
 <li><strong>regenerate</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to automatically regenerate the URL when
 it has expired. If set to true, this will create a new resource with a new
 ID and new URL. Defaults to false.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region the tempurl is located in.</li>
+<li><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The TTL, in seconds, for the URL. For how long it should
+be valid.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] split
-:param pulumi.Input[int] ttl: The TTL, in seconds, for the URL. For how long it should</p>
-<blockquote>
-<div>be valid.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.objectstorage.TempUrl.container">
 <code class="descname">container</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.objectstorage.TempUrl.container" title="Permalink to this definition">¶</a></dt>

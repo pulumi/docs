@@ -215,8 +215,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[bool] retire_on_delete
-:param pulumi.Input[str] retiring_principal</p>
 <dl class="attribute">
 <dt id="pulumi_aws.kms.Grant.constraints">
 <code class="descname">constraints</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Grant.constraints" title="Permalink to this definition">¶</a></dt>
@@ -320,7 +318,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>deletion_window_in_days</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Duration in days after which the key is deleted
+<li><strong>deletion_window_in_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Duration in days after which the key is deleted
 after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the key as viewed in AWS console.</li>
 <li><strong>enable_key_rotation</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether <a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html">key rotation</a>
@@ -434,7 +432,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.kms.get_alias">
-<code class="descclassname">pulumi_aws.kms.</code><code class="descname">get_alias</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.get_alias" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.kms.</code><code class="descname">get_alias</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.get_alias" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ARN of a KMS key alias.
 By using this data source, you can reference key alias
 without having to hard code the ARN as input.</p>
@@ -442,7 +440,7 @@ without having to hard code the ARN as input.</p>
 
 <dl class="function">
 <dt id="pulumi_aws.kms.get_cipher_text">
-<code class="descclassname">pulumi_aws.kms.</code><code class="descname">get_cipher_text</code><span class="sig-paren">(</span><em>context=None</em>, <em>key_id=None</em>, <em>plaintext=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.get_cipher_text" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.kms.</code><code class="descname">get_cipher_text</code><span class="sig-paren">(</span><em>context=None</em>, <em>key_id=None</em>, <em>plaintext=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.get_cipher_text" title="Permalink to this definition">¶</a></dt>
 <dd><p>The KMS ciphertext data source allows you to encrypt plaintext into ciphertext
 by using an AWS KMS customer master key.</p>
 <blockquote>
@@ -452,7 +450,7 @@ by using an AWS KMS customer master key.</p>
 
 <dl class="function">
 <dt id="pulumi_aws.kms.get_key">
-<code class="descclassname">pulumi_aws.kms.</code><code class="descname">get_key</code><span class="sig-paren">(</span><em>grant_tokens=None</em>, <em>key_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.get_key" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.kms.</code><code class="descname">get_key</code><span class="sig-paren">(</span><em>grant_tokens=None</em>, <em>key_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.get_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get detailed information about 
 the specified KMS Key with flexible key id input. 
 This can be useful to reference key alias 
@@ -461,20 +459,13 @@ without having to hard code the ARN as input.</p>
 
 <dl class="function">
 <dt id="pulumi_aws.kms.get_secret">
-<code class="descclassname">pulumi_aws.kms.</code><code class="descname">get_secret</code><span class="sig-paren">(</span><em>__has_dynamic_attributes=None</em>, <em>secrets=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.get_secret" title="Permalink to this definition">¶</a></dt>
-<dd><p>!&gt; <strong>WARNING:</strong> This data source is deprecated and will be removed in the next major version. You can migrate existing configurations to the <cite>``aws_kms_secrets`</cite> data source &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/kms_secrets.html">https://www.terraform.io/docs/providers/aws/d/kms_secrets.html</a>&gt;`_ following instructions available in the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/version-2-upgrade.html#data-source-aws_kms_secret">Version 2 Upgrade Guide</a>.</p>
-<p>The KMS secret data source allows you to use data encrypted with the AWS KMS
-service within your resource definitions.</p>
-<blockquote>
-<div><strong>NOTE</strong>: Using this data provider will allow you to conceal secret data within your
-resource definitions but does not take care of protecting that data in the
-logging output, plan output or state output.</div></blockquote>
-<p>Please take care to secure your secret data outside of resource definitions.</p>
+<code class="descclassname">pulumi_aws.kms.</code><code class="descname">get_secret</code><span class="sig-paren">(</span><em>secrets=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.get_secret" title="Permalink to this definition">¶</a></dt>
+<dd><p>!&gt; <strong>WARNING:</strong> This data source was removed in version 2.0.0 of the Terraform AWS Provider. You can migrate existing configurations to the <cite>``aws_kms_secrets`</cite> data source &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/kms_secrets.html">https://www.terraform.io/docs/providers/aws/d/kms_secrets.html</a>&gt;`_ following instructions available in the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/version-2-upgrade.html#data-source-aws_kms_secret">Version 2 Upgrade Guide</a>.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.kms.get_secrets">
-<code class="descclassname">pulumi_aws.kms.</code><code class="descname">get_secrets</code><span class="sig-paren">(</span><em>secrets=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.get_secrets" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.kms.</code><code class="descname">get_secrets</code><span class="sig-paren">(</span><em>secrets=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.get_secrets" title="Permalink to this definition">¶</a></dt>
 <dd><p>Decrypt multiple secrets from data encrypted with the AWS KMS service.</p>
 <blockquote>
 <div><strong>NOTE</strong>: Using this data provider will allow you to conceal secret data within your resource definitions but does not take care of protecting that data in all Terraform logging and state output. Please take care to secure your secret data beyond just the Terraform configuration.</div></blockquote>

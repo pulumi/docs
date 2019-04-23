@@ -2,7 +2,7 @@
 <span id="endpoints"></span><h1>endpoints<a class="headerlink" href="#module-pulumi_gcp.endpoints" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.endpoints.Service">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.endpoints.</code><code class="descname">Service</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>grpc_config=None</em>, <em>openapi_config=None</em>, <em>project=None</em>, <em>protoc_output=None</em>, <em>protoc_output_base64=None</em>, <em>service_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.endpoints.Service" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.endpoints.</code><code class="descname">Service</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>grpc_config=None</em>, <em>openapi_config=None</em>, <em>project=None</em>, <em>protoc_output_base64=None</em>, <em>service_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.endpoints.Service" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource creates and rolls out a Cloud Endpoints service using OpenAPI or gRPC.  View the relevant docs for <a class="reference external" href="https://cloud.google.com/endpoints/docs/openapi/">OpenAPI</a> and <a class="reference external" href="https://cloud.google.com/endpoints/docs/grpc/">gRPC</a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -16,12 +16,6 @@
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] grpc_config
-:param pulumi.Input[str] openapi_config
-:param pulumi.Input[str] project
-:param pulumi.Input[str] protoc_output
-:param pulumi.Input[str] protoc_output_base64
-:param pulumi.Input[str] service_name</p>
 <dl class="method">
 <dt id="pulumi_gcp.endpoints.Service.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.endpoints.Service.translate_output_property" title="Permalink to this definition">¶</a></dt>

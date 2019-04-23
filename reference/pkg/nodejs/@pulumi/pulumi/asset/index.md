@@ -49,6 +49,15 @@ Returns true if the given object is an instance of an Archive.  This is designed
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
+<h3 class="pdoc-member-header" id="Archive-__pulumiArchive">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/asset/archive.ts#L26">property <b>__pulumiArchive</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>__pulumiArchive: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> = true;</pre>
+
+A private field to help with RTTI that works in SxS scenarios.
+
+</div>
 </div>
 <h2 class="pdoc-module-header" id="Asset">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/asset/asset.ts#L20">class <b>Asset</b></a>
@@ -67,6 +76,15 @@ Asset represents a single blob of text or data that is managed as a first class 
 
 Returns true if the given object is an instance of an Asset.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="Asset-__pulumiAsset">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/asset/asset.ts#L25">property <b>__pulumiAsset</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>__pulumiAsset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> = true;</pre>
+
+A private field to help with RTTI that works in SxS scenarios.
 
 </div>
 </div>
@@ -96,6 +114,15 @@ An AssetArchive is an archive created from an in-memory collection of named asse
 
 Returns true if the given object is an instance of an Archive.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="AssetArchive-__pulumiArchive">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/asset/archive.ts#L26">property <b>__pulumiArchive</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>__pulumiArchive: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> = true;</pre>
+
+A private field to help with RTTI that works in SxS scenarios.
 
 </div>
 <h3 class="pdoc-member-header" id="AssetArchive-assets">
@@ -137,6 +164,15 @@ Returns true if the given object is an instance of an Archive.  This is designed
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
+<h3 class="pdoc-member-header" id="FileArchive-__pulumiArchive">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/asset/archive.ts#L26">property <b>__pulumiArchive</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>__pulumiArchive: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> = true;</pre>
+
+A private field to help with RTTI that works in SxS scenarios.
+
+</div>
 <h3 class="pdoc-member-header" id="FileArchive-path">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/asset/archive.ts#L65">property <b>path</b></a>
 </h3>
@@ -173,6 +209,15 @@ FileAsset is a kind of asset produced from a given path to a file on the local f
 
 Returns true if the given object is an instance of an Asset.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="FileAsset-__pulumiAsset">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/asset/asset.ts#L25">property <b>__pulumiAsset</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>__pulumiAsset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> = true;</pre>
+
+A private field to help with RTTI that works in SxS scenarios.
 
 </div>
 <h3 class="pdoc-member-header" id="FileAsset-path">
@@ -215,6 +260,15 @@ Returns true if the given object is an instance of an Archive.  This is designed
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
+<h3 class="pdoc-member-header" id="RemoteArchive-__pulumiArchive">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/asset/archive.ts#L26">property <b>__pulumiArchive</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>__pulumiArchive: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> = true;</pre>
+
+A private field to help with RTTI that works in SxS scenarios.
+
+</div>
 <h3 class="pdoc-member-header" id="RemoteArchive-uri">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/asset/archive.ts#L82">property <b>uri</b></a>
 </h3>
@@ -255,6 +309,15 @@ Returns true if the given object is an instance of an Asset.  This is designed t
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
+<h3 class="pdoc-member-header" id="RemoteAsset-__pulumiAsset">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/asset/asset.ts#L25">property <b>__pulumiAsset</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>__pulumiAsset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> = true;</pre>
+
+A private field to help with RTTI that works in SxS scenarios.
+
+</div>
 <h3 class="pdoc-member-header" id="RemoteAsset-uri">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/asset/asset.ts#L86">property <b>uri</b></a>
 </h3>
@@ -291,6 +354,15 @@ StringAsset is a kind of asset produced from an in-memory UTF8-encoded string.
 
 Returns true if the given object is an instance of an Asset.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="StringAsset-__pulumiAsset">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/asset/asset.ts#L25">property <b>__pulumiAsset</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>__pulumiAsset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> = true;</pre>
+
+A private field to help with RTTI that works in SxS scenarios.
 
 </div>
 <h3 class="pdoc-member-header" id="StringAsset-text">

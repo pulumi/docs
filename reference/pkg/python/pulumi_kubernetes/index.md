@@ -3,7 +3,6 @@
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="admissionregistration/">admissionregistration</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="admissionregistration/v1alpha1/">v1alpha1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="admissionregistration/v1beta1/">v1beta1</a></li>
 </ul>
 </li>
@@ -53,6 +52,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="coordination/">coordination</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="coordination/v1/">v1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="coordination/v1beta1/">v1beta1</a></li>
 </ul>
 </li>
@@ -74,6 +74,12 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="networking/">networking</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="networking/v1/">v1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="networking/v1beta1/">v1beta1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="node/">node</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="node/v1alpha1/">v1alpha1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node/v1beta1/">v1beta1</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="policy/">policy</a><ul>
@@ -87,6 +93,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="scheduling/">scheduling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="scheduling/v1/">v1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="scheduling/v1alpha1/">v1alpha1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="scheduling/v1beta1/">v1beta1</a></li>
 </ul>
