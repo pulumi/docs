@@ -396,36 +396,36 @@ func (e *emitter) gatherModules(doc *typeDocNode, parentModule string, k8s bool)
 				continue
 			}
 
-			if isModule {
-				// If this is a module, we must explode it out into the top-level modules list.
-				// This may very well conflict, so we'll need to merge the new members in if so.
-				chname := simplifyModuleName(child, modname)
-				nss, err := e.gatherNamespaceModules(chname, child)
-				if err != nil {
+			// if isModule {
+			// 	// If this is a module, we must explode it out into the top-level modules list.
+			// 	// This may very well conflict, so we'll need to merge the new members in if so.
+			// 	chname := simplifyModuleName(child, modname)
+			// 	nss, err := e.gatherNamespaceModules(chname, child)
+			// 	if err != nil {
+			// 		return nil, err
+			// 	}
+
+			// 	for nsname, ns := range nss {
+			// 		if exist, has := mods[nsname]; has {
+
+			// 			if err := exist.Merge(ns); err != nil {
+			// 				return nil, err
+			// 			}
+			// 		} else {
+			// 			mods[nsname] = ns
+			// 		}
+			// 	}
+			// } else {
+			// Else, register this child as an export.
+			name := child.Name
+			if exist, has := mod.Exports[name]; has {
+				var err error
+				if child, err = exist.Merge(child); err != nil {
 					return nil, err
 				}
-
-				for nsname, ns := range nss {
-					if exist, has := mods[nsname]; has {
-
-						if err := exist.Merge(ns); err != nil {
-							return nil, err
-						}
-					} else {
-						mods[nsname] = ns
-					}
-				}
-			} else {
-				// Else, register this child as an export.
-				name := child.Name
-				if exist, has := mod.Exports[name]; has {
-					var err error
-					if child, err = exist.Merge(child); err != nil {
-						return nil, err
-					}
-				}
-				mod.Exports[name] = child
 			}
+			mod.Exports[name] = child
+			//}
 		}
 
 	}

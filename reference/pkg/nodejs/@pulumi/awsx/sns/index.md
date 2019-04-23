@@ -14,17 +14,7 @@ title: Module sns
 <div class="expanded" markdown="1">
 <h2 class="pdoc-module-header toggleButton" title="Click to hide Index">Index ▾</h2>
 <div class="pdoc-module-contents" markdown="1">
-* <a href="#metric">function metric</a>
-* <a href="#numberOfMessagesPublished">function numberOfMessagesPublished</a>
-* <a href="#numberOfNotificationsDelivered">function numberOfNotificationsDelivered</a>
-* <a href="#numberOfNotificationsFailed">function numberOfNotificationsFailed</a>
-* <a href="#numberOfNotificationsFilteredOut_InvalidAttributes">function numberOfNotificationsFilteredOut_InvalidAttributes</a>
-* <a href="#numberOfNotificationsFilteredOut_NoMessageAttributes">function numberOfNotificationsFilteredOut_NoMessageAttributes</a>
-* <a href="#publishSize">function publishSize</a>
-* <a href="#smsMonthToDateSpentUSD">function smsMonthToDateSpentUSD</a>
-* <a href="#smsSuccessRate">function smsSuccessRate</a>
-* <a href="#SnsMetricChange">interface SnsMetricChange</a>
-* <a href="#SnsMetricName">type SnsMetricName</a>
+* <a href="#metrics">module metrics</a>
 
 <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sns/metrics.ts">sns/metrics.ts</a> 
 </div>
@@ -32,10 +22,14 @@ title: Module sns
 </div>
 
 
-<h2 class="pdoc-module-header" id="metric">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sns/metrics.ts#L90">function <b>metric</b></a>
+<h2 class="pdoc-module-header" id="metrics">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sns/metrics.ts#L20">module <b>metrics</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="metric">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sns/metrics.ts#L90">function <b>metric</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>metric(metricName: <a href='#SnsMetricName'>SnsMetricName</a>, change: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -73,10 +67,10 @@ Amazon Simple Notification Service sends the following dimensions to CloudWatch:
    "transactional".
 
 </div>
-<h2 class="pdoc-module-header" id="numberOfMessagesPublished">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sns/metrics.ts#L126">function <b>numberOfMessagesPublished</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="numberOfMessagesPublished">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sns/metrics.ts#L126">function <b>numberOfMessagesPublished</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>numberOfMessagesPublished(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -88,10 +82,10 @@ Units: Count
 Valid Statistics: Sum
 
 </div>
-<h2 class="pdoc-module-header" id="numberOfNotificationsDelivered">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sns/metrics.ts#L143">function <b>numberOfNotificationsDelivered</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="numberOfNotificationsDelivered">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sns/metrics.ts#L143">function <b>numberOfNotificationsDelivered</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>numberOfNotificationsDelivered(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -109,10 +103,10 @@ Units: Count
 Valid Statistics: Sum
 
 </div>
-<h2 class="pdoc-module-header" id="numberOfNotificationsFailed">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sns/metrics.ts#L162">function <b>numberOfNotificationsFailed</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="numberOfNotificationsFailed">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sns/metrics.ts#L162">function <b>numberOfNotificationsFailed</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>numberOfNotificationsFailed(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -132,10 +126,10 @@ Units: Count
 Valid Statistics: Sum, Average
 
 </div>
-<h2 class="pdoc-module-header" id="numberOfNotificationsFilteredOut_InvalidAttributes">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sns/metrics.ts#L187">function <b>numberOfNotificationsFilteredOut_InvalidAttributes</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="numberOfNotificationsFilteredOut_InvalidAttributes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sns/metrics.ts#L187">function <b>numberOfNotificationsFilteredOut_InvalidAttributes</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>numberOfNotificationsFilteredOut_InvalidAttributes(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -149,10 +143,10 @@ Units: Count
 Valid Statistics: Sum, Average
 
 </div>
-<h2 class="pdoc-module-header" id="numberOfNotificationsFilteredOut_NoMessageAttributes">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sns/metrics.ts#L174">function <b>numberOfNotificationsFilteredOut_NoMessageAttributes</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="numberOfNotificationsFilteredOut_NoMessageAttributes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sns/metrics.ts#L174">function <b>numberOfNotificationsFilteredOut_NoMessageAttributes</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>numberOfNotificationsFilteredOut_NoMessageAttributes(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -165,10 +159,10 @@ Units: Count
 Valid Statistics: Sum, Average
 
 </div>
-<h2 class="pdoc-module-header" id="publishSize">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sns/metrics.ts#L198">function <b>publishSize</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="publishSize">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sns/metrics.ts#L198">function <b>publishSize</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>publishSize(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -180,10 +174,10 @@ Units: Bytes
 Valid Statistics: Minimum, Maximum, Average and Count
 
 </div>
-<h2 class="pdoc-module-header" id="smsMonthToDateSpentUSD">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sns/metrics.ts#L213">function <b>smsMonthToDateSpentUSD</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="smsMonthToDateSpentUSD">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sns/metrics.ts#L213">function <b>smsMonthToDateSpentUSD</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>smsMonthToDateSpentUSD(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -199,10 +193,10 @@ minutes.
 Valid Statistics: Maximum
 
 </div>
-<h2 class="pdoc-module-header" id="smsSuccessRate">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sns/metrics.ts#L224">function <b>smsSuccessRate</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="smsSuccessRate">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sns/metrics.ts#L224">function <b>smsSuccessRate</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>smsSuccessRate(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -214,164 +208,15 @@ Units: Count
 Valid Statistics: Sum, Average, Data Samples
 
 </div>
-<h2 class="pdoc-module-header" id="SnsMetricChange">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sns/metrics.ts#L28">interface <b>SnsMetricChange</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#MetricChange'>MetricChange</a></pre>
-<h3 class="pdoc-member-header" id="SnsMetricChange-application">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sns/metrics.ts#L38">property <b>application</b></a>
+<h3 class="pdoc-member-header" id="SnsMetricChange">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sns/metrics.ts#L28">interface <b>SnsMetricChange</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>application?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Filters on application objects, which represent an app and device registered with one of
-the supported push notification services, such as APNS and FCM.
-
 </div>
-<h3 class="pdoc-member-header" id="SnsMetricChange-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L439">property <b>color</b></a>
+<h3 class="pdoc-member-header" id="SnsMetricName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sns/metrics.ts#L21">type <b>SnsMetricName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>color?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-
-The six-digit HTML hex color code to be used for this metric.
-
-Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
-
-</div>
-<h3 class="pdoc-member-header" id="SnsMetricChange-country">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sns/metrics.ts#L44">property <b>country</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>country?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Filters on the destination country or region of an SMS message. The country or region is
-represented by its ISO 3166-1 alpha-2 code.
-
-</div>
-<h3 class="pdoc-member-header" id="SnsMetricChange-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L408">property <b>dimensions</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>dimensions?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>
-
-The new dimension for this metric.  If this object is missing this property, then no change
-will be made.  However, if the property is there by set to [undefined] then the value will be
-cleared.
-
-</div>
-<h3 class="pdoc-member-header" id="SnsMetricChange-extendedStatistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L426">property <b>extendedStatistic</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>extendedStatistic?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-
-The new percentile statistic for the metric associated with the alarm.  If this object is
-missing this property, then no change will be made.  However, if the property is there by set
-to [undefined] then the value will be set to the default.
-
-</div>
-<h3 class="pdoc-member-header" id="SnsMetricChange-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L448">property <b>label</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>label?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-
-The label to display for this metric in the graph legend. If this is not specified, the
-metric is given an autogenerated label that distinguishes it from the other metrics in the
-widget.
-
-Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
-
-</div>
-<h3 class="pdoc-member-header" id="SnsMetricChange-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L414">property <b>period</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>period?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-
-The new period in seconds over which the specified `stat` is applied.  If this object is
-missing this property, then no change will be made.  However, if the property is there by set
-to [undefined] then the value will be set to the default (300s).
-
-</div>
-<h3 class="pdoc-member-header" id="SnsMetricChange-platform">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sns/metrics.ts#L49">property <b>platform</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>platform?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Filters on platform objects for the push notification services, such as APNS and FCM.
-
-</div>
-<h3 class="pdoc-member-header" id="SnsMetricChange-smsType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sns/metrics.ts#L54">property <b>smsType</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>smsType?: <span class='s2'>"promotional"</span> | <span class='s2'>"transactional"</span>;</pre>
-
-Filters on the message type of SMS message.
-
-</div>
-<h3 class="pdoc-member-header" id="SnsMetricChange-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L420">property <b>statistic</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>statistic?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</pre>
-
-The new statistic to apply to the alarm's associated metric.  If this object is missing this
-property, then no change will be made.  However, if the property is there by set to
-[undefined] then the value will be set to the default.
-
-</div>
-<h3 class="pdoc-member-header" id="SnsMetricChange-topic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sns/metrics.ts#L32">property <b>topic</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>topic?: aws.sns.Topic;</pre>
-
-Optional topic to filter down to.
-
-</div>
-<h3 class="pdoc-member-header" id="SnsMetricChange-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L432">property <b>unit</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>unit?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</pre>
-
-The new unit for this metric.   If this object is missing this property, then no change will
-be made.  However, if the property is there by set to [undefined] then the value will be set
-to the default.
-
-</div>
-<h3 class="pdoc-member-header" id="SnsMetricChange-visible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L456">property <b>visible</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>visible?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-
-Set this to true to have the metric appear in the graph, or false to have it be hidden. The
-default is true.
-
-Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
-
-</div>
-<h3 class="pdoc-member-header" id="SnsMetricChange-yAxis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L463">property <b>yAxis</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>yAxis?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</pre>
-
-Where on the graph to display the y-axis for this metric. The default is left.
-
-Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="SnsMetricName">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sns/metrics.ts#L21">type <b>SnsMetricName</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>type</span> SnsMetricName = <span class='s2'>"NumberOfMessagesPublished"</span> | <span class='s2'>"NumberOfNotificationsDelivered"</span> | <span class='s2'>"NumberOfNotificationsFailed"</span> | <span class='s2'>"NumberOfNotificationsFilteredOut"</span> | <span class='s2'>"NumberOfNotificationsFilteredOut-NoMessageAttributes"</span> | <span class='s2'>"NumberOfNotificationsFilteredOut-InvalidAttributes"</span> | <span class='s2'>"PublishSize"</span> | <span class='s2'>"SMSMonthToDateSpentUSD"</span> | <span class='s2'>"SMSSuccessRate"</span>;</pre>
+</div>
 </div>

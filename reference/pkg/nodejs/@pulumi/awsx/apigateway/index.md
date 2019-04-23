@@ -16,21 +16,12 @@ title: Module apigateway
 <div class="pdoc-module-contents" markdown="1">
 * <a href="#API">class API</a>
 * <a href="#deploymentOnlyModule">const deploymentOnlyModule</a>
-* <a href="#cacheHitCount">function cacheHitCount</a>
-* <a href="#cacheMissCount">function cacheMissCount</a>
-* <a href="#count">function count</a>
-* <a href="#error4XX">function error4XX</a>
-* <a href="#error5XX">function error5XX</a>
-* <a href="#integrationLatency">function integrationLatency</a>
-* <a href="#latency">function latency</a>
-* <a href="#metric">function metric</a>
 * <a href="#APIArgs">interface APIArgs</a>
-* <a href="#ApigatewayMetricChange">interface ApigatewayMetricChange</a>
 * <a href="#Endpoint">interface Endpoint</a>
 * <a href="#IntegrationRoute">interface IntegrationRoute</a>
 * <a href="#IntegrationRouteTargetProvider">interface IntegrationRouteTargetProvider</a>
 * <a href="#IntegrationTarget">interface IntegrationTarget</a>
-* <a href="#ApigatewayMetricName">type ApigatewayMetricName</a>
+* <a href="#metrics">module metrics</a>
 * <a href="#EventHandlerRoute">type EventHandlerRoute</a>
 * <a href="#RawDataRoute">type RawDataRoute</a>
 * <a href="#Request">type Request</a>
@@ -141,150 +132,6 @@ deployments.
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>const</span> deploymentOnlyModule: <span class='kd'>true</span> = <span class='s2'>true</span>;</pre>
 </div>
-<h2 class="pdoc-module-header" id="cacheHitCount">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/apigateway/metrics.ts#L162">function <b>cacheHitCount</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>cacheHitCount(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The number of requests served from the API cache in a given period.
-
-The Sum statistic represents this metric, namely, the total count of the cache hits in the
-specified period. The Average statistic represents the cache hit rate, namely, the total count of
-the cache hits divided by the total number of requests during the period. The denominator
-corresponds to the Count metric (below).
-
-</div>
-<h2 class="pdoc-module-header" id="cacheMissCount">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/apigateway/metrics.ts#L176">function <b>cacheMissCount</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>cacheMissCount(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The number of requests served from the back end in a given period, when API caching is enabled.
-
-The Sum statistic represents this metric, namely, the total count of the cache misses in the
-specified period. The Average statistic represents the cache miss rate, namely, the total count
-of the cache hits divided by the total number of requests during the period. The denominator
-corresponds to the Count metric (below).
-
-Unit: Count
-
-</div>
-<h2 class="pdoc-module-header" id="count">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/apigateway/metrics.ts#L187">function <b>count</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>count(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The total number API requests in a given period.
-
-The SampleCount statistic represents this metric.
-
-Unit: Count
-
-</div>
-<h2 class="pdoc-module-header" id="error4XX">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/apigateway/metrics.ts#L136">function <b>error4XX</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>error4XX(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The number of client-side errors captured in a specified period.
-
-The Sum statistic represents this metric, namely, the total count of the 4XXError errors in the
-given period. The Average statistic represents the 4XXError error rate, namely, the total count
-of the 4XXError errors divided by the total number of requests during the period. The denominator
-corresponds to the Count metric (below).
-
-Unit: Count
-
-</div>
-<h2 class="pdoc-module-header" id="error5XX">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/apigateway/metrics.ts#L150">function <b>error5XX</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>error5XX(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The number of server-side errors captured in a given period.
-
-The Sum statistic represents this metric, namely, the total count of the 5XXError errors in the
-given period. The Average statistic represents the 5XXError error rate, namely, the total count
-of the 5XXError errors divided by the total number of requests during the period. The denominator
-corresponds to the Count metric (below).
-
-Unit: Count
-
-</div>
-<h2 class="pdoc-module-header" id="integrationLatency">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/apigateway/metrics.ts#L197">function <b>integrationLatency</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>integrationLatency(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The time between when API Gateway relays a request to the back end and when it receives a
-response from the back end.
-
-Unit: Milliseconds
-
-</div>
-<h2 class="pdoc-module-header" id="latency">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/apigateway/metrics.ts#L207">function <b>latency</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>latency(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The time between when API Gateway receives a request from a client and when it returns a response
-to the client. The latency includes the integration latency and other API Gateway overhead.
-
-Unit: Milliseconds
-
-</div>
-<h2 class="pdoc-module-header" id="metric">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/apigateway/metrics.ts#L97">function <b>metric</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>metric(metricName: <a href='#ApigatewayMetricName'>ApigatewayMetricName</a>, change: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-Creates an AWS/ApiGateway metric with the requested [metricName]. See
-https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-metrics-and-dimensions.html
-for list of all metric-names.
-
-Note, individual metrics can easily be obtained without supplying the name using the other
-[metricXXX] functions.
-
-You can use the dimensions in the following table to filter API Gateway metrics.
-
-1. "ApiName": Filters API Gateway metrics for an API of the specified API name.
-2. "ApiName, Method, Resource, Stage": Filters API Gateway metrics for an API method of the
-   specified API, stage, resource, and method.
-
-   API Gateway will not send such metrics unless you have explicitly enabled detailed CloudWatch
-   metrics. You can do this in the console by selecting Enable CloudWatch Metrics under a stage
-   Settings tab. Alternatively, you can call the stage:update action of the API Gateway REST API
-   to update the metricsEnabled property to true.
-
-   Enabling such metrics will incur additional charges to your account. For pricing information,
-   see Amazon CloudWatch Pricing.
-3. "ApiName, Stage": Filters API Gateway metrics for an API stage of the specified API and stage.
-
-</div>
 <h2 class="pdoc-module-header" id="APIArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/apigateway/api.ts#L291">interface <b>APIArgs</b></a>
 </h2>
@@ -340,180 +187,6 @@ that you must manually provide permission for any route targets to be invoked by
 when using [swaggerString].
 
 Either [swaggerString] or [routes] must be specified.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ApigatewayMetricChange">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/apigateway/metrics.ts#L26">interface <b>ApigatewayMetricChange</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#MetricChange'>MetricChange</a></pre>
-<h3 class="pdoc-member-header" id="ApigatewayMetricChange-api">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/apigateway/metrics.ts#L37">property <b>api</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>api?: <a href='#API'>API</a>;</pre>
-
-Optional [API] this metric should be filtered down to.  Only one of [RestApi] or [api]
-can be provided.
-
-</div>
-<h3 class="pdoc-member-header" id="ApigatewayMetricChange-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L439">property <b>color</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>color?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-
-The six-digit HTML hex color code to be used for this metric.
-
-Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
-
-</div>
-<h3 class="pdoc-member-header" id="ApigatewayMetricChange-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L408">property <b>dimensions</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>dimensions?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>
-
-The new dimension for this metric.  If this object is missing this property, then no change
-will be made.  However, if the property is there by set to [undefined] then the value will be
-cleared.
-
-</div>
-<h3 class="pdoc-member-header" id="ApigatewayMetricChange-extendedStatistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L426">property <b>extendedStatistic</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>extendedStatistic?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-
-The new percentile statistic for the metric associated with the alarm.  If this object is
-missing this property, then no change will be made.  However, if the property is there by set
-to [undefined] then the value will be set to the default.
-
-</div>
-<h3 class="pdoc-member-header" id="ApigatewayMetricChange-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L448">property <b>label</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>label?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-
-The label to display for this metric in the graph legend. If this is not specified, the
-metric is given an autogenerated label that distinguishes it from the other metrics in the
-widget.
-
-Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
-
-</div>
-<h3 class="pdoc-member-header" id="ApigatewayMetricChange-method">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/apigateway/metrics.ts#L51">property <b>method</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>method?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Filters API Gateway metrics for an API method of the specified API, stage, resource, and
-method.
-
-API Gateway will not send such metrics unless you have explicitly enabled detailed
-CloudWatch metrics. You can do this in the console by selecting Enable CloudWatch Metrics
-under a stage Settings tab. Alternatively, you can call the stage:update action of the
-API Gateway REST API to update the metricsEnabled property to true.
-
-Enabling such metrics will incur additional charges to your account. For pricing
-information, see Amazon CloudWatch Pricing.
-
-</div>
-<h3 class="pdoc-member-header" id="ApigatewayMetricChange-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L414">property <b>period</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>period?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-
-The new period in seconds over which the specified `stat` is applied.  If this object is
-missing this property, then no change will be made.  However, if the property is there by set
-to [undefined] then the value will be set to the default (300s).
-
-</div>
-<h3 class="pdoc-member-header" id="ApigatewayMetricChange-resource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/apigateway/metrics.ts#L65">property <b>resource</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>resource?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Filters API Gateway metrics for an API method of the specified API, stage, resource, and
-method.
-
-API Gateway will not send such metrics unless you have explicitly enabled detailed
-CloudWatch metrics. You can do this in the console by selecting Enable CloudWatch Metrics
-under a stage Settings tab. Alternatively, you can call the stage:update action of the
-API Gateway REST API to update the metricsEnabled property to true.
-
-Enabling such metrics will incur additional charges to your account. For pricing
-information, see Amazon CloudWatch Pricing.
-
-</div>
-<h3 class="pdoc-member-header" id="ApigatewayMetricChange-restApi">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/apigateway/metrics.ts#L31">property <b>restApi</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>restApi?: aws.apigateway.RestApi;</pre>
-
-Optional [RestApi] this metric should be filtered down to.  Only one of [RestApi] or
-[api] can be provided.
-
-</div>
-<h3 class="pdoc-member-header" id="ApigatewayMetricChange-stage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/apigateway/metrics.ts#L71">property <b>stage</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>stage?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Filters API Gateway metrics for an API stage of the specified API and stage.  Either
-[restApi] or [api] must be provided with this.
-
-</div>
-<h3 class="pdoc-member-header" id="ApigatewayMetricChange-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L420">property <b>statistic</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>statistic?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</pre>
-
-The new statistic to apply to the alarm's associated metric.  If this object is missing this
-property, then no change will be made.  However, if the property is there by set to
-[undefined] then the value will be set to the default.
-
-</div>
-<h3 class="pdoc-member-header" id="ApigatewayMetricChange-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L432">property <b>unit</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>unit?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</pre>
-
-The new unit for this metric.   If this object is missing this property, then no change will
-be made.  However, if the property is there by set to [undefined] then the value will be set
-to the default.
-
-</div>
-<h3 class="pdoc-member-header" id="ApigatewayMetricChange-visible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L456">property <b>visible</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>visible?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-
-Set this to true to have the metric appear in the graph, or false to have it be hidden. The
-default is true.
-
-Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
-
-</div>
-<h3 class="pdoc-member-header" id="ApigatewayMetricChange-yAxis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L463">property <b>yAxis</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>yAxis?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</pre>
-
-Where on the graph to display the y-axis for this metric. The default is left.
-
-Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 </div>
 </div>
@@ -695,11 +368,165 @@ arn:aws:apigateway:us-west-2:s3:path/{bucket}/{key}
 
 </div>
 </div>
-<h2 class="pdoc-module-header" id="ApigatewayMetricName">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/apigateway/metrics.ts#L22">type <b>ApigatewayMetricName</b></a>
+<h2 class="pdoc-module-header" id="metrics">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/apigateway/metrics.ts#L21">module <b>metrics</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="cacheHitCount">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/apigateway/metrics.ts#L162">function <b>cacheHitCount</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>cacheHitCount(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The number of requests served from the API cache in a given period.
+
+The Sum statistic represents this metric, namely, the total count of the cache hits in the
+specified period. The Average statistic represents the cache hit rate, namely, the total count of
+the cache hits divided by the total number of requests during the period. The denominator
+corresponds to the Count metric (below).
+
+</div>
+<h3 class="pdoc-member-header" id="cacheMissCount">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/apigateway/metrics.ts#L176">function <b>cacheMissCount</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>cacheMissCount(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The number of requests served from the back end in a given period, when API caching is enabled.
+
+The Sum statistic represents this metric, namely, the total count of the cache misses in the
+specified period. The Average statistic represents the cache miss rate, namely, the total count
+of the cache hits divided by the total number of requests during the period. The denominator
+corresponds to the Count metric (below).
+
+Unit: Count
+
+</div>
+<h3 class="pdoc-member-header" id="count">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/apigateway/metrics.ts#L187">function <b>count</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>count(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The total number API requests in a given period.
+
+The SampleCount statistic represents this metric.
+
+Unit: Count
+
+</div>
+<h3 class="pdoc-member-header" id="error4XX">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/apigateway/metrics.ts#L136">function <b>error4XX</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>error4XX(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The number of client-side errors captured in a specified period.
+
+The Sum statistic represents this metric, namely, the total count of the 4XXError errors in the
+given period. The Average statistic represents the 4XXError error rate, namely, the total count
+of the 4XXError errors divided by the total number of requests during the period. The denominator
+corresponds to the Count metric (below).
+
+Unit: Count
+
+</div>
+<h3 class="pdoc-member-header" id="error5XX">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/apigateway/metrics.ts#L150">function <b>error5XX</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>error5XX(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The number of server-side errors captured in a given period.
+
+The Sum statistic represents this metric, namely, the total count of the 5XXError errors in the
+given period. The Average statistic represents the 5XXError error rate, namely, the total count
+of the 5XXError errors divided by the total number of requests during the period. The denominator
+corresponds to the Count metric (below).
+
+Unit: Count
+
+</div>
+<h3 class="pdoc-member-header" id="integrationLatency">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/apigateway/metrics.ts#L197">function <b>integrationLatency</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>integrationLatency(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The time between when API Gateway relays a request to the back end and when it receives a
+response from the back end.
+
+Unit: Milliseconds
+
+</div>
+<h3 class="pdoc-member-header" id="latency">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/apigateway/metrics.ts#L207">function <b>latency</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>latency(change?: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The time between when API Gateway receives a request from a client and when it returns a response
+to the client. The latency includes the integration latency and other API Gateway overhead.
+
+Unit: Milliseconds
+
+</div>
+<h3 class="pdoc-member-header" id="metric">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/apigateway/metrics.ts#L97">function <b>metric</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>metric(metricName: <a href='#ApigatewayMetricName'>ApigatewayMetricName</a>, change: <a href='#ApigatewayMetricChange'>ApigatewayMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+Creates an AWS/ApiGateway metric with the requested [metricName]. See
+https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-metrics-and-dimensions.html
+for list of all metric-names.
+
+Note, individual metrics can easily be obtained without supplying the name using the other
+[metricXXX] functions.
+
+You can use the dimensions in the following table to filter API Gateway metrics.
+
+1. "ApiName": Filters API Gateway metrics for an API of the specified API name.
+2. "ApiName, Method, Resource, Stage": Filters API Gateway metrics for an API method of the
+   specified API, stage, resource, and method.
+
+   API Gateway will not send such metrics unless you have explicitly enabled detailed CloudWatch
+   metrics. You can do this in the console by selecting Enable CloudWatch Metrics under a stage
+   Settings tab. Alternatively, you can call the stage:update action of the API Gateway REST API
+   to update the metricsEnabled property to true.
+
+   Enabling such metrics will incur additional charges to your account. For pricing information,
+   see Amazon CloudWatch Pricing.
+3. "ApiName, Stage": Filters API Gateway metrics for an API stage of the specified API and stage.
+
+</div>
+<h3 class="pdoc-member-header" id="ApigatewayMetricChange">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/apigateway/metrics.ts#L26">interface <b>ApigatewayMetricChange</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+</div>
+<h3 class="pdoc-member-header" id="ApigatewayMetricName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/apigateway/metrics.ts#L22">type <b>ApigatewayMetricName</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>type</span> ApigatewayMetricName = <span class='s2'>"4XXError"</span> | <span class='s2'>"5XXError"</span> | <span class='s2'>"CacheHitCount"</span> | <span class='s2'>"CacheMissCount"</span> | <span class='s2'>"Count"</span> | <span class='s2'>"IntegrationLatency"</span> | <span class='s2'>"Latency"</span>;</pre>
+</div>
 </div>
 <h2 class="pdoc-module-header" id="EventHandlerRoute">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/apigateway/api.ts#L60">type <b>EventHandlerRoute</b></a>

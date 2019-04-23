@@ -14,18 +14,7 @@ title: Module sqs
 <div class="expanded" markdown="1">
 <h2 class="pdoc-module-header toggleButton" title="Click to hide Index">Index ▾</h2>
 <div class="pdoc-module-contents" markdown="1">
-* <a href="#approximateAgeOfOldestMessage">function approximateAgeOfOldestMessage</a>
-* <a href="#approximateNumberOfMessagesDelayed">function approximateNumberOfMessagesDelayed</a>
-* <a href="#approximateNumberOfMessagesNotVisible">function approximateNumberOfMessagesNotVisible</a>
-* <a href="#approximateNumberOfMessagesVisible">function approximateNumberOfMessagesVisible</a>
-* <a href="#metric">function metric</a>
-* <a href="#numberOfEmptyReceives">function numberOfEmptyReceives</a>
-* <a href="#numberOfMessagesDeleted">function numberOfMessagesDeleted</a>
-* <a href="#numberOfMessagesReceived">function numberOfMessagesReceived</a>
-* <a href="#numberOfMessagesSent">function numberOfMessagesSent</a>
-* <a href="#sentMessageSize">function sentMessageSize</a>
-* <a href="#SqsMetricChange">interface SqsMetricChange</a>
-* <a href="#SqsMetricName">type SqsMetricName</a>
+* <a href="#metrics">module metrics</a>
 
 <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sqs/metrics.ts">sqs/metrics.ts</a> 
 </div>
@@ -33,10 +22,14 @@ title: Module sqs
 </div>
 
 
-<h2 class="pdoc-module-header" id="approximateAgeOfOldestMessage">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sqs/metrics.ts#L78">function <b>approximateAgeOfOldestMessage</b></a>
+<h2 class="pdoc-module-header" id="metrics">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sqs/metrics.ts#L20">module <b>metrics</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="approximateAgeOfOldestMessage">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sqs/metrics.ts#L78">function <b>approximateAgeOfOldestMessage</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>approximateAgeOfOldestMessage(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -52,10 +45,10 @@ Valid Statistics: Average, Minimum, Maximum, Sum, Data Samples (displays as Samp
 the Amazon SQS console)
 
 </div>
-<h2 class="pdoc-module-header" id="approximateNumberOfMessagesDelayed">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sqs/metrics.ts#L92">function <b>approximateNumberOfMessagesDelayed</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="approximateNumberOfMessagesDelayed">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sqs/metrics.ts#L92">function <b>approximateNumberOfMessagesDelayed</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>approximateNumberOfMessagesDelayed(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -70,10 +63,10 @@ Valid Statistics: Average, Minimum, Maximum, Sum, Data Samples (displays as Samp
 the Amazon SQS console)
 
 </div>
-<h2 class="pdoc-module-header" id="approximateNumberOfMessagesNotVisible">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sqs/metrics.ts#L106">function <b>approximateNumberOfMessagesNotVisible</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="approximateNumberOfMessagesNotVisible">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sqs/metrics.ts#L106">function <b>approximateNumberOfMessagesNotVisible</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>approximateNumberOfMessagesNotVisible(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -88,10 +81,10 @@ Valid Statistics: Average, Minimum, Maximum, Sum, Data Samples (displays as Samp
 the Amazon SQS console)
 
 </div>
-<h2 class="pdoc-module-header" id="approximateNumberOfMessagesVisible">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sqs/metrics.ts#L118">function <b>approximateNumberOfMessagesVisible</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="approximateNumberOfMessagesVisible">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sqs/metrics.ts#L118">function <b>approximateNumberOfMessagesVisible</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>approximateNumberOfMessagesVisible(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -104,10 +97,10 @@ Valid Statistics: Average, Minimum, Maximum, Sum, Data Samples (displays as Samp
 the Amazon SQS console)
 
 </div>
-<h2 class="pdoc-module-header" id="metric">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sqs/metrics.ts#L54">function <b>metric</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="metric">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sqs/metrics.ts#L54">function <b>metric</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>metric(metricName: <a href='#SqsMetricName'>SqsMetricName</a>, change: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -132,10 +125,10 @@ six hours if it contains any messages or if any action accesses it.
 The only dimension that Amazon SQS sends to CloudWatch is "QueueName"
 
 </div>
-<h2 class="pdoc-module-header" id="numberOfEmptyReceives">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sqs/metrics.ts#L130">function <b>numberOfEmptyReceives</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="numberOfEmptyReceives">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sqs/metrics.ts#L130">function <b>numberOfEmptyReceives</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>numberOfEmptyReceives(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -148,10 +141,10 @@ Valid Statistics: Average, Minimum, Maximum, Sum, Data Samples (displays as Samp
 the Amazon SQS console)
 
 </div>
-<h2 class="pdoc-module-header" id="numberOfMessagesDeleted">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sqs/metrics.ts#L155">function <b>numberOfMessagesDeleted</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="numberOfMessagesDeleted">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sqs/metrics.ts#L155">function <b>numberOfMessagesDeleted</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>numberOfMessagesDeleted(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -177,10 +170,10 @@ Valid Statistics: Average, Minimum, Maximum, Sum, Data Samples (displays as Samp
 the Amazon SQS console)
 
 </div>
-<h2 class="pdoc-module-header" id="numberOfMessagesReceived">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sqs/metrics.ts#L162">function <b>numberOfMessagesReceived</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="numberOfMessagesReceived">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sqs/metrics.ts#L162">function <b>numberOfMessagesReceived</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>numberOfMessagesReceived(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -188,10 +181,10 @@ the Amazon SQS console)
 The number of messages returned by calls to the ReceiveMessage action.
 
 </div>
-<h2 class="pdoc-module-header" id="numberOfMessagesSent">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sqs/metrics.ts#L174">function <b>numberOfMessagesSent</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="numberOfMessagesSent">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sqs/metrics.ts#L174">function <b>numberOfMessagesSent</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>numberOfMessagesSent(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -204,10 +197,10 @@ Valid Statistics: Average, Minimum, Maximum, Sum, Data Samples (displays as Samp
 the Amazon SQS console)
 
 </div>
-<h2 class="pdoc-module-header" id="sentMessageSize">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sqs/metrics.ts#L186">function <b>sentMessageSize</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="sentMessageSize">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sqs/metrics.ts#L186">function <b>sentMessageSize</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>sentMessageSize(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -220,126 +213,15 @@ Valid Statistics: Average, Minimum, Maximum, Sum, Data Samples (displays as Samp
 the Amazon SQS console)
 
 </div>
-<h2 class="pdoc-module-header" id="SqsMetricChange">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sqs/metrics.ts#L27">interface <b>SqsMetricChange</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#MetricChange'>MetricChange</a></pre>
-<h3 class="pdoc-member-header" id="SqsMetricChange-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L439">property <b>color</b></a>
+<h3 class="pdoc-member-header" id="SqsMetricChange">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sqs/metrics.ts#L27">interface <b>SqsMetricChange</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>color?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-
-The six-digit HTML hex color code to be used for this metric.
-
-Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
-
 </div>
-<h3 class="pdoc-member-header" id="SqsMetricChange-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L408">property <b>dimensions</b></a>
+<h3 class="pdoc-member-header" id="SqsMetricName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sqs/metrics.ts#L21">type <b>SqsMetricName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>dimensions?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>
-
-The new dimension for this metric.  If this object is missing this property, then no change
-will be made.  However, if the property is there by set to [undefined] then the value will be
-cleared.
-
-</div>
-<h3 class="pdoc-member-header" id="SqsMetricChange-extendedStatistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L426">property <b>extendedStatistic</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>extendedStatistic?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-
-The new percentile statistic for the metric associated with the alarm.  If this object is
-missing this property, then no change will be made.  However, if the property is there by set
-to [undefined] then the value will be set to the default.
-
-</div>
-<h3 class="pdoc-member-header" id="SqsMetricChange-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L448">property <b>label</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>label?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-
-The label to display for this metric in the graph legend. If this is not specified, the
-metric is given an autogenerated label that distinguishes it from the other metrics in the
-widget.
-
-Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
-
-</div>
-<h3 class="pdoc-member-header" id="SqsMetricChange-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L414">property <b>period</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>period?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-
-The new period in seconds over which the specified `stat` is applied.  If this object is
-missing this property, then no change will be made.  However, if the property is there by set
-to [undefined] then the value will be set to the default (300s).
-
-</div>
-<h3 class="pdoc-member-header" id="SqsMetricChange-queue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sqs/metrics.ts#L31">property <b>queue</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>queue?: aws.sqs.Queue;</pre>
-
-Optional [Queue] to filter events down to.
-
-</div>
-<h3 class="pdoc-member-header" id="SqsMetricChange-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L420">property <b>statistic</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>statistic?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</pre>
-
-The new statistic to apply to the alarm's associated metric.  If this object is missing this
-property, then no change will be made.  However, if the property is there by set to
-[undefined] then the value will be set to the default.
-
-</div>
-<h3 class="pdoc-member-header" id="SqsMetricChange-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L432">property <b>unit</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>unit?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</pre>
-
-The new unit for this metric.   If this object is missing this property, then no change will
-be made.  However, if the property is there by set to [undefined] then the value will be set
-to the default.
-
-</div>
-<h3 class="pdoc-member-header" id="SqsMetricChange-visible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L456">property <b>visible</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>visible?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-
-Set this to true to have the metric appear in the graph, or false to have it be hidden. The
-default is true.
-
-Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
-
-</div>
-<h3 class="pdoc-member-header" id="SqsMetricChange-yAxis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L463">property <b>yAxis</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>yAxis?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</pre>
-
-Where on the graph to display the y-axis for this metric. The default is left.
-
-Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="SqsMetricName">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/sqs/metrics.ts#L21">type <b>SqsMetricName</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>type</span> SqsMetricName = <span class='s2'>"ApproximateAgeOfOldestMessage"</span> | <span class='s2'>"ApproximateNumberOfMessagesDelayed"</span> | <span class='s2'>"ApproximateNumberOfMessagesNotVisible"</span> | <span class='s2'>"ApproximateNumberOfMessagesVisible"</span> | <span class='s2'>"NumberOfEmptyReceives"</span> | <span class='s2'>"NumberOfMessagesDeleted"</span> | <span class='s2'>"NumberOfMessagesReceived"</span> | <span class='s2'>"NumberOfMessagesSent"</span> | <span class='s2'>"SentMessageSize"</span>;</pre>
+</div>
 </div>

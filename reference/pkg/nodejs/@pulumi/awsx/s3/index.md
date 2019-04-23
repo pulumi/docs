@@ -14,27 +14,7 @@ title: Module s3
 <div class="expanded" markdown="1">
 <h2 class="pdoc-module-header toggleButton" title="Click to hide Index">Index ▾</h2>
 <div class="pdoc-module-contents" markdown="1">
-* <a href="#allRequests">function allRequests</a>
-* <a href="#bucketSizeBytes">function bucketSizeBytes</a>
-* <a href="#bytesDownloaded">function bytesDownloaded</a>
-* <a href="#bytesUploaded">function bytesUploaded</a>
-* <a href="#deleteRequests">function deleteRequests</a>
-* <a href="#errors4xx">function errors4xx</a>
-* <a href="#errors5xx">function errors5xx</a>
-* <a href="#firstByteLatency">function firstByteLatency</a>
-* <a href="#getRequests">function getRequests</a>
-* <a href="#headRequests">function headRequests</a>
-* <a href="#listRequests">function listRequests</a>
-* <a href="#metric">function metric</a>
-* <a href="#numberOfObjects">function numberOfObjects</a>
-* <a href="#postRequests">function postRequests</a>
-* <a href="#putRequests">function putRequests</a>
-* <a href="#selectRequests">function selectRequests</a>
-* <a href="#selectReturnedBytes">function selectReturnedBytes</a>
-* <a href="#selectScannedBytes">function selectScannedBytes</a>
-* <a href="#totalRequestLatency">function totalRequestLatency</a>
-* <a href="#S3MetricChange">interface S3MetricChange</a>
-* <a href="#S3MetricName">type S3MetricName</a>
+* <a href="#metrics">module metrics</a>
 
 <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts">s3/metrics.ts</a> 
 </div>
@@ -42,10 +22,14 @@ title: Module s3
 </div>
 
 
-<h2 class="pdoc-module-header" id="allRequests">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L196">function <b>allRequests</b></a>
+<h2 class="pdoc-module-header" id="metrics">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L20">module <b>metrics</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="allRequests">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L196">function <b>allRequests</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>allRequests(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -59,10 +43,10 @@ Units: Count
 Valid statistics: Sum
 
 </div>
-<h2 class="pdoc-module-header" id="bucketSizeBytes">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L169">function <b>bucketSizeBytes</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="bucketSizeBytes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L169">function <b>bucketSizeBytes</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>bucketSizeBytes(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -79,10 +63,10 @@ Units: Bytes
 Valid statistics: Average
 
 </div>
-<h2 class="pdoc-module-header" id="bytesDownloaded">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L319">function <b>bytesDownloaded</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="bytesDownloaded">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L319">function <b>bytesDownloaded</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>bytesDownloaded(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -95,10 +79,10 @@ Units: Bytes
 Valid statistics: Average (bytes per request), Sum (bytes per period), Sample Count, Min, Max
 
 </div>
-<h2 class="pdoc-module-header" id="bytesUploaded">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L330">function <b>bytesUploaded</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="bytesUploaded">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L330">function <b>bytesUploaded</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>bytesUploaded(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -110,10 +94,10 @@ Units: Bytes
 Valid statistics: Average (bytes per request), Sum (bytes per period), Sample Count, Min, Max
 
 </div>
-<h2 class="pdoc-module-header" id="deleteRequests">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L235">function <b>deleteRequests</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="deleteRequests">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L235">function <b>deleteRequests</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>deleteRequests(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -127,10 +111,10 @@ Units: Count
 Valid statistics: Sum
 
 </div>
-<h2 class="pdoc-module-header" id="errors4xx">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L344">function <b>errors4xx</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="errors4xx">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L344">function <b>errors4xx</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>errors4xx(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -145,10 +129,10 @@ Valid statistics: Average (reports per request), Sum (reports per period), Min, 
 Count
 
 </div>
-<h2 class="pdoc-module-header" id="errors5xx">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L358">function <b>errors5xx</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="errors5xx">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L358">function <b>errors5xx</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>errors5xx(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -163,10 +147,10 @@ Valid statistics: Average (reports per request), Sum (reports per period), Min, 
 Count
 
 </div>
-<h2 class="pdoc-module-header" id="firstByteLatency">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L370">function <b>firstByteLatency</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="firstByteLatency">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L370">function <b>firstByteLatency</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>firstByteLatency(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -179,10 +163,10 @@ Units: Milliseconds
 Valid statistics: Average, Sum, Min, Max, Sample Count
 
 </div>
-<h2 class="pdoc-module-header" id="getRequests">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L211">function <b>getRequests</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="getRequests">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L211">function <b>getRequests</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>getRequests(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -198,10 +182,10 @@ Units: Count
 Valid statistics: Sum
 
 </div>
-<h2 class="pdoc-module-header" id="headRequests">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L246">function <b>headRequests</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="headRequests">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L246">function <b>headRequests</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>headRequests(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -213,10 +197,10 @@ Units: Count
 Valid statistics: Sum
 
 </div>
-<h2 class="pdoc-module-header" id="listRequests">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L307">function <b>listRequests</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="listRequests">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L307">function <b>listRequests</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>listRequests(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -228,10 +212,10 @@ Units: Count
 Valid statistics: Sum
 
 </div>
-<h2 class="pdoc-module-header" id="metric">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L136">function <b>metric</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="metric">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L136">function <b>metric</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>metric(metricName: <a href='#S3MetricName'>S3MetricName</a>, change: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -297,10 +281,10 @@ The following dimensions are used to filter Amazon S3 metrics:
    [Metrics-Configurations-for-Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html).
 
 </div>
-<h2 class="pdoc-module-header" id="numberOfObjects">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L183">function <b>numberOfObjects</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="numberOfObjects">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L183">function <b>numberOfObjects</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>numberOfObjects(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -315,10 +299,10 @@ Units: Count
 Valid statistics: Average
 
 </div>
-<h2 class="pdoc-module-header" id="postRequests">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L260">function <b>postRequests</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="postRequests">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L260">function <b>postRequests</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>postRequests(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -333,10 +317,10 @@ Units: Count
 Valid statistics: Sum
 
 </div>
-<h2 class="pdoc-module-header" id="putRequests">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L222">function <b>putRequests</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="putRequests">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L222">function <b>putRequests</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>putRequests(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -348,10 +332,10 @@ Units: Count
 Valid statistics: Sum
 
 </div>
-<h2 class="pdoc-module-header" id="selectRequests">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L272">function <b>selectRequests</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="selectRequests">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L272">function <b>selectRequests</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>selectRequests(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -364,10 +348,10 @@ Units: Count
 Valid statistics: Sum
 
 </div>
-<h2 class="pdoc-module-header" id="selectReturnedBytes">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L296">function <b>selectReturnedBytes</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="selectReturnedBytes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L296">function <b>selectReturnedBytes</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>selectReturnedBytes(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -380,10 +364,10 @@ Units: Bytes
 Valid statistics: Average (bytes per request), Sum (bytes per period), Sample Count, Min, Max
 
 </div>
-<h2 class="pdoc-module-header" id="selectScannedBytes">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L284">function <b>selectScannedBytes</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="selectScannedBytes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L284">function <b>selectScannedBytes</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>selectScannedBytes(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -396,10 +380,10 @@ Units: Bytes
 Valid statistics: Average (bytes per request), Sum (bytes per period), Sample Count, Min, Max
 
 </div>
-<h2 class="pdoc-module-header" id="totalRequestLatency">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L383">function <b>totalRequestLatency</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="totalRequestLatency">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L383">function <b>totalRequestLatency</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>totalRequestLatency(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -413,171 +397,15 @@ Units: Milliseconds
 Valid statistics: Average, Sum, Min, Max, Sample Count
 
 </div>
-<h2 class="pdoc-module-header" id="S3MetricChange">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L29">interface <b>S3MetricChange</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#MetricChange'>MetricChange</a></pre>
-<h3 class="pdoc-member-header" id="S3MetricChange-bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L33">property <b>bucket</b></a>
+<h3 class="pdoc-member-header" id="S3MetricChange">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L29">interface <b>S3MetricChange</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>bucket?: aws.s3.Bucket;</pre>
-
-Optional bucket to filter metrics down to.
-
 </div>
-<h3 class="pdoc-member-header" id="S3MetricChange-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L439">property <b>color</b></a>
+<h3 class="pdoc-member-header" id="S3MetricName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L21">type <b>S3MetricName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>color?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-
-The six-digit HTML hex color code to be used for this metric.
-
-Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
-
-</div>
-<h3 class="pdoc-member-header" id="S3MetricChange-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L408">property <b>dimensions</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>dimensions?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>
-
-The new dimension for this metric.  If this object is missing this property, then no change
-will be made.  However, if the property is there by set to [undefined] then the value will be
-cleared.
-
-</div>
-<h3 class="pdoc-member-header" id="S3MetricChange-extendedStatistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L426">property <b>extendedStatistic</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>extendedStatistic?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-
-The new percentile statistic for the metric associated with the alarm.  If this object is
-missing this property, then no change will be made.  However, if the property is there by set
-to [undefined] then the value will be set to the default.
-
-</div>
-<h3 class="pdoc-member-header" id="S3MetricChange-filterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L72">property <b>filterId</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>filterId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-This dimension filters metrics configurations that you specify for request metrics on a
-bucket, for example, a prefix or a tag. You specify a filter id when you create a metrics
-configuration. For more information, see
-[Metrics-Configurations-for-Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html).
-
-</div>
-<h3 class="pdoc-member-header" id="S3MetricChange-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L448">property <b>label</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>label?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-
-The label to display for this metric in the graph legend. If this is not specified, the
-metric is given an autogenerated label that distinguishes it from the other metrics in the
-widget.
-
-Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
-
-</div>
-<h3 class="pdoc-member-header" id="S3MetricChange-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L414">property <b>period</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>period?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-
-The new period in seconds over which the specified `stat` is applied.  If this object is
-missing this property, then no change will be made.  However, if the property is there by set
-to [undefined] then the value will be set to the default (300s).
-
-</div>
-<h3 class="pdoc-member-header" id="S3MetricChange-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L420">property <b>statistic</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>statistic?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</pre>
-
-The new statistic to apply to the alarm's associated metric.  If this object is missing this
-property, then no change will be made.  However, if the property is there by set to
-[undefined] then the value will be set to the default.
-
-</div>
-<h3 class="pdoc-member-header" id="S3MetricChange-storageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L62">property <b>storageType</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>storageType?: <span class='s2'>"StandardStorage"</span> | <span class='s2'>"IntelligentTieringFAStorage"</span> | <span class='s2'>"IntelligentTieringIAStorage"</span> | <span class='s2'>"StandardIAStorage"</span> | <span class='s2'>"StandardIAStorage"</span> | <span class='s2'>"StandardIASizeOverhead"</span> | <span class='s2'>"OneZoneIAStorage"</span> | <span class='s2'>"OneZoneIASizeOverhead"</span> | <span class='s2'>"ReducedRedundancyStorage"</span> | <span class='s2'>"GlacierStorage"</span> | <span class='s2'>"GlacierStorageOverhead"</span>;</pre>
-
-This dimension filters the data that you have stored in a bucket by the following types
-of storage:
-
-* StandardStorage - The number of bytes used for objects in the STANDARD storage class.
-* IntelligentTieringFAStorage - The number of bytes used for objects in the Frequent
-  Access tier of INTELLIGENT_TIERING storage class.
-* IntelligentTieringIAStorage - The number of bytes used for objects in the Infrequent
-  Access tier of INTELLIGENT_TIERING storage class.
-* StandardIAStorage - The number of bytes used for objects in the Standard - Infrequent
-  Access (STANDARD_IA) storage class.
-* StandardIASizeOverhead - The number of bytes used for objects smaller than 128 KB in
-  size in the STANDARD_IA storage class.
-* OneZoneIAStorage - The number of bytes used for objects in the OneZone - Infrequent
-  Access (ONEZONE_IA) storage class.
-* OneZoneIASizeOverhead - The number of bytes used for objects smaller than 128 KB in
-  size in the ONEZONE_IA storage class.
-* ReducedRedundancyStorage - The number of bytes used for objects in the Reduced
-  Redundancy Storage (RRS) class.
-* GlacierStorage - The number of bytes used for objects in the Glacier (GLACIER) storage
-  class.
-* GlacierStorageOverhead - For each object archived to Glacier, Amazon S3 uses 8 KB of
-  storage for the name of the object and other metadata. You are charged standard Amazon
-  S3 rates for this additional storage. For each archived object, Glacier adds 32 KB of
-  storage for index and related metadata. This extra data is necessary to identify and
-  restore your object. You are charged Glacier rates for this additional storage.
-
-</div>
-<h3 class="pdoc-member-header" id="S3MetricChange-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L432">property <b>unit</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>unit?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</pre>
-
-The new unit for this metric.   If this object is missing this property, then no change will
-be made.  However, if the property is there by set to [undefined] then the value will be set
-to the default.
-
-</div>
-<h3 class="pdoc-member-header" id="S3MetricChange-visible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L456">property <b>visible</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>visible?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-
-Set this to true to have the metric appear in the graph, or false to have it be hidden. The
-default is true.
-
-Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
-
-</div>
-<h3 class="pdoc-member-header" id="S3MetricChange-yAxis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L463">property <b>yAxis</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>yAxis?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</pre>
-
-Where on the graph to display the y-axis for this metric. The default is left.
-
-Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="S3MetricName">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L21">type <b>S3MetricName</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>type</span> S3MetricName = <span class='s2'>"BucketSizeBytes"</span> | <span class='s2'>"NumberOfObjects"</span> | <span class='s2'>"AllRequests"</span> | <span class='s2'>"GetRequests"</span> | <span class='s2'>"PutRequests"</span> | <span class='s2'>"DeleteRequests"</span> | <span class='s2'>"HeadRequests"</span> | <span class='s2'>"PostRequests"</span> | <span class='s2'>"SelectRequests"</span> | <span class='s2'>"SelectScannedBytes"</span> | <span class='s2'>"SelectReturnedBytes"</span> | <span class='s2'>"ListRequests"</span> | <span class='s2'>"BytesDownloaded"</span> | <span class='s2'>"BytesUploaded"</span> | <span class='s2'>"4xxErrors"</span> | <span class='s2'>"5xxErrors"</span> | <span class='s2'>"FirstByteLatency"</span> | <span class='s2'>"TotalRequestLatency"</span>;</pre>
+</div>
 </div>

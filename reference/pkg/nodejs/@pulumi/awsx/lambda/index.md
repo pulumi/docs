@@ -14,17 +14,7 @@ title: Module lambda
 <div class="expanded" markdown="1">
 <h2 class="pdoc-module-header toggleButton" title="Click to hide Index">Index ▾</h2>
 <div class="pdoc-module-contents" markdown="1">
-* <a href="#concurrentExecutions">function concurrentExecutions</a>
-* <a href="#deadLetterErrors">function deadLetterErrors</a>
-* <a href="#duration">function duration</a>
-* <a href="#errors">function errors</a>
-* <a href="#invocations">function invocations</a>
-* <a href="#iteratorAge">function iteratorAge</a>
-* <a href="#metric">function metric</a>
-* <a href="#throttles">function throttles</a>
-* <a href="#unreservedConcurrentExecutions">function unreservedConcurrentExecutions</a>
-* <a href="#LambdaMetricChange">interface LambdaMetricChange</a>
-* <a href="#LambdaMetricName">type LambdaMetricName</a>
+* <a href="#metrics">module metrics</a>
 
 <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts">lambda/metrics.ts</a> 
 </div>
@@ -32,10 +22,14 @@ title: Module lambda
 </div>
 
 
-<h2 class="pdoc-module-header" id="concurrentExecutions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L174">function <b>concurrentExecutions</b></a>
+<h2 class="pdoc-module-header" id="metrics">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L20">module <b>metrics</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="concurrentExecutions">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L174">function <b>concurrentExecutions</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>concurrentExecutions(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): cloudwatch.Metric</pre>
 
@@ -48,10 +42,10 @@ an average metric if aggregated across a time period.
 Units: Count
 
 </div>
-<h2 class="pdoc-module-header" id="deadLetterErrors">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L126">function <b>deadLetterErrors</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="deadLetterErrors">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L126">function <b>deadLetterErrors</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>deadLetterErrors(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): cloudwatch.Metric</pre>
 
@@ -67,10 +61,10 @@ Letter Queues. This could be due to the following:
 Units: Count
 
 </div>
-<h2 class="pdoc-module-header" id="duration">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L139">function <b>duration</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="duration">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L139">function <b>duration</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>duration(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): cloudwatch.Metric</pre>
 
@@ -84,10 +78,10 @@ nonzero value.
 Units: Count
 
 </div>
-<h2 class="pdoc-module-header" id="errors">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L111">function <b>errors</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="errors">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L111">function <b>errors</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>errors(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): cloudwatch.Metric</pre>
 
@@ -109,10 +103,10 @@ concurrent limits (error code 429) or failures due to internal service errors (e
 Units: Count
 
 </div>
-<h2 class="pdoc-module-header" id="invocations">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L90">function <b>invocations</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="invocations">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L90">function <b>invocations</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>invocations(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): cloudwatch.Metric</pre>
 
@@ -126,10 +120,10 @@ value.
 Units: Count
 
 </div>
-<h2 class="pdoc-module-header" id="iteratorAge">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L162">function <b>iteratorAge</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="iteratorAge">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L162">function <b>iteratorAge</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>iteratorAge(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): cloudwatch.Metric</pre>
 
@@ -142,10 +136,10 @@ record in the batch was written to the stream.
 Units: Milliseconds
 
 </div>
-<h2 class="pdoc-module-header" id="metric">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L60">function <b>metric</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="metric">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L60">function <b>metric</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>metric(metricName: <a href='#LambdaMetricName'>LambdaMetricName</a>, change: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
@@ -167,10 +161,10 @@ functions:
    to alias invocations.
 
 </div>
-<h2 class="pdoc-module-header" id="throttles">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L150">function <b>throttles</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="throttles">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L150">function <b>throttles</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>throttles(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): cloudwatch.Metric</pre>
 
@@ -182,10 +176,10 @@ invocations may trigger a retry attempt that succeeds.
 Units: Count
 
 </div>
-<h2 class="pdoc-module-header" id="unreservedConcurrentExecutions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L186">function <b>unreservedConcurrentExecutions</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="unreservedConcurrentExecutions">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L186">function <b>unreservedConcurrentExecutions</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>unreservedConcurrentExecutions(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): cloudwatch.Metric</pre>
 
@@ -198,145 +192,15 @@ aggregated across a time period.
 Units: Count
 
 </div>
-<h2 class="pdoc-module-header" id="LambdaMetricChange">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L25">interface <b>LambdaMetricChange</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#MetricChange'>MetricChange</a></pre>
-<h3 class="pdoc-member-header" id="LambdaMetricChange-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L439">property <b>color</b></a>
+<h3 class="pdoc-member-header" id="LambdaMetricChange">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L25">interface <b>LambdaMetricChange</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>color?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-
-The six-digit HTML hex color code to be used for this metric.
-
-Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
-
 </div>
-<h3 class="pdoc-member-header" id="LambdaMetricChange-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L408">property <b>dimensions</b></a>
+<h3 class="pdoc-member-header" id="LambdaMetricName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L21">type <b>LambdaMetricName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>dimensions?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>
-
-The new dimension for this metric.  If this object is missing this property, then no change
-will be made.  However, if the property is there by set to [undefined] then the value will be
-cleared.
-
-</div>
-<h3 class="pdoc-member-header" id="LambdaMetricChange-executedVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L40">property <b>executedVersion</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>executedVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Filters the metric data by Lambda function versions. This only applies to alias
-invocations.
-
-</div>
-<h3 class="pdoc-member-header" id="LambdaMetricChange-extendedStatistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L426">property <b>extendedStatistic</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>extendedStatistic?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-
-The new percentile statistic for the metric associated with the alarm.  If this object is
-missing this property, then no change will be made.  However, if the property is there by set
-to [undefined] then the value will be set to the default.
-
-</div>
-<h3 class="pdoc-member-header" id="LambdaMetricChange-function">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L29">property <b>function</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>function?: aws.lambda.Function;</pre>
-
-Optional Function this metric should be filtered down to.
-
-</div>
-<h3 class="pdoc-member-header" id="LambdaMetricChange-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L448">property <b>label</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>label?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-
-The label to display for this metric in the graph legend. If this is not specified, the
-metric is given an autogenerated label that distinguishes it from the other metrics in the
-widget.
-
-Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
-
-</div>
-<h3 class="pdoc-member-header" id="LambdaMetricChange-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L414">property <b>period</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>period?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-
-The new period in seconds over which the specified `stat` is applied.  If this object is
-missing this property, then no change will be made.  However, if the property is there by set
-to [undefined] then the value will be set to the default (300s).
-
-</div>
-<h3 class="pdoc-member-header" id="LambdaMetricChange-resource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L34">property <b>resource</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>resource?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-
-Filters the metric data by Lambda function resource, such as function version or alias.
-
-</div>
-<h3 class="pdoc-member-header" id="LambdaMetricChange-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L420">property <b>statistic</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>statistic?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</pre>
-
-The new statistic to apply to the alarm's associated metric.  If this object is missing this
-property, then no change will be made.  However, if the property is there by set to
-[undefined] then the value will be set to the default.
-
-</div>
-<h3 class="pdoc-member-header" id="LambdaMetricChange-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L432">property <b>unit</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>unit?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</pre>
-
-The new unit for this metric.   If this object is missing this property, then no change will
-be made.  However, if the property is there by set to [undefined] then the value will be set
-to the default.
-
-</div>
-<h3 class="pdoc-member-header" id="LambdaMetricChange-visible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L456">property <b>visible</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>visible?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-
-Set this to true to have the metric appear in the graph, or false to have it be hidden. The
-default is true.
-
-Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
-
-</div>
-<h3 class="pdoc-member-header" id="LambdaMetricChange-yAxis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L463">property <b>yAxis</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>yAxis?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</pre>
-
-Where on the graph to display the y-axis for this metric. The default is left.
-
-Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="LambdaMetricName">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L21">type <b>LambdaMetricName</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>type</span> LambdaMetricName = <span class='s2'>"Invocations"</span> | <span class='s2'>"Errors"</span> | <span class='s2'>"DeadLetterErrors"</span> | <span class='s2'>"Duration"</span> | <span class='s2'>"Throttles"</span> | <span class='s2'>"IteratorAge"</span> | <span class='s2'>"ConcurrentExecutions"</span> | <span class='s2'>"UnreservedConcurrentExecutions"</span>;</pre>
+</div>
 </div>
