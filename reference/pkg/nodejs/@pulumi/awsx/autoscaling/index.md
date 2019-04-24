@@ -24,19 +24,9 @@ title: Module autoscaling
 * <a href="#createPolicy">function createPolicy</a>
 * <a href="#createPredefinedMetricPolicy">function createPredefinedMetricPolicy</a>
 * <a href="#cronExpression">function cronExpression</a>
-* <a href="#groupDesiredCapacity">function groupDesiredCapacity</a>
-* <a href="#groupInServiceInstances">function groupInServiceInstances</a>
-* <a href="#groupMaxSize">function groupMaxSize</a>
-* <a href="#groupMinSize">function groupMinSize</a>
-* <a href="#groupPendingInstances">function groupPendingInstances</a>
-* <a href="#groupStandbyInstances">function groupStandbyInstances</a>
-* <a href="#groupTerminatingInstances">function groupTerminatingInstances</a>
-* <a href="#groupTotalInstances">function groupTotalInstances</a>
-* <a href="#metric">function metric</a>
 * <a href="#ApplicationTargetGroupTrackingPolicyArgs">interface ApplicationTargetGroupTrackingPolicyArgs</a>
 * <a href="#AutoScalingGroupArgs">interface AutoScalingGroupArgs</a>
 * <a href="#AutoScalingLaunchConfigurationArgs">interface AutoScalingLaunchConfigurationArgs</a>
-* <a href="#AutoScalingMetricChange">interface AutoScalingMetricChange</a>
 * <a href="#AutoScalingUserData">interface AutoScalingUserData</a>
 * <a href="#CustomMetricTargetTrackingPolicyArgs">interface CustomMetricTargetTrackingPolicyArgs</a>
 * <a href="#ScalingStep">interface ScalingStep</a>
@@ -47,6 +37,7 @@ title: Module autoscaling
 * <a href="#TargetTrackingPolicyArgs">interface TargetTrackingPolicyArgs</a>
 * <a href="#TemplateParameters">interface TemplateParameters</a>
 * <a href="#UserDataLine">interface UserDataLine</a>
+* <a href="#metrics">module metrics</a>
 * <a href="#AdjustmentType">type AdjustmentType</a>
 * <a href="#DayOfWeek">type DayOfWeek</a>
 * <a href="#Month">type Month</a>
@@ -543,128 +534,6 @@ Creates an appropriate [Cron](https://en.wikipedia.org/wiki/Cron) format string 
 used as the [recurrence] property of [ScheduleArgs].
 
 </div>
-<h2 class="pdoc-module-header" id="groupDesiredCapacity">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/metrics.ts#L78">function <b>groupDesiredCapacity</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>groupDesiredCapacity(change?: <a href='#AutoScalingMetricChange'>AutoScalingMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The number of instances that the Auto Scaling group attempts to maintain.
-
-</div>
-<h2 class="pdoc-module-header" id="groupInServiceInstances">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/metrics.ts#L86">function <b>groupInServiceInstances</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>groupInServiceInstances(change?: <a href='#AutoScalingMetricChange'>AutoScalingMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The number of instances that are running as part of the Auto Scaling group. This metric does not
-include instances that are pending or terminating.
-
-</div>
-<h2 class="pdoc-module-header" id="groupMaxSize">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/metrics.ts#L71">function <b>groupMaxSize</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>groupMaxSize(change?: <a href='#AutoScalingMetricChange'>AutoScalingMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The maximum size of the Auto Scaling group.
-
-</div>
-<h2 class="pdoc-module-header" id="groupMinSize">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/metrics.ts#L64">function <b>groupMinSize</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>groupMinSize(change?: <a href='#AutoScalingMetricChange'>AutoScalingMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The minimum size of the Auto Scaling group.
-
-</div>
-<h2 class="pdoc-module-header" id="groupPendingInstances">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/metrics.ts#L94">function <b>groupPendingInstances</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>groupPendingInstances(change?: <a href='#AutoScalingMetricChange'>AutoScalingMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The number of instances that are pending. A pending instance is not yet in service. This metric
-does not include instances that are in service or terminating.
-
-</div>
-<h2 class="pdoc-module-header" id="groupStandbyInstances">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/metrics.ts#L102">function <b>groupStandbyInstances</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>groupStandbyInstances(change?: <a href='#AutoScalingMetricChange'>AutoScalingMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The number of instances that are in a Standby state. Instances in this state are still running
-but are not actively in service.
-
-</div>
-<h2 class="pdoc-module-header" id="groupTerminatingInstances">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/metrics.ts#L110">function <b>groupTerminatingInstances</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>groupTerminatingInstances(change?: <a href='#AutoScalingMetricChange'>AutoScalingMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The number of instances that are in the process of terminating. This metric does not include
-instances that are in service or pending.
-
-</div>
-<h2 class="pdoc-module-header" id="groupTotalInstances">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/metrics.ts#L118">function <b>groupTotalInstances</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>groupTotalInstances(change?: <a href='#AutoScalingMetricChange'>AutoScalingMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The total number of instances in the Auto Scaling group. This metric identifies the number of
-instances that are in service, pending, and terminating.
-
-</div>
-<h2 class="pdoc-module-header" id="metric">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/metrics.ts#L48">function <b>metric</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>metric(metricName: aws.autoscaling.Metric, change: <a href='#AutoScalingMetricChange'>AutoScalingMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-Creates an AWS/AutoScaling metric with the requested [metricName]. See
-https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/viewing_metrics_with_cloudwatch.html for list
-of all metric-names.
-
-Note, individual metrics can easily be obtained without supplying the name using the other
-[metricXXX] functions.
-
-Amazon CloudWatch enables you to retrieve statistics as an ordered set of time-series data, known
-as metrics. You can use these metrics to verify that your system is performing as expected.
-
-Amazon EC2 sends metrics to CloudWatch that describe your Auto Scaling instances. These metrics
-are available for any EC2 instance, not just those in an Auto Scaling group. For more
-information, see Instance Metrics in the Amazon EC2 User Guide for Linux Instances.
-
-Auto Scaling groups can send metrics to CloudWatch that describe the group itself. You must
-enable these metrics.
-
-To filter the metrics for your Auto Scaling group by group name, use the "AutoScalingGroupName"
-dimension.
-
-</div>
 <h2 class="pdoc-module-header" id="ApplicationTargetGroupTrackingPolicyArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/targetTracking.ts#L59">interface <b>ApplicationTargetGroupTrackingPolicyArgs</b></a>
 </h2>
@@ -1129,123 +998,6 @@ The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg.
 <pre class="highlight"><span class='kd'></span>vpcClassicLinkSecurityGroups?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
 
 The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="AutoScalingMetricChange">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/metrics.ts#L20">interface <b>AutoScalingMetricChange</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#MetricChange'>MetricChange</a></pre>
-<h3 class="pdoc-member-header" id="AutoScalingMetricChange-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L439">property <b>color</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>color?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-
-The six-digit HTML hex color code to be used for this metric.
-
-Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
-
-</div>
-<h3 class="pdoc-member-header" id="AutoScalingMetricChange-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L408">property <b>dimensions</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>dimensions?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>
-
-The new dimension for this metric.  If this object is missing this property, then no change
-will be made.  However, if the property is there by set to [undefined] then the value will be
-cleared.
-
-</div>
-<h3 class="pdoc-member-header" id="AutoScalingMetricChange-extendedStatistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L426">property <b>extendedStatistic</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>extendedStatistic?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-
-The new percentile statistic for the metric associated with the alarm.  If this object is
-missing this property, then no change will be made.  However, if the property is there by set
-to [undefined] then the value will be set to the default.
-
-</div>
-<h3 class="pdoc-member-header" id="AutoScalingMetricChange-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/metrics.ts#L24">property <b>group</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>group?: aws.autoscaling.Group;</pre>
-
-Optional [Group] to filter down events to.
-
-</div>
-<h3 class="pdoc-member-header" id="AutoScalingMetricChange-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L448">property <b>label</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>label?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-
-The label to display for this metric in the graph legend. If this is not specified, the
-metric is given an autogenerated label that distinguishes it from the other metrics in the
-widget.
-
-Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
-
-</div>
-<h3 class="pdoc-member-header" id="AutoScalingMetricChange-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L414">property <b>period</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>period?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-
-The new period in seconds over which the specified `stat` is applied.  If this object is
-missing this property, then no change will be made.  However, if the property is there by set
-to [undefined] then the value will be set to the default (300s).
-
-</div>
-<h3 class="pdoc-member-header" id="AutoScalingMetricChange-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L420">property <b>statistic</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>statistic?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</pre>
-
-The new statistic to apply to the alarm's associated metric.  If this object is missing this
-property, then no change will be made.  However, if the property is there by set to
-[undefined] then the value will be set to the default.
-
-</div>
-<h3 class="pdoc-member-header" id="AutoScalingMetricChange-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L432">property <b>unit</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>unit?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</pre>
-
-The new unit for this metric.   If this object is missing this property, then no change will
-be made.  However, if the property is there by set to [undefined] then the value will be set
-to the default.
-
-</div>
-<h3 class="pdoc-member-header" id="AutoScalingMetricChange-visible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L456">property <b>visible</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>visible?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-
-Set this to true to have the metric appear in the graph, or false to have it be hidden. The
-default is true.
-
-Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
-
-</div>
-<h3 class="pdoc-member-header" id="AutoScalingMetricChange-yAxis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L463">property <b>yAxis</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>yAxis?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</pre>
-
-Where on the graph to display the y-axis for this metric. The default is left.
-
-Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 </div>
 </div>
@@ -1733,6 +1485,138 @@ Set explicitly to [false] to control all indentation.
 
 Actual contents of the line.
 
+</div>
+</div>
+<h2 class="pdoc-module-header" id="metrics">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/metrics.ts#L19">module <b>metrics</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="groupDesiredCapacity">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/metrics.ts#L78">function <b>groupDesiredCapacity</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>groupDesiredCapacity(change?: <a href='#AutoScalingMetricChange'>AutoScalingMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The number of instances that the Auto Scaling group attempts to maintain.
+
+</div>
+<h3 class="pdoc-member-header" id="groupInServiceInstances">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/metrics.ts#L86">function <b>groupInServiceInstances</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>groupInServiceInstances(change?: <a href='#AutoScalingMetricChange'>AutoScalingMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The number of instances that are running as part of the Auto Scaling group. This metric does not
+include instances that are pending or terminating.
+
+</div>
+<h3 class="pdoc-member-header" id="groupMaxSize">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/metrics.ts#L71">function <b>groupMaxSize</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>groupMaxSize(change?: <a href='#AutoScalingMetricChange'>AutoScalingMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The maximum size of the Auto Scaling group.
+
+</div>
+<h3 class="pdoc-member-header" id="groupMinSize">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/metrics.ts#L64">function <b>groupMinSize</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>groupMinSize(change?: <a href='#AutoScalingMetricChange'>AutoScalingMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The minimum size of the Auto Scaling group.
+
+</div>
+<h3 class="pdoc-member-header" id="groupPendingInstances">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/metrics.ts#L94">function <b>groupPendingInstances</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>groupPendingInstances(change?: <a href='#AutoScalingMetricChange'>AutoScalingMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The number of instances that are pending. A pending instance is not yet in service. This metric
+does not include instances that are in service or terminating.
+
+</div>
+<h3 class="pdoc-member-header" id="groupStandbyInstances">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/metrics.ts#L102">function <b>groupStandbyInstances</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>groupStandbyInstances(change?: <a href='#AutoScalingMetricChange'>AutoScalingMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The number of instances that are in a Standby state. Instances in this state are still running
+but are not actively in service.
+
+</div>
+<h3 class="pdoc-member-header" id="groupTerminatingInstances">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/metrics.ts#L110">function <b>groupTerminatingInstances</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>groupTerminatingInstances(change?: <a href='#AutoScalingMetricChange'>AutoScalingMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The number of instances that are in the process of terminating. This metric does not include
+instances that are in service or pending.
+
+</div>
+<h3 class="pdoc-member-header" id="groupTotalInstances">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/metrics.ts#L118">function <b>groupTotalInstances</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>groupTotalInstances(change?: <a href='#AutoScalingMetricChange'>AutoScalingMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The total number of instances in the Auto Scaling group. This metric identifies the number of
+instances that are in service, pending, and terminating.
+
+</div>
+<h3 class="pdoc-member-header" id="metric">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/metrics.ts#L48">function <b>metric</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>metric(metricName: aws.autoscaling.Metric, change: <a href='#AutoScalingMetricChange'>AutoScalingMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+Creates an AWS/AutoScaling metric with the requested [metricName]. See
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/viewing_metrics_with_cloudwatch.html for list
+of all metric-names.
+
+Note, individual metrics can easily be obtained without supplying the name using the other
+[metricXXX] functions.
+
+Amazon CloudWatch enables you to retrieve statistics as an ordered set of time-series data, known
+as metrics. You can use these metrics to verify that your system is performing as expected.
+
+Amazon EC2 sends metrics to CloudWatch that describe your Auto Scaling instances. These metrics
+are available for any EC2 instance, not just those in an Auto Scaling group. For more
+information, see Instance Metrics in the Amazon EC2 User Guide for Linux Instances.
+
+Auto Scaling groups can send metrics to CloudWatch that describe the group itself. You must
+enable these metrics.
+
+To filter the metrics for your Auto Scaling group by group name, use the "AutoScalingGroupName"
+dimension.
+
+</div>
+<h3 class="pdoc-member-header" id="AutoScalingMetricChange">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/metrics.ts#L20">interface <b>AutoScalingMetricChange</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AdjustmentType">

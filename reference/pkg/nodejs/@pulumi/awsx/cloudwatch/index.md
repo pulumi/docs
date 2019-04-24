@@ -53,27 +53,16 @@ title: Module cloudwatch
 * <a href="#WidgetAnnotation">interface WidgetAnnotation</a>
 * <a href="#WidgetMetric">interface WidgetMetric</a>
 * <a href="#YAxis">interface YAxis</a>
+* <a href="#metrics">module metrics</a>
 * <a href="#AlarmComparisonOperator">type AlarmComparisonOperator</a>
 * <a href="#MetricStatistic">type MetricStatistic</a>
 * <a href="#MetricUnit">type MetricUnit</a>
 
-<a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/dashboard.ts">cloudwatch/dashboard.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts">cloudwatch/metric.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/widget.ts">cloudwatch/widget.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/widgets_annotations.ts">cloudwatch/widgets_annotations.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/widgets_flow.ts">cloudwatch/widgets_flow.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/widgets_graph.ts">cloudwatch/widgets_graph.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/widgets_simple.ts">cloudwatch/widgets_simple.ts</a> 
+<a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/dashboard.ts">cloudwatch/dashboard.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts">cloudwatch/metric.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metrics.ts">cloudwatch/metrics.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/widget.ts">cloudwatch/widget.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/widgets_annotations.ts">cloudwatch/widgets_annotations.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/widgets_flow.ts">cloudwatch/widgets_flow.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/widgets_graph.ts">cloudwatch/widgets_graph.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/widgets_simple.ts">cloudwatch/widgets_simple.ts</a> 
 </div>
 </div>
 </div>
 
-<div class="toggleVisible" markdown="1">
-<div class="collapsed" markdown="1">
-<h2 class="pdoc-module-header toggleButton" title="Click to show Modules">Modules ▹</h2>
-</div>
-<div class="expanded" markdown="1">
-<h2 class="pdoc-module-header toggleButton" title="Click to hide Modules">Modules ▾</h2>
-<div class="pdoc-module-contents" markdown="1">
-* <a href="events">cloudwatch/events</a>
-* <a href="logs">cloudwatch/logs</a>
-</div>
-</div>
-</div>
 
 <h2 class="pdoc-module-header" id="AlarmAnnotation">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/widgets_annotations.ts#L35">class <b>AlarmAnnotation</b></a>
@@ -2570,6 +2559,21 @@ Optional min and max settings for the left Y-axis.
 
 Optional min and max settings for the right Y-axis.
 
+</div>
+</div>
+<h2 class="pdoc-module-header" id="metrics">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metrics.ts#L20">module <b>metrics</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="events">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metrics.ts#L21">module <b>events</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+</div>
+<h3 class="pdoc-member-header" id="logs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metrics.ts#L131">module <b>logs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AlarmComparisonOperator">

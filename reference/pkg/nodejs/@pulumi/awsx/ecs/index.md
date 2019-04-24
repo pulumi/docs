@@ -23,16 +23,10 @@ title: Module ecs
 * <a href="#Service">class Service</a>
 * <a href="#TaskDefinition">class TaskDefinition</a>
 * <a href="#computeContainerDefinition">function computeContainerDefinition</a>
-* <a href="#cpuReservation">function cpuReservation</a>
-* <a href="#cpuUtilization">function cpuUtilization</a>
-* <a href="#gpuReservation">function gpuReservation</a>
 * <a href="#isContainerImageProvider">function isContainerImageProvider</a>
 * <a href="#isContainerLoadBalancerProvider">function isContainerLoadBalancerProvider</a>
 * <a href="#isContainerPortMappingProvider">function isContainerPortMappingProvider</a>
 * <a href="#isServiceLoadBalancerProvider">function isServiceLoadBalancerProvider</a>
-* <a href="#memoryReservation">function memoryReservation</a>
-* <a href="#memoryUtilization">function memoryUtilization</a>
-* <a href="#metric">function metric</a>
 * <a href="#ClusterArgs">interface ClusterArgs</a>
 * <a href="#Container">interface Container</a>
 * <a href="#ContainerImageProvider">interface ContainerImageProvider</a>
@@ -41,7 +35,6 @@ title: Module ecs
 * <a href="#ContainerPortMappingProvider">interface ContainerPortMappingProvider</a>
 * <a href="#EC2ServiceArgs">interface EC2ServiceArgs</a>
 * <a href="#EC2TaskDefinitionArgs">interface EC2TaskDefinitionArgs</a>
-* <a href="#EcsMetricChange">interface EcsMetricChange</a>
 * <a href="#FargateServiceArgs">interface FargateServiceArgs</a>
 * <a href="#FargateTaskDefinitionArgs">interface FargateTaskDefinitionArgs</a>
 * <a href="#KeyValuePair">interface KeyValuePair</a>
@@ -51,7 +44,7 @@ title: Module ecs
 * <a href="#ServiceLoadBalancer">interface ServiceLoadBalancer</a>
 * <a href="#ServiceLoadBalancerProvider">interface ServiceLoadBalancerProvider</a>
 * <a href="#TaskDefinitionArgs">interface TaskDefinitionArgs</a>
-* <a href="#EcsMetricName">type EcsMetricName</a>
+* <a href="#metrics">module metrics</a>
 
 <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/cluster.ts">ecs/cluster.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/container.ts">ecs/container.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/ec2Service.ts">ecs/ec2Service.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/fargateService.ts">ecs/fargateService.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/image.ts">ecs/image.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/metrics.ts">ecs/metrics.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/service.ts">ecs/service.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/taskDefinition.ts">ecs/taskDefinition.ts</a> 
 </div>
@@ -987,80 +980,6 @@ deployments.
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 </div>
-<h2 class="pdoc-module-header" id="cpuReservation">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/metrics.ts#L110">function <b>cpuReservation</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>cpuReservation(change?: <a href='#EcsMetricChange'>EcsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The percentage of CPU units that are reserved by running tasks in the cluster.
-
-Cluster CPU reservation (this metric can only be filtered by ClusterName) is measured as the
-total CPU units that are reserved by Amazon ECS tasks on the cluster, divided by the total
-CPU units that were registered for all of the container instances in the cluster. This metric
-is only used for tasks using the EC2 launch type.
-
-Valid dimensions: ClusterName.
-
-Valid statistics: Average, Minimum, Maximum, Sum, Sample Count. The most useful statistic is
-Average.
-
-Unit: Percent.
-
-</div>
-<h2 class="pdoc-module-header" id="cpuUtilization">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/metrics.ts#L135">function <b>cpuUtilization</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>cpuUtilization(change?: <a href='#EcsMetricChange'>EcsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The percentage of CPU units that are used in the cluster or service.
-
-Cluster CPU utilization (metrics that are filtered by ClusterName without ServiceName) is
-measured as the total CPU units in use by Amazon ECS tasks on the cluster, divided by the
-total CPU units that were registered for all of the container instances in the cluster.
-Cluster CPU utilization metrics are only used for tasks using the EC2 launch type.
-
-Service CPU utilization (metrics that are filtered by ClusterName and ServiceName) is
-measured as the total CPU units in use by the tasks that belong to the service, divided by
-the total number of CPU units that are reserved for the tasks that belong to the service.
-Service CPU utilization metrics are used for tasks using both the Fargate and the EC2 launch
-type.
-
-Valid dimensions: ClusterName, ServiceName.
-
-Valid statistics: Average, Minimum, Maximum, Sum, Sample Count. The most useful statistic is
-Average.
-
-Unit: Percent.
-
-</div>
-<h2 class="pdoc-module-header" id="gpuReservation">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/metrics.ts#L196">function <b>gpuReservation</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>gpuReservation(change?: <a href='#EcsMetricChange'>EcsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The percentage of total available GPUs that are reserved by running tasks in the cluster.
-
-Cluster GPU reservation is measured as the number of GPUs reserved by Amazon ECS tasks on the
-cluster, divided by the total number of GPUs that was available on all of the GPU-enabled
-container instances in the cluster.
-
-Valid dimensions: ClusterName.
-
-Valid statistics: Average, Minimum, Maximum, Sum, Sample Count. The most useful statistic is
-Average.
-
-Unit: Percent.
-
-</div>
 <h2 class="pdoc-module-header" id="isContainerImageProvider">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/container.ts#L208">function <b>isContainerImageProvider</b></a>
 </h2>
@@ -1080,86 +999,6 @@ Unit: Percent.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/service.ts#L170">function <b>isServiceLoadBalancerProvider</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-</div>
-<h2 class="pdoc-module-header" id="memoryReservation">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/metrics.ts#L154">function <b>memoryReservation</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>memoryReservation(change?: <a href='#EcsMetricChange'>EcsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The percentage of memory that is reserved by running tasks in the cluster.
-
-Cluster memory reservation (this metric can only be filtered by ClusterName) is measured as
-the total memory that is reserved by Amazon ECS tasks on the cluster, divided by the total
-amount of memory that was registered for all of the container instances in the cluster. This
-metric is only used for tasks using the EC2 launch type.
-
-Valid dimensions: ClusterName.
-
-Valid statistics: Average, Minimum, Maximum, Sum, Sample Count. The most useful statistic is
-Average.
-
-Unit: Percent.
-
-</div>
-<h2 class="pdoc-module-header" id="memoryUtilization">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/metrics.ts#L178">function <b>memoryUtilization</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>memoryUtilization(change?: <a href='#EcsMetricChange'>EcsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-The percentage of memory that is used in the cluster or service.
-
-Cluster memory utilization (metrics that are filtered by ClusterName without ServiceName) is
-measured as the total memory in use by Amazon ECS tasks on the cluster, divided by the total
-amount of memory that was registered for all of the container instances in the cluster.
-Cluster memory utilization metrics are only used for tasks using the EC2 launch type.
-
-Service memory utilization (metrics that are filtered by ClusterName and ServiceName) is
-measured as the total memory in use by the tasks that belong to the service, divided by the
-total memory that is reserved for the tasks that belong to the service. Service memory
-utilization metrics are used for tasks using both the Fargate and EC2 launch types.
-
-Valid dimensions: ClusterName, ServiceName.
-
-Valid statistics: Average, Minimum, Maximum, Sum, Sample Count. The most useful statistic is
-Average.
-
-Unit: Percent.
-
-</div>
-<h2 class="pdoc-module-header" id="metric">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/metrics.ts#L63">function <b>metric</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>metric(metricName: <a href='#EcsMetricName'>EcsMetricName</a>, change: <a href='#EcsMetricChange'>EcsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-
-
-Creates an AWS/ECS metric with the requested [metricName]. See
-https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cloudwatch-metrics.html for list of
-all metric-names.
-
-Note, individual metrics can easily be obtained without supplying the name using the other
-[metricXXX] functions.
-
-You can monitor your Amazon ECS resources using Amazon CloudWatch, which collects and processes
-raw data from Amazon ECS into readable, near real-time metrics. These statistics are recorded for
-a period of two weeks so that you can access historical information and gain a better perspective
-on how your clusters or services are performing. Amazon ECS metric data is automatically sent to
-CloudWatch in 1-minute periods. For more information about CloudWatch, see the
-[Amazon-CloudWatch-User-Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/).
-
-Amazon ECS metrics use the AWS/ECS namespace and provide metrics for the following dimensions.
-1. "ClusterName": This dimension filters the data that you request for all resources in a
-   specified cluster. All Amazon ECS metrics are filtered by ClusterName.
-2. "ServiceName": This dimension filters the data that you request for all resources in a
-   specified service within a specified cluster.
-
 </div>
 <h2 class="pdoc-module-header" id="ClusterArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/cluster.ts#L162">interface <b>ClusterArgs</b></a>
@@ -1912,135 +1751,6 @@ If not provided, a default will be created for the task.
 }&gt;[]&gt;;</pre>
 
 A set of volume blocks that containers in your task may use.
-
-</div>
-</div>
-<h2 class="pdoc-module-header" id="EcsMetricChange">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/metrics.ts#L27">interface <b>EcsMetricChange</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#MetricChange'>MetricChange</a></pre>
-<h3 class="pdoc-member-header" id="EcsMetricChange-cluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/metrics.ts#L32">property <b>cluster</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>cluster?: aws.ecs.Cluster | <a href='#Cluster'>Cluster</a>;</pre>
-
-This dimension filters the data that you request for all resources in a specified cluster.
-All Amazon ECS metrics can be filtered by this.
-
-</div>
-<h3 class="pdoc-member-header" id="EcsMetricChange-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L439">property <b>color</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>color?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-
-The six-digit HTML hex color code to be used for this metric.
-
-Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
-
-</div>
-<h3 class="pdoc-member-header" id="EcsMetricChange-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L408">property <b>dimensions</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>dimensions?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>
-
-The new dimension for this metric.  If this object is missing this property, then no change
-will be made.  However, if the property is there by set to [undefined] then the value will be
-cleared.
-
-</div>
-<h3 class="pdoc-member-header" id="EcsMetricChange-extendedStatistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L426">property <b>extendedStatistic</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>extendedStatistic?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-
-The new percentile statistic for the metric associated with the alarm.  If this object is
-missing this property, then no change will be made.  However, if the property is there by set
-to [undefined] then the value will be set to the default.
-
-</div>
-<h3 class="pdoc-member-header" id="EcsMetricChange-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L448">property <b>label</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>label?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-
-The label to display for this metric in the graph legend. If this is not specified, the
-metric is given an autogenerated label that distinguishes it from the other metrics in the
-widget.
-
-Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
-
-</div>
-<h3 class="pdoc-member-header" id="EcsMetricChange-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L414">property <b>period</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>period?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-
-The new period in seconds over which the specified `stat` is applied.  If this object is
-missing this property, then no change will be made.  However, if the property is there by set
-to [undefined] then the value will be set to the default (300s).
-
-</div>
-<h3 class="pdoc-member-header" id="EcsMetricChange-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/metrics.ts#L39">property <b>service</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>service?: aws.ecs.Service | <a href='#Service'>Service</a>;</pre>
-
-This dimension filters the data that you request for all resources in a specified service
-within a specified cluster.  If this is an [awsx.ecs.Service] then [cluster] is not required.
-If this is an [aws.ecs.Service] then [cluster] is required.
-
-</div>
-<h3 class="pdoc-member-header" id="EcsMetricChange-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L420">property <b>statistic</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>statistic?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</pre>
-
-The new statistic to apply to the alarm's associated metric.  If this object is missing this
-property, then no change will be made.  However, if the property is there by set to
-[undefined] then the value will be set to the default.
-
-</div>
-<h3 class="pdoc-member-header" id="EcsMetricChange-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L432">property <b>unit</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>unit?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</pre>
-
-The new unit for this metric.   If this object is missing this property, then no change will
-be made.  However, if the property is there by set to [undefined] then the value will be set
-to the default.
-
-</div>
-<h3 class="pdoc-member-header" id="EcsMetricChange-visible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L456">property <b>visible</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>visible?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-
-Set this to true to have the metric appear in the graph, or false to have it be hidden. The
-default is true.
-
-Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
-
-</div>
-<h3 class="pdoc-member-header" id="EcsMetricChange-yAxis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L463">property <b>yAxis</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>yAxis?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</pre>
-
-Where on the graph to display the y-axis for this metric. The default is left.
-
-Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 </div>
 </div>
@@ -3224,9 +2934,173 @@ A set of volume blocks that containers in your task may use.
 
 </div>
 </div>
-<h2 class="pdoc-module-header" id="EcsMetricName">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/metrics.ts#L24">type <b>EcsMetricName</b></a>
+<h2 class="pdoc-module-header" id="metrics">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/metrics.ts#L23">module <b>metrics</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="cpuReservation">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/metrics.ts#L110">function <b>cpuReservation</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>cpuReservation(change?: <a href='#EcsMetricChange'>EcsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The percentage of CPU units that are reserved by running tasks in the cluster.
+
+Cluster CPU reservation (this metric can only be filtered by ClusterName) is measured as the
+total CPU units that are reserved by Amazon ECS tasks on the cluster, divided by the total
+CPU units that were registered for all of the container instances in the cluster. This metric
+is only used for tasks using the EC2 launch type.
+
+Valid dimensions: ClusterName.
+
+Valid statistics: Average, Minimum, Maximum, Sum, Sample Count. The most useful statistic is
+Average.
+
+Unit: Percent.
+
+</div>
+<h3 class="pdoc-member-header" id="cpuUtilization">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/metrics.ts#L135">function <b>cpuUtilization</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>cpuUtilization(change?: <a href='#EcsMetricChange'>EcsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The percentage of CPU units that are used in the cluster or service.
+
+Cluster CPU utilization (metrics that are filtered by ClusterName without ServiceName) is
+measured as the total CPU units in use by Amazon ECS tasks on the cluster, divided by the
+total CPU units that were registered for all of the container instances in the cluster.
+Cluster CPU utilization metrics are only used for tasks using the EC2 launch type.
+
+Service CPU utilization (metrics that are filtered by ClusterName and ServiceName) is
+measured as the total CPU units in use by the tasks that belong to the service, divided by
+the total number of CPU units that are reserved for the tasks that belong to the service.
+Service CPU utilization metrics are used for tasks using both the Fargate and the EC2 launch
+type.
+
+Valid dimensions: ClusterName, ServiceName.
+
+Valid statistics: Average, Minimum, Maximum, Sum, Sample Count. The most useful statistic is
+Average.
+
+Unit: Percent.
+
+</div>
+<h3 class="pdoc-member-header" id="gpuReservation">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/metrics.ts#L196">function <b>gpuReservation</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>gpuReservation(change?: <a href='#EcsMetricChange'>EcsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The percentage of total available GPUs that are reserved by running tasks in the cluster.
+
+Cluster GPU reservation is measured as the number of GPUs reserved by Amazon ECS tasks on the
+cluster, divided by the total number of GPUs that was available on all of the GPU-enabled
+container instances in the cluster.
+
+Valid dimensions: ClusterName.
+
+Valid statistics: Average, Minimum, Maximum, Sum, Sample Count. The most useful statistic is
+Average.
+
+Unit: Percent.
+
+</div>
+<h3 class="pdoc-member-header" id="memoryReservation">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/metrics.ts#L154">function <b>memoryReservation</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>memoryReservation(change?: <a href='#EcsMetricChange'>EcsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The percentage of memory that is reserved by running tasks in the cluster.
+
+Cluster memory reservation (this metric can only be filtered by ClusterName) is measured as
+the total memory that is reserved by Amazon ECS tasks on the cluster, divided by the total
+amount of memory that was registered for all of the container instances in the cluster. This
+metric is only used for tasks using the EC2 launch type.
+
+Valid dimensions: ClusterName.
+
+Valid statistics: Average, Minimum, Maximum, Sum, Sample Count. The most useful statistic is
+Average.
+
+Unit: Percent.
+
+</div>
+<h3 class="pdoc-member-header" id="memoryUtilization">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/metrics.ts#L178">function <b>memoryUtilization</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>memoryUtilization(change?: <a href='#EcsMetricChange'>EcsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+The percentage of memory that is used in the cluster or service.
+
+Cluster memory utilization (metrics that are filtered by ClusterName without ServiceName) is
+measured as the total memory in use by Amazon ECS tasks on the cluster, divided by the total
+amount of memory that was registered for all of the container instances in the cluster.
+Cluster memory utilization metrics are only used for tasks using the EC2 launch type.
+
+Service memory utilization (metrics that are filtered by ClusterName and ServiceName) is
+measured as the total memory in use by the tasks that belong to the service, divided by the
+total memory that is reserved for the tasks that belong to the service. Service memory
+utilization metrics are used for tasks using both the Fargate and EC2 launch types.
+
+Valid dimensions: ClusterName, ServiceName.
+
+Valid statistics: Average, Minimum, Maximum, Sum, Sample Count. The most useful statistic is
+Average.
+
+Unit: Percent.
+
+</div>
+<h3 class="pdoc-member-header" id="metric">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/metrics.ts#L63">function <b>metric</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>metric(metricName: <a href='#EcsMetricName'>EcsMetricName</a>, change: <a href='#EcsMetricChange'>EcsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+Creates an AWS/ECS metric with the requested [metricName]. See
+https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cloudwatch-metrics.html for list of
+all metric-names.
+
+Note, individual metrics can easily be obtained without supplying the name using the other
+[metricXXX] functions.
+
+You can monitor your Amazon ECS resources using Amazon CloudWatch, which collects and processes
+raw data from Amazon ECS into readable, near real-time metrics. These statistics are recorded for
+a period of two weeks so that you can access historical information and gain a better perspective
+on how your clusters or services are performing. Amazon ECS metric data is automatically sent to
+CloudWatch in 1-minute periods. For more information about CloudWatch, see the
+[Amazon-CloudWatch-User-Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/).
+
+Amazon ECS metrics use the AWS/ECS namespace and provide metrics for the following dimensions.
+1. "ClusterName": This dimension filters the data that you request for all resources in a
+   specified cluster. All Amazon ECS metrics are filtered by ClusterName.
+2. "ServiceName": This dimension filters the data that you request for all resources in a
+   specified service within a specified cluster.
+
+</div>
+<h3 class="pdoc-member-header" id="EcsMetricChange">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/metrics.ts#L27">interface <b>EcsMetricChange</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+</div>
+<h3 class="pdoc-member-header" id="EcsMetricName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/metrics.ts#L24">type <b>EcsMetricName</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>type</span> EcsMetricName = <span class='s2'>"CPUReservation"</span> | <span class='s2'>"CPUUtilization"</span> | <span class='s2'>"MemoryReservation"</span> | <span class='s2'>"MemoryUtilization"</span> | <span class='s2'>"GPUReservation"</span>;</pre>
+</div>
 </div>

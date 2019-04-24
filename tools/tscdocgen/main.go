@@ -485,11 +485,13 @@ func (e *emitter) gatherModules(doc *typeDocNode, parentModule string, k8s bool)
 				continue
 			}
 
-			if isModule {
+			name := strings.Trim(child.Name, `"`)
+
+			// If it begins with a "./", simplify it to just the parent name.
+			if isModule && strings.Index(name, "./") == 0 {
 				// If this is a module, we must explode it out into the top-level modules list.
 				// This may very well conflict, so we'll need to merge the new members in if so.
-				chname := simplifyModuleName(child, modname)
-				nss, err := e.gatherNamespaceModules(chname, child)
+				nss, err := e.gatherNamespaceModules(modname, child)
 				if err != nil {
 					return nil, err
 				}
@@ -711,6 +713,9 @@ func (n *typeDocNode) Merge(o *typeDocNode) (*typeDocNode, error) {
 	p.Children = append(p.Children, s.Children...)
 	p.ImplementedTypes = append(p.ImplementedTypes, s.ImplementedTypes...)
 	p.Sources = append(p.Sources, s.Sources...)
+	p.IndexSignatures = append(p.IndexSignatures, s.IndexSignatures...)
+	p.Signatures = append(p.Signatures, s.Signatures...)
+
 	return p, nil
 }
 

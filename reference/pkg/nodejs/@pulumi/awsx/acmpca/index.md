@@ -14,13 +14,7 @@ title: Module acmpca
 <div class="expanded" markdown="1">
 <h2 class="pdoc-module-header toggleButton" title="Click to hide Index">Index ▾</h2>
 <div class="pdoc-module-contents" markdown="1">
-* <a href="#crlGenerated">function crlGenerated</a>
-* <a href="#failure">function failure</a>
-* <a href="#metric">function metric</a>
-* <a href="#misconfiguredCRLBucket">function misconfiguredCRLBucket</a>
-* <a href="#success">function success</a>
-* <a href="#time">function time</a>
-* <a href="#AcmpcaMetricName">type AcmpcaMetricName</a>
+* <a href="#metrics">module metrics</a>
 
 <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/acmpca/metrics.ts">acmpca/metrics.ts</a> 
 </div>
@@ -28,10 +22,14 @@ title: Module acmpca
 </div>
 
 
-<h2 class="pdoc-module-header" id="crlGenerated">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/acmpca/metrics.ts#L42">function <b>crlGenerated</b></a>
+<h2 class="pdoc-module-header" id="metrics">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/acmpca/metrics.ts#L19">module <b>metrics</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="crlGenerated">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/acmpca/metrics.ts#L42">function <b>crlGenerated</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>crlGenerated(change?: cloudwatch.MetricChange): <a href='#Metric'>Metric</a></pre>
 
@@ -39,10 +37,10 @@ title: Module acmpca
 A certificate revocation list (CRL) was generated. This metric applies only to a private CA.
 
 </div>
-<h2 class="pdoc-module-header" id="failure">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/acmpca/metrics.ts#L74">function <b>failure</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="failure">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/acmpca/metrics.ts#L74">function <b>failure</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>failure(change?: cloudwatch.MetricChange): <a href='#Metric'>Metric</a></pre>
 
@@ -50,10 +48,10 @@ A certificate revocation list (CRL) was generated. This metric applies only to a
 Indicates that an operation failed. This metric applies only to the IssueCertificate operation.
 
 </div>
-<h2 class="pdoc-module-header" id="metric">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/acmpca/metrics.ts#L31">function <b>metric</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="metric">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/acmpca/metrics.ts#L31">function <b>metric</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>metric(metricName: <a href='#AcmpcaMetricName'>AcmpcaMetricName</a>, change: cloudwatch.MetricChange): <a href='#Metric'>Metric</a></pre>
 
@@ -66,10 +64,10 @@ Note, individual metrics can easily be obtained without supplying the name using
 [metricXXX] functions.
 
 </div>
-<h2 class="pdoc-module-header" id="misconfiguredCRLBucket">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/acmpca/metrics.ts#L50">function <b>misconfiguredCRLBucket</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="misconfiguredCRLBucket">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/acmpca/metrics.ts#L50">function <b>misconfiguredCRLBucket</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>misconfiguredCRLBucket(change?: cloudwatch.MetricChange): <a href='#Metric'>Metric</a></pre>
 
@@ -78,10 +76,10 @@ The S3 bucket specified for the CRL is not correctly configured. Check the bucke
 metric applies only to a private CA.
 
 </div>
-<h2 class="pdoc-module-header" id="success">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/acmpca/metrics.ts#L67">function <b>success</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="success">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/acmpca/metrics.ts#L67">function <b>success</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>success(change?: cloudwatch.MetricChange): <a href='#Metric'>Metric</a></pre>
 
@@ -90,10 +88,10 @@ Specifies whether a certificate was successfully issued. This metric applies onl
 IssueCertificate operation.
 
 </div>
-<h2 class="pdoc-module-header" id="time">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/acmpca/metrics.ts#L59">function <b>time</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="time">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/acmpca/metrics.ts#L59">function <b>time</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>time(change?: cloudwatch.MetricChange): <a href='#Metric'>Metric</a></pre>
 
@@ -103,9 +101,10 @@ The time at which the certificate was issued. This metric applies only to the
 operation.
 
 </div>
-<h2 class="pdoc-module-header" id="AcmpcaMetricName">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/acmpca/metrics.ts#L20">type <b>AcmpcaMetricName</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="AcmpcaMetricName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/acmpca/metrics.ts#L20">type <b>AcmpcaMetricName</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>type</span> AcmpcaMetricName = <span class='s2'>"CRLGenerated"</span> | <span class='s2'>"MisconfiguredCRLBucket"</span> | <span class='s2'>"Time"</span> | <span class='s2'>"Success"</span> | <span class='s2'>"Failure"</span>;</pre>
+</div>
 </div>
