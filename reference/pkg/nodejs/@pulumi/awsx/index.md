@@ -40,8 +40,6 @@ import * as awsx from "@pulumi/awsx";
 * <a href="#ClusterNetworkArgs">interface ClusterNetworkArgs</a>
 * <a href="#NetworkArgs">interface NetworkArgs</a>
 * <a href="#NetworkVpcArgs">interface NetworkVpcArgs</a>
-* <a href="#Compatible">type Compatible</a>
-* <a href="#Mutable">type Mutable</a>
 * <a href="#Overwrite">type Overwrite</a>
 
 <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/aws.ts">aws.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cluster.ts">cluster.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/index.ts">index.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/network.ts">network.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/utils.ts">utils.ts</a> 
@@ -329,17 +327,11 @@ The VPC id of the network.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/utils.ts#L66">function <b>checkCompat</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>checkCompat&lt;T,U&gt;(): <a href='#Compatible'>Compatible</a>&lt;T, U&gt;</pre>
-
 </div>
 <h2 class="pdoc-module-header" id="combineArrays">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/utils.ts#L43">function <b>combineArrays</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>combineArrays&lt;T&gt;(e1: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;T[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;, e2: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;T[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;): <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;T[]&gt;</pre>
-
 </div>
 <h2 class="pdoc-module-header" id="getAvailabilityZone">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/aws.ts#L23">function <b>getAvailabilityZone</b></a>
@@ -361,41 +353,26 @@ The VPC id of the network.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/utils.ts#L94">function <b>hasTrueBooleanMember</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>hasTrueBooleanMember(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, memberName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'>symbol</span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
 </div>
 <h2 class="pdoc-module-header" id="ifUndefined">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/utils.ts#L57">function <b>ifUndefined</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>ifUndefined&lt;T&gt;(input: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;T | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, value: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;T&gt;): OutputInstance&lt;Unwrap<T>&gt; &amp; Lifted<Unwrap<T>></pre>
-
 </div>
 <h2 class="pdoc-module-header" id="isInstance">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/utils.ts#L89">function <b>isInstance</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isInstance&lt;T&gt;(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, name: keyof T): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
 </div>
 <h2 class="pdoc-module-header" id="mergeTags">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/utils.ts#L71">function <b>mergeTags</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>mergeTags(tags1: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;aws.Tags&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, tags2: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;aws.Tags&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;aws.Tags&gt;</pre>
-
 </div>
 <h2 class="pdoc-module-header" id="sha1hash">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/utils.ts#L34">function <b>sha1hash</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>sha1hash(s: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></pre>
-
 </div>
 <h2 class="pdoc-module-header" id="ClusterArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cluster.ts#L39">interface <b>ClusterArgs</b></a>
@@ -656,18 +633,6 @@ Whether the network includes private subnets.
 The VPC id of the network for the cluster
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="Compatible">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/utils.ts#L63">type <b>Compatible</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>type</span> Compatible = Compatible<T, U>;</pre>
-</div>
-<h2 class="pdoc-module-header" id="Mutable">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/utils.ts#L28">type <b>Mutable</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>type</span> Mutable = { ... };</pre>
 </div>
 <h2 class="pdoc-module-header" id="Overwrite">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/utils.ts#L25">type <b>Overwrite</b></a>
