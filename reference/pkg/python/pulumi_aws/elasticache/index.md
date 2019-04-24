@@ -294,7 +294,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.elasticache.GetClusterResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.elasticache.</code><code class="descname">GetClusterResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>availability_zone=None</em>, <em>cache_nodes=None</em>, <em>cluster_address=None</em>, <em>configuration_endpoint=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>maintenance_window=None</em>, <em>node_type=None</em>, <em>notification_topic_arn=None</em>, <em>num_cache_nodes=None</em>, <em>parameter_group_name=None</em>, <em>port=None</em>, <em>replication_group_id=None</em>, <em>security_group_ids=None</em>, <em>security_group_names=None</em>, <em>snapshot_retention_limit=None</em>, <em>snapshot_window=None</em>, <em>subnet_group_name=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.GetClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticache.</code><code class="descname">GetClusterResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>availability_zone=None</em>, <em>cache_nodes=None</em>, <em>cluster_address=None</em>, <em>cluster_id=None</em>, <em>configuration_endpoint=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>maintenance_window=None</em>, <em>node_type=None</em>, <em>notification_topic_arn=None</em>, <em>num_cache_nodes=None</em>, <em>parameter_group_name=None</em>, <em>port=None</em>, <em>replication_group_id=None</em>, <em>security_group_ids=None</em>, <em>security_group_names=None</em>, <em>snapshot_retention_limit=None</em>, <em>snapshot_window=None</em>, <em>subnet_group_name=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.GetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCluster.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticache.GetClusterResult.availability_zone">
@@ -426,7 +426,7 @@ begin taking a daily snapshot of the cache cluster.</p>
 
 <dl class="class">
 <dt id="pulumi_aws.elasticache.GetReplicationGroupResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.elasticache.</code><code class="descname">GetReplicationGroupResult</code><span class="sig-paren">(</span><em>auth_token_enabled=None</em>, <em>automatic_failover_enabled=None</em>, <em>configuration_endpoint_address=None</em>, <em>member_clusters=None</em>, <em>node_type=None</em>, <em>number_cache_clusters=None</em>, <em>port=None</em>, <em>primary_endpoint_address=None</em>, <em>replication_group_description=None</em>, <em>snapshot_retention_limit=None</em>, <em>snapshot_window=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.GetReplicationGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticache.</code><code class="descname">GetReplicationGroupResult</code><span class="sig-paren">(</span><em>auth_token_enabled=None</em>, <em>automatic_failover_enabled=None</em>, <em>configuration_endpoint_address=None</em>, <em>member_clusters=None</em>, <em>node_type=None</em>, <em>number_cache_clusters=None</em>, <em>port=None</em>, <em>primary_endpoint_address=None</em>, <em>replication_group_description=None</em>, <em>replication_group_id=None</em>, <em>snapshot_retention_limit=None</em>, <em>snapshot_window=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.GetReplicationGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getReplicationGroup.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticache.GetReplicationGroupResult.auth_token_enabled">
@@ -480,6 +480,12 @@ begin taking a daily snapshot of the cache cluster.</p>
 <dt id="pulumi_aws.elasticache.GetReplicationGroupResult.replication_group_description">
 <code class="descname">replication_group_description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetReplicationGroupResult.replication_group_description" title="Permalink to this definition">¶</a></dt>
 <dd><p>The description of the replication group.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetReplicationGroupResult.replication_group_id">
+<code class="descname">replication_group_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetReplicationGroupResult.replication_group_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The identifier for the replication group.</p>
 </dd></dl>
 
 <dl class="attribute">

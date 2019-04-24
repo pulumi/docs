@@ -178,7 +178,7 @@ used to create the new object by copying the <code class="docutils literal notra
 {container}/{object}. You must UTF-8-encode and then URL-encode the names of the
 container and object before you include them in the header. Conflicts with <code class="docutils literal notranslate"><span class="pre">source</span></code> and
 <code class="docutils literal notranslate"><span class="pre">content</span></code>.</li>
-<li><strong>delete_after</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – An integer representing the number of seconds after which the
+<li><strong>delete_after</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – An integer representing the number of seconds after which the
 system removes the object. Internally, the Object Storage system stores this value in
 the X-Delete-At metadata item.</li>
 <li><strong>delete_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An string representing the date when the system removes the object. 
@@ -409,7 +409,7 @@ Valid values are <code class="docutils literal notranslate"><span class="pre">GE
 it has expired. If set to true, this will create a new resource with a new
 ID and new URL. Defaults to false.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region the tempurl is located in.</li>
-<li><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The TTL, in seconds, for the URL. For how long it should
+<li><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The TTL, in seconds, for the URL. For how long it should
 be valid.</li>
 </ul>
 </td>

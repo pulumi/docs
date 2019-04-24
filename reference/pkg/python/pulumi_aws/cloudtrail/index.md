@@ -2,7 +2,7 @@
 <span id="cloudtrail"></span><h1>cloudtrail<a class="headerlink" href="#module-pulumi_aws.cloudtrail" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.cloudtrail.GetServiceAccountResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloudtrail.</code><code class="descname">GetServiceAccountResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudtrail.GetServiceAccountResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudtrail.</code><code class="descname">GetServiceAccountResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>region=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudtrail.GetServiceAccountResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getServiceAccount.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.cloudtrail.GetServiceAccountResult.arn">

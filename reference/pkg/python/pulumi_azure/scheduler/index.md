@@ -2,7 +2,7 @@
 <span id="scheduler"></span><h1>scheduler<a class="headerlink" href="#module-pulumi_azure.scheduler" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.scheduler.GetJobCollectionResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.scheduler.</code><code class="descname">GetJobCollectionResult</code><span class="sig-paren">(</span><em>location=None</em>, <em>quotas=None</em>, <em>sku=None</em>, <em>state=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.scheduler.GetJobCollectionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.scheduler.</code><code class="descname">GetJobCollectionResult</code><span class="sig-paren">(</span><em>location=None</em>, <em>name=None</em>, <em>quotas=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>state=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.scheduler.GetJobCollectionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getJobCollection.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.scheduler.GetJobCollectionResult.location">

@@ -606,7 +606,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.monitoring.GetActionGroupResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">GetActionGroupResult</code><span class="sig-paren">(</span><em>email_receivers=None</em>, <em>enabled=None</em>, <em>short_name=None</em>, <em>sms_receivers=None</em>, <em>webhook_receivers=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.GetActionGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">GetActionGroupResult</code><span class="sig-paren">(</span><em>email_receivers=None</em>, <em>enabled=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>short_name=None</em>, <em>sms_receivers=None</em>, <em>webhook_receivers=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.GetActionGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getActionGroup.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.monitoring.GetActionGroupResult.email_receivers">
@@ -618,6 +618,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.monitoring.GetActionGroupResult.enabled">
 <code class="descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetActionGroupResult.enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether this action group is enabled.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetActionGroupResult.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetActionGroupResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the webhook receiver.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -648,7 +654,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.monitoring.GetDiagnosticCategoriesResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">GetDiagnosticCategoriesResult</code><span class="sig-paren">(</span><em>logs=None</em>, <em>metrics=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.GetDiagnosticCategoriesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">GetDiagnosticCategoriesResult</code><span class="sig-paren">(</span><em>logs=None</em>, <em>metrics=None</em>, <em>resource_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.GetDiagnosticCategoriesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDiagnosticCategories.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.monitoring.GetDiagnosticCategoriesResult.logs">
@@ -672,7 +678,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.monitoring.GetLogProfileResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">GetLogProfileResult</code><span class="sig-paren">(</span><em>categories=None</em>, <em>locations=None</em>, <em>retention_policy=None</em>, <em>servicebus_rule_id=None</em>, <em>storage_account_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.GetLogProfileResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">GetLogProfileResult</code><span class="sig-paren">(</span><em>categories=None</em>, <em>locations=None</em>, <em>name=None</em>, <em>retention_policy=None</em>, <em>servicebus_rule_id=None</em>, <em>storage_account_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.GetLogProfileResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getLogProfile.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.monitoring.GetLogProfileResult.categories">

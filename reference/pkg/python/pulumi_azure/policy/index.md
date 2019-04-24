@@ -254,7 +254,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.policy.GetPolicyDefintionResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.policy.</code><code class="descname">GetPolicyDefintionResult</code><span class="sig-paren">(</span><em>description=None</em>, <em>metadata=None</em>, <em>name=None</em>, <em>parameters=None</em>, <em>policy_rule=None</em>, <em>policy_type=None</em>, <em>type=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.GetPolicyDefintionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.policy.</code><code class="descname">GetPolicyDefintionResult</code><span class="sig-paren">(</span><em>description=None</em>, <em>display_name=None</em>, <em>management_group_id=None</em>, <em>metadata=None</em>, <em>name=None</em>, <em>parameters=None</em>, <em>policy_rule=None</em>, <em>policy_type=None</em>, <em>type=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.GetPolicyDefintionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getPolicyDefintion.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.policy.GetPolicyDefintionResult.description">

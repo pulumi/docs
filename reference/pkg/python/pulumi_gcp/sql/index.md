@@ -313,7 +313,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.sql.SslCert">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.sql.</code><code class="descname">SslCert</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>common_name=None</em>, <em>instance=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.sql.SslCert" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.sql.</code><code class="descname">SslCert</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>common_name=None</em>, <em>instance=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.sql.SslCert" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new Google SQL SSL Cert on a Google SQL Instance. For more information, see the <a class="reference external" href="https://cloud.google.com/sql/">official documentation</a>, or the <a class="reference external" href="https://cloud.google.com/sql/docs/mysql/admin-api/v1beta4/sslCerts">JSON API</a>.</p>
 <blockquote>
 <div><strong>Note:</strong> All arguments including the private key will be stored in the raw state as plain-text.
@@ -325,11 +325,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>common*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The common name to be used in the certificate to identify the 
+<li><strong>common*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The common name to be used in the certificate to identify the
 client. Constrained to [a-zA-Z.-* ]+. Changing this forces a new resource to be created.</p>
 </li>
 <li><strong>instance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Cloud SQL instance. Changing this
 forces a new resource to be created.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
+is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
@@ -350,21 +352,21 @@ forces a new resource to be created.</li>
 <dl class="attribute">
 <dt id="pulumi_gcp.sql.SslCert.common_name">
 <code class="descname">common_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.SslCert.common_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The common name to be used in the certificate to identify the 
+<dd><p>The common name to be used in the certificate to identify the
 client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.sql.SslCert.create_time">
 <code class="descname">create_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.SslCert.create_time" title="Permalink to this definition">¶</a></dt>
-<dd><p>The time when the certificate was created in RFC 3339 format, 
+<dd><p>The time when the certificate was created in RFC 3339 format,
 for example 2012-11-15T16:19:00.094Z.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.sql.SslCert.expiration_time">
 <code class="descname">expiration_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.SslCert.expiration_time" title="Permalink to this definition">¶</a></dt>
-<dd><p>The time when the certificate expires in RFC 3339 format, 
+<dd><p>The time when the certificate expires in RFC 3339 format,
 for example 2012-11-15T16:19:00.094Z.</p>
 </dd></dl>
 
@@ -379,6 +381,13 @@ forces a new resource to be created.</p>
 <dt id="pulumi_gcp.sql.SslCert.private_key">
 <code class="descname">private_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.SslCert.private_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>The private key associated with the client certificate.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.sql.SslCert.project">
+<code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.SslCert.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs. If it
+is not provided, the provider project is used.</p>
 </dd></dl>
 
 <dl class="attribute">

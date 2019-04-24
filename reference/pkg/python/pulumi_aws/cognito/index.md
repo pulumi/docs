@@ -2,7 +2,7 @@
 <span id="cognito"></span><h1>cognito<a class="headerlink" href="#module-pulumi_aws.cognito" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.cognito.GetUserPoolsResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cognito.</code><code class="descname">GetUserPoolsResult</code><span class="sig-paren">(</span><em>arns=None</em>, <em>ids=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.GetUserPoolsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cognito.</code><code class="descname">GetUserPoolsResult</code><span class="sig-paren">(</span><em>arns=None</em>, <em>ids=None</em>, <em>name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.GetUserPoolsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getUserPools.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.cognito.GetUserPoolsResult.ids">

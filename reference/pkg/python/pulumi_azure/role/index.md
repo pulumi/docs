@@ -191,7 +191,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.role.GetBuiltinRoleDefinitionResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.role.</code><code class="descname">GetBuiltinRoleDefinitionResult</code><span class="sig-paren">(</span><em>assignable_scopes=None</em>, <em>description=None</em>, <em>permissions=None</em>, <em>type=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.role.GetBuiltinRoleDefinitionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.role.</code><code class="descname">GetBuiltinRoleDefinitionResult</code><span class="sig-paren">(</span><em>assignable_scopes=None</em>, <em>description=None</em>, <em>name=None</em>, <em>permissions=None</em>, <em>type=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.role.GetBuiltinRoleDefinitionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getBuiltinRoleDefinition.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.role.GetBuiltinRoleDefinitionResult.assignable_scopes">
@@ -227,7 +227,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.role.GetRoleDefinitionResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.role.</code><code class="descname">GetRoleDefinitionResult</code><span class="sig-paren">(</span><em>assignable_scopes=None</em>, <em>description=None</em>, <em>name=None</em>, <em>permissions=None</em>, <em>role_definition_id=None</em>, <em>type=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.role.GetRoleDefinitionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.role.</code><code class="descname">GetRoleDefinitionResult</code><span class="sig-paren">(</span><em>assignable_scopes=None</em>, <em>description=None</em>, <em>name=None</em>, <em>permissions=None</em>, <em>role_definition_id=None</em>, <em>scope=None</em>, <em>type=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.role.GetRoleDefinitionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRoleDefinition.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.role.GetRoleDefinitionResult.assignable_scopes">

@@ -169,7 +169,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.elasticloadbalancing.GetHostedZoneIdResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.elasticloadbalancing.</code><code class="descname">GetHostedZoneIdResult</code><span class="sig-paren">(</span><em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.GetHostedZoneIdResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticloadbalancing.</code><code class="descname">GetHostedZoneIdResult</code><span class="sig-paren">(</span><em>region=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.GetHostedZoneIdResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getHostedZoneId.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticloadbalancing.GetHostedZoneIdResult.id">
@@ -181,7 +181,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.elasticloadbalancing.GetLoadBalancerResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.elasticloadbalancing.</code><code class="descname">GetLoadBalancerResult</code><span class="sig-paren">(</span><em>access_logs=None</em>, <em>availability_zones=None</em>, <em>connection_draining=None</em>, <em>connection_draining_timeout=None</em>, <em>cross_zone_load_balancing=None</em>, <em>dns_name=None</em>, <em>health_check=None</em>, <em>idle_timeout=None</em>, <em>instances=None</em>, <em>internal=None</em>, <em>listeners=None</em>, <em>security_groups=None</em>, <em>source_security_group=None</em>, <em>source_security_group_id=None</em>, <em>subnets=None</em>, <em>tags=None</em>, <em>zone_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.GetLoadBalancerResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticloadbalancing.</code><code class="descname">GetLoadBalancerResult</code><span class="sig-paren">(</span><em>access_logs=None</em>, <em>availability_zones=None</em>, <em>connection_draining=None</em>, <em>connection_draining_timeout=None</em>, <em>cross_zone_load_balancing=None</em>, <em>dns_name=None</em>, <em>health_check=None</em>, <em>idle_timeout=None</em>, <em>instances=None</em>, <em>internal=None</em>, <em>listeners=None</em>, <em>name=None</em>, <em>security_groups=None</em>, <em>source_security_group=None</em>, <em>source_security_group_id=None</em>, <em>subnets=None</em>, <em>tags=None</em>, <em>zone_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.GetLoadBalancerResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getLoadBalancer.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticloadbalancing.GetLoadBalancerResult.id">
@@ -193,7 +193,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.elasticloadbalancing.GetServiceAccountResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.elasticloadbalancing.</code><code class="descname">GetServiceAccountResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.GetServiceAccountResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticloadbalancing.</code><code class="descname">GetServiceAccountResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>region=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.GetServiceAccountResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getServiceAccount.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticloadbalancing.GetServiceAccountResult.arn">

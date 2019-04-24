@@ -2,7 +2,7 @@
 <span id="mediapackage"></span><h1>mediapackage<a class="headerlink" href="#module-pulumi_aws.mediapackage" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.mediapackage.Channel">
-<em class="property">class </em><code class="descclassname">pulumi_aws.mediapackage.</code><code class="descname">Channel</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>channel_id=None</em>, <em>description=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mediapackage.Channel" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.mediapackage.</code><code class="descname">Channel</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>channel_id=None</em>, <em>description=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mediapackage.Channel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS Elemental MediaPackage Channel.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -13,6 +13,7 @@
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>channel_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique identifier describing the channel</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the channel</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
 </td>
 </tr>
@@ -40,6 +41,12 @@
 <dt id="pulumi_aws.mediapackage.Channel.hls_ingests">
 <code class="descname">hls_ingests</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mediapackage.Channel.hls_ingests" title="Permalink to this definition">¶</a></dt>
 <dd><p>A single item list of HLS ingest information</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.mediapackage.Channel.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mediapackage.Channel.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="method">

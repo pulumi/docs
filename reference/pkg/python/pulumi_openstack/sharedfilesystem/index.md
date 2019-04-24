@@ -1,8 +1,32 @@
 <div class="section" id="module-pulumi_openstack.sharedfilesystem">
 <span id="sharedfilesystem"></span><h1>sharedfilesystem<a class="headerlink" href="#module-pulumi_openstack.sharedfilesystem" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
+<dt id="pulumi_openstack.sharedfilesystem.GetAvailbilityZonesResult">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.sharedfilesystem.</code><code class="descname">GetAvailbilityZonesResult</code><span class="sig-paren">(</span><em>names=None</em>, <em>region=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.GetAvailbilityZonesResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getAvailbilityZones.</p>
+<dl class="attribute">
+<dt id="pulumi_openstack.sharedfilesystem.GetAvailbilityZonesResult.names">
+<code class="descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.GetAvailbilityZonesResult.names" title="Permalink to this definition">¶</a></dt>
+<dd><p>The names of the availability zones, ordered alphanumerically.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.sharedfilesystem.GetAvailbilityZonesResult.region">
+<code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.GetAvailbilityZonesResult.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.sharedfilesystem.GetAvailbilityZonesResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.GetAvailbilityZonesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_openstack.sharedfilesystem.GetShareNetworkResult">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.sharedfilesystem.</code><code class="descname">GetShareNetworkResult</code><span class="sig-paren">(</span><em>cidr=None</em>, <em>description=None</em>, <em>ip_version=None</em>, <em>name=None</em>, <em>network_type=None</em>, <em>neutron_net_id=None</em>, <em>neutron_subnet_id=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>security_service_ids=None</em>, <em>segmentation_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.GetShareNetworkResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.sharedfilesystem.</code><code class="descname">GetShareNetworkResult</code><span class="sig-paren">(</span><em>cidr=None</em>, <em>description=None</em>, <em>ip_version=None</em>, <em>name=None</em>, <em>network_type=None</em>, <em>neutron_net_id=None</em>, <em>neutron_subnet_id=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>security_service_id=None</em>, <em>security_service_ids=None</em>, <em>segmentation_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.GetShareNetworkResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getShareNetwork.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.sharedfilesystem.GetShareNetworkResult.cidr">
@@ -59,6 +83,12 @@
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_openstack.sharedfilesystem.GetShareNetworkResult.security_service_id">
+<code class="descname">security_service_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.GetShareNetworkResult.security_service_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_openstack.sharedfilesystem.GetShareNetworkResult.security_service_ids">
 <code class="descname">security_service_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.GetShareNetworkResult.security_service_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of security service IDs associated with
@@ -81,7 +111,7 @@ the share network.</p>
 
 <dl class="class">
 <dt id="pulumi_openstack.sharedfilesystem.GetShareResult">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.sharedfilesystem.</code><code class="descname">GetShareResult</code><span class="sig-paren">(</span><em>availability_zone=None</em>, <em>description=None</em>, <em>export_locations=None</em>, <em>is_public=None</em>, <em>metadata=None</em>, <em>name=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>share_network_id=None</em>, <em>share_proto=None</em>, <em>size=None</em>, <em>snapshot_id=None</em>, <em>status=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.GetShareResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.sharedfilesystem.</code><code class="descname">GetShareResult</code><span class="sig-paren">(</span><em>availability_zone=None</em>, <em>description=None</em>, <em>export_location_path=None</em>, <em>export_locations=None</em>, <em>is_public=None</em>, <em>metadata=None</em>, <em>name=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>share_network_id=None</em>, <em>share_proto=None</em>, <em>size=None</em>, <em>snapshot_id=None</em>, <em>status=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.GetShareResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getShare.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.sharedfilesystem.GetShareResult.availability_zone">
@@ -92,6 +122,12 @@ the share network.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.sharedfilesystem.GetShareResult.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.GetShareResult.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.sharedfilesystem.GetShareResult.export_location_path">
+<code class="descname">export_location_path</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.GetShareResult.export_location_path" title="Permalink to this definition">¶</a></dt>
 <dd><p>See Argument Reference above.</p>
 </dd></dl>
 
@@ -418,7 +454,7 @@ the share_network_id value from the snapshot is used. Changing this creates a ne
 CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.</li>
 <li><strong>share_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The share type name. If you omit this parameter, the default
 share type is used.</li>
-<li><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The share size, in GBs. The requested share size cannot be greater
+<li><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The share size, in GBs. The requested share size cannot be greater
 than the allowed GB quota. Changing this resizes the existing share.</li>
 <li><strong>snapshot_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The UUID of the share’s base snapshot. Changing this creates
 a new share.</li>
@@ -588,6 +624,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.sharedfilesystem.ShareAccess">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.sharedfilesystem.</code><code class="descname">ShareAccess</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>access_level=None</em>, <em>access_to=None</em>, <em>access_type=None</em>, <em>region=None</em>, <em>share_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.ShareAccess" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this resource to control the share access lists.</p>
+<blockquote>
+<div><strong>Important Security Notice</strong> The access key retrieved by this resource will
+be stored <em>unencrypted</em> in your Terraform state file. If you use this resource
+in production, please make sure your state file is sufficiently protected.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -598,7 +638,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>access_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access level to the share. Can either be <code class="docutils literal notranslate"><span class="pre">rw</span></code> or <code class="docutils literal notranslate"><span class="pre">ro</span></code>.</li>
 <li><strong>access_to</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value that defines the access. Can either be an IP
 address or a username verified by configured Security Service of the Share Network.</li>
-<li><strong>access_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access rule type. Can either be an ip, user or cert.</li>
+<li><strong>access_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access rule type. Can either be an ip, user,
+cert, or cephx. cephx support requires an OpenStack environment that supports
+Shared Filesystem microversion 2.13 (Mitaka) or later.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Shared File System client.
 A Shared File System client is needed to create a share access. Changing this
 creates a new share access.</li>
@@ -608,6 +650,12 @@ creates a new share access.</li>
 </tr>
 </tbody>
 </table>
+<dl class="attribute">
+<dt id="pulumi_openstack.sharedfilesystem.ShareAccess.access_key">
+<code class="descname">access_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.ShareAccess.access_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The access credential of the entity granted access.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_openstack.sharedfilesystem.ShareAccess.access_level">
 <code class="descname">access_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.ShareAccess.access_level" title="Permalink to this definition">¶</a></dt>
@@ -624,7 +672,9 @@ address or a username verified by configured Security Service of the Share Netwo
 <dl class="attribute">
 <dt id="pulumi_openstack.sharedfilesystem.ShareAccess.access_type">
 <code class="descname">access_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.ShareAccess.access_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The access rule type. Can either be an ip, user or cert.</p>
+<dd><p>The access rule type. Can either be an ip, user,
+cert, or cephx. cephx support requires an OpenStack environment that supports
+Shared Filesystem microversion 2.13 (Mitaka) or later.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -829,6 +879,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </table>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_openstack.sharedfilesystem.get_availbility_zones">
+<code class="descclassname">pulumi_openstack.sharedfilesystem.</code><code class="descname">get_availbility_zones</code><span class="sig-paren">(</span><em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.get_availbility_zones" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to get a list of Shared File System availability zones
+from OpenStack</p>
 </dd></dl>
 
 <dl class="function">

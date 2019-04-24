@@ -125,7 +125,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.batch.GetComputeEnvironmentResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.batch.</code><code class="descname">GetComputeEnvironmentResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>ecs_cluster_arn=None</em>, <em>service_role=None</em>, <em>state=None</em>, <em>status=None</em>, <em>status_reason=None</em>, <em>type=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.GetComputeEnvironmentResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.batch.</code><code class="descname">GetComputeEnvironmentResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>compute_environment_name=None</em>, <em>ecs_cluster_arn=None</em>, <em>service_role=None</em>, <em>state=None</em>, <em>status=None</em>, <em>status_reason=None</em>, <em>type=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.GetComputeEnvironmentResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getComputeEnvironment.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.batch.GetComputeEnvironmentResult.arn">
@@ -179,7 +179,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.batch.GetJobQueueResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.batch.</code><code class="descname">GetJobQueueResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>compute_environment_orders=None</em>, <em>priority=None</em>, <em>state=None</em>, <em>status=None</em>, <em>status_reason=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.GetJobQueueResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.batch.</code><code class="descname">GetJobQueueResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>compute_environment_orders=None</em>, <em>name=None</em>, <em>priority=None</em>, <em>state=None</em>, <em>status=None</em>, <em>status_reason=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.GetJobQueueResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getJobQueue.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.batch.GetJobQueueResult.arn">

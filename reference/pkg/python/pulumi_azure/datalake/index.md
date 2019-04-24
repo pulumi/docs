@@ -191,7 +191,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.datalake.GetStoreResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.datalake.</code><code class="descname">GetStoreResult</code><span class="sig-paren">(</span><em>encryption_state=None</em>, <em>encryption_type=None</em>, <em>firewall_allow_azure_ips=None</em>, <em>firewall_state=None</em>, <em>location=None</em>, <em>tags=None</em>, <em>tier=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.GetStoreResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.datalake.</code><code class="descname">GetStoreResult</code><span class="sig-paren">(</span><em>encryption_state=None</em>, <em>encryption_type=None</em>, <em>firewall_allow_azure_ips=None</em>, <em>firewall_state=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>tier=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.GetStoreResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getStore.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.datalake.GetStoreResult.encryption_state">

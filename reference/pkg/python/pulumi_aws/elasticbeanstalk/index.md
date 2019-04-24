@@ -545,7 +545,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.elasticbeanstalk.GetApplicationResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">GetApplicationResult</code><span class="sig-paren">(</span><em>appversion_lifecycle=None</em>, <em>arn=None</em>, <em>description=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.GetApplicationResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">GetApplicationResult</code><span class="sig-paren">(</span><em>appversion_lifecycle=None</em>, <em>arn=None</em>, <em>description=None</em>, <em>name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.GetApplicationResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getApplication.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticbeanstalk.GetApplicationResult.arn">
@@ -569,8 +569,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.elasticbeanstalk.GetHostedZoneResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">GetHostedZoneResult</code><span class="sig-paren">(</span><em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.GetHostedZoneResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">GetHostedZoneResult</code><span class="sig-paren">(</span><em>region=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.GetHostedZoneResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getHostedZone.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.elasticbeanstalk.GetHostedZoneResult.region">
+<code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.GetHostedZoneResult.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>The region of the hosted zone.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_aws.elasticbeanstalk.GetHostedZoneResult.id">
 <code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.GetHostedZoneResult.id" title="Permalink to this definition">¶</a></dt>
@@ -581,7 +587,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.elasticbeanstalk.GetSolutionStackResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">GetSolutionStackResult</code><span class="sig-paren">(</span><em>name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.GetSolutionStackResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">GetSolutionStackResult</code><span class="sig-paren">(</span><em>most_recent=None</em>, <em>name=None</em>, <em>name_regex=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.GetSolutionStackResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSolutionStack.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticbeanstalk.GetSolutionStackResult.name">

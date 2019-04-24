@@ -16,8 +16,6 @@
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] command
-:param pulumi.Input[str] registration_key</p>
 <dl class="method">
 <dt id="pulumi_f5bigip.sys.BigIpLicense.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.sys.BigIpLicense.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -69,15 +67,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>name_servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Name or IP address of the DNS server</li>
+<li><strong>number_of_dots</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Configures the number of dots needed in a name before an initial absolute query will be made.</li>
+<li><strong>searches</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specify what domains you want to search</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] description
-:param pulumi.Input[list] name_servers: Name or IP address of the DNS server
-:param pulumi.Input[int] number_of_dots: Configures the number of dots needed in a name before an initial absolute query will be made.
-:param pulumi.Input[list] searches: Specify what domains you want to search</p>
 <dl class="attribute">
 <dt id="pulumi_f5bigip.sys.Dns.name_servers">
 <code class="descname">name_servers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.Dns.name_servers" title="Permalink to this definition">¶</a></dt>
@@ -139,51 +136,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_f5bigip.sys.IApp">
 <em class="property">class </em><code class="descclassname">pulumi_f5bigip.sys.</code><code class="descname">IApp</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>devicegroup=None</em>, <em>execute_action=None</em>, <em>inherited_devicegroup=None</em>, <em>inherited_traffic_group=None</em>, <em>jsonfile=None</em>, <em>lists=None</em>, <em>metadatas=None</em>, <em>name=None</em>, <em>partition=None</em>, <em>strict_updates=None</em>, <em>tables=None</em>, <em>template=None</em>, <em>template_modified=None</em>, <em>template_prerequisite_errors=None</em>, <em>traffic_group=None</em>, <em>variables=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.sys.IApp" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">bigip_sys_iapp</span></code> resource helps you to deploy Application Services template that can be used to automate and orchestrate Layer 4-7 applications service deployments using F5 Network. More information on iApp 2.0 is at <a class="reference external" href="https://devcentral.f5.com/wiki/iApp.AppSvcsiApp_userguide_userguide.ashx">https://devcentral.f5.com/wiki/iApp.AppSvcsiApp_userguide_userguide.ashx</a> This resource requires a iApp template already imported on BIG-IP, the template can be found at <a class="reference external" href="https://github.com/F5Networks/f5-application-services-integration-iApp/releases/download/v2.0.003/appsvcs_integration_v2.0.003.tmpl">https://github.com/F5Networks/f5-application-services-integration-iApp/releases/download/v2.0.003/appsvcs_integration_v2.0.003.tmpl</a></p>
-<dl class="docutils">
-<dt>{</dt>
-<dd><dl class="first last docutils">
-<dt>“name”:”policywaf”,</dt>
-<dd><p class="first">“partition”: “Common”,
-“inheritedDevicegroup”: “true”,
-“inheritedTrafficGroup”: “true”,
-“strictUpdates”: “enabled”,
-“template”: “/Common/appsvcs_integration_v2.0.003”,
-“execute-action”: “definition”,</p>
-<blockquote class="last">
-<div><dl class="docutils">
-<dt>“tables”: [{</dt>
-<dd><p class="first">“name”: “feature__easyL4FirewallBlacklist”,
-“columnNames”: [</p>
-<blockquote>
-<div>“CIDRRange”</div></blockquote>
-<p class="last">],
-“rows”: [</p>
-</dd>
-</dl>
-</div></blockquote>
-</dd>
-</dl>
-</dd>
-</dl>
-<p>}</p>
-<ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">description</span></code> - User defined description.</li>
-<li><code class="docutils literal notranslate"><span class="pre">deviceGroup</span></code> - The name of the device group that the application service is assigned to.</li>
-<li><code class="docutils literal notranslate"><span class="pre">executeAction</span></code> - Run the specified template action associated with the application.</li>
-<li><code class="docutils literal notranslate"><span class="pre">inheritedDevicegroup</span></code>- Read-only. Shows whether the application folder will automatically remain with the same device-group as its parent folder. Use ‘device-group default’ or ‘device-group non-default’ to set this.</li>
-<li><code class="docutils literal notranslate"><span class="pre">inheritedTrafficGroup</span></code> - Read-only. Shows whether the application folder will automatically remain with the same traffic-group as its parent folder. Use ‘traffic-group default’ or ‘traffic-group non-default’ to set this.</li>
-<li><code class="docutils literal notranslate"><span class="pre">partition</span></code> - Displays the administrative partition within which the application resides.</li>
-<li><code class="docutils literal notranslate"><span class="pre">strictUpdates</span></code> - Specifies whether configuration objects contained in the application may be directly modified, outside the context of the system’s application management interfaces.</li>
-<li><code class="docutils literal notranslate"><span class="pre">template</span></code> - The template defines the configuration for the application. This may be changed after the application has been created to move the application to a new template.</li>
-<li><code class="docutils literal notranslate"><span class="pre">templateModified</span></code> - Indicates that the application template used to deploy the application has been modified. The application should be updated to make use of the latest changes.</li>
-<li><code class="docutils literal notranslate"><span class="pre">templatePrerequisiteErrors</span></code> - Indicates any missing prerequisites associated with the template that defines this application.</li>
-<li><code class="docutils literal notranslate"><span class="pre">trafficGroup</span></code> - The name of the traffic group that the application service is assigned to.</li>
-<li><code class="docutils literal notranslate"><span class="pre">lists</span></code> - string values</li>
-<li><code class="docutils literal notranslate"><span class="pre">metadata</span></code> - User defined generic data for the application service. It is a name and value pair.</li>
-<li><code class="docutils literal notranslate"><span class="pre">tables</span></code> - Values provided like pool name, nodes etc.</li>
-<li><code class="docutils literal notranslate"><span class="pre">variables</span></code> - Name, values, encrypted or not</li>
-</ul>
+<dd><p><code class="docutils literal notranslate"><span class="pre">bigip_sys_iapp</span></code> resource helps you to deploy Application Services template that can be used to automate and orchestrate Layer 4-7 applications service deployments using F5 Network.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -191,28 +144,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>jsonfile</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Refer to the Json file which will be deployed on F5 BIG-IP.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the iApp.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] description
-:param pulumi.Input[str] devicegroup
-:param pulumi.Input[str] execute_action
-:param pulumi.Input[str] inherited_devicegroup
-:param pulumi.Input[str] inherited_traffic_group
-:param pulumi.Input[str] jsonfile: Refer to the Json file which will be deployed on F5 BIG-IP.
-:param pulumi.Input[list] lists
-:param pulumi.Input[list] metadatas
-:param pulumi.Input[str] name: Name of the iApp.
-:param pulumi.Input[str] partition
-:param pulumi.Input[str] strict_updates
-:param pulumi.Input[list] tables
-:param pulumi.Input[str] template
-:param pulumi.Input[str] template_modified
-:param pulumi.Input[str] template_prerequisite_errors
-:param pulumi.Input[str] traffic_group
-:param pulumi.Input[list] variables</p>
 <dl class="attribute">
 <dt id="pulumi_f5bigip.sys.IApp.jsonfile">
 <code class="descname">jsonfile</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.IApp.jsonfile" title="Permalink to this definition">¶</a></dt>
@@ -277,14 +215,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Adds NTP servers to or deletes NTP servers from the BIG-IP system.</li>
+<li><strong>timezone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the time zone that you want to use for the system time.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] description
-:param pulumi.Input[list] servers: Adds NTP servers to or deletes NTP servers from the BIG-IP system.
-:param pulumi.Input[str] timezone: Specifies the time zone that you want to use for the system time.</p>
 <dl class="attribute">
 <dt id="pulumi_f5bigip.sys.Ntp.servers">
 <code class="descname">servers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.Ntp.servers" title="Permalink to this definition">¶</a></dt>
@@ -353,12 +290,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[int] cpu_ratio
-:param pulumi.Input[int] disk_ratio
-:param pulumi.Input[str] full_path
-:param pulumi.Input[str] level
-:param pulumi.Input[int] memory_ratio
-:param pulumi.Input[str] name</p>
 <dl class="method">
 <dt id="pulumi_f5bigip.sys.Provision.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.sys.Provision.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -487,25 +418,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>community</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the community string used for this trap.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The port that the trap will be sent to.</li>
+<li><strong>host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The host the trap will be sent to.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the snmp trap.</li>
+<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – User defined description.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] auth_passwordencrypted
-:param pulumi.Input[str] auth_protocol
-:param pulumi.Input[str] community: Specifies the community string used for this trap.
-:param pulumi.Input[str] description: The port that the trap will be sent to.
-:param pulumi.Input[str] engine_id
-:param pulumi.Input[str] host: The host the trap will be sent to.
-:param pulumi.Input[str] name: Name of the snmp trap.
-:param pulumi.Input[int] port: User defined description.
-:param pulumi.Input[str] privacy_password
-:param pulumi.Input[str] privacy_password_encrypted
-:param pulumi.Input[str] privacy_protocol
-:param pulumi.Input[str] security_level
-:param pulumi.Input[str] security_name
-:param pulumi.Input[str] version</p>
 <dl class="attribute">
 <dt id="pulumi_f5bigip.sys.SnmpTraps.community">
 <code class="descname">community</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.SnmpTraps.community" title="Permalink to this definition">¶</a></dt>

@@ -92,12 +92,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>app_service_plan_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the App Service Plan within which to create this App Service. Changing this forces a new resource to be created.</li>
+<li><strong>app_service_plan_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the App Service Plan within which to create this App Service.</li>
 <li><strong>app_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A key-value pair of App Settings.</li>
 <li><strong>client_affinity_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the App Service send session affinity cookies, which route client requests in the same session to the same instance?</li>
 <li><strong>client_cert_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Does the App Service require client certificates for incoming requests? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>connection_strings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">connection_string</span></code> blocks as defined below.</li>
-<li><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is the App Service Enabled? Changing this forces a new resource to be created.</li>
+<li><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is the App Service Enabled?</li>
 <li><strong>https_only</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Can the App Service only be accessed via HTTPS? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A Managed Service Identity block as defined below.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
@@ -113,7 +113,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.appservice.AppService.app_service_plan_id">
 <code class="descname">app_service_plan_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.AppService.app_service_plan_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of the App Service Plan within which to create this App Service. Changing this forces a new resource to be created.</p>
+<dd><p>The ID of the App Service Plan within which to create this App Service.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -149,7 +149,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.appservice.AppService.enabled">
 <code class="descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.AppService.enabled" title="Permalink to this definition">¶</a></dt>
-<dd><p>Is the App Service Enabled? Changing this forces a new resource to be created.</p>
+<dd><p>Is the App Service Enabled?</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -445,6 +445,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.appservice.FunctionApp.possible_outbound_ip_addresses">
+<code class="descname">possible_outbound_ip_addresses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionApp.possible_outbound_ip_addresses" title="Permalink to this definition">¶</a></dt>
+<dd><p>A comma separated list of outbound IP addresses - such as <code class="docutils literal notranslate"><span class="pre">52.23.25.3,52.143.43.12,52.143.43.17</span></code> - not all of which are necessarily in use. Superset of <code class="docutils literal notranslate"><span class="pre">outbound_ip_addresses</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.appservice.FunctionApp.resource_group_name">
 <code class="descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionApp.resource_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the resource group in which to create the Function App.</p>
@@ -522,7 +528,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.appservice.GetAppServicePlanResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">GetAppServicePlanResult</code><span class="sig-paren">(</span><em>kind=None</em>, <em>location=None</em>, <em>maximum_number_of_workers=None</em>, <em>properties=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.GetAppServicePlanResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">GetAppServicePlanResult</code><span class="sig-paren">(</span><em>kind=None</em>, <em>location=None</em>, <em>maximum_number_of_workers=None</em>, <em>name=None</em>, <em>properties=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.GetAppServicePlanResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAppServicePlan.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.appservice.GetAppServicePlanResult.kind">
@@ -570,7 +576,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.appservice.GetAppServiceResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">GetAppServiceResult</code><span class="sig-paren">(</span><em>app_service_plan_id=None</em>, <em>app_settings=None</em>, <em>client_affinity_enabled=None</em>, <em>client_cert_enabled=None</em>, <em>connection_strings=None</em>, <em>default_site_hostname=None</em>, <em>enabled=None</em>, <em>https_only=None</em>, <em>location=None</em>, <em>outbound_ip_addresses=None</em>, <em>possible_outbound_ip_addresses=None</em>, <em>site_config=None</em>, <em>site_credentials=None</em>, <em>source_controls=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.GetAppServiceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">GetAppServiceResult</code><span class="sig-paren">(</span><em>app_service_plan_id=None</em>, <em>app_settings=None</em>, <em>client_affinity_enabled=None</em>, <em>client_cert_enabled=None</em>, <em>connection_strings=None</em>, <em>default_site_hostname=None</em>, <em>enabled=None</em>, <em>https_only=None</em>, <em>location=None</em>, <em>name=None</em>, <em>outbound_ip_addresses=None</em>, <em>possible_outbound_ip_addresses=None</em>, <em>resource_group_name=None</em>, <em>site_configs=None</em>, <em>site_credentials=None</em>, <em>source_controls=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.GetAppServiceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAppService.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.appservice.GetAppServiceResult.app_service_plan_id">
@@ -621,6 +627,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.appservice.GetAppServiceResult.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.GetAppServiceResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Connection String.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.appservice.GetAppServiceResult.outbound_ip_addresses">
 <code class="descname">outbound_ip_addresses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.GetAppServiceResult.outbound_ip_addresses" title="Permalink to this definition">¶</a></dt>
 <dd><p>A comma separated list of outbound IP addresses - such as <code class="docutils literal notranslate"><span class="pre">52.23.25.3,52.143.43.12</span></code></p>
@@ -633,8 +645,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_azure.appservice.GetAppServiceResult.site_config">
-<code class="descname">site_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.GetAppServiceResult.site_config" title="Permalink to this definition">¶</a></dt>
+<dt id="pulumi_azure.appservice.GetAppServiceResult.site_configs">
+<code class="descname">site_configs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.GetAppServiceResult.site_configs" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">site_config</span></code> block as defined below.</p>
 </dd></dl>
 
@@ -934,7 +946,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_azure.appservice.get_app_service">
-<code class="descclassname">pulumi_azure.appservice.</code><code class="descname">get_app_service</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>site_config=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.get_app_service" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.appservice.</code><code class="descname">get_app_service</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.get_app_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing App Service.</p>
 </dd></dl>
 

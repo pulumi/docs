@@ -104,7 +104,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.organizations.GetActiveFolderResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">GetActiveFolderResult</code><span class="sig-paren">(</span><em>name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetActiveFolderResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">GetActiveFolderResult</code><span class="sig-paren">(</span><em>display_name=None</em>, <em>name=None</em>, <em>parent=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetActiveFolderResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getActiveFolder.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.GetActiveFolderResult.name">
@@ -122,7 +122,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.organizations.GetBillingAccountResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">GetBillingAccountResult</code><span class="sig-paren">(</span><em>display_name=None</em>, <em>name=None</em>, <em>open=None</em>, <em>project_ids=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetBillingAccountResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">GetBillingAccountResult</code><span class="sig-paren">(</span><em>billing_account=None</em>, <em>display_name=None</em>, <em>name=None</em>, <em>open=None</em>, <em>project_ids=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetBillingAccountResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getBillingAccount.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.GetBillingAccountResult.name">
@@ -194,7 +194,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.organizations.GetFolderResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">GetFolderResult</code><span class="sig-paren">(</span><em>create_time=None</em>, <em>display_name=None</em>, <em>lifecycle_state=None</em>, <em>name=None</em>, <em>organization=None</em>, <em>parent=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetFolderResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">GetFolderResult</code><span class="sig-paren">(</span><em>create_time=None</em>, <em>display_name=None</em>, <em>folder=None</em>, <em>lifecycle_state=None</em>, <em>lookup_organization=None</em>, <em>name=None</em>, <em>organization=None</em>, <em>parent=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetFolderResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getFolder.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.GetFolderResult.create_time">
@@ -242,7 +242,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.organizations.GetIAMPolicyResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">GetIAMPolicyResult</code><span class="sig-paren">(</span><em>policy_data=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetIAMPolicyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">GetIAMPolicyResult</code><span class="sig-paren">(</span><em>audit_configs=None</em>, <em>bindings=None</em>, <em>policy_data=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetIAMPolicyResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getIAMPolicy.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.GetIAMPolicyResult.policy_data">
@@ -261,7 +261,7 @@ referencing from a resource that supports IAM.</p>
 
 <dl class="class">
 <dt id="pulumi_gcp.organizations.GetOrganizationResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">GetOrganizationResult</code><span class="sig-paren">(</span><em>create_time=None</em>, <em>directory_customer_id=None</em>, <em>domain=None</em>, <em>lifecycle_state=None</em>, <em>name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetOrganizationResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">GetOrganizationResult</code><span class="sig-paren">(</span><em>create_time=None</em>, <em>directory_customer_id=None</em>, <em>domain=None</em>, <em>lifecycle_state=None</em>, <em>name=None</em>, <em>organization=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetOrganizationResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getOrganization.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.GetOrganizationResult.create_time">
@@ -297,7 +297,7 @@ referencing from a resource that supports IAM.</p>
 
 <dl class="class">
 <dt id="pulumi_gcp.organizations.GetProjectResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">GetProjectResult</code><span class="sig-paren">(</span><em>app_engines=None</em>, <em>auto_create_network=None</em>, <em>billing_account=None</em>, <em>folder_id=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>number=None</em>, <em>org_id=None</em>, <em>policy_data=None</em>, <em>policy_etag=None</em>, <em>skip_delete=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetProjectResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">GetProjectResult</code><span class="sig-paren">(</span><em>app_engines=None</em>, <em>auto_create_network=None</em>, <em>billing_account=None</em>, <em>folder_id=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>number=None</em>, <em>org_id=None</em>, <em>policy_data=None</em>, <em>policy_etag=None</em>, <em>project_id=None</em>, <em>skip_delete=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetProjectResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getProject.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.GetProjectResult.id">
@@ -309,7 +309,7 @@ referencing from a resource that supports IAM.</p>
 
 <dl class="class">
 <dt id="pulumi_gcp.organizations.GetProjectServicesResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">GetProjectServicesResult</code><span class="sig-paren">(</span><em>disable_on_destroy=None</em>, <em>services=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetProjectServicesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.organizations.</code><code class="descname">GetProjectServicesResult</code><span class="sig-paren">(</span><em>disable_on_destroy=None</em>, <em>project=None</em>, <em>services=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.organizations.GetProjectServicesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getProjectServices.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.organizations.GetProjectServicesResult.id">

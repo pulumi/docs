@@ -23,11 +23,7 @@ static.</p>
 </ul>
 </li>
 </ul>
-<div class = "oics-button" style="float: right; margin: 0 0 -15px">
-  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=address_basic&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
-    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
-  </a>
-</div><table class="docutils field-list" frame="void" rules="none">
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -185,11 +181,7 @@ define.</p>
 </ul>
 </li>
 </ul>
-<div class = "oics-button" style="float: right; margin: 0 0 -15px">
-  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=autoscaler_beta&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
-    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
-  </a>
-</div><table class="docutils field-list" frame="void" rules="none">
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -258,17 +250,13 @@ static content to a Cloud Storage bucket and requests for dynamic content
 a virtual machine instance.</p>
 <p>To get more information about BackendBucket, see:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/backendBuckets">API documentation</a></li>
+<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/v1/backendBuckets">API documentation</a></li>
 <li>How-to Guides<ul>
 <li><a class="reference external" href="https://cloud.google.com/compute/docs/load-balancing/http/backend-bucket">Using a Cloud Storage bucket as a load balancer backend</a></li>
 </ul>
 </li>
 </ul>
-<div class = "oics-button" style="float: right; margin: 0 0 -15px">
-  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=backend_bucket_basic&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
-    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
-  </a>
-</div><table class="docutils field-list" frame="void" rules="none">
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -546,7 +534,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.Disk">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">Disk</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>disk_encryption_key=None</em>, <em>image=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>project=None</em>, <em>size=None</em>, <em>snapshot=None</em>, <em>source_image_encryption_key=None</em>, <em>source_snapshot_encryption_key=None</em>, <em>type=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Disk" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">Disk</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>disk_encryption_key=None</em>, <em>image=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>physical_block_size_bytes=None</em>, <em>project=None</em>, <em>size=None</em>, <em>snapshot=None</em>, <em>source_image_encryption_key=None</em>, <em>source_snapshot_encryption_key=None</em>, <em>type=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Disk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Persistent disks are durable storage devices that function similarly to
 the physical disks in a desktop or a server. Compute Engine manages the
 hardware behind these devices to ensure data redundancy and optimize
@@ -562,7 +550,7 @@ storage space requirements.</p>
 affordable storage with consistent performance characteristics.</p>
 <p>To get more information about Disk, see:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/disks">API documentation</a></li>
+<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/v1/disks">API documentation</a></li>
 <li>How-to Guides<ul>
 <li><a class="reference external" href="https://cloud.google.com/compute/docs/disks/add-persistent-disk">Adding a persistent disk</a></li>
 </ul>
@@ -572,11 +560,7 @@ affordable storage with consistent performance characteristics.</p>
 <div><strong>Warning:</strong> All arguments including the disk encryption key will be stored in the raw
 state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</div></blockquote>
-<div class = "oics-button" style="float: right; margin: 0 0 -15px">
-  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=disk_basic&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
-    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
-  </a>
-</div><table class="docutils field-list" frame="void" rules="none">
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -658,17 +642,13 @@ networks except the default network, you must create any firewall rules
 you need.</p>
 <p>To get more information about Firewall, see:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/firewalls">API documentation</a></li>
+<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/v1/firewalls">API documentation</a></li>
 <li>How-to Guides<ul>
 <li><a class="reference external" href="https://cloud.google.com/vpc/docs/firewalls">Official Documentation</a></li>
 </ul>
 </li>
 </ul>
-<div class = "oics-button" style="float: right; margin: 0 0 -15px">
-  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=firewall_basic&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
-    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
-  </a>
-</div><table class="docutils field-list" frame="void" rules="none">
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -743,17 +723,13 @@ of target virtual machines to forward a packet to if it matches the given
 [IPAddress, IPProtocol, portRange] tuple.</p>
 <p>To get more information about ForwardingRule, see:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/forwardingRule">API documentation</a></li>
+<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/v1/forwardingRule">API documentation</a></li>
 <li>How-to Guides<ul>
 <li><a class="reference external" href="https://cloud.google.com/compute/docs/load-balancing/network/forwarding-rules">Official Documentation</a></li>
 </ul>
 </li>
 </ul>
-<div class = "oics-button" style="float: right; margin: 0 0 -15px">
-  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=forwarding_rule_basic&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
-    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
-  </a>
-</div><table class="docutils field-list" frame="void" rules="none">
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -822,7 +798,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.GetAddressResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">GetAddressResult</code><span class="sig-paren">(</span><em>address=None</em>, <em>project=None</em>, <em>region=None</em>, <em>self_link=None</em>, <em>status=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetAddressResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">GetAddressResult</code><span class="sig-paren">(</span><em>address=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>self_link=None</em>, <em>status=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetAddressResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAddress.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.GetAddressResult.address">
@@ -852,7 +828,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.GetBackendServiceResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">GetBackendServiceResult</code><span class="sig-paren">(</span><em>affinity_cookie_ttl_sec=None</em>, <em>backends=None</em>, <em>cdn_policies=None</em>, <em>connection_draining_timeout_sec=None</em>, <em>custom_request_headers=None</em>, <em>description=None</em>, <em>enable_cdn=None</em>, <em>fingerprint=None</em>, <em>health_checks=None</em>, <em>iaps=None</em>, <em>port_name=None</em>, <em>protocol=None</em>, <em>region=None</em>, <em>security_policy=None</em>, <em>self_link=None</em>, <em>session_affinity=None</em>, <em>timeout_sec=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetBackendServiceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">GetBackendServiceResult</code><span class="sig-paren">(</span><em>affinity_cookie_ttl_sec=None</em>, <em>backends=None</em>, <em>cdn_policies=None</em>, <em>connection_draining_timeout_sec=None</em>, <em>custom_request_headers=None</em>, <em>description=None</em>, <em>enable_cdn=None</em>, <em>fingerprint=None</em>, <em>health_checks=None</em>, <em>iaps=None</em>, <em>name=None</em>, <em>port_name=None</em>, <em>project=None</em>, <em>protocol=None</em>, <em>region=None</em>, <em>security_policy=None</em>, <em>self_link=None</em>, <em>session_affinity=None</em>, <em>timeout_sec=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetBackendServiceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getBackendService.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.GetBackendServiceResult.backends">
@@ -966,7 +942,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.GetForwardingRuleResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">GetForwardingRuleResult</code><span class="sig-paren">(</span><em>backend_service=None</em>, <em>description=None</em>, <em>ip_address=None</em>, <em>ip_protocol=None</em>, <em>load_balancing_scheme=None</em>, <em>network=None</em>, <em>port_range=None</em>, <em>ports=None</em>, <em>project=None</em>, <em>region=None</em>, <em>self_link=None</em>, <em>subnetwork=None</em>, <em>target=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetForwardingRuleResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">GetForwardingRuleResult</code><span class="sig-paren">(</span><em>backend_service=None</em>, <em>description=None</em>, <em>ip_address=None</em>, <em>ip_protocol=None</em>, <em>load_balancing_scheme=None</em>, <em>name=None</em>, <em>network=None</em>, <em>port_range=None</em>, <em>ports=None</em>, <em>project=None</em>, <em>region=None</em>, <em>self_link=None</em>, <em>subnetwork=None</em>, <em>target=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetForwardingRuleResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getForwardingRule.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.GetForwardingRuleResult.backend_service">
@@ -1050,7 +1026,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.GetGlobalAddressResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">GetGlobalAddressResult</code><span class="sig-paren">(</span><em>address=None</em>, <em>project=None</em>, <em>self_link=None</em>, <em>status=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetGlobalAddressResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">GetGlobalAddressResult</code><span class="sig-paren">(</span><em>address=None</em>, <em>name=None</em>, <em>project=None</em>, <em>self_link=None</em>, <em>status=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetGlobalAddressResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getGlobalAddress.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.GetGlobalAddressResult.address">
@@ -1198,7 +1174,7 @@ that protects this image.</p>
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.GetInstanceGroupResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">GetInstanceGroupResult</code><span class="sig-paren">(</span><em>description=None</em>, <em>instances=None</em>, <em>named_ports=None</em>, <em>network=None</em>, <em>project=None</em>, <em>self_link=None</em>, <em>size=None</em>, <em>zone=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetInstanceGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">GetInstanceGroupResult</code><span class="sig-paren">(</span><em>description=None</em>, <em>instances=None</em>, <em>name=None</em>, <em>named_ports=None</em>, <em>network=None</em>, <em>project=None</em>, <em>self_link=None</em>, <em>size=None</em>, <em>zone=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetInstanceGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInstanceGroup.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.GetInstanceGroupResult.description">
@@ -1246,7 +1222,7 @@ that protects this image.</p>
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.GetInstanceResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">GetInstanceResult</code><span class="sig-paren">(</span><em>allow_stopping_for_update=None</em>, <em>attached_disks=None</em>, <em>boot_disks=None</em>, <em>can_ip_forward=None</em>, <em>cpu_platform=None</em>, <em>create_timeout=None</em>, <em>deletion_protection=None</em>, <em>description=None</em>, <em>disks=None</em>, <em>guest_accelerators=None</em>, <em>hostname=None</em>, <em>instance_id=None</em>, <em>label_fingerprint=None</em>, <em>labels=None</em>, <em>machine_type=None</em>, <em>metadata=None</em>, <em>metadata_fingerprint=None</em>, <em>metadata_startup_script=None</em>, <em>min_cpu_platform=None</em>, <em>network_interfaces=None</em>, <em>schedulings=None</em>, <em>scratch_disks=None</em>, <em>service_accounts=None</em>, <em>tags=None</em>, <em>tags_fingerprint=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetInstanceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">GetInstanceResult</code><span class="sig-paren">(</span><em>allow_stopping_for_update=None</em>, <em>attached_disks=None</em>, <em>boot_disks=None</em>, <em>can_ip_forward=None</em>, <em>cpu_platform=None</em>, <em>create_timeout=None</em>, <em>deletion_protection=None</em>, <em>description=None</em>, <em>disks=None</em>, <em>guest_accelerators=None</em>, <em>hostname=None</em>, <em>instance_id=None</em>, <em>label_fingerprint=None</em>, <em>labels=None</em>, <em>machine_type=None</em>, <em>metadata=None</em>, <em>metadata_fingerprint=None</em>, <em>metadata_startup_script=None</em>, <em>min_cpu_platform=None</em>, <em>name=None</em>, <em>network_interfaces=None</em>, <em>project=None</em>, <em>schedulings=None</em>, <em>scratch_disks=None</em>, <em>self_link=None</em>, <em>service_accounts=None</em>, <em>tags=None</em>, <em>tags_fingerprint=None</em>, <em>zone=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetInstanceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInstance.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.GetInstanceResult.attached_disks">
@@ -1351,6 +1327,12 @@ that protects this image.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_gcp.compute.GetInstanceResult.self_link">
+<code class="descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.GetInstanceResult.self_link" title="Permalink to this definition">¶</a></dt>
+<dd><p>The URI of the created resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gcp.compute.GetInstanceResult.service_accounts">
 <code class="descname">service_accounts</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.GetInstanceResult.service_accounts" title="Permalink to this definition">¶</a></dt>
 <dd><p>The service account to attach to the instance. Structure is documented below.</p>
@@ -1432,7 +1414,7 @@ that protects this image.</p>
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.GetNetworkResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">GetNetworkResult</code><span class="sig-paren">(</span><em>description=None</em>, <em>gateway_ipv4=None</em>, <em>self_link=None</em>, <em>subnetworks_self_links=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetNetworkResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">GetNetworkResult</code><span class="sig-paren">(</span><em>description=None</em>, <em>gateway_ipv4=None</em>, <em>name=None</em>, <em>project=None</em>, <em>self_link=None</em>, <em>subnetworks_self_links=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetNetworkResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getNetwork.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.GetNetworkResult.description">
@@ -1498,7 +1480,7 @@ that protects this image.</p>
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.GetRegionsResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">GetRegionsResult</code><span class="sig-paren">(</span><em>names=None</em>, <em>project=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetRegionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">GetRegionsResult</code><span class="sig-paren">(</span><em>names=None</em>, <em>project=None</em>, <em>status=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetRegionsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRegions.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.GetRegionsResult.names">
@@ -1516,7 +1498,7 @@ that protects this image.</p>
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.GetSSLPolicyResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">GetSSLPolicyResult</code><span class="sig-paren">(</span><em>creation_timestamp=None</em>, <em>custom_features=None</em>, <em>description=None</em>, <em>enabled_features=None</em>, <em>fingerprint=None</em>, <em>min_tls_version=None</em>, <em>profile=None</em>, <em>self_link=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetSSLPolicyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">GetSSLPolicyResult</code><span class="sig-paren">(</span><em>creation_timestamp=None</em>, <em>custom_features=None</em>, <em>description=None</em>, <em>enabled_features=None</em>, <em>fingerprint=None</em>, <em>min_tls_version=None</em>, <em>name=None</em>, <em>profile=None</em>, <em>project=None</em>, <em>self_link=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetSSLPolicyResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSSLPolicy.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.GetSSLPolicyResult.custom_features">
@@ -1572,7 +1554,7 @@ attribute will be empty.</p>
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.GetSubnetworkResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">GetSubnetworkResult</code><span class="sig-paren">(</span><em>description=None</em>, <em>gateway_address=None</em>, <em>ip_cidr_range=None</em>, <em>network=None</em>, <em>private_ip_google_access=None</em>, <em>project=None</em>, <em>region=None</em>, <em>secondary_ip_ranges=None</em>, <em>self_link=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetSubnetworkResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">GetSubnetworkResult</code><span class="sig-paren">(</span><em>description=None</em>, <em>gateway_address=None</em>, <em>ip_cidr_range=None</em>, <em>name=None</em>, <em>network=None</em>, <em>private_ip_google_access=None</em>, <em>project=None</em>, <em>region=None</em>, <em>secondary_ip_ranges=None</em>, <em>self_link=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetSubnetworkResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSubnetwork.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.GetSubnetworkResult.description">
@@ -1625,7 +1607,7 @@ VM instances contained in this subnetwork. Structure is documented below.</p>
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.GetVPNGatewayResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">GetVPNGatewayResult</code><span class="sig-paren">(</span><em>description=None</em>, <em>network=None</em>, <em>project=None</em>, <em>region=None</em>, <em>self_link=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetVPNGatewayResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">GetVPNGatewayResult</code><span class="sig-paren">(</span><em>description=None</em>, <em>name=None</em>, <em>network=None</em>, <em>project=None</em>, <em>region=None</em>, <em>self_link=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetVPNGatewayResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVPNGateway.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.GetVPNGatewayResult.description">
@@ -1661,7 +1643,7 @@ VM instances contained in this subnetwork. Structure is documented below.</p>
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.GetZonesResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">GetZonesResult</code><span class="sig-paren">(</span><em>names=None</em>, <em>project=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetZonesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">GetZonesResult</code><span class="sig-paren">(</span><em>names=None</em>, <em>project=None</em>, <em>region=None</em>, <em>status=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetZonesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getZones.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.GetZonesResult.names">
@@ -1684,17 +1666,13 @@ VM instances contained in this subnetwork. Structure is documented below.</p>
 HTTP(S) load balancing.</p>
 <p>To get more information about GlobalAddress, see:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/globalAddresses">API documentation</a></li>
+<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/v1/globalAddresses">API documentation</a></li>
 <li>How-to Guides<ul>
 <li><a class="reference external" href="https://cloud.google.com/compute/docs/ip-addresses/reserve-static-external-ip-address">Reserving a Static External IP Address</a></li>
 </ul>
 </li>
 </ul>
-<div class = "oics-button" style="float: right; margin: 0 0 -15px">
-  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=global_address_basic&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
-    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
-  </a>
-</div><table class="docutils field-list" frame="void" rules="none">
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -1942,17 +1920,13 @@ successfully to some number of consecutive probes, it is marked
 healthy again and can receive new connections.</p>
 <p>To get more information about HealthCheck, see:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/latest/healthChecks">API documentation</a></li>
+<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/v1/healthChecks">API documentation</a></li>
 <li>How-to Guides<ul>
 <li><a class="reference external" href="https://cloud.google.com/load-balancing/docs/health-checks">Official Documentation</a></li>
 </ul>
 </li>
 </ul>
-<div class = "oics-button" style="float: right; margin: 0 0 -15px">
-  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=health_check_basic&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
-    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
-  </a>
-</div><table class="docutils field-list" frame="void" rules="none">
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -2032,17 +2006,13 @@ should be preferred for all uses except
 which still require the legacy version.</div></blockquote>
 <p>To get more information about HttpHealthCheck, see:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/httpHealthChecks">API documentation</a></li>
+<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/v1/httpHealthChecks">API documentation</a></li>
 <li>How-to Guides<ul>
 <li><a class="reference external" href="https://cloud.google.com/compute/docs/load-balancing/health-checks#legacy_health_checks">Adding Health Checks</a></li>
 </ul>
 </li>
 </ul>
-<div class = "oics-button" style="float: right; margin: 0 0 -15px">
-  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=http_health_check_basic&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
-    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
-  </a>
-</div><table class="docutils field-list" frame="void" rules="none">
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -2122,17 +2092,13 @@ should be preferred for all uses except
 which still require the legacy version.</div></blockquote>
 <p>To get more information about HttpsHealthCheck, see:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/httpsHealthChecks">API documentation</a></li>
+<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/v1/httpsHealthChecks">API documentation</a></li>
 <li>How-to Guides<ul>
 <li><a class="reference external" href="https://cloud.google.com/compute/docs/load-balancing/health-checks#legacy_health_checks">Adding Health Checks</a></li>
 </ul>
 </li>
 </ul>
-<div class = "oics-button" style="float: right; margin: 0 0 -15px">
-  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=https_health_check_basic&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
-    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
-  </a>
-</div><table class="docutils field-list" frame="void" rules="none">
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -2217,17 +2183,13 @@ from root persistent disks and other images. Then, use the custom image
 to create an instance.</p>
 <p>To get more information about Image, see:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/images">API documentation</a></li>
+<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/v1/images">API documentation</a></li>
 <li>How-to Guides<ul>
 <li><a class="reference external" href="https://cloud.google.com/compute/docs/images">Official Documentation</a></li>
 </ul>
 </li>
 </ul>
-<div class = "oics-button" style="float: right; margin: 0 0 -15px">
-  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=image_basic&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
-    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
-  </a>
-</div><table class="docutils field-list" frame="void" rules="none">
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -3384,11 +3346,7 @@ points at the certificate.  Depending on your DNS provider, this may take
 some time, and migrating from self-managed certificates to Google-managed
 certificates may entail some downtime while the certificate provisions.</div></blockquote>
 <p>In conclusion: Be extremely cautious.</p>
-<div class = "oics-button" style="float: right; margin: 0 0 -15px">
-  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=managed_ssl_certificate_basic&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
-    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
-  </a>
-</div><table class="docutils field-list" frame="void" rules="none">
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -3467,11 +3425,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
-<div class = "oics-button" style="float: right; margin: 0 0 -15px">
-  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=network_basic&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
-    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
-  </a>
-</div><table class="docutils field-list" frame="void" rules="none">
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -3820,11 +3774,7 @@ define.</p>
 </ul>
 </li>
 </ul>
-<div class = "oics-button" style="float: right; margin: 0 0 -15px">
-  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=region_autoscaler_beta&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
-    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
-  </a>
-</div><table class="docutils field-list" frame="void" rules="none">
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -4050,7 +4000,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.RegionDisk">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">RegionDisk</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>disk_encryption_key=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>replica_zones=None</em>, <em>size=None</em>, <em>snapshot=None</em>, <em>source_snapshot_encryption_key=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionDisk" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">RegionDisk</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>disk_encryption_key=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>physical_block_size_bytes=None</em>, <em>project=None</em>, <em>region=None</em>, <em>replica_zones=None</em>, <em>size=None</em>, <em>snapshot=None</em>, <em>source_snapshot_encryption_key=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionDisk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Persistent disks are durable storage devices that function similarly to
 the physical disks in a desktop or a server. Compute Engine manages the
 hardware behind these devices to ensure data redundancy and optimize
@@ -4076,11 +4026,7 @@ affordable storage with consistent performance characteristics.</p>
 <div><strong>Warning:</strong> All arguments including the disk encryption key will be stored in the raw
 state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</div></blockquote>
-<div class = "oics-button" style="float: right; margin: 0 0 -15px">
-  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=region_disk_basic&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
-    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
-  </a>
-</div><table class="docutils field-list" frame="void" rules="none">
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -4403,11 +4349,7 @@ nextHopGateway, nextHopInstance, nextHopIp, or nextHopVpnTunnel.</p>
 </ul>
 </li>
 </ul>
-<div class = "oics-button" style="float: right; margin: 0 0 -15px">
-  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=route_basic&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
-    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
-  </a>
-</div><table class="docutils field-list" frame="void" rules="none">
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -4499,11 +4441,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
-<div class = "oics-button" style="float: right; margin: 0 0 -15px">
-  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=router_basic&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
-    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
-  </a>
-</div><table class="docutils field-list" frame="void" rules="none">
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -5032,11 +4970,7 @@ the load balancer to serve secure connections from the user.</p>
 </ul>
 </li>
 </ul>
-<div class = "oics-button" style="float: right; margin: 0 0 -15px">
-  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=ssl_certificate_basic&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
-    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
-  </a>
-</div><table class="docutils field-list" frame="void" rules="none">
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -5125,11 +5059,7 @@ features of SSL that your SSL proxy or HTTPS load balancer negotiates.</p>
 </ul>
 </li>
 </ul>
-<div class = "oics-button" style="float: right; margin: 0 0 -15px">
-  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=ssl_policy_basic&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
-    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
-  </a>
-</div><table class="docutils field-list" frame="void" rules="none">
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -5465,11 +5395,7 @@ created a full image of the disk.</p>
 </ul>
 </li>
 </ul>
-<div class = "oics-button" style="float: right; margin: 0 0 -15px">
-  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=snapshot_basic&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
-    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
-  </a>
-</div><table class="docutils field-list" frame="void" rules="none">
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -5567,11 +5493,7 @@ of the network, even entire subnets, using firewall rules.</p>
 </ul>
 </li>
 </ul>
-<div class = "oics-button" style="float: right; margin: 0 0 -15px">
-  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=subnetwork_basic&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
-    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
-  </a>
-</div><table class="docutils field-list" frame="void" rules="none">
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -5973,17 +5895,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 forwarding rule to route incoming HTTP requests to a URL map.</p>
 <p>To get more information about TargetHttpProxy, see:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/targetHttpProxies">API documentation</a></li>
+<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/v1/targetHttpProxies">API documentation</a></li>
 <li>How-to Guides<ul>
 <li><a class="reference external" href="https://cloud.google.com/compute/docs/load-balancing/http/target-proxies">Official Documentation</a></li>
 </ul>
 </li>
 </ul>
-<div class = "oics-button" style="float: right; margin: 0 0 -15px">
-  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=target_http_proxy_basic&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
-    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
-  </a>
-</div><table class="docutils field-list" frame="void" rules="none">
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -6057,17 +5975,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 global forwarding rule to route incoming HTTPS requests to a URL map.</p>
 <p>To get more information about TargetHttpsProxy, see:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/targetHttpsProxies">API documentation</a></li>
+<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/v1/targetHttpsProxies">API documentation</a></li>
 <li>How-to Guides<ul>
 <li><a class="reference external" href="https://cloud.google.com/compute/docs/load-balancing/http/target-proxies">Official Documentation</a></li>
 </ul>
 </li>
 </ul>
-<div class = "oics-button" style="float: right; margin: 0 0 -15px">
-  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=target_https_proxy_basic&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
-    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
-  </a>
-</div><table class="docutils field-list" frame="void" rules="none">
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -6295,17 +6209,13 @@ global forwarding rule to route incoming SSL requests to a backend
 service.</p>
 <p>To get more information about TargetSslProxy, see:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/targetSslProxies">API documentation</a></li>
+<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/v1/targetSslProxies">API documentation</a></li>
 <li>How-to Guides<ul>
 <li><a class="reference external" href="https://cloud.google.com/compute/docs/load-balancing/tcp-ssl/">Setting Up SSL proxy for Google Cloud Load Balancing</a></li>
 </ul>
 </li>
 </ul>
-<div class = "oics-button" style="float: right; margin: 0 0 -15px">
-  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=target_ssl_proxy_basic&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
-    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
-  </a>
-</div><table class="docutils field-list" frame="void" rules="none">
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -6380,17 +6290,13 @@ global forwarding rule to route incoming TCP requests to a Backend
 service.</p>
 <p>To get more information about TargetTcpProxy, see:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/targetTcpProxies">API documentation</a></li>
+<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/v1/targetTcpProxies">API documentation</a></li>
 <li>How-to Guides<ul>
 <li><a class="reference external" href="https://cloud.google.com/compute/docs/load-balancing/tcp-ssl/tcp-proxy">Setting Up TCP proxy for Google Cloud Load Balancing</a></li>
 </ul>
 </li>
 </ul>
-<div class = "oics-button" style="float: right; margin: 0 0 -15px">
-  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=target_tcp_proxy_basic&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
-    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
-  </a>
-</div><table class="docutils field-list" frame="void" rules="none">
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -6462,11 +6368,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">URLMap</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>default_service=None</em>, <em>description=None</em>, <em>host_rules=None</em>, <em>name=None</em>, <em>path_matchers=None</em>, <em>project=None</em>, <em>tests=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.URLMap" title="Permalink to this definition">¶</a></dt>
 <dd><p>UrlMaps are used to route requests to a backend service based on rules
 that you define for the host and path of an incoming URL.</p>
-<div class = "oics-button" style="float: right; margin: 0 0 -15px">
-  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=url_map_basic&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
-    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
-  </a>
-</div><table class="docutils field-list" frame="void" rules="none">
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -6542,11 +6444,7 @@ by Google, but used only by you.</p>
 <ul class="simple">
 <li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/v1/targetVpnGateways">API documentation</a></li>
 </ul>
-<div class = "oics-button" style="float: right; margin: 0 0 -15px">
-  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=target_vpn_gateway_basic&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
-    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
-  </a>
-</div><table class="docutils field-list" frame="void" rules="none">
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -6630,11 +6528,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><strong>Warning:</strong> All arguments including the shared secret will be stored in the raw
 state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</div></blockquote>
-<div class = "oics-button" style="float: right; margin: 0 0 -15px">
-  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=vpn_tunnel_basic&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
-    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
-  </a>
-</div><table class="docutils field-list" frame="void" rules="none">
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">

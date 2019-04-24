@@ -17,10 +17,6 @@
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] configsync_ip
-:param pulumi.Input[str] mirror_ip
-:param pulumi.Input[str] mirror_secondary_ip
-:param pulumi.Input[str] name</p>
 <dl class="method">
 <dt id="pulumi_f5bigip.cm.Device.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.cm.Device.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -73,20 +69,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>auto_sync</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies if the device-group will automatically sync configuration data to its members</li>
+<li><strong>devices</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Name of the device to be included in device group, this need to be configured before using devicegroup resource</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Is the name of the device Group</li>
+<li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies if the device-group will be used for failover or resource syncing</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] description
-:param pulumi.Input[list] devices: Name of the device to be included in device group, this need to be configured before using devicegroup resource
-:param pulumi.Input[str] full_load_on_sync
-:param pulumi.Input[int] incremental_config
-:param pulumi.Input[str] name: Is the name of the device Group
-:param pulumi.Input[str] network_failover
-:param pulumi.Input[str] partition
-:param pulumi.Input[str] save_on_auto_sync
-:param pulumi.Input[str] type: Specifies if the device-group will be used for failover or resource syncing</p>
 <dl class="attribute">
 <dt id="pulumi_f5bigip.cm.DeviceGroup.auto_sync">
 <code class="descname">auto_sync</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.cm.DeviceGroup.auto_sync" title="Permalink to this definition">¶</a></dt>

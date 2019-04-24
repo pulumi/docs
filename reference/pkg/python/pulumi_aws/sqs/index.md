@@ -2,7 +2,7 @@
 <span id="sqs"></span><h1>sqs<a class="headerlink" href="#module-pulumi_aws.sqs" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.sqs.GetQueueResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.sqs.</code><code class="descname">GetQueueResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>url=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sqs.GetQueueResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.sqs.</code><code class="descname">GetQueueResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>name=None</em>, <em>url=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sqs.GetQueueResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getQueue.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.sqs.GetQueueResult.arn">

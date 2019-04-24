@@ -173,7 +173,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.efs.GetMountTargetResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.efs.</code><code class="descname">GetMountTargetResult</code><span class="sig-paren">(</span><em>dns_name=None</em>, <em>file_system_arn=None</em>, <em>file_system_id=None</em>, <em>ip_address=None</em>, <em>network_interface_id=None</em>, <em>security_groups=None</em>, <em>subnet_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.GetMountTargetResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.efs.</code><code class="descname">GetMountTargetResult</code><span class="sig-paren">(</span><em>dns_name=None</em>, <em>file_system_arn=None</em>, <em>file_system_id=None</em>, <em>ip_address=None</em>, <em>mount_target_id=None</em>, <em>network_interface_id=None</em>, <em>security_groups=None</em>, <em>subnet_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.GetMountTargetResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getMountTarget.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.efs.GetMountTargetResult.dns_name">

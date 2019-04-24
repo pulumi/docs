@@ -14,7 +14,7 @@
 
 <dl class="class">
 <dt id="pulumi_azure.core.GetResourceGroupResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.core.</code><code class="descname">GetResourceGroupResult</code><span class="sig-paren">(</span><em>location=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.GetResourceGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.core.</code><code class="descname">GetResourceGroupResult</code><span class="sig-paren">(</span><em>location=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.GetResourceGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getResourceGroup.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.core.GetResourceGroupResult.location">
@@ -80,7 +80,7 @@
 
 <dl class="class">
 <dt id="pulumi_azure.core.GetSubscriptionsResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.core.</code><code class="descname">GetSubscriptionsResult</code><span class="sig-paren">(</span><em>subscriptions=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.GetSubscriptionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.core.</code><code class="descname">GetSubscriptionsResult</code><span class="sig-paren">(</span><em>display_name_contains=None</em>, <em>display_name_prefix=None</em>, <em>subscriptions=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.GetSubscriptionsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSubscriptions.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.core.GetSubscriptionsResult.subscriptions">

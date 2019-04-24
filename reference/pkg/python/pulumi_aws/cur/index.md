@@ -2,7 +2,7 @@
 <span id="cur"></span><h1>cur<a class="headerlink" href="#module-pulumi_aws.cur" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.cur.GetReportDefinitionResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cur.</code><code class="descname">GetReportDefinitionResult</code><span class="sig-paren">(</span><em>additional_artifacts=None</em>, <em>additional_schema_elements=None</em>, <em>compression=None</em>, <em>format=None</em>, <em>s3_bucket=None</em>, <em>s3_prefix=None</em>, <em>s3_region=None</em>, <em>time_unit=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cur.GetReportDefinitionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cur.</code><code class="descname">GetReportDefinitionResult</code><span class="sig-paren">(</span><em>additional_artifacts=None</em>, <em>additional_schema_elements=None</em>, <em>compression=None</em>, <em>format=None</em>, <em>report_name=None</em>, <em>s3_bucket=None</em>, <em>s3_prefix=None</em>, <em>s3_region=None</em>, <em>time_unit=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cur.GetReportDefinitionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getReportDefinition.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.cur.GetReportDefinitionResult.additional_artifacts">

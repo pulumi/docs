@@ -1,8 +1,20 @@
 <div class="section" id="module-pulumi_gcp.projects">
 <span id="projects"></span><h1>projects<a class="headerlink" href="#module-pulumi_gcp.projects" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
+<dt id="pulumi_gcp.projects.GetOrganizationPolicyResult">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.projects.</code><code class="descname">GetOrganizationPolicyResult</code><span class="sig-paren">(</span><em>boolean_policies=None</em>, <em>constraint=None</em>, <em>etag=None</em>, <em>list_policies=None</em>, <em>project=None</em>, <em>restore_policies=None</em>, <em>update_time=None</em>, <em>version=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.GetOrganizationPolicyResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getOrganizationPolicy.</p>
+<dl class="attribute">
+<dt id="pulumi_gcp.projects.GetOrganizationPolicyResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.projects.GetOrganizationPolicyResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_gcp.projects.GetProjectResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.projects.</code><code class="descname">GetProjectResult</code><span class="sig-paren">(</span><em>projects=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.GetProjectResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.projects.</code><code class="descname">GetProjectResult</code><span class="sig-paren">(</span><em>filter=None</em>, <em>projects=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.GetProjectResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getProject.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.projects.GetProjectResult.projects">
@@ -855,6 +867,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </table>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_gcp.projects.get_organization_policy">
+<code class="descclassname">pulumi_gcp.projects.</code><code class="descname">get_organization_policy</code><span class="sig-paren">(</span><em>constraint=None</em>, <em>project=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.get_organization_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allows management of Organization policies for a Google Project. For more information see
+<a class="reference external" href="https://cloud.google.com/resource-manager/docs/organization-policy/overview">the official
+documentation</a></p>
 </dd></dl>
 
 <dl class="function">

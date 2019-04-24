@@ -436,7 +436,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.redshift.GetClusterResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.redshift.</code><code class="descname">GetClusterResult</code><span class="sig-paren">(</span><em>allow_version_upgrade=None</em>, <em>automated_snapshot_retention_period=None</em>, <em>availability_zone=None</em>, <em>bucket_name=None</em>, <em>cluster_parameter_group_name=None</em>, <em>cluster_public_key=None</em>, <em>cluster_revision_number=None</em>, <em>cluster_security_groups=None</em>, <em>cluster_subnet_group_name=None</em>, <em>cluster_type=None</em>, <em>cluster_version=None</em>, <em>database_name=None</em>, <em>elastic_ip=None</em>, <em>enable_logging=None</em>, <em>encrypted=None</em>, <em>endpoint=None</em>, <em>enhanced_vpc_routing=None</em>, <em>iam_roles=None</em>, <em>kms_key_id=None</em>, <em>master_username=None</em>, <em>node_type=None</em>, <em>number_of_nodes=None</em>, <em>port=None</em>, <em>preferred_maintenance_window=None</em>, <em>publicly_accessible=None</em>, <em>s3_key_prefix=None</em>, <em>vpc_id=None</em>, <em>vpc_security_group_ids=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.GetClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.redshift.</code><code class="descname">GetClusterResult</code><span class="sig-paren">(</span><em>allow_version_upgrade=None</em>, <em>automated_snapshot_retention_period=None</em>, <em>availability_zone=None</em>, <em>bucket_name=None</em>, <em>cluster_identifier=None</em>, <em>cluster_parameter_group_name=None</em>, <em>cluster_public_key=None</em>, <em>cluster_revision_number=None</em>, <em>cluster_security_groups=None</em>, <em>cluster_subnet_group_name=None</em>, <em>cluster_type=None</em>, <em>cluster_version=None</em>, <em>database_name=None</em>, <em>elastic_ip=None</em>, <em>enable_logging=None</em>, <em>encrypted=None</em>, <em>endpoint=None</em>, <em>enhanced_vpc_routing=None</em>, <em>iam_roles=None</em>, <em>kms_key_id=None</em>, <em>master_username=None</em>, <em>node_type=None</em>, <em>number_of_nodes=None</em>, <em>port=None</em>, <em>preferred_maintenance_window=None</em>, <em>publicly_accessible=None</em>, <em>s3_key_prefix=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>vpc_security_group_ids=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.GetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCluster.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.redshift.GetClusterResult.allow_version_upgrade">
@@ -460,6 +460,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.redshift.GetClusterResult.bucket_name">
 <code class="descname">bucket_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.GetClusterResult.bucket_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the S3 bucket where the log files are to be stored</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.redshift.GetClusterResult.cluster_identifier">
+<code class="descname">cluster_identifier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.GetClusterResult.cluster_identifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>The cluster identifier</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -589,6 +595,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.redshift.GetClusterResult.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.GetClusterResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>The tags associated to the cluster</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.redshift.GetClusterResult.vpc_id">
 <code class="descname">vpc_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.GetClusterResult.vpc_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPC Id associated with the cluster</p>
@@ -610,7 +622,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.redshift.GetServiceAccountResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.redshift.</code><code class="descname">GetServiceAccountResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.GetServiceAccountResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.redshift.</code><code class="descname">GetServiceAccountResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>region=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.GetServiceAccountResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getServiceAccount.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.redshift.GetServiceAccountResult.arn">

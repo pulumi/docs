@@ -111,7 +111,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ssm.Association">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ssm.</code><code class="descname">Association</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>association_name=None</em>, <em>document_version=None</em>, <em>instance_id=None</em>, <em>name=None</em>, <em>output_location=None</em>, <em>parameters=None</em>, <em>schedule_expression=None</em>, <em>targets=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.Association" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ssm.</code><code class="descname">Association</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>association_name=None</em>, <em>compliance_severity=None</em>, <em>document_version=None</em>, <em>instance_id=None</em>, <em>max_concurrency=None</em>, <em>max_errors=None</em>, <em>name=None</em>, <em>output_location=None</em>, <em>parameters=None</em>, <em>schedule_expression=None</em>, <em>targets=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.Association" title="Permalink to this definition">¶</a></dt>
 <dd><p>Associates an SSM Document to an instance or EC2 tag.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -121,8 +121,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>association_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The descriptive name for the association.</li>
+<li><strong>compliance_severity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The compliance severity for the association. Can be one of the following: <code class="docutils literal notranslate"><span class="pre">UNSPECIFIED</span></code>, <code class="docutils literal notranslate"><span class="pre">LOW</span></code>, <code class="docutils literal notranslate"><span class="pre">MEDIUM</span></code>, <code class="docutils literal notranslate"><span class="pre">HIGH</span></code> or <code class="docutils literal notranslate"><span class="pre">CRITICAL</span></code></li>
 <li><strong>document_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The document version you want to associate with the target(s). Can be a specific version or the default version.</li>
 <li><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The instance ID to apply an SSM document to. Use <code class="docutils literal notranslate"><span class="pre">targets</span></code> with key <code class="docutils literal notranslate"><span class="pre">InstanceIds</span></code> for document schema versions 2.0 and above.</li>
+<li><strong>max_concurrency</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The maximum number of targets allowed to run the association at the same time. You can specify a number, for example 10, or a percentage of the target set, for example 10%.</li>
+<li><strong>max_errors</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The number of errors that are allowed before the system stops sending requests to run the association on additional targets. You can specify a number, for example 10, or a percentage of the target set, for example 10%.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the SSM document to apply.</li>
 <li><strong>output_location</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An output location block. Output Location is documented below.</li>
 <li><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A block of arbitrary string parameters to pass to the SSM document.</li>
@@ -140,6 +143,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.ssm.Association.compliance_severity">
+<code class="descname">compliance_severity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Association.compliance_severity" title="Permalink to this definition">¶</a></dt>
+<dd><p>The compliance severity for the association. Can be one of the following: <code class="docutils literal notranslate"><span class="pre">UNSPECIFIED</span></code>, <code class="docutils literal notranslate"><span class="pre">LOW</span></code>, <code class="docutils literal notranslate"><span class="pre">MEDIUM</span></code>, <code class="docutils literal notranslate"><span class="pre">HIGH</span></code> or <code class="docutils literal notranslate"><span class="pre">CRITICAL</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.ssm.Association.document_version">
 <code class="descname">document_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Association.document_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>The document version you want to associate with the target(s). Can be a specific version or the default version.</p>
@@ -149,6 +158,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ssm.Association.instance_id">
 <code class="descname">instance_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Association.instance_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The instance ID to apply an SSM document to. Use <code class="docutils literal notranslate"><span class="pre">targets</span></code> with key <code class="docutils literal notranslate"><span class="pre">InstanceIds</span></code> for document schema versions 2.0 and above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ssm.Association.max_concurrency">
+<code class="descname">max_concurrency</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Association.max_concurrency" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum number of targets allowed to run the association at the same time. You can specify a number, for example 10, or a percentage of the target set, for example 10%.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ssm.Association.max_errors">
+<code class="descname">max_errors</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Association.max_errors" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of errors that are allowed before the system stops sending requests to run the association on additional targets. You can specify a number, for example 10, or a percentage of the target set, for example 10%.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -399,7 +420,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ssm.GetDocumentResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ssm.</code><code class="descname">GetDocumentResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>content=None</em>, <em>document_type=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.GetDocumentResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ssm.</code><code class="descname">GetDocumentResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>content=None</em>, <em>document_format=None</em>, <em>document_type=None</em>, <em>document_version=None</em>, <em>name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.GetDocumentResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDocument.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.GetDocumentResult.arn">
@@ -429,7 +450,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ssm.GetParameterResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ssm.</code><code class="descname">GetParameterResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>type=None</em>, <em>value=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.GetParameterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ssm.</code><code class="descname">GetParameterResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>name=None</em>, <em>type=None</em>, <em>value=None</em>, <em>with_decryption=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.GetParameterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getParameter.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.GetParameterResult.id">

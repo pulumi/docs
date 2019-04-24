@@ -2,7 +2,7 @@
 <span id="dns"></span><h1>dns<a class="headerlink" href="#module-pulumi_openstack.dns" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_openstack.dns.GetDnsZoneResult">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.dns.</code><code class="descname">GetDnsZoneResult</code><span class="sig-paren">(</span><em>attributes=None</em>, <em>created_at=None</em>, <em>masters=None</em>, <em>pool_id=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>serial=None</em>, <em>transferred_at=None</em>, <em>updated_at=None</em>, <em>version=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.GetDnsZoneResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.dns.</code><code class="descname">GetDnsZoneResult</code><span class="sig-paren">(</span><em>attributes=None</em>, <em>created_at=None</em>, <em>description=None</em>, <em>email=None</em>, <em>masters=None</em>, <em>name=None</em>, <em>pool_id=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>serial=None</em>, <em>status=None</em>, <em>transferred_at=None</em>, <em>ttl=None</em>, <em>type=None</em>, <em>updated_at=None</em>, <em>version=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.GetDnsZoneResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDnsZone.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.dns.GetDnsZoneResult.attributes">
@@ -17,9 +17,27 @@
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_openstack.dns.GetDnsZoneResult.description">
+<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.GetDnsZoneResult.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.dns.GetDnsZoneResult.email">
+<code class="descname">email</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.GetDnsZoneResult.email" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_openstack.dns.GetDnsZoneResult.masters">
 <code class="descname">masters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.GetDnsZoneResult.masters" title="Permalink to this definition">¶</a></dt>
 <dd><p>An array of master DNS servers. When <code class="docutils literal notranslate"><span class="pre">type</span></code> is  <code class="docutils literal notranslate"><span class="pre">SECONDARY</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.dns.GetDnsZoneResult.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.GetDnsZoneResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -47,9 +65,27 @@
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_openstack.dns.GetDnsZoneResult.status">
+<code class="descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.GetDnsZoneResult.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_openstack.dns.GetDnsZoneResult.transferred_at">
 <code class="descname">transferred_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.GetDnsZoneResult.transferred_at" title="Permalink to this definition">¶</a></dt>
 <dd><p>The time the zone was transferred.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.dns.GetDnsZoneResult.ttl">
+<code class="descname">ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.GetDnsZoneResult.ttl" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.dns.GetDnsZoneResult.type">
+<code class="descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.GetDnsZoneResult.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -92,7 +128,7 @@ address will be recorded in the state.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 DNS client.
 If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.
 Changing this creates a new DNS  record set.</li>
-<li><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time to live (TTL) of the record set.</li>
+<li><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time to live (TTL) of the record set.</li>
 <li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of record set. Examples: “A”, “MX”.
 Changing this creates a new DNS  record set.</li>
 <li><strong>value_specs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional options. Changing this creates a
@@ -223,7 +259,7 @@ Changing this creates a new DNS zone.</li>
 Keypairs are associated with accounts, but a Compute client is needed to
 create one. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.
 Changing this creates a new DNS zone.</li>
-<li><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time to live (TTL) of the zone.</li>
+<li><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time to live (TTL) of the zone.</li>
 <li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of zone. Can either be <code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code> or <code class="docutils literal notranslate"><span class="pre">SECONDARY</span></code>.
 Changing this creates a new zone.</li>
 <li><strong>value_specs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional options. Changing this creates a

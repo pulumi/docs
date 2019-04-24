@@ -2,17 +2,8 @@
 <span id="storage"></span><h1>storage<a class="headerlink" href="#module-pulumi_azure.storage" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.storage.Account">
-<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">Account</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>access_tier=None</em>, <em>account_encryption_source=None</em>, <em>account_kind=None</em>, <em>account_replication_type=None</em>, <em>account_tier=None</em>, <em>account_type=None</em>, <em>custom_domain=None</em>, <em>enable_blob_encryption=None</em>, <em>enable_file_encryption=None</em>, <em>enable_https_traffic_only=None</em>, <em>identity=None</em>, <em>location=None</em>, <em>name=None</em>, <em>network_rules=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Account" title="Permalink to this definition">¶</a></dt>
-<dd><ul class="simple">
-<li></li>
-</ul>
-<p>layout: “azurerm”
-page_title: “Azure Resource Manager: azurerm_storage_account”
-sidebar_current: “docs-azurerm-resource-storage-account”
-description: <a href="#id1"><span class="problematic" id="id2">|</span></a>-</p>
-<blockquote>
-<div>Manages a Azure Storage Account.</div></blockquote>
-<p>Manage an Azure Storage Account.</p>
+<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">Account</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>access_tier=None</em>, <em>account_encryption_source=None</em>, <em>account_kind=None</em>, <em>account_replication_type=None</em>, <em>account_tier=None</em>, <em>account_type=None</em>, <em>custom_domain=None</em>, <em>enable_blob_encryption=None</em>, <em>enable_file_encryption=None</em>, <em>enable_https_traffic_only=None</em>, <em>identity=None</em>, <em>is_hns_enabled=None</em>, <em>location=None</em>, <em>name=None</em>, <em>network_rules=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Account" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manage an Azure Storage Account.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -35,6 +26,7 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">Storage
 for more information.</p>
 </li>
 <li><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A Managed Service Identity block as defined below.</li>
+<li><strong>is_hns_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is Hierarchical Namespace enabled? This can be used with Azure Data Lake Storage Gen 2 (<a class="reference external" href="https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-quickstart-create-account/">see here for more information</a>). Changing this forces a new resource to be created.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the
 resource exists. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Custom Domain Name to use for the Storage Account, which will be validated by Azure.</li>
@@ -111,6 +103,12 @@ for more information.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.storage.Account.is_hns_enabled">
+<code class="descname">is_hns_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Account.is_hns_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is Hierarchical Namespace enabled? This can be used with Azure Data Lake Storage Gen 2 (<a class="reference external" href="https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-quickstart-create-account/">see here for more information</a>). Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.storage.Account.location">
 <code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Account.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the supported Azure location where the
@@ -160,6 +158,18 @@ resource exists. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.storage.Account.primary_dfs_endpoint">
+<code class="descname">primary_dfs_endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Account.primary_dfs_endpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>The endpoint URL for DFS storage in the primary location.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.Account.primary_dfs_host">
+<code class="descname">primary_dfs_host</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Account.primary_dfs_host" title="Permalink to this definition">¶</a></dt>
+<dd><p>The hostname with port if applicable for DFS storage in the primary location.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.storage.Account.primary_file_endpoint">
 <code class="descname">primary_file_endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Account.primary_file_endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>The endpoint URL for file storage in the primary location.</p>
@@ -202,6 +212,18 @@ resource exists. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.storage.Account.primary_web_endpoint">
+<code class="descname">primary_web_endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Account.primary_web_endpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>The endpoint URL for web storage in the primary location.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.Account.primary_web_host">
+<code class="descname">primary_web_host</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Account.primary_web_host" title="Permalink to this definition">¶</a></dt>
+<dd><p>The hostname with port if applicable for web storage in the primary location.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.storage.Account.resource_group_name">
 <code class="descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Account.resource_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the resource group in which to
@@ -239,6 +261,30 @@ create the storage account. Changing this forces a new resource to be created.</
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.storage.Account.secondary_dfs_endpoint">
+<code class="descname">secondary_dfs_endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Account.secondary_dfs_endpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>The endpoint URL for DFS storage in the secondary location.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.Account.secondary_dfs_host">
+<code class="descname">secondary_dfs_host</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Account.secondary_dfs_host" title="Permalink to this definition">¶</a></dt>
+<dd><p>The hostname with port if applicable for DFS storage in the secondary location.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.Account.secondary_file_endpoint">
+<code class="descname">secondary_file_endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Account.secondary_file_endpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>The endpoint URL for file storage in the secondary location.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.Account.secondary_file_host">
+<code class="descname">secondary_file_host</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Account.secondary_file_host" title="Permalink to this definition">¶</a></dt>
+<dd><p>The hostname with port if applicable for file storage in the secondary location.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.storage.Account.secondary_location">
 <code class="descname">secondary_location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Account.secondary_location" title="Permalink to this definition">¶</a></dt>
 <dd><p>The secondary location of the storage account.</p>
@@ -266,6 +312,18 @@ create the storage account. Changing this forces a new resource to be created.</
 <dt id="pulumi_azure.storage.Account.secondary_table_host">
 <code class="descname">secondary_table_host</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Account.secondary_table_host" title="Permalink to this definition">¶</a></dt>
 <dd><p>The hostname with port if applicable for table storage in the secondary location.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.Account.secondary_web_endpoint">
+<code class="descname">secondary_web_endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Account.secondary_web_endpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>The endpoint URL for web storage in the secondary location.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.Account.secondary_web_host">
+<code class="descname">secondary_web_host</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Account.secondary_web_host" title="Permalink to this definition">¶</a></dt>
+<dd><p>The hostname with port if applicable for web storage in the secondary location.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -316,7 +374,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.storage.Blob">
-<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">Blob</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>attempts=None</em>, <em>content_type=None</em>, <em>name=None</em>, <em>parallelism=None</em>, <em>resource_group_name=None</em>, <em>size=None</em>, <em>source=None</em>, <em>source_uri=None</em>, <em>storage_account_name=None</em>, <em>storage_container_name=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Blob" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">Blob</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>attempts=None</em>, <em>content_type=None</em>, <em>metadata=None</em>, <em>name=None</em>, <em>parallelism=None</em>, <em>resource_group_name=None</em>, <em>size=None</em>, <em>source=None</em>, <em>source_uri=None</em>, <em>storage_account_name=None</em>, <em>storage_container_name=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Blob" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage an Azure Storage Blob.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -327,6 +385,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>attempts</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of attempts to make per page or block when uploading. Defaults to <code class="docutils literal notranslate"><span class="pre">1</span></code>.</li>
 <li><strong>content_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The content type of the storage blob. Cannot be defined if <code class="docutils literal notranslate"><span class="pre">source_uri</span></code> is defined. Defaults to <code class="docutils literal notranslate"><span class="pre">application/octet-stream</span></code>.</li>
+<li><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of custom blob metadata.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the storage blob. Must be unique within the storage container the blob is located.</li>
 <li><strong>parallelism</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of workers per CPU core to run for concurrent uploads. Defaults to <code class="docutils literal notranslate"><span class="pre">8</span></code>.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
@@ -355,6 +414,12 @@ this becomes required.</li>
 <dt id="pulumi_azure.storage.Blob.content_type">
 <code class="descname">content_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Blob.content_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The content type of the storage blob. Cannot be defined if <code class="docutils literal notranslate"><span class="pre">source_uri</span></code> is defined. Defaults to <code class="docutils literal notranslate"><span class="pre">application/octet-stream</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.Blob.metadata">
+<code class="descname">metadata</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Blob.metadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>A map of custom blob metadata.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -557,7 +622,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.storage.GetAccountResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">GetAccountResult</code><span class="sig-paren">(</span><em>access_tier=None</em>, <em>account_encryption_source=None</em>, <em>account_kind=None</em>, <em>account_replication_type=None</em>, <em>account_tier=None</em>, <em>custom_domain=None</em>, <em>enable_blob_encryption=None</em>, <em>enable_file_encryption=None</em>, <em>enable_https_traffic_only=None</em>, <em>location=None</em>, <em>primary_access_key=None</em>, <em>primary_blob_connection_string=None</em>, <em>primary_blob_endpoint=None</em>, <em>primary_blob_host=None</em>, <em>primary_connection_string=None</em>, <em>primary_file_endpoint=None</em>, <em>primary_file_host=None</em>, <em>primary_location=None</em>, <em>primary_queue_endpoint=None</em>, <em>primary_queue_host=None</em>, <em>primary_table_endpoint=None</em>, <em>primary_table_host=None</em>, <em>secondary_access_key=None</em>, <em>secondary_blob_connection_string=None</em>, <em>secondary_blob_endpoint=None</em>, <em>secondary_blob_host=None</em>, <em>secondary_connection_string=None</em>, <em>secondary_location=None</em>, <em>secondary_queue_endpoint=None</em>, <em>secondary_queue_host=None</em>, <em>secondary_table_endpoint=None</em>, <em>secondary_table_host=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.GetAccountResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">GetAccountResult</code><span class="sig-paren">(</span><em>access_tier=None</em>, <em>account_encryption_source=None</em>, <em>account_kind=None</em>, <em>account_replication_type=None</em>, <em>account_tier=None</em>, <em>custom_domain=None</em>, <em>enable_blob_encryption=None</em>, <em>enable_file_encryption=None</em>, <em>enable_https_traffic_only=None</em>, <em>is_hns_enabled=None</em>, <em>location=None</em>, <em>name=None</em>, <em>primary_access_key=None</em>, <em>primary_blob_connection_string=None</em>, <em>primary_blob_endpoint=None</em>, <em>primary_blob_host=None</em>, <em>primary_connection_string=None</em>, <em>primary_dfs_endpoint=None</em>, <em>primary_dfs_host=None</em>, <em>primary_file_endpoint=None</em>, <em>primary_file_host=None</em>, <em>primary_location=None</em>, <em>primary_queue_endpoint=None</em>, <em>primary_queue_host=None</em>, <em>primary_table_endpoint=None</em>, <em>primary_table_host=None</em>, <em>primary_web_endpoint=None</em>, <em>primary_web_host=None</em>, <em>resource_group_name=None</em>, <em>secondary_access_key=None</em>, <em>secondary_blob_connection_string=None</em>, <em>secondary_blob_endpoint=None</em>, <em>secondary_blob_host=None</em>, <em>secondary_connection_string=None</em>, <em>secondary_dfs_endpoint=None</em>, <em>secondary_dfs_host=None</em>, <em>secondary_file_endpoint=None</em>, <em>secondary_file_host=None</em>, <em>secondary_location=None</em>, <em>secondary_queue_endpoint=None</em>, <em>secondary_queue_host=None</em>, <em>secondary_table_endpoint=None</em>, <em>secondary_table_host=None</em>, <em>secondary_web_endpoint=None</em>, <em>secondary_web_host=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.GetAccountResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAccount.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.storage.GetAccountResult.access_tier">
@@ -617,9 +682,21 @@ for more information.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.storage.GetAccountResult.is_hns_enabled">
+<code class="descname">is_hns_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetAccountResult.is_hns_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is Hierarchical Namespace enabled?</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.storage.GetAccountResult.location">
 <code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetAccountResult.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Azure location where the Storage Account exists</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.GetAccountResult.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetAccountResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Custom Domain Name used for the Storage Account.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -650,6 +727,18 @@ for more information.</p>
 <dt id="pulumi_azure.storage.GetAccountResult.primary_connection_string">
 <code class="descname">primary_connection_string</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetAccountResult.primary_connection_string" title="Permalink to this definition">¶</a></dt>
 <dd><p>The connection string associated with the primary location</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.GetAccountResult.primary_dfs_endpoint">
+<code class="descname">primary_dfs_endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetAccountResult.primary_dfs_endpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>The endpoint URL for DFS storage in the primary location.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.GetAccountResult.primary_dfs_host">
+<code class="descname">primary_dfs_host</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetAccountResult.primary_dfs_host" title="Permalink to this definition">¶</a></dt>
+<dd><p>The hostname with port if applicable for DFS storage in the primary location.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -695,6 +784,18 @@ for more information.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.storage.GetAccountResult.primary_web_endpoint">
+<code class="descname">primary_web_endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetAccountResult.primary_web_endpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>The endpoint URL for web storage in the primary location.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.GetAccountResult.primary_web_host">
+<code class="descname">primary_web_host</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetAccountResult.primary_web_host" title="Permalink to this definition">¶</a></dt>
+<dd><p>The hostname with port if applicable for web storage in the primary location.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.storage.GetAccountResult.secondary_access_key">
 <code class="descname">secondary_access_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetAccountResult.secondary_access_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>The secondary access key for the Storage Account.</p>
@@ -722,6 +823,30 @@ for more information.</p>
 <dt id="pulumi_azure.storage.GetAccountResult.secondary_connection_string">
 <code class="descname">secondary_connection_string</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetAccountResult.secondary_connection_string" title="Permalink to this definition">¶</a></dt>
 <dd><p>The connection string associated with the secondary location</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.GetAccountResult.secondary_dfs_endpoint">
+<code class="descname">secondary_dfs_endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetAccountResult.secondary_dfs_endpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>The endpoint URL for DFS storage in the secondary location.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.GetAccountResult.secondary_dfs_host">
+<code class="descname">secondary_dfs_host</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetAccountResult.secondary_dfs_host" title="Permalink to this definition">¶</a></dt>
+<dd><p>The hostname with port if applicable for DFS storage in the secondary location.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.GetAccountResult.secondary_file_endpoint">
+<code class="descname">secondary_file_endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetAccountResult.secondary_file_endpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>The endpoint URL for file storage in the secondary location.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.GetAccountResult.secondary_file_host">
+<code class="descname">secondary_file_host</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetAccountResult.secondary_file_host" title="Permalink to this definition">¶</a></dt>
+<dd><p>The hostname with port if applicable for file storage in the secondary location.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -755,6 +880,18 @@ for more information.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.storage.GetAccountResult.secondary_web_endpoint">
+<code class="descname">secondary_web_endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetAccountResult.secondary_web_endpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>The endpoint URL for web storage in the secondary location.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.GetAccountResult.secondary_web_host">
+<code class="descname">secondary_web_host</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetAccountResult.secondary_web_host" title="Permalink to this definition">¶</a></dt>
+<dd><p>The hostname with port if applicable for web storage in the secondary location.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.storage.GetAccountResult.tags">
 <code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetAccountResult.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assigned to the resource.</p>
@@ -770,7 +907,7 @@ for more information.</p>
 
 <dl class="class">
 <dt id="pulumi_azure.storage.GetAccountSASResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">GetAccountSASResult</code><span class="sig-paren">(</span><em>sas=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.GetAccountSASResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">GetAccountSASResult</code><span class="sig-paren">(</span><em>connection_string=None</em>, <em>expiry=None</em>, <em>https_only=None</em>, <em>permissions=None</em>, <em>resource_types=None</em>, <em>sas=None</em>, <em>services=None</em>, <em>start=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.GetAccountSASResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAccountSAS.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.storage.GetAccountSASResult.sas">
@@ -1044,7 +1181,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.storage.ZipBlob">
-<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">ZipBlob</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>attempts=None</em>, <em>content_type=None</em>, <em>name=None</em>, <em>parallelism=None</em>, <em>resource_group_name=None</em>, <em>size=None</em>, <em>content=None</em>, <em>source_uri=None</em>, <em>storage_account_name=None</em>, <em>storage_container_name=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.ZipBlob" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">ZipBlob</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>attempts=None</em>, <em>content_type=None</em>, <em>metadata=None</em>, <em>name=None</em>, <em>parallelism=None</em>, <em>resource_group_name=None</em>, <em>size=None</em>, <em>content=None</em>, <em>source_uri=None</em>, <em>storage_account_name=None</em>, <em>storage_container_name=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.ZipBlob" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a ZipBlob resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />

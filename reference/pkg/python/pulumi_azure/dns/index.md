@@ -373,7 +373,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.dns.GetZoneResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.dns.</code><code class="descname">GetZoneResult</code><span class="sig-paren">(</span><em>max_number_of_record_sets=None</em>, <em>name_servers=None</em>, <em>number_of_record_sets=None</em>, <em>registration_virtual_network_ids=None</em>, <em>resolution_virtual_network_ids=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>zone_type=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.GetZoneResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.dns.</code><code class="descname">GetZoneResult</code><span class="sig-paren">(</span><em>max_number_of_record_sets=None</em>, <em>name=None</em>, <em>name_servers=None</em>, <em>number_of_record_sets=None</em>, <em>registration_virtual_network_ids=None</em>, <em>resolution_virtual_network_ids=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>zone_type=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.dns.GetZoneResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getZone.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.dns.GetZoneResult.max_number_of_record_sets">

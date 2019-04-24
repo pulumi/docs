@@ -199,7 +199,7 @@ resource.</li>
 
 <dl class="class">
 <dt id="pulumi.ResourceOptions">
-<em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">ResourceOptions</code><span class="sig-paren">(</span><em>parent: Optional[Resource] = None</em>, <em>depends_on: Optional[List[Resource]] = None</em>, <em>protect: Optional[bool] = None</em>, <em>provider: Optional[ProviderResource] = None</em>, <em>providers: Optional[Mapping[str</em>, <em>ProviderResource]] = None</em>, <em>delete_before_replace: Optional[bool] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ResourceOptions" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">ResourceOptions</code><span class="sig-paren">(</span><em>parent: Optional[Resource] = None</em>, <em>depends_on: Optional[List[Resource]] = None</em>, <em>protect: Optional[bool] = None</em>, <em>provider: Optional[ProviderResource] = None</em>, <em>providers: Optional[Mapping[str</em>, <em>ProviderResource]] = None</em>, <em>delete_before_replace: Optional[bool] = None</em>, <em>ignore_changes: Optional[List[str]] = None</em>, <em>version: Optional[str] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ResourceOptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>ResourceOptions is a bag of optional settings that control a resource’s behavior.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -217,6 +217,8 @@ provider is pulled from the parent’s provider bag.</li>
 <li><strong>providers</strong> (<em>Optional</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em><a class="reference internal" href="#pulumi.ProviderResource" title="pulumi.ProviderResource"><em>ProviderResource</em></a><em>]</em><em>]</em>) – An optional set of providers to use for child resources. Keyed
 by package name (e.g. “aws”)</li>
 <li><strong>delete_before_replace</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em>) – If provided and True, this resource must be deleted before it is replaced.</li>
+<li><strong>ignore_changes</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>string</em><em>]</em><em>]</em>) – If provided, a list of property names to ignore for purposes of updates
+or replacements.</li>
 </ul>
 </td>
 </tr>
@@ -260,11 +262,25 @@ provider bag (see also ResourceOptions.providers).</p>
 <dd><p>If provided and True, this resource must be deleted before it is replaced.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi.ResourceOptions.ignore_changes">
+<code class="descname">ignore_changes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.ignore_changes" title="Permalink to this definition">¶</a></dt>
+<dd><p>If provided, ignore changes to any of the specified properties.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi.ResourceOptions.version">
+<code class="descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>An optional version. If provided, the engine loads a provider with exactly the requested version to operate on this
+resource. This version overrides the version information inferred from the current package and should rarely be
+used.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi.InvokeOptions">
-<em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">InvokeOptions</code><span class="sig-paren">(</span><em>parent: Optional[Resource] = None</em>, <em>provider: Optional[ProviderResource] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.InvokeOptions" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">InvokeOptions</code><span class="sig-paren">(</span><em>parent: Optional[Resource] = None</em>, <em>provider: Optional[ProviderResource] = None</em>, <em>version: Optional[str] = ''</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.InvokeOptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>InvokeOptions is a bag of options that control the behavior of a call to runtime.invoke.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -275,6 +291,8 @@ provider bag (see also ResourceOptions.providers).</p>
 default provider to use).</li>
 <li><strong>provider</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi.ProviderResource" title="pulumi.ProviderResource"><em>ProviderResource</em></a><em>]</em>) – An optional provider to use for this invocation. If no provider is
 supplied, the default provider for the invoked function’s package will be used.</li>
+<li><strong>version</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – An optional version. If provided, the provider plugin with exactly this version
+will be used to service the invocation.</li>
 </ul>
 </td>
 </tr>
@@ -291,6 +309,13 @@ supplied, the default provider for the invoked function’s package will be used
 <code class="descname">provider</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.InvokeOptions.provider" title="Permalink to this definition">¶</a></dt>
 <dd><p>An optional provider to use for this invocation. If no provider is supplied, the default provider for the
 invoked function’s package will be used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi.InvokeOptions.version">
+<code class="descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.InvokeOptions.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>An optional version. If provided, the provider plugin with exactly this version will be used to service
+the invocation.</p>
 </dd></dl>
 
 </dd></dl>
@@ -318,7 +343,7 @@ configuration information can be retrieved at runtime using the <cite>pulumi.Con
 of the program is a preview or not.</p>
 <dl class="class">
 <dt id="pulumi.Config">
-<em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">Config</code><span class="sig-paren">(</span><em>name: str</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.Config" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">Config</code><span class="sig-paren">(</span><em>name: Optional[str] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.Config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Config is a bag of related configuration state.  Each bag contains any number of configuration variables, indexed by
 simple keys, and each has a name that uniquely identifies it; two bags with different names do not share values for
 variables that otherwise share the same key.  For example, a bag whose name is <code class="docutils literal notranslate"><span class="pre">pulumi:foo</span></code>, with keys <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>,
@@ -328,8 +353,8 @@ fully qualified names, such as <code class="docutils literal notranslate"><span 
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) – The configuration bag’s logical name that uniquely identifies it.  The default is the name of
-the current project.</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) – The configuration bag’s logical name that uniquely identifies it.  If not provided, the name
+of the current project is used.</td>
 </tr>
 </tbody>
 </table>
@@ -619,7 +644,7 @@ value as well as the Resource the value came from.  This allows for a precise �
 dependency graph’ to be created, which properly tracks the relationship between resources.</p>
 <dl class="method">
 <dt id="pulumi.Output.__getitem__">
-<code class="descname">__getitem__</code><span class="sig-paren">(</span><em>key: Any</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[typing.Any][Any]<a class="headerlink" href="#pulumi.Output.__getitem__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__getitem__</code><span class="sig-paren">(</span><em>key: Any</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[Any]<a class="headerlink" href="#pulumi.Output.__getitem__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Syntax sugar for looking up attributes dynamically off of outputs.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -637,7 +662,7 @@ dependency graph’ to be created, which properly tracks the relationship betwee
 
 <dl class="method">
 <dt id="pulumi.Output.__getattr__">
-<code class="descname">__getattr__</code><span class="sig-paren">(</span><em>item: str</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[typing.Any][Any]<a class="headerlink" href="#pulumi.Output.__getattr__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__getattr__</code><span class="sig-paren">(</span><em>item: str</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[Any]<a class="headerlink" href="#pulumi.Output.__getattr__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Syntax sugar for retrieving attributes off of outputs.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -655,7 +680,7 @@ dependency graph’ to be created, which properly tracks the relationship betwee
 
 <dl class="method">
 <dt id="pulumi.Output.apply">
-<code class="descname">apply</code><span class="sig-paren">(</span><em>func: Callable[[T], Union[U, Awaitable[U], Output[T]]]</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[~U][U]<a class="headerlink" href="#pulumi.Output.apply" title="Permalink to this definition">¶</a></dt>
+<code class="descname">apply</code><span class="sig-paren">(</span><em>func: Callable[T, Union[T, Awaitable[T], Output[T]]]</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[U]<a class="headerlink" href="#pulumi.Output.apply" title="Permalink to this definition">¶</a></dt>
 <dd><p>Transforms the data of the output with the provided func.  The result remains a
 Output so that dependent resources can be properly tracked.</p>
 <p>‘func’ is not allowed to make resources.</p>
@@ -681,7 +706,7 @@ type.</td>
 
 <dl class="staticmethod">
 <dt id="pulumi.Output.from_input">
-<em class="property">static </em><code class="descname">from_input</code><span class="sig-paren">(</span><em>val: Union[T, Awaitable[T], Output[T]]</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[~T][T]<a class="headerlink" href="#pulumi.Output.from_input" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">from_input</code><span class="sig-paren">(</span><em>val: Union[T, Awaitable[T], Output[T]]</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[T]<a class="headerlink" href="#pulumi.Output.from_input" title="Permalink to this definition">¶</a></dt>
 <dd><p>Takes an Input value and produces an Output value from it, deeply unwrapping nested Input values as necessary
 given the type.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -700,7 +725,7 @@ given the type.</p>
 
 <dl class="staticmethod">
 <dt id="pulumi.Output.all">
-<em class="property">static </em><code class="descname">all</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[typing.List[~T]][List[T]]<a class="headerlink" href="#pulumi.Output.all" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">all</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[List[T]]<a class="headerlink" href="#pulumi.Output.all" title="Permalink to this definition">¶</a></dt>
 <dd><p>Produces an Output of Lists from a List of Inputs.</p>
 <p>This function can be used to combine multiple, separate Inputs into a single
 Output which can then be used as the target of <code class="docutils literal notranslate"><span class="pre">apply</span></code>. Resource dependencies

@@ -119,7 +119,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.notificationhub.GetHubResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.notificationhub.</code><code class="descname">GetHubResult</code><span class="sig-paren">(</span><em>apns_credentials=None</em>, <em>gcm_credentials=None</em>, <em>location=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.notificationhub.GetHubResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.notificationhub.</code><code class="descname">GetHubResult</code><span class="sig-paren">(</span><em>apns_credentials=None</em>, <em>gcm_credentials=None</em>, <em>location=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>resource_group_name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.notificationhub.GetHubResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getHub.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.notificationhub.GetHubResult.apns_credentials">
@@ -149,7 +149,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.notificationhub.GetNamespaceResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.notificationhub.</code><code class="descname">GetNamespaceResult</code><span class="sig-paren">(</span><em>enabled=None</em>, <em>location=None</em>, <em>namespace_type=None</em>, <em>servicebus_endpoint=None</em>, <em>sku=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.notificationhub.GetNamespaceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.notificationhub.</code><code class="descname">GetNamespaceResult</code><span class="sig-paren">(</span><em>enabled=None</em>, <em>location=None</em>, <em>name=None</em>, <em>namespace_type=None</em>, <em>resource_group_name=None</em>, <em>servicebus_endpoint=None</em>, <em>sku=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.notificationhub.GetNamespaceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getNamespace.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.notificationhub.GetNamespaceResult.enabled">
@@ -161,6 +161,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.notificationhub.GetNamespaceResult.location">
 <code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.notificationhub.GetNamespaceResult.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Azure Region in which this Notification Hub Namespace exists.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.notificationhub.GetNamespaceResult.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.notificationhub.GetNamespaceResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Required) The name of the SKU to use for this Notification Hub Namespace. Possible values are <code class="docutils literal notranslate"><span class="pre">Free</span></code>, <code class="docutils literal notranslate"><span class="pre">Basic</span></code> or <code class="docutils literal notranslate"><span class="pre">Standard.</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
