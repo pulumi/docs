@@ -37,7 +37,6 @@ title: Module sns
 * <a href="#TopicState">interface TopicState</a>
 * <a href="#TopicSubscriptionArgs">interface TopicSubscriptionArgs</a>
 * <a href="#TopicSubscriptionState">interface TopicSubscriptionState</a>
-* <a href="#"./topic"">module "./topic"</a>
 * <a href="#TopicEventHandler">type TopicEventHandler</a>
 * <a href="#TopicEventSubscriptionArgs">type TopicEventSubscriptionArgs</a>
 
@@ -502,6 +501,18 @@ properties used to qualify the lookup.
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="Topic-onEvent">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/snsMixins.ts#L101">method <b>onEvent</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>onEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#TopicEventHandler'>TopicEventHandler</a>, args?: <a href='#TopicEventSubscriptionArgs'>TopicEventSubscriptionArgs</a>, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#TopicEventSubscription'>TopicEventSubscription</a></pre>
+
+
+Creates a new subscription to events fired from this Topic to the handler provided, along
+with options to control the behavior of the subscription.
 
 </div>
 <h3 class="pdoc-member-header" id="Topic-applicationFailureFeedbackRoleArn">
@@ -2196,16 +2207,6 @@ Boolean indicating whether or not to enable raw message delivery (the original m
 
 The ARN of the SNS topic to subscribe to
 
-</div>
-</div>
-<h2 class="pdoc-module-header" id="&#34;./topic&#34;">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/snsMixins.ts#L95">module <b>"./topic"</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<h3 class="pdoc-member-header" id="Topic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sns/snsMixins.ts#L96">interface <b>Topic</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TopicEventHandler">

@@ -62,8 +62,6 @@ title: Module cloudwatch
 * <a href="#LogSubscriptionFilterState">interface LogSubscriptionFilterState</a>
 * <a href="#MetricAlarmArgs">interface MetricAlarmArgs</a>
 * <a href="#MetricAlarmState">interface MetricAlarmState</a>
-* <a href="#"./eventRule"">module "./eventRule"</a>
-* <a href="#"./logGroup"">module "./logGroup"</a>
 * <a href="#EventRuleEventHandler">type EventRuleEventHandler</a>
 * <a href="#LogGroupEventHandler">type LogGroupEventHandler</a>
 
@@ -460,6 +458,18 @@ properties used to qualify the lookup.
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="EventRule-onEvent">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L116">method <b>onEvent</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>onEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#EventRuleEventHandler'>EventRuleEventHandler</a>, args?: <a href='#EventRuleEventSubscriptionArgs'>EventRuleEventSubscriptionArgs</a>, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#EventRuleEventSubscription'>EventRuleEventSubscription</a></pre>
+
+
+Creates a new subscription to events fired from this EventRule to the handler provided, along
+with options to control the behavior of the subscription.
 
 </div>
 <h3 class="pdoc-member-header" id="EventRule-arn">
@@ -1365,6 +1375,36 @@ properties used to qualify the lookup.
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="LogGroup-onDecodedEvent">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroupMixins.ts#L121">method <b>onDecodedEvent</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>onDecodedEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, callback: lambda.Callback&lt;<a href='#DecodedLogGroupEvent'>DecodedLogGroupEvent</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;, args?: <a href='#LogGroupEventSubscriptionArgs'>LogGroupEventSubscriptionArgs</a>, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#LogGroupEventSubscription'>LogGroupEventSubscription</a></pre>
+
+
+Creates a new subscription to events fired from this LogGroup to the callback provided,
+along with options to control the behavior of the subscription.
+
+The events will be provided in their decoded form.  Because this event hookup needs to
+execute code to convert the raw messages, it can only be passed an [EntryPoint] callback,
+not a [lambda.Function] instance.
+
+</div>
+<h3 class="pdoc-member-header" id="LogGroup-onEvent">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroupMixins.ts#L110">method <b>onEvent</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>onEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#LogGroupEventHandler'>LogGroupEventHandler</a>, args?: <a href='#LogGroupEventSubscriptionArgs'>LogGroupEventSubscriptionArgs</a>, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#LogGroupEventSubscription'>LogGroupEventSubscription</a></pre>
+
+
+Creates a new subscription to events fired from this LogGroup to the handler provided,
+along with options to control the behavior of the subscription.
+
+The events will be produced in raw (gzipped + base64 encoded) form.
 
 </div>
 <h3 class="pdoc-member-header" id="LogGroup-arn">
@@ -4367,26 +4407,6 @@ Sets how this alarm is to handle missing data points. The following values are s
 
 The unit for this metric.
 
-</div>
-</div>
-<h2 class="pdoc-module-header" id="&#34;./eventRule&#34;">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L110">module <b>"./eventRule"</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<h3 class="pdoc-member-header" id="EventRule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventRuleMixins.ts#L111">interface <b>EventRule</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-</div>
-</div>
-<h2 class="pdoc-module-header" id="&#34;./logGroup&#34;">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroupMixins.ts#L102">module <b>"./logGroup"</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<h3 class="pdoc-member-header" id="LogGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/logGroupMixins.ts#L103">interface <b>LogGroup</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EventRuleEventHandler">

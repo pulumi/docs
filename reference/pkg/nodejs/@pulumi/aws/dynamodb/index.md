@@ -30,7 +30,6 @@ title: Module dynamodb
 * <a href="#TableItemArgs">interface TableItemArgs</a>
 * <a href="#TableItemState">interface TableItemState</a>
 * <a href="#TableState">interface TableState</a>
-* <a href="#"./table"">module "./table"</a>
 * <a href="#TableEventHandler">type TableEventHandler</a>
 
 <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts">dynamodb/dynamodbMixins.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/getTable.ts">dynamodb/getTable.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/globalTable.ts">dynamodb/globalTable.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts">dynamodb/table.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/tableItem.ts">dynamodb/tableItem.ts</a> 
@@ -256,6 +255,18 @@ properties used to qualify the lookup.
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="Table-onEvent">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L100">method <b>onEvent</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>onEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#TableEventHandler'>TableEventHandler</a>, args: <a href='#TableEventSubscriptionArgs'>TableEventSubscriptionArgs</a>, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#TableEventSubscription'>TableEventSubscription</a></pre>
+
+
+Creates a new subscription to events fired from this Table to the handler provided,
+along with options to control the behavior of the subscription.
 
 </div>
 <h3 class="pdoc-member-header" id="Table-arn">
@@ -1515,16 +1526,6 @@ Defines ttl, has two properties, and can only be specified once:
 
 The number of write units for this index. Must be set if billing_mode is set to PROVISIONED.
 
-</div>
-</div>
-<h2 class="pdoc-module-header" id="&#34;./table&#34;">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L94">module <b>"./table"</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<h3 class="pdoc-member-header" id="Table">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L95">interface <b>Table</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TableEventHandler">

@@ -59,7 +59,6 @@ title: Module s3
 * <a href="#PrivateAcl">let PrivateAcl</a>
 * <a href="#PublicReadAcl">let PublicReadAcl</a>
 * <a href="#PublicReadWriteAcl">let PublicReadWriteAcl</a>
-* <a href="#"./bucket"">module "./bucket"</a>
 * <a href="#BucketEventHandler">type BucketEventHandler</a>
 * <a href="#CannedAcl">type CannedAcl</a>
 
@@ -448,6 +447,46 @@ properties used to qualify the lookup.
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="Bucket-onEvent">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L233">method <b>onEvent</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>onEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a>, args: <a href='#BucketEventSubscriptionArgs'>BucketEventSubscriptionArgs</a>, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#BucketEventSubscription'>BucketEventSubscription</a></pre>
+
+
+Creates a new subscription to events fired from this Bucket to the handler provided,
+along with options to control the behavior of the subscription.  This function should be
+used when full control over the subscription is wanted, and other helpers (like
+onObjectCreated/onObjectRemoved) are not sufficient.
+
+</div>
+<h3 class="pdoc-member-header" id="Bucket-onObjectCreated">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L214">method <b>onObjectCreated</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>onObjectCreated(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a>, args?: <a href='#ObjectCreatedSubscriptionArgs'>ObjectCreatedSubscriptionArgs</a>, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#BucketEventSubscription'>BucketEventSubscription</a></pre>
+
+
+Creates a new subscription to events fired from this Bucket to the handler provided,
+along with options to control the behavior of the subscription.  The handler will be
+called whenever a matching [s3.Object] is created.
+
+</div>
+<h3 class="pdoc-member-header" id="Bucket-onObjectRemoved">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L223">method <b>onObjectRemoved</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>onObjectRemoved(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a>, args?: <a href='#ObjectRemovedSubscriptionArgs'>ObjectRemovedSubscriptionArgs</a>, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#BucketEventSubscription'>BucketEventSubscription</a></pre>
+
+
+Creates a new subscription to events fired from this Bucket to the handler provided,
+along with options to control the behavior of the subscription.  The handler will be
+called whenever an matching [s3.Object] is removed.
 
 </div>
 <h3 class="pdoc-member-header" id="Bucket-accelerationStatus">
@@ -4481,16 +4520,6 @@ aws.s3.BucketNotification.lambdaFunctions for more details.
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>let</span> PublicReadWriteAcl: <a href='#CannedAcl'>CannedAcl</a> = <span class='s2'>&#34;public-read-write&#34;</span>;</pre>
-</div>
-<h2 class="pdoc-module-header" id="&#34;./bucket&#34;">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L207">module <b>"./bucket"</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<h3 class="pdoc-member-header" id="Bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L208">interface <b>Bucket</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-</div>
 </div>
 <h2 class="pdoc-module-header" id="BucketEventHandler">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L105">type <b>BucketEventHandler</b></a>

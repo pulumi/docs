@@ -30,7 +30,6 @@ title: Module kinesis
 * <a href="#StreamEventRecord">interface StreamEventRecord</a>
 * <a href="#StreamEventSubscriptionArgs">interface StreamEventSubscriptionArgs</a>
 * <a href="#StreamState">interface StreamState</a>
-* <a href="#"./stream"">module "./stream"</a>
 * <a href="#StreamEventHandler">type StreamEventHandler</a>
 
 <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts">kinesis/analyticsApplication.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts">kinesis/firehoseDeliveryStream.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/getStream.ts">kinesis/getStream.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts">kinesis/kinesisMixins.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/stream.ts">kinesis/stream.ts</a> 
@@ -1010,6 +1009,18 @@ properties used to qualify the lookup.
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="Stream-onEvent">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L120">method <b>onEvent</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>onEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#StreamEventHandler'>StreamEventHandler</a>, args: <a href='#StreamEventSubscriptionArgs'>StreamEventSubscriptionArgs</a>, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#StreamEventSubscription'>StreamEventSubscription</a></pre>
+
+
+Creates a new subscription to events fired from this Stream to the handler provided, along
+with options to control the behavior of the subscription.
 
 </div>
 <h3 class="pdoc-member-header" id="Stream-arn">
@@ -2573,16 +2584,6 @@ A list of shard-level CloudWatch metrics which can be enabled for the stream. Se
 
 A mapping of tags to assign to the resource.
 
-</div>
-</div>
-<h2 class="pdoc-module-header" id="&#34;./stream&#34;">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L114">module <b>"./stream"</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<h3 class="pdoc-member-header" id="Stream">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L115">interface <b>Stream</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
 </div>
 </div>
 <h2 class="pdoc-module-header" id="StreamEventHandler">

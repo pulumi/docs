@@ -52,7 +52,6 @@ title: Module lambda
 * <a href="#NodeJSRuntime">let NodeJSRuntime</a>
 * <a href="#Python2d7Runtime">let Python2d7Runtime</a>
 * <a href="#Python3d6Runtime">let Python3d6Runtime</a>
-* <a href="#"./function"">module "./function"</a>
 * <a href="#BaseCallbackFunctionArgs">type BaseCallbackFunctionArgs</a>
 * <a href="#Callback">type Callback</a>
 * <a href="#CallbackFactory">type CallbackFactory</a>
@@ -1173,6 +1172,16 @@ The amount of reserved concurrent executions for this lambda function. A value o
 <pre class="highlight"><span class='kd'>public </span>role: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ARN'>ARN</a>&gt;;</pre>
 
 IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. See [Lambda Permission Model][4] for more details.
+
+</div>
+<h3 class="pdoc-member-header" id="Function-roleInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L377">property <b>roleInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>roleInstance?: iam.Role;</pre>
+
+Actual Role instance value for this Function.  Will only be set if this function was
+created from [createFunction]
 
 </div>
 <h3 class="pdoc-member-header" id="Function-runtime">
@@ -3699,16 +3708,6 @@ A statement identifier prefix. Terraform will generate a unique suffix. Conflict
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>let</span> Python3d6Runtime: <a href='#Runtime'>Runtime</a> = <span class='s2'>&#34;python3.6&#34;</span>;</pre>
-</div>
-<h2 class="pdoc-module-header" id="&#34;./function&#34;">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L371">module <b>"./function"</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<h3 class="pdoc-member-header" id="Function">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L372">interface <b>Function</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-</div>
 </div>
 <h2 class="pdoc-module-header" id="BaseCallbackFunctionArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L157">type <b>BaseCallbackFunctionArgs</b></a>
