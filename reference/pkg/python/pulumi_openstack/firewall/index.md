@@ -149,7 +149,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.firewall.GetPolicyResult">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.firewall.</code><code class="descname">GetPolicyResult</code><span class="sig-paren">(</span><em>audited=None</em>, <em>description=None</em>, <em>region=None</em>, <em>rules=None</em>, <em>shared=None</em>, <em>tenant_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.firewall.GetPolicyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.firewall.</code><code class="descname">GetPolicyResult</code><span class="sig-paren">(</span><em>audited=None</em>, <em>description=None</em>, <em>name=None</em>, <em>policy_id=None</em>, <em>region=None</em>, <em>rules=None</em>, <em>shared=None</em>, <em>tenant_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.firewall.GetPolicyResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getPolicy.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.firewall.GetPolicyResult.audited">
@@ -161,6 +161,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.firewall.GetPolicyResult.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.firewall.GetPolicyResult.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>The description of the firewall policy.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.firewall.GetPolicyResult.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.firewall.GetPolicyResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.firewall.GetPolicyResult.policy_id">
+<code class="descname">policy_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.firewall.GetPolicyResult.policy_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -355,7 +367,7 @@ firewall rule.</li>
 <li><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enabled status for the firewall rule (must be “true”
 or “false” if provided - defaults to “true”). Changing this updates the
 <code class="docutils literal notranslate"><span class="pre">enabled</span></code> status of an existing firewall rule.</li>
-<li><strong>ip_version</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – IP version, either 4 (default) or 6. Changing this
+<li><strong>ip_version</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – IP version, either 4 (default) or 6. Changing this
 updates the <code class="docutils literal notranslate"><span class="pre">ip_version</span></code> of an existing firewall rule.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the firewall rule. Changing this
 updates the <code class="docutils literal notranslate"><span class="pre">name</span></code> of an existing firewall rule.</li>

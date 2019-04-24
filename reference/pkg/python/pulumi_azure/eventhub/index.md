@@ -955,7 +955,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.eventhub.GetEventhubNamespaceResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">GetEventhubNamespaceResult</code><span class="sig-paren">(</span><em>auto_inflate_enabled=None</em>, <em>capacity=None</em>, <em>default_primary_connection_string=None</em>, <em>default_primary_key=None</em>, <em>default_secondary_connection_string=None</em>, <em>default_secondary_key=None</em>, <em>kafka_enabled=None</em>, <em>location=None</em>, <em>maximum_throughput_units=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.GetEventhubNamespaceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">GetEventhubNamespaceResult</code><span class="sig-paren">(</span><em>auto_inflate_enabled=None</em>, <em>capacity=None</em>, <em>default_primary_connection_string=None</em>, <em>default_primary_key=None</em>, <em>default_secondary_connection_string=None</em>, <em>default_secondary_key=None</em>, <em>kafka_enabled=None</em>, <em>location=None</em>, <em>maximum_throughput_units=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.GetEventhubNamespaceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getEventhubNamespace.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.GetEventhubNamespaceResult.auto_inflate_enabled">
@@ -1029,7 +1029,7 @@ authorization rule <code class="docutils literal notranslate"><span class="pre">
 
 <dl class="class">
 <dt id="pulumi_azure.eventhub.GetServiceBusNamespaceResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">GetServiceBusNamespaceResult</code><span class="sig-paren">(</span><em>capacity=None</em>, <em>default_primary_connection_string=None</em>, <em>default_primary_key=None</em>, <em>default_secondary_connection_string=None</em>, <em>default_secondary_key=None</em>, <em>location=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.GetServiceBusNamespaceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">GetServiceBusNamespaceResult</code><span class="sig-paren">(</span><em>capacity=None</em>, <em>default_primary_connection_string=None</em>, <em>default_primary_key=None</em>, <em>default_secondary_connection_string=None</em>, <em>default_secondary_key=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.GetServiceBusNamespaceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getServiceBusNamespace.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.GetServiceBusNamespaceResult.capacity">

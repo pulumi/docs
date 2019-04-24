@@ -86,7 +86,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.autoscaling.GetGroupResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.autoscaling.</code><code class="descname">GetGroupResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>availability_zones=None</em>, <em>default_cooldown=None</em>, <em>desired_capacity=None</em>, <em>health_check_grace_period=None</em>, <em>health_check_type=None</em>, <em>launch_configuration=None</em>, <em>load_balancers=None</em>, <em>max_size=None</em>, <em>min_size=None</em>, <em>new_instances_protected_from_scale_in=None</em>, <em>placement_group=None</em>, <em>service_linked_role_arn=None</em>, <em>status=None</em>, <em>target_group_arns=None</em>, <em>termination_policies=None</em>, <em>vpc_zone_identifier=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.GetGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.autoscaling.</code><code class="descname">GetGroupResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>availability_zones=None</em>, <em>default_cooldown=None</em>, <em>desired_capacity=None</em>, <em>health_check_grace_period=None</em>, <em>health_check_type=None</em>, <em>launch_configuration=None</em>, <em>load_balancers=None</em>, <em>max_size=None</em>, <em>min_size=None</em>, <em>name=None</em>, <em>new_instances_protected_from_scale_in=None</em>, <em>placement_group=None</em>, <em>service_linked_role_arn=None</em>, <em>status=None</em>, <em>target_group_arns=None</em>, <em>termination_policies=None</em>, <em>vpc_zone_identifier=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.GetGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getGroup.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.autoscaling.GetGroupResult.arn">
@@ -140,6 +140,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.autoscaling.GetGroupResult.min_size">
 <code class="descname">min_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.GetGroupResult.min_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>The minimum size of the group.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.autoscaling.GetGroupResult.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.GetGroupResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Auto Scaling group.</p>
 </dd></dl>
 
 <dl class="attribute">

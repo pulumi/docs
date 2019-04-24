@@ -2,7 +2,7 @@
 <span id="devtest"></span><h1>devtest<a class="headerlink" href="#module-pulumi_azure.devtest" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.devtest.GetLabResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.devtest.</code><code class="descname">GetLabResult</code><span class="sig-paren">(</span><em>artifacts_storage_account_id=None</em>, <em>default_premium_storage_account_id=None</em>, <em>default_storage_account_id=None</em>, <em>key_vault_id=None</em>, <em>location=None</em>, <em>premium_data_disk_storage_account_id=None</em>, <em>storage_type=None</em>, <em>tags=None</em>, <em>unique_identifier=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.GetLabResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.devtest.</code><code class="descname">GetLabResult</code><span class="sig-paren">(</span><em>artifacts_storage_account_id=None</em>, <em>default_premium_storage_account_id=None</em>, <em>default_storage_account_id=None</em>, <em>key_vault_id=None</em>, <em>location=None</em>, <em>name=None</em>, <em>premium_data_disk_storage_account_id=None</em>, <em>resource_group_name=None</em>, <em>storage_type=None</em>, <em>tags=None</em>, <em>unique_identifier=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.GetLabResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getLab.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.devtest.GetLabResult.artifacts_storage_account_id">

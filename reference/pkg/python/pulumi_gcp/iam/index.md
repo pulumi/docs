@@ -2,7 +2,7 @@
 <span id="iam"></span><h1>iam<a class="headerlink" href="#module-pulumi_gcp.iam" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.iam.GetRuleResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.iam.</code><code class="descname">GetRuleResult</code><span class="sig-paren">(</span><em>included_permissions=None</em>, <em>stage=None</em>, <em>title=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iam.GetRuleResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.iam.</code><code class="descname">GetRuleResult</code><span class="sig-paren">(</span><em>included_permissions=None</em>, <em>name=None</em>, <em>stage=None</em>, <em>title=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iam.GetRuleResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRule.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.iam.GetRuleResult.included_permissions">

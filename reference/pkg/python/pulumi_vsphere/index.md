@@ -3351,7 +3351,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.GetComputeClusterResult">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">GetComputeClusterResult</code><span class="sig-paren">(</span><em>resource_pool_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetComputeClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">GetComputeClusterResult</code><span class="sig-paren">(</span><em>datacenter_id=None</em>, <em>name=None</em>, <em>resource_pool_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetComputeClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getComputeCluster.</p>
 <dl class="attribute">
 <dt id="pulumi_vsphere.GetComputeClusterResult.id">
@@ -3363,7 +3363,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.GetCustomAttributeResult">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">GetCustomAttributeResult</code><span class="sig-paren">(</span><em>managed_object_type=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetCustomAttributeResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">GetCustomAttributeResult</code><span class="sig-paren">(</span><em>managed_object_type=None</em>, <em>name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetCustomAttributeResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCustomAttribute.</p>
 <dl class="attribute">
 <dt id="pulumi_vsphere.GetCustomAttributeResult.id">
@@ -3375,7 +3375,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.GetDatacenterResult">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">GetDatacenterResult</code><span class="sig-paren">(</span><em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetDatacenterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">GetDatacenterResult</code><span class="sig-paren">(</span><em>name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetDatacenterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDatacenter.</p>
 <dl class="attribute">
 <dt id="pulumi_vsphere.GetDatacenterResult.id">
@@ -3387,7 +3387,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.GetDatastoreClusterResult">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">GetDatastoreClusterResult</code><span class="sig-paren">(</span><em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetDatastoreClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">GetDatastoreClusterResult</code><span class="sig-paren">(</span><em>datacenter_id=None</em>, <em>name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetDatastoreClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDatastoreCluster.</p>
 <dl class="attribute">
 <dt id="pulumi_vsphere.GetDatastoreClusterResult.id">
@@ -3399,7 +3399,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.GetDatastoreResult">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">GetDatastoreResult</code><span class="sig-paren">(</span><em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetDatastoreResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">GetDatastoreResult</code><span class="sig-paren">(</span><em>datacenter_id=None</em>, <em>name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetDatastoreResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDatastore.</p>
 <dl class="attribute">
 <dt id="pulumi_vsphere.GetDatastoreResult.id">
@@ -3411,7 +3411,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.GetDistributedVirtualSwitchResult">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">GetDistributedVirtualSwitchResult</code><span class="sig-paren">(</span><em>uplinks=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetDistributedVirtualSwitchResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">GetDistributedVirtualSwitchResult</code><span class="sig-paren">(</span><em>datacenter_id=None</em>, <em>name=None</em>, <em>uplinks=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetDistributedVirtualSwitchResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDistributedVirtualSwitch.</p>
 <dl class="attribute">
 <dt id="pulumi_vsphere.GetDistributedVirtualSwitchResult.id">
@@ -3423,7 +3423,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.GetFolderResult">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">GetFolderResult</code><span class="sig-paren">(</span><em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetFolderResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">GetFolderResult</code><span class="sig-paren">(</span><em>path=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetFolderResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getFolder.</p>
 <dl class="attribute">
 <dt id="pulumi_vsphere.GetFolderResult.id">
@@ -3435,7 +3435,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.GetHostResult">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">GetHostResult</code><span class="sig-paren">(</span><em>resource_pool_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetHostResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">GetHostResult</code><span class="sig-paren">(</span><em>datacenter_id=None</em>, <em>name=None</em>, <em>resource_pool_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetHostResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getHost.</p>
 <dl class="attribute">
 <dt id="pulumi_vsphere.GetHostResult.resource_pool_id">
@@ -3454,7 +3454,7 @@ root resource pool.</p>
 
 <dl class="class">
 <dt id="pulumi_vsphere.GetNetworkResult">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">GetNetworkResult</code><span class="sig-paren">(</span><em>type=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetNetworkResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">GetNetworkResult</code><span class="sig-paren">(</span><em>datacenter_id=None</em>, <em>name=None</em>, <em>type=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetNetworkResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getNetwork.</p>
 <dl class="attribute">
 <dt id="pulumi_vsphere.GetNetworkResult.id">
@@ -3466,7 +3466,7 @@ root resource pool.</p>
 
 <dl class="class">
 <dt id="pulumi_vsphere.GetResourcePoolResult">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">GetResourcePoolResult</code><span class="sig-paren">(</span><em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetResourcePoolResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">GetResourcePoolResult</code><span class="sig-paren">(</span><em>datacenter_id=None</em>, <em>name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetResourcePoolResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getResourcePool.</p>
 <dl class="attribute">
 <dt id="pulumi_vsphere.GetResourcePoolResult.id">
@@ -3478,7 +3478,7 @@ root resource pool.</p>
 
 <dl class="class">
 <dt id="pulumi_vsphere.GetTagCategoryResult">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">GetTagCategoryResult</code><span class="sig-paren">(</span><em>associable_types=None</em>, <em>cardinality=None</em>, <em>description=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetTagCategoryResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">GetTagCategoryResult</code><span class="sig-paren">(</span><em>associable_types=None</em>, <em>cardinality=None</em>, <em>description=None</em>, <em>name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetTagCategoryResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getTagCategory.</p>
 <dl class="attribute">
 <dt id="pulumi_vsphere.GetTagCategoryResult.id">
@@ -3490,7 +3490,7 @@ root resource pool.</p>
 
 <dl class="class">
 <dt id="pulumi_vsphere.GetTagResult">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">GetTagResult</code><span class="sig-paren">(</span><em>description=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetTagResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">GetTagResult</code><span class="sig-paren">(</span><em>category_id=None</em>, <em>description=None</em>, <em>name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetTagResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getTag.</p>
 <dl class="attribute">
 <dt id="pulumi_vsphere.GetTagResult.id">
@@ -3502,7 +3502,7 @@ root resource pool.</p>
 
 <dl class="class">
 <dt id="pulumi_vsphere.GetVappContainerResult">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">GetVappContainerResult</code><span class="sig-paren">(</span><em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetVappContainerResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">GetVappContainerResult</code><span class="sig-paren">(</span><em>datacenter_id=None</em>, <em>name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetVappContainerResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVappContainer.</p>
 <dl class="attribute">
 <dt id="pulumi_vsphere.GetVappContainerResult.id">
@@ -3514,7 +3514,7 @@ root resource pool.</p>
 
 <dl class="class">
 <dt id="pulumi_vsphere.GetVirtualMachineResult">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">GetVirtualMachineResult</code><span class="sig-paren">(</span><em>alternate_guest_name=None</em>, <em>disks=None</em>, <em>firmware=None</em>, <em>guest_id=None</em>, <em>network_interface_types=None</em>, <em>scsi_bus_sharing=None</em>, <em>scsi_type=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetVirtualMachineResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">GetVirtualMachineResult</code><span class="sig-paren">(</span><em>alternate_guest_name=None</em>, <em>datacenter_id=None</em>, <em>disks=None</em>, <em>firmware=None</em>, <em>guest_id=None</em>, <em>name=None</em>, <em>network_interface_types=None</em>, <em>scsi_bus_sharing=None</em>, <em>scsi_controller_scan_count=None</em>, <em>scsi_type=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetVirtualMachineResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVirtualMachine.</p>
 <dl class="attribute">
 <dt id="pulumi_vsphere.GetVirtualMachineResult.alternate_guest_name">
@@ -3584,7 +3584,7 @@ defined by <code class="docutils literal notranslate"><span class="pre">scsi_con
 
 <dl class="class">
 <dt id="pulumi_vsphere.GetVmfsDisksResult">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">GetVmfsDisksResult</code><span class="sig-paren">(</span><em>disks=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetVmfsDisksResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">GetVmfsDisksResult</code><span class="sig-paren">(</span><em>disks=None</em>, <em>filter=None</em>, <em>host_system_id=None</em>, <em>rescan=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.GetVmfsDisksResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVmfsDisks.</p>
 <dl class="attribute">
 <dt id="pulumi_vsphere.GetVmfsDisksResult.disks">

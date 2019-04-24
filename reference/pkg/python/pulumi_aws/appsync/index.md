@@ -210,7 +210,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.appsync.GraphQLApi">
-<em class="property">class </em><code class="descclassname">pulumi_aws.appsync.</code><code class="descname">GraphQLApi</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>authentication_type=None</em>, <em>log_config=None</em>, <em>name=None</em>, <em>openid_connect_config=None</em>, <em>user_pool_config=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.GraphQLApi" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.appsync.</code><code class="descname">GraphQLApi</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>authentication_type=None</em>, <em>log_config=None</em>, <em>name=None</em>, <em>openid_connect_config=None</em>, <em>schema=None</em>, <em>user_pool_config=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.GraphQLApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AppSync GraphQL API.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -223,6 +223,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>log_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument containing logging configuration. Defined below.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A user-supplied name for the GraphqlApi.</li>
 <li><strong>openid_connect_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument containing OpenID Connect configuration. Defined below.</li>
+<li><strong>schema</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The schema definition, in GraphQL schema language format. Terraform cannot perform drift detection of this configuration.</li>
 <li><strong>user_pool_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The Amazon Cognito User Pool configuration. Defined below.</li>
 </ul>
 </td>
@@ -260,6 +261,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.appsync.GraphQLApi.schema">
+<code class="descname">schema</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.GraphQLApi.schema" title="Permalink to this definition">¶</a></dt>
+<dd><p>The schema definition, in GraphQL schema language format. Terraform cannot perform drift detection of this configuration.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.appsync.GraphQLApi.uris">
 <code class="descname">uris</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.GraphQLApi.uris" title="Permalink to this definition">¶</a></dt>
 <dd><p>Map of URIs associated with the API. e.g. <code class="docutils literal notranslate"><span class="pre">uris[&quot;GRAPHQL&quot;]</span> <span class="pre">=</span> <span class="pre">https://ID.appsync-api.REGION.amazonaws.com/graphql</span></code></p>
@@ -293,6 +300,110 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_aws.appsync.GraphQLApi.translate_input_property">
 <code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.GraphQLApi.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.appsync.Resolver">
+<em class="property">class </em><code class="descclassname">pulumi_aws.appsync.</code><code class="descname">Resolver</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_id=None</em>, <em>data_source=None</em>, <em>field=None</em>, <em>request_template=None</em>, <em>response_template=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.Resolver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides an AppSync Resolver.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>api_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API ID for the GraphQL API.</li>
+<li><strong>data_source</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DataSource name.</li>
+<li><strong>field</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The field name from the schema defined in the GraphQL API.</li>
+<li><strong>request_template</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The request mapping template for this resolver.</li>
+<li><strong>response_template</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The response mapping template for this resolver.</li>
+<li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type name from the schema defined in the GraphQL API.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_aws.appsync.Resolver.api_id">
+<code class="descname">api_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.Resolver.api_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The API ID for the GraphQL API.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.appsync.Resolver.arn">
+<code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.Resolver.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.appsync.Resolver.data_source">
+<code class="descname">data_source</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.Resolver.data_source" title="Permalink to this definition">¶</a></dt>
+<dd><p>The DataSource name.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.appsync.Resolver.field">
+<code class="descname">field</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.Resolver.field" title="Permalink to this definition">¶</a></dt>
+<dd><p>The field name from the schema defined in the GraphQL API.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.appsync.Resolver.request_template">
+<code class="descname">request_template</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.Resolver.request_template" title="Permalink to this definition">¶</a></dt>
+<dd><p>The request mapping template for this resolver.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.appsync.Resolver.response_template">
+<code class="descname">response_template</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.Resolver.response_template" title="Permalink to this definition">¶</a></dt>
+<dd><p>The response mapping template for this resolver.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.appsync.Resolver.type">
+<code class="descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.Resolver.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type name from the schema defined in the GraphQL API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.appsync.Resolver.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.Resolver.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.appsync.Resolver.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.Resolver.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <table class="docutils field-list" frame="void" rules="none">

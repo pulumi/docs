@@ -328,7 +328,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.operationalinsights.GetAnalyticsWorkspaceResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.operationalinsights.</code><code class="descname">GetAnalyticsWorkspaceResult</code><span class="sig-paren">(</span><em>location=None</em>, <em>portal_url=None</em>, <em>primary_shared_key=None</em>, <em>retention_in_days=None</em>, <em>secondary_shared_key=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>workspace_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.operationalinsights.GetAnalyticsWorkspaceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.operationalinsights.</code><code class="descname">GetAnalyticsWorkspaceResult</code><span class="sig-paren">(</span><em>location=None</em>, <em>name=None</em>, <em>portal_url=None</em>, <em>primary_shared_key=None</em>, <em>resource_group_name=None</em>, <em>retention_in_days=None</em>, <em>secondary_shared_key=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>workspace_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.operationalinsights.GetAnalyticsWorkspaceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAnalyticsWorkspace.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.operationalinsights.GetAnalyticsWorkspaceResult.portal_url">

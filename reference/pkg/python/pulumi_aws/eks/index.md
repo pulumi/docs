@@ -2,7 +2,7 @@
 <span id="eks"></span><h1>eks<a class="headerlink" href="#module-pulumi_aws.eks" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.eks.Cluster">
-<em class="property">class </em><code class="descclassname">pulumi_aws.eks.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>role_arn=None</em>, <em>version=None</em>, <em>vpc_config=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.eks.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>enabled_cluster_log_types=None</em>, <em>name=None</em>, <em>role_arn=None</em>, <em>version=None</em>, <em>vpc_config=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an EKS Cluster.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -11,6 +11,7 @@
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>enabled_cluster_log_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of the desired control plane logging to enable. For more information, see <a class="reference external" href="https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html">Amazon EKS Control Plane Logging</a></li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the cluster.</li>
 <li><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.</li>
 <li><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Desired Kubernetes master version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except those automatically triggered by EKS. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by EKS.</li>
@@ -30,6 +31,12 @@
 <dt id="pulumi_aws.eks.Cluster.certificate_authority">
 <code class="descname">certificate_authority</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.Cluster.certificate_authority" title="Permalink to this definition">¶</a></dt>
 <dd><p>Nested attribute containing <code class="docutils literal notranslate"><span class="pre">certificate-authority-data</span></code> for your cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.eks.Cluster.enabled_cluster_log_types">
+<code class="descname">enabled_cluster_log_types</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.Cluster.enabled_cluster_log_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of the desired control plane logging to enable. For more information, see <a class="reference external" href="https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html">Amazon EKS Control Plane Logging</a></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -110,7 +117,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.eks.GetClusterAuthResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.eks.</code><code class="descname">GetClusterAuthResult</code><span class="sig-paren">(</span><em>token=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.GetClusterAuthResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.eks.</code><code class="descname">GetClusterAuthResult</code><span class="sig-paren">(</span><em>name=None</em>, <em>token=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.GetClusterAuthResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getClusterAuth.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.eks.GetClusterAuthResult.token">
@@ -128,7 +135,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.eks.GetClusterResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.eks.</code><code class="descname">GetClusterResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>certificate_authority=None</em>, <em>created_at=None</em>, <em>endpoint=None</em>, <em>platform_version=None</em>, <em>role_arn=None</em>, <em>version=None</em>, <em>vpc_config=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.GetClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.eks.</code><code class="descname">GetClusterResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>certificate_authority=None</em>, <em>created_at=None</em>, <em>endpoint=None</em>, <em>name=None</em>, <em>platform_version=None</em>, <em>role_arn=None</em>, <em>version=None</em>, <em>vpc_config=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.GetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCluster.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.eks.GetClusterResult.arn">

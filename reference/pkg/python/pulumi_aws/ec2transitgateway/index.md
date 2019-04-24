@@ -2,7 +2,7 @@
 <span id="ec2transitgateway"></span><h1>ec2transitgateway<a class="headerlink" href="#module-pulumi_aws.ec2transitgateway" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.ec2transitgateway.GetRouteTableResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">GetRouteTableResult</code><span class="sig-paren">(</span><em>default_association_route_table=None</em>, <em>default_propagation_route_table=None</em>, <em>tags=None</em>, <em>transit_gateway_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.GetRouteTableResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">GetRouteTableResult</code><span class="sig-paren">(</span><em>default_association_route_table=None</em>, <em>default_propagation_route_table=None</em>, <em>filters=None</em>, <em>id=None</em>, <em>tags=None</em>, <em>transit_gateway_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.GetRouteTableResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRouteTable.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2transitgateway.GetRouteTableResult.default_association_route_table">
@@ -14,6 +14,12 @@
 <dt id="pulumi_aws.ec2transitgateway.GetRouteTableResult.default_propagation_route_table">
 <code class="descname">default_propagation_route_table</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.GetRouteTableResult.default_propagation_route_table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Boolean whether this is the default propagation route table for the EC2 Transit Gateway</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2transitgateway.GetRouteTableResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.GetRouteTableResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>EC2 Transit Gateway Route Table identifier</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -32,7 +38,7 @@
 
 <dl class="class">
 <dt id="pulumi_aws.ec2transitgateway.GetTransitGatewayResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">GetTransitGatewayResult</code><span class="sig-paren">(</span><em>amazon_side_asn=None</em>, <em>arn=None</em>, <em>association_default_route_table_id=None</em>, <em>auto_accept_shared_attachments=None</em>, <em>default_route_table_association=None</em>, <em>default_route_table_propagation=None</em>, <em>description=None</em>, <em>dns_support=None</em>, <em>owner_id=None</em>, <em>propagation_default_route_table_id=None</em>, <em>tags=None</em>, <em>vpn_ecmp_support=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.GetTransitGatewayResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">GetTransitGatewayResult</code><span class="sig-paren">(</span><em>amazon_side_asn=None</em>, <em>arn=None</em>, <em>association_default_route_table_id=None</em>, <em>auto_accept_shared_attachments=None</em>, <em>default_route_table_association=None</em>, <em>default_route_table_propagation=None</em>, <em>description=None</em>, <em>dns_support=None</em>, <em>filters=None</em>, <em>id=None</em>, <em>owner_id=None</em>, <em>propagation_default_route_table_id=None</em>, <em>tags=None</em>, <em>vpn_ecmp_support=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.GetTransitGatewayResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getTransitGateway.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2transitgateway.GetTransitGatewayResult.amazon_side_asn">
@@ -83,6 +89,12 @@
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.ec2transitgateway.GetTransitGatewayResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.GetTransitGatewayResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>EC2 Transit Gateway identifier</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.ec2transitgateway.GetTransitGatewayResult.owner_id">
 <code class="descname">owner_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.GetTransitGatewayResult.owner_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Identifier of the AWS account that owns the EC2 Transit Gateway</p>
@@ -110,12 +122,18 @@
 
 <dl class="class">
 <dt id="pulumi_aws.ec2transitgateway.GetVpcAttachmentResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">GetVpcAttachmentResult</code><span class="sig-paren">(</span><em>dns_support=None</em>, <em>ipv6_support=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em>, <em>transit_gateway_id=None</em>, <em>vpc_id=None</em>, <em>vpc_owner_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.GetVpcAttachmentResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">GetVpcAttachmentResult</code><span class="sig-paren">(</span><em>dns_support=None</em>, <em>filters=None</em>, <em>id=None</em>, <em>ipv6_support=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em>, <em>transit_gateway_id=None</em>, <em>vpc_id=None</em>, <em>vpc_owner_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.GetVpcAttachmentResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVpcAttachment.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2transitgateway.GetVpcAttachmentResult.dns_support">
 <code class="descname">dns_support</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.GetVpcAttachmentResult.dns_support" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether DNS support is enabled.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2transitgateway.GetVpcAttachmentResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.GetVpcAttachmentResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>EC2 Transit Gateway VPC Attachment identifier</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -152,6 +170,24 @@
 <dt id="pulumi_aws.ec2transitgateway.GetVpcAttachmentResult.vpc_owner_id">
 <code class="descname">vpc_owner_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.GetVpcAttachmentResult.vpc_owner_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Identifier of the AWS account that owns the EC2 VPC.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.ec2transitgateway.GetVpnAttachmentResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">GetVpnAttachmentResult</code><span class="sig-paren">(</span><em>tags=None</em>, <em>transit_gateway_id=None</em>, <em>vpn_connection_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.GetVpnAttachmentResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getVpnAttachment.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.ec2transitgateway.GetVpnAttachmentResult.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.GetVpnAttachmentResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value tags for the EC2 Transit Gateway VPN Attachment</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2transitgateway.GetVpnAttachmentResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.GetVpnAttachmentResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -749,6 +785,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2transitgateway.get_vpc_attachment">
 <code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">get_vpc_attachment</code><span class="sig-paren">(</span><em>filters=None</em>, <em>id=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.get_vpc_attachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information on an EC2 Transit Gateway VPC Attachment.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.ec2transitgateway.get_vpn_attachment">
+<code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">get_vpn_attachment</code><span class="sig-paren">(</span><em>tags=None</em>, <em>transit_gateway_id=None</em>, <em>vpn_connection_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.get_vpn_attachment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get information on an EC2 Transit Gateway VPN Attachment.</p>
 </dd></dl>
 
 </div>

@@ -2,7 +2,7 @@
 <span id="sns"></span><h1>sns<a class="headerlink" href="#module-pulumi_aws.sns" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.sns.GetTopicResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.sns.</code><code class="descname">GetTopicResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sns.GetTopicResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.sns.</code><code class="descname">GetTopicResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sns.GetTopicResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getTopic.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.sns.GetTopicResult.arn">

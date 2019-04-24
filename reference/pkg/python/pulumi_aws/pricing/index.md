@@ -2,7 +2,7 @@
 <span id="pricing"></span><h1>pricing<a class="headerlink" href="#module-pulumi_aws.pricing" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.pricing.GetProductResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.pricing.</code><code class="descname">GetProductResult</code><span class="sig-paren">(</span><em>result=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.pricing.GetProductResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.pricing.</code><code class="descname">GetProductResult</code><span class="sig-paren">(</span><em>filters=None</em>, <em>result=None</em>, <em>service_code=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.pricing.GetProductResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getProduct.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.pricing.GetProductResult.result">

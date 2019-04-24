@@ -2,7 +2,7 @@
 <span id="managementgroups"></span><h1>managementgroups<a class="headerlink" href="#module-pulumi_azure.managementgroups" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.managementgroups.GetManagementGroupResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.managementgroups.</code><code class="descname">GetManagementGroupResult</code><span class="sig-paren">(</span><em>display_name=None</em>, <em>parent_management_group_id=None</em>, <em>subscription_ids=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.managementgroups.GetManagementGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.managementgroups.</code><code class="descname">GetManagementGroupResult</code><span class="sig-paren">(</span><em>display_name=None</em>, <em>group_id=None</em>, <em>parent_management_group_id=None</em>, <em>subscription_ids=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.managementgroups.GetManagementGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getManagementGroup.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.managementgroups.GetManagementGroupResult.display_name">

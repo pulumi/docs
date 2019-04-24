@@ -2,7 +2,7 @@
 <span id="recoveryservices"></span><h1>recoveryservices<a class="headerlink" href="#module-pulumi_azure.recoveryservices" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.recoveryservices.GetVMProtectionPolicyResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.recoveryservices.</code><code class="descname">GetVMProtectionPolicyResult</code><span class="sig-paren">(</span><em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.GetVMProtectionPolicyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.recoveryservices.</code><code class="descname">GetVMProtectionPolicyResult</code><span class="sig-paren">(</span><em>name=None</em>, <em>recovery_vault_name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.GetVMProtectionPolicyResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVMProtectionPolicy.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.recoveryservices.GetVMProtectionPolicyResult.tags">
@@ -20,7 +20,7 @@
 
 <dl class="class">
 <dt id="pulumi_azure.recoveryservices.GetVaultResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.recoveryservices.</code><code class="descname">GetVaultResult</code><span class="sig-paren">(</span><em>location=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.GetVaultResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.recoveryservices.</code><code class="descname">GetVaultResult</code><span class="sig-paren">(</span><em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.GetVaultResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVault.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.recoveryservices.GetVaultResult.location">

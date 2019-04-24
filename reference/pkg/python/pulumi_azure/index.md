@@ -16,12 +16,14 @@
 <li class="toctree-l1"><a class="reference internal" href="core/">core</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cosmosdb/">cosmosdb</a></li>
 <li class="toctree-l1"><a class="reference internal" href="databricks/">databricks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datafactory/">datafactory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="datalake/">datalake</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ddosprotection/">ddosprotection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="devspace/">devspace</a></li>
 <li class="toctree-l1"><a class="reference internal" href="devtest/">devtest</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dns/">dns</a></li>
 <li class="toctree-l1"><a class="reference internal" href="eventhub/">eventhub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hdinsight/">hdinsight</a></li>
 <li class="toctree-l1"><a class="reference internal" href="iot/">iot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="keyvault/">keyvault</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lb/">lb</a></li>
@@ -51,6 +53,7 @@
 <li class="toctree-l1"><a class="reference internal" href="signalr/">signalr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sql/">sql</a></li>
 <li class="toctree-l1"><a class="reference internal" href="storage/">storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="streamanalytics/">streamanalytics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="trafficmanager/">trafficmanager</a></li>
 </ul>
 </div>

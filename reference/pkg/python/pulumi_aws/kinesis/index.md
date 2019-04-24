@@ -13,14 +13,14 @@ allows processing and analyzing streaming data using standard SQL.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>cloudwatch_logging_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The CloudWatch log stream options to monitor application errors. 
+<li><strong>cloudwatch_logging_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The CloudWatch log stream options to monitor application errors.
 See CloudWatch Logging Options below for more details.</li>
 <li><strong>code</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – SQL Code to transform input data, and generate output.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the application.</li>
 <li><strong>inputs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Input configuration of the application. See Inputs below for more details.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the Kinesis Analytics Application.</li>
 <li><strong>outputs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Output destination configuration of the application. See Outputs below for more details.</li>
-<li><strong>reference_data_sources</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An S3 Reference Data Source for the application. 
+<li><strong>reference_data_sources</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.</li>
 </ul>
 </td>
@@ -36,7 +36,7 @@ See Reference Data Sources below for more details.</li>
 <dl class="attribute">
 <dt id="pulumi_aws.kinesis.AnalyticsApplication.cloudwatch_logging_options">
 <code class="descname">cloudwatch_logging_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.cloudwatch_logging_options" title="Permalink to this definition">¶</a></dt>
-<dd><p>The CloudWatch log stream options to monitor application errors. 
+<dd><p>The CloudWatch log stream options to monitor application errors.
 See CloudWatch Logging Options below for more details.</p>
 </dd></dl>
 
@@ -85,7 +85,7 @@ See CloudWatch Logging Options below for more details.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.kinesis.AnalyticsApplication.reference_data_sources">
 <code class="descname">reference_data_sources</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.reference_data_sources" title="Permalink to this definition">¶</a></dt>
-<dd><p>An S3 Reference Data Source for the application. 
+<dd><p>An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.</p>
 </dd></dl>
 
@@ -271,7 +271,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.kinesis.GetStreamResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.kinesis.</code><code class="descname">GetStreamResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>closed_shards=None</em>, <em>creation_timestamp=None</em>, <em>open_shards=None</em>, <em>retention_period=None</em>, <em>shard_level_metrics=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.GetStreamResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.kinesis.</code><code class="descname">GetStreamResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>closed_shards=None</em>, <em>creation_timestamp=None</em>, <em>name=None</em>, <em>open_shards=None</em>, <em>retention_period=None</em>, <em>shard_level_metrics=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.GetStreamResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getStream.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.kinesis.GetStreamResult.arn">
@@ -289,6 +289,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.kinesis.GetStreamResult.creation_timestamp">
 <code class="descname">creation_timestamp</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.GetStreamResult.creation_timestamp" title="Permalink to this definition">¶</a></dt>
 <dd><p>The approximate UNIX timestamp that the stream was created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.kinesis.GetStreamResult.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.GetStreamResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Kinesis Stream.</p>
 </dd></dl>
 
 <dl class="attribute">

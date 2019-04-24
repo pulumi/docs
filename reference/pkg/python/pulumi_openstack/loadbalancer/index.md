@@ -20,7 +20,7 @@ A valid value is true (UP) or false (DOWN).</li>
 Changing this creates a new L7 Policy.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable name for the L7 Policy. Does not have
 to be unique.</li>
-<li><strong>position</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The position of this policy on the listener. Positions start at 1.</li>
+<li><strong>position</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The position of this policy on the listener. Positions start at 1.</li>
 <li><strong>redirect_pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Requests matching this policy will be redirected to the
 pool with this ID. Only valid if action is REDIRECT_TO_POOL.</li>
 <li><strong>redirect_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Requests matching this policy will be redirected to this URL.
@@ -310,7 +310,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>admin_state_up</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The administrative state of the Listener.
 A valid value is true (UP) or false (DOWN).</li>
-<li><strong>connection_limit</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum number of connections allowed
+<li><strong>connection_limit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of connections allowed
 for the Listener.</li>
 <li><strong>default_pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the default pool with which the
 Listener is associated.</li>
@@ -326,7 +326,7 @@ Listener. Changing this creates a new Listener.</li>
 to be unique.</li>
 <li><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol - can either be TCP, HTTP, HTTPS or TERMINATED_HTTPS.
 Changing this creates a new Listener.</li>
-<li><strong>protocol_port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The port on which to listen for client traffic.
+<li><strong>protocol_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port on which to listen for client traffic.
 Changing this creates a new Listener.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an . If omitted, the
@@ -656,7 +656,7 @@ A valid value is true (UP) or false (DOWN).</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable name for the member.</li>
 <li><strong>pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the pool that this member will be
 assigned to.</li>
-<li><strong>protocol_port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The port on which to listen for client traffic.
+<li><strong>protocol_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port on which to listen for client traffic.
 Changing this creates a new member.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an . If omitted, the
@@ -666,7 +666,7 @@ member.</li>
 <li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required for admins. The UUID of the tenant who owns
 the member.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new member.</li>
-<li><strong>weight</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – A positive integer value that indicates the relative
+<li><strong>weight</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – A positive integer value that indicates the relative
 portion of traffic that this member should receive from the pool. For
 example, a member with a weight of 10 receives five times as much traffic
 as a member with a weight of 2.</li>
@@ -799,7 +799,7 @@ Acceptable values are ‘true’ and ‘false’. Changing this value updates th
 state of the existing member.</li>
 <li><strong>pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the LB pool. Changing this creates a new
 member.</li>
-<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – An integer representing the port on which the member is
+<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – An integer representing the port on which the member is
 hosted. Changing this creates a new member.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an LB member. If omitted, the
@@ -807,7 +807,7 @@ A Networking client is needed to create an LB member. If omitted, the
 LB member.</li>
 <li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the member. Required if admin wants to
 create a member for another tenant. Changing this creates a new member.</li>
-<li><strong>weight</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The load balancing weight of the member. This is currently unable
+<li><strong>weight</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The load balancing weight of the member. This is currently unable
 to be set through Terraform.</li>
 </ul>
 </td>
@@ -919,14 +919,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>admin_state_up</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The administrative state of the monitor.
 A valid value is true (UP) or false (DOWN).</li>
-<li><strong>delay</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time, in seconds, between sending probes to members.</li>
+<li><strong>delay</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time, in seconds, between sending probes to members.</li>
 <li><strong>expected_codes</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required for HTTP(S) types. Expected HTTP codes
 for a passing HTTP(S) monitor. You can either specify a single status like
 “200”, or a range like “200-202”.</li>
 <li><strong>http_method</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required for HTTP(S) types. The HTTP method used
 for requests by the monitor. If this attribute is not specified, it
 defaults to “GET”.</li>
-<li><strong>max_retries</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Number of permissible ping failures before
+<li><strong>max_retries</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of permissible ping failures before
 changing the member’s status to INACTIVE. Must be a number between 1
 and 10..</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Name of the Monitor.</li>
@@ -938,7 +938,7 @@ monitor.</li>
 <li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required for admins. The UUID of the tenant who owns
 the monitor.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new monitor.</li>
-<li><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Maximum number of seconds for a monitor to wait for a
+<li><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum number of seconds for a monitor to wait for a
 ping reply before it times out. The value must be less than the delay
 value.</li>
 <li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of probe, which is PING, TCP, HTTP, or HTTPS,
@@ -1094,7 +1094,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>admin_state_up</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The administrative state of the monitor.
 Acceptable values are “true” and “false”. Changing this value updates the
 state of the existing monitor.</li>
-<li><strong>delay</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time, in seconds, between sending probes to members.
+<li><strong>delay</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time, in seconds, between sending probes to members.
 Changing this creates a new monitor.</li>
 <li><strong>expected_codes</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required for HTTP(S) types. Expected HTTP codes
 for a passing HTTP(S) monitor. You can either specify a single status like
@@ -1103,7 +1103,7 @@ of the existing monitor.</li>
 <li><strong>http_method</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required for HTTP(S) types. The HTTP method used
 for requests by the monitor. If this attribute is not specified, it defaults
 to “GET”. Changing this updates the http_method of the existing monitor.</li>
-<li><strong>max_retries</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Number of permissible ping failures before changing
+<li><strong>max_retries</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of permissible ping failures before changing
 the member’s status to INACTIVE. Must be a number between 1 and 10. Changing
 this updates the max_retries of the existing monitor.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
@@ -1112,7 +1112,7 @@ A Networking client is needed to create an LB monitor. If omitted, the
 LB monitor.</li>
 <li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the monitor. Required if admin wants to
 create a monitor for another tenant. Changing this creates a new monitor.</li>
-<li><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Maximum number of seconds for a monitor to wait for a
+<li><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum number of seconds for a monitor to wait for a
 ping reply before it times out. The value must be less than the delay value.
 Changing this updates the timeout of the existing monitor.</li>
 <li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of probe, which is PING, TCP, HTTP, or HTTPS,
@@ -1553,7 +1553,7 @@ vip.</li>
 <li><strong>admin_state_up</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The administrative state of the vip.
 Acceptable values are “true” and “false”. Changing this value updates the
 state of the existing vip.</li>
-<li><strong>conn_limit</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum number of connections allowed for the
+<li><strong>conn_limit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of connections allowed for the
 vip. Default is -1, meaning no limit. Changing this updates the conn_limit
 of the existing vip.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable description for the vip. Changing
@@ -1567,7 +1567,7 @@ The persistence object structure is documented below. Changing this updates
 the persistence of the existing vip.</li>
 <li><strong>pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the pool with which the vip is associated.
 Changing this updates the pool_id of the existing vip.</li>
-<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The port on which to listen for client traffic. Changing
+<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port on which to listen for client traffic. Changing
 this creates a new vip.</li>
 <li><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol - can be either ‘TCP, ‘HTTP’, or
 HTTPS’. Changing this creates a new vip.</li>

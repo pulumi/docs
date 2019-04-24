@@ -117,14 +117,14 @@ requests. Example: <code class="docutils literal notranslate"><span class="pre">
 <li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>application_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the application the policy is
 associated with.</li>
-<li><strong>decision</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The complete URL of the asset you wish to put
-Cloudflare Access in front of. Can include subdomains or paths. Or both.</li>
+<li><strong>decision</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines the action Access will take if the policy matches the user.
+Allowed values: <code class="docutils literal notranslate"><span class="pre">allow</span></code>, <code class="docutils literal notranslate"><span class="pre">deny</span></code>, <code class="docutils literal notranslate"><span class="pre">bypass</span></code></li>
 <li><strong>excludes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A series of access conditions, see below for
 full list.</li>
 <li><strong>includes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A series of access conditions, see below for
 full list.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Friendly name of the Access Application.</li>
-<li><strong>precedence</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The unique precedence for policies on a single application. Integer.</li>
+<li><strong>precedence</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The unique precedence for policies on a single application. Integer.</li>
 <li><strong>requires</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A series of access conditions, see below for
 full list.</li>
 <li><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone to which the access rule should be
@@ -144,8 +144,8 @@ associated with.</p>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.AccessPolicy.decision">
 <code class="descname">decision</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.AccessPolicy.decision" title="Permalink to this definition">¶</a></dt>
-<dd><p>The complete URL of the asset you wish to put
-Cloudflare Access in front of. Can include subdomains or paths. Or both.</p>
+<dd><p>Defines the action Access will take if the policy matches the user.
+Allowed values: <code class="docutils literal notranslate"><span class="pre">allow</span></code>, <code class="docutils literal notranslate"><span class="pre">deny</span></code>, <code class="docutils literal notranslate"><span class="pre">bypass</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -610,7 +610,7 @@ A filter expression permits selecting traffic by multiple criteria allowing grea
 <li><strong>action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The action to apply to a matched request. Allowed values: “block”, “challenge”, “allow”, “js_challenge”. Enterprise plan also allows “log”.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the rule to help identify it.</li>
 <li><strong>paused</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether this filter based firewall rule is currently paused. Boolean value.</li>
-<li><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The priority of the rule to allow control of processing order. A lower number indicates high priority. If not provided, any rules with a priority will be sequenced before those without.</li>
+<li><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The priority of the rule to allow control of processing order. A lower number indicates high priority. If not provided, any rules with a priority will be sequenced before those without.</li>
 <li><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone to which the Firewall Rule should be added. Will be resolved to <code class="docutils literal notranslate"><span class="pre">zone_id</span></code> upon creation.</li>
 <li><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone to which the Filter should be added.</li>
 </ul>
@@ -708,7 +708,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudflare.GetZonesResult">
-<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">GetZonesResult</code><span class="sig-paren">(</span><em>zones=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.GetZonesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">GetZonesResult</code><span class="sig-paren">(</span><em>filter=None</em>, <em>zones=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.GetZonesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getZones.</p>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.GetZonesResult.id">
@@ -720,7 +720,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudflare.LoadBalancer">
-<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">LoadBalancer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>default_pool_ids=None</em>, <em>description=None</em>, <em>fallback_pool_id=None</em>, <em>name=None</em>, <em>pop_pools=None</em>, <em>proxied=None</em>, <em>region_pools=None</em>, <em>session_affinity=None</em>, <em>steering_policy=None</em>, <em>ttl=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LoadBalancer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">LoadBalancer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>default_pool_ids=None</em>, <em>description=None</em>, <em>enabled=None</em>, <em>fallback_pool_id=None</em>, <em>name=None</em>, <em>pop_pools=None</em>, <em>proxied=None</em>, <em>region_pools=None</em>, <em>session_affinity=None</em>, <em>steering_policy=None</em>, <em>ttl=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LoadBalancer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare Load Balancer resource. This sits in front of a number of defined pools of origins and provides various options for geographically-aware load balancing. Note that the load balancing feature must be enabled in your Clouflare account before you can use this resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -731,6 +731,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>default_pool_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of pool IDs ordered by their failover priority. Used whenever region/pop pools are not defined.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Free text description.</li>
+<li><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable or disable the load balancer. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code> (enabled).</li>
 <li><strong>fallback_pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The pool ID to use when all other pools are detected as unhealthy.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS name (FQDN, including the zone) to associate with the load balancer.</li>
 <li><strong>pop_pools</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set containing mappings of Cloudflare Point-of-Presence (PoP) identifiers to a list of pool IDs (ordered by their failover priority) for the PoP (datacenter). This feature is only available to enterprise customers. Fields documented below.</li>
@@ -738,7 +739,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>region_pools</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set containing mappings of region/country codes to a list of pool IDs (ordered by their failover priority) for the given region. Fields documented below.</li>
 <li><strong>session_affinity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Associates all requests coming from an end-user with a single origin. Cloudflare will set a cookie on the initial response to the client, such that consequent requests with the cookie in the request will go to the same origin, so long as it is available.</li>
 <li><strong>steering_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Determine which method the load balancer uses to determine the fastest route to your origin. Valid values  are: “off”, “geo”, “dynamic_latency” or “”. Default is “”.</li>
-<li><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Time to live (TTL) of this load balancer’s DNS <code class="docutils literal notranslate"><span class="pre">name</span></code>. Conflicts with <code class="docutils literal notranslate"><span class="pre">proxied</span></code> - this cannot be set for proxied load balancers. Default is <code class="docutils literal notranslate"><span class="pre">30</span></code>.</li>
+<li><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Time to live (TTL) of this load balancer’s DNS <code class="docutils literal notranslate"><span class="pre">name</span></code>. Conflicts with <code class="docutils literal notranslate"><span class="pre">proxied</span></code> - this cannot be set for proxied load balancers. Default is <code class="docutils literal notranslate"><span class="pre">30</span></code>.</li>
 <li><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone to add the load balancer to.</li>
 </ul>
 </td>
@@ -761,6 +762,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.LoadBalancer.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.LoadBalancer.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>Free text description.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_cloudflare.LoadBalancer.enabled">
+<code class="descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.LoadBalancer.enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable or disable the load balancer. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code> (enabled).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -886,11 +893,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>expected_codes</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The expected HTTP response code or code range of the health check. Eg <code class="docutils literal notranslate"><span class="pre">2xx</span></code></li>
 <li><strong>follow_redirects</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Follow redirects if returned by the origin.</li>
 <li><strong>headers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The header name.</li>
-<li><strong>interval</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The interval between each health check. Shorter intervals may improve failover time, but will increase load on the origins as we check from multiple locations. Default: 60.</li>
+<li><strong>interval</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The interval between each health check. Shorter intervals may improve failover time, but will increase load on the origins as we check from multiple locations. Default: 60.</li>
 <li><strong>method</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The HTTP method to use for the health check. Default: “GET”.</li>
 <li><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoint path to health check against. Default: “/”.</li>
-<li><strong>retries</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of retries to attempt in case of a timeout before marking the origin as unhealthy. Retries are attempted immediately. Default: 2.</li>
-<li><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The timeout (in seconds) before marking the health check as failed. Default: 5.</li>
+<li><strong>retries</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of retries to attempt in case of a timeout before marking the origin as unhealthy. Retries are attempted immediately. Default: 2.</li>
+<li><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The timeout (in seconds) before marking the health check as failed. Default: 5.</li>
 <li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol to use for the healthcheck. Currently supported protocols are ‘HTTP’ and ‘HTTPS’. Default: “http”.</li>
 </ul>
 </td>
@@ -1035,7 +1042,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>check_regions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of regions (specified by region code) from which to run health checks. Empty means every Cloudflare data center (the default), but requires an Enterprise plan. Region codes can be found <a class="reference external" href="https://support.cloudflare.com/hc/en-us/articles/115000540888-Load-Balancing-Geographic-Regions">here</a>.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Free text description.</li>
 <li><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable (the default) this origin within the Pool. Disabled origins will not receive traffic and are excluded from health checks. The origin will only be disabled for the current pool.</li>
-<li><strong>minimum_origins</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The minimum number of origins that must be healthy for this pool to serve traffic. If the number of healthy origins falls below this number, the pool will be marked unhealthy and we will failover to the next available pool. Default: 1.</li>
+<li><strong>minimum_origins</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The minimum number of origins that must be healthy for this pool to serve traffic. If the number of healthy origins falls below this number, the pool will be marked unhealthy and we will failover to the next available pool. Default: 1.</li>
 <li><strong>monitor</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Monitor to use for health checking origins within this pool.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-identifiable name for the origin.</li>
 <li><strong>notification_email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The email address to send health status notifications to. This can be an individual mailbox or a mailing list.</li>
@@ -1146,6 +1153,69 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_cloudflare.LogpushJob">
+<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">LogpushJob</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>destination_conf=None</em>, <em>enabled=None</em>, <em>logpull_options=None</em>, <em>name=None</em>, <em>ownership_challenge=None</em>, <em>zone_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LogpushJob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a resource which manages Cloudflare logpush jobs.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>ownership_challenge</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Ownership challenge token to prove destination ownership. See <a class="reference external" href="https://developers.cloudflare.com/logs/tutorials/tutorial-logpush-curl/">https://developers.cloudflare.com/logs/tutorials/tutorial-logpush-curl/</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_cloudflare.LogpushJob.ownership_challenge">
+<code class="descname">ownership_challenge</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.LogpushJob.ownership_challenge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ownership challenge token to prove destination ownership. See <a class="reference external" href="https://developers.cloudflare.com/logs/tutorials/tutorial-logpush-curl/">https://developers.cloudflare.com/logs/tutorials/tutorial-logpush-curl/</a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_cloudflare.LogpushJob.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LogpushJob.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_cloudflare.LogpushJob.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LogpushJob.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_cloudflare.PageRule">
 <em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">PageRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>actions=None</em>, <em>priority=None</em>, <em>status=None</em>, <em>target=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.PageRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare page rule resource.</p>
@@ -1157,7 +1227,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>actions</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The actions taken by the page rule, options given below.</li>
-<li><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The priority of the page rule among others for this target, the higher the number the higher the priority as per <a class="reference external" href="https://api.cloudflare.com/#page-rules-for-a-zone-create-page-rule">API documentation</a>.</li>
+<li><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The priority of the page rule among others for this target, the higher the number the higher the priority as per <a class="reference external" href="https://api.cloudflare.com/#page-rules-for-a-zone-create-page-rule">API documentation</a>.</li>
 <li><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether the page rule is active or disabled.</li>
 <li><strong>target</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL pattern to target with the page rule.</li>
 <li><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone to which the page rule should be added.</li>
@@ -1318,8 +1388,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A note that you can use to describe the reason for a rate limit. This value is sanitized and all tags are removed.</li>
 <li><strong>disabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether this ratelimit is currently disabled. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>match</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Determines which traffic the rate limit counts towards the threshold. By default matches all traffic in the zone. See definition below.</li>
-<li><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time in seconds to count matching traffic. If the count exceeds threshold within this period the action will be performed (min: 1, max: 86,400).</li>
-<li><strong>threshold</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The threshold that triggers the rate limit mitigations, combine with period. i.e. threshold per period (min: 2, max: 1,000,000).</li>
+<li><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time in seconds to count matching traffic. If the count exceeds threshold within this period the action will be performed (min: 1, max: 86,400).</li>
+<li><strong>threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The threshold that triggers the rate limit mitigations, combine with period. i.e. threshold per period (min: 2, max: 1,000,000).</li>
 <li><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone to apply rate limiting to.</li>
 </ul>
 </td>
@@ -1440,9 +1510,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>data</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of attributes that constitute the record value. Primarily used for LOC and SRV record types. Either this or <code class="docutils literal notranslate"><span class="pre">value</span></code> must be specified</li>
 <li><strong>domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone to add the record to</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the record</li>
-<li><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The priority of the record</li>
+<li><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The priority of the record</li>
 <li><strong>proxied</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the record gets Cloudflare’s origin protection; defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
-<li><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The TTL of the record (<a class="reference external" href="https://api.cloudflare.com/#dns-records-for-a-zone-create-dns-record">automatic: ‘1’</a>)</li>
+<li><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The TTL of the record (<a class="reference external" href="https://api.cloudflare.com/#dns-records-for-a-zone-create-dns-record">automatic: ‘1’</a>)</li>
 <li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the record</li>
 <li><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The (string) value of the record. Either this or <code class="docutils literal notranslate"><span class="pre">data</span></code> must be specified</li>
 </ul>
@@ -1589,7 +1659,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>ip_firewall</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables the IP Firewall for this application. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</li>
 <li><strong>origin_directs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of destination addresses to the origin. e.g. <code class="docutils literal notranslate"><span class="pre">tcp://192.0.2.1:22</span></code>.</li>
 <li><strong>origin_dns</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A destination DNS addresses to the origin. Fields documented below.</li>
-<li><strong>origin_port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – If using <code class="docutils literal notranslate"><span class="pre">origin_dns</span></code> this is a required attribute. Origin port to proxy traffice to e.g. <code class="docutils literal notranslate"><span class="pre">22</span></code>.</li>
+<li><strong>origin_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – If using <code class="docutils literal notranslate"><span class="pre">origin_dns</span></code> this is a required attribute. Origin port to proxy traffice to e.g. <code class="docutils literal notranslate"><span class="pre">22</span></code>.</li>
 <li><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The port configuration at Cloudflare’s edge. e.g. <code class="docutils literal notranslate"><span class="pre">tcp/22</span></code>.</li>
 <li><strong>proxy_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables Proxy Protocol v1 to the origin. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>tls</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – TLS configuration option for Cloudflare to connect to your origin. Valid values are: <code class="docutils literal notranslate"><span class="pre">off</span></code>, <code class="docutils literal notranslate"><span class="pre">flexible</span></code>, <code class="docutils literal notranslate"><span class="pre">full</span></code> and <code class="docutils literal notranslate"><span class="pre">strict</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">off</span></code>.</li>

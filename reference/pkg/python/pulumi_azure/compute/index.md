@@ -369,7 +369,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.compute.GetAvailabilitySetResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">GetAvailabilitySetResult</code><span class="sig-paren">(</span><em>location=None</em>, <em>managed=None</em>, <em>platform_fault_domain_count=None</em>, <em>platform_update_domain_count=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetAvailabilitySetResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">GetAvailabilitySetResult</code><span class="sig-paren">(</span><em>location=None</em>, <em>managed=None</em>, <em>name=None</em>, <em>platform_fault_domain_count=None</em>, <em>platform_update_domain_count=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetAvailabilitySetResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAvailabilitySet.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetAvailabilitySetResult.location">
@@ -411,7 +411,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.compute.GetImageResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">GetImageResult</code><span class="sig-paren">(</span><em>data_disks=None</em>, <em>location=None</em>, <em>os_disks=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetImageResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">GetImageResult</code><span class="sig-paren">(</span><em>data_disks=None</em>, <em>location=None</em>, <em>name=None</em>, <em>name_regex=None</em>, <em>os_disks=None</em>, <em>resource_group_name=None</em>, <em>sort_descending=None</em>, <em>tags=None</em>, <em>zone_resilient=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetImageResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getImage.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetImageResult.data_disks">
@@ -423,6 +423,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.GetImageResult.location">
 <code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetImageResult.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>the Azure Location where this Image exists.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.GetImageResult.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetImageResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>the name of the Image.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -438,6 +444,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.compute.GetImageResult.zone_resilient">
+<code class="descname">zone_resilient</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetImageResult.zone_resilient" title="Permalink to this definition">¶</a></dt>
+<dd><p>is zone resiliency enabled?</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.compute.GetImageResult.id">
 <code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetImageResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -447,7 +459,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.compute.GetManagedDiskResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">GetManagedDiskResult</code><span class="sig-paren">(</span><em>create_option=None</em>, <em>disk_size_gb=None</em>, <em>os_type=None</em>, <em>source_resource_id=None</em>, <em>source_uri=None</em>, <em>storage_account_type=None</em>, <em>tags=None</em>, <em>zones=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetManagedDiskResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">GetManagedDiskResult</code><span class="sig-paren">(</span><em>create_option=None</em>, <em>disk_size_gb=None</em>, <em>name=None</em>, <em>os_type=None</em>, <em>resource_group_name=None</em>, <em>source_resource_id=None</em>, <em>source_uri=None</em>, <em>storage_account_type=None</em>, <em>tags=None</em>, <em>zones=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetManagedDiskResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getManagedDisk.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetManagedDiskResult.disk_size_gb">
@@ -501,7 +513,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.compute.GetPlatformImageResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">GetPlatformImageResult</code><span class="sig-paren">(</span><em>version=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetPlatformImageResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">GetPlatformImageResult</code><span class="sig-paren">(</span><em>location=None</em>, <em>offer=None</em>, <em>publisher=None</em>, <em>sku=None</em>, <em>version=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetPlatformImageResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getPlatformImage.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetPlatformImageResult.version">
@@ -519,7 +531,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.compute.GetSharedImageGalleryResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">GetSharedImageGalleryResult</code><span class="sig-paren">(</span><em>description=None</em>, <em>location=None</em>, <em>tags=None</em>, <em>unique_name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetSharedImageGalleryResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">GetSharedImageGalleryResult</code><span class="sig-paren">(</span><em>description=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>unique_name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetSharedImageGalleryResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSharedImageGallery.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetSharedImageGalleryResult.description">
@@ -549,7 +561,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.compute.GetSharedImageResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">GetSharedImageResult</code><span class="sig-paren">(</span><em>description=None</em>, <em>eula=None</em>, <em>identifiers=None</em>, <em>location=None</em>, <em>os_type=None</em>, <em>privacy_statement_uri=None</em>, <em>release_note_uri=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetSharedImageResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">GetSharedImageResult</code><span class="sig-paren">(</span><em>description=None</em>, <em>eula=None</em>, <em>gallery_name=None</em>, <em>identifiers=None</em>, <em>location=None</em>, <em>name=None</em>, <em>os_type=None</em>, <em>privacy_statement_uri=None</em>, <em>release_note_uri=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetSharedImageResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSharedImage.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetSharedImageResult.description">
@@ -561,6 +573,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.GetSharedImageResult.eula">
 <code class="descname">eula</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetSharedImageResult.eula" title="Permalink to this definition">¶</a></dt>
 <dd><p>The End User Licence Agreement for the Shared Image.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.GetSharedImageResult.identifiers">
+<code class="descname">identifiers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetSharedImageResult.identifiers" title="Permalink to this definition">¶</a></dt>
+<dd><p>An <code class="docutils literal notranslate"><span class="pre">identifier</span></code> block as defined below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -603,7 +621,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.compute.GetSharedImageVersionResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">GetSharedImageVersionResult</code><span class="sig-paren">(</span><em>exclude_from_latest=None</em>, <em>location=None</em>, <em>managed_image_id=None</em>, <em>tags=None</em>, <em>target_regions=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetSharedImageVersionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">GetSharedImageVersionResult</code><span class="sig-paren">(</span><em>exclude_from_latest=None</em>, <em>gallery_name=None</em>, <em>image_name=None</em>, <em>location=None</em>, <em>managed_image_id=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>target_regions=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetSharedImageVersionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSharedImageVersion.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetSharedImageVersionResult.exclude_from_latest">
@@ -621,6 +639,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.GetSharedImageVersionResult.managed_image_id">
 <code class="descname">managed_image_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetSharedImageVersionResult.managed_image_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the Managed Image which was the source of this Shared Image Version.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.GetSharedImageVersionResult.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetSharedImageVersionResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Azure Region in which this Image Version exists.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -645,7 +669,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.compute.GetSnapshotResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">GetSnapshotResult</code><span class="sig-paren">(</span><em>creation_option=None</em>, <em>disk_size_gb=None</em>, <em>encryption_settings=None</em>, <em>os_type=None</em>, <em>source_resource_id=None</em>, <em>source_uri=None</em>, <em>storage_account_id=None</em>, <em>time_created=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetSnapshotResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">GetSnapshotResult</code><span class="sig-paren">(</span><em>creation_option=None</em>, <em>disk_size_gb=None</em>, <em>encryption_settings=None</em>, <em>name=None</em>, <em>os_type=None</em>, <em>resource_group_name=None</em>, <em>source_resource_id=None</em>, <em>source_uri=None</em>, <em>storage_account_id=None</em>, <em>time_created=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetSnapshotResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSnapshot.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetSnapshotResult.disk_size_gb">
@@ -681,7 +705,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.compute.GetVirtualMachineResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">GetVirtualMachineResult</code><span class="sig-paren">(</span><em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetVirtualMachineResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">GetVirtualMachineResult</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetVirtualMachineResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVirtualMachine.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.GetVirtualMachineResult.id">
@@ -693,7 +717,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.compute.Image">
-<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">Image</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>data_disks=None</em>, <em>location=None</em>, <em>name=None</em>, <em>os_disk=None</em>, <em>resource_group_name=None</em>, <em>source_virtual_machine_id=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.Image" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">Image</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>data_disks=None</em>, <em>location=None</em>, <em>name=None</em>, <em>os_disk=None</em>, <em>resource_group_name=None</em>, <em>source_virtual_machine_id=None</em>, <em>tags=None</em>, <em>zone_resilient=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.Image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage a custom virtual machine image that can be used to create virtual machines.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -712,6 +736,7 @@ new resource to be created.</li>
 the image. Changing this forces a new resource to be created.</li>
 <li><strong>source_virtual_machine_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Virtual Machine ID from which to create the image.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
+<li><strong>zone_resilient</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is zone resiliency enabled?  Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.  Changing this forces a new resource to be created.</li>
 </ul>
 </td>
 </tr>
@@ -760,6 +785,12 @@ the image. Changing this forces a new resource to be created.</p>
 <dt id="pulumi_azure.compute.Image.tags">
 <code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.Image.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.Image.zone_resilient">
+<code class="descname">zone_resilient</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.Image.zone_resilient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is zone resiliency enabled?  Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.  Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1218,6 +1249,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of this Shared Image.</li>
 <li><strong>eula</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The End User Licence Agreement for the Shared Image.</li>
 <li><strong>gallery_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Shared Image Gallery in which this Shared Image should exist. Changing this forces a new resource to be created.</li>
+<li><strong>identifier</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">identifier</span></code> block as defined below.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the Shared Image Gallery exists. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Shared Image. Changing this forces a new resource to be created.</li>
 <li><strong>os_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of Operating System present in this Shared Image. Possible values are <code class="docutils literal notranslate"><span class="pre">Linux</span></code> and <code class="docutils literal notranslate"><span class="pre">Windows</span></code>.</li>
@@ -1246,6 +1278,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.SharedImage.gallery_name">
 <code class="descname">gallery_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.SharedImage.gallery_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the name of the Shared Image Gallery in which this Shared Image should exist. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.SharedImage.identifier">
+<code class="descname">identifier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.SharedImage.identifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>An <code class="docutils literal notranslate"><span class="pre">identifier</span></code> block as defined below.</p>
 </dd></dl>
 
 <dl class="attribute">

@@ -93,7 +93,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.lb.GetBackendAddressPoolResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.lb.</code><code class="descname">GetBackendAddressPoolResult</code><span class="sig-paren">(</span><em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.GetBackendAddressPoolResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.lb.</code><code class="descname">GetBackendAddressPoolResult</code><span class="sig-paren">(</span><em>loadbalancer_id=None</em>, <em>name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.GetBackendAddressPoolResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getBackendAddressPool.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.lb.GetBackendAddressPoolResult.id">
@@ -105,7 +105,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.lb.GetLBResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.lb.</code><code class="descname">GetLBResult</code><span class="sig-paren">(</span><em>frontend_ip_configurations=None</em>, <em>location=None</em>, <em>private_ip_address=None</em>, <em>private_ip_addresses=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.GetLBResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.lb.</code><code class="descname">GetLBResult</code><span class="sig-paren">(</span><em>frontend_ip_configurations=None</em>, <em>location=None</em>, <em>name=None</em>, <em>private_ip_address=None</em>, <em>private_ip_addresses=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.GetLBResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getLB.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.lb.GetLBResult.frontend_ip_configurations">
@@ -117,6 +117,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.lb.GetLBResult.location">
 <code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.GetLBResult.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Azure location where the Load Balancer exists.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.lb.GetLBResult.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.GetLBResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Frontend IP Configuration.</p>
 </dd></dl>
 
 <dl class="attribute">

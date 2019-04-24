@@ -1,6 +1,18 @@
 <div class="section" id="module-pulumi_gcp.folder">
 <span id="folder"></span><h1>folder<a class="headerlink" href="#module-pulumi_gcp.folder" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
+<dt id="pulumi_gcp.folder.GetOrganizationPolicyResult">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.folder.</code><code class="descname">GetOrganizationPolicyResult</code><span class="sig-paren">(</span><em>boolean_policies=None</em>, <em>constraint=None</em>, <em>etag=None</em>, <em>folder=None</em>, <em>list_policies=None</em>, <em>restore_policies=None</em>, <em>update_time=None</em>, <em>version=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.folder.GetOrganizationPolicyResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getOrganizationPolicy.</p>
+<dl class="attribute">
+<dt id="pulumi_gcp.folder.GetOrganizationPolicyResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.folder.GetOrganizationPolicyResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_gcp.folder.IAMBinding">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.folder.</code><code class="descname">IAMBinding</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>folder=None</em>, <em>members=None</em>, <em>role=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.folder.IAMBinding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows creation and management of a single binding within IAM policy for
@@ -321,7 +333,7 @@ documentation</a> and
 <li><strong>boolean_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A boolean policy is a constraint that is either enforced or not. Structure is documented below.</li>
 <li><strong>constraint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Constraint the Policy is configuring, for example, <code class="docutils literal notranslate"><span class="pre">serviceuser.services</span></code>. Check out the <a class="reference external" href="https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints">complete list of available constraints</a>.</li>
 <li><strong>folder</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name of the folder to set the policy for. Its format is folders/{folder_id}.</li>
-<li><strong>list_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A policy that can define specific values that are allowed or denied for the given constraint. It 
+<li><strong>list_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A policy that can define specific values that are allowed or denied for the given constraint. It
 can also be used to allow or deny all values. Structure is documented below.</li>
 <li><strong>restore_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A restore policy is a constraint to restore the default policy. Structure is documented below.</li>
 <li><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Version of the Policy. Default version is 0.</li>
@@ -357,7 +369,7 @@ can also be used to allow or deny all values. Structure is documented below.</li
 <dl class="attribute">
 <dt id="pulumi_gcp.folder.OrganizationPolicy.list_policy">
 <code class="descname">list_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.folder.OrganizationPolicy.list_policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>A policy that can define specific values that are allowed or denied for the given constraint. It 
+<dd><p>A policy that can define specific values that are allowed or denied for the given constraint. It
 can also be used to allow or deny all values. Structure is documented below.</p>
 </dd></dl>
 
@@ -417,6 +429,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </table>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_gcp.folder.get_organization_policy">
+<code class="descclassname">pulumi_gcp.folder.</code><code class="descname">get_organization_policy</code><span class="sig-paren">(</span><em>constraint=None</em>, <em>folder=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.folder.get_organization_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allows management of Organization policies for a Google Folder. For more information see
+<a class="reference external" href="https://cloud.google.com/resource-manager/docs/organization-policy/overview">the official
+documentation</a></p>
 </dd></dl>
 
 </div>

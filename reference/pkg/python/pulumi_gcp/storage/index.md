@@ -11,7 +11,8 @@ using the <cite>``google_storage_bucket_acl`</cite> resource &lt;<a class="refer
 <a class="reference external" href="https://cloud.google.com/storage/docs/overview">the official documentation</a>
 and
 <a class="reference external" href="https://cloud.google.com/storage/docs/json_api/v1/buckets">API</a>.</p>
-<p><strong>Note</strong>: When importing a bucket or using only the default provider project for bucket creation, you will need to enable the Compute API and will otherwise get an error with a link to the API enablement page. If you would prefer not to enable the Compute API, make sure to explicitly set <code class="docutils literal notranslate"><span class="pre">project</span></code> on the bucket resource.</p>
+<p><strong>Note</strong>: If the project id is not set on the resource or in the provider block it will be dynamically
+determined which will require enabling the compute api.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -526,8 +527,7 @@ and
 <li><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the containing bucket.</li>
 <li><strong>cache_control</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <a class="reference external" href="https://tools.ietf.org/html/rfc7234#section-5.2">Cache-Control</a>
 directive to specify caching behavior of object data. If omitted and object is accessible to all anonymous users, the default will be public, max-age=3600</li>
-<li><strong>content</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Data as <code class="docutils literal notranslate"><span class="pre">string</span></code> to be uploaded. Must be defined if
-<code class="docutils literal notranslate"><span class="pre">source</span></code> is not.</li>
+<li><strong>content</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Data as <code class="docutils literal notranslate"><span class="pre">string</span></code> to be uploaded. Must be defined if <code class="docutils literal notranslate"><span class="pre">source</span></code> is not. <strong>Note</strong>: The <code class="docutils literal notranslate"><span class="pre">content</span></code> field is marked as sensitive. To view the raw contents of the object, please define an <a class="reference external" href="https://www.terraform.io/docs/configuration/outputs.html">output</a>.</li>
 <li><strong>content_disposition</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <a class="reference external" href="https://tools.ietf.org/html/rfc6266">Content-Disposition</a> of the object data.</li>
 <li><strong>content_encoding</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-3.1.2.2">Content-Encoding</a> of the object data.</li>
 <li><strong>content_language</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-3.1.3.2">Content-Language</a> of the object data.</li>
@@ -559,8 +559,7 @@ directive to specify caching behavior of object data. If omitted and object is a
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.BucketObject.content">
 <code class="descname">content</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.BucketObject.content" title="Permalink to this definition">¶</a></dt>
-<dd><p>Data as <code class="docutils literal notranslate"><span class="pre">string</span></code> to be uploaded. Must be defined if
-<code class="docutils literal notranslate"><span class="pre">source</span></code> is not.</p>
+<dd><p>Data as <code class="docutils literal notranslate"><span class="pre">string</span></code> to be uploaded. Must be defined if <code class="docutils literal notranslate"><span class="pre">source</span></code> is not. <strong>Note</strong>: The <code class="docutils literal notranslate"><span class="pre">content</span></code> field is marked as sensitive. To view the raw contents of the object, please define an <a class="reference external" href="https://www.terraform.io/docs/configuration/outputs.html">output</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -780,11 +779,7 @@ uses READER and OWNER instead of READ and FULL_CONTROL.</p>
 </ul>
 </li>
 </ul>
-<div class = "oics-button" style="float: right; margin: 0 0 -15px">
-  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=storage_default_object_access_control_public&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
-    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
-  </a>
-</div><table class="docutils field-list" frame="void" rules="none">
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -838,7 +833,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.storage.GetBucketObjectResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">GetBucketObjectResult</code><span class="sig-paren">(</span><em>cache_control=None</em>, <em>content=None</em>, <em>content_disposition=None</em>, <em>content_encoding=None</em>, <em>content_language=None</em>, <em>content_type=None</em>, <em>crc32c=None</em>, <em>detect_md5hash=None</em>, <em>md5hash=None</em>, <em>output_name=None</em>, <em>predefined_acl=None</em>, <em>self_link=None</em>, <em>source=None</em>, <em>storage_class=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.GetBucketObjectResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">GetBucketObjectResult</code><span class="sig-paren">(</span><em>bucket=None</em>, <em>cache_control=None</em>, <em>content=None</em>, <em>content_disposition=None</em>, <em>content_encoding=None</em>, <em>content_language=None</em>, <em>content_type=None</em>, <em>crc32c=None</em>, <em>detect_md5hash=None</em>, <em>md5hash=None</em>, <em>name=None</em>, <em>output_name=None</em>, <em>predefined_acl=None</em>, <em>self_link=None</em>, <em>source=None</em>, <em>storage_class=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.GetBucketObjectResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getBucketObject.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.GetBucketObjectResult.cache_control">
@@ -907,7 +902,7 @@ storage class or to a <a class="reference external" href="https://cloud.google.c
 
 <dl class="class">
 <dt id="pulumi_gcp.storage.GetObjectSignedUrlResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">GetObjectSignedUrlResult</code><span class="sig-paren">(</span><em>signed_url=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.GetObjectSignedUrlResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">GetObjectSignedUrlResult</code><span class="sig-paren">(</span><em>bucket=None</em>, <em>content_md5=None</em>, <em>content_type=None</em>, <em>credentials=None</em>, <em>duration=None</em>, <em>extension_headers=None</em>, <em>http_method=None</em>, <em>path=None</em>, <em>signed_url=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.GetObjectSignedUrlResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getObjectSignedUrl.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.GetObjectSignedUrlResult.signed_url">
@@ -925,7 +920,7 @@ storage class or to a <a class="reference external" href="https://cloud.google.c
 
 <dl class="class">
 <dt id="pulumi_gcp.storage.GetProjectServiceAccountResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">GetProjectServiceAccountResult</code><span class="sig-paren">(</span><em>email_address=None</em>, <em>project=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.GetProjectServiceAccountResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">GetProjectServiceAccountResult</code><span class="sig-paren">(</span><em>email_address=None</em>, <em>project=None</em>, <em>user_project=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.GetProjectServiceAccountResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getProjectServiceAccount.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.GetProjectServiceAccountResult.email_address">
@@ -1197,11 +1192,7 @@ uses READER and OWNER instead of READ and FULL_CONTROL.</p>
 </ul>
 </li>
 </ul>
-<div class = "oics-button" style="float: right; margin: 0 0 -15px">
-  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=storage_object_access_control_public_object&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
-    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
-  </a>
-</div><table class="docutils field-list" frame="void" rules="none">
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">

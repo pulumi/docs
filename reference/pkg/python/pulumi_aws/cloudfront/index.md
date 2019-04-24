@@ -2,7 +2,7 @@
 <span id="cloudfront"></span><h1>cloudfront<a class="headerlink" href="#module-pulumi_aws.cloudfront" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.cloudfront.Distribution">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloudfront.</code><code class="descname">Distribution</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>aliases=None</em>, <em>comment=None</em>, <em>custom_error_responses=None</em>, <em>default_cache_behavior=None</em>, <em>default_root_object=None</em>, <em>enabled=None</em>, <em>http_version=None</em>, <em>is_ipv6_enabled=None</em>, <em>logging_config=None</em>, <em>ordered_cache_behaviors=None</em>, <em>origins=None</em>, <em>price_class=None</em>, <em>restrictions=None</em>, <em>retain_on_delete=None</em>, <em>tags=None</em>, <em>viewer_certificate=None</em>, <em>web_acl_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudfront.</code><code class="descname">Distribution</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>aliases=None</em>, <em>comment=None</em>, <em>custom_error_responses=None</em>, <em>default_cache_behavior=None</em>, <em>default_root_object=None</em>, <em>enabled=None</em>, <em>http_version=None</em>, <em>is_ipv6_enabled=None</em>, <em>logging_config=None</em>, <em>ordered_cache_behaviors=None</em>, <em>origins=None</em>, <em>origin_groups=None</em>, <em>price_class=None</em>, <em>restrictions=None</em>, <em>retain_on_delete=None</em>, <em>tags=None</em>, <em>viewer_certificate=None</em>, <em>wait_for_deployment=None</em>, <em>web_acl_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Amazon CloudFront web distribution.</p>
 <p>For information about CloudFront distributions, see the
 [Amazon CloudFront Developer Guide][1]. For specific information about creating
@@ -43,6 +43,8 @@ resource for this distribution. List from top to bottom
 in order of precedence. The topmost cache behavior will have precedence 0.</li>
 <li><strong>origins</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more origins for this
 distribution (multiples allowed).</li>
+<li><strong>origin_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more origin_group for this
+distribution (multiples allowed).</li>
 <li><strong>price_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The price class for this distribution. One of
 <code class="docutils literal notranslate"><span class="pre">PriceClass_All</span></code>, <code class="docutils literal notranslate"><span class="pre">PriceClass_200</span></code>, <code class="docutils literal notranslate"><span class="pre">PriceClass_100</span></code></li>
 <li><strong>restrictions</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The restriction
@@ -54,6 +56,9 @@ the distribution needs to be deleted manually afterwards. Default: <code class="
 <li><strong>viewer_certificate</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The SSL
 configuration for this distribution (maximum
 one).</li>
+<li><strong>wait_for_deployment</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If enabled, the resource will wait for
+the distribution status to change from <code class="docutils literal notranslate"><span class="pre">InProgress</span></code> to <code class="docutils literal notranslate"><span class="pre">Deployed</span></code>. Setting
+this to<code class="docutils literal notranslate"><span class="pre">false</span></code> will skip the process. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</li>
 <li><strong>web_acl_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If you’re using AWS WAF to filter CloudFront
 requests, the Id of the AWS WAF web ACL that is associated with the
 distribution.</li>
@@ -197,6 +202,13 @@ distribution (multiples allowed).</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.cloudfront.Distribution.origin_groups">
+<code class="descname">origin_groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution.origin_groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more origin_group for this
+distribution (multiples allowed).</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.cloudfront.Distribution.price_class">
 <code class="descname">price_class</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution.price_class" title="Permalink to this definition">¶</a></dt>
 <dd><p>The price class for this distribution. One of
@@ -238,6 +250,14 @@ CloudFront system.</p>
 <dd><p>The SSL
 configuration for this distribution (maximum
 one).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.cloudfront.Distribution.wait_for_deployment">
+<code class="descname">wait_for_deployment</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution.wait_for_deployment" title="Permalink to this definition">¶</a></dt>
+<dd><p>If enabled, the resource will wait for
+the distribution status to change from <code class="docutils literal notranslate"><span class="pre">InProgress</span></code> to <code class="docutils literal notranslate"><span class="pre">Deployed</span></code>. Setting
+this to<code class="docutils literal notranslate"><span class="pre">false</span></code> will skip the process. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">

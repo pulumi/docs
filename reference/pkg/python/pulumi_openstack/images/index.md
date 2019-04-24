@@ -2,7 +2,7 @@
 <span id="images"></span><h1>images<a class="headerlink" href="#module-pulumi_openstack.images" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_openstack.images.GetImageResult">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.images.</code><code class="descname">GetImageResult</code><span class="sig-paren">(</span><em>checksum=None</em>, <em>container_format=None</em>, <em>created_at=None</em>, <em>disk_format=None</em>, <em>file=None</em>, <em>metadata=None</em>, <em>min_disk_gb=None</em>, <em>min_ram_mb=None</em>, <em>protected=None</em>, <em>region=None</em>, <em>schema=None</em>, <em>size_bytes=None</em>, <em>tags=None</em>, <em>updated_at=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.GetImageResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.images.</code><code class="descname">GetImageResult</code><span class="sig-paren">(</span><em>checksum=None</em>, <em>container_format=None</em>, <em>created_at=None</em>, <em>disk_format=None</em>, <em>file=None</em>, <em>member_status=None</em>, <em>metadata=None</em>, <em>min_disk_gb=None</em>, <em>min_ram_mb=None</em>, <em>most_recent=None</em>, <em>name=None</em>, <em>owner=None</em>, <em>properties=None</em>, <em>protected=None</em>, <em>region=None</em>, <em>schema=None</em>, <em>size_bytes=None</em>, <em>size_max=None</em>, <em>size_min=None</em>, <em>sort_direction=None</em>, <em>sort_key=None</em>, <em>tag=None</em>, <em>tags=None</em>, <em>updated_at=None</em>, <em>visibility=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.GetImageResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getImage.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.images.GetImageResult.checksum">
@@ -45,6 +45,12 @@ and tags. See <a class="reference external" href="https://docs.openstack.org/gla
 <dt id="pulumi_openstack.images.GetImageResult.min_ram_mb">
 <code class="descname">min_ram_mb</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.GetImageResult.min_ram_mb" title="Permalink to this definition">¶</a></dt>
 <dd><p>The minimum amount of ram required to use the image.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.images.GetImageResult.properties">
+<code class="descname">properties</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.GetImageResult.properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Freeform information about the image.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -120,9 +126,9 @@ does not yet provide a way to do so.
 Conflicts with <code class="docutils literal notranslate"><span class="pre">local_file_path</span></code>.</li>
 <li><strong>local_file_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This is the filepath of the raw image file
 that will be uploaded to Glance. Conflicts with <code class="docutils literal notranslate"><span class="pre">image_source_url</span></code>.</li>
-<li><strong>min_disk_gb</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Amount of disk space (in GB) required to boot image.
+<li><strong>min_disk_gb</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Amount of disk space (in GB) required to boot image.
 Defaults to 0.</li>
-<li><strong>min_ram_mb</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Amount of ram (in MB) required to boot image.
+<li><strong>min_ram_mb</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Amount of ram (in MB) required to boot image.
 Defauts to 0.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the image.</li>
 <li><strong>properties</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of key/value pairs to set freeform

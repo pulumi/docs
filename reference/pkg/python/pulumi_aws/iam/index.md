@@ -2,7 +2,7 @@
 <span id="iam"></span><h1>iam<a class="headerlink" href="#module-pulumi_aws.iam" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.iam.AccessKey">
-<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">AccessKey</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>pgp_key=None</em>, <em>user=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.AccessKey" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">AccessKey</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>pgp_key=None</em>, <em>status=None</em>, <em>user=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.AccessKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an IAM access key. This is a set of credentials that allow API requests to be made as an IAM user.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -13,6 +13,8 @@
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>pgp_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Either a base-64 encoded PGP public key, or a
 keybase username in the form <code class="docutils literal notranslate"><span class="pre">keybase:some_person_that_exists</span></code>.</li>
+<li><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access key status to apply. Defaults to <code class="docutils literal notranslate"><span class="pre">Active</span></code>.
+Valid values are <code class="docutils literal notranslate"><span class="pre">Active</span></code> and <code class="docutils literal notranslate"><span class="pre">Inactive</span></code>.</li>
 <li><strong>user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM user to associate with this access key.</li>
 </ul>
 </td>
@@ -61,8 +63,8 @@ algorithm</a>.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.iam.AccessKey.status">
 <code class="descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.AccessKey.status" title="Permalink to this definition">¶</a></dt>
-<dd><p>“Active” or “Inactive”. Keys are initially active, but can be made
-inactive by other means.</p>
+<dd><p>The access key status to apply. Defaults to <code class="docutils literal notranslate"><span class="pre">Active</span></code>.
+Valid values are <code class="docutils literal notranslate"><span class="pre">Active</span></code> and <code class="docutils literal notranslate"><span class="pre">Inactive</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -329,7 +331,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.iam.GetGroupResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">GetGroupResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>group_id=None</em>, <em>path=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.GetGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">GetGroupResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>group_id=None</em>, <em>group_name=None</em>, <em>path=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.GetGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getGroup.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.iam.GetGroupResult.arn">
@@ -359,7 +361,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.iam.GetInstanceProfileResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">GetInstanceProfileResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>create_date=None</em>, <em>path=None</em>, <em>role_arn=None</em>, <em>role_id=None</em>, <em>role_name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.GetInstanceProfileResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">GetInstanceProfileResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>create_date=None</em>, <em>name=None</em>, <em>path=None</em>, <em>role_arn=None</em>, <em>role_id=None</em>, <em>role_name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.GetInstanceProfileResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInstanceProfile.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.iam.GetInstanceProfileResult.arn">
@@ -408,7 +410,7 @@ was created.</p>
 
 <dl class="class">
 <dt id="pulumi_aws.iam.GetPolicyDocumentResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">GetPolicyDocumentResult</code><span class="sig-paren">(</span><em>json=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.GetPolicyDocumentResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">GetPolicyDocumentResult</code><span class="sig-paren">(</span><em>json=None</em>, <em>override_json=None</em>, <em>policy_id=None</em>, <em>source_json=None</em>, <em>statements=None</em>, <em>version=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.GetPolicyDocumentResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getPolicyDocument.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.iam.GetPolicyDocumentResult.json">
@@ -426,8 +428,14 @@ was created.</p>
 
 <dl class="class">
 <dt id="pulumi_aws.iam.GetPolicyResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">GetPolicyResult</code><span class="sig-paren">(</span><em>description=None</em>, <em>name=None</em>, <em>path=None</em>, <em>policy=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.GetPolicyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">GetPolicyResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>description=None</em>, <em>name=None</em>, <em>path=None</em>, <em>policy=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.GetPolicyResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getPolicy.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.iam.GetPolicyResult.arn">
+<code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.GetPolicyResult.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Amazon Resource Name (ARN) specifying the policy.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_aws.iam.GetPolicyResult.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.GetPolicyResult.description" title="Permalink to this definition">¶</a></dt>
@@ -462,7 +470,7 @@ was created.</p>
 
 <dl class="class">
 <dt id="pulumi_aws.iam.GetRoleResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">GetRoleResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>assume_role_policy=None</em>, <em>create_date=None</em>, <em>description=None</em>, <em>max_session_duration=None</em>, <em>path=None</em>, <em>permissions_boundary=None</em>, <em>unique_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.GetRoleResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">GetRoleResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>assume_role_policy=None</em>, <em>create_date=None</em>, <em>description=None</em>, <em>max_session_duration=None</em>, <em>name=None</em>, <em>path=None</em>, <em>permissions_boundary=None</em>, <em>unique_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.GetRoleResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRole.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.iam.GetRoleResult.arn">
@@ -522,7 +530,7 @@ was created.</p>
 
 <dl class="class">
 <dt id="pulumi_aws.iam.GetServerCertificateResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">GetServerCertificateResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>certificate_body=None</em>, <em>certificate_chain=None</em>, <em>expiration_date=None</em>, <em>name=None</em>, <em>path=None</em>, <em>upload_date=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.GetServerCertificateResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">GetServerCertificateResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>certificate_body=None</em>, <em>certificate_chain=None</em>, <em>expiration_date=None</em>, <em>latest=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>path=None</em>, <em>path_prefix=None</em>, <em>upload_date=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.GetServerCertificateResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getServerCertificate.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.iam.GetServerCertificateResult.id">
@@ -534,7 +542,7 @@ was created.</p>
 
 <dl class="class">
 <dt id="pulumi_aws.iam.GetUserResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">GetUserResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>path=None</em>, <em>permissions_boundary=None</em>, <em>user_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.GetUserResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">GetUserResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>path=None</em>, <em>permissions_boundary=None</em>, <em>user_id=None</em>, <em>user_name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.GetUserResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getUser.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.iam.GetUserResult.arn">
@@ -558,6 +566,12 @@ was created.</p>
 <dt id="pulumi_aws.iam.GetUserResult.user_id">
 <code class="descname">user_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.GetUserResult.user_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The unique ID assigned by AWS for this user.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.iam.GetUserResult.user_name">
+<code class="descname">user_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.GetUserResult.user_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name associated to this User</p>
 </dd></dl>
 
 <dl class="attribute">

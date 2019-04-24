@@ -13,7 +13,7 @@
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>principal</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The principal to associate with the resource share. Possible values are an AWS account ID, an AWS Organizations Organization ID, or an AWS Organizations Organization Unit ID.</li>
+<li><strong>principal</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The principal to associate with the resource share. Possible values are an AWS account ID, an AWS Organizations Organization ARN, or an AWS Organizations Organization Unit ARN.</li>
 <li><strong>resource_share_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the resource share.</li>
 </ul>
 </td>
@@ -23,7 +23,7 @@
 <dl class="attribute">
 <dt id="pulumi_aws.ram.PrincipalAssociation.principal">
 <code class="descname">principal</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ram.PrincipalAssociation.principal" title="Permalink to this definition">¶</a></dt>
-<dd><p>The principal to associate with the resource share. Possible values are an AWS account ID, an AWS Organizations Organization ID, or an AWS Organizations Organization Unit ID.</p>
+<dd><p>The principal to associate with the resource share. Possible values are an AWS account ID, an AWS Organizations Organization ARN, or an AWS Organizations Organization Unit ARN.</p>
 </dd></dl>
 
 <dl class="attribute">

@@ -26,7 +26,7 @@
 
 <dl class="class">
 <dt id="pulumi_aws.applicationloadbalancing.GetTargetGroupResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.applicationloadbalancing.</code><code class="descname">GetTargetGroupResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>arn_suffix=None</em>, <em>deregistration_delay=None</em>, <em>health_check=None</em>, <em>lambda_multi_value_headers_enabled=None</em>, <em>name=None</em>, <em>port=None</em>, <em>protocol=None</em>, <em>slow_start=None</em>, <em>stickiness=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.GetTargetGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.applicationloadbalancing.</code><code class="descname">GetTargetGroupResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>arn_suffix=None</em>, <em>deregistration_delay=None</em>, <em>health_check=None</em>, <em>lambda_multi_value_headers_enabled=None</em>, <em>name=None</em>, <em>port=None</em>, <em>protocol=None</em>, <em>proxy_protocol_v2=None</em>, <em>slow_start=None</em>, <em>stickiness=None</em>, <em>tags=None</em>, <em>target_type=None</em>, <em>vpc_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.GetTargetGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getTargetGroup.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.applicationloadbalancing.GetTargetGroupResult.id">

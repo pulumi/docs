@@ -578,7 +578,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.glue.GetScriptResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.glue.</code><code class="descname">GetScriptResult</code><span class="sig-paren">(</span><em>python_script=None</em>, <em>scala_code=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.GetScriptResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.glue.</code><code class="descname">GetScriptResult</code><span class="sig-paren">(</span><em>dag_edges=None</em>, <em>dag_nodes=None</em>, <em>language=None</em>, <em>python_script=None</em>, <em>scala_code=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.GetScriptResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getScript.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.glue.GetScriptResult.python_script">

@@ -114,7 +114,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.service_account.GetAccountKeyResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.service_account.</code><code class="descname">GetAccountKeyResult</code><span class="sig-paren">(</span><em>key_algorithm=None</em>, <em>public_key=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.GetAccountKeyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.service_account.</code><code class="descname">GetAccountKeyResult</code><span class="sig-paren">(</span><em>key_algorithm=None</em>, <em>name=None</em>, <em>project=None</em>, <em>public_key=None</em>, <em>public_key_type=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.GetAccountKeyResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAccountKey.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.service_account.GetAccountKeyResult.public_key">
@@ -132,7 +132,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.service_account.GetAccountResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.service_account.</code><code class="descname">GetAccountResult</code><span class="sig-paren">(</span><em>display_name=None</em>, <em>email=None</em>, <em>name=None</em>, <em>unique_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.GetAccountResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.service_account.</code><code class="descname">GetAccountResult</code><span class="sig-paren">(</span><em>account_id=None</em>, <em>display_name=None</em>, <em>email=None</em>, <em>name=None</em>, <em>project=None</em>, <em>unique_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.GetAccountResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAccount.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.service_account.GetAccountResult.display_name">

@@ -2,7 +2,7 @@
 <span id="ecr"></span><h1>ecr<a class="headerlink" href="#module-pulumi_aws.ecr" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.ecr.GetCredentialsResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ecr.</code><code class="descname">GetCredentialsResult</code><span class="sig-paren">(</span><em>authorization_token=None</em>, <em>expires_at=None</em>, <em>proxy_endpoint=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.GetCredentialsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ecr.</code><code class="descname">GetCredentialsResult</code><span class="sig-paren">(</span><em>authorization_token=None</em>, <em>expires_at=None</em>, <em>proxy_endpoint=None</em>, <em>registry_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.GetCredentialsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCredentials.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ecr.GetCredentialsResult.id">
@@ -14,7 +14,7 @@
 
 <dl class="class">
 <dt id="pulumi_aws.ecr.GetRepositoryResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ecr.</code><code class="descname">GetRepositoryResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>registry_id=None</em>, <em>repository_url=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.GetRepositoryResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ecr.</code><code class="descname">GetRepositoryResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>name=None</em>, <em>registry_id=None</em>, <em>repository_url=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.GetRepositoryResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRepository.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ecr.GetRepositoryResult.arn">

@@ -82,7 +82,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.iot.GetEndpointResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.iot.</code><code class="descname">GetEndpointResult</code><span class="sig-paren">(</span><em>endpoint_address=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iot.GetEndpointResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.iot.</code><code class="descname">GetEndpointResult</code><span class="sig-paren">(</span><em>endpoint_address=None</em>, <em>endpoint_type=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iot.GetEndpointResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getEndpoint.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.iot.GetEndpointResult.endpoint_address">

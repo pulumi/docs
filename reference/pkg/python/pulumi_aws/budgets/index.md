@@ -2,7 +2,7 @@
 <span id="budgets"></span><h1>budgets<a class="headerlink" href="#module-pulumi_aws.budgets" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.budgets.Budget">
-<em class="property">class </em><code class="descclassname">pulumi_aws.budgets.</code><code class="descname">Budget</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_id=None</em>, <em>budget_type=None</em>, <em>cost_filters=None</em>, <em>cost_types=None</em>, <em>limit_amount=None</em>, <em>limit_unit=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>time_period_end=None</em>, <em>time_period_start=None</em>, <em>time_unit=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.budgets.Budget" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.budgets.</code><code class="descname">Budget</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_id=None</em>, <em>budget_type=None</em>, <em>cost_filters=None</em>, <em>cost_types=None</em>, <em>limit_amount=None</em>, <em>limit_unit=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>notifications=None</em>, <em>time_period_end=None</em>, <em>time_period_start=None</em>, <em>time_unit=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.budgets.Budget" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a budgets budget resource. Budgets use the cost visualisation provided by Cost Explorer to show you the status of your budgets, to provide forecasts of your estimated costs, and to track your AWS usage, including your free tier usage.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -19,6 +19,7 @@
 <li><strong>limit_unit</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See <a class="reference external" href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html">Spend</a> documentation.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a budget. Unique within accounts.</li>
 <li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The prefix of the name of a budget. Unique within accounts.</li>
+<li><strong>notifications</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Object containing Budget Notifications. Can be used multiple times to define more than one budget notification</li>
 <li><strong>time_period_end</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The end of the time period covered by the budget. There are no restrictions on the end date. Format: <code class="docutils literal notranslate"><span class="pre">2017-01-01_12:00</span></code>.</li>
 <li><strong>time_period_start</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The start of the time period covered by the budget. The start date must come before the end date. Format: <code class="docutils literal notranslate"><span class="pre">2017-01-01_12:00</span></code>.</li>
 <li><strong>time_unit</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The length of time until a budget resets the actual and forecasted spend. Valid values: <code class="docutils literal notranslate"><span class="pre">MONTHLY</span></code>, <code class="docutils literal notranslate"><span class="pre">QUARTERLY</span></code>, <code class="docutils literal notranslate"><span class="pre">ANNUALLY</span></code>.</li>
@@ -73,6 +74,12 @@
 <dt id="pulumi_aws.budgets.Budget.name_prefix">
 <code class="descname">name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.budgets.Budget.name_prefix" title="Permalink to this definition">¶</a></dt>
 <dd><p>The prefix of the name of a budget. Unique within accounts.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.budgets.Budget.notifications">
+<code class="descname">notifications</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.budgets.Budget.notifications" title="Permalink to this definition">¶</a></dt>
+<dd><p>Object containing Budget Notifications. Can be used multiple times to define more than one budget notification</p>
 </dd></dl>
 
 <dl class="attribute">
