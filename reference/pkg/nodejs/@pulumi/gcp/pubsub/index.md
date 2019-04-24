@@ -22,7 +22,6 @@ title: Module pubsub
 * <a href="#TopicIAMBinding">class TopicIAMBinding</a>
 * <a href="#TopicIAMMember">class TopicIAMMember</a>
 * <a href="#TopicIAMPolicy">class TopicIAMPolicy</a>
-* <a href="#__unused">const __unused</a>
 * <a href="#SubscriptionArgs">interface SubscriptionArgs</a>
 * <a href="#SubscriptionIAMBindingArgs">interface SubscriptionIAMBindingArgs</a>
 * <a href="#SubscriptionIAMBindingState">interface SubscriptionIAMBindingState</a>
@@ -1419,12 +1418,6 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="__unused">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/zMixins.ts#L99">const <b>__unused</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> __unused: 0 = <span class='s2'>0</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="SubscriptionArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts#L169">interface <b>SubscriptionArgs</b></a>

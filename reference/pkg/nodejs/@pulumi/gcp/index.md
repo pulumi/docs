@@ -181,9 +181,6 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/utils.ts#L18">function <b>ifUndefined</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>ifUndefined&lt;T&gt;(input: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;T&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, value: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;T&gt;): OutputInstance&lt;Unwrap<T>&gt; &amp; Lifted<Unwrap<T>></pre>
-
 </div>
 <h2 class="pdoc-module-header" id="requireWithDefault">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/utilities.ts#L43">function <b>requireWithDefault</b></a>

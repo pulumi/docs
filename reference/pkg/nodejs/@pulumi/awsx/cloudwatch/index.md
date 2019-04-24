@@ -1072,17 +1072,11 @@ For internal use only.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/widgets_simple.ts#L72">method <b>computeProperties</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'>protected </span>computeProperties(): { ... }</pre>
-
 </div>
 <h3 class="pdoc-member-header" id="SimpleWidget-computeType">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/widgets_simple.ts#L70">method <b>computeType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'>protected </span>computeType(): <span class='s2'>"metric"</span> | <span class='s2'>"text"</span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='s2'>"metric"</span> | <span class='s2'>"text"</span>&gt; | OutputInstance&lt;<span class='s2'>"metric"</span> | <span class='s2'>"text"</span>&gt;</pre>
-
 </div>
 <h3 class="pdoc-member-header" id="SimpleWidget-height">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/widgets_simple.ts#L65">method <b>height</b></a>
@@ -1419,28 +1413,16 @@ For internal use only.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/dashboard.ts#L94">function <b>getDashboardBody</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>getDashboardBody(args: <a href='#DashboardArgs'>DashboardArgs</a>): OutputInstance&lt;{ ... }&gt; &amp; { ... }</pre>
-
 </div>
 <h2 class="pdoc-module-header" id="mergeDimensions">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L305">function <b>mergeDimensions</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>mergeDimensions(oldDimensions: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, newDimensions: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): OutputInstance&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | { ... }&gt; &amp; { ... } | OutputInstance&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | { ... }&gt; &amp; { ... }</pre>
-
 </div>
 <h2 class="pdoc-module-header" id="statisticString">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/widgets_simple.ts#L302">function <b>statisticString</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>statisticString(obj: {
-    extendedStatistic: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;
-    statistic: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;
-}): OutputInstance&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; &amp; { ... }</pre>
-
 </div>
 <h2 class="pdoc-module-header" id="AlarmArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cloudwatch/metric.ts#L470">interface <b>AlarmArgs</b></a>

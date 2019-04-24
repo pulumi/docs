@@ -68,7 +68,96 @@ func loadAndParseDoc(filename string) (*typeDocNode, error) {
 		return nil, err
 	}
 
+	filterOutInternalNode(&doc)
+
 	return &doc, nil
+}
+
+func filterOutInternalNode(node *typeDocNode) *typeDocNode {
+	if node == nil {
+		return nil
+	}
+
+	node.IndexSignatures = filterOutInternalNodeArray(node.IndexSignatures)
+	node.Children = filterOutInternalNodeArray(node.Children)
+	node.TypeParameter = filterOutInternalNodeArray(node.TypeParameter)
+	node.Parameters = filterOutInternalNodeArray(node.Parameters)
+	node.Signatures = filterOutInternalNodeArray(node.Signatures)
+	node.ExtendedBy = filterOutInternalTypeArray(node.ExtendedBy)
+	node.ExtendedTypes = filterOutInternalTypeArray(node.ExtendedTypes)
+	node.ImplementedTypes = filterOutInternalTypeArray(node.ImplementedTypes)
+
+	return node
+}
+
+func filterOutInternalNodeArray(arr []*typeDocNode) []*typeDocNode {
+	if arr == nil {
+		return nil
+	}
+
+	var result []*typeDocNode
+
+	for _, val := range arr {
+		if hasInternalTag(val) {
+			continue
+		}
+
+		val = filterOutInternalNode(val)
+		if val != nil {
+			result = append(result, val)
+		}
+	}
+
+	return result
+}
+
+func filterOutInternalTypeArray(arr []*typeDocType) []*typeDocType {
+	if arr == nil {
+		return nil
+	}
+
+	var result []*typeDocType
+
+	for _, val := range arr {
+		val = filterOutInternalType(val)
+		if val != nil {
+			result = append(result, val)
+		}
+	}
+
+	return result
+}
+
+func filterOutInternalType(t *typeDocType) *typeDocType {
+	if t == nil {
+		return nil
+	}
+
+	if t.Declaration != nil {
+		t.Declaration = filterOutInternalNode(t.Declaration)
+		if t.Declaration == nil {
+			return nil
+		}
+	}
+
+	t.Elements = filterOutInternalTypeArray(t.Elements)
+	t.ElementType = filterOutInternalType(t.ElementType)
+	t.TypeArguments = filterOutInternalTypeArray(t.TypeArguments)
+	t.Types = filterOutInternalTypeArray(t.Types)
+	t.Target = filterOutInternalType(t.Target)
+	t.Declaration = filterOutInternalNode(t.Declaration)
+
+	return t
+}
+
+func hasInternalTag(node *typeDocNode) bool {
+	for _, tag := range node.Comment.Tags {
+		if tag.Tag == "internal" {
+			return true
+		}
+	}
+
+	return false
 }
 
 // gitHubBaseURLs is a *hackhackhack* hard-coded list of URLs for our packages.
@@ -149,7 +238,7 @@ func (e *emitter) augmentNode(node *typeDocNode, parent *typeDocNode) {
 			if i > 0 {
 				node.Extends += ", "
 			}
-			node.Extends += createTypeLabel(*ext, 0)
+			node.Extends += createTypeLabel(ext, 0)
 		}
 	}
 	if len(node.ImplementedTypes) > 0 {
@@ -158,7 +247,7 @@ func (e *emitter) augmentNode(node *typeDocNode, parent *typeDocNode) {
 			if i > 0 {
 				node.Implements += ", "
 			}
-			node.Implements += createTypeLabel(*impl, 0)
+			node.Implements += createTypeLabel(impl, 0)
 		}
 	}
 
@@ -595,60 +684,6 @@ func getRepoURL(baseURL string, node *typeDocNode, parent *typeDocNode) string {
 	return baseURL
 }
 
-// typeDoc represents a JSON serialized structure that has been output from the `typedoc` program.  I'm sure we are
-// unintentionally sensitive to particular flags, so for reference, we are generally parsing things of the form
-//
-//     $ tsdoc --json docs.json --mode modules --includeDeclarations
-//
-// In particular, passing --mode file will not lead to the correct behavior, due to the way we use module structure.
-type typeDocNode struct {
-	// Name is the package name that this documentation refers to.
-	Name string `json:"name,omitempty"`
-	// KindString is the string-based kind of this node.
-	Kind typeDocNodeKind `json:"kindString,omitempty"`
-	// Flags contains a bunch of flags pertaining to this node.
-	Flags typeDocFlags `json:"flags,omitempty"`
-	// Type is the type of this member, when appropriate.
-	Type typeDocType `json:"type,omitempty"`
-	// Comment is a JSDoc comment extracted via Typedoc.
-	Comment typeDocComment `json:"comment,omitempty"`
-	// DefaultValue is an optional default value for this entry (or nil if none).
-	DefaultValue *string `json:"defaultValue,omitempty"`
-	// IndexSignature is used to represent indexed types (e.g., `{[key: string]: any}`).
-	IndexSignatures []*typeDocNode `json:"indexSignature,omitempty"`
-	// Children is a list of one or more child members of this node.
-	Children []*typeDocNode `json:"children,omitempty"`
-	// TypeParameter includes all the type parameters for this node.
-	TypeParameter []*typeDocNode `json:"typeParameter,omitempty"`
-	// Parameters is a list of parameter nodes for this node, when a Call signature.
-	Parameters []*typeDocNode `json:"parameters,omitempty"`
-	// Signatures is a list of signature nodes for this node, when a Method.
-	Signatures []*typeDocNode `json:"signatures,omitempty"`
-	// ExtendedBy is a cross-reference to all the other artifacts that extend this one.
-	ExtendedBy []*typeDocType `json:"extendedBy,omitempty"`
-	// ExtendedTypes is a list of other types extended by this one.
-	ExtendedTypes []*typeDocType `json:"extendedTypes,omitempty"`
-	// ImplementedTypes is a list of other types implemented by this one.
-	ImplementedTypes []*typeDocType `json:"implementedTypes,omitempty"`
-	// Sources represents the source files from which this node came.
-	Sources []typeDocSource `json:"sources,omitempty"`
-
-	// AnchorName is the qualified name of a member, for purposes of generating anchors.
-	AnchorName string
-	// Label is not stored in the file, it's a label generated by doing a pass over the AST. For members, this is
-	// simply the node's "kind" to print in the docs (`class`, `function`, etc), and for signatures it's a more
-	// detailed expansion of the full signature (including the name).
-	Label string
-	// CodeDetails is used when a code-styled header is available to print before the details of a member.
-	CodeDetails string
-	// RepoURL is a link to this member in the relevant Git repo.  It's augmented information.
-	RepoURL string
-	// Extends is a rendered type this type inherits from (or empty if none).
-	Extends string
-	// Implements is a rendered list of interfaces this type implements (if any, or empty if none).
-	Implements string
-}
-
 // Merge attempts to merge two different document nodes. Only certain kinds of nodes can be merged with
 // one another (generally just interface kinds). If they are unmergable, an error is returned.
 func (n *typeDocNode) Merge(o *typeDocNode) (*typeDocNode, error) {
@@ -847,7 +882,7 @@ func createCodeDetails(node *typeDocNode) string {
 }
 
 // typeHyperlink returns the hyperlink for help text associated with a given type, if available.
-func typeHyperlink(t typeDocType) string {
+func typeHyperlink(t *typeDocType) string {
 	// Add a hyperlink for the type if possible.
 	if t.Type == typeDocIntrinsicType {
 		// If an intrinsic type, hyperlink to the standard JavaScript docs.
@@ -909,10 +944,10 @@ func typeHyperlink(t typeDocType) string {
 	return ""
 }
 
-func createTypeLabel(t typeDocType, indent int) string {
+func createTypeLabel(t *typeDocType, indent int) string {
 	switch t.Type {
 	case typeDocArrayType:
-		return fmt.Sprintf("%s[]", createTypeLabel(*t.ElementType, indent))
+		return fmt.Sprintf("%s[]", createTypeLabel(t.ElementType, indent))
 	case typeDocIntrinsicType, typeDocParameterType, typeDocReferenceType, typeDocUnknownType:
 		// Add a hyperlink for the type if possible.
 		var label string
@@ -994,7 +1029,7 @@ func createTypeLabel(t typeDocType, indent int) string {
 		}
 		return label
 	case typeDocTypeOperatorType:
-		targetStr := createTypeLabel(*t.Target, indent)
+		targetStr := createTypeLabel(t.Target, indent)
 		return fmt.Sprintf("%s %s", t.Operator, targetStr)
 	default:
 		log.Fatalf("unrecognized type node type: %v\n", t.Type)
@@ -1017,6 +1052,60 @@ func createVisibilityLabel(flags typeDocFlags) string {
 	return fmt.Sprintf("<span class='kd'>%s</span>", label)
 }
 
+// typeDoc represents a JSON serialized structure that has been output from the `typedoc` program.  I'm sure we are
+// unintentionally sensitive to particular flags, so for reference, we are generally parsing things of the form
+//
+//     $ tsdoc --json docs.json --mode modules --includeDeclarations
+//
+// In particular, passing --mode file will not lead to the correct behavior, due to the way we use module structure.
+type typeDocNode struct {
+	// Name is the package name that this documentation refers to.
+	Name string `json:"name,omitempty"`
+	// KindString is the string-based kind of this node.
+	Kind typeDocNodeKind `json:"kindString,omitempty"`
+	// Flags contains a bunch of flags pertaining to this node.
+	Flags typeDocFlags `json:"flags,omitempty"`
+	// Type is the type of this member, when appropriate.
+	Type *typeDocType `json:"type,omitempty"`
+	// Comment is a JSDoc comment extracted via Typedoc.
+	Comment typeDocComment `json:"comment,omitempty"`
+	// DefaultValue is an optional default value for this entry (or nil if none).
+	DefaultValue *string `json:"defaultValue,omitempty"`
+	// IndexSignature is used to represent indexed types (e.g., `{[key: string]: any}`).
+	IndexSignatures []*typeDocNode `json:"indexSignature,omitempty"`
+	// Children is a list of one or more child members of this node.
+	Children []*typeDocNode `json:"children,omitempty"`
+	// TypeParameter includes all the type parameters for this node.
+	TypeParameter []*typeDocNode `json:"typeParameter,omitempty"`
+	// Parameters is a list of parameter nodes for this node, when a Call signature.
+	Parameters []*typeDocNode `json:"parameters,omitempty"`
+	// Signatures is a list of signature nodes for this node, when a Method.
+	Signatures []*typeDocNode `json:"signatures,omitempty"`
+	// ExtendedBy is a cross-reference to all the other artifacts that extend this one.
+	ExtendedBy []*typeDocType `json:"extendedBy,omitempty"`
+	// ExtendedTypes is a list of other types extended by this one.
+	ExtendedTypes []*typeDocType `json:"extendedTypes,omitempty"`
+	// ImplementedTypes is a list of other types implemented by this one.
+	ImplementedTypes []*typeDocType `json:"implementedTypes,omitempty"`
+	// Sources represents the source files from which this node came.
+	Sources []typeDocSource `json:"sources,omitempty"`
+
+	// AnchorName is the qualified name of a member, for purposes of generating anchors.
+	AnchorName string
+	// Label is not stored in the file, it's a label generated by doing a pass over the AST. For members, this is
+	// simply the node's "kind" to print in the docs (`class`, `function`, etc), and for signatures it's a more
+	// detailed expansion of the full signature (including the name).
+	Label string
+	// CodeDetails is used when a code-styled header is available to print before the details of a member.
+	CodeDetails string
+	// RepoURL is a link to this member in the relevant Git repo.  It's augmented information.
+	RepoURL string
+	// Extends is a rendered type this type inherits from (or empty if none).
+	Extends string
+	// Implements is a rendered list of interfaces this type implements (if any, or empty if none).
+	Implements string
+}
+
 type typeDocFlags struct {
 	IsConst     bool `json:"isConst,omitempty"`
 	IsOptional  bool `json:"isOptional,omitempty"`
@@ -1035,13 +1124,13 @@ type typeDocType struct {
 	// Name is the name of the type.
 	Name string `json:"name,omitempty"`
 	// Elements contains the element type for tuples.
-	Elements []typeDocType `json:"elements,omitempty"`
+	Elements []*typeDocType `json:"elements,omitempty"`
 	// ElementType contains the element type for arrays.
 	ElementType *typeDocType `json:"elementType,omitempty"`
 	// TypeArguments is an optional list of instantiated type args.
-	TypeArguments []typeDocType `json:"typeArguments,omitempty"`
+	TypeArguments []*typeDocType `json:"typeArguments,omitempty"`
 	// Types contains the constituent parts of complex types, like unions.
-	Types []typeDocType `json:"types,omitempty"`
+	Types []*typeDocType `json:"types,omitempty"`
 	// Value is the actual value for literal types.
 	Value string `json:"value,omitempty"`
 	// Declaration is used for reflection-style type literals.
@@ -1072,6 +1161,12 @@ type typeDocComment struct {
 	// ShortText is the brief JSDoc comment attached to the artifact in question.
 	ShortText string `json:"shortText,omitempty"`
 	// Text is a more detailed JSDoc comment attached to the artifact in question.
+	Text string       `json:"text,omitempty"`
+	Tags []typeDocTag `json:"tags,omitempty"`
+}
+
+type typeDocTag struct {
+	Tag  string `json:"tag,omitempty"`
 	Text string `json:"text,omitempty"`
 }
 
