@@ -67,7 +67,6 @@ title: Module storage
 * <a href="#SimpleBucketEventArgs">interface SimpleBucketEventArgs</a>
 * <a href="#TransferJobArgs">interface TransferJobArgs</a>
 * <a href="#TransferJobState">interface TransferJobState</a>
-* <a href="#"./bucket"">module "./bucket"</a>
 * <a href="#BucketEventHandler">type BucketEventHandler</a>
 
 <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucket.ts">storage/bucket.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucketACL.ts">storage/bucketACL.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucketIAMBinding.ts">storage/bucketIAMBinding.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucketIAMMember.ts">storage/bucketIAMMember.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucketIAMPolicy.ts">storage/bucketIAMPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/bucketObject.ts">storage/bucketObject.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/defaultObjectACL.ts">storage/defaultObjectACL.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/defaultObjectAccessControl.ts">storage/defaultObjectAccessControl.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/getBucketObject.ts">storage/getBucketObject.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/getObjectSignedUrl.ts">storage/getObjectSignedUrl.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/getProjectServiceAccount.ts">storage/getProjectServiceAccount.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/getTransferProjectServieAccount.ts">storage/getTransferProjectServieAccount.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/notification.ts">storage/notification.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/objectACL.ts">storage/objectACL.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/objectAccessControl.ts">storage/objectAccessControl.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/transferJob.ts">storage/transferJob.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/zMixins.ts">storage/zMixins.ts</a> 
@@ -158,6 +157,79 @@ properties used to qualify the lookup.
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
+
+</div>
+<h3 class="pdoc-member-header" id="Bucket-onObjectArchived">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/zMixins.ts#L112">method <b>onObjectArchived</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>onObjectArchived(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a> | <a href='#BucketEventCallbackFunctionArgs'>BucketEventCallbackFunctionArgs</a>, args?: <a href='#SimpleBucketEventArgs'>SimpleBucketEventArgs</a>, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): cloudfunctions.CallbackFunction</pre>
+
+
+Creates and publishes a Cloud Functions that will be triggered when a live version of an
+object is archived or deleted.
+
+This event is only sent for versioning buckets.
+
+See https://cloud.google.com/storage/docs/object-versioning for more details.
+
+</div>
+<h3 class="pdoc-member-header" id="Bucket-onObjectDeleted">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/zMixins.ts#L102">method <b>onObjectDeleted</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>onObjectDeleted(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a> | <a href='#BucketEventCallbackFunctionArgs'>BucketEventCallbackFunctionArgs</a>, args?: <a href='#SimpleBucketEventArgs'>SimpleBucketEventArgs</a>, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): cloudfunctions.CallbackFunction</pre>
+
+
+Creates and publishes a Cloud Functions that will be triggered when an object is
+permanently deleted. Depending on the object versioning setting for a bucket this means:
+
+1. For versioning buckets, this is only sent when a version is permanently deleted (but
+   not when an object is archived).
+
+2. For non-versioning buckets, this is sent when an object is deleted or overwritten.
+
+See https://cloud.google.com/storage/docs/object-versioning for more details.
+
+</div>
+<h3 class="pdoc-member-header" id="Bucket-onObjectEvent">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/zMixins.ts#L125">method <b>onObjectEvent</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>onObjectEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a> | <a href='#BucketEventCallbackFunctionArgs'>BucketEventCallbackFunctionArgs</a>, args: <a href='#BucketEventArgs'>BucketEventArgs</a>, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): cloudfunctions.CallbackFunction</pre>
+
+
+Generic helper for registering for any event.
+
+</div>
+<h3 class="pdoc-member-header" id="Bucket-onObjectFinalized">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/zMixins.ts#L89">method <b>onObjectFinalized</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>onObjectFinalized(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a> | <a href='#BucketEventCallbackFunctionArgs'>BucketEventCallbackFunctionArgs</a>, args?: <a href='#SimpleBucketEventArgs'>SimpleBucketEventArgs</a>, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): cloudfunctions.CallbackFunction</pre>
+
+
+Creates and publishes a Cloud Functions that will be triggered when a new object is
+created (or an existing object is overwritten, and a new generation of that object is
+created) in this bucket.
+
+</div>
+<h3 class="pdoc-member-header" id="Bucket-onObjectMetadataUpdated">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/zMixins.ts#L120">method <b>onObjectMetadataUpdated</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>onObjectMetadataUpdated(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a> | <a href='#BucketEventCallbackFunctionArgs'>BucketEventCallbackFunctionArgs</a>, args?: <a href='#SimpleBucketEventArgs'>SimpleBucketEventArgs</a>, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): cloudfunctions.CallbackFunction</pre>
+
+
+Creates and publishes a Cloud Functions that will be triggered when the metadata of an
+existing object changes.
+
+See https://cloud.google.com/storage/docs/metadata for more details.
 
 </div>
 <h3 class="pdoc-member-header" id="Bucket-cors">
@@ -4687,16 +4759,6 @@ Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status 
 
 Transfer specification. Structure documented below.
 
-</div>
-</div>
-<h2 class="pdoc-module-header" id="&#34;./bucket&#34;">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/zMixins.ts#L82">module <b>"./bucket"</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<h3 class="pdoc-member-header" id="Bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/zMixins.ts#L83">interface <b>Bucket</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BucketEventHandler">

@@ -75,6 +75,7 @@ import * as pulumi from "@pulumi/pulumi";
 <h2 class="pdoc-module-header toggleButton" title="Click to hide Modules">Modules ▾</h2>
 <div class="pdoc-module-contents" markdown="1">
 * <a href="asset">asset</a>
+* <a href="cmd">cmd</a>
 * <a href="dynamic">dynamic</a>
 * <a href="iterable">iterable</a>
 * <a href="log">log</a>
