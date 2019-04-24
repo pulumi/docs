@@ -26,7 +26,6 @@ title: Module storage
 * <a href="#ObjectACL">class ObjectACL</a>
 * <a href="#ObjectAccessControl">class ObjectAccessControl</a>
 * <a href="#TransferJob">class TransferJob</a>
-* <a href="#__unused">const __unused</a>
 * <a href="#getBucketObject">function getBucketObject</a>
 * <a href="#getObjectSignedUrl">function getObjectSignedUrl</a>
 * <a href="#getProjectServiceAccount">function getProjectServiceAccount</a>
@@ -2352,12 +2351,6 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 </div>
-</div>
-<h2 class="pdoc-module-header" id="__unused">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/zMixins.ts#L162">const <b>__unused</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> __unused: 0 = <span class='s2'>0</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="getBucketObject">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/storage/getBucketObject.ts#L28">function <b>getBucketObject</b></a>

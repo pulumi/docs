@@ -1166,9 +1166,6 @@ getStack returns the current stack name.  It throws an exception if none is regi
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/utils.ts#L30">function <b>hasTrueBooleanMember</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>hasTrueBooleanMember(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, memberName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'>symbol</span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
 </div>
 <h2 class="pdoc-module-header" id="interpolate">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L679">function <b>interpolate</b></a>
@@ -1194,9 +1191,6 @@ As with [concat] the 'placeholders' between `${}` can be any Inputs.  i.e. they 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/utils.ts#L25">function <b>isInstance</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isInstance&lt;T&gt;(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, name: keyof T): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
 </div>
 <h2 class="pdoc-module-header" id="output">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L303">function <b>output</b></a>
