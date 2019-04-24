@@ -41,15 +41,15 @@ Pulumi uses pulumi.com to store information about the current state of your appl
 
 ## What happens if pulumi.com is down?
 
-Any infrastructure that you’ve deployed using Pulumi will continue working and can be managed with your cloud provider’s console or CLI, that is, pulumi.com should not effect any runtime behavior of your application.  
+Any infrastructure that you’ve deployed using Pulumi will continue working and can be managed with your cloud provider’s console or CLI, that is, pulumi.com should not affect any runtime behavior of your application.  
 
-If pulumi.com is down, you'll be unable to preview, update or destroy a stack using Pulumi.  Some commands, like `pulumi logs`, use pulumi.com to find the correct log stream, so will not function until pulumi.com recovers, however, your cloud provider will still produce logs that you can use for diagnostics and you can view these via your cloud console or CLI. 
+If pulumi.com is down, you'll be unable to preview, update or destroy a stack using Pulumi.  Some commands, like `pulumi logs`, use pulumi.com to find the correct log stream, so will not function until pulumi.com recovers; however, your cloud provider will still produce logs that you can use for diagnostics and you can view these via your cloud console or CLI. 
 
 ## Can I use Pulumi without depending on pulumi.com?
 
 We think that using the Pulumi service and the Pulumi tool together provides the right combination of usability, safety, and security for most users. However, for users with especially unique requirements, it is possible to use the Pulumi tool apart from the service.
 
-When you use Pulumi without pulumi.com, the checkpoint for your stack is stored locally. If that file is lost or outdated, Pulumi can no longer operate on your stack. To collaborate with others on your stack, you must host this file yourself and protect against conflicting updates to it. If you use your own checkpoint file, pulumi.com features, such as the deployment history and resource view, will not be available.
+When you use Pulumi without pulumi.com, the checkpoint for your stack is stored locally. If that file is lost or outdated, Pulumi can no longer operate on your stack. To collaborate with others on your stack, you must host this file yourself and protect against conflicting updates to it. If you use your own checkpoint file, the pulumi.com features, such as the deployment history and resource view, will not be available.
 
 To use Pulumi without pulumi.com, log in using `pulumi login --local`. For more information, read more at [State and Backends](./state.html).
 
@@ -69,4 +69,4 @@ $ pulumi stack init my-app-production # create a new stack with the same name on
 $ pulumi stack import --file my-app-production.checkpoint.json # import the new existing checkpoint into pulumi.com
 ```
 
-In addition, if you have any encrypted configuration in your stack, you'll need to re-run `pulumi config set --secret <key> <value>` because pulumi.com uses a different key to encrypt your secrets than the local endpoint.
+In addition, if you have any encrypted configuration in your stack, you'll need to re-run `pulumi config set --secret <key> <value>` because pulumi.com uses a different key to encrypt your secrets than the local endpoint does.
