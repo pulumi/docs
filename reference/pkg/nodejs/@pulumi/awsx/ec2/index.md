@@ -29,7 +29,6 @@ title: Module ec2
 * <a href="#TcpPorts">class TcpPorts</a>
 * <a href="#UdpPorts">class UdpPorts</a>
 * <a href="#Vpc">class Vpc</a>
-* <a href="#VpcTopology">class VpcTopology</a>
 * <a href="#cpuCreditBalance">function cpuCreditBalance</a>
 * <a href="#cpuCreditUsage">function cpuCreditUsage</a>
 * <a href="#cpuSurplusCreditBalance">function cpuSurplusCreditBalance</a>
@@ -78,7 +77,7 @@ title: Module ec2
 * <a href="#SubnetOrId">type SubnetOrId</a>
 * <a href="#VpcSubnetType">type VpcSubnetType</a>
 
-<a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ec2/cidr.ts">ec2/cidr.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ec2/metrics.ts">ec2/metrics.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ec2/securityGroup.ts">ec2/securityGroup.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ec2/securityGroupRule.ts">ec2/securityGroupRule.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ec2/subnet.ts">ec2/subnet.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ec2/vpc.ts">ec2/vpc.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ec2/vpcTopology.ts">ec2/vpcTopology.ts</a> 
+<a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ec2/cidr.ts">ec2/cidr.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ec2/metrics.ts">ec2/metrics.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ec2/securityGroup.ts">ec2/securityGroup.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ec2/securityGroupRule.ts">ec2/securityGroupRule.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ec2/subnet.ts">ec2/subnet.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ec2/vpc.ts">ec2/vpc.ts</a> 
 </div>
 </div>
 </div>
@@ -550,9 +549,6 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ec2/securityGroup.ts#L72">method <b>isSecurityGroupInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'>public static </span>isSecurityGroupInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroup-registerOutputs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L147">method <b>registerOutputs</b></a>
@@ -750,9 +746,6 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ec2/subnet.ts#L77">method <b>isSubnetInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'>public static </span>isSubnetInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
 </div>
 <h3 class="pdoc-member-header" id="Subnet-registerOutputs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L147">method <b>registerOutputs</b></a>
@@ -1071,27 +1064,6 @@ deployments.
 <pre class="highlight"><span class='kd'>public </span>vpc: aws.ec2.Vpc;</pre>
 </div>
 </div>
-<h2 class="pdoc-module-header" id="VpcTopology">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ec2/vpcTopology.ts#L24">class <b>VpcTopology</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<h3 class="pdoc-member-header" id="VpcTopology-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ec2/vpcTopology.ts#L26"> <b>constructor</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> VpcTopology(vpc: x.ec2.Vpc, vpcName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, vpcCidr: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, numberOfAvailabilityZones: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, opts: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>)</pre>
-
-</div>
-<h3 class="pdoc-member-header" id="VpcTopology-createSubnets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ec2/vpcTopology.ts#L37">method <b>createSubnets</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'>public </span>createSubnets(subnetArgsArray: x.ec2.VpcSubnetArgs[]): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
-
-</div>
-</div>
 <h2 class="pdoc-module-header" id="cpuCreditBalance">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ec2/metrics.ts#L136">function <b>cpuCreditBalance</b></a>
 </h2>
@@ -1386,17 +1358,11 @@ Unit: Count
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ec2/securityGroup.ts#L105">function <b>getSecurityGroups</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>getSecurityGroups(vpc: x.ec2.Vpc, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#SecurityGroupOrId'>SecurityGroupOrId</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, opts: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ResourceOptions'>pulumi.ResourceOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <a href='#SecurityGroup'>SecurityGroup</a>[]</pre>
-
 </div>
 <h2 class="pdoc-module-header" id="isSimpleSecurityGroupRuleArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ec2/securityGroupRule.ts#L299">function <b>isSimpleSecurityGroupRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>isSimpleSecurityGroupRuleArgs(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
 </div>
 <h2 class="pdoc-module-header" id="metric">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ec2/metrics.ts#L82">function <b>metric</b></a>
