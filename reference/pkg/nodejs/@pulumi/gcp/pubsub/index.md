@@ -42,6 +42,7 @@ title: Module pubsub
 * <a href="#TopicIAMPolicyState">interface TopicIAMPolicyState</a>
 * <a href="#TopicMessagePublishedArgs">interface TopicMessagePublishedArgs</a>
 * <a href="#TopicState">interface TopicState</a>
+* <a href="#"./topic"">module "./topic"</a>
 * <a href="#TopicEventHandler">type TopicEventHandler</a>
 
 <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscription.ts">pubsub/subscription.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMBinding.ts">pubsub/subscriptionIAMBinding.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMMember.ts">pubsub/subscriptionIAMMember.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts">pubsub/subscriptionIAMPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topic.ts">pubsub/topic.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMBinding.ts">pubsub/topicIAMBinding.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMMember.ts">pubsub/topicIAMMember.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/topicIAMPolicy.ts">pubsub/topicIAMPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/zMixins.ts">pubsub/zMixins.ts</a> 
@@ -846,22 +847,6 @@ properties used to qualify the lookup.
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
-
-</div>
-<h3 class="pdoc-member-header" id="Topic-onMessagePublished">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/zMixins.ts#L78">method <b>onMessagePublished</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>onMessagePublished(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#TopicEventHandler'>TopicEventHandler</a> | <a href='#TopicEventCallbackFunctionArgs'>TopicEventCallbackFunctionArgs</a>, args?: <a href='#TopicMessagePublishedArgs'>TopicMessagePublishedArgs</a>, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): cloudfunctions.CallbackFunction</pre>
-
-
-Creates and publishes a Cloud Functions that will be triggered by messages published to
-Cloud Pub/Sub topics in the same GCP project as the Function. Cloud Pub/Sub is a globally
-distributed message bus that automatically scales as you need it and provides a
-foundation for building your own robust, global services.
-
-See https://cloud.google.com/functions/docs/calling/pubsub for more details.
 
 </div>
 <h3 class="pdoc-member-header" id="Topic-id">
@@ -2390,6 +2375,16 @@ Input properties used for looking up and filtering Topic resources.
 The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
+</div>
+</div>
+<h2 class="pdoc-module-header" id="&#34;./topic&#34;">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/zMixins.ts#L68">module <b>"./topic"</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="Topic">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/pubsub/zMixins.ts#L69">interface <b>Topic</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TopicEventHandler">

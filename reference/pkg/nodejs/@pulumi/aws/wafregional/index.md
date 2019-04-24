@@ -1557,7 +1557,7 @@ deployments.
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
-Provides a resource to create an association between a WAF Regional WebACL and Application Load Balancer.
+Manages an association with WAF Regional Web ACL.
 
 > **Note:** An Application Load Balancer can only be associated with one WAF Regional WebACL.
 
@@ -1684,7 +1684,7 @@ deployments and may be missing (undefined) during planning phases.
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceArn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
-Application Load Balancer ARN to associate with.
+ARN of the resource to associate with. For example, an Application Load Balancer or API Gateway Stage.
 
 </div>
 <h3 class="pdoc-member-header" id="WebAclAssociation-urn">
@@ -2638,7 +2638,7 @@ The set of arguments for constructing a WebAclAssociation resource.
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceArn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
-Application Load Balancer ARN to associate with.
+ARN of the resource to associate with. For example, an Application Load Balancer or API Gateway Stage.
 
 </div>
 <h3 class="pdoc-member-header" id="WebAclAssociationArgs-webAclId">
@@ -2664,7 +2664,7 @@ Input properties used for looking up and filtering WebAclAssociation resources.
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceArn?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
-Application Load Balancer ARN to associate with.
+ARN of the resource to associate with. For example, an Application Load Balancer or API Gateway Stage.
 
 </div>
 <h3 class="pdoc-member-header" id="WebAclAssociationState-webAclId">

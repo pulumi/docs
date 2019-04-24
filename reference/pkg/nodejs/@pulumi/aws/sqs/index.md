@@ -27,6 +27,7 @@ title: Module sqs
 * <a href="#QueueRecord">interface QueueRecord</a>
 * <a href="#QueueState">interface QueueState</a>
 * <a href="#RedrivePolicy">interface RedrivePolicy</a>
+* <a href="#"./queue"">module "./queue"</a>
 * <a href="#QueueEventHandler">type QueueEventHandler</a>
 * <a href="#QueueEventSubscriptionArgs">type QueueEventSubscriptionArgs</a>
 
@@ -129,18 +130,6 @@ properties used to qualify the lookup.
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
-
-</div>
-<h3 class="pdoc-member-header" id="Queue-onEvent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/sqsMixins.ts#L114">method <b>onEvent</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>onEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#QueueEventHandler'>QueueEventHandler</a>, args?: <a href='#QueueEventSubscriptionArgs'>QueueEventSubscriptionArgs</a>, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#QueueEventSubscription'>QueueEventSubscription</a></pre>
-
-
-Creates a new subscription to events fired from this Queue to the handler provided, along
-with options to control the behavior of the subscription.
 
 </div>
 <h3 class="pdoc-member-header" id="Queue-arn">
@@ -562,7 +551,7 @@ The Amazon Resource Name (ARN) of the queue.
 
 </div>
 <h3 class="pdoc-member-header" id="GetQueueResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/getQueue.ts#L54">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/getQueue.ts#L55">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -570,8 +559,14 @@ The Amazon Resource Name (ARN) of the queue.
 id is the provider-assigned unique ID for this managed resource.
 
 </div>
+<h3 class="pdoc-member-header" id="GetQueueResult-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/getQueue.ts#L47">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+</div>
 <h3 class="pdoc-member-header" id="GetQueueResult-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/getQueue.ts#L50">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/getQueue.ts#L51">property <b>url</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>url: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1015,6 +1010,16 @@ The number of times a message is delivered to the source queue before being move
 Note: The dead-letter queue of a FIFO queue must also be a FIFO queue. Similarly, the dead-letter queue of a
 standard queue must also be a standard queue.
 
+</div>
+</div>
+<h2 class="pdoc-module-header" id="&#34;./queue&#34;">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/sqsMixins.ts#L108">module <b>"./queue"</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="Queue">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/sqs/sqsMixins.ts#L109">interface <b>Queue</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
 </div>
 </div>
 <h2 class="pdoc-module-header" id="QueueEventHandler">

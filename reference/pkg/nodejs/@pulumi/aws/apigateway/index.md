@@ -4313,12 +4313,12 @@ To fetch the Resource, you must provide the REST API id as well as the full path
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const myResource = aws_api_gateway_rest_api_my_rest_api.id.apply(id => aws.apigateway.getResource({
-    path: "/endpoint/path",
-    restApiId: id,
-}));
 const myRestApi = pulumi.output(aws.apigateway.getRestApi({
     name: "my-rest-api",
+}));
+const myResource = myRestApi.apply(myRestApi => aws.apigateway.getResource({
+    path: "/endpoint/path",
+    restApiId: myRestApi.id,
 }));
 ```
 
@@ -5435,8 +5435,17 @@ The ID of the API Key to look up.
 
 A collection of values returned by getKey.
 
+<h3 class="pdoc-member-header" id="GetKeyResult-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getKey.ts#L45">property <b>id</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+Set to the ID of the API Key.
+
+</div>
 <h3 class="pdoc-member-header" id="GetKeyResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getKey.ts#L45">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getKey.ts#L49">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5445,7 +5454,7 @@ Set to the name of the API Key.
 
 </div>
 <h3 class="pdoc-member-header" id="GetKeyResult-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getKey.ts#L49">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getKey.ts#L53">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5488,7 +5497,7 @@ The REST API id that owns the resource. If no REST API is found, an error will b
 A collection of values returned by getResource.
 
 <h3 class="pdoc-member-header" id="GetResourceResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getResource.ts#L62">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getResource.ts#L64">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5505,14 +5514,26 @@ id is the provider-assigned unique ID for this managed resource.
 Set to the ID of the parent Resource.
 
 </div>
+<h3 class="pdoc-member-header" id="GetResourceResult-path">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getResource.ts#L55">property <b>path</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+</div>
 <h3 class="pdoc-member-header" id="GetResourceResult-pathPart">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getResource.ts#L58">property <b>pathPart</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getResource.ts#L59">property <b>pathPart</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>pathPart: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 
 Set to the path relative to the parent Resource.
 
+</div>
+<h3 class="pdoc-member-header" id="GetResourceResult-restApiId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getResource.ts#L60">property <b>restApiId</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>restApiId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetRestApiArgs">
@@ -5541,7 +5562,7 @@ If multiple REST APIs are found with this name, an error will be returned.
 A collection of values returned by getRestApi.
 
 <h3 class="pdoc-member-header" id="GetRestApiResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getRestApi.ts#L52">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getRestApi.ts#L53">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5549,8 +5570,14 @@ A collection of values returned by getRestApi.
 id is the provider-assigned unique ID for this managed resource.
 
 </div>
+<h3 class="pdoc-member-header" id="GetRestApiResult-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getRestApi.ts#L45">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+</div>
 <h3 class="pdoc-member-header" id="GetRestApiResult-rootResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getRestApi.ts#L48">property <b>rootResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getRestApi.ts#L49">property <b>rootResourceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>rootResourceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5592,6 +5619,12 @@ A collection of values returned by getVpcLink.
 
 Set to the ID of the found API Gateway VPC Link.
 
+</div>
+<h3 class="pdoc-member-header" id="GetVpcLinkResult-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getVpcLink.ts#L49">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IntegrationArgs">
