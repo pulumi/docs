@@ -866,6 +866,242 @@ my_resource = MyResource("myResource", pulumi.ResourceOptions(providers={
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
+## Dynamic Providers {#dynamicproviders}
+
+Every `CustomResource` has a provider associated with it which knows how to Create/Read/Update/Delete instances of the custom resource in the backing cloud provider.  This provider can be defined by implementing the Pulumi Resource Provider gRPC interface.  There are generally two approaches to implementing this provider interface:
+1. Create a provider binary with the appropriate name and put it on the path, such that it will be loaded to handle CRUD operations from the Pulumi engine on resources from the package it is defined to handle.  For example the `pulumi-resource-aws` binary will handle resources from the `aws` package.  This binary can be authored in any language, but must be authored and distributed out of band of a Pulumi program.
+2. Define an implementation of the Provider interface directly within your Pulumi program, just for use within that program.  
+
+The former is used for most common Pulumi providers like AWS and Kubernetes.  The latter is a concept called Dynamic Providers, which provide a flexible approach to defining custom resource types directly within the source code of your Pulumi program.
+
+Dynamic Providers are defined by first implementing the `pulumi.dynamic.ResourceProvider` interface, including the `create`, `read`, `update` and `delete` operations for your resource, as well as `check` and `diff`.  Default implementations are provided for everything except `create`, so a minimal implementation could look like:
+
+{% include langchoose.html %}
+
+```javascript
+const myprovider = {
+    async create(inputs) {
+        return { id: "foo", outs: {}};
+    }
+}
+```
+
+```typescript
+const myprovider: pulumi.dynamic.ResourceProvider = {
+    async create(inputs) {
+        return { id: "foo", outs: {}};
+    }
+}
+```
+
+```python
+# Dynamic Providers are not supported in Go currently.
+```
+
+```go
+// Dynamic Providers are not supported in Go currently.
+```
+
+This resource provider is then used to create a new kind of custom resource by inheriting from the `pulumi.dynamic.Resource` base class (a subclass of `pulumi.CustomResource`).
+
+{% include langchoose.html %}
+
+```javascript
+class MyResource extends pulumi.dynamic.Resource {
+    constructor(name, props, opts) {
+        super(myprovider, name, props, opts); 
+    }
+}
+```
+
+```typescript
+class MyResource extends pulumi.dynamic.Resource {
+    constructor(name: string, props: {}, opts?: pulumi.CustomResourceOptions) {
+        super(myprovider, name, props, opts); 
+    }
+}
+```
+
+```python
+# Dynamic Providers are not supported in Go currently.
+```
+
+```go
+// Dynamic Providers are not supported in Go currently.
+```
+
+We can now create instances of the new `MyResource` resource kind in our program with `new MyRresource("name", args)`.  When we do so, if Pulumi determines the resource has not yet been created, it will call the `create` method on the resource provider interface.  If another Pulumi deployment happens and the resource already exists, Pulumi will call the `diff` method to determine whether a change can be made in place or whether a replacement is needed.  If a replacement is needed, Pulumi will call `create` for the new resource and then `delete` for the old resource.  If no repacement is needed, Pulumi will call `update`.  In all cases, before doing anything else, Pulumi will call the `check` method with the resource arguments to give the provider a chance to validate that the arguments are valid.  And finally, if Pulumi needs to read an existing resource without managing it directly, it will call `read`.
+
+Dynamic Providers are a flexible and low-level mechanism to plug arbitrary code directly into the deployment process.  Whereas most code in a Pulumi program runs as part of constructing the desired state of resources (the "resource graph"), the code inside the dynamic provider resource provider interface implementations (`create`, `update`, etc.) runs instead during resource provisioning (while the resource graph is being turned into a set of CRUD operations scheduled against the cloud providers).  In fact, these two phases of execution actually run in completely seperate processes.  The construction of a `new MyResource` happens inside the JavaScript/Python/Go process that's running your Pulumi program.  But your implementations of `create` or `update` are executed by a special resource provider binary called `pulumi-resource-pulumi-nodejs`.  This binary is what actually implements the Pulumi resource provider gRPC interface and speaks directly to the Pulumi engine. Because your implementation of the resource provider interface must be used by a different process, potentialy at a different point in time, dyanmic providers are built on top of the same [function serialization](serializing-functions.html) that is used for turning callbacks into AWS Lambdas or Google Cloud Functions.  Because of this serialization, there are some limits on what can be done inside the implementation of the resource provider interface, which you can read more about in the function serialization documentation.
+
+### Resource Provider Interface
+
+Implementing the `pulumi.dynamic.ResourceProvider` interface requires implementing a subset of the methods below.  Each of these methods is asynchronous, and most common implementations of these methods will do asynchronous network IO to provision resources in a backing cloud provider or other resource model. There are several important contracts to be aware of as part of determining how the Pulumi engine will call each of these methods, and with what data.
+
+##### `check(olds, news)`
+Check is invoked before any other methods, and is passed the resolved input properties that were originally provided to the resource constructor by the user.  It is passed both the old input properties that were stored in the statefile after the previous update to the resource, as well as the new inputs from the current deployment.  It has two jobs: (1) to verify that the inputs (particularly the news) are valid and if not to return useful error messages and (2) to return a set of checked inputs.  The inputs returned from the call to `check` will be the inputs that the Pulumi engine uses for all further processing of the resource, including being the values that will be passed back in to `diff`, `create`, `update`, etc.  In many cases, the `news` can be returned dirctly as the checked inputs.  But in cases where the provider needs to populate defaults, or do some normalization on values, it may want to do that in the `check` method so that this data is complete and normalized prior to being passed into other methods.
+
+##### `create(inputs)`
+Create is invoked when the resource name (URN) of the resoruce created by the user is not found in the existing state of the deployment.  The engine passes the provider the checked inputs returned from the call to `check`.  The create method is expected to do the work in the backing cloud provider to create the requested resource.  It then returns two pieces of data: (1) an `id` that can uniquely identify the resource in the backing provider for ater lookups and (2) a set of `outputs` from the backing provider that should be returned to the user code as properties on the `CustomResource` object, and stored into the checkpoint file.  If an error occurs, an exception can be thrown from the `create` method to return this error to the user.
+
+##### `diff(id, olds, news)`
+Diff is invoked when the resource name (URN) of the resoruce created by the user is found in the existing state of the deployment. This means the resource already exists, and will need to be either updated or replaced.  The `diff` method is passed the `id` of the resource (as returned by `create`) as well as the old outputs from the checkpoint file (values returned from a previous call to either `create` or `update`).  It is also passed the new checked inputs from the current deployment.  It returns four things (all optional):
+* `changes`: `true` if the provider believes there is a difference between the `olds` and `news` and wants to do an `update` or `replace` to affect this change.
+* `replaces`: An array of property names that have changed that should force a replacement.  Returning a non-zero length array here will tell the Pulumi engine to scheduled a replacement instead of an update, which might involve downtime, so this should only be used when a diff requested by the user cannot be implemented as an in-place update on the backing cloud provider.
+* `stables`: An array of property names that are known to not change between updates.  Pulumi will use this information to allow some `apply` calls on [Outputs]() to be processed during `previews` because it knows that the values of these will stay the same during an update.
+* `deleteBeforeReplace`: `true` if the proposed replacements require deleteing the existing resource before creating the new one.  By default Pulumi will try to create the new resource before deleting the old one to avoid downtime.
+If an error occurs, an exception can be thrown from the `diff` method to return this error to the user.
+
+##### `update(id, olds, news)`
+Update is invoked if the call to `diff` indicates replacement is not needed.  It is passed the the `id` of the resource (as returned by `create`) as well as the old outputs from the checkpoint file (values returned from a previous call to either `create` or `update`). It is also passed the new checked inputs from the current deployment.  The update method is expected to do the work in the backing cloud provider to update an existing resource to the new desired state.  It then returns a new set of `outputs` from the backing provider that should be returned to the user code as properties on the `CustomResource` object, and stored into the checkpoint file.  If an error occurs, an exception can be thrown from the `create` method to return this error to the user.
+
+##### `delete(id, props)`
+Delete is invoked if the resource name (URN) exists in the previous state but not in the new desired state, or if a replacement is needed.  It is passed the the `id` of the resource (as returned by `create`) as well as the old outputs from the checkpoint file (values returned from a previous call to either `create` or `update`).  It is expected to delete the corresponding resource from the backing cloud provider.  Nothing needs to be returned.  If an error occurs, an exception can be thrown from the `create` method to return this error to the user.
+
+##### `read(id, props)`
+Read is invoked when the Pulumi engine needs to get data about a resource that it is not managed by Pulumi.  It is passed the the `id` of the resource as tracked in the backing cloud provider as well as an optional bag of additional properties to use to disambiguate the request if needed. The `read` method is execpted to lookup the requested resource, and if found return the canonical `id` and output properties of this resource.  If an error occurs, an exception can be thrown from the `create` method to return this error to the user.
+
+### Dynamic Provider Examples
+
+#### Example: Random
+
+This example highlights using dynamic providers to run some code only when a resource is created, and then to store the results of that in the checkpoint file so that this value is maintained across deployments of the resource.  In this case, there is no "backing cloud provider", just the checkpoint file serialization that persists data.  The result is a provider similar to the one provided in `@pulumi/random` (although that library has many more flags than this simple example):
+
+{% include langchoose.html %}
+
+```javascript
+let pulumi = require("@pulumi/pulumi");
+let crypto = require("crypto");
+
+let randomprovider = {
+    async create(inputs) {
+        return { id: crypto.randomBytes(16).toString('hex'), outs: {}};
+    },
+}
+
+class Random extends pulumi.dynamic.Resource {
+    constructor(name, opts) {
+        super(randomprovider, name, {}, opts);
+    }
+}
+
+exports.Random = Random;
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as crypto from "crypto";
+
+const randomprovider: pulumi.dynamic.ResourceProvider = {
+    async create(inputs) {
+        return { id: crypto.randomBytes(16).toString('hex'), outs: {}};
+    },
+}
+
+export class Random extends pulumi.dynamic.Resource {
+    constructor(name: string, opts?: pulumi.CustomResourceOptions) {
+        super(randomprovider, name, {}, opts);
+    }
+}
+```
+
+```python
+# Dynamic Providers are not supported in Go currently.
+```
+
+```go
+// Dynamic Providers are not supported in Go currently.
+```
+
+#### Example: Random
+
+This example highlights making REST API calls to some backing provider (in this case the GitHub API) to perform CRUD operations.  Because the resource provider method implementations will be serialized and used in a different process, we keep all the work to initialize the REST client and make calls to it local to each function.  
+
+
+{% include langchoose.html %}
+
+```javascript
+let pulumi = require("@pulumi/pulumi");
+let Octokit = require("@octokit/rest");
+
+// Set this value before creating an instance to configure the authentication token to use for deployments
+let auth = "token invalid";
+exports.setAuth = function(token) { auth = token; }
+
+const githubLabelProvider = {
+    async create(inputs) {
+        const ocktokit = new Ocktokit({auth});
+        const label = await ocktokit.issues.createLabel(inputs);
+        return { id: label.data.id.toString(), outs: label.data };
+    },
+    async update(id, olds, news) {
+        const ocktokit = new Ocktokit({auth});
+        const label = await ocktokit.issues.updateLabel({ ...news, current_name: olds.name });
+        return { outs: label.data };
+    },
+    async delete(id, props) {
+        const ocktokit = new Ocktokit({auth});
+        await ocktokit.issues.deleteLabel(props);
+    }
+}
+
+class Label extends pulumi.dynamic.Resource {
+    constructor(name, args, opts) {
+        super(githubLabelProvider, name, args, opts);
+    }
+}
+
+exports.Label = Label;
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as Ocktokit from "@octokit/rest";
+
+// Set this value before creating an instance to configure the authentication token to use for deployments
+let auth = "token invalid";
+export function setAuth(token: string) { auth = token; }
+
+interface LabelInputs {
+    owner: string;
+    repo: string;
+    name: string;
+    color: string;
+    description?: string;
+}
+
+const githubLabelProvider: pulumi.dynamic.ResourceProvider = {
+    async create(inputs: LabelInputs) {
+        const ocktokit = new Ocktokit({auth});
+        const label = await ocktokit.issues.createLabel(inputs);
+        return { id: label.data.id.toString(), outs: label.data };
+    },
+    async update(id, olds: LabelInputs, news: LabelInputs) {
+        const ocktokit = new Ocktokit({auth});
+        const label = await ocktokit.issues.updateLabel({ ...news, current_name: olds.name });
+        return { outs: label.data };
+    },
+    async delete(id, props: LabelInputs) {
+        const ocktokit = new Ocktokit({auth});
+        await ocktokit.issues.deleteLabel(props);
+    }
+}
+
+export class Label extends pulumi.dynamic.Resource {
+    constructor(name: string, args: LabelInputs, opts?: pulumi.CustomResourceOptions) {
+        super(githubLabelProvider, name, args, opts);
+    }
+}
+```
+
+```python
+# Dynamic Providers are not supported in Go currently.
+```
+
+```go
+// Dynamic Providers are not supported in Go currently.
+```
+
 ## Packages {#packages}
 
 Pulumi packages are normal NPM or Python packages. They transitively depend on `@pulumi/pulumi` which defines how resources created by a Pulumi program will be communicated to the Pulumi engine.  This ability to register resources with the Pulumi engine is the only difference between a Pulumi package and any other NPM package.
