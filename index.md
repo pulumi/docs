@@ -166,5 +166,5 @@ searchindex: false
 </div>
 
 For questions or feedback, reach us in our
-[community Slack channel](https://join.slack.com/t/pulumi-community/shared_invite/enQtMzc4MDEyMTk5NzAyLWIxYTEwZmM5ZGFiZTQwZDMzOTMzYWIyM2EyOWIwNDg5YzE1MTg5OGQ5NDQ1MjIzNjcxNDU3NzM0ZWI4NDY1ZGY),
+[community Slack channel](https://slack.pulumi.io),
 on [GitHub](https://github.com/pulumi), or by emailing [support@pulumi.com](mailto:support@pulumi.com).
