@@ -849,7 +849,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.wafregional.WebAclAssociation">
 <em class="property">class </em><code class="descclassname">pulumi_aws.wafregional.</code><code class="descname">WebAclAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>resource_arn=None</em>, <em>web_acl_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.WebAclAssociation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a resource to create an association between a WAF Regional WebACL and Application Load Balancer.</p>
+<dd><p>Manages an association with WAF Regional Web ACL.</p>
 <blockquote>
 <div><strong>Note:</strong> An Application Load Balancer can only be associated with one WAF Regional WebACL.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
@@ -859,7 +859,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>resource_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Application Load Balancer ARN to associate with.</li>
+<li><strong>resource_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ARN of the resource to associate with. For example, an Application Load Balancer or API Gateway Stage.</li>
 <li><strong>web_acl_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the WAF Regional WebACL to create an association.</li>
 </ul>
 </td>
@@ -869,7 +869,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.wafregional.WebAclAssociation.resource_arn">
 <code class="descname">resource_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.WebAclAssociation.resource_arn" title="Permalink to this definition">¶</a></dt>
-<dd><p>Application Load Balancer ARN to associate with.</p>
+<dd><p>ARN of the resource to associate with. For example, an Application Load Balancer or API Gateway Stage.</p>
 </dd></dl>
 
 <dl class="attribute">

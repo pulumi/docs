@@ -1127,7 +1127,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.rds.GetClusterResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">GetClusterResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>availability_zones=None</em>, <em>backup_retention_period=None</em>, <em>cluster_members=None</em>, <em>cluster_resource_id=None</em>, <em>database_name=None</em>, <em>db_cluster_parameter_group_name=None</em>, <em>db_subnet_group_name=None</em>, <em>enabled_cloudwatch_logs_exports=None</em>, <em>endpoint=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>final_snapshot_identifier=None</em>, <em>iam_database_authentication_enabled=None</em>, <em>iam_roles=None</em>, <em>kms_key_id=None</em>, <em>master_username=None</em>, <em>port=None</em>, <em>preferred_backup_window=None</em>, <em>preferred_maintenance_window=None</em>, <em>reader_endpoint=None</em>, <em>replication_source_identifier=None</em>, <em>storage_encrypted=None</em>, <em>tags=None</em>, <em>vpc_security_group_ids=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.GetClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">GetClusterResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>availability_zones=None</em>, <em>backup_retention_period=None</em>, <em>cluster_identifier=None</em>, <em>cluster_members=None</em>, <em>cluster_resource_id=None</em>, <em>database_name=None</em>, <em>db_cluster_parameter_group_name=None</em>, <em>db_subnet_group_name=None</em>, <em>enabled_cloudwatch_logs_exports=None</em>, <em>endpoint=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>final_snapshot_identifier=None</em>, <em>iam_database_authentication_enabled=None</em>, <em>iam_roles=None</em>, <em>kms_key_id=None</em>, <em>master_username=None</em>, <em>port=None</em>, <em>preferred_backup_window=None</em>, <em>preferred_maintenance_window=None</em>, <em>reader_endpoint=None</em>, <em>replication_source_identifier=None</em>, <em>storage_encrypted=None</em>, <em>tags=None</em>, <em>vpc_security_group_ids=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.GetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCluster.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.rds.GetClusterResult.id">
@@ -1139,7 +1139,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.rds.GetClusterSnapshotResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">GetClusterSnapshotResult</code><span class="sig-paren">(</span><em>allocated_storage=None</em>, <em>availability_zones=None</em>, <em>db_cluster_snapshot_arn=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>kms_key_id=None</em>, <em>license_model=None</em>, <em>port=None</em>, <em>snapshot_create_time=None</em>, <em>source_db_cluster_snapshot_arn=None</em>, <em>status=None</em>, <em>storage_encrypted=None</em>, <em>vpc_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.GetClusterSnapshotResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">GetClusterSnapshotResult</code><span class="sig-paren">(</span><em>allocated_storage=None</em>, <em>availability_zones=None</em>, <em>db_cluster_identifier=None</em>, <em>db_cluster_snapshot_arn=None</em>, <em>db_cluster_snapshot_identifier=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>include_public=None</em>, <em>include_shared=None</em>, <em>kms_key_id=None</em>, <em>license_model=None</em>, <em>most_recent=None</em>, <em>port=None</em>, <em>snapshot_create_time=None</em>, <em>snapshot_type=None</em>, <em>source_db_cluster_snapshot_arn=None</em>, <em>status=None</em>, <em>storage_encrypted=None</em>, <em>vpc_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.GetClusterSnapshotResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getClusterSnapshot.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.rds.GetClusterSnapshotResult.allocated_storage">
@@ -1151,6 +1151,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.rds.GetClusterSnapshotResult.availability_zones">
 <code class="descname">availability_zones</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.GetClusterSnapshotResult.availability_zones" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of EC2 Availability Zones that instances in the DB cluster snapshot can be restored in.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.rds.GetClusterSnapshotResult.db_cluster_identifier">
+<code class="descname">db_cluster_identifier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.GetClusterSnapshotResult.db_cluster_identifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the DB cluster identifier of the DB cluster that this DB cluster snapshot was created from.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1223,7 +1229,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.rds.GetEventCategoriesResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">GetEventCategoriesResult</code><span class="sig-paren">(</span><em>event_categories=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.GetEventCategoriesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">GetEventCategoriesResult</code><span class="sig-paren">(</span><em>event_categories=None</em>, <em>source_type=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.GetEventCategoriesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getEventCategories.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.rds.GetEventCategoriesResult.event_categories">
@@ -1241,7 +1247,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.rds.GetInstanceResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">GetInstanceResult</code><span class="sig-paren">(</span><em>address=None</em>, <em>allocated_storage=None</em>, <em>auto_minor_version_upgrade=None</em>, <em>availability_zone=None</em>, <em>backup_retention_period=None</em>, <em>ca_cert_identifier=None</em>, <em>db_cluster_identifier=None</em>, <em>db_instance_arn=None</em>, <em>db_instance_class=None</em>, <em>db_instance_port=None</em>, <em>db_name=None</em>, <em>db_parameter_groups=None</em>, <em>db_security_groups=None</em>, <em>db_subnet_group=None</em>, <em>enabled_cloudwatch_logs_exports=None</em>, <em>endpoint=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>hosted_zone_id=None</em>, <em>iops=None</em>, <em>kms_key_id=None</em>, <em>license_model=None</em>, <em>master_username=None</em>, <em>monitoring_interval=None</em>, <em>monitoring_role_arn=None</em>, <em>multi_az=None</em>, <em>option_group_memberships=None</em>, <em>port=None</em>, <em>preferred_backup_window=None</em>, <em>preferred_maintenance_window=None</em>, <em>publicly_accessible=None</em>, <em>replicate_source_db=None</em>, <em>storage_encrypted=None</em>, <em>storage_type=None</em>, <em>timezone=None</em>, <em>vpc_security_groups=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.GetInstanceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">GetInstanceResult</code><span class="sig-paren">(</span><em>address=None</em>, <em>allocated_storage=None</em>, <em>auto_minor_version_upgrade=None</em>, <em>availability_zone=None</em>, <em>backup_retention_period=None</em>, <em>ca_cert_identifier=None</em>, <em>db_cluster_identifier=None</em>, <em>db_instance_arn=None</em>, <em>db_instance_class=None</em>, <em>db_instance_identifier=None</em>, <em>db_instance_port=None</em>, <em>db_name=None</em>, <em>db_parameter_groups=None</em>, <em>db_security_groups=None</em>, <em>db_subnet_group=None</em>, <em>enabled_cloudwatch_logs_exports=None</em>, <em>endpoint=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>hosted_zone_id=None</em>, <em>iops=None</em>, <em>kms_key_id=None</em>, <em>license_model=None</em>, <em>master_username=None</em>, <em>monitoring_interval=None</em>, <em>monitoring_role_arn=None</em>, <em>multi_az=None</em>, <em>option_group_memberships=None</em>, <em>port=None</em>, <em>preferred_backup_window=None</em>, <em>preferred_maintenance_window=None</em>, <em>publicly_accessible=None</em>, <em>replicate_source_db=None</em>, <em>storage_encrypted=None</em>, <em>storage_type=None</em>, <em>timezone=None</em>, <em>vpc_security_groups=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.GetInstanceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInstance.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.rds.GetInstanceResult.address">
@@ -1469,7 +1475,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.rds.GetSnapshotResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">GetSnapshotResult</code><span class="sig-paren">(</span><em>allocated_storage=None</em>, <em>availability_zone=None</em>, <em>db_snapshot_arn=None</em>, <em>encrypted=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>iops=None</em>, <em>kms_key_id=None</em>, <em>license_model=None</em>, <em>option_group_name=None</em>, <em>port=None</em>, <em>snapshot_create_time=None</em>, <em>source_db_snapshot_identifier=None</em>, <em>source_region=None</em>, <em>status=None</em>, <em>storage_type=None</em>, <em>vpc_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.GetSnapshotResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">GetSnapshotResult</code><span class="sig-paren">(</span><em>allocated_storage=None</em>, <em>availability_zone=None</em>, <em>db_instance_identifier=None</em>, <em>db_snapshot_arn=None</em>, <em>db_snapshot_identifier=None</em>, <em>encrypted=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>include_public=None</em>, <em>include_shared=None</em>, <em>iops=None</em>, <em>kms_key_id=None</em>, <em>license_model=None</em>, <em>most_recent=None</em>, <em>option_group_name=None</em>, <em>port=None</em>, <em>snapshot_create_time=None</em>, <em>snapshot_type=None</em>, <em>source_db_snapshot_identifier=None</em>, <em>source_region=None</em>, <em>status=None</em>, <em>storage_type=None</em>, <em>vpc_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.GetSnapshotResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSnapshot.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.rds.GetSnapshotResult.allocated_storage">
@@ -1720,8 +1726,7 @@ the change is asynchronously applied as soon as possible.</li>
 <li><strong>apply_immediately</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
 <code class="docutils literal notranslate"><span class="pre">false</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html">Amazon RDS Documentation for more
-information.</a>
-for more information.</p>
+information.</a></p>
 </li>
 <li><strong>auto_minor_version_upgrade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates that minor engine upgrades
 will be applied automatically to the DB instance during the maintenance window.
@@ -1874,8 +1879,7 @@ the change is asynchronously applied as soon as possible.</p>
 <dd><p>Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
 <code class="docutils literal notranslate"><span class="pre">false</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html">Amazon RDS Documentation for more
-information.</a>
-for more information.</p>
+information.</a></p>
 </dd></dl>
 
 <dl class="attribute">

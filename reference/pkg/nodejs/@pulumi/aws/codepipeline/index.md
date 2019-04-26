@@ -28,7 +28,7 @@ title: Module codepipeline
 
 
 <h2 class="pdoc-module-header" id="Pipeline">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L114">class <b>Pipeline</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L132">class <b>Pipeline</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -43,7 +43,7 @@ Provides a CodePipeline.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const fooRole = new aws.iam.Role("foo", {
+const codepipelineRole = new aws.iam.Role("codepipeline_role", {
     assumeRolePolicy: `{
   "Version": "2012-10-17",
   "Statement": [
@@ -58,23 +58,22 @@ const fooRole = new aws.iam.Role("foo", {
 }
 `,
 });
-const fooBucket = new aws.s3.Bucket("foo", {
+const codepipelineBucket = new aws.s3.Bucket("codepipeline_bucket", {
     acl: "private",
-    bucket: "test-bucket",
 });
 const s3kmskey = pulumi.output(aws.kms.getAlias({
     name: "alias/myKmsKey",
 }));
-const fooPipeline = new aws.codepipeline.Pipeline("foo", {
+const codepipeline = new aws.codepipeline.Pipeline("codepipeline", {
     artifactStore: {
         encryptionKey: {
             id: s3kmskey.apply(s3kmskey => s3kmskey.arn),
             type: "KMS",
         },
-        location: fooBucket.bucket,
+        location: codepipelineBucket.bucket,
         type: "S3",
     },
-    roleArn: fooRole.arn,
+    roleArn: codepipelineRole.arn,
     stages: [
         {
             actions: [{
@@ -85,7 +84,7 @@ const fooPipeline = new aws.codepipeline.Pipeline("foo", {
                     Repo: "test",
                 },
                 name: "Source",
-                outputArtifacts: ["test"],
+                outputArtifacts: ["source_output"],
                 owner: "ThirdParty",
                 provider: "GitHub",
                 version: "1",
@@ -98,18 +97,37 @@ const fooPipeline = new aws.codepipeline.Pipeline("foo", {
                 configuration: {
                     ProjectName: "test",
                 },
-                inputArtifacts: ["test"],
+                inputArtifacts: ["source_output"],
                 name: "Build",
+                outputArtifacts: ["build_output"],
                 owner: "AWS",
                 provider: "CodeBuild",
                 version: "1",
             }],
             name: "Build",
         },
+        {
+            actions: [{
+                category: "Deploy",
+                configuration: {
+                    ActionMode: "REPLACE_ON_FAILURE",
+                    Capabilities: "CAPABILITY_AUTO_EXPAND,CAPABILITY_IAM",
+                    OutputFileName: "CreateStackOutput.json",
+                    StackName: "MyStack",
+                    TemplatePath: "build_output::sam-templated.yaml",
+                },
+                inputArtifacts: ["build_output"],
+                name: "Deploy",
+                owner: "AWS",
+                provider: "CloudFormation",
+                version: "1",
+            }],
+            name: "Deploy",
+        },
     ],
 });
 const codepipelinePolicy = new aws.iam.RolePolicy("codepipeline_policy", {
-    policy: pulumi.all([fooBucket.arn, fooBucket.arn]).apply(([fooBucketArn, fooBucketArn1]) => `{
+    policy: pulumi.all([codepipelineBucket.arn, codepipelineBucket.arn]).apply(([codepipelineBucketArn, codepipelineBucketArn1]) => `{
   "Version": "2012-10-17",
   "Statement": [
     {
@@ -120,8 +138,8 @@ const codepipelinePolicy = new aws.iam.RolePolicy("codepipeline_policy", {
         "s3:GetBucketVersioning"
       ],
       "Resource": [
-        "${fooBucketArn}",
-        "${fooBucketArn1}/*"
+        "${codepipelineBucketArn}",
+        "${codepipelineBucketArn1}/*"
       ]
     },
     {
@@ -135,12 +153,12 @@ const codepipelinePolicy = new aws.iam.RolePolicy("codepipeline_policy", {
   ]
 }
 `),
-    role: aws_iam_role_codepipeline_role.id,
+    role: codepipelineRole.id,
 });
 ```
 
 <h3 class="pdoc-member-header" id="Pipeline-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L144"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L162"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -155,7 +173,7 @@ Create a Pipeline resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="Pipeline-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L123">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L141">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -187,7 +205,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="Pipeline-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L130">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L148">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -196,7 +214,7 @@ The codepipeline ARN.
 
 </div>
 <h3 class="pdoc-member-header" id="Pipeline-artifactStore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L135">property <b>artifactStore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L153">property <b>artifactStore</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>artifactStore: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -223,7 +241,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="Pipeline-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L139">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L157">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -232,7 +250,7 @@ The name of the pipeline.
 
 </div>
 <h3 class="pdoc-member-header" id="Pipeline-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L143">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L161">property <b>roleArn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>roleArn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -241,7 +259,7 @@ A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permissio
 
 </div>
 <h3 class="pdoc-member-header" id="Pipeline-stages">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L144">property <b>stages</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L162">property <b>stages</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>stages: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -417,14 +435,14 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PipelineArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L211">interface <b>PipelineArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L229">interface <b>PipelineArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a Pipeline resource.
 
 <h3 class="pdoc-member-header" id="PipelineArgs-artifactStore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L216">property <b>artifactStore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L234">property <b>artifactStore</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>artifactStore: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -441,7 +459,7 @@ An artifact_store block. Artifact stores are documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="PipelineArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L220">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L238">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -450,7 +468,7 @@ The name of the pipeline.
 
 </div>
 <h3 class="pdoc-member-header" id="PipelineArgs-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L224">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L242">property <b>roleArn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>roleArn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -459,7 +477,7 @@ A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permissio
 
 </div>
 <h3 class="pdoc-member-header" id="PipelineArgs-stages">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L225">property <b>stages</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L243">property <b>stages</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>stages: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -480,14 +498,14 @@ A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permissio
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PipelineState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L187">interface <b>PipelineState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L205">interface <b>PipelineState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering Pipeline resources.
 
 <h3 class="pdoc-member-header" id="PipelineState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L191">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L209">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -496,7 +514,7 @@ The codepipeline ARN.
 
 </div>
 <h3 class="pdoc-member-header" id="PipelineState-artifactStore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L196">property <b>artifactStore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L214">property <b>artifactStore</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>artifactStore?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -513,7 +531,7 @@ An artifact_store block. Artifact stores are documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="PipelineState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L200">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L218">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -522,7 +540,7 @@ The name of the pipeline.
 
 </div>
 <h3 class="pdoc-member-header" id="PipelineState-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L204">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L222">property <b>roleArn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>roleArn?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -531,7 +549,7 @@ A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permissio
 
 </div>
 <h3 class="pdoc-member-header" id="PipelineState-stages">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L205">property <b>stages</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L223">property <b>stages</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>stages?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{

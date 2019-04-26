@@ -1,8 +1,56 @@
 <div class="section" id="module-pulumi_aws.transfer">
 <span id="transfer"></span><h1>transfer<a class="headerlink" href="#module-pulumi_aws.transfer" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
+<dt id="pulumi_aws.transfer.GetServerResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.transfer.</code><code class="descname">GetServerResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>endpoint=None</em>, <em>identity_provider_type=None</em>, <em>invocation_role=None</em>, <em>logging_role=None</em>, <em>server_id=None</em>, <em>url=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.transfer.GetServerResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getServer.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.transfer.GetServerResult.arn">
+<code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.transfer.GetServerResult.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amazon Resource Name (ARN) of Transfer Server</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.transfer.GetServerResult.endpoint">
+<code class="descname">endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.transfer.GetServerResult.endpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>The endpoint of the Transfer Server (e.g. <code class="docutils literal notranslate"><span class="pre">s-12345678.server.transfer.REGION.amazonaws.com</span></code>)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.transfer.GetServerResult.identity_provider_type">
+<code class="descname">identity_provider_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.transfer.GetServerResult.identity_provider_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The mode of authentication enabled for this service. The default value is <code class="docutils literal notranslate"><span class="pre">SERVICE_MANAGED</span></code>, which allows you to store and access SFTP user credentials within the service. <code class="docutils literal notranslate"><span class="pre">API_GATEWAY</span></code> indicates that user authentication requires a call to an API Gateway endpoint URL provided by you to integrate an identity provider of your choice.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.transfer.GetServerResult.invocation_role">
+<code class="descname">invocation_role</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.transfer.GetServerResult.invocation_role" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amazon Resource Name (ARN) of the IAM role used to authenticate the user account with an <code class="docutils literal notranslate"><span class="pre">identity_provider_type</span></code> of <code class="docutils literal notranslate"><span class="pre">API_GATEWAY</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.transfer.GetServerResult.logging_role">
+<code class="descname">logging_role</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.transfer.GetServerResult.logging_role" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.transfer.GetServerResult.url">
+<code class="descname">url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.transfer.GetServerResult.url" title="Permalink to this definition">¶</a></dt>
+<dd><p>URL of the service endpoint used to authenticate users with an <code class="docutils literal notranslate"><span class="pre">identity_provider_type</span></code> of <code class="docutils literal notranslate"><span class="pre">API_GATEWAY</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.transfer.GetServerResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.transfer.GetServerResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.transfer.Server">
-<em class="property">class </em><code class="descclassname">pulumi_aws.transfer.</code><code class="descname">Server</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>force_destroy=None</em>, <em>identity_provider_type=None</em>, <em>invocation_role=None</em>, <em>logging_role=None</em>, <em>tags=None</em>, <em>url=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.transfer.Server" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.transfer.</code><code class="descname">Server</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>endpoint_details=None</em>, <em>endpoint_type=None</em>, <em>force_destroy=None</em>, <em>identity_provider_type=None</em>, <em>invocation_role=None</em>, <em>logging_role=None</em>, <em>tags=None</em>, <em>url=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.transfer.Server" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a AWS Transfer Server resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -11,6 +59,8 @@
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>endpoint_details</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. Fields documented below.</li>
+<li><strong>endpoint_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of endpoint that you want your SFTP server connect to. If you connect to a <code class="docutils literal notranslate"><span class="pre">VPC_ENDPOINT</span></code>, your SFTP server isn’t accessible over the public internet. If you want to connect your SFTP server via public internet, set <code class="docutils literal notranslate"><span class="pre">PUBLIC</span></code>.</li>
 <li><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean that indicates all users associated with the server should be deleted so that the Server can be destroyed without error. The default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>identity_provider_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mode of authentication enabled for this service. The default value is <code class="docutils literal notranslate"><span class="pre">SERVICE_MANAGED</span></code>, which allows you to store and access SFTP user credentials within the service. <code class="docutils literal notranslate"><span class="pre">API_GATEWAY</span></code> indicates that user authentication requires a call to an API Gateway endpoint URL provided by you to integrate an identity provider of your choice.</li>
 <li><strong>invocation_role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the IAM role used to authenticate the user account with an <code class="docutils literal notranslate"><span class="pre">identity_provider_type</span></code> of <code class="docutils literal notranslate"><span class="pre">API_GATEWAY</span></code>.</li>
@@ -35,6 +85,18 @@
 <dt id="pulumi_aws.transfer.Server.endpoint">
 <code class="descname">endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.transfer.Server.endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>The endpoint of the Transfer Server (e.g. <code class="docutils literal notranslate"><span class="pre">s-12345678.server.transfer.REGION.amazonaws.com</span></code>)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.transfer.Server.endpoint_details">
+<code class="descname">endpoint_details</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.transfer.Server.endpoint_details" title="Permalink to this definition">¶</a></dt>
+<dd><p>The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. Fields documented below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.transfer.Server.endpoint_type">
+<code class="descname">endpoint_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.transfer.Server.endpoint_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of endpoint that you want your SFTP server connect to. If you connect to a <code class="docutils literal notranslate"><span class="pre">VPC_ENDPOINT</span></code>, your SFTP server isn’t accessible over the public internet. If you want to connect your SFTP server via public internet, set <code class="docutils literal notranslate"><span class="pre">PUBLIC</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -294,6 +356,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </table>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.transfer.get_server">
+<code class="descclassname">pulumi_aws.transfer.</code><code class="descname">get_server</code><span class="sig-paren">(</span><em>server_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.transfer.get_server" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to get the ARN of an AWS Transfer Server for use in other
+resources.</p>
 </dd></dl>
 
 </div>

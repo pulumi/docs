@@ -14,23 +14,28 @@ title: Module tests
 <div class="expanded" markdown="1">
 <h2 class="pdoc-module-header toggleButton" title="Click to hide Index">Index ▾</h2>
 <div class="pdoc-module-contents" markdown="1">
-* <a href="#exportedValue">const exportedValue</a>
 * <a href="#assertAsyncThrows">function assertAsyncThrows</a>
 * <a href="#asyncTest">function asyncTest</a>
 * <a href="#MochaFunc">type MochaFunc</a>
 
-<a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/tsClosureCases.ts">tests/runtime/tsClosureCases.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/util.ts">tests/util.ts</a> 
+<a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/util.ts">tests/util.ts</a> 
 </div>
 </div>
 </div>
 
-
-<h2 class="pdoc-module-header" id="exportedValue">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/tsClosureCases.ts#L37">const <b>exportedValue</b></a>
-</h2>
+<div class="toggleVisible" markdown="1">
+<div class="collapsed" markdown="1">
+<h2 class="pdoc-module-header toggleButton" title="Click to show Modules">Modules ▹</h2>
+</div>
+<div class="expanded" markdown="1">
+<h2 class="pdoc-module-header toggleButton" title="Click to hide Modules">Modules ▾</h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> exportedValue: 42 = <span class='s2'>42</span>;</pre>
+* <a href="runtime">tests/runtime</a>
+* <a href="runtime/langhost">tests/runtime/langhost</a>
 </div>
+</div>
+</div>
+
 <h2 class="pdoc-module-header" id="assertAsyncThrows">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/util.ts#L40">function <b>assertAsyncThrows</b></a>
 </h2>

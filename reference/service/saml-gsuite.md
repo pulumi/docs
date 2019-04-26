@@ -3,8 +3,7 @@ title: SAML Configuration &gt; G Suite (Google)
 ---
 
 This guide explains how to configure your G Suite service as a SAML SSO identity provider
-(IdP) for use with the Pulumi Cloud Console. It assumes that a SAML-based organization has already
-been created for you in the Pulumi Cloud Console by a Pulumi administrator.
+(IDP) for use with the Pulumi Cloud Console.
 
 ## Creating the SAML Application
 
@@ -22,20 +21,19 @@ in the upper-left corner and choose **Apps &gt; SAML Apps**.
     ![Step 1: Set up a custom app](../../images/reference/service/saml-gsuite/gsuite-dialog-step-1.png)
 
 1. Next, choose **Option 2: Download IDP Metadata** to download an XML document that identifies
-and describes your G Suite domain as a SAML IdP. We'll use this document later
+and describes your G Suite domain as a SAML identity provider. We'll use this document later
 to complete the process of configuring your Pulumi organization. For now, note the location of
 the downloaded file, then click **Next** to continue.
 
-    ![Step 2: Download IdP metadata](../../images/reference/service/saml-gsuite/gsuite-dialog-step-2.png)
+    ![Step 2: Download IDP metadata](../../images/reference/service/saml-gsuite/gsuite-dialog-step-2.png)
 
-1. Give your SAML application a name (e.g., "Pulumi Cloud Console") and an optional description
+1. Give your SAML application a name such as _Pulumi Cloud Console_ and an optional description
 and logo, then click **Next**.
 
     ![Step 3: Name the application](../../images/reference/service/saml-gsuite/gsuite-dialog-step-3.png)
 
 1. In step 4, for the required **ACS URL** and **Entity ID** fields, enter the fully-qualified
-URLs of the `acs` and `metadata` endpoints of the Pulumi API, adjusted for your Pulumi API domain
-and organization. For example, if you were using the public Pulumi service, and the name of your
+URLs of the `acs` and `metadata` endpoints of the Pulumi API, adjusted for your Pulumi organization name. For example, if your
 Pulumi organization were `acmecorp`, those values would be:
 
     * ACS URL: `https://api.pulumi.com/login/acmecorp/sso/saml/acs`
@@ -73,9 +71,9 @@ provider.
 organization.
 
 1. Scroll to the SAML SSO Settings section, click into the **Identity Provider Metadata** field, and
-paste into that field the full contents of the XML IdP document you downloaded above.
+paste into that field the full contents of the XML IDP document you downloaded above.
 
-    ![Provide the XML IdP descriptor](../../images/reference/service/saml-gsuite/console-sso-1.png)
+    ![Provide the XML IDP descriptor](../../images/reference/service/saml-gsuite/console-sso-1.png)
 
     For example:
 
@@ -85,11 +83,11 @@ Your Pulumi organization is now configured to use Google as a SAML SSO identity 
 
 ## Signing into Pulumi with Google
 
-Direct your users to the SAML-specific login page for your organization. For example, if you were using
-the public Pulumi service, and the name of your Pulumi organization were `acmecorp`, that URL would be
-`https://app.pulumi.com/welcome/acmecorp/sso`.
+Members of your G Suite can now sign into Pulumi. Navigate to
+[https://app.pulumi.com/signin/sso/](https://app.pulumi.com/signin/sso/) and enter the
+name of your Pulumi organization.
 
-![Sign in with SAML](../../images/reference/service/saml-gsuite/console-sso-signin.png)
+![Pulumi Console](../../images/reference/service/saml-gsuite/pulumi-console-signin.png)
 
 ## Troubleshooting
 

@@ -1343,8 +1343,14 @@ The endpoint based on `endpoint_type`:
 * `iot:Job`: `IDENTIFIER.jobs.iot.REGION.amazonaws.com`
 
 </div>
+<h3 class="pdoc-member-header" id="GetEndpointResult-endpointType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/getEndpoint.ts#L40">property <b>endpointType</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>endpointType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+</div>
 <h3 class="pdoc-member-header" id="GetEndpointResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/getEndpoint.ts#L43">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/getEndpoint.ts#L44">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>

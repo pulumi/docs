@@ -71,7 +71,7 @@ The name of the Role to lookup in the form `roles/{ROLE_NAME}`, `organizations/{
 A collection of values returned by getRule.
 
 <h3 class="pdoc-member-header" id="GetRuleResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/iam/getRule.ts#L56">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/iam/getRule.ts#L57">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -88,8 +88,14 @@ id is the provider-assigned unique ID for this managed resource.
 specifies the list of one or more permissions to include in the custom role, such as - `iam.roles.get`
 
 </div>
+<h3 class="pdoc-member-header" id="GetRuleResult-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/iam/getRule.ts#L45">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+</div>
 <h3 class="pdoc-member-header" id="GetRuleResult-stage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/iam/getRule.ts#L48">property <b>stage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/iam/getRule.ts#L49">property <b>stage</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>stage: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -98,7 +104,7 @@ indicates the stage of a role in the launch lifecycle, such as `GA`, `BETA` or `
 
 </div>
 <h3 class="pdoc-member-header" id="GetRuleResult-title">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/iam/getRule.ts#L52">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/iam/getRule.ts#L53">property <b>title</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>title: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>

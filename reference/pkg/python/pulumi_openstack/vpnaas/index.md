@@ -643,7 +643,7 @@ Changing this updates the existing connection.</li>
 <li><strong>local_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An ID to be used instead of the external IP address for a virtual router used in traffic between instances on different networks in east-west traffic.
 Most often, local ID would be domain name, email address, etc.
 If this is not configured then the external IP address will be used as the ID.</li>
-<li><strong>mtu</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum transmission unit (MTU) value to address fragmentation.
+<li><strong>mtu</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum transmission unit (MTU) value to address fragmentation.
 Minimum value is 68 for IPv4, and 1280 for IPv6.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the connection. Changing this updates the name of
 the existing connection.</li>

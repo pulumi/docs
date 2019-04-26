@@ -74,13 +74,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.route53.GetDelegationSetResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.route53.</code><code class="descname">GetDelegationSetResult</code><span class="sig-paren">(</span><em>caller_reference=None</em>, <em>name_servers=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.GetDelegationSetResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.route53.</code><code class="descname">GetDelegationSetResult</code><span class="sig-paren">(</span><em>caller_reference=None</em>, <em>id=None</em>, <em>name_servers=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.GetDelegationSetResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDelegationSet.</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.route53.GetZoneResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.route53.</code><code class="descname">GetZoneResult</code><span class="sig-paren">(</span><em>caller_reference=None</em>, <em>comment=None</em>, <em>name=None</em>, <em>name_servers=None</em>, <em>resource_record_set_count=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>zone_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.GetZoneResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.route53.</code><code class="descname">GetZoneResult</code><span class="sig-paren">(</span><em>caller_reference=None</em>, <em>comment=None</em>, <em>name=None</em>, <em>name_servers=None</em>, <em>private_zone=None</em>, <em>resource_record_set_count=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>zone_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.GetZoneResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getZone.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.route53.GetZoneResult.caller_reference">
@@ -394,7 +394,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>aliases</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An alias block. Conflicts with <code class="docutils literal notranslate"><span class="pre">ttl</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">records</span></code>.
 Alias record documented below.</li>
-<li><strong>allow_overwrite</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow creation of this record in Terraform to overwrite an existing record, if any. This does not affect the ability to update the record in Terraform and does not prevent other resources within Terraform or manual Route 53 changes outside Terraform from overwriting this record. <code class="docutils literal notranslate"><span class="pre">false</span></code> by default. The next major version of the Terraform AWS Provider will always require importing existing Route 53 Records.</li>
+<li><strong>allow_overwrite</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow creation of this record in Terraform to overwrite an existing record, if any. This does not affect the ability to update the record in Terraform and does not prevent other resources within Terraform or manual Route 53 changes outside Terraform from overwriting this record. <code class="docutils literal notranslate"><span class="pre">false</span></code> by default. This configuration is not recommended for most environments.</li>
 <li><strong>failover_routing_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.</li>
 <li><strong>geolocation_routing_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.</li>
 <li><strong>health_check_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The health check the record should be associated with.</li>
@@ -422,7 +422,7 @@ Alias record documented below.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.route53.Record.allow_overwrite">
 <code class="descname">allow_overwrite</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.Record.allow_overwrite" title="Permalink to this definition">¶</a></dt>
-<dd><p>Allow creation of this record in Terraform to overwrite an existing record, if any. This does not affect the ability to update the record in Terraform and does not prevent other resources within Terraform or manual Route 53 changes outside Terraform from overwriting this record. <code class="docutils literal notranslate"><span class="pre">false</span></code> by default. The next major version of the Terraform AWS Provider will always require importing existing Route 53 Records.</p>
+<dd><p>Allow creation of this record in Terraform to overwrite an existing record, if any. This does not affect the ability to update the record in Terraform and does not prevent other resources within Terraform or manual Route 53 changes outside Terraform from overwriting this record. <code class="docutils literal notranslate"><span class="pre">false</span></code> by default. This configuration is not recommended for most environments.</p>
 </dd></dl>
 
 <dl class="attribute">

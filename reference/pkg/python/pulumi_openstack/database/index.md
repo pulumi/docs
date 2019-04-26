@@ -197,7 +197,7 @@ instance. The network object structure is documented below. Changing this
 creates a new instance.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to create the db instance. Changing this
 creates a new instance.</li>
-<li><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Specifies the volume size in GB. Changing this creates new instance.</li>
+<li><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the volume size in GB. Changing this creates new instance.</li>
 <li><strong>users</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of username, password, host and databases. The user
 object structure is documented below.</li>
 </ul>

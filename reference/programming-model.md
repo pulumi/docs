@@ -6,7 +6,10 @@ title: "Programming Model"
 
 ## Overview {#overview}
 
-In Pulumi, [resources](#resources) are defined by allocating resource objects in a [program](#programs), such as `new aws.ec2.Instance(...)`.  The first argument passed to the resource constructor is its `name`, which must be unique within the Pulumi program. To create dependencies between resources, just reference the [output properties](#outputs) of a resource. For example, this definition of an EC2 instance creates a dependency on a `SecurityGroup`:
+In Pulumi, [resources](#resources) are defined by allocating resource objects in a program.  For example, your program would contain a statement such as `new aws.ec2.Instance(...)` in order to create a new AWS EC2 instance.  The first argument passed to the resource constructor is its `name`, which must be unique within the Pulumi program. 
+
+Dependencies between resources are expressed in Pulumi by using the [output properties](#outputs) of one resource in the construction of another resource.  For example, this definition of an EC2 instance creates a dependency on a `SecurityGroup`:
+
 
 {% include langchoose.html %}
 
@@ -122,9 +125,10 @@ Optionally specify that replacements of the resource will delete the existing re
 
 ### Resource names {#names}
 
-Every resource managed by Pulumi has a name.  This name is used to track the identity of a resource across multiple deployments of the same program.  The name that is specified when a resource is created is used in two ways:
+Every resource managed by Pulumi has a name.  This name is used to track the identity of a resource across multiple deployments of the same program.  The name that is specified when a resource is created is used in three ways:
 1. It is used as part of constructing the Universal Resource Name (URN) used by the Pulumi engine to track the resource across updates.
 2. Most resource providers will use it as a default prefix for constructing the cloud-provider name of the resource.
+3. Some CLI commands use the URN.
 
 #### URNs {#urns}
 
@@ -151,15 +155,21 @@ This random postfix is added by default for two reasons.  First, it ensures that
 
 In cases where the two proprties above are not required, and where it would be useful to be able to precisely specify the name, it is typically possible to provide a `name: ` argument to the resource inputs to specify an explicit cloud-provider name.  For resources that may need to be replaced, this will often require also specifying `deleteBeforeReplace: true` in the resources's `ResourceOptions`.
 
-## Outputs {#outputs}
+#### Resource get (#resource-get)
 
-Outputs are a key part of how Pulumi tracks dependencies between resources.  Because the values of Outputs are not available until resources are created, they are represented using a special [`Output`][pulumi.Output] type which internally represents two things:
+A `get` method is available on any resource, which reads in the current value of an existing resource.  The shape it returns corresponds to the type of the resource.
+
+## Outputs and Inputs {#outputs}
+
+Outputs are a key part of how Pulumi tracks dependencies between resources.  Because the values of Outputs are not available until resources are created, these are represented using the special [`Output`][pulumi.Output] type, which internally represents two things:
 1. An eventually available value of the output
 2. The dependency on the source(s) of the output value
 
-In fact, `Output`s are similar to promises/futures that you may be familiar with from other programming models but also carry along dependency information.
+In fact, `Output`s are similar to promises/futures that you may be familiar with from other programming models. Additionally, they carry along dependency information.
 
-The output properties of all resource objects in Pulumi have type [`Output`][pulumi.Output]. Resource inputs have type [`Input`][pulumi.Input], which accepts either a raw value, a `Promise`, or an output from another resource. This allows dependencies to be inferred, including ensuring that resources are not created or updated until all their dependencies are available and up to date.
+The output properties of all resource objects in Pulumi have type [`Output`][pulumi.Output].
+
+Resource inputs have type [`Input`][pulumi.Input], which accepts either a raw value, a `Promise`, or an output from another resource. This allows dependencies to be inferred, including ensuring that resources are not created or updated until all their dependencies are available and up to date.
 
 ##### Apply {#apply}
 
@@ -189,7 +199,7 @@ url := virtualmachine.DnsName().Apply(func(dnsName string) (interface{}, error) 
 
 The `apply` method accepts a callback which will be passed the value of the `Output` when it is available, and which returns the new value.  The result of the call to `apply` is a new `Output` whose value is the value returned from the callback, and which includes the dependencies of the original `Output`.  If the callback itself returns an `Output`, the dependencies of that output are unioned into the dependencies of the returned `Output`.
 
-> _Note_: Several common types of transformations can be done more convienently.  See (Accessing properties of an Output)[#lifting] for how to access Output value properties simply.   Also, `Output` itself cannot be used directly in string concatenation as it is not itself the value of the output.  See (Working with Outputs and strings)[#ouputs-and-strings] for examples of how to more simply work use the two together.  For cases where these convenience forms are not sufficient, `.apply` is available the most general way to transform one `Output` into another.
+> _Note_: Several common types of transformations can be done more convienently.  See [Accessing properties of an Output](#lifting) for how to access Output value properties simply.   Also, `Output` itself cannot be used directly in string concatenation as it is not itself the value of the output.  See (Working with Outputs and strings)[#ouputs-and-strings] for examples of how to more simply work use the two together.  For cases where these convenience forms are not sufficient, `.apply` is available the most general way to transform one `Output` into another.  
 
 ##### Accessing properties of an Output {#lifting}
 
@@ -1154,6 +1164,14 @@ When serializing a function to text, the following steps are taken:
 3. When the values are objects, all properties and prototype chains are serialized.  When the values are functions, those functions are serialized by following these same steps.
 
 For more details see the docs on [serializing functions](serializing-functions.html).
+
+## Design Guidelines {#design-guidelines}
+
+### OutputInstance.apply
+
+It is recommended that the `func` argument of [OutputInstance.apply](pkg/nodejs/@pulumi/pulumi/index.html#Output-apply) not create any resources, as doing so can lead to the results of `pulumi preview` being wrong, as the `apply` callback will not get run during a preview (because the real outputs values aren't yet known until the resources are deployed), and therefore any resources created in the callback will not be seen during the `preview`.  
+
+However, you may have a scenario in which the actual value, such as an array of Outputs, is needed to create a resource but is not determined until the time of `pulumi uypdate` and after part of the deployment has already happened (e.g. an array of [Nameservers](pkg/nodejs/@pulumi/aws/route53/#Zone-nameServers)).  In that case, Pulumi lets you express this within the `apply`, but be cautioned that the preview may not include some changes to resources that are created (or later removed) from within the `apply`.
 
 <!-- MARKDOWN LINKS -->
 [pulumi.Resource]: pkg/nodejs/@pulumi/pulumi/#Resource

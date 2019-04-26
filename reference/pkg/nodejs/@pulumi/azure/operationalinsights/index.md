@@ -34,7 +34,7 @@ title: Module operationalinsights
 
 
 <h2 class="pdoc-module-header" id="AnalyticsSolution">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L45">class <b>AnalyticsSolution</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L47">class <b>AnalyticsSolution</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -50,6 +50,7 @@ import * as random from "@pulumi/random";
 
 const testResourceGroup = new azure.core.ResourceGroup("test", {
     location: "westeurope",
+    name: "k8s-log-analytics-test",
 });
 const workspace = new random.RandomId("workspace", {
     byteLength: 8,
@@ -60,6 +61,7 @@ const workspace = new random.RandomId("workspace", {
 });
 const testAnalyticsWorkspace = new azure.operationalinsights.AnalyticsWorkspace("test", {
     location: testResourceGroup.location,
+    name: workspace.hex.apply(hex => `k8s-workspace-${hex}`),
     resourceGroupName: testResourceGroup.name,
     sku: "PerGB2018",
 });
@@ -77,7 +79,7 @@ const testAnalyticsSolution = new azure.operationalinsights.AnalyticsSolution("t
 ```
 
 <h3 class="pdoc-member-header" id="AnalyticsSolution-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L81"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L83"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -92,7 +94,7 @@ Create a AnalyticsSolution resource with the given unique name, arguments, and o
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsSolution-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L56">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -134,7 +136,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsSolution-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L61">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L63">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -143,7 +145,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsSolution-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L65">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L67">property <b>plan</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>plan: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -157,7 +159,7 @@ A `plan` block as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsSolution-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L69">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L71">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -166,7 +168,7 @@ The name of the resource group in which the Log Analytics solution is created. C
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsSolution-solutionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L73">property <b>solutionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L75">property <b>solutionName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>solutionName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -185,7 +187,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsSolution-workspaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L77">property <b>workspaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L79">property <b>workspaceName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>workspaceName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -194,7 +196,7 @@ The full name of the Log Analytics workspace with which the solution will be lin
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsSolution-workspaceResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L81">property <b>workspaceResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L83">property <b>workspaceResourceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>workspaceResourceId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -204,7 +206,7 @@ The full resource ID of the Log Analytics workspace with which the solution will
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AnalyticsWorkspace">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L27">class <b>AnalyticsWorkspace</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L29">class <b>AnalyticsWorkspace</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -219,9 +221,11 @@ import * as azure from "@pulumi/azure";
 
 const testResourceGroup = new azure.core.ResourceGroup("test", {
     location: "East US",
+    name: "acctestRG-01",
 });
 const testAnalyticsWorkspace = new azure.operationalinsights.AnalyticsWorkspace("test", {
     location: testResourceGroup.location,
+    name: "acctest-01",
     resourceGroupName: testResourceGroup.name,
     retentionInDays: 30,
     sku: "PerGB2018",
@@ -229,7 +233,7 @@ const testAnalyticsWorkspace = new azure.operationalinsights.AnalyticsWorkspace(
 ```
 
 <h3 class="pdoc-member-header" id="AnalyticsWorkspace-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L79"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L81"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -244,7 +248,7 @@ Create a AnalyticsWorkspace resource with the given unique name, arguments, and 
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspace-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L38">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -286,7 +290,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspace-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L43">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L45">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -295,7 +299,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspace-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L47">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L49">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -304,7 +308,7 @@ Specifies the name of the Log Analytics Workspace. Workspace name should include
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspace-portalUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L51">property <b>portalUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L53">property <b>portalUrl</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>portalUrl: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -313,7 +317,7 @@ The Portal URL for the Log Analytics Workspace.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspace-primarySharedKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L55">property <b>primarySharedKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L57">property <b>primarySharedKey</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>primarySharedKey: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -322,7 +326,7 @@ The Primary shared key for the Log Analytics Workspace.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspace-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L59">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L61">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -331,7 +335,7 @@ The name of the resource group in which the Log Analytics workspace is created. 
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspace-retentionInDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L63">property <b>retentionInDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L65">property <b>retentionInDays</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>retentionInDays: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -340,7 +344,7 @@ The workspace data retention in days. Possible values range between 30 and 730.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspace-secondarySharedKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L67">property <b>secondarySharedKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L69">property <b>secondarySharedKey</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>secondarySharedKey: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -349,7 +353,7 @@ The Secondary shared key for the Log Analytics Workspace.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspace-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L71">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L73">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>sku: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -358,7 +362,7 @@ Specifies the Sku of the Log Analytics Workspace. Possible values are `Free`, `P
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspace-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L75">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L77">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -377,7 +381,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspace-workspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L79">property <b>workspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L81">property <b>workspaceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>workspaceId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -387,7 +391,7 @@ The Workspace (or Customer) ID for the Log Analytics Workspace.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AnalyticsWorkspaceLinkedService">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L45">class <b>AnalyticsWorkspaceLinkedService</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L48">class <b>AnalyticsWorkspaceLinkedService</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -405,9 +409,11 @@ import * as azure from "@pulumi/azure";
 
 const testResourceGroup = new azure.core.ResourceGroup("test", {
     location: "West Europe",
+    name: "resourcegroup-01",
 });
 const testAccount = new azure.automation.Account("test", {
     location: testResourceGroup.location,
+    name: "automation-01",
     resourceGroupName: testResourceGroup.name,
     sku: {
         name: "Basic",
@@ -418,6 +424,7 @@ const testAccount = new azure.automation.Account("test", {
 });
 const testAnalyticsWorkspace = new azure.operationalinsights.AnalyticsWorkspace("test", {
     location: testResourceGroup.location,
+    name: "workspace-01",
     resourceGroupName: testResourceGroup.name,
     retentionInDays: 30,
     sku: "PerGB2018",
@@ -430,7 +437,7 @@ const testAnalyticsWorkspaceLinkedService = new azure.operationalinsights.Analyt
 ```
 
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceLinkedService-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L85"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L88"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -445,7 +452,7 @@ Create a AnalyticsWorkspaceLinkedService resource with the given unique name, ar
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceLinkedService-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L57">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -487,7 +494,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceLinkedService-linkedServiceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L61">property <b>linkedServiceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L64">property <b>linkedServiceName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>linkedServiceName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -496,7 +503,7 @@ Name of the type of linkedServices resource to connect to the Log Analytics Work
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceLinkedService-linkedServiceProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L65">property <b>linkedServiceProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L68">property <b>linkedServiceProperties</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>linkedServiceProperties: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -507,7 +514,7 @@ A `linked_service_properties` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceLinkedService-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L69">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L72">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -516,7 +523,7 @@ The automatically generated name of the Linked Service. This cannot be specified
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceLinkedService-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L73">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L76">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -525,7 +532,7 @@ The name of the resource group in which the Log Analytics Linked Service is crea
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceLinkedService-resourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L77">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L80">property <b>resourceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -534,7 +541,7 @@ The resource id of the resource that will be linked to the workspace. This field
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceLinkedService-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L81">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L84">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -553,7 +560,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceLinkedService-workspaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L85">property <b>workspaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L88">property <b>workspaceName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>workspaceName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -588,14 +595,14 @@ export const logAnalyticsWorkspaceId = test.apply(test => test.workspaceId);
 
 </div>
 <h2 class="pdoc-module-header" id="AnalyticsSolutionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L165">interface <b>AnalyticsSolutionArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L167">interface <b>AnalyticsSolutionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a AnalyticsSolution resource.
 
 <h3 class="pdoc-member-header" id="AnalyticsSolutionArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L169">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L171">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -604,7 +611,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsSolutionArgs-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L173">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L175">property <b>plan</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>plan: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -618,7 +625,7 @@ A `plan` block as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsSolutionArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L177">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L179">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -627,7 +634,7 @@ The name of the resource group in which the Log Analytics solution is created. C
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsSolutionArgs-solutionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L181">property <b>solutionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L183">property <b>solutionName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>solutionName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -636,7 +643,7 @@ Specifies the name of the solution to be deployed. See [here for options](https:
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsSolutionArgs-workspaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L185">property <b>workspaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L187">property <b>workspaceName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>workspaceName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -645,7 +652,7 @@ The full name of the Log Analytics workspace with which the solution will be lin
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsSolutionArgs-workspaceResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L189">property <b>workspaceResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L191">property <b>workspaceResourceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>workspaceResourceId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -655,14 +662,14 @@ The full resource ID of the Log Analytics workspace with which the solution will
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AnalyticsSolutionState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L135">interface <b>AnalyticsSolutionState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L137">interface <b>AnalyticsSolutionState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering AnalyticsSolution resources.
 
 <h3 class="pdoc-member-header" id="AnalyticsSolutionState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L139">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L141">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -671,7 +678,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsSolutionState-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L143">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L145">property <b>plan</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>plan?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -685,7 +692,7 @@ A `plan` block as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsSolutionState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L147">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L149">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -694,7 +701,7 @@ The name of the resource group in which the Log Analytics solution is created. C
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsSolutionState-solutionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L151">property <b>solutionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L153">property <b>solutionName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>solutionName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -703,7 +710,7 @@ Specifies the name of the solution to be deployed. See [here for options](https:
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsSolutionState-workspaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L155">property <b>workspaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L157">property <b>workspaceName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>workspaceName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -712,7 +719,7 @@ The full name of the Log Analytics workspace with which the solution will be lin
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsSolutionState-workspaceResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L159">property <b>workspaceResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L161">property <b>workspaceResourceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>workspaceResourceId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -722,14 +729,14 @@ The full resource ID of the Log Analytics workspace with which the solution will
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AnalyticsWorkspaceArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L178">interface <b>AnalyticsWorkspaceArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L180">interface <b>AnalyticsWorkspaceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a AnalyticsWorkspace resource.
 
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L182">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L184">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -738,7 +745,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L186">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L188">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -747,7 +754,7 @@ Specifies the name of the Log Analytics Workspace. Workspace name should include
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L190">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L192">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -756,7 +763,7 @@ The name of the resource group in which the Log Analytics workspace is created. 
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceArgs-retentionInDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L194">property <b>retentionInDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L196">property <b>retentionInDays</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>retentionInDays?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -765,7 +772,7 @@ The workspace data retention in days. Possible values range between 30 and 730.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceArgs-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L198">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L200">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sku: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -774,7 +781,7 @@ Specifies the Sku of the Log Analytics Workspace. Possible values are `Free`, `P
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L202">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L204">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -784,14 +791,14 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AnalyticsWorkspaceLinkedServiceArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L163">interface <b>AnalyticsWorkspaceLinkedServiceArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L166">interface <b>AnalyticsWorkspaceLinkedServiceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a AnalyticsWorkspaceLinkedService resource.
 
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceLinkedServiceArgs-linkedServiceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L167">property <b>linkedServiceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L170">property <b>linkedServiceName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>linkedServiceName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -800,7 +807,7 @@ Name of the type of linkedServices resource to connect to the Log Analytics Work
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceLinkedServiceArgs-linkedServiceProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L171">property <b>linkedServiceProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L174">property <b>linkedServiceProperties</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>linkedServiceProperties?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -811,7 +818,7 @@ A `linked_service_properties` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceLinkedServiceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L175">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L178">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -820,7 +827,7 @@ The name of the resource group in which the Log Analytics Linked Service is crea
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceLinkedServiceArgs-resourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L179">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L182">property <b>resourceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -829,7 +836,7 @@ The resource id of the resource that will be linked to the workspace. This field
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceLinkedServiceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L183">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L186">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -838,7 +845,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceLinkedServiceArgs-workspaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L187">property <b>workspaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L190">property <b>workspaceName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>workspaceName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -848,14 +855,14 @@ Name of the Log Analytics Workspace that will contain the linkedServices resourc
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AnalyticsWorkspaceLinkedServiceState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L129">interface <b>AnalyticsWorkspaceLinkedServiceState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L132">interface <b>AnalyticsWorkspaceLinkedServiceState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering AnalyticsWorkspaceLinkedService resources.
 
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceLinkedServiceState-linkedServiceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L133">property <b>linkedServiceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L136">property <b>linkedServiceName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>linkedServiceName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -864,7 +871,7 @@ Name of the type of linkedServices resource to connect to the Log Analytics Work
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceLinkedServiceState-linkedServiceProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L137">property <b>linkedServiceProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L140">property <b>linkedServiceProperties</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>linkedServiceProperties?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -875,7 +882,7 @@ A `linked_service_properties` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceLinkedServiceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L141">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L144">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -884,7 +891,7 @@ The automatically generated name of the Linked Service. This cannot be specified
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceLinkedServiceState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L145">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L148">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -893,7 +900,7 @@ The name of the resource group in which the Log Analytics Linked Service is crea
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceLinkedServiceState-resourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L149">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L152">property <b>resourceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -902,7 +909,7 @@ The resource id of the resource that will be linked to the workspace. This field
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceLinkedServiceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L153">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L156">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -911,7 +918,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceLinkedServiceState-workspaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L157">property <b>workspaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L160">property <b>workspaceName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>workspaceName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -921,14 +928,14 @@ Name of the Log Analytics Workspace that will contain the linkedServices resourc
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AnalyticsWorkspaceState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L132">interface <b>AnalyticsWorkspaceState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L134">interface <b>AnalyticsWorkspaceState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering AnalyticsWorkspace resources.
 
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L136">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L138">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -937,7 +944,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L140">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L142">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -946,7 +953,7 @@ Specifies the name of the Log Analytics Workspace. Workspace name should include
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceState-portalUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L144">property <b>portalUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L146">property <b>portalUrl</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>portalUrl?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -955,7 +962,7 @@ The Portal URL for the Log Analytics Workspace.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceState-primarySharedKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L148">property <b>primarySharedKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L150">property <b>primarySharedKey</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>primarySharedKey?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -964,7 +971,7 @@ The Primary shared key for the Log Analytics Workspace.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L152">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L154">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -973,7 +980,7 @@ The name of the resource group in which the Log Analytics workspace is created. 
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceState-retentionInDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L156">property <b>retentionInDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L158">property <b>retentionInDays</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>retentionInDays?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -982,7 +989,7 @@ The workspace data retention in days. Possible values range between 30 and 730.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceState-secondarySharedKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L160">property <b>secondarySharedKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L162">property <b>secondarySharedKey</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>secondarySharedKey?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -991,7 +998,7 @@ The Secondary shared key for the Log Analytics Workspace.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceState-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L164">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L166">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sku?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1000,7 +1007,7 @@ Specifies the Sku of the Log Analytics Workspace. Possible values are `Free`, `P
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L168">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L170">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1009,7 +1016,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceState-workspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L172">property <b>workspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L174">property <b>workspaceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>workspaceId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1052,7 +1059,7 @@ The name of the resource group in which the Log Analytics workspace is located i
 A collection of values returned by getAnalyticsWorkspace.
 
 <h3 class="pdoc-member-header" id="GetAnalyticsWorkspaceResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/getAnalyticsWorkspace.ts#L81">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/getAnalyticsWorkspace.ts#L83">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1066,8 +1073,14 @@ id is the provider-assigned unique ID for this managed resource.
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
+<h3 class="pdoc-member-header" id="GetAnalyticsWorkspaceResult-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/getAnalyticsWorkspace.ts#L50">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+</div>
 <h3 class="pdoc-member-header" id="GetAnalyticsWorkspaceResult-portalUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/getAnalyticsWorkspace.ts#L53">property <b>portalUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/getAnalyticsWorkspace.ts#L54">property <b>portalUrl</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>portalUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1076,7 +1089,7 @@ The Portal URL for the Log Analytics Workspace.
 
 </div>
 <h3 class="pdoc-member-header" id="GetAnalyticsWorkspaceResult-primarySharedKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/getAnalyticsWorkspace.ts#L57">property <b>primarySharedKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/getAnalyticsWorkspace.ts#L58">property <b>primarySharedKey</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>primarySharedKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1084,8 +1097,14 @@ The Portal URL for the Log Analytics Workspace.
 The Primary shared key for the Log Analytics Workspace.
 
 </div>
+<h3 class="pdoc-member-header" id="GetAnalyticsWorkspaceResult-resourceGroupName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/getAnalyticsWorkspace.ts#L59">property <b>resourceGroupName</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+</div>
 <h3 class="pdoc-member-header" id="GetAnalyticsWorkspaceResult-retentionInDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/getAnalyticsWorkspace.ts#L61">property <b>retentionInDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/getAnalyticsWorkspace.ts#L63">property <b>retentionInDays</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>retentionInDays: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -1094,7 +1113,7 @@ The workspace data retention in days.
 
 </div>
 <h3 class="pdoc-member-header" id="GetAnalyticsWorkspaceResult-secondarySharedKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/getAnalyticsWorkspace.ts#L65">property <b>secondarySharedKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/getAnalyticsWorkspace.ts#L67">property <b>secondarySharedKey</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>secondarySharedKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1103,7 +1122,7 @@ The Secondary shared key for the Log Analytics Workspace.
 
 </div>
 <h3 class="pdoc-member-header" id="GetAnalyticsWorkspaceResult-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/getAnalyticsWorkspace.ts#L69">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/getAnalyticsWorkspace.ts#L71">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sku: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1112,7 +1131,7 @@ The Sku of the Log Analytics Workspace.
 
 </div>
 <h3 class="pdoc-member-header" id="GetAnalyticsWorkspaceResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/getAnalyticsWorkspace.ts#L73">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/getAnalyticsWorkspace.ts#L75">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -1121,7 +1140,7 @@ A mapping of tags assigned to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetAnalyticsWorkspaceResult-workspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/getAnalyticsWorkspace.ts#L77">property <b>workspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/getAnalyticsWorkspace.ts#L79">property <b>workspaceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>workspaceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>

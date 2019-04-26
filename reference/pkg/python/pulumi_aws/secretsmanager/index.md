@@ -62,7 +62,7 @@
 
 <dl class="class">
 <dt id="pulumi_aws.secretsmanager.GetSecretVersionResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.secretsmanager.</code><code class="descname">GetSecretVersionResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>secret_binary=None</em>, <em>secret_string=None</em>, <em>version_id=None</em>, <em>version_stages=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.GetSecretVersionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.secretsmanager.</code><code class="descname">GetSecretVersionResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>secret_binary=None</em>, <em>secret_id=None</em>, <em>secret_string=None</em>, <em>version_id=None</em>, <em>version_stage=None</em>, <em>version_stages=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.GetSecretVersionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSecretVersion.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.secretsmanager.GetSecretVersionResult.arn">

@@ -987,7 +987,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RandomUuid">
-<a class="pdoc-member-name" href="/randomUuid.ts#L30">class <b>RandomUuid</b></a>
+<a class="pdoc-member-name" href="/randomUuid.ts#L31">class <b>RandomUuid</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1011,11 +1011,12 @@ import * as random from "@pulumi/random";
 const testRandomUuid = new random.RandomUuid("test", {});
 const testResourceGroup = new azure.core.ResourceGroup("test", {
     location: "Central US",
+    name: testRandomUuid.result.apply(result => `${result}-rg`),
 });
 ```
 
 <h3 class="pdoc-member-header" id="RandomUuid-constructor">
-<a class="pdoc-child-name" href="/randomUuid.ts#L52"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="/randomUuid.ts#L53"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1030,7 +1031,7 @@ Create a RandomUuid resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="RandomUuid-get">
-<a class="pdoc-child-name" href="/randomUuid.ts#L39">method <b>get</b></a>
+<a class="pdoc-child-name" href="/randomUuid.ts#L40">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1072,7 +1073,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="RandomUuid-keepers">
-<a class="pdoc-child-name" href="/randomUuid.ts#L48">property <b>keepers</b></a>
+<a class="pdoc-child-name" href="/randomUuid.ts#L49">property <b>keepers</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>keepers: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1083,7 +1084,7 @@ the main provider documentation for more information.
 
 </div>
 <h3 class="pdoc-member-header" id="RandomUuid-result">
-<a class="pdoc-child-name" href="/randomUuid.ts#L52">property <b>result</b></a>
+<a class="pdoc-child-name" href="/randomUuid.ts#L53">property <b>result</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>result: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1826,14 +1827,14 @@ in random string.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RandomUuidArgs">
-<a class="pdoc-member-name" href="/randomUuid.ts#L96">interface <b>RandomUuidArgs</b></a>
+<a class="pdoc-member-name" href="/randomUuid.ts#L97">interface <b>RandomUuidArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a RandomUuid resource.
 
 <h3 class="pdoc-member-header" id="RandomUuidArgs-keepers">
-<a class="pdoc-child-name" href="/randomUuid.ts#L102">property <b>keepers</b></a>
+<a class="pdoc-child-name" href="/randomUuid.ts#L103">property <b>keepers</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>keepers?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1845,14 +1846,14 @@ the main provider documentation for more information.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RandomUuidState">
-<a class="pdoc-member-name" href="/randomUuid.ts#L80">interface <b>RandomUuidState</b></a>
+<a class="pdoc-member-name" href="/randomUuid.ts#L81">interface <b>RandomUuidState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering RandomUuid resources.
 
 <h3 class="pdoc-member-header" id="RandomUuidState-keepers">
-<a class="pdoc-child-name" href="/randomUuid.ts#L86">property <b>keepers</b></a>
+<a class="pdoc-child-name" href="/randomUuid.ts#L87">property <b>keepers</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>keepers?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1863,7 +1864,7 @@ the main provider documentation for more information.
 
 </div>
 <h3 class="pdoc-member-header" id="RandomUuidState-result">
-<a class="pdoc-child-name" href="/randomUuid.ts#L90">property <b>result</b></a>
+<a class="pdoc-child-name" href="/randomUuid.ts#L91">property <b>result</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>result?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

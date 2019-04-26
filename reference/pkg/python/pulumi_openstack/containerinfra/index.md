@@ -431,7 +431,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.containerinfra.GetClusterResult">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.containerinfra.</code><code class="descname">GetClusterResult</code><span class="sig-paren">(</span><em>api_address=None</em>, <em>cluster_template_id=None</em>, <em>coe_version=None</em>, <em>container_version=None</em>, <em>create_timeout=None</em>, <em>created_at=None</em>, <em>discovery_url=None</em>, <em>docker_volume_size=None</em>, <em>flavor=None</em>, <em>keypair=None</em>, <em>labels=None</em>, <em>master_addresses=None</em>, <em>master_count=None</em>, <em>master_flavor=None</em>, <em>node_addresses=None</em>, <em>node_count=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>stack_id=None</em>, <em>updated_at=None</em>, <em>user_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.GetClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.containerinfra.</code><code class="descname">GetClusterResult</code><span class="sig-paren">(</span><em>api_address=None</em>, <em>cluster_template_id=None</em>, <em>coe_version=None</em>, <em>container_version=None</em>, <em>create_timeout=None</em>, <em>created_at=None</em>, <em>discovery_url=None</em>, <em>docker_volume_size=None</em>, <em>flavor=None</em>, <em>keypair=None</em>, <em>labels=None</em>, <em>master_addresses=None</em>, <em>master_count=None</em>, <em>master_flavor=None</em>, <em>name=None</em>, <em>node_addresses=None</em>, <em>node_count=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>stack_id=None</em>, <em>updated_at=None</em>, <em>user_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.GetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCluster.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.containerinfra.GetClusterResult.api_address">
@@ -513,6 +513,12 @@ the cluster.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_openstack.containerinfra.GetClusterResult.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.containerinfra.GetClusterResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_openstack.containerinfra.GetClusterResult.node_addresses">
 <code class="descname">node_addresses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.containerinfra.GetClusterResult.node_addresses" title="Permalink to this definition">¶</a></dt>
 <dd><p>IP addresses of the node of the cluster.</p>
@@ -564,7 +570,7 @@ the cluster.</p>
 
 <dl class="class">
 <dt id="pulumi_openstack.containerinfra.GetClusterTemplateResult">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.containerinfra.</code><code class="descname">GetClusterTemplateResult</code><span class="sig-paren">(</span><em>apiserver_port=None</em>, <em>cluster_distro=None</em>, <em>coe=None</em>, <em>created_at=None</em>, <em>dns_nameserver=None</em>, <em>docker_storage_driver=None</em>, <em>docker_volume_size=None</em>, <em>external_network_id=None</em>, <em>fixed_network=None</em>, <em>fixed_subnet=None</em>, <em>flavor=None</em>, <em>floating_ip_enabled=None</em>, <em>http_proxy=None</em>, <em>https_proxy=None</em>, <em>image=None</em>, <em>insecure_registry=None</em>, <em>keypair_id=None</em>, <em>labels=None</em>, <em>master_flavor=None</em>, <em>master_lb_enabled=None</em>, <em>network_driver=None</em>, <em>no_proxy=None</em>, <em>project_id=None</em>, <em>public=None</em>, <em>region=None</em>, <em>registry_enabled=None</em>, <em>server_type=None</em>, <em>tls_disabled=None</em>, <em>updated_at=None</em>, <em>user_id=None</em>, <em>volume_driver=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.GetClusterTemplateResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.containerinfra.</code><code class="descname">GetClusterTemplateResult</code><span class="sig-paren">(</span><em>apiserver_port=None</em>, <em>cluster_distro=None</em>, <em>coe=None</em>, <em>created_at=None</em>, <em>dns_nameserver=None</em>, <em>docker_storage_driver=None</em>, <em>docker_volume_size=None</em>, <em>external_network_id=None</em>, <em>fixed_network=None</em>, <em>fixed_subnet=None</em>, <em>flavor=None</em>, <em>floating_ip_enabled=None</em>, <em>http_proxy=None</em>, <em>https_proxy=None</em>, <em>image=None</em>, <em>insecure_registry=None</em>, <em>keypair_id=None</em>, <em>labels=None</em>, <em>master_flavor=None</em>, <em>master_lb_enabled=None</em>, <em>name=None</em>, <em>network_driver=None</em>, <em>no_proxy=None</em>, <em>project_id=None</em>, <em>public=None</em>, <em>region=None</em>, <em>registry_enabled=None</em>, <em>server_type=None</em>, <em>tls_disabled=None</em>, <em>updated_at=None</em>, <em>user_id=None</em>, <em>volume_driver=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.GetClusterTemplateResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getClusterTemplate.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.containerinfra.GetClusterTemplateResult.apiserver_port">
@@ -693,6 +699,12 @@ of the cluster template.</p>
 <code class="descname">master_lb_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.containerinfra.GetClusterTemplateResult.master_lb_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates whether created cluster should has a
 loadbalancer for master nodes or not.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.containerinfra.GetClusterTemplateResult.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.containerinfra.GetClusterTemplateResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
 </dd></dl>
 
 <dl class="attribute">

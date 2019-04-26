@@ -2,7 +2,7 @@
 <span id="containerservice"></span><h1>containerservice<a class="headerlink" href="#module-pulumi_azure.containerservice" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.containerservice.</code><code class="descname">GetKubernetesClusterResult</code><span class="sig-paren">(</span><em>addon_profiles=None</em>, <em>agent_pool_profiles=None</em>, <em>dns_prefix=None</em>, <em>fqdn=None</em>, <em>kube_admin_configs=None</em>, <em>kube_admin_config_raw=None</em>, <em>kube_configs=None</em>, <em>kube_config_raw=None</em>, <em>kubernetes_version=None</em>, <em>linux_profiles=None</em>, <em>location=None</em>, <em>network_profiles=None</em>, <em>node_resource_group=None</em>, <em>role_based_access_controls=None</em>, <em>service_principals=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.containerservice.</code><code class="descname">GetKubernetesClusterResult</code><span class="sig-paren">(</span><em>addon_profiles=None</em>, <em>agent_pool_profiles=None</em>, <em>dns_prefix=None</em>, <em>fqdn=None</em>, <em>kube_admin_configs=None</em>, <em>kube_admin_config_raw=None</em>, <em>kube_configs=None</em>, <em>kube_config_raw=None</em>, <em>kubernetes_version=None</em>, <em>linux_profiles=None</em>, <em>location=None</em>, <em>name=None</em>, <em>network_profiles=None</em>, <em>node_resource_group=None</em>, <em>resource_group_name=None</em>, <em>role_based_access_controls=None</em>, <em>service_principals=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getKubernetesCluster.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.addon_profiles">
@@ -13,7 +13,7 @@
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.agent_pool_profiles">
 <code class="descname">agent_pool_profiles</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.agent_pool_profiles" title="Permalink to this definition">¶</a></dt>
-<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">agent_profile_pool</span></code> blocks as documented below.</p>
+<dd><p>An <code class="docutils literal notranslate"><span class="pre">agent_pool_profile</span></code> block as documented below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -71,6 +71,12 @@
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name assigned to this pool of agents.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.network_profiles">
 <code class="descname">network_profiles</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.network_profiles" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">network_profile</span></code> block as documented below.</p>
@@ -110,7 +116,7 @@
 
 <dl class="class">
 <dt id="pulumi_azure.containerservice.GetRegistryResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.containerservice.</code><code class="descname">GetRegistryResult</code><span class="sig-paren">(</span><em>admin_enabled=None</em>, <em>admin_password=None</em>, <em>admin_username=None</em>, <em>location=None</em>, <em>login_server=None</em>, <em>sku=None</em>, <em>storage_account_id=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.GetRegistryResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.containerservice.</code><code class="descname">GetRegistryResult</code><span class="sig-paren">(</span><em>admin_enabled=None</em>, <em>admin_password=None</em>, <em>admin_username=None</em>, <em>location=None</em>, <em>login_server=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>storage_account_id=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.GetRegistryResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRegistry.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.GetRegistryResult.admin_enabled">
@@ -327,7 +333,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>addon_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">addon_profile</span></code> block.</li>
-<li><strong>agent_pool_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">agent_pool_profile</span></code> blocks as documented below.</li>
+<li><strong>agent_pool_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">agent_pool_profile</span></code> block.  Currently only one agent pool can exist.</li>
 <li><strong>dns_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – DNS prefix specified when creating the managed cluster. Changing this forces a new resource to be created.</li>
 <li><strong>kubernetes_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Version of Kubernetes specified when creating the AKS managed cluster. If not specified, the latest recommended version will be used at provisioning time (but won’t auto-upgrade).</li>
 <li><strong>linux_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">linux_profile</span></code> block.</li>
@@ -352,7 +358,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.agent_pool_profile">
 <code class="descname">agent_pool_profile</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.agent_pool_profile" title="Permalink to this definition">¶</a></dt>
-<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">agent_pool_profile</span></code> blocks as documented below.</p>
+<dd><p>An <code class="docutils literal notranslate"><span class="pre">agent_pool_profile</span></code> block.  Currently only one agent pool can exist.</p>
 </dd></dl>
 
 <dl class="attribute">

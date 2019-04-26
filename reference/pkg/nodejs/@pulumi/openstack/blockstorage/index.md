@@ -19,8 +19,11 @@ title: Module blockstorage
 * <a href="#VolumeAttachV2">class VolumeAttachV2</a>
 * <a href="#VolumeV1">class VolumeV1</a>
 * <a href="#VolumeV2">class VolumeV2</a>
+* <a href="#getAvailabilityZonesV3">function getAvailabilityZonesV3</a>
 * <a href="#getSnapshotV2">function getSnapshotV2</a>
 * <a href="#getSnapshotV3">function getSnapshotV3</a>
+* <a href="#GetAvailabilityZonesV3Args">interface GetAvailabilityZonesV3Args</a>
+* <a href="#GetAvailabilityZonesV3Result">interface GetAvailabilityZonesV3Result</a>
 * <a href="#GetSnapshotV2Args">interface GetSnapshotV2Args</a>
 * <a href="#GetSnapshotV2Result">interface GetSnapshotV2Result</a>
 * <a href="#GetSnapshotV3Args">interface GetSnapshotV3Args</a>
@@ -36,7 +39,7 @@ title: Module blockstorage
 * <a href="#VolumeV2Args">interface VolumeV2Args</a>
 * <a href="#VolumeV2State">interface VolumeV2State</a>
 
-<a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getSnapshotV2.ts">blockstorage/getSnapshotV2.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getSnapshotV3.ts">blockstorage/getSnapshotV3.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/volume.ts">blockstorage/volume.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/volumeAttach.ts">blockstorage/volumeAttach.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/volumeAttachV2.ts">blockstorage/volumeAttachV2.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/volumeV1.ts">blockstorage/volumeV1.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/volumeV2.ts">blockstorage/volumeV2.ts</a> 
+<a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getAvailabilityZonesV3.ts">blockstorage/getAvailabilityZonesV3.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getSnapshotV2.ts">blockstorage/getSnapshotV2.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getSnapshotV3.ts">blockstorage/getSnapshotV3.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/volume.ts">blockstorage/volume.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/volumeAttach.ts">blockstorage/volumeAttach.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/volumeAttachV2.ts">blockstorage/volumeAttachV2.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/volumeV1.ts">blockstorage/volumeV1.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/volumeV2.ts">blockstorage/volumeV2.ts</a> 
 </div>
 </div>
 </div>
@@ -99,7 +102,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Volume-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -167,7 +170,7 @@ support for version 3.42 and a compatible storage driver.
 
 </div>
 <h3 class="pdoc-member-header" id="Volume-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -361,7 +364,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttach-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -424,7 +427,7 @@ The host to attach the volume to.
 
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttach-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -614,7 +617,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -677,7 +680,7 @@ The host to attach the volume to.
 
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -848,7 +851,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -895,7 +898,7 @@ the volume's description.
 
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1053,7 +1056,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1110,7 +1113,7 @@ the volume's description.
 
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1220,6 +1223,26 @@ Changing this creates a new volume.
 
 </div>
 </div>
+<h2 class="pdoc-module-header" id="getAvailabilityZonesV3">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getAvailabilityZonesV3.ts#L19">function <b>getAvailabilityZonesV3</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getAvailabilityZonesV3(args?: <a href='#GetAvailabilityZonesV3Args'>GetAvailabilityZonesV3Args</a>, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetAvailabilityZonesV3Result'>GetAvailabilityZonesV3Result</a>&gt;</pre>
+
+
+Use this data source to get a list of Block Storage availability zones from OpenStack
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const zones = pulumi.output(openstack.blockstorage.getAvailabilityZonesV3({}));
+```
+
+</div>
 <h2 class="pdoc-module-header" id="getSnapshotV2">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getSnapshotV2.ts#L22">function <b>getSnapshotV2</b></a>
 </h2>
@@ -1265,6 +1288,79 @@ const snapshot1 = pulumi.output(openstack.blockstorage.getSnapshotV3({
 }));
 ```
 
+</div>
+<h2 class="pdoc-module-header" id="GetAvailabilityZonesV3Args">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getAvailabilityZonesV3.ts#L30">interface <b>GetAvailabilityZonesV3Args</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+
+A collection of arguments for invoking getAvailabilityZonesV3.
+
+<h3 class="pdoc-member-header" id="GetAvailabilityZonesV3Args-region">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getAvailabilityZonesV3.ts#L35">property <b>region</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+The region in which to obtain the Block Storage client.
+If omitted, the `region` argument of the provider is used.
+
+</div>
+<h3 class="pdoc-member-header" id="GetAvailabilityZonesV3Args-state">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getAvailabilityZonesV3.ts#L40">property <b>state</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>state?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+The `state` of the availability zones to match. Can
+either be `available` or `unavailable`. Default is `available`.
+
+</div>
+</div>
+<h2 class="pdoc-module-header" id="GetAvailabilityZonesV3Result">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getAvailabilityZonesV3.ts#L46">interface <b>GetAvailabilityZonesV3Result</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+
+A collection of values returned by getAvailabilityZonesV3.
+
+<h3 class="pdoc-member-header" id="GetAvailabilityZonesV3Result-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getAvailabilityZonesV3.ts#L63">property <b>id</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+id is the provider-assigned unique ID for this managed resource.
+
+</div>
+<h3 class="pdoc-member-header" id="GetAvailabilityZonesV3Result-names">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getAvailabilityZonesV3.ts#L51">property <b>names</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+
+The names of the availability zones, ordered alphanumerically, that
+match the queried `state`.
+
+</div>
+<h3 class="pdoc-member-header" id="GetAvailabilityZonesV3Result-region">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getAvailabilityZonesV3.ts#L55">property <b>region</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+See Argument Reference above.
+
+</div>
+<h3 class="pdoc-member-header" id="GetAvailabilityZonesV3Result-state">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getAvailabilityZonesV3.ts#L59">property <b>state</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>state?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+
+See Argument Reference above.
+
+</div>
 </div>
 <h2 class="pdoc-module-header" id="GetSnapshotV2Args">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getSnapshotV2.ts#L36">interface <b>GetSnapshotV2Args</b></a>
@@ -1338,7 +1434,7 @@ The snapshot's description.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV2Result-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getSnapshotV2.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getSnapshotV2.ts#L97">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1355,8 +1451,14 @@ id is the provider-assigned unique ID for this managed resource.
 The snapshot's metadata.
 
 </div>
+<h3 class="pdoc-member-header" id="GetSnapshotV2Result-mostRecent">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getSnapshotV2.ts#L73">property <b>mostRecent</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+</div>
 <h3 class="pdoc-member-header" id="GetSnapshotV2Result-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getSnapshotV2.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getSnapshotV2.ts#L77">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1365,7 +1467,7 @@ See Argument Reference above.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV2Result-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getSnapshotV2.ts#L80">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getSnapshotV2.ts#L81">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1374,7 +1476,7 @@ See Argument Reference above.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV2Result-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getSnapshotV2.ts#L84">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getSnapshotV2.ts#L85">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -1383,7 +1485,7 @@ The size of the snapshot.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV2Result-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getSnapshotV2.ts#L88">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getSnapshotV2.ts#L89">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1392,7 +1494,7 @@ See Argument Reference above.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV2Result-volumeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getSnapshotV2.ts#L92">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getSnapshotV2.ts#L93">property <b>volumeId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>volumeId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1473,7 +1575,7 @@ The snapshot's description.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV3Result-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getSnapshotV3.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getSnapshotV3.ts#L97">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1490,8 +1592,14 @@ id is the provider-assigned unique ID for this managed resource.
 The snapshot's metadata.
 
 </div>
+<h3 class="pdoc-member-header" id="GetSnapshotV3Result-mostRecent">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getSnapshotV3.ts#L73">property <b>mostRecent</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+</div>
 <h3 class="pdoc-member-header" id="GetSnapshotV3Result-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getSnapshotV3.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getSnapshotV3.ts#L77">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1500,7 +1608,7 @@ See Argument Reference above.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV3Result-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getSnapshotV3.ts#L80">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getSnapshotV3.ts#L81">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1509,7 +1617,7 @@ See Argument Reference above.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV3Result-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getSnapshotV3.ts#L84">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getSnapshotV3.ts#L85">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -1518,7 +1626,7 @@ The size of the snapshot.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV3Result-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getSnapshotV3.ts#L88">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getSnapshotV3.ts#L89">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1527,7 +1635,7 @@ See Argument Reference above.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV3Result-volumeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getSnapshotV3.ts#L92">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/blockstorage/getSnapshotV3.ts#L93">property <b>volumeId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>volumeId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>

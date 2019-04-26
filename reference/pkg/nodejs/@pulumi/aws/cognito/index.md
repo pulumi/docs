@@ -1043,7 +1043,7 @@ The Email Configuration.
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>emailVerificationMessage: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
-A string representing the email verification message. Must contain the `{####}` placeholder. **NOTE:** - If `email_verification_message` and `verification_message_template.email_message` are specified and the values are different, either one is prioritized and updated.
+A string representing the email verification message. Conflicts with `verification_message_template` configuration block `email_message` argument.
 
 </div>
 <h3 class="pdoc-member-header" id="UserPool-emailVerificationSubject">
@@ -1052,7 +1052,7 @@ A string representing the email verification message. Must contain the `{####}` 
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>emailVerificationSubject: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
-A string representing the email verification subject. **NOTE:** - If `email_verification_subject` and `verification_message_template.email_subject` are specified and the values are different, either one is prioritized and updated.
+A string representing the email verification subject. Conflicts with `verification_message_template` configuration block `email_subject` argument.
 
 </div>
 <h3 class="pdoc-member-header" id="UserPool-endpoint">
@@ -1186,7 +1186,7 @@ The SMS Configuration.
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>smsVerificationMessage: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 
-A string representing the SMS verification message.
+A string representing the SMS verification message. Conflicts with `verification_message_template` configuration block `sms_message` argument.
 
 </div>
 <h3 class="pdoc-member-header" id="UserPool-tags">
@@ -1709,7 +1709,7 @@ A collection of values returned by getUserPools.
 <pre class="highlight"><span class='kd'></span>arns: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetUserPoolsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/getUserPools.ts#L57">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/getUserPools.ts#L58">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1725,6 +1725,12 @@ id is the provider-assigned unique ID for this managed resource.
 
 The list of cognito user pool ids.
 
+</div>
+<h3 class="pdoc-member-header" id="GetUserPoolsResult-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/getUserPools.ts#L54">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IdentityPoolArgs">
@@ -2383,7 +2389,7 @@ The Email Configuration.
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>emailVerificationMessage?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
-A string representing the email verification message. Must contain the `{####}` placeholder. **NOTE:** - If `email_verification_message` and `verification_message_template.email_message` are specified and the values are different, either one is prioritized and updated.
+A string representing the email verification message. Conflicts with `verification_message_template` configuration block `email_message` argument.
 
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-emailVerificationSubject">
@@ -2392,7 +2398,7 @@ A string representing the email verification message. Must contain the `{####}` 
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>emailVerificationSubject?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
-A string representing the email verification subject. **NOTE:** - If `email_verification_subject` and `verification_message_template.email_subject` are specified and the values are different, either one is prioritized and updated.
+A string representing the email verification subject. Conflicts with `verification_message_template` configuration block `email_subject` argument.
 
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-lambdaConfig">
@@ -2498,7 +2504,7 @@ The SMS Configuration.
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>smsVerificationMessage?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
-A string representing the SMS verification message.
+A string representing the SMS verification message. Conflicts with `verification_message_template` configuration block `sms_message` argument.
 
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-tags">
@@ -3020,7 +3026,7 @@ The Email Configuration.
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>emailVerificationMessage?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
-A string representing the email verification message. Must contain the `{####}` placeholder. **NOTE:** - If `email_verification_message` and `verification_message_template.email_message` are specified and the values are different, either one is prioritized and updated.
+A string representing the email verification message. Conflicts with `verification_message_template` configuration block `email_message` argument.
 
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-emailVerificationSubject">
@@ -3029,7 +3035,7 @@ A string representing the email verification message. Must contain the `{####}` 
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>emailVerificationSubject?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
-A string representing the email verification subject. **NOTE:** - If `email_verification_subject` and `verification_message_template.email_subject` are specified and the values are different, either one is prioritized and updated.
+A string representing the email verification subject. Conflicts with `verification_message_template` configuration block `email_subject` argument.
 
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-endpoint">
@@ -3153,7 +3159,7 @@ The SMS Configuration.
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>smsVerificationMessage?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
-A string representing the SMS verification message.
+A string representing the SMS verification message. Conflicts with `verification_message_template` configuration block `sms_message` argument.
 
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-tags">

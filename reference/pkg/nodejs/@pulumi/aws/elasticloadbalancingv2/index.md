@@ -49,7 +49,7 @@ title: Module elasticloadbalancingv2
 
 
 <h2 class="pdoc-module-header" id="Listener">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L149">class <b>Listener</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L143">class <b>Listener</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -70,10 +70,10 @@ const frontEndLoadBalancer = new aws.elasticloadbalancingv2.LoadBalancer("front_
 const frontEndTargetGroup = new aws.elasticloadbalancingv2.TargetGroup("front_end", {});
 const frontEndListener = new aws.elasticloadbalancingv2.Listener("front_end", {
     certificateArn: "arn:aws:iam::187416307283:server-certificate/test_cert_rab3wuqwgja25ct3n4jdj2tzu4",
-    defaultAction: {
+    defaultActions: [{
         targetGroupArn: frontEndTargetGroup.arn,
         type: "forward",
-    },
+    }],
     loadBalancerArn: frontEndLoadBalancer.arn,
     port: 443,
     protocol: "HTTPS",
@@ -89,14 +89,14 @@ import * as aws from "@pulumi/aws";
 
 const frontEndLoadBalancer = new aws.elasticloadbalancingv2.LoadBalancer("front_end", {});
 const frontEndListener = new aws.elasticloadbalancingv2.Listener("front_end", {
-    defaultAction: {
+    defaultActions: [{
         redirect: {
             port: "443",
             protocol: "HTTPS",
             statusCode: "HTTP_301",
         },
         type: "redirect",
-    },
+    }],
     loadBalancerArn: frontEndLoadBalancer.arn,
     port: 80,
     protocol: "HTTP",
@@ -111,14 +111,14 @@ import * as aws from "@pulumi/aws";
 
 const frontEndLoadBalancer = new aws.elasticloadbalancingv2.LoadBalancer("front_end", {});
 const frontEndListener = new aws.elasticloadbalancingv2.Listener("front_end", {
-    defaultAction: {
+    defaultActions: [{
         fixedResponse: {
             contentType: "text/plain",
             messageBody: "Fixed response content",
             statusCode: "200",
         },
         type: "fixed-response",
-    },
+    }],
     loadBalancerArn: frontEndLoadBalancer.arn,
     port: 80,
     protocol: "HTTP",
@@ -137,23 +137,20 @@ const domain = new aws.cognito.UserPoolDomain("domain", {});
 const frontEndLoadBalancer = new aws.elasticloadbalancingv2.LoadBalancer("front_end", {});
 const frontEndTargetGroup = new aws.elasticloadbalancingv2.TargetGroup("front_end", {});
 const frontEndListener = new aws.elasticloadbalancingv2.Listener("front_end", {
-    defaultAction: pulumi.all([pool.arn, client.id, domain.domain, frontEndTargetGroup.arn]).apply(([poolArn, id, domain, frontEndTargetGroupArn]) => (() => {
-        throw "tf2pulumi error: aws_lb_listener.front_end.default_action: expected at most one item in list, got 2";
-        return [
-            {
-                authenticateCognito: {
-                    userPoolArn: poolArn,
-                    userPoolClientId: id,
-                    userPoolDomain: domain,
-                },
-                type: "authenticate-cognito",
+    defaultActions: [
+        {
+            authenticateCognito: {
+                userPoolArn: pool.arn,
+                userPoolClientId: client.id,
+                userPoolDomain: domain.domain,
             },
-            {
-                targetGroupArn: frontEndTargetGroupArn,
-                type: "forward",
-            },
-        ];
-    })()),
+            type: "authenticate-cognito",
+        },
+        {
+            targetGroupArn: frontEndTargetGroup.arn,
+            type: "forward",
+        },
+    ],
     loadBalancerArn: frontEndLoadBalancer.arn,
     port: 80,
     protocol: "HTTP",
@@ -169,26 +166,23 @@ import * as aws from "@pulumi/aws";
 const frontEndLoadBalancer = new aws.elasticloadbalancingv2.LoadBalancer("front_end", {});
 const frontEndTargetGroup = new aws.elasticloadbalancingv2.TargetGroup("front_end", {});
 const frontEndListener = new aws.elasticloadbalancingv2.Listener("front_end", {
-    defaultAction: frontEndTargetGroup.arn.apply(arn => (() => {
-        throw "tf2pulumi error: aws_lb_listener.front_end.default_action: expected at most one item in list, got 2";
-        return [
-            {
-                authenticateOidc: {
-                    authorizationEndpoint: "https://example.com/authorization_endpoint",
-                    clientId: "client_id",
-                    clientSecret: "client_secret",
-                    issuer: "https://example.com",
-                    tokenEndpoint: "https://example.com/token_endpoint",
-                    userInfoEndpoint: "https://example.com/user_info_endpoint",
-                },
-                type: "authenticate-oidc",
+    defaultActions: [
+        {
+            authenticateOidc: {
+                authorizationEndpoint: "https://example.com/authorization_endpoint",
+                clientId: "client_id",
+                clientSecret: "client_secret",
+                issuer: "https://example.com",
+                tokenEndpoint: "https://example.com/token_endpoint",
+                userInfoEndpoint: "https://example.com/user_info_endpoint",
             },
-            {
-                targetGroupArn: arn,
-                type: "forward",
-            },
-        ];
-    })()),
+            type: "authenticate-oidc",
+        },
+        {
+            targetGroupArn: frontEndTargetGroup.arn,
+            type: "forward",
+        },
+    ],
     loadBalancerArn: frontEndLoadBalancer.arn,
     port: 80,
     protocol: "HTTP",
@@ -196,7 +190,7 @@ const frontEndListener = new aws.elasticloadbalancingv2.Listener("front_end", {
 ```
 
 <h3 class="pdoc-member-header" id="Listener-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L189"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L183"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -211,7 +205,7 @@ Create a Listener resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="Listener-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L158">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L152">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -243,7 +237,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="Listener-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L165">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L159">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -252,7 +246,7 @@ The ARN of the listener (matches `id`)
 
 </div>
 <h3 class="pdoc-member-header" id="Listener-certificateArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L169">property <b>certificateArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L163">property <b>certificateArn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>certificateArn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -260,11 +254,11 @@ The ARN of the listener (matches `id`)
 The ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the [`aws_lb_listener_certificate` resource](https://www.terraform.io/docs/providers/aws/r/lb_listener_certificate.html).
 
 </div>
-<h3 class="pdoc-member-header" id="Listener-defaultAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L173">property <b>defaultAction</b></a>
+<h3 class="pdoc-member-header" id="Listener-defaultActions">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L167">property <b>defaultActions</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>defaultAction: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
+<pre class="highlight"><span class='kd'>public </span>defaultActions: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
     authenticateCognito: {
         authenticationRequestExtraParams: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};
         onUnauthenticatedRequest: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
@@ -304,7 +298,7 @@ The ARN of the default SSL server certificate. Exactly one certificate is requir
     };
     targetGroupArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+}[]&gt;;</pre>
 
 An Action block. Action blocks are documented below.
 
@@ -320,7 +314,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="Listener-loadBalancerArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L177">property <b>loadBalancerArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L171">property <b>loadBalancerArn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>loadBalancerArn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -329,7 +323,7 @@ The ARN of the load balancer.
 
 </div>
 <h3 class="pdoc-member-header" id="Listener-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L181">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L175">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>port: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -338,7 +332,7 @@ The port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}
 
 </div>
 <h3 class="pdoc-member-header" id="Listener-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L185">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L179">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>protocol: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -347,7 +341,7 @@ The protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#
 
 </div>
 <h3 class="pdoc-member-header" id="Listener-sslPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L189">property <b>sslPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L183">property <b>sslPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>sslPolicy: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1128,7 +1122,7 @@ const lambda_example = new aws.elasticloadbalancingv2.TargetGroup("lambda-exampl
 ```
 
 <h3 class="pdoc-member-header" id="TargetGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L131"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L135"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1206,6 +1200,7 @@ The amount time for Elastic Load Balancing to wait before changing the state of 
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>healthCheck: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
+    enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
     healthyThreshold: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
     interval: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
     matcher: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
@@ -1229,8 +1224,17 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 </div>
+<h3 class="pdoc-member-header" id="TargetGroup-lambdaMultiValueHeadersEnabled">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L90">property <b>lambdaMultiValueHeadersEnabled</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>lambdaMultiValueHeadersEnabled: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+
+Boolean whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`.
+
+</div>
 <h3 class="pdoc-member-header" id="TargetGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L90">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L94">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1239,7 +1243,7 @@ The name of the target group. If omitted, Terraform will assign a random, unique
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroup-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L94">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L98">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>namePrefix: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1248,7 +1252,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroup-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L98">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L102">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>port: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1257,7 +1261,7 @@ The port to use to connect with the target. Valid values are either ports 1-6553
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroup-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L102">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L106">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>protocol: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1266,7 +1270,7 @@ The protocol to use to connect with the target. Defaults to `HTTP`. Not applicab
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroup-proxyProtocolV2">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L106">property <b>proxyProtocolV2</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L110">property <b>proxyProtocolV2</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>proxyProtocolV2: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1275,7 +1279,7 @@ Boolean to enable / disable support for proxy protocol v2 on Network Load Balanc
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroup-slowStart">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L110">property <b>slowStart</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L114">property <b>slowStart</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>slowStart: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1284,7 +1288,7 @@ The amount time for targets to warm up before the load balancer sends them a ful
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroup-stickiness">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L114">property <b>stickiness</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L118">property <b>stickiness</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>stickiness: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1297,7 +1301,7 @@ A Stickiness block. Stickiness blocks are documented below. `stickiness` is only
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroup-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L118">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L122">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1306,7 +1310,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroup-targetType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L127">property <b>targetType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L131">property <b>targetType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>targetType: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1330,7 +1334,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroup-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L131">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L135">property <b>vpcId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>vpcId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1340,7 +1344,7 @@ The identifier of the VPC in which to create the target group. Required when `ta
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TargetGroupAttachment">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L50">class <b>TargetGroupAttachment</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L49">class <b>TargetGroupAttachment</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1379,7 +1383,6 @@ const withLb = new aws.lambda.Permission("with_lb", {
     function: testFunction.arn,
     principal: "elasticloadbalancing.amazonaws.com",
     sourceArn: testTargetGroup.arn,
-    statementId: "AllowExecutionFromlb",
 });
 const testTargetGroupAttachment = new aws.elasticloadbalancingv2.TargetGroupAttachment("test", {
     targetGroupArn: testTargetGroup.arn,
@@ -1388,7 +1391,7 @@ const testTargetGroupAttachment = new aws.elasticloadbalancingv2.TargetGroupAtta
 ```
 
 <h3 class="pdoc-member-header" id="TargetGroupAttachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L78"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L77"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1403,7 +1406,7 @@ Create a TargetGroupAttachment resource with the given unique name, arguments, a
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupAttachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L59">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L58">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1435,7 +1438,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupAttachment-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L66">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L65">property <b>availabilityZone</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>availabilityZone: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1454,7 +1457,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupAttachment-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L70">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L69">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>port: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1463,7 +1466,7 @@ The port on which targets receive traffic.
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupAttachment-targetGroupArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L74">property <b>targetGroupArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L73">property <b>targetGroupArn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>targetGroupArn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1472,7 +1475,7 @@ The ARN of the target group with which to register targets
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupAttachment-targetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L78">property <b>targetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L77">property <b>targetId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>targetId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1937,6 +1940,7 @@ A collection of values returned by getTargetGroup.
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>healthCheck: {
+    enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
     healthyThreshold: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
     interval: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
     matcher: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
@@ -1948,7 +1952,7 @@ A collection of values returned by getTargetGroup.
 };</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetTargetGroupResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/getTargetGroup.ts#L74">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/getTargetGroup.ts#L77">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1956,32 +1960,44 @@ A collection of values returned by getTargetGroup.
 id is the provider-assigned unique ID for this managed resource.
 
 </div>
+<h3 class="pdoc-member-header" id="GetTargetGroupResult-lambdaMultiValueHeadersEnabled">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/getTargetGroup.ts#L64">property <b>lambdaMultiValueHeadersEnabled</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>lambdaMultiValueHeadersEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+</div>
 <h3 class="pdoc-member-header" id="GetTargetGroupResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/getTargetGroup.ts#L64">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/getTargetGroup.ts#L65">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetTargetGroupResult-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/getTargetGroup.ts#L65">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/getTargetGroup.ts#L66">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetTargetGroupResult-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/getTargetGroup.ts#L66">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/getTargetGroup.ts#L67">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>protocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
+<h3 class="pdoc-member-header" id="GetTargetGroupResult-proxyProtocolV2">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/getTargetGroup.ts#L68">property <b>proxyProtocolV2</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>proxyProtocolV2: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+</div>
 <h3 class="pdoc-member-header" id="GetTargetGroupResult-slowStart">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/getTargetGroup.ts#L67">property <b>slowStart</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/getTargetGroup.ts#L69">property <b>slowStart</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>slowStart: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetTargetGroupResult-stickiness">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/getTargetGroup.ts#L68">property <b>stickiness</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/getTargetGroup.ts#L70">property <b>stickiness</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>stickiness: {
@@ -1991,27 +2007,33 @@ id is the provider-assigned unique ID for this managed resource.
 };</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetTargetGroupResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/getTargetGroup.ts#L69">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/getTargetGroup.ts#L71">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
 </div>
+<h3 class="pdoc-member-header" id="GetTargetGroupResult-targetType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/getTargetGroup.ts#L72">property <b>targetType</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>targetType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+</div>
 <h3 class="pdoc-member-header" id="GetTargetGroupResult-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/getTargetGroup.ts#L70">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/getTargetGroup.ts#L73">property <b>vpcId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>vpcId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ListenerArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L270">interface <b>ListenerArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L264">interface <b>ListenerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a Listener resource.
 
 <h3 class="pdoc-member-header" id="ListenerArgs-certificateArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L274">property <b>certificateArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L268">property <b>certificateArn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>certificateArn?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2019,11 +2041,11 @@ The set of arguments for constructing a Listener resource.
 The ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the [`aws_lb_listener_certificate` resource](https://www.terraform.io/docs/providers/aws/r/lb_listener_certificate.html).
 
 </div>
-<h3 class="pdoc-member-header" id="ListenerArgs-defaultAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L278">property <b>defaultAction</b></a>
+<h3 class="pdoc-member-header" id="ListenerArgs-defaultActions">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L272">property <b>defaultActions</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>defaultAction: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
+<pre class="highlight"><span class='kd'></span>defaultActions: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     authenticateCognito: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
         authenticationRequestExtraParams: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
         onUnauthenticatedRequest: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
@@ -2063,13 +2085,13 @@ The ARN of the default SSL server certificate. Exactly one certificate is requir
     }&gt;;
     targetGroupArn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     type: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+}&gt;[]&gt;;</pre>
 
 An Action block. Action blocks are documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="ListenerArgs-loadBalancerArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L282">property <b>loadBalancerArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L276">property <b>loadBalancerArn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>loadBalancerArn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2078,7 +2100,7 @@ The ARN of the load balancer.
 
 </div>
 <h3 class="pdoc-member-header" id="ListenerArgs-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L286">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L280">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>port: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2087,7 +2109,7 @@ The port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}
 
 </div>
 <h3 class="pdoc-member-header" id="ListenerArgs-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L290">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L284">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>protocol?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2096,7 +2118,7 @@ The protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#
 
 </div>
 <h3 class="pdoc-member-header" id="ListenerArgs-sslPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L294">property <b>sslPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L288">property <b>sslPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sslPolicy?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2341,14 +2363,14 @@ The priority for the rule between `1` and `50000`. Leaving it unset will automat
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ListenerState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L236">interface <b>ListenerState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L230">interface <b>ListenerState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering Listener resources.
 
 <h3 class="pdoc-member-header" id="ListenerState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L240">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L234">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2357,7 +2379,7 @@ The ARN of the listener (matches `id`)
 
 </div>
 <h3 class="pdoc-member-header" id="ListenerState-certificateArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L244">property <b>certificateArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L238">property <b>certificateArn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>certificateArn?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2365,11 +2387,11 @@ The ARN of the listener (matches `id`)
 The ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the [`aws_lb_listener_certificate` resource](https://www.terraform.io/docs/providers/aws/r/lb_listener_certificate.html).
 
 </div>
-<h3 class="pdoc-member-header" id="ListenerState-defaultAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L248">property <b>defaultAction</b></a>
+<h3 class="pdoc-member-header" id="ListenerState-defaultActions">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L242">property <b>defaultActions</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>defaultAction?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
+<pre class="highlight"><span class='kd'></span>defaultActions?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     authenticateCognito: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
         authenticationRequestExtraParams: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
         onUnauthenticatedRequest: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
@@ -2409,13 +2431,13 @@ The ARN of the default SSL server certificate. Exactly one certificate is requir
     }&gt;;
     targetGroupArn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     type: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+}&gt;[]&gt;;</pre>
 
 An Action block. Action blocks are documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="ListenerState-loadBalancerArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L252">property <b>loadBalancerArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L246">property <b>loadBalancerArn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>loadBalancerArn?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2424,7 +2446,7 @@ The ARN of the load balancer.
 
 </div>
 <h3 class="pdoc-member-header" id="ListenerState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L256">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L250">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>port?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2433,7 +2455,7 @@ The port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}
 
 </div>
 <h3 class="pdoc-member-header" id="ListenerState-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L260">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L254">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>protocol?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2442,7 +2464,7 @@ The protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#
 
 </div>
 <h3 class="pdoc-member-header" id="ListenerState-sslPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L264">property <b>sslPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/listener.ts#L258">property <b>sslPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sslPolicy?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2788,14 +2810,14 @@ The canonical hosted zone ID of the load balancer (to be used in a Route 53 Alia
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TargetGroupArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L250">interface <b>TargetGroupArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L260">interface <b>TargetGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a TargetGroup resource.
 
 <h3 class="pdoc-member-header" id="TargetGroupArgs-deregistrationDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L254">property <b>deregistrationDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L264">property <b>deregistrationDelay</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>deregistrationDelay?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2804,10 +2826,11 @@ The amount time for Elastic Load Balancing to wait before changing the state of 
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupArgs-healthCheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L258">property <b>healthCheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L268">property <b>healthCheck</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>healthCheck?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
+    enabled: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
     healthyThreshold: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
     interval: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
     matcher: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
@@ -2821,8 +2844,17 @@ The amount time for Elastic Load Balancing to wait before changing the state of 
 A Health Check block. Health Check blocks are documented below.
 
 </div>
+<h3 class="pdoc-member-header" id="TargetGroupArgs-lambdaMultiValueHeadersEnabled">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L272">property <b>lambdaMultiValueHeadersEnabled</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>lambdaMultiValueHeadersEnabled?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+
+Boolean whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`.
+
+</div>
 <h3 class="pdoc-member-header" id="TargetGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L262">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L276">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2831,7 +2863,7 @@ The name of the target group. If omitted, Terraform will assign a random, unique
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L266">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L280">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>namePrefix?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2840,7 +2872,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupArgs-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L270">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L284">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>port?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2849,7 +2881,7 @@ The port to use to connect with the target. Valid values are either ports 1-6553
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupArgs-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L274">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L288">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>protocol?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2858,7 +2890,7 @@ The protocol to use to connect with the target. Defaults to `HTTP`. Not applicab
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupArgs-proxyProtocolV2">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L278">property <b>proxyProtocolV2</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L292">property <b>proxyProtocolV2</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>proxyProtocolV2?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2867,7 +2899,7 @@ Boolean to enable / disable support for proxy protocol v2 on Network Load Balanc
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupArgs-slowStart">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L282">property <b>slowStart</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L296">property <b>slowStart</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>slowStart?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2876,7 +2908,7 @@ The amount time for targets to warm up before the load balancer sends them a ful
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupArgs-stickiness">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L286">property <b>stickiness</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L300">property <b>stickiness</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>stickiness?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2889,7 +2921,7 @@ A Stickiness block. Stickiness blocks are documented below. `stickiness` is only
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L290">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L304">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -2898,7 +2930,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupArgs-targetType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L299">property <b>targetType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L313">property <b>targetType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>targetType?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2912,7 +2944,7 @@ You can't specify publicly routable IP addresses.
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupArgs-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L303">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L317">property <b>vpcId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>vpcId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2922,14 +2954,14 @@ The identifier of the VPC in which to create the target group. Required when `ta
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TargetGroupAttachmentArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L138">interface <b>TargetGroupAttachmentArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L137">interface <b>TargetGroupAttachmentArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a TargetGroupAttachment resource.
 
 <h3 class="pdoc-member-header" id="TargetGroupAttachmentArgs-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L142">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L141">property <b>availabilityZone</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>availabilityZone?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2938,7 +2970,7 @@ The Availability Zone where the IP address of the target is to be registered.
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupAttachmentArgs-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L146">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L145">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>port?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2947,7 +2979,7 @@ The port on which targets receive traffic.
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupAttachmentArgs-targetGroupArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L150">property <b>targetGroupArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L149">property <b>targetGroupArn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>targetGroupArn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2956,7 +2988,7 @@ The ARN of the target group with which to register targets
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupAttachmentArgs-targetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L154">property <b>targetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L153">property <b>targetId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>targetId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2966,14 +2998,14 @@ The ID of the target. This is the Instance ID for an instance, or the container 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TargetGroupAttachmentState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L116">interface <b>TargetGroupAttachmentState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L115">interface <b>TargetGroupAttachmentState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering TargetGroupAttachment resources.
 
 <h3 class="pdoc-member-header" id="TargetGroupAttachmentState-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L120">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L119">property <b>availabilityZone</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>availabilityZone?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2982,7 +3014,7 @@ The Availability Zone where the IP address of the target is to be registered.
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupAttachmentState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L124">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L123">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>port?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2991,7 +3023,7 @@ The port on which targets receive traffic.
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupAttachmentState-targetGroupArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L128">property <b>targetGroupArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L127">property <b>targetGroupArn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>targetGroupArn?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3000,7 +3032,7 @@ The ARN of the target group with which to register targets
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupAttachmentState-targetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L132">property <b>targetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L131">property <b>targetId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>targetId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3010,14 +3042,14 @@ The ID of the target. This is the Instance ID for an instance, or the container 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TargetGroupState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L183">interface <b>TargetGroupState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L189">interface <b>TargetGroupState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering TargetGroup resources.
 
 <h3 class="pdoc-member-header" id="TargetGroupState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L187">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L193">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3026,7 +3058,7 @@ The ARN of the Target Group (matches `id`)
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupState-arnSuffix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L191">property <b>arnSuffix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L197">property <b>arnSuffix</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>arnSuffix?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3035,7 +3067,7 @@ The ARN suffix for use with CloudWatch Metrics.
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupState-deregistrationDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L195">property <b>deregistrationDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L201">property <b>deregistrationDelay</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>deregistrationDelay?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3044,10 +3076,11 @@ The amount time for Elastic Load Balancing to wait before changing the state of 
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupState-healthCheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L199">property <b>healthCheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L205">property <b>healthCheck</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>healthCheck?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
+    enabled: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
     healthyThreshold: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
     interval: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
     matcher: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
@@ -3061,8 +3094,17 @@ The amount time for Elastic Load Balancing to wait before changing the state of 
 A Health Check block. Health Check blocks are documented below.
 
 </div>
+<h3 class="pdoc-member-header" id="TargetGroupState-lambdaMultiValueHeadersEnabled">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L209">property <b>lambdaMultiValueHeadersEnabled</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>lambdaMultiValueHeadersEnabled?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+
+Boolean whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`.
+
+</div>
 <h3 class="pdoc-member-header" id="TargetGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L203">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L213">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3071,7 +3113,7 @@ The name of the target group. If omitted, Terraform will assign a random, unique
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L207">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L217">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>namePrefix?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3080,7 +3122,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L211">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L221">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>port?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3089,7 +3131,7 @@ The port to use to connect with the target. Valid values are either ports 1-6553
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupState-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L215">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L225">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>protocol?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3098,7 +3140,7 @@ The protocol to use to connect with the target. Defaults to `HTTP`. Not applicab
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupState-proxyProtocolV2">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L219">property <b>proxyProtocolV2</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L229">property <b>proxyProtocolV2</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>proxyProtocolV2?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3107,7 +3149,7 @@ Boolean to enable / disable support for proxy protocol v2 on Network Load Balanc
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupState-slowStart">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L223">property <b>slowStart</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L233">property <b>slowStart</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>slowStart?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3116,7 +3158,7 @@ The amount time for targets to warm up before the load balancer sends them a ful
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupState-stickiness">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L227">property <b>stickiness</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L237">property <b>stickiness</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>stickiness?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -3129,7 +3171,7 @@ A Stickiness block. Stickiness blocks are documented below. `stickiness` is only
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L231">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L241">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3138,7 +3180,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupState-targetType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L240">property <b>targetType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L250">property <b>targetType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>targetType?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3152,7 +3194,7 @@ You can't specify publicly routable IP addresses.
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupState-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L244">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroup.ts#L254">property <b>vpcId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>vpcId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

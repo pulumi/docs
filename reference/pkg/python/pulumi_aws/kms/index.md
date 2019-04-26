@@ -94,8 +94,228 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_aws.kms.Ciphertext">
+<em class="property">class </em><code class="descclassname">pulumi_aws.kms.</code><code class="descname">Ciphertext</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>context=None</em>, <em>key_id=None</em>, <em>plaintext=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.Ciphertext" title="Permalink to this definition">¶</a></dt>
+<dd><p>The KMS ciphertext resource allows you to encrypt plaintext into ciphertext
+by using an AWS KMS customer master key. The value returned by this resource
+is stable across every apply. For a changing ciphertext value each apply, see
+the <cite>``aws_kms_ciphertext`</cite> data source &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/kms_ciphertext.html">https://www.terraform.io/docs/providers/aws/d/kms_ciphertext.html</a>&gt;`_.</p>
+<blockquote>
+<div><strong>Note:</strong> All arguments including the plaintext be stored in the raw state as plain-text.
+<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>context</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An optional mapping that makes up the encryption context.</li>
+<li><strong>key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Globally unique key ID for the customer master key.</li>
+<li><strong>plaintext</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Data to be encrypted. Note that this may show up in logs, and it will be stored in the state file.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_aws.kms.Ciphertext.ciphertext_blob">
+<code class="descname">ciphertext_blob</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Ciphertext.ciphertext_blob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base64 encoded ciphertext</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.kms.Ciphertext.context">
+<code class="descname">context</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Ciphertext.context" title="Permalink to this definition">¶</a></dt>
+<dd><p>An optional mapping that makes up the encryption context.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.kms.Ciphertext.key_id">
+<code class="descname">key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Ciphertext.key_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Globally unique key ID for the customer master key.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.kms.Ciphertext.plaintext">
+<code class="descname">plaintext</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Ciphertext.plaintext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Data to be encrypted. Note that this may show up in logs, and it will be stored in the state file.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.kms.Ciphertext.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.Ciphertext.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.kms.Ciphertext.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.Ciphertext.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.kms.ExternalKey">
+<em class="property">class </em><code class="descclassname">pulumi_aws.kms.</code><code class="descname">ExternalKey</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>deletion_window_in_days=None</em>, <em>description=None</em>, <em>enabled=None</em>, <em>key_material_base64=None</em>, <em>policy=None</em>, <em>tags=None</em>, <em>valid_to=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.ExternalKey" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a KMS Customer Master Key that uses external key material. To instead manage a KMS Customer Master Key where AWS automatically generates and potentially rotates key material, see the <cite>``aws_kms_key`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/kms_key.html">https://www.terraform.io/docs/providers/aws/r/kms_key.html</a>&gt;`_.</p>
+<blockquote>
+<div><strong>Note:</strong> All arguments including the key material will be stored in the raw state as plain-text. <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>deletion_window_in_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Duration in days after which the key is deleted after destruction of the resource. Must be between <code class="docutils literal notranslate"><span class="pre">7</span></code> and <code class="docutils literal notranslate"><span class="pre">30</span></code> days. Defaults to <code class="docutils literal notranslate"><span class="pre">30</span></code>.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the key.</li>
+<li><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the key is enabled. Keys pending import can only be <code class="docutils literal notranslate"><span class="pre">false</span></code>. Imported keys default to <code class="docutils literal notranslate"><span class="pre">true</span></code> unless expired.</li>
+<li><strong>key_material_base64</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Base64 encoded 256-bit symmetric encryption key material to import. The CMK is permanently associated with this key material. The same key material can be reimported, but you cannot import different key material.</li>
+<li><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A key policy JSON document. If you do not provide a key policy, AWS KMS attaches a default key policy to the CMK.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A key-value map of tags to assign to the key.</li>
+<li><strong>valid_to</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Time at which the imported key material expires. When the key material expires, AWS KMS deletes the key material and the CMK becomes unusable. If not specified, key material does not expire. Valid values: <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339 time string</a> (<code class="docutils literal notranslate"><span class="pre">YYYY-MM-DDTHH:MM:SSZ</span></code>)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_aws.kms.ExternalKey.arn">
+<code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.ExternalKey.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Amazon Resource Name (ARN) of the key.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.kms.ExternalKey.deletion_window_in_days">
+<code class="descname">deletion_window_in_days</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.ExternalKey.deletion_window_in_days" title="Permalink to this definition">¶</a></dt>
+<dd><p>Duration in days after which the key is deleted after destruction of the resource. Must be between <code class="docutils literal notranslate"><span class="pre">7</span></code> and <code class="docutils literal notranslate"><span class="pre">30</span></code> days. Defaults to <code class="docutils literal notranslate"><span class="pre">30</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.kms.ExternalKey.description">
+<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.ExternalKey.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Description of the key.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.kms.ExternalKey.enabled">
+<code class="descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.ExternalKey.enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether the key is enabled. Keys pending import can only be <code class="docutils literal notranslate"><span class="pre">false</span></code>. Imported keys default to <code class="docutils literal notranslate"><span class="pre">true</span></code> unless expired.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.kms.ExternalKey.expiration_model">
+<code class="descname">expiration_model</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.ExternalKey.expiration_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the key material expires. Empty when pending key material import, otherwise <code class="docutils literal notranslate"><span class="pre">KEY_MATERIAL_EXPIRES</span></code> or <code class="docutils literal notranslate"><span class="pre">KEY_MATERIAL_DOES_NOT_EXPIRE</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.kms.ExternalKey.key_material_base64">
+<code class="descname">key_material_base64</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.ExternalKey.key_material_base64" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base64 encoded 256-bit symmetric encryption key material to import. The CMK is permanently associated with this key material. The same key material can be reimported, but you cannot import different key material.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.kms.ExternalKey.key_state">
+<code class="descname">key_state</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.ExternalKey.key_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>The state of the CMK.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.kms.ExternalKey.key_usage">
+<code class="descname">key_usage</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.ExternalKey.key_usage" title="Permalink to this definition">¶</a></dt>
+<dd><p>The cryptographic operations for which you can use the CMK.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.kms.ExternalKey.policy">
+<code class="descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.ExternalKey.policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>A key policy JSON document. If you do not provide a key policy, AWS KMS attaches a default key policy to the CMK.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.kms.ExternalKey.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.ExternalKey.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A key-value map of tags to assign to the key.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.kms.ExternalKey.valid_to">
+<code class="descname">valid_to</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.ExternalKey.valid_to" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time at which the imported key material expires. When the key material expires, AWS KMS deletes the key material and the CMK becomes unusable. If not specified, key material does not expire. Valid values: <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339 time string</a> (<code class="docutils literal notranslate"><span class="pre">YYYY-MM-DDTHH:MM:SSZ</span></code>)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.kms.ExternalKey.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.ExternalKey.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.kms.ExternalKey.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.ExternalKey.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.kms.GetAliasResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.kms.</code><code class="descname">GetAliasResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>target_key_arn=None</em>, <em>target_key_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.GetAliasResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.kms.</code><code class="descname">GetAliasResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>name=None</em>, <em>target_key_arn=None</em>, <em>target_key_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.GetAliasResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAlias.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.kms.GetAliasResult.arn">
@@ -125,7 +345,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.kms.GetCipherTextResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.kms.</code><code class="descname">GetCipherTextResult</code><span class="sig-paren">(</span><em>ciphertext_blob=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.GetCipherTextResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.kms.</code><code class="descname">GetCipherTextResult</code><span class="sig-paren">(</span><em>ciphertext_blob=None</em>, <em>context=None</em>, <em>key_id=None</em>, <em>plaintext=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.GetCipherTextResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCipherText.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.kms.GetCipherTextResult.ciphertext_blob">
@@ -143,7 +363,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.kms.GetKeyResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.kms.</code><code class="descname">GetKeyResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>aws_account_id=None</em>, <em>creation_date=None</em>, <em>deletion_date=None</em>, <em>description=None</em>, <em>enabled=None</em>, <em>expiration_model=None</em>, <em>key_manager=None</em>, <em>key_state=None</em>, <em>key_usage=None</em>, <em>origin=None</em>, <em>valid_to=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.GetKeyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.kms.</code><code class="descname">GetKeyResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>aws_account_id=None</em>, <em>creation_date=None</em>, <em>deletion_date=None</em>, <em>description=None</em>, <em>enabled=None</em>, <em>expiration_model=None</em>, <em>grant_tokens=None</em>, <em>key_id=None</em>, <em>key_manager=None</em>, <em>key_state=None</em>, <em>key_usage=None</em>, <em>origin=None</em>, <em>valid_to=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.GetKeyResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getKey.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.kms.GetKeyResult.id">
@@ -155,7 +375,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.kms.GetSecretResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.kms.</code><code class="descname">GetSecretResult</code><span class="sig-paren">(</span><em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.GetSecretResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.kms.</code><code class="descname">GetSecretResult</code><span class="sig-paren">(</span><em>secrets=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.GetSecretResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSecret.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.kms.GetSecretResult.id">
@@ -167,7 +387,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.kms.GetSecretsResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.kms.</code><code class="descname">GetSecretsResult</code><span class="sig-paren">(</span><em>plaintext=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.GetSecretsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.kms.</code><code class="descname">GetSecretsResult</code><span class="sig-paren">(</span><em>plaintext=None</em>, <em>secrets=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.GetSecretsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSecrets.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.kms.GetSecretsResult.plaintext">
@@ -442,7 +662,9 @@ without having to hard code the ARN as input.</p>
 <dt id="pulumi_aws.kms.get_cipher_text">
 <code class="descclassname">pulumi_aws.kms.</code><code class="descname">get_cipher_text</code><span class="sig-paren">(</span><em>context=None</em>, <em>key_id=None</em>, <em>plaintext=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.get_cipher_text" title="Permalink to this definition">¶</a></dt>
 <dd><p>The KMS ciphertext data source allows you to encrypt plaintext into ciphertext
-by using an AWS KMS customer master key.</p>
+by using an AWS KMS customer master key. The value returned by this data source
+changes every apply. For a stable ciphertext value, see the <cite>``aws_kms_ciphertext`</cite>
+resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/kms_ciphertext.html">https://www.terraform.io/docs/providers/aws/r/kms_ciphertext.html</a>&gt;`_.</p>
 <blockquote>
 <div><strong>Note:</strong> All arguments including the plaintext be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</div></blockquote>

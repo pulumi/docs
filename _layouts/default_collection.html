@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+{% include head.html %}
+
+<body>
+    {% include header.html %}
+
+    <main id="main-content">
+        <section class="content-block bg-white">
+            <div class="content-content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3 hidden-xs hidden-sm">
+
+                            <!-- TOC for the Collection -->
+                            <div class="pul-toc">
+                                {% if page.collection %}
+                                    <a href="/{{ page.collection }}">
+                                        {% case page.collection %}
+                                            {% when "aws" %}
+                                            <h2>AWS</h2>
+                                            {% else %}
+                                            <h2>{{ page.collection }}</h2>
+                                        {% endcase %}
+                                    </a>
+
+                                    <ul>
+                                        {% for collection_item in site[page.collection] %}
+                                            {% if collection_item.slug != "index" %}
+                                                <li>
+                                                    <a href="{{ collection_item.url }}">
+                                                        {{ collection_item.slug }}
+                                                    </a>
+                                                </li>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+                            </div>
+
+                        </div>
+                        <div class="col-md-9">
+                            <div class="edit-this-page">
+                                <a href="{{site.github.repository_url}}/edit/{{site.github.branch}}/{{page.path}}"
+                                    target="_blank">
+                                    <i class="fab fa-github"></i>
+                                    Edit This Page
+                                </a>
+                            </div>
+                            {% if page.title != nil and page.title != '' %}
+                            <h1>{{ page.title }}</h1>
+                            {% endif %}
+
+                            {{ content }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    {% include footer.html %}
+
+    {% include scripts.html %}
+</body>
+
+</html>

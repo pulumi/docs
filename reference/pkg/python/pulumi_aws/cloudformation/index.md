@@ -2,7 +2,7 @@
 <span id="cloudformation"></span><h1>cloudformation<a class="headerlink" href="#module-pulumi_aws.cloudformation" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.cloudformation.GetExportResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloudformation.</code><code class="descname">GetExportResult</code><span class="sig-paren">(</span><em>exporting_stack_id=None</em>, <em>value=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.GetExportResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudformation.</code><code class="descname">GetExportResult</code><span class="sig-paren">(</span><em>exporting_stack_id=None</em>, <em>name=None</em>, <em>value=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.GetExportResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getExport.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.cloudformation.GetExportResult.exporting_stack_id">
@@ -26,7 +26,7 @@
 
 <dl class="class">
 <dt id="pulumi_aws.cloudformation.GetStackResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloudformation.</code><code class="descname">GetStackResult</code><span class="sig-paren">(</span><em>capabilities=None</em>, <em>description=None</em>, <em>disable_rollback=None</em>, <em>iam_role_arn=None</em>, <em>notification_arns=None</em>, <em>outputs=None</em>, <em>parameters=None</em>, <em>tags=None</em>, <em>template_body=None</em>, <em>timeout_in_minutes=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.GetStackResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudformation.</code><code class="descname">GetStackResult</code><span class="sig-paren">(</span><em>capabilities=None</em>, <em>description=None</em>, <em>disable_rollback=None</em>, <em>iam_role_arn=None</em>, <em>name=None</em>, <em>notification_arns=None</em>, <em>outputs=None</em>, <em>parameters=None</em>, <em>tags=None</em>, <em>template_body=None</em>, <em>timeout_in_minutes=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.GetStackResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getStack.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.cloudformation.GetStackResult.capabilities">
@@ -241,6 +241,242 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_aws.cloudformation.Stack.translate_input_property">
 <code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.cloudformation.StackSet">
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudformation.</code><code class="descname">StackSet</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>administration_role_arn=None</em>, <em>capabilities=None</em>, <em>description=None</em>, <em>execution_role_name=None</em>, <em>name=None</em>, <em>parameters=None</em>, <em>tags=None</em>, <em>template_body=None</em>, <em>template_url=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a CloudFormation Stack Set. Stack Sets allow CloudFormation templates to be easily deployed across multiple accounts and regions via Stack Set Instances (<cite>``aws_cloudformation_stack_set_instance`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/cloudformation_stack_set_instance.html">https://www.terraform.io/docs/providers/aws/r/cloudformation_stack_set_instance.html</a>&gt;`_). Additional information about Stack Sets can be found in the <a class="reference external" href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html">AWS CloudFormation User Guide</a>.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> All template parameters, including those with a <code class="docutils literal notranslate"><span class="pre">Default</span></code>, must be configured or ignored with the <code class="docutils literal notranslate"><span class="pre">lifecycle</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">ignore_changes</span></code> argument.</p>
+<p><strong>NOTE:</strong> All <code class="docutils literal notranslate"><span class="pre">NoEcho</span></code> template parameters must be ignored with the <code class="docutils literal notranslate"><span class="pre">lifecycle</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">ignore_changes</span></code> argument.</p>
+</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>administration_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Number (ARN) of the IAM Role in the administrator account.</li>
+<li><strong>capabilities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of capabilities. Valid values: <code class="docutils literal notranslate"><span class="pre">CAPABILITY_IAM</span></code>, <code class="docutils literal notranslate"><span class="pre">CAPABILITY_NAMED_IAM</span></code>, <code class="docutils literal notranslate"><span class="pre">CAPABILITY_AUTO_EXPAND</span></code>.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the Stack Set.</li>
+<li><strong>execution_role_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the IAM Role in all target accounts for Stack Set operations. Defaults to <code class="docutils literal notranslate"><span class="pre">AWSCloudFormationStackSetExecutionRole</span></code>.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the Stack Set. The name must be unique in the region where you create your Stack Set. The name can contain only alphanumeric characters (case-sensitive) and hyphens. It must start with an alphabetic character and cannot be longer than 128 characters.</li>
+<li><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of input parameters for the Stack Set template. All template parameters, including those with a <code class="docutils literal notranslate"><span class="pre">Default</span></code>, must be configured or ignored with <code class="docutils literal notranslate"><span class="pre">lifecycle</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">ignore_changes</span></code> argument. All <code class="docutils literal notranslate"><span class="pre">NoEcho</span></code> template parameters must be ignored with the <code class="docutils literal notranslate"><span class="pre">lifecycle</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">ignore_changes</span></code> argument.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of tags to associate with this Stack Set and the Stacks created from it. AWS CloudFormation also propagates these tags to supported resources that are created in the Stacks. A maximum number of 50 tags can be specified.</li>
+<li><strong>template_body</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – String containing the CloudFormation template body. Maximum size: 51,200 bytes. Conflicts with <code class="docutils literal notranslate"><span class="pre">template_url</span></code>.</li>
+<li><strong>template_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – String containing the location of a file containing the CloudFormation template body. The URL must point to a template that is located in an Amazon S3 bucket. Maximum location file size: 460,800 bytes. Conflicts with <code class="docutils literal notranslate"><span class="pre">template_body</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_aws.cloudformation.StackSet.administration_role_arn">
+<code class="descname">administration_role_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.administration_role_arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amazon Resource Number (ARN) of the IAM Role in the administrator account.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.cloudformation.StackSet.arn">
+<code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amazon Resource Name (ARN) of the Stack Set.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.cloudformation.StackSet.capabilities">
+<code class="descname">capabilities</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.capabilities" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of capabilities. Valid values: <code class="docutils literal notranslate"><span class="pre">CAPABILITY_IAM</span></code>, <code class="docutils literal notranslate"><span class="pre">CAPABILITY_NAMED_IAM</span></code>, <code class="docutils literal notranslate"><span class="pre">CAPABILITY_AUTO_EXPAND</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.cloudformation.StackSet.description">
+<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Description of the Stack Set.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.cloudformation.StackSet.execution_role_name">
+<code class="descname">execution_role_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.execution_role_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the IAM Role in all target accounts for Stack Set operations. Defaults to <code class="docutils literal notranslate"><span class="pre">AWSCloudFormationStackSetExecutionRole</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.cloudformation.StackSet.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the Stack Set. The name must be unique in the region where you create your Stack Set. The name can contain only alphanumeric characters (case-sensitive) and hyphens. It must start with an alphabetic character and cannot be longer than 128 characters.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.cloudformation.StackSet.parameters">
+<code class="descname">parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value map of input parameters for the Stack Set template. All template parameters, including those with a <code class="docutils literal notranslate"><span class="pre">Default</span></code>, must be configured or ignored with <code class="docutils literal notranslate"><span class="pre">lifecycle</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">ignore_changes</span></code> argument. All <code class="docutils literal notranslate"><span class="pre">NoEcho</span></code> template parameters must be ignored with the <code class="docutils literal notranslate"><span class="pre">lifecycle</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">ignore_changes</span></code> argument.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.cloudformation.StackSet.stack_set_id">
+<code class="descname">stack_set_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.stack_set_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unique identifier of the Stack Set.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.cloudformation.StackSet.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value map of tags to associate with this Stack Set and the Stacks created from it. AWS CloudFormation also propagates these tags to supported resources that are created in the Stacks. A maximum number of 50 tags can be specified.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.cloudformation.StackSet.template_body">
+<code class="descname">template_body</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.template_body" title="Permalink to this definition">¶</a></dt>
+<dd><p>String containing the CloudFormation template body. Maximum size: 51,200 bytes. Conflicts with <code class="docutils literal notranslate"><span class="pre">template_url</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.cloudformation.StackSet.template_url">
+<code class="descname">template_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.template_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>String containing the location of a file containing the CloudFormation template body. The URL must point to a template that is located in an Amazon S3 bucket. Maximum location file size: 460,800 bytes. Conflicts with <code class="docutils literal notranslate"><span class="pre">template_body</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.cloudformation.StackSet.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.cloudformation.StackSet.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.StackSet.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.cloudformation.StackSetInstance">
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudformation.</code><code class="descname">StackSetInstance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_id=None</em>, <em>parameter_overrides=None</em>, <em>region=None</em>, <em>retain_stack=None</em>, <em>stack_set_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.StackSetInstance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a CloudFormation Stack Set Instance. Instances are managed in the account and region of the Stack Set after the target account permissions have been configured. Additional information about Stack Sets can be found in the <a class="reference external" href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html">AWS CloudFormation User Guide</a>.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> All target accounts must have an IAM Role created that matches the name of the execution role configured in the Stack Set (the <code class="docutils literal notranslate"><span class="pre">execution_role_name</span></code> argument in the <code class="docutils literal notranslate"><span class="pre">aws_cloudformation_stack_set</span></code> resource) in a trust relationship with the administrative account or administration IAM Role. The execution role must have appropriate permissions to manage resources defined in the template along with those required for Stack Sets to operate. See the <a class="reference external" href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">AWS CloudFormation User Guide</a> for more details.</p>
+<p><strong>NOTE:</strong> To retain the Stack during Terraform resource destroy, ensure <code class="docutils literal notranslate"><span class="pre">retain_stack</span> <span class="pre">=</span> <span class="pre">true</span></code> has been successfully applied into the Terraform state first. This must be completed <em>before</em> an apply that would destroy the resource.</p>
+</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Target AWS Account ID to create a Stack based on the Stack Set. Defaults to current account.</li>
+<li><strong>parameter_overrides</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value map of input parameters to override from the Stack Set for this Instance.</li>
+<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Target AWS Region to create a Stack based on the Stack Set. Defaults to current region.</li>
+<li><strong>retain_stack</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – During Terraform resource destroy, remove Instance from Stack Set while keeping the Stack and its associated resources. Must be enabled in Terraform state <em>before</em> destroy operation to take effect. You cannot reassociate a retained Stack or add an existing, saved Stack to a new Stack Set. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>stack_set_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the Stack Set.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_aws.cloudformation.StackSetInstance.account_id">
+<code class="descname">account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSetInstance.account_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Target AWS Account ID to create a Stack based on the Stack Set. Defaults to current account.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.cloudformation.StackSetInstance.parameter_overrides">
+<code class="descname">parameter_overrides</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSetInstance.parameter_overrides" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value map of input parameters to override from the Stack Set for this Instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.cloudformation.StackSetInstance.region">
+<code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSetInstance.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>Target AWS Region to create a Stack based on the Stack Set. Defaults to current region.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.cloudformation.StackSetInstance.retain_stack">
+<code class="descname">retain_stack</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSetInstance.retain_stack" title="Permalink to this definition">¶</a></dt>
+<dd><p>During Terraform resource destroy, remove Instance from Stack Set while keeping the Stack and its associated resources. Must be enabled in Terraform state <em>before</em> destroy operation to take effect. You cannot reassociate a retained Stack or add an existing, saved Stack to a new Stack Set. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.cloudformation.StackSetInstance.stack_id">
+<code class="descname">stack_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSetInstance.stack_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stack identifier</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.cloudformation.StackSetInstance.stack_set_name">
+<code class="descname">stack_set_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.StackSetInstance.stack_set_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the Stack Set.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.cloudformation.StackSetInstance.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.StackSetInstance.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.cloudformation.StackSetInstance.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.StackSetInstance.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <table class="docutils field-list" frame="void" rules="none">

@@ -78,7 +78,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ecs.GetClusterResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ecs.</code><code class="descname">GetClusterResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>pending_tasks_count=None</em>, <em>registered_container_instances_count=None</em>, <em>running_tasks_count=None</em>, <em>status=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.GetClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ecs.</code><code class="descname">GetClusterResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>cluster_name=None</em>, <em>pending_tasks_count=None</em>, <em>registered_container_instances_count=None</em>, <em>running_tasks_count=None</em>, <em>status=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.GetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCluster.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ecs.GetClusterResult.arn">
@@ -120,7 +120,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ecs.GetContainerDefinitionResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ecs.</code><code class="descname">GetContainerDefinitionResult</code><span class="sig-paren">(</span><em>cpu=None</em>, <em>disable_networking=None</em>, <em>docker_labels=None</em>, <em>environment=None</em>, <em>image=None</em>, <em>image_digest=None</em>, <em>memory=None</em>, <em>memory_reservation=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.GetContainerDefinitionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ecs.</code><code class="descname">GetContainerDefinitionResult</code><span class="sig-paren">(</span><em>container_name=None</em>, <em>cpu=None</em>, <em>disable_networking=None</em>, <em>docker_labels=None</em>, <em>environment=None</em>, <em>image=None</em>, <em>image_digest=None</em>, <em>memory=None</em>, <em>memory_reservation=None</em>, <em>task_definition=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.GetContainerDefinitionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getContainerDefinition.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ecs.GetContainerDefinitionResult.cpu">
@@ -180,7 +180,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ecs.GetServiceResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ecs.</code><code class="descname">GetServiceResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>desired_count=None</em>, <em>launch_type=None</em>, <em>scheduling_strategy=None</em>, <em>task_definition=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.GetServiceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ecs.</code><code class="descname">GetServiceResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>cluster_arn=None</em>, <em>desired_count=None</em>, <em>launch_type=None</em>, <em>scheduling_strategy=None</em>, <em>service_name=None</em>, <em>task_definition=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.GetServiceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getService.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ecs.GetServiceResult.arn">
@@ -222,7 +222,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ecs.GetTaskDefinitionResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ecs.</code><code class="descname">GetTaskDefinitionResult</code><span class="sig-paren">(</span><em>family=None</em>, <em>network_mode=None</em>, <em>revision=None</em>, <em>status=None</em>, <em>task_role_arn=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.GetTaskDefinitionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ecs.</code><code class="descname">GetTaskDefinitionResult</code><span class="sig-paren">(</span><em>family=None</em>, <em>network_mode=None</em>, <em>revision=None</em>, <em>status=None</em>, <em>task_definition=None</em>, <em>task_role_arn=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.GetTaskDefinitionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getTaskDefinition.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ecs.GetTaskDefinitionResult.family">

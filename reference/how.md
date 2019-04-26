@@ -35,3 +35,11 @@ const bucket = new aws.s3.Bucket("app-bucket"); // renamed bucket
 ```
 
 This time, the engine will not create another `media-bucket`, since it exists in the checkpoint. Now, since an S3 bucket cannot be renamed in place, the engine makes a "replace" call to the AWS provider. The provider deletes the bucket `content-bucket125ce` and creates a new one. 
+
+## Creation and Deletion Order
+
+A needed resource will be created or updated once all of the Inputs it depends on are satisfied.
+
+If a needed resource does not already exist it will be created.
+
+If a resource needs to be updated, the new instance will be created and then the old instance deleted *unless* you manually specify `name`, in which case pulumi will delete the old one before creating the new one.
