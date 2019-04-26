@@ -2,8 +2,6 @@
 title: Node.js Packages
 ---
 
-
-
 ### General Purpose Packages
 
 The Pulumi SDK package is used for accessing the core programming model around resources, configuration, etc. 
@@ -28,7 +26,8 @@ Each cloud vendor has a dedicated package for deploying resources to it:
 * [OpenStack (`@pulumi/openstack`)](@pulumi/openstack)
 * [vSphere (`@pulumi/vsphere`)](@pulumi/vsphere)
 * [Packet (`@pulumi/packet`)](@pulumi/packet)
-* [F5 BigIP (`@pulumi/ftbigip`)](@pulumi/f5bigip)
+* [F5 BigIP (`@pulumi/f5bigip`)](@pulumi/f5bigip)
+* [Cloudflare (`@pulumi/cloudflare`)](@pulumi/cloudflare)
 
 ### Cloud-Agnostic Packages
 
