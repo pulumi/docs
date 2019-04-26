@@ -2636,7 +2636,7 @@ Manages a Virtual Machine.
 
 ## Example Usage (from an Azure Platform Image)
 
-This example provisions a Virtual Machine with Managed Disks. Other examples of the `azurerm_virtual_machine` resource can be found in [the `./examples/virtual-machines` directory within the Github Repository](https://github.com/terraform-providers/terraform-provider-azurerm/tree/master/examples/virtual-machines)
+This example provisions a Virtual Machine with Managed Disks. Other examples of the `azurerm_virtual_machine` resource can be found in [the `./examples/virtual-machines` directory within the GitHub Repository](https://github.com/terraform-providers/terraform-provider-azurerm/tree/master/examples/virtual-machines)
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";

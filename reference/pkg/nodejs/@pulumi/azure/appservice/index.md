@@ -181,7 +181,7 @@ Manages an App Service (within an App Service Plan).
 
 ## Example Usage
 
-This example provisions a Windows App Service. Other examples of the `azurerm_app_service` resource can be found in [the `./examples/app-service` directory within the Github Repository](https://github.com/terraform-providers/terraform-provider-azurerm/tree/master/examples/app-service)
+This example provisions a Windows App Service. Other examples of the `azurerm_app_service` resource can be found in [the `./examples/app-service` directory within the GitHub Repository](https://github.com/terraform-providers/terraform-provider-azurerm/tree/master/examples/app-service)
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";

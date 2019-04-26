@@ -16,7 +16,7 @@ og:
 [AWS here]: https://aws.amazon.com/ec2/
 [Reference docs]: /reference/aws.html
 [Example code]: https://github.com/pulumi/examples/tree/master/aws-js-webserver
-[Github @pulumi/aws]: https://github.com/pulumi/pulumi-aws 
+[GitHub @pulumi/aws]: https://github.com/pulumi/pulumi-aws
 [Configure AWS]: /install/aws.html
 
 This reference shows how to use Pulumi to define an {{ page.cloud }} {{ page.service }} resource using pure code which can then be deployed to {{ page.cloud }} and managed as infrastructure as code.

@@ -15,7 +15,7 @@ og:
 
 [Reference docs]: /reference/aws.html
 [Example code]: https://github.com/pulumi/examples/tree/master/cloud-js-thumbnailer
-[Github @pulumi/aws]: https://github.com/pulumi/pulumi-aws 
+[GitHub @pulumi/aws]: https://github.com/pulumi/pulumi-aws
 [Configure AWS]: /install/aws.html
 
 Pulumi helps you get your code to the AWS cloud faster than ever before: from high-level multi-cloud libraries, to low-level fine grained control of AWS-specific resources. 

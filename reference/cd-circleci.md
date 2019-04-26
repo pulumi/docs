@@ -56,4 +56,4 @@ can secure store that using secure [project-level configuration](https://circlec
 ### Reference
 
 The full [reference documentation](https://github.com/pulumi/circleci#orb-reference) for the Pulumi
-orbs can be found along side their source code [on Github](https://github.com/pulumi/circleci).
+orbs can be found along side their source code [on GitHub](https://github.com/pulumi/circleci).
