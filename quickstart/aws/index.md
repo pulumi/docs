@@ -9,6 +9,8 @@ The Amazon Web Services (AWS) provider for Pulumi can be used to provision any o
 
 See the [full API documentation](/reference/pkg/nodejs/@pulumi/aws/index.html) for complete details of the available AWS provider APIs.
 
+Additionally, higher-level libraries offering simpler interfaces and higher-productivity APIs for many areas of AWS are available in the [awsx](/reference/pkg/nodejs/@pulumi/awsx/index.html) and [eks](/reference/pkg/nodejs/@pulumi/eks/index.html) packages.
+
 ## Setup
 
 The AWS provider supports several options for providing access to AWS credentials.  See [AWS setup page](./setup.html) for details.

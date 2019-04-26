@@ -5,15 +5,13 @@ redirect_from: /reference/cloud.html
 
 <img src="/images/quickstart/cloudfx-purple.png" align="right">
 
-The Cloud framework for Pulumi lets you program infrastructure and application logic, side by side, using simple, high-level cloud building blocks.  This package has three key defining attributes:
-
-- **Easy Cloud Development**: Build robust and scalable cloud applications with just a few lines of code.
-- **Cloud Agnostic**: Not specific to any one particular cloud (AWS, Azure, Google Cloud, Kubernetes, and various on-premises clouds). Applications built using the high-level Cloud components like [`Service`], [`Table`], [`Topic`] and [`API`] can be deployed to a variety of cloud platforms. Although Pulumi only support AWS today in this framework, our plan is to offer an implementation of this on all major clouds.
-* **Serverless**: The Cloud framework makes it easy to build applications with minimal fixed infrastructure, event-driven application logic, and using resources that are charged based on actual consumption.
+The Cloud framework for Pulumi lets you program infrastructure and application logic, side by side, using simple, high-level, cloud-agnostic building blocks.
 
 The Cloud framework must be configured with credentials to deploy and update resources in the target cloud platform.
 
 See the [full API documentation](/reference/pkg/nodejs/@pulumi/cloud/index.html) for complete details of the available Cloud framework APIs.
+
+For AWS-specific use cases, see also the [awsx](/reference/pkg/nodejs/@pulumi/awsx/index.html) library which provides higher-level libraries for working with many AWS services.
 
 ## Getting Started
 
