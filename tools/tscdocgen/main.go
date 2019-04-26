@@ -163,20 +163,19 @@ func hasInternalTag(node *typeDocNode) bool {
 // gitHubBaseURLs is a *hackhackhack* hard-coded list of URLs for our packages.
 // TODO(joe): base this off the package.json file.
 var gitHubBaseURLs = map[string]string{
-	"@pulumi/pulumi":           "https://github.com/pulumi/pulumi/blob/master/sdk/nodejs",
-	"@pulumi/aws":              "https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs",
-	"@pulumi/awsx":             "https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx",
-	"@pulumi/azure":            "https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs",
-	"@pulumi/azure-serverless": "https://github.com/pulumi/pulumi-azure-serverless/blob/master/nodejs",
-	"@pulumi/cloud":            "https://github.com/pulumi/pulumi-cloud/blob/master/api",
-	"@pulumi/cloud-aws":        "https://github.com/pulumi/pulumi-cloud/blob/master/aws",
-	"@pulumi/cloud-azure":      "https://github.com/pulumi/pulumi-cloud/blob/master/azure",
-	"@pulumi/docker":           "https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs",
-	"@pulumi/eks":              "https://github.com/pulumi/pulumi-eks/blob/master/nodejs/eks",
-	"@pulumi/kubernetes":       "https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs",
-	"@pulumi/gcp":              "https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs",
-	"@pulumi/openstack":        "https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs",
-	"@pulumi/vsphere":          "https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs",
+	"@pulumi/pulumi":      "https://github.com/pulumi/pulumi/blob/master/sdk/nodejs",
+	"@pulumi/aws":         "https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs",
+	"@pulumi/awsx":        "https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx",
+	"@pulumi/azure":       "https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs",
+	"@pulumi/cloud":       "https://github.com/pulumi/pulumi-cloud/blob/master/api",
+	"@pulumi/cloud-aws":   "https://github.com/pulumi/pulumi-cloud/blob/master/aws",
+	"@pulumi/cloud-azure": "https://github.com/pulumi/pulumi-cloud/blob/master/azure",
+	"@pulumi/docker":      "https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs",
+	"@pulumi/eks":         "https://github.com/pulumi/pulumi-eks/blob/master/nodejs/eks",
+	"@pulumi/kubernetes":  "https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs",
+	"@pulumi/gcp":         "https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs",
+	"@pulumi/openstack":   "https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs",
+	"@pulumi/vsphere":     "https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs",
 }
 
 // emitMarkdownDocs takes as input a full Typedoc AST, transforms it into Markdown suitable for our documentation

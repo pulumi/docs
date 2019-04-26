@@ -19,8 +19,6 @@ Each cloud vendor has a dedicated package for deploying resources to it:
     * [AWS Extensions (`@pulumi/awsx`)](@pulumi/awsx): simpler interfaces for common AWS patterns
     * [AWS EKS Cluster (`@pulumi/eks`)](@pulumi/eks): simpler interface for working with AWS EKS
 * [Microsoft Azure (`@pulumi/azure`)](@pulumi/azure)
-    * [Azure Serverless Components (`@pulumi/azure-serverless`)](@pulumi/azure-serverless): simpler interfaces for
-    serverless applications on Azure
 * [Google Cloud Platform (`@pulumi/gcp`)](@pulumi/gcp)
 * [Kubernetes (`@pulumi/kubernetes`)](@pulumi/kubernetes)
 * [OpenStack (`@pulumi/openstack`)](@pulumi/openstack)
