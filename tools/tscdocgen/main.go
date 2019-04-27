@@ -334,7 +334,7 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 			}
 
 			breadcrumbs = append(
-				[]string{fmt.Sprintf("<a href=\"%s/index.html\">%s</a> &gt; ", crumbs, name)},
+				[]string{fmt.Sprintf(`<a href="%s/">%s</a> &gt; `, crumbs, name)},
 				breadcrumbs...)
 			if crumbs != "" {
 				crumbs += string(filepath.Separator)
@@ -344,7 +344,7 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 
 		// Finally, add the link to the root module.
 		breadcrumbs = append(
-			[]string{fmt.Sprintf("<a href=\"%s/index.html\">%s</a> &gt; ", crumbs, e.pkg)},
+			[]string{fmt.Sprintf(`<a href="%s/">%s</a> &gt; `, crumbs, e.pkg)},
 			breadcrumbs...)
 	}
 

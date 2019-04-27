@@ -84,13 +84,11 @@ installation on your system.
 
 `make generate` will regenerate the TypeScript documentation if needed, as well as the CLI documentation in [references/cli](reference/cli). The generated API documentation is placed in the [packages](packages/) folder. This is extremely hacky.
 
-The following repos must be peers of `docs`, should be checked out to an appropriate branch, and should be built before running `make generate`:
-- `pulumi`
-- `pulumi-aws`
-- `pulumi-azure`
-- `pulumi-cloud`
-- `pulumi-gcp`
-- `pulumi-kubernetes`
+Many repos (see `./scripts/update_repos.sh`) must be peers of `docs`, should be checked out to an appropriate branch,
+and should be built before running `make generate`.
+
+> To build each of these repositories, run `make ensure` followed by `make build` in the repository root. See their respective `README.md` files
+> for required dependencies.
 
 ## Updating API docs
 
