@@ -16,30 +16,18 @@ title: Module efs
 <div class="pdoc-module-contents" markdown="1">
 * <a href="#metrics">module metrics</a>
 
-<<<<<<< HEAD
 <a href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/efs/metrics.ts">efs/metrics.ts</a> 
-=======
-<a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/efs/metrics.ts">efs/metrics.ts</a> 
->>>>>>> origin/master
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="metrics">
-<<<<<<< HEAD
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/efs/metrics.ts#L20">module <b>metrics</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <h3 class="pdoc-member-header" id="burstCreditBalance">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/efs/metrics.ts#L79">function <b>burstCreditBalance</b></a>
-=======
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/efs/metrics.ts#L20">module <b>metrics</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<h3 class="pdoc-member-header" id="burstCreditBalance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/efs/metrics.ts#L79">function <b>burstCreditBalance</b></a>
->>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -62,11 +50,7 @@ Valid statistics: Minimum, Maximum, Average
 
 </div>
 <h3 class="pdoc-member-header" id="clientConnections">
-<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/efs/metrics.ts#L94">function <b>clientConnections</b></a>
-=======
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/efs/metrics.ts#L94">function <b>clientConnections</b></a>
->>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -85,11 +69,7 @@ Valid statistics: Sum
 
 </div>
 <h3 class="pdoc-member-header" id="dataReadIOBytes">
-<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/efs/metrics.ts#L113">function <b>dataReadIOBytes</b></a>
-=======
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/efs/metrics.ts#L113">function <b>dataReadIOBytes</b></a>
->>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -112,11 +92,7 @@ Valid statistics: Minimum, Maximum, Average, Sum, SampleCount
 
 </div>
 <h3 class="pdoc-member-header" id="dataWriteIOBytes">
-<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/efs/metrics.ts#L132">function <b>dataWriteIOBytes</b></a>
-=======
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/efs/metrics.ts#L132">function <b>dataWriteIOBytes</b></a>
->>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -139,11 +115,7 @@ Valid statistics: Minimum, Maximum, Average, Sum, SampleCount
 
 </div>
 <h3 class="pdoc-member-header" id="metadataIOBytes">
-<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/efs/metrics.ts#L151">function <b>metadataIOBytes</b></a>
-=======
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/efs/metrics.ts#L151">function <b>metadataIOBytes</b></a>
->>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -166,11 +138,7 @@ Valid statistics: Minimum, Maximum, Average, Sum, SampleCount
 
 </div>
 <h3 class="pdoc-member-header" id="metric">
-<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/efs/metrics.ts#L51">function <b>metric</b></a>
-=======
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/efs/metrics.ts#L51">function <b>metric</b></a>
->>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -196,11 +164,7 @@ takes the form of fs-XXXXXXXX.
 
 </div>
 <h3 class="pdoc-member-header" id="percentIOLimit">
-<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/efs/metrics.ts#L165">function <b>percentIOLimit</b></a>
-=======
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/efs/metrics.ts#L165">function <b>percentIOLimit</b></a>
->>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -218,11 +182,7 @@ Units: Percent
 
 </div>
 <h3 class="pdoc-member-header" id="permittedThroughput">
-<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/efs/metrics.ts#L185">function <b>permittedThroughput</b></a>
-=======
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/efs/metrics.ts#L185">function <b>permittedThroughput</b></a>
->>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -246,11 +206,7 @@ Valid statistics: Minimum, Maximum, Average
 
 </div>
 <h3 class="pdoc-member-header" id="totalIOBytes">
-<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/efs/metrics.ts#L209">function <b>totalIOBytes</b></a>
-=======
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/efs/metrics.ts#L209">function <b>totalIOBytes</b></a>
->>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -278,20 +234,12 @@ Valid statistics: Minimum, Maximum, Average, Sum, SampleCount
 
 </div>
 <h3 class="pdoc-member-header" id="EfsMetricChange">
-<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/efs/metrics.ts#L26">interface <b>EfsMetricChange</b></a>
-=======
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/efs/metrics.ts#L26">interface <b>EfsMetricChange</b></a>
->>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 </div>
 <h3 class="pdoc-member-header" id="EfsMetricName">
-<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/efs/metrics.ts#L21">type <b>EfsMetricName</b></a>
-=======
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/efs/metrics.ts#L21">type <b>EfsMetricName</b></a>
->>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>type</span> EfsMetricName = <span class='s2'>"BurstCreditBalance"</span> | <span class='s2'>"ClientConnections"</span> | <span class='s2'>"DataReadIOBytes"</span> | <span class='s2'>"DataWriteIOBytes"</span> | <span class='s2'>"MetadataIOBytes"</span> | <span class='s2'>"PercentIOLimit"</span> | <span class='s2'>"PermittedThroughput"</span> | <span class='s2'>"TotalIOBytes"</span>;</pre>

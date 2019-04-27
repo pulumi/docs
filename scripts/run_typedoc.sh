@@ -19,7 +19,7 @@ PULUMI_DOC_TMP=`mktemp -d`
 PULUMI_DOC_BASE=./reference/pkg/nodejs/@pulumi
 
 # Set this to 1 to run all generation in parallel.
-PARALLEL=0
+PARALLEL=1
 
 # Generates API documentation for a given package. The arguments are:
 #     * $1 - the simple name of the package

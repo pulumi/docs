@@ -370,11 +370,7 @@ will not be part of the resulting stack's state, as they are presumed to belong 
 
 </div>
 <h2 class="pdoc-module-header" id="registerResource">
-<<<<<<< HEAD
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/24f08ddb0f8489fdb02b18dd82dfc6ab30a962d0/sdk/nodejs/runtime/resource.ts#L154">function <b>registerResource</b></a>
-=======
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L154">function <b>registerResource</b></a>
->>>>>>> origin/master
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -387,11 +383,7 @@ objects that the registration operation will resolve at the right time (or remai
 
 </div>
 <h2 class="pdoc-module-header" id="registerResourceOutputs">
-<<<<<<< HEAD
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/24f08ddb0f8489fdb02b18dd82dfc6ab30a962d0/sdk/nodejs/runtime/resource.ts#L458">function <b>registerResourceOutputs</b></a>
-=======
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L458">function <b>registerResourceOutputs</b></a>
->>>>>>> origin/master
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
