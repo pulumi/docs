@@ -21,7 +21,11 @@ title: Module worklink
 * <a href="#WebsiteCertificateAuthorityAssociationArgs">interface WebsiteCertificateAuthorityAssociationArgs</a>
 * <a href="#WebsiteCertificateAuthorityAssociationState">interface WebsiteCertificateAuthorityAssociationState</a>
 
+<<<<<<< HEAD
 <a href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/worklink/fleet.ts">worklink/fleet.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts">worklink/websiteCertificateAuthorityAssociation.ts</a> 
+=======
+<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/worklink/fleet.ts">worklink/fleet.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts">worklink/websiteCertificateAuthorityAssociation.ts</a> 
+>>>>>>> origin/master
 </div>
 </div>
 </div>
@@ -249,7 +253,11 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="WebsiteCertificateAuthorityAssociation">
+<<<<<<< HEAD
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L22">class <b>WebsiteCertificateAuthorityAssociation</b></a>
+=======
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L22">class <b>WebsiteCertificateAuthorityAssociation</b></a>
+>>>>>>> origin/master
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -269,7 +277,11 @@ const test = new aws.worklink.WebsiteCertificateAuthorityAssociation("test", {
 ```
 
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociation-constructor">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L50"> <b>constructor</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L50"> <b>constructor</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -284,7 +296,11 @@ Create a WebsiteCertificateAuthorityAssociation resource with the given unique n
 
 </div>
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociation-get">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L31">method <b>get</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L31">method <b>get</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -296,7 +312,11 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociation-getProvider">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -304,7 +324,11 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociation-isInstance">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -316,7 +340,11 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociation-certificate">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L38">property <b>certificate</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L38">property <b>certificate</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>certificate: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -325,7 +353,11 @@ The root certificate of the Certificate Authority.
 
 </div>
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociation-displayName">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L42">property <b>displayName</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L42">property <b>displayName</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>displayName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -334,7 +366,11 @@ The certificate name to display.
 
 </div>
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociation-fleetArn">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L46">property <b>fleetArn</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L46">property <b>fleetArn</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>fleetArn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -343,7 +379,11 @@ The ARN of the fleet.
 
 </div>
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociation-id">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -353,7 +393,11 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociation-urn">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -363,7 +407,11 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociation-websiteCaId">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L50">property <b>websiteCaId</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L50">property <b>websiteCaId</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>websiteCaId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -565,14 +613,22 @@ The option to optimize for better performance by routing traffic through the clo
 </div>
 </div>
 <h2 class="pdoc-module-header" id="WebsiteCertificateAuthorityAssociationArgs">
+<<<<<<< HEAD
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L110">interface <b>WebsiteCertificateAuthorityAssociationArgs</b></a>
+=======
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L110">interface <b>WebsiteCertificateAuthorityAssociationArgs</b></a>
+>>>>>>> origin/master
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a WebsiteCertificateAuthorityAssociation resource.
 
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociationArgs-certificate">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L114">property <b>certificate</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L114">property <b>certificate</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>certificate: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -581,7 +637,11 @@ The root certificate of the Certificate Authority.
 
 </div>
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociationArgs-displayName">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L118">property <b>displayName</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L118">property <b>displayName</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>displayName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -590,7 +650,11 @@ The certificate name to display.
 
 </div>
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociationArgs-fleetArn">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L122">property <b>fleetArn</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L122">property <b>fleetArn</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>fleetArn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -600,14 +664,22 @@ The ARN of the fleet.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="WebsiteCertificateAuthorityAssociationState">
+<<<<<<< HEAD
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L88">interface <b>WebsiteCertificateAuthorityAssociationState</b></a>
+=======
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L88">interface <b>WebsiteCertificateAuthorityAssociationState</b></a>
+>>>>>>> origin/master
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering WebsiteCertificateAuthorityAssociation resources.
 
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociationState-certificate">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L92">property <b>certificate</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L92">property <b>certificate</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>certificate?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -616,7 +688,11 @@ The root certificate of the Certificate Authority.
 
 </div>
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociationState-displayName">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L96">property <b>displayName</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L96">property <b>displayName</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>displayName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -625,7 +701,11 @@ The certificate name to display.
 
 </div>
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociationState-fleetArn">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L100">property <b>fleetArn</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L100">property <b>fleetArn</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>fleetArn?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -634,7 +714,11 @@ The ARN of the fleet.
 
 </div>
 <h3 class="pdoc-member-header" id="WebsiteCertificateAuthorityAssociationState-websiteCaId">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L104">property <b>websiteCaId</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/worklink/websiteCertificateAuthorityAssociation.ts#L104">property <b>websiteCaId</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>websiteCaId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

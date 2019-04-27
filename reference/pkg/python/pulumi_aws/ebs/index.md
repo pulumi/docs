@@ -2,7 +2,7 @@
 <span id="ebs"></span><h1>ebs<a class="headerlink" href="#module-pulumi_aws.ebs" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.ebs.GetSnapshotIdsResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ebs.</code><code class="descname">GetSnapshotIdsResult</code><span class="sig-paren">(</span><em>ids=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.GetSnapshotIdsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ebs.</code><code class="descname">GetSnapshotIdsResult</code><span class="sig-paren">(</span><em>filters=None</em>, <em>ids=None</em>, <em>owners=None</em>, <em>restorable_by_user_ids=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.GetSnapshotIdsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSnapshotIds.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ebs.GetSnapshotIdsResult.id">
@@ -14,7 +14,7 @@
 
 <dl class="class">
 <dt id="pulumi_aws.ebs.GetSnapshotResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ebs.</code><code class="descname">GetSnapshotResult</code><span class="sig-paren">(</span><em>data_encryption_key_id=None</em>, <em>description=None</em>, <em>encrypted=None</em>, <em>kms_key_id=None</em>, <em>owner_alias=None</em>, <em>owner_id=None</em>, <em>snapshot_id=None</em>, <em>state=None</em>, <em>tags=None</em>, <em>volume_id=None</em>, <em>volume_size=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.GetSnapshotResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ebs.</code><code class="descname">GetSnapshotResult</code><span class="sig-paren">(</span><em>data_encryption_key_id=None</em>, <em>description=None</em>, <em>encrypted=None</em>, <em>filters=None</em>, <em>kms_key_id=None</em>, <em>most_recent=None</em>, <em>owner_alias=None</em>, <em>owner_id=None</em>, <em>owners=None</em>, <em>restorable_by_user_ids=None</em>, <em>snapshot_id=None</em>, <em>snapshot_ids=None</em>, <em>state=None</em>, <em>tags=None</em>, <em>volume_id=None</em>, <em>volume_size=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.GetSnapshotResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSnapshot.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ebs.GetSnapshotResult.data_encryption_key_id">
@@ -92,7 +92,7 @@
 
 <dl class="class">
 <dt id="pulumi_aws.ebs.GetVolumeResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ebs.</code><code class="descname">GetVolumeResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>availability_zone=None</em>, <em>encrypted=None</em>, <em>iops=None</em>, <em>kms_key_id=None</em>, <em>size=None</em>, <em>snapshot_id=None</em>, <em>tags=None</em>, <em>volume_id=None</em>, <em>volume_type=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.GetVolumeResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ebs.</code><code class="descname">GetVolumeResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>availability_zone=None</em>, <em>encrypted=None</em>, <em>filters=None</em>, <em>iops=None</em>, <em>kms_key_id=None</em>, <em>most_recent=None</em>, <em>size=None</em>, <em>snapshot_id=None</em>, <em>tags=None</em>, <em>volume_id=None</em>, <em>volume_type=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.GetVolumeResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVolume.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ebs.GetVolumeResult.arn">

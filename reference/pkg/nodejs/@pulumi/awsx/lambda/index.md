@@ -16,18 +16,30 @@ title: Module lambda
 <div class="pdoc-module-contents" markdown="1">
 * <a href="#metrics">module metrics</a>
 
+<<<<<<< HEAD
 <a href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/lambda/metrics.ts">lambda/metrics.ts</a> 
+=======
+<a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts">lambda/metrics.ts</a> 
+>>>>>>> origin/master
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="metrics">
+<<<<<<< HEAD
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/lambda/metrics.ts#L20">module <b>metrics</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <h3 class="pdoc-member-header" id="concurrentExecutions">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/lambda/metrics.ts#L174">function <b>concurrentExecutions</b></a>
+=======
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L20">module <b>metrics</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="concurrentExecutions">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L174">function <b>concurrentExecutions</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -43,7 +55,11 @@ Units: Count
 
 </div>
 <h3 class="pdoc-member-header" id="deadLetterErrors">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/lambda/metrics.ts#L126">function <b>deadLetterErrors</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L126">function <b>deadLetterErrors</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -62,7 +78,11 @@ Units: Count
 
 </div>
 <h3 class="pdoc-member-header" id="duration">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/lambda/metrics.ts#L139">function <b>duration</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L139">function <b>duration</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -79,7 +99,11 @@ Units: Count
 
 </div>
 <h3 class="pdoc-member-header" id="errors">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/lambda/metrics.ts#L111">function <b>errors</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L111">function <b>errors</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -104,7 +128,11 @@ Units: Count
 
 </div>
 <h3 class="pdoc-member-header" id="invocations">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/lambda/metrics.ts#L90">function <b>invocations</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L90">function <b>invocations</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -121,7 +149,11 @@ Units: Count
 
 </div>
 <h3 class="pdoc-member-header" id="iteratorAge">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/lambda/metrics.ts#L162">function <b>iteratorAge</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L162">function <b>iteratorAge</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -137,7 +169,11 @@ Units: Milliseconds
 
 </div>
 <h3 class="pdoc-member-header" id="metric">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/lambda/metrics.ts#L60">function <b>metric</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L60">function <b>metric</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -162,7 +198,11 @@ functions:
 
 </div>
 <h3 class="pdoc-member-header" id="throttles">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/lambda/metrics.ts#L150">function <b>throttles</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L150">function <b>throttles</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -177,7 +217,11 @@ Units: Count
 
 </div>
 <h3 class="pdoc-member-header" id="unreservedConcurrentExecutions">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/lambda/metrics.ts#L186">function <b>unreservedConcurrentExecutions</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L186">function <b>unreservedConcurrentExecutions</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -193,12 +237,20 @@ Units: Count
 
 </div>
 <h3 class="pdoc-member-header" id="LambdaMetricChange">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/lambda/metrics.ts#L25">interface <b>LambdaMetricChange</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L25">interface <b>LambdaMetricChange</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 </div>
 <h3 class="pdoc-member-header" id="LambdaMetricName">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/lambda/metrics.ts#L21">type <b>LambdaMetricName</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/lambda/metrics.ts#L21">type <b>LambdaMetricName</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>type</span> LambdaMetricName = <span class='s2'>"Invocations"</span> | <span class='s2'>"Errors"</span> | <span class='s2'>"DeadLetterErrors"</span> | <span class='s2'>"Duration"</span> | <span class='s2'>"Throttles"</span> | <span class='s2'>"IteratorAge"</span> | <span class='s2'>"ConcurrentExecutions"</span> | <span class='s2'>"UnreservedConcurrentExecutions"</span>;</pre>

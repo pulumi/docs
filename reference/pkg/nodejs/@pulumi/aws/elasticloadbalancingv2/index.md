@@ -1952,7 +1952,11 @@ A collection of values returned by getTargetGroup.
 };</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetTargetGroupResult-id">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/elasticloadbalancingv2/getTargetGroup.ts#L77">property <b>id</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/getTargetGroup.ts#L77">property <b>id</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1985,19 +1989,31 @@ id is the provider-assigned unique ID for this managed resource.
 <pre class="highlight"><span class='kd'></span>protocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetTargetGroupResult-proxyProtocolV2">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/elasticloadbalancingv2/getTargetGroup.ts#L68">property <b>proxyProtocolV2</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/getTargetGroup.ts#L68">property <b>proxyProtocolV2</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>proxyProtocolV2: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetTargetGroupResult-slowStart">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/elasticloadbalancingv2/getTargetGroup.ts#L69">property <b>slowStart</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/getTargetGroup.ts#L69">property <b>slowStart</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>slowStart: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetTargetGroupResult-stickiness">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/elasticloadbalancingv2/getTargetGroup.ts#L70">property <b>stickiness</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/getTargetGroup.ts#L70">property <b>stickiness</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>stickiness: {
@@ -2007,19 +2023,31 @@ id is the provider-assigned unique ID for this managed resource.
 };</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetTargetGroupResult-tags">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/elasticloadbalancingv2/getTargetGroup.ts#L71">property <b>tags</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/getTargetGroup.ts#L71">property <b>tags</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetTargetGroupResult-targetType">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/elasticloadbalancingv2/getTargetGroup.ts#L72">property <b>targetType</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/getTargetGroup.ts#L72">property <b>targetType</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>targetType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetTargetGroupResult-vpcId">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/elasticloadbalancingv2/getTargetGroup.ts#L73">property <b>vpcId</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/getTargetGroup.ts#L73">property <b>vpcId</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>vpcId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>

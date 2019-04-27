@@ -440,7 +440,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.directconnect.GetGatewayResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">GetGatewayResult</code><span class="sig-paren">(</span><em>amazon_side_asn=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.GetGatewayResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">GetGatewayResult</code><span class="sig-paren">(</span><em>amazon_side_asn=None</em>, <em>name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.GetGatewayResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getGateway.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.directconnect.GetGatewayResult.amazon_side_asn">

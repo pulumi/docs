@@ -296,7 +296,11 @@ Preferred compression format for report.
 
 </div>
 <h3 class="pdoc-member-header" id="GetReportDefinitionResult-id">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/cur/getReportDefinition.ts#L81">property <b>id</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cur/getReportDefinition.ts#L81">property <b>id</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -305,13 +309,21 @@ id is the provider-assigned unique ID for this managed resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetReportDefinitionResult-reportName">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/cur/getReportDefinition.ts#L61">property <b>reportName</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cur/getReportDefinition.ts#L61">property <b>reportName</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>reportName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetReportDefinitionResult-s3Bucket">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/cur/getReportDefinition.ts#L65">property <b>s3Bucket</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cur/getReportDefinition.ts#L65">property <b>s3Bucket</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>s3Bucket: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -320,7 +332,11 @@ Name of customer S3 bucket.
 
 </div>
 <h3 class="pdoc-member-header" id="GetReportDefinitionResult-s3Prefix">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/cur/getReportDefinition.ts#L69">property <b>s3Prefix</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cur/getReportDefinition.ts#L69">property <b>s3Prefix</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>s3Prefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -329,7 +345,11 @@ Preferred report path prefix.
 
 </div>
 <h3 class="pdoc-member-header" id="GetReportDefinitionResult-s3Region">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/cur/getReportDefinition.ts#L73">property <b>s3Region</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cur/getReportDefinition.ts#L73">property <b>s3Region</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>s3Region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -338,7 +358,11 @@ Region of customer S3 bucket.
 
 </div>
 <h3 class="pdoc-member-header" id="GetReportDefinitionResult-timeUnit">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/cur/getReportDefinition.ts#L77">property <b>timeUnit</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cur/getReportDefinition.ts#L77">property <b>timeUnit</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>timeUnit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>

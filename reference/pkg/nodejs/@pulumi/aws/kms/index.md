@@ -1380,7 +1380,11 @@ The Amazon Resource Name(ARN) of the key alias.
 
 </div>
 <h3 class="pdoc-member-header" id="GetAliasResult-id">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/kms/getAlias.ts#L59">property <b>id</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getAlias.ts#L59">property <b>id</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1389,13 +1393,21 @@ id is the provider-assigned unique ID for this managed resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetAliasResult-name">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/kms/getAlias.ts#L47">property <b>name</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getAlias.ts#L47">property <b>name</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetAliasResult-targetKeyArn">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/kms/getAlias.ts#L51">property <b>targetKeyArn</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getAlias.ts#L51">property <b>targetKeyArn</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>targetKeyArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1404,7 +1416,11 @@ ARN pointed to by the alias.
 
 </div>
 <h3 class="pdoc-member-header" id="GetAliasResult-targetKeyId">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/kms/getAlias.ts#L55">property <b>targetKeyId</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getAlias.ts#L55">property <b>targetKeyId</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>targetKeyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1465,13 +1481,21 @@ Base64 encoded ciphertext
 
 </div>
 <h3 class="pdoc-member-header" id="GetCipherTextResult-context">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/kms/getCipherText.ts#L70">property <b>context</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getCipherText.ts#L70">property <b>context</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>context?: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetCipherTextResult-id">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/kms/getCipherText.ts#L76">property <b>id</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getCipherText.ts#L76">property <b>id</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1480,13 +1504,21 @@ id is the provider-assigned unique ID for this managed resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetCipherTextResult-keyId">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/kms/getCipherText.ts#L71">property <b>keyId</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getCipherText.ts#L71">property <b>keyId</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>keyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetCipherTextResult-plaintext">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/kms/getCipherText.ts#L72">property <b>plaintext</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getCipherText.ts#L72">property <b>plaintext</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>plaintext: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1572,13 +1604,21 @@ A collection of values returned by getKey.
 <pre class="highlight"><span class='kd'></span>expirationModel: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetKeyResult-grantTokens">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/kms/getKey.ts#L60">property <b>grantTokens</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getKey.ts#L60">property <b>grantTokens</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>grantTokens?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetKeyResult-id">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/kms/getKey.ts#L70">property <b>id</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getKey.ts#L70">property <b>id</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1587,37 +1627,61 @@ id is the provider-assigned unique ID for this managed resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetKeyResult-keyId">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/kms/getKey.ts#L61">property <b>keyId</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getKey.ts#L61">property <b>keyId</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>keyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetKeyResult-keyManager">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/kms/getKey.ts#L62">property <b>keyManager</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getKey.ts#L62">property <b>keyManager</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>keyManager: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetKeyResult-keyState">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/kms/getKey.ts#L63">property <b>keyState</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getKey.ts#L63">property <b>keyState</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>keyState: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetKeyResult-keyUsage">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/kms/getKey.ts#L64">property <b>keyUsage</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getKey.ts#L64">property <b>keyUsage</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>keyUsage: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetKeyResult-origin">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/kms/getKey.ts#L65">property <b>origin</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getKey.ts#L65">property <b>origin</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>origin: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetKeyResult-validTo">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/kms/getKey.ts#L66">property <b>validTo</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getKey.ts#L66">property <b>validTo</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>validTo: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1650,7 +1714,11 @@ A collection of arguments for invoking getSecret.
 A collection of values returned by getSecret.
 
 <h3 class="pdoc-member-header" id="GetSecretResult-id">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/kms/getSecret.ts#L31">property <b>id</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getSecret.ts#L31">property <b>id</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1659,7 +1727,11 @@ id is the provider-assigned unique ID for this managed resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSecretResult-secrets">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/kms/getSecret.ts#L27">property <b>secrets</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getSecret.ts#L27">property <b>secrets</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>secrets: {
@@ -1700,7 +1772,11 @@ One or more encrypted payload definitions from the KMS service. See the Secret D
 A collection of values returned by getSecrets.
 
 <h3 class="pdoc-member-header" id="GetSecretsResult-id">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/kms/getSecrets.ts#L40">property <b>id</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getSecrets.ts#L40">property <b>id</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1718,7 +1794,11 @@ Map containing each `secret` `name` as the key with its decrypted plaintext valu
 
 </div>
 <h3 class="pdoc-member-header" id="GetSecretsResult-secrets">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/kms/getSecrets.ts#L36">property <b>secrets</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kms/getSecrets.ts#L36">property <b>secrets</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>secrets: {

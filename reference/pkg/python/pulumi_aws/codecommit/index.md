@@ -2,7 +2,7 @@
 <span id="codecommit"></span><h1>codecommit<a class="headerlink" href="#module-pulumi_aws.codecommit" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.codecommit.GetRepositoryResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.codecommit.</code><code class="descname">GetRepositoryResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>clone_url_http=None</em>, <em>clone_url_ssh=None</em>, <em>repository_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codecommit.GetRepositoryResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.codecommit.</code><code class="descname">GetRepositoryResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>clone_url_http=None</em>, <em>clone_url_ssh=None</em>, <em>repository_id=None</em>, <em>repository_name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codecommit.GetRepositoryResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRepository.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.codecommit.GetRepositoryResult.arn">

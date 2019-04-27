@@ -750,7 +750,11 @@ ID of the file system for which the mount target is intended.
 
 </div>
 <h3 class="pdoc-member-header" id="GetMountTargetResult-id">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/efs/getMountTarget.ts#L76">property <b>id</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/efs/getMountTarget.ts#L76">property <b>id</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -768,13 +772,21 @@ Address at which the file system may be mounted via the mount target.
 
 </div>
 <h3 class="pdoc-member-header" id="GetMountTargetResult-mountTargetId">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/efs/getMountTarget.ts#L60">property <b>mountTargetId</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/efs/getMountTarget.ts#L60">property <b>mountTargetId</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>mountTargetId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetMountTargetResult-networkInterfaceId">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/efs/getMountTarget.ts#L64">property <b>networkInterfaceId</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/efs/getMountTarget.ts#L64">property <b>networkInterfaceId</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>networkInterfaceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -783,7 +795,11 @@ The ID of the network interface that Amazon EFS created when it created the moun
 
 </div>
 <h3 class="pdoc-member-header" id="GetMountTargetResult-securityGroups">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/efs/getMountTarget.ts#L68">property <b>securityGroups</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/efs/getMountTarget.ts#L68">property <b>securityGroups</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>securityGroups: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -792,7 +808,11 @@ List of VPC security group IDs attached to the mount target.
 
 </div>
 <h3 class="pdoc-member-header" id="GetMountTargetResult-subnetId">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b7682121f187ea9aa41fab1813822dd68dbe7ff7/sdk/nodejs/efs/getMountTarget.ts#L72">property <b>subnetId</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/efs/getMountTarget.ts#L72">property <b>subnetId</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>subnetId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>

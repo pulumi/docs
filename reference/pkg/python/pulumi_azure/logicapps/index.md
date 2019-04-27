@@ -177,7 +177,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.logicapps.GetWorkflowResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.logicapps.</code><code class="descname">GetWorkflowResult</code><span class="sig-paren">(</span><em>access_endpoint=None</em>, <em>location=None</em>, <em>parameters=None</em>, <em>tags=None</em>, <em>workflow_schema=None</em>, <em>workflow_version=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.GetWorkflowResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.logicapps.</code><code class="descname">GetWorkflowResult</code><span class="sig-paren">(</span><em>access_endpoint=None</em>, <em>location=None</em>, <em>name=None</em>, <em>parameters=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>workflow_schema=None</em>, <em>workflow_version=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.GetWorkflowResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getWorkflow.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.logicapps.GetWorkflowResult.access_endpoint">

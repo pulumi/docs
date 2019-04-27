@@ -1,3 +1,6 @@
+@import "_pulumi-constants";
+@import "_pulumi-toc";
+
 // Drop the rounded corners for code snippets. Ideally we would just do this
 // for the code associated with our language chooser. However, there isn't a
 // way to associate the two. (Since the N language code blocks are siblings
@@ -92,20 +95,6 @@ $TAB-GROUP-HEIGHT: 60px;
 $MOBILE-WIDTH: 768px;
 
 $code-font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
-
-/**
- * Colors
- */
-// Define custom CSS styles for Pulumi webpages. This allow us to make dramatic
-// changes to the color scheme without much churn.
-$primary: #512668;  // primary purple
-$primary2: #00acf2; // primary blue
-$primary3: #2fc89f; // primary green
-$primary4: #ee975c; // primary orange
-$accent1: #f6e5ff; // light purple
-$accent2: #e1f6ff; // light blue
-$accent3: #3EC2F8; // bright blue
-$accent4: #fbe5d7; // light orange
 
 // Generate via:
 // https://gist.github.com/chrsmith/692ea3833f2b48f121ad5515aff174ad

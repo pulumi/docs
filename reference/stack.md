@@ -52,6 +52,8 @@ test                                      2 weeks ago              121
 
 To deploy your project to the currently selected stack, run `pulumi update`. The operation uses the latest [configuration values](config.html) for the active stack.
 
+> **Note:** Your stack can distinguish between execution for preview versus for update by using [pulumi.runtime.isDryRun()](/reference/pkg/nodejs/@pulumi/pulumi/runtime/#isDryRun).
+
 ## View stack resources
 
 To view details of the currently selected stack, run `pulumi stack` with no arguments.  This displays the metadata, resources and output properties associated with the stack.
@@ -104,6 +106,8 @@ The values of specific properties can also be retrieved directly, which is usefu
 $ pulumi stack output publicIp
 18.218.85.197
 ```
+
+See also [Inter-Stack Dependencies](organizing-stacks-projects.html#inter-stack-dependencies), which allow one stack to reference the outputs of another stack.
 
 ## Import and export a stack deployment
 

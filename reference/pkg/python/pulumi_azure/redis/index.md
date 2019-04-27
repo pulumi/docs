@@ -2,7 +2,7 @@
 <span id="redis"></span><h1>redis<a class="headerlink" href="#module-pulumi_azure.redis" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.redis.Cache">
-<em class="property">class </em><code class="descclassname">pulumi_azure.redis.</code><code class="descname">Cache</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>capacity=None</em>, <em>enable_non_ssl_port=None</em>, <em>family=None</em>, <em>location=None</em>, <em>name=None</em>, <em>patch_schedules=None</em>, <em>private_static_ip_address=None</em>, <em>redis_configuration=None</em>, <em>resource_group_name=None</em>, <em>shard_count=None</em>, <em>sku_name=None</em>, <em>subnet_id=None</em>, <em>tags=None</em>, <em>zones=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.redis.Cache" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.redis.</code><code class="descname">Cache</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>capacity=None</em>, <em>enable_non_ssl_port=None</em>, <em>family=None</em>, <em>location=None</em>, <em>minimum_tls_version=None</em>, <em>name=None</em>, <em>patch_schedules=None</em>, <em>private_static_ip_address=None</em>, <em>redis_configuration=None</em>, <em>resource_group_name=None</em>, <em>shard_count=None</em>, <em>sku_name=None</em>, <em>subnet_id=None</em>, <em>tags=None</em>, <em>zones=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.redis.Cache" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Redis Cache.</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -64,6 +64,7 @@
 <li><strong>enable_non_ssl_port</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable the non-SSL port (6789) - disabled by default.</li>
 <li><strong>family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SKU family to use. Valid values are <code class="docutils literal notranslate"><span class="pre">C</span></code> and <code class="docutils literal notranslate"><span class="pre">P</span></code>, where C = Basic/Standard, P = Premium.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location of the resource group.</li>
+<li><strong>minimum_tls_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The minimum TLS version.  Defaults to <code class="docutils literal notranslate"><span class="pre">1.0</span></code>.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Redis instance. Changing this forces a
 new resource to be created.</li>
 <li><strong>patch_schedules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of <code class="docutils literal notranslate"><span class="pre">patch_schedule</span></code> blocks as defined below - only available for Premium SKU’s.</li>
@@ -109,6 +110,12 @@ create the Redis instance.</li>
 <dt id="pulumi_azure.redis.Cache.location">
 <code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.redis.Cache.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>The location of the resource group.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.redis.Cache.minimum_tls_version">
+<code class="descname">minimum_tls_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.redis.Cache.minimum_tls_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The minimum TLS version.  Defaults to <code class="docutils literal notranslate"><span class="pre">1.0</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">

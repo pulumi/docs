@@ -162,7 +162,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cloudwatch.EventRule">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">EventRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>event_pattern=None</em>, <em>is_enabled=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>role_arn=None</em>, <em>schedule_expression=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.EventRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">EventRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>event_pattern=None</em>, <em>is_enabled=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>role_arn=None</em>, <em>schedule_expression=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.EventRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudWatch Event Rule resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -181,6 +181,7 @@ See full documentation of <a class="reference external" href="http://docs.aws.am
 <li><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) associated with the role that is used for target invocation.</li>
 <li><strong>schedule_expression</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scheduling expression.
 For example, <code class="docutils literal notranslate"><span class="pre">cron(0</span> <span class="pre">20</span> <span class="pre">*</span> <span class="pre">*</span> <span class="pre">?</span> <span class="pre">*)</span></code> or <code class="docutils literal notranslate"><span class="pre">rate(5</span> <span class="pre">minutes)</span></code>.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
 </td>
 </tr>
@@ -235,6 +236,12 @@ See full documentation of <a class="reference external" href="http://docs.aws.am
 <code class="descname">schedule_expression</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudwatch.EventRule.schedule_expression" title="Permalink to this definition">¶</a></dt>
 <dd><p>The scheduling expression.
 For example, <code class="docutils literal notranslate"><span class="pre">cron(0</span> <span class="pre">20</span> <span class="pre">*</span> <span class="pre">*</span> <span class="pre">?</span> <span class="pre">*)</span></code> or <code class="docutils literal notranslate"><span class="pre">rate(5</span> <span class="pre">minutes)</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.cloudwatch.EventRule.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudwatch.EventRule.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="method">
@@ -421,7 +428,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cloudwatch.GetLogGroupResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">GetLogGroupResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>creation_time=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.GetLogGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">GetLogGroupResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>creation_time=None</em>, <em>name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.GetLogGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getLogGroup.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.cloudwatch.GetLogGroupResult.arn">
@@ -1033,7 +1040,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cloudwatch.MetricAlarm">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">MetricAlarm</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>actions_enabled=None</em>, <em>alarm_actions=None</em>, <em>alarm_description=None</em>, <em>name=None</em>, <em>comparison_operator=None</em>, <em>datapoints_to_alarm=None</em>, <em>dimensions=None</em>, <em>evaluate_low_sample_count_percentiles=None</em>, <em>evaluation_periods=None</em>, <em>extended_statistic=None</em>, <em>insufficient_data_actions=None</em>, <em>metric_name=None</em>, <em>metric_queries=None</em>, <em>namespace=None</em>, <em>ok_actions=None</em>, <em>period=None</em>, <em>statistic=None</em>, <em>threshold=None</em>, <em>treat_missing_data=None</em>, <em>unit=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.MetricAlarm" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">MetricAlarm</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>actions_enabled=None</em>, <em>alarm_actions=None</em>, <em>alarm_description=None</em>, <em>name=None</em>, <em>comparison_operator=None</em>, <em>datapoints_to_alarm=None</em>, <em>dimensions=None</em>, <em>evaluate_low_sample_count_percentiles=None</em>, <em>evaluation_periods=None</em>, <em>extended_statistic=None</em>, <em>insufficient_data_actions=None</em>, <em>metric_name=None</em>, <em>metric_queries=None</em>, <em>namespace=None</em>, <em>ok_actions=None</em>, <em>period=None</em>, <em>statistic=None</em>, <em>tags=None</em>, <em>threshold=None</em>, <em>treat_missing_data=None</em>, <em>unit=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.MetricAlarm" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudWatch Metric Alarm resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1068,6 +1075,7 @@ See docs for <a class="reference external" href="https://docs.aws.amazon.com/Ama
 <li><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The period in seconds over which the specified <code class="docutils literal notranslate"><span class="pre">stat</span></code> is applied.</li>
 <li><strong>statistic</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The statistic to apply to the alarm’s associated metric.
 Either of the following is supported: <code class="docutils literal notranslate"><span class="pre">SampleCount</span></code>, <code class="docutils literal notranslate"><span class="pre">Average</span></code>, <code class="docutils literal notranslate"><span class="pre">Sum</span></code>, <code class="docutils literal notranslate"><span class="pre">Minimum</span></code>, <code class="docutils literal notranslate"><span class="pre">Maximum</span></code></li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 <li><strong>threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The value against which the specified statistic is compared.</li>
 <li><strong>treat_missing_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Sets how this alarm is to handle missing data points. The following values are supported: <code class="docutils literal notranslate"><span class="pre">missing</span></code>, <code class="docutils literal notranslate"><span class="pre">ignore</span></code>, <code class="docutils literal notranslate"><span class="pre">breaching</span></code> and <code class="docutils literal notranslate"><span class="pre">notBreaching</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">missing</span></code>.</li>
 <li><strong>unit</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unit for this metric.</li>
@@ -1190,6 +1198,12 @@ See docs for <a class="reference external" href="https://docs.aws.amazon.com/Ama
 <code class="descname">statistic</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudwatch.MetricAlarm.statistic" title="Permalink to this definition">¶</a></dt>
 <dd><p>The statistic to apply to the alarm’s associated metric.
 Either of the following is supported: <code class="docutils literal notranslate"><span class="pre">SampleCount</span></code>, <code class="docutils literal notranslate"><span class="pre">Average</span></code>, <code class="docutils literal notranslate"><span class="pre">Sum</span></code>, <code class="docutils literal notranslate"><span class="pre">Minimum</span></code>, <code class="docutils literal notranslate"><span class="pre">Maximum</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.cloudwatch.MetricAlarm.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudwatch.MetricAlarm.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="attribute">

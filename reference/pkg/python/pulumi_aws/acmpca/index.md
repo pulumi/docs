@@ -2,7 +2,7 @@
 <span id="acmpca"></span><h1>acmpca<a class="headerlink" href="#module-pulumi_aws.acmpca" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.acmpca.CertificateAuthority">
-<em class="property">class </em><code class="descclassname">pulumi_aws.acmpca.</code><code class="descname">CertificateAuthority</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>certificate_authority_configuration=None</em>, <em>enabled=None</em>, <em>revocation_configuration=None</em>, <em>tags=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.acmpca.</code><code class="descname">CertificateAuthority</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>certificate_authority_configuration=None</em>, <em>enabled=None</em>, <em>permanent_deletion_time_in_days=None</em>, <em>revocation_configuration=None</em>, <em>tags=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage AWS Certificate Manager Private Certificate Authorities (ACM PCA Certificate Authorities).</p>
 <blockquote>
 <div><strong>NOTE:</strong> Creating this resource will leave the certificate authority in a <code class="docutils literal notranslate"><span class="pre">PENDING_CERTIFICATE</span></code> status, which means it cannot yet issue certificates. To complete this setup, you must fully sign the certificate authority CSR available in the <code class="docutils literal notranslate"><span class="pre">certificate_signing_request</span></code> attribute and import the signed certificate outside of Terraform. Terraform can support another resource to manage that workflow automatically in the future.</div></blockquote>
@@ -15,6 +15,7 @@
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>certificate_authority_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument containing algorithms and certificate subject information. Defined below.</li>
 <li><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean value that specifies whether certificate revocation lists (CRLs) are enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>permanent_deletion_time_in_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of days to make a CA restorable after it has been deleted, must be between 7 to 30 days, with default to 30 days.</li>
 <li><strong>revocation_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument containing revocation configuration. Defined below.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies a key-value map of user-defined tags that are attached to the certificate authority.</li>
 <li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the certificate authority. Currently, this must be <code class="docutils literal notranslate"><span class="pre">SUBORDINATE</span></code>.</li>
@@ -69,6 +70,12 @@
 <dt id="pulumi_aws.acmpca.CertificateAuthority.not_before">
 <code class="descname">not_before</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.not_before" title="Permalink to this definition">¶</a></dt>
 <dd><p>Date and time before which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.acmpca.CertificateAuthority.permanent_deletion_time_in_days">
+<code class="descname">permanent_deletion_time_in_days</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.permanent_deletion_time_in_days" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of days to make a CA restorable after it has been deleted, must be between 7 to 30 days, with default to 30 days.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -143,7 +150,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.acmpca.GetCertificateAuthorityResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.acmpca.</code><code class="descname">GetCertificateAuthorityResult</code><span class="sig-paren">(</span><em>certificate=None</em>, <em>certificate_chain=None</em>, <em>certificate_signing_request=None</em>, <em>not_after=None</em>, <em>not_before=None</em>, <em>revocation_configurations=None</em>, <em>serial=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>type=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acmpca.GetCertificateAuthorityResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.acmpca.</code><code class="descname">GetCertificateAuthorityResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>certificate=None</em>, <em>certificate_chain=None</em>, <em>certificate_signing_request=None</em>, <em>not_after=None</em>, <em>not_before=None</em>, <em>revocation_configurations=None</em>, <em>serial=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>type=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acmpca.GetCertificateAuthorityResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCertificateAuthority.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.acmpca.GetCertificateAuthorityResult.certificate">

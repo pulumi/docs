@@ -1498,11 +1498,19 @@ Actual contents of the line.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="metrics">
+<<<<<<< HEAD
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/autoscaling/metrics.ts#L19">module <b>metrics</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <h3 class="pdoc-member-header" id="groupDesiredCapacity">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/autoscaling/metrics.ts#L78">function <b>groupDesiredCapacity</b></a>
+=======
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/metrics.ts#L19">module <b>metrics</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="groupDesiredCapacity">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/metrics.ts#L78">function <b>groupDesiredCapacity</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1513,7 +1521,11 @@ The number of instances that the Auto Scaling group attempts to maintain.
 
 </div>
 <h3 class="pdoc-member-header" id="groupInServiceInstances">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/autoscaling/metrics.ts#L86">function <b>groupInServiceInstances</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/metrics.ts#L86">function <b>groupInServiceInstances</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1525,7 +1537,11 @@ include instances that are pending or terminating.
 
 </div>
 <h3 class="pdoc-member-header" id="groupMaxSize">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/autoscaling/metrics.ts#L71">function <b>groupMaxSize</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/metrics.ts#L71">function <b>groupMaxSize</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1536,7 +1552,11 @@ The maximum size of the Auto Scaling group.
 
 </div>
 <h3 class="pdoc-member-header" id="groupMinSize">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/autoscaling/metrics.ts#L64">function <b>groupMinSize</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/metrics.ts#L64">function <b>groupMinSize</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1547,7 +1567,11 @@ The minimum size of the Auto Scaling group.
 
 </div>
 <h3 class="pdoc-member-header" id="groupPendingInstances">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/autoscaling/metrics.ts#L94">function <b>groupPendingInstances</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/metrics.ts#L94">function <b>groupPendingInstances</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1559,7 +1583,11 @@ does not include instances that are in service or terminating.
 
 </div>
 <h3 class="pdoc-member-header" id="groupStandbyInstances">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/autoscaling/metrics.ts#L102">function <b>groupStandbyInstances</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/metrics.ts#L102">function <b>groupStandbyInstances</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1571,7 +1599,11 @@ but are not actively in service.
 
 </div>
 <h3 class="pdoc-member-header" id="groupTerminatingInstances">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/autoscaling/metrics.ts#L110">function <b>groupTerminatingInstances</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/metrics.ts#L110">function <b>groupTerminatingInstances</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1583,7 +1615,11 @@ instances that are in service or pending.
 
 </div>
 <h3 class="pdoc-member-header" id="groupTotalInstances">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/autoscaling/metrics.ts#L118">function <b>groupTotalInstances</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/metrics.ts#L118">function <b>groupTotalInstances</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1595,7 +1631,11 @@ instances that are in service, pending, and terminating.
 
 </div>
 <h3 class="pdoc-member-header" id="metric">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/autoscaling/metrics.ts#L48">function <b>metric</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/metrics.ts#L48">function <b>metric</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1624,7 +1664,11 @@ dimension.
 
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingMetricChange">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/autoscaling/metrics.ts#L20">interface <b>AutoScalingMetricChange</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/autoscaling/metrics.ts#L20">interface <b>AutoScalingMetricChange</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 </div>

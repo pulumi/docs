@@ -496,7 +496,7 @@ you might need to add an explicit <code class="docutils literal notranslate"><sp
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the deployment</li>
 <li><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated REST API</li>
 <li><strong>stage_description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the stage</li>
-<li><strong>stage_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the stage. If the specified stage already exists, it will be updated to point to the new deployment. If the stage does not exist, a new one will be created and point to this deployment. Use <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> to point at the default stage.</li>
+<li><strong>stage_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the stage. If the specified stage already exists, it will be updated to point to the new deployment. If the stage does not exist, a new one will be created and point to this deployment.</li>
 <li><strong>variables</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map that defines variables for the stage</li>
 </ul>
 </td>
@@ -545,7 +545,7 @@ e.g. <code class="docutils literal notranslate"><span class="pre">https://z4675b
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.Deployment.stage_name">
 <code class="descname">stage_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.Deployment.stage_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the stage. If the specified stage already exists, it will be updated to point to the new deployment. If the stage does not exist, a new one will be created and point to this deployment. Use <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> to point at the default stage.</p>
+<dd><p>The name of the stage. If the specified stage already exists, it will be updated to point to the new deployment. If the stage does not exist, a new one will be created and point to this deployment.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -938,8 +938,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.apigateway.GetKeyResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.apigateway.</code><code class="descname">GetKeyResult</code><span class="sig-paren">(</span><em>name=None</em>, <em>value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.GetKeyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.apigateway.</code><code class="descname">GetKeyResult</code><span class="sig-paren">(</span><em>id=None</em>, <em>name=None</em>, <em>value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.GetKeyResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getKey.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.apigateway.GetKeyResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.GetKeyResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set to the ID of the API Key.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.GetKeyResult.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.GetKeyResult.name" title="Permalink to this definition">¶</a></dt>
@@ -956,7 +962,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.apigateway.GetResourceResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.apigateway.</code><code class="descname">GetResourceResult</code><span class="sig-paren">(</span><em>parent_id=None</em>, <em>path_part=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.GetResourceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.apigateway.</code><code class="descname">GetResourceResult</code><span class="sig-paren">(</span><em>parent_id=None</em>, <em>path=None</em>, <em>path_part=None</em>, <em>rest_api_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.GetResourceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getResource.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.GetResourceResult.parent_id">
@@ -980,7 +986,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.apigateway.GetRestApiResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.apigateway.</code><code class="descname">GetRestApiResult</code><span class="sig-paren">(</span><em>root_resource_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.GetRestApiResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.apigateway.</code><code class="descname">GetRestApiResult</code><span class="sig-paren">(</span><em>name=None</em>, <em>root_resource_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.GetRestApiResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRestApi.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.GetRestApiResult.root_resource_id">
@@ -998,7 +1004,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.apigateway.GetVpcLinkResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.apigateway.</code><code class="descname">GetVpcLinkResult</code><span class="sig-paren">(</span><em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.GetVpcLinkResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.apigateway.</code><code class="descname">GetVpcLinkResult</code><span class="sig-paren">(</span><em>id=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.GetVpcLinkResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVpcLink.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.GetVpcLinkResult.id">
@@ -1040,7 +1046,7 @@ For example: <code class="docutils literal notranslate"><span class="pre">reques
 <li><strong>rest_api</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated REST API.</li>
 <li><strong>timeout_milliseconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds.</li>
 <li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The integration input’s <a class="reference external" href="https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/">type</a>. Valid values are <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> (for HTTP backends), <code class="docutils literal notranslate"><span class="pre">MOCK</span></code> (not calling any real backend), <code class="docutils literal notranslate"><span class="pre">AWS</span></code> (for AWS services), <code class="docutils literal notranslate"><span class="pre">AWS_PROXY</span></code> (for Lambda proxy integration) and <code class="docutils literal notranslate"><span class="pre">HTTP_PROXY</span></code> (for HTTP proxy integration). An <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> or <code class="docutils literal notranslate"><span class="pre">HTTP_PROXY</span></code> integration with a <code class="docutils literal notranslate"><span class="pre">connection_type</span></code> of <code class="docutils literal notranslate"><span class="pre">VPC_LINK</span></code> is referred to as a private integration and uses a VpcLink to connect API Gateway to a network load balancer of a VPC.</li>
-<li><strong>uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The input’s URI (HTTP, AWS). <strong>Required</strong> if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> or <code class="docutils literal notranslate"><span class="pre">AWS</span></code>.
+<li><strong>uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The input’s URI. <strong>Required</strong> if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">AWS</span></code>, <code class="docutils literal notranslate"><span class="pre">AWS_PROXY</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> or <code class="docutils literal notranslate"><span class="pre">HTTP_PROXY</span></code>.
 For HTTP integrations, the URI must be a fully formed, encoded HTTP(S) URL according to the RFC-3986 specification . For AWS integrations, the URI should be of the form <code class="docutils literal notranslate"><span class="pre">arn:aws:apigateway:{region}:{subdomain.service|service}:{path|action}/{service_api}</span></code>. <code class="docutils literal notranslate"><span class="pre">region</span></code>, <code class="docutils literal notranslate"><span class="pre">subdomain</span></code> and <code class="docutils literal notranslate"><span class="pre">service</span></code> are used to determine the right endpoint.
 e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:012345678901:function:my-func/invocations</span></code></li>
 </ul>
@@ -1147,7 +1153,7 @@ For example: <code class="docutils literal notranslate"><span class="pre">reques
 <dl class="attribute">
 <dt id="pulumi_aws.apigateway.Integration.uri">
 <code class="descname">uri</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigateway.Integration.uri" title="Permalink to this definition">¶</a></dt>
-<dd><p>The input’s URI (HTTP, AWS). <strong>Required</strong> if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> or <code class="docutils literal notranslate"><span class="pre">AWS</span></code>.
+<dd><p>The input’s URI. <strong>Required</strong> if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">AWS</span></code>, <code class="docutils literal notranslate"><span class="pre">AWS_PROXY</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> or <code class="docutils literal notranslate"><span class="pre">HTTP_PROXY</span></code>.
 For HTTP integrations, the URI must be a fully formed, encoded HTTP(S) URL according to the RFC-3986 specification . For AWS integrations, the URI should be of the form <code class="docutils literal notranslate"><span class="pre">arn:aws:apigateway:{region}:{subdomain.service|service}:{path|action}/{service_api}</span></code>. <code class="docutils literal notranslate"><span class="pre">region</span></code>, <code class="docutils literal notranslate"><span class="pre">subdomain</span></code> and <code class="docutils literal notranslate"><span class="pre">service</span></code> are used to determine the right endpoint.
 e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:012345678901:function:my-func/invocations</span></code></p>
 </dd></dl>

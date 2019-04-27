@@ -996,7 +996,11 @@ deployments.
 <div class="pdoc-module-contents" markdown="1">
 </div>
 <h2 class="pdoc-module-header" id="isServiceLoadBalancerProvider">
+<<<<<<< HEAD
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/ecs/service.ts#L170">function <b>isServiceLoadBalancerProvider</b></a>
+=======
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/service.ts#L170">function <b>isServiceLoadBalancerProvider</b></a>
+>>>>>>> origin/master
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 </div>
@@ -2935,11 +2939,19 @@ A set of volume blocks that containers in your task may use.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="metrics">
+<<<<<<< HEAD
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/ecs/metrics.ts#L23">module <b>metrics</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <h3 class="pdoc-member-header" id="cpuReservation">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/ecs/metrics.ts#L110">function <b>cpuReservation</b></a>
+=======
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/metrics.ts#L23">module <b>metrics</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="cpuReservation">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/metrics.ts#L110">function <b>cpuReservation</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2962,7 +2974,11 @@ Unit: Percent.
 
 </div>
 <h3 class="pdoc-member-header" id="cpuUtilization">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/ecs/metrics.ts#L135">function <b>cpuUtilization</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/metrics.ts#L135">function <b>cpuUtilization</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2991,7 +3007,11 @@ Unit: Percent.
 
 </div>
 <h3 class="pdoc-member-header" id="gpuReservation">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/ecs/metrics.ts#L196">function <b>gpuReservation</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/metrics.ts#L196">function <b>gpuReservation</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3013,7 +3033,11 @@ Unit: Percent.
 
 </div>
 <h3 class="pdoc-member-header" id="memoryReservation">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/ecs/metrics.ts#L154">function <b>memoryReservation</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/metrics.ts#L154">function <b>memoryReservation</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3036,7 +3060,11 @@ Unit: Percent.
 
 </div>
 <h3 class="pdoc-member-header" id="memoryUtilization">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/ecs/metrics.ts#L178">function <b>memoryUtilization</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/metrics.ts#L178">function <b>memoryUtilization</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3064,7 +3092,11 @@ Unit: Percent.
 
 </div>
 <h3 class="pdoc-member-header" id="metric">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/ecs/metrics.ts#L63">function <b>metric</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/metrics.ts#L63">function <b>metric</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3093,12 +3125,20 @@ Amazon ECS metrics use the AWS/ECS namespace and provide metrics for the followi
 
 </div>
 <h3 class="pdoc-member-header" id="EcsMetricChange">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/ecs/metrics.ts#L27">interface <b>EcsMetricChange</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/metrics.ts#L27">interface <b>EcsMetricChange</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 </div>
 <h3 class="pdoc-member-header" id="EcsMetricName">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/ecs/metrics.ts#L24">type <b>EcsMetricName</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/ecs/metrics.ts#L24">type <b>EcsMetricName</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>type</span> EcsMetricName = <span class='s2'>"CPUReservation"</span> | <span class='s2'>"CPUUtilization"</span> | <span class='s2'>"MemoryReservation"</span> | <span class='s2'>"MemoryUtilization"</span> | <span class='s2'>"GPUReservation"</span>;</pre>

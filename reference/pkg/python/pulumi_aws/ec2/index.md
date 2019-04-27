@@ -995,7 +995,8 @@ a conflict of rule settings and will overwrite routes.</div></blockquote>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>default_route_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Default Routing Table.</li>
 <li><strong>propagating_vgws</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of virtual gateways for propagation.</li>
-<li><strong>routes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of route objects. Their keys are documented below.</li>
+<li><strong>routes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of route objects. Their keys are documented below.
+This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
 </td>
@@ -1023,7 +1024,8 @@ a conflict of rule settings and will overwrite routes.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.DefaultRouteTable.routes">
 <code class="descname">routes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.DefaultRouteTable.routes" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of route objects. Their keys are documented below.</p>
+<dd><p>A list of route objects. Their keys are documented below.
+This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2119,7 +2121,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetInstanceResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetInstanceResult</code><span class="sig-paren">(</span><em>ami=None</em>, <em>arn=None</em>, <em>associate_public_ip_address=None</em>, <em>availability_zone=None</em>, <em>credit_specifications=None</em>, <em>disable_api_termination=None</em>, <em>ebs_block_devices=None</em>, <em>ebs_optimized=None</em>, <em>ephemeral_block_devices=None</em>, <em>host_id=None</em>, <em>iam_instance_profile=None</em>, <em>instance_state=None</em>, <em>instance_tags=None</em>, <em>instance_type=None</em>, <em>key_name=None</em>, <em>monitoring=None</em>, <em>network_interface_id=None</em>, <em>password_data=None</em>, <em>placement_group=None</em>, <em>private_dns=None</em>, <em>private_ip=None</em>, <em>public_dns=None</em>, <em>public_ip=None</em>, <em>root_block_devices=None</em>, <em>security_groups=None</em>, <em>source_dest_check=None</em>, <em>subnet_id=None</em>, <em>tags=None</em>, <em>tenancy=None</em>, <em>user_data=None</em>, <em>vpc_security_group_ids=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetInstanceResult</code><span class="sig-paren">(</span><em>ami=None</em>, <em>arn=None</em>, <em>associate_public_ip_address=None</em>, <em>availability_zone=None</em>, <em>credit_specifications=None</em>, <em>disable_api_termination=None</em>, <em>ebs_block_devices=None</em>, <em>ebs_optimized=None</em>, <em>ephemeral_block_devices=None</em>, <em>filters=None</em>, <em>get_password_data=None</em>, <em>get_user_data=None</em>, <em>host_id=None</em>, <em>iam_instance_profile=None</em>, <em>instance_id=None</em>, <em>instance_state=None</em>, <em>instance_tags=None</em>, <em>instance_type=None</em>, <em>key_name=None</em>, <em>monitoring=None</em>, <em>network_interface_id=None</em>, <em>password_data=None</em>, <em>placement_group=None</em>, <em>private_dns=None</em>, <em>private_ip=None</em>, <em>public_dns=None</em>, <em>public_ip=None</em>, <em>root_block_devices=None</em>, <em>security_groups=None</em>, <em>source_dest_check=None</em>, <em>subnet_id=None</em>, <em>tags=None</em>, <em>tenancy=None</em>, <em>user_data=None</em>, <em>user_data_base64=None</em>, <em>vpc_security_group_ids=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInstance.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetInstanceResult.ami">
@@ -2286,7 +2288,13 @@ is only available if you’ve enabled DNS hostnames for your VPC.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetInstanceResult.user_data">
 <code class="descname">user_data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceResult.user_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>The User Data supplied to the Instance.</p>
+<dd><p>SHA-1 hash of User Data supplied to the Instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.GetInstanceResult.user_data_base64">
+<code class="descname">user_data_base64</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceResult.user_data_base64" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base64 encoded contents of User Data supplied to the Instance. Valid UTF-8 contents can be decoded with the <cite>``base64decode`</cite> function &lt;<a class="reference external" href="https://www.terraform.io/docs/configuration/functions/base64decode.html">https://www.terraform.io/docs/configuration/functions/base64decode.html</a>&gt;`_. This attribute is only exported if <code class="docutils literal notranslate"><span class="pre">get_user_data</span></code> is true.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2305,7 +2313,7 @@ is only available if you’ve enabled DNS hostnames for your VPC.</p>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetInstancesResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetInstancesResult</code><span class="sig-paren">(</span><em>ids=None</em>, <em>instance_tags=None</em>, <em>private_ips=None</em>, <em>public_ips=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetInstancesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetInstancesResult</code><span class="sig-paren">(</span><em>filters=None</em>, <em>ids=None</em>, <em>instance_state_names=None</em>, <em>instance_tags=None</em>, <em>private_ips=None</em>, <em>public_ips=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetInstancesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInstances.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetInstancesResult.ids">
@@ -2335,7 +2343,7 @@ is only available if you’ve enabled DNS hostnames for your VPC.</p>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetInternetGatewayResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetInternetGatewayResult</code><span class="sig-paren">(</span><em>attachments=None</em>, <em>internet_gateway_id=None</em>, <em>owner_id=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetInternetGatewayResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetInternetGatewayResult</code><span class="sig-paren">(</span><em>attachments=None</em>, <em>filters=None</em>, <em>internet_gateway_id=None</em>, <em>owner_id=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetInternetGatewayResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInternetGateway.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetInternetGatewayResult.owner_id">
@@ -2353,7 +2361,7 @@ is only available if you’ve enabled DNS hostnames for your VPC.</p>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetLaunchConfigurationResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetLaunchConfigurationResult</code><span class="sig-paren">(</span><em>associate_public_ip_address=None</em>, <em>ebs_block_devices=None</em>, <em>ebs_optimized=None</em>, <em>enable_monitoring=None</em>, <em>ephemeral_block_devices=None</em>, <em>iam_instance_profile=None</em>, <em>image_id=None</em>, <em>instance_type=None</em>, <em>key_name=None</em>, <em>placement_tenancy=None</em>, <em>root_block_devices=None</em>, <em>security_groups=None</em>, <em>spot_price=None</em>, <em>user_data=None</em>, <em>vpc_classic_link_id=None</em>, <em>vpc_classic_link_security_groups=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetLaunchConfigurationResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetLaunchConfigurationResult</code><span class="sig-paren">(</span><em>associate_public_ip_address=None</em>, <em>ebs_block_devices=None</em>, <em>ebs_optimized=None</em>, <em>enable_monitoring=None</em>, <em>ephemeral_block_devices=None</em>, <em>iam_instance_profile=None</em>, <em>image_id=None</em>, <em>instance_type=None</em>, <em>key_name=None</em>, <em>name=None</em>, <em>placement_tenancy=None</em>, <em>root_block_devices=None</em>, <em>security_groups=None</em>, <em>spot_price=None</em>, <em>user_data=None</em>, <em>vpc_classic_link_id=None</em>, <em>vpc_classic_link_security_groups=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetLaunchConfigurationResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getLaunchConfiguration.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetLaunchConfigurationResult.associate_public_ip_address">
@@ -2410,6 +2418,12 @@ is only available if you’ve enabled DNS hostnames for your VPC.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.ec2.GetLaunchConfigurationResult.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLaunchConfigurationResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Name of the launch configuration.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.ec2.GetLaunchConfigurationResult.placement_tenancy">
 <code class="descname">placement_tenancy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLaunchConfigurationResult.placement_tenancy" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Tenancy of the instance.</p>
@@ -2461,7 +2475,7 @@ is only available if you’ve enabled DNS hostnames for your VPC.</p>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetLaunchTemplateResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetLaunchTemplateResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>block_device_mappings=None</em>, <em>credit_specifications=None</em>, <em>default_version=None</em>, <em>description=None</em>, <em>disable_api_termination=None</em>, <em>ebs_optimized=None</em>, <em>elastic_gpu_specifications=None</em>, <em>iam_instance_profiles=None</em>, <em>image_id=None</em>, <em>instance_initiated_shutdown_behavior=None</em>, <em>instance_market_options=None</em>, <em>instance_type=None</em>, <em>kernel_id=None</em>, <em>key_name=None</em>, <em>latest_version=None</em>, <em>monitorings=None</em>, <em>network_interfaces=None</em>, <em>placements=None</em>, <em>ram_disk_id=None</em>, <em>security_group_names=None</em>, <em>tag_specifications=None</em>, <em>tags=None</em>, <em>user_data=None</em>, <em>vpc_security_group_ids=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetLaunchTemplateResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetLaunchTemplateResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>block_device_mappings=None</em>, <em>credit_specifications=None</em>, <em>default_version=None</em>, <em>description=None</em>, <em>disable_api_termination=None</em>, <em>ebs_optimized=None</em>, <em>elastic_gpu_specifications=None</em>, <em>iam_instance_profiles=None</em>, <em>image_id=None</em>, <em>instance_initiated_shutdown_behavior=None</em>, <em>instance_market_options=None</em>, <em>instance_type=None</em>, <em>kernel_id=None</em>, <em>key_name=None</em>, <em>latest_version=None</em>, <em>monitorings=None</em>, <em>name=None</em>, <em>network_interfaces=None</em>, <em>placements=None</em>, <em>ram_disk_id=None</em>, <em>security_group_names=None</em>, <em>tag_specifications=None</em>, <em>tags=None</em>, <em>user_data=None</em>, <em>vpc_security_group_ids=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetLaunchTemplateResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getLaunchTemplate.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetLaunchTemplateResult.arn">
@@ -2631,7 +2645,7 @@ Interfaces below for more details.</p>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetNatGatewayResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetNatGatewayResult</code><span class="sig-paren">(</span><em>allocation_id=None</em>, <em>id=None</em>, <em>network_interface_id=None</em>, <em>private_ip=None</em>, <em>public_ip=None</em>, <em>state=None</em>, <em>subnet_id=None</em>, <em>tags=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetNatGatewayResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetNatGatewayResult</code><span class="sig-paren">(</span><em>allocation_id=None</em>, <em>filters=None</em>, <em>id=None</em>, <em>network_interface_id=None</em>, <em>private_ip=None</em>, <em>public_ip=None</em>, <em>state=None</em>, <em>subnet_id=None</em>, <em>tags=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetNatGatewayResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getNatGateway.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetNatGatewayResult.allocation_id">
@@ -2661,7 +2675,7 @@ Interfaces below for more details.</p>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetNetworkAclsResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetNetworkAclsResult</code><span class="sig-paren">(</span><em>ids=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetNetworkAclsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetNetworkAclsResult</code><span class="sig-paren">(</span><em>filters=None</em>, <em>ids=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetNetworkAclsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getNetworkAcls.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetNetworkAclsResult.ids">
@@ -2679,7 +2693,7 @@ Interfaces below for more details.</p>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetNetworkInterfaceResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetNetworkInterfaceResult</code><span class="sig-paren">(</span><em>associations=None</em>, <em>attachments=None</em>, <em>availability_zone=None</em>, <em>description=None</em>, <em>id=None</em>, <em>interface_type=None</em>, <em>ipv6_addresses=None</em>, <em>mac_address=None</em>, <em>owner_id=None</em>, <em>private_dns_name=None</em>, <em>private_ip=None</em>, <em>private_ips=None</em>, <em>requester_id=None</em>, <em>security_groups=None</em>, <em>subnet_id=None</em>, <em>tags=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetNetworkInterfaceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetNetworkInterfaceResult</code><span class="sig-paren">(</span><em>associations=None</em>, <em>attachments=None</em>, <em>availability_zone=None</em>, <em>description=None</em>, <em>filters=None</em>, <em>id=None</em>, <em>interface_type=None</em>, <em>ipv6_addresses=None</em>, <em>mac_address=None</em>, <em>owner_id=None</em>, <em>private_dns_name=None</em>, <em>private_ip=None</em>, <em>private_ips=None</em>, <em>requester_id=None</em>, <em>security_groups=None</em>, <em>subnet_id=None</em>, <em>tags=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetNetworkInterfaceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getNetworkInterface.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetNetworkInterfaceResult.associations">
@@ -2775,7 +2789,7 @@ Interfaces below for more details.</p>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetNetworkInterfacesResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetNetworkInterfacesResult</code><span class="sig-paren">(</span><em>ids=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetNetworkInterfacesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetNetworkInterfacesResult</code><span class="sig-paren">(</span><em>filters=None</em>, <em>ids=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetNetworkInterfacesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getNetworkInterfaces.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetNetworkInterfacesResult.ids">
@@ -2793,7 +2807,7 @@ Interfaces below for more details.</p>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetRouteResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetRouteResult</code><span class="sig-paren">(</span><em>destination_cidr_block=None</em>, <em>destination_ipv6_cidr_block=None</em>, <em>egress_only_gateway_id=None</em>, <em>gateway_id=None</em>, <em>instance_id=None</em>, <em>nat_gateway_id=None</em>, <em>network_interface_id=None</em>, <em>transit_gateway_id=None</em>, <em>vpc_peering_connection_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetRouteResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetRouteResult</code><span class="sig-paren">(</span><em>destination_cidr_block=None</em>, <em>destination_ipv6_cidr_block=None</em>, <em>egress_only_gateway_id=None</em>, <em>gateway_id=None</em>, <em>instance_id=None</em>, <em>nat_gateway_id=None</em>, <em>network_interface_id=None</em>, <em>route_table_id=None</em>, <em>transit_gateway_id=None</em>, <em>vpc_peering_connection_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetRouteResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRoute.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetRouteResult.id">
@@ -2805,7 +2819,7 @@ Interfaces below for more details.</p>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetRouteTableResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetRouteTableResult</code><span class="sig-paren">(</span><em>associations=None</em>, <em>owner_id=None</em>, <em>route_table_id=None</em>, <em>routes=None</em>, <em>subnet_id=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetRouteTableResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetRouteTableResult</code><span class="sig-paren">(</span><em>associations=None</em>, <em>filters=None</em>, <em>owner_id=None</em>, <em>route_table_id=None</em>, <em>routes=None</em>, <em>subnet_id=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetRouteTableResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRouteTable.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetRouteTableResult.owner_id">
@@ -2835,7 +2849,7 @@ Interfaces below for more details.</p>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetRouteTablesResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetRouteTablesResult</code><span class="sig-paren">(</span><em>ids=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetRouteTablesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetRouteTablesResult</code><span class="sig-paren">(</span><em>filters=None</em>, <em>ids=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetRouteTablesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getRouteTables.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetRouteTablesResult.ids">
@@ -2853,7 +2867,7 @@ Interfaces below for more details.</p>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetSecurityGroupResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetSecurityGroupResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>description=None</em>, <em>id=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetSecurityGroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetSecurityGroupResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>description=None</em>, <em>filters=None</em>, <em>id=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetSecurityGroupResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSecurityGroup.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetSecurityGroupResult.arn">
@@ -2871,7 +2885,7 @@ Interfaces below for more details.</p>
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetSecurityGroupsResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetSecurityGroupsResult</code><span class="sig-paren">(</span><em>ids=None</em>, <em>tags=None</em>, <em>vpc_ids=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetSecurityGroupsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetSecurityGroupsResult</code><span class="sig-paren">(</span><em>filters=None</em>, <em>ids=None</em>, <em>tags=None</em>, <em>vpc_ids=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetSecurityGroupsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSecurityGroups.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetSecurityGroupsResult.ids">
@@ -2896,7 +2910,7 @@ unless the <code class="docutils literal notranslate"><span class="pre">vpc-id</
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetSubnetIdsResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetSubnetIdsResult</code><span class="sig-paren">(</span><em>ids=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetSubnetIdsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetSubnetIdsResult</code><span class="sig-paren">(</span><em>filters=None</em>, <em>ids=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetSubnetIdsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSubnetIds.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetSubnetIdsResult.ids">
@@ -2914,7 +2928,7 @@ unless the <code class="docutils literal notranslate"><span class="pre">vpc-id</
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetSubnetResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetSubnetResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>assign_ipv6_address_on_creation=None</em>, <em>availability_zone=None</em>, <em>availability_zone_id=None</em>, <em>cidr_block=None</em>, <em>default_for_az=None</em>, <em>id=None</em>, <em>ipv6_cidr_block=None</em>, <em>ipv6_cidr_block_association_id=None</em>, <em>map_public_ip_on_launch=None</em>, <em>owner_id=None</em>, <em>state=None</em>, <em>tags=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetSubnetResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetSubnetResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>assign_ipv6_address_on_creation=None</em>, <em>availability_zone=None</em>, <em>availability_zone_id=None</em>, <em>cidr_block=None</em>, <em>default_for_az=None</em>, <em>filters=None</em>, <em>id=None</em>, <em>ipv6_cidr_block=None</em>, <em>ipv6_cidr_block_association_id=None</em>, <em>map_public_ip_on_launch=None</em>, <em>owner_id=None</em>, <em>state=None</em>, <em>tags=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetSubnetResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSubnet.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetSubnetResult.arn">
@@ -2932,7 +2946,7 @@ unless the <code class="docutils literal notranslate"><span class="pre">vpc-id</
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetVpcDhcpOptionsResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetVpcDhcpOptionsResult</code><span class="sig-paren">(</span><em>dhcp_options_id=None</em>, <em>domain_name=None</em>, <em>domain_name_servers=None</em>, <em>netbios_name_servers=None</em>, <em>netbios_node_type=None</em>, <em>ntp_servers=None</em>, <em>owner_id=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetVpcDhcpOptionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetVpcDhcpOptionsResult</code><span class="sig-paren">(</span><em>dhcp_options_id=None</em>, <em>domain_name=None</em>, <em>domain_name_servers=None</em>, <em>filters=None</em>, <em>netbios_name_servers=None</em>, <em>netbios_node_type=None</em>, <em>ntp_servers=None</em>, <em>owner_id=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetVpcDhcpOptionsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVpcDhcpOptions.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcDhcpOptionsResult.dhcp_options_id">
@@ -3058,7 +3072,7 @@ unless the <code class="docutils literal notranslate"><span class="pre">vpc-id</
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetVpcEndpointServiceResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetVpcEndpointServiceResult</code><span class="sig-paren">(</span><em>acceptance_required=None</em>, <em>availability_zones=None</em>, <em>base_endpoint_dns_names=None</em>, <em>owner=None</em>, <em>private_dns_name=None</em>, <em>service_name=None</em>, <em>service_type=None</em>, <em>vpc_endpoint_policy_supported=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointServiceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetVpcEndpointServiceResult</code><span class="sig-paren">(</span><em>acceptance_required=None</em>, <em>availability_zones=None</em>, <em>base_endpoint_dns_names=None</em>, <em>owner=None</em>, <em>private_dns_name=None</em>, <em>service=None</em>, <em>service_name=None</em>, <em>service_type=None</em>, <em>vpc_endpoint_policy_supported=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointServiceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVpcEndpointService.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcEndpointServiceResult.acceptance_required">
@@ -3112,7 +3126,7 @@ unless the <code class="docutils literal notranslate"><span class="pre">vpc-id</
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetVpcPeeringConnectionResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetVpcPeeringConnectionResult</code><span class="sig-paren">(</span><em>accepter=None</em>, <em>cidr_block=None</em>, <em>id=None</em>, <em>owner_id=None</em>, <em>peer_cidr_block=None</em>, <em>peer_owner_id=None</em>, <em>peer_region=None</em>, <em>peer_vpc_id=None</em>, <em>region=None</em>, <em>requester=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetVpcPeeringConnectionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetVpcPeeringConnectionResult</code><span class="sig-paren">(</span><em>accepter=None</em>, <em>cidr_block=None</em>, <em>filters=None</em>, <em>id=None</em>, <em>owner_id=None</em>, <em>peer_cidr_block=None</em>, <em>peer_owner_id=None</em>, <em>peer_region=None</em>, <em>peer_vpc_id=None</em>, <em>region=None</em>, <em>requester=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetVpcPeeringConnectionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVpcPeeringConnection.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcPeeringConnectionResult.accepter">
@@ -3132,7 +3146,7 @@ unless the <code class="docutils literal notranslate"><span class="pre">vpc-id</
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetVpcResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetVpcResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>cidr_block=None</em>, <em>cidr_block_associations=None</em>, <em>default=None</em>, <em>dhcp_options_id=None</em>, <em>enable_dns_hostnames=None</em>, <em>enable_dns_support=None</em>, <em>id=None</em>, <em>instance_tenancy=None</em>, <em>ipv6_association_id=None</em>, <em>ipv6_cidr_block=None</em>, <em>main_route_table_id=None</em>, <em>owner_id=None</em>, <em>state=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetVpcResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetVpcResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>cidr_block=None</em>, <em>cidr_block_associations=None</em>, <em>default=None</em>, <em>dhcp_options_id=None</em>, <em>enable_dns_hostnames=None</em>, <em>enable_dns_support=None</em>, <em>filters=None</em>, <em>id=None</em>, <em>instance_tenancy=None</em>, <em>ipv6_association_id=None</em>, <em>ipv6_cidr_block=None</em>, <em>main_route_table_id=None</em>, <em>owner_id=None</em>, <em>state=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetVpcResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVpc.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcResult.arn">
@@ -3199,7 +3213,7 @@ selected VPC. May be any of <code class="docutils literal notranslate"><span cla
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetVpcsResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetVpcsResult</code><span class="sig-paren">(</span><em>ids=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetVpcsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetVpcsResult</code><span class="sig-paren">(</span><em>filters=None</em>, <em>ids=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetVpcsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVpcs.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcsResult.ids">
@@ -3217,7 +3231,7 @@ selected VPC. May be any of <code class="docutils literal notranslate"><span cla
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.GetVpnGatewayResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetVpnGatewayResult</code><span class="sig-paren">(</span><em>amazon_side_asn=None</em>, <em>attached_vpc_id=None</em>, <em>availability_zone=None</em>, <em>id=None</em>, <em>state=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetVpnGatewayResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">GetVpnGatewayResult</code><span class="sig-paren">(</span><em>amazon_side_asn=None</em>, <em>attached_vpc_id=None</em>, <em>availability_zone=None</em>, <em>filters=None</em>, <em>id=None</em>, <em>state=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.GetVpnGatewayResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVpnGateway.</p>
 </dd></dl>
 
@@ -4007,7 +4021,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.LaunchTemplate">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">LaunchTemplate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>block_device_mappings=None</em>, <em>capacity_reservation_specification=None</em>, <em>credit_specification=None</em>, <em>description=None</em>, <em>disable_api_termination=None</em>, <em>ebs_optimized=None</em>, <em>elastic_gpu_specifications=None</em>, <em>iam_instance_profile=None</em>, <em>image_id=None</em>, <em>instance_initiated_shutdown_behavior=None</em>, <em>instance_market_options=None</em>, <em>instance_type=None</em>, <em>kernel_id=None</em>, <em>key_name=None</em>, <em>license_specifications=None</em>, <em>monitoring=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>network_interfaces=None</em>, <em>placement=None</em>, <em>ram_disk_id=None</em>, <em>security_group_names=None</em>, <em>tag_specifications=None</em>, <em>tags=None</em>, <em>user_data=None</em>, <em>vpc_security_group_ids=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">LaunchTemplate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>block_device_mappings=None</em>, <em>capacity_reservation_specification=None</em>, <em>credit_specification=None</em>, <em>description=None</em>, <em>disable_api_termination=None</em>, <em>ebs_optimized=None</em>, <em>elastic_gpu_specifications=None</em>, <em>elastic_inference_accelerator=None</em>, <em>iam_instance_profile=None</em>, <em>image_id=None</em>, <em>instance_initiated_shutdown_behavior=None</em>, <em>instance_market_options=None</em>, <em>instance_type=None</em>, <em>kernel_id=None</em>, <em>key_name=None</em>, <em>license_specifications=None</em>, <em>monitoring=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>network_interfaces=None</em>, <em>placement=None</em>, <em>ram_disk_id=None</em>, <em>security_group_names=None</em>, <em>tag_specifications=None</em>, <em>tags=None</em>, <em>user_data=None</em>, <em>vpc_security_group_ids=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an EC2 launch template resource. Can be used to create instances or auto scaling groups.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -4028,6 +4042,7 @@ Termination Protection</a></p>
 <li><strong>ebs_optimized</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the launched EC2 instance will be EBS-optimized.</li>
 <li><strong>elastic_gpu_specifications</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The elastic GPU to attach to the instance. See Elastic GPU
 below for more details.</li>
+<li><strong>elastic_inference_accelerator</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.</li>
 <li><strong>iam_instance_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The IAM Instance Profile to launch the instance with. See Instance Profile
 below for more details.</li>
 <li><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AMI from which to launch the instance.</li>
@@ -4113,6 +4128,12 @@ Termination Protection</a></p>
 <code class="descname">elastic_gpu_specifications</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate.elastic_gpu_specifications" title="Permalink to this definition">¶</a></dt>
 <dd><p>The elastic GPU to attach to the instance. See Elastic GPU
 below for more details.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.LaunchTemplate.elastic_inference_accelerator">
+<code class="descname">elastic_inference_accelerator</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate.elastic_inference_accelerator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4477,8 +4498,12 @@ a conflict of rule settings and will overwrite rules.</div></blockquote>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>egress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies an egress rule. Parameters defined below.</li>
-<li><strong>ingress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies an ingress rule. Parameters defined below.</li>
+<li><strong>egress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>Specifies an egress rule. Parameters defined below.
+This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
+</li>
+<li><strong>ingress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>Specifies an ingress rule. Parameters defined below.
+This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
+</li>
 <li><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Subnet IDs to apply the ACL to</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 <li><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated VPC.</li>
@@ -4490,13 +4515,15 @@ a conflict of rule settings and will overwrite rules.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.NetworkAcl.egress">
 <code class="descname">egress</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.NetworkAcl.egress" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies an egress rule. Parameters defined below.</p>
+<dd><p>Specifies an egress rule. Parameters defined below.
+This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.NetworkAcl.ingress">
 <code class="descname">ingress</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.NetworkAcl.ingress" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies an ingress rule. Parameters defined below.</p>
+<dd><p>Specifies an ingress rule. Parameters defined below.
+This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -5385,7 +5412,8 @@ the separate resource.</p>
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>propagating_vgws</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of virtual gateways for propagation.</li>
-<li><strong>routes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of route objects. Their keys are documented below.</li>
+<li><strong>routes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A list of route objects. Their keys are documented below. This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
+</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 <li><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID.</li>
 </ul>
@@ -5408,7 +5436,7 @@ the separate resource.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.RouteTable.routes">
 <code class="descname">routes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.RouteTable.routes" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of route objects. Their keys are documented below.</p>
+<dd><p>A list of route objects. Their keys are documented below. This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -5557,10 +5585,14 @@ a conflict of rule settings and will overwrite rules.</p>
 “Managed by Terraform”. Cannot be “”. <strong>NOTE</strong>: This field maps to the AWS
 <code class="docutils literal notranslate"><span class="pre">GroupDescription</span></code> attribute, for which there is no Update API. If you’d like
 to classify your security groups in a way that can be updated, use <code class="docutils literal notranslate"><span class="pre">tags</span></code>.</li>
-<li><strong>egress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Can be specified multiple times for each
-egress rule. Each egress block supports fields documented below.</li>
-<li><strong>ingress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Can be specified multiple times for each
-ingress rule. Each ingress block supports fields documented below.</li>
+<li><strong>egress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>Can be specified multiple times for each
+egress rule. Each egress block supports fields documented below.
+This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
+</li>
+<li><strong>ingress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>Can be specified multiple times for each
+ingress rule. Each ingress block supports fields documented below.
+This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
+</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the security group. If omitted, Terraform will
 assign a random, unique name</li>
 <li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified
@@ -5598,14 +5630,16 @@ to classify your security groups in a way that can be updated, use <code class="
 <dt id="pulumi_aws.ec2.SecurityGroup.egress">
 <code class="descname">egress</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroup.egress" title="Permalink to this definition">¶</a></dt>
 <dd><p>Can be specified multiple times for each
-egress rule. Each egress block supports fields documented below.</p>
+egress rule. Each egress block supports fields documented below.
+This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SecurityGroup.ingress">
 <code class="descname">ingress</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroup.ingress" title="Permalink to this definition">¶</a></dt>
 <dd><p>Can be specified multiple times for each
-ingress rule. Each ingress block supports fields documented below.</p>
+ingress rule. Each ingress block supports fields documented below.
+This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -6812,11 +6846,11 @@ detach volumes from AWS Instances.</p>
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>device_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The device name to expose to the instance (for
-example, <code class="docutils literal notranslate"><span class="pre">/dev/sdh</span></code> or <code class="docutils literal notranslate"><span class="pre">xvdh</span></code>)</li>
+example, <code class="docutils literal notranslate"><span class="pre">/dev/sdh</span></code> or <code class="docutils literal notranslate"><span class="pre">xvdh</span></code>).  See [Device Naming on Linux Instances][1] and [Device Naming on Windows Instances][2] for more information.</li>
 <li><strong>force_detach</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want to force the
 volume to detach. Useful if previous attempts failed, but use this option only
 as a last resort, as this can result in <strong>data loss</strong>. See
-[Detaching an Amazon EBS Volume from an Instance][1] for more information.</li>
+[Detaching an Amazon EBS Volume from an Instance][3] for more information.</li>
 <li><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the Instance to attach to</li>
 <li><strong>skip_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set this to true if you do not wish
 to detach the volume from the instance to which it is attached at destroy
@@ -6833,7 +6867,7 @@ means attached.</li>
 <dt id="pulumi_aws.ec2.VolumeAttachment.device_name">
 <code class="descname">device_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VolumeAttachment.device_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The device name to expose to the instance (for
-example, <code class="docutils literal notranslate"><span class="pre">/dev/sdh</span></code> or <code class="docutils literal notranslate"><span class="pre">xvdh</span></code>)</p>
+example, <code class="docutils literal notranslate"><span class="pre">/dev/sdh</span></code> or <code class="docutils literal notranslate"><span class="pre">xvdh</span></code>).  See [Device Naming on Linux Instances][1] and [Device Naming on Windows Instances][2] for more information.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -6842,7 +6876,7 @@ example, <code class="docutils literal notranslate"><span class="pre">/dev/sdh</
 <dd><p>Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want to force the
 volume to detach. Useful if previous attempts failed, but use this option only
 as a last resort, as this can result in <strong>data loss</strong>. See
-[Detaching an Amazon EBS Volume from an Instance][1] for more information.</p>
+[Detaching an Amazon EBS Volume from an Instance][3] for more information.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -6910,7 +6944,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.ec2.Vpc">
 <em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">Vpc</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>assign_generated_ipv6_cidr_block=None</em>, <em>cidr_block=None</em>, <em>enable_classiclink=None</em>, <em>enable_classiclink_dns_support=None</em>, <em>enable_dns_hostnames=None</em>, <em>enable_dns_support=None</em>, <em>instance_tenancy=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Vpc" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides an VPC resource.</p>
+<dd><p>Provides a VPC resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -8267,6 +8301,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.ec2.VpnConnection.transit_gateway_attachment_id">
+<code class="descname">transit_gateway_attachment_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpnConnection.transit_gateway_attachment_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>When associated with an EC2 Transit Gateway (<code class="docutils literal notranslate"><span class="pre">transit_gateway_id</span></code> argument), the attachment ID.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.ec2.VpnConnection.transit_gateway_id">
 <code class="descname">transit_gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpnConnection.transit_gateway_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the EC2 Transit Gateway.</p>
@@ -8713,7 +8753,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_instance">
-<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_instance</code><span class="sig-paren">(</span><em>filters=None</em>, <em>get_password_data=None</em>, <em>instance_id=None</em>, <em>instance_tags=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_instance" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_instance</code><span class="sig-paren">(</span><em>filters=None</em>, <em>get_password_data=None</em>, <em>get_user_data=None</em>, <em>instance_id=None</em>, <em>instance_tags=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an Amazon EC2 Instance for use in other
 resources.</p>
 </dd></dl>

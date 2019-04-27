@@ -11,14 +11,14 @@
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>disk</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The amount of disk space in gigabytes to use for the root
+<li><strong>disk</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of disk space in gigabytes to use for the root
 (/) partition. Changing this creates a new flavor.</li>
 <li><strong>extra_specs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key/Value pairs of metadata for the flavor.</li>
 <li><strong>is_public</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the flavor is public. Changing this creates
 a new flavor.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the flavor. Changing this creates a new
 flavor.</li>
-<li><strong>ram</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The amount of RAM to use, in megabytes. Changing this
+<li><strong>ram</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of RAM to use, in megabytes. Changing this
 creates a new flavor.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Compute client.
 Flavors are associated with accounts, but a Compute client is needed to
@@ -26,9 +26,9 @@ create one. If omitted, the <code class="docutils literal notranslate"><span cla
 Changing this creates a new flavor.</li>
 <li><strong>rx_tx_factor</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – RX/TX bandwith factor. The default is 1. Changing
 this creates a new flavor.</li>
-<li><strong>swap</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The amount of disk space in megabytes to use. If
+<li><strong>swap</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of disk space in megabytes to use. If
 unspecified, the default is 0. Changing this creates a new flavor.</li>
-<li><strong>vcpus</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of virtual CPUs to use. Changing this creates
+<li><strong>vcpus</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of virtual CPUs to use. Changing this creates
 a new flavor.</li>
 </ul>
 </td>
@@ -433,7 +433,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.compute.GetAvailabilityZonesResult">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">GetAvailabilityZonesResult</code><span class="sig-paren">(</span><em>names=None</em>, <em>region=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.GetAvailabilityZonesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">GetAvailabilityZonesResult</code><span class="sig-paren">(</span><em>names=None</em>, <em>region=None</em>, <em>state=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.GetAvailabilityZonesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAvailabilityZones.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.compute.GetAvailabilityZonesResult.names">
@@ -451,7 +451,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.compute.GetFlavorResult">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">GetFlavorResult</code><span class="sig-paren">(</span><em>extra_specs=None</em>, <em>is_public=None</em>, <em>region=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.GetFlavorResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">GetFlavorResult</code><span class="sig-paren">(</span><em>disk=None</em>, <em>extra_specs=None</em>, <em>flavor_id=None</em>, <em>is_public=None</em>, <em>min_disk=None</em>, <em>min_ram=None</em>, <em>name=None</em>, <em>ram=None</em>, <em>region=None</em>, <em>rx_tx_factor=None</em>, <em>swap=None</em>, <em>vcpus=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.GetFlavorResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getFlavor.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.compute.GetFlavorResult.extra_specs">
@@ -475,12 +475,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.compute.GetKeypairResult">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">GetKeypairResult</code><span class="sig-paren">(</span><em>fingerprint=None</em>, <em>public_key=None</em>, <em>region=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.GetKeypairResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">GetKeypairResult</code><span class="sig-paren">(</span><em>fingerprint=None</em>, <em>name=None</em>, <em>public_key=None</em>, <em>region=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.GetKeypairResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getKeypair.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.compute.GetKeypairResult.fingerprint">
 <code class="descname">fingerprint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.GetKeypairResult.fingerprint" title="Permalink to this definition">¶</a></dt>
 <dd><p>The fingerprint of the OpenSSH key.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.compute.GetKeypairResult.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.GetKeypairResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -514,8 +520,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>access_ip_v4</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The first detected Fixed IPv4 address <em>or</em> the
-Floating IP.</li>
+<li><strong>access_ip_v4</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The first detected Fixed IPv4 address.</li>
 <li><strong>access_ip_v6</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The first detected Fixed IPv6 address.</li>
 <li><strong>admin_pass</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The administrative password to assign to the server.
 Changing this changes the root password on the existing server.</li>
@@ -583,8 +588,7 @@ Supported options are described below.</li>
 <dl class="attribute">
 <dt id="pulumi_openstack.compute.Instance.access_ip_v4">
 <code class="descname">access_ip_v4</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.Instance.access_ip_v4" title="Permalink to this definition">¶</a></dt>
-<dd><p>The first detected Fixed IPv4 address <em>or</em> the
-Floating IP.</p>
+<dd><p>The first detected Fixed IPv4 address.</p>
 </dd></dl>
 
 <dl class="attribute">

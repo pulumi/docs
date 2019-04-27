@@ -41,7 +41,7 @@ This functionality provides a powerful and convenient way to create your Lambdas
 
 ### JavaScript Function Transformation
 
-At a high-level, creating a Lambda out of a JavaScript function involves several conceptual phases and transformation steps.  The first step is determining all the functions used by the function that is being converted.  For example, if the code was:
+At a high-level, creating a Lambda out of a JavaScript function involves several conceptual phases and transformation steps.  The first step is determining all the functions used by the function that is being converted.  For example, if the code were:
 
 ```ts
 const lambda: aws.lambda.Function = serverless.function.createLambdaFunction("mylambda", 
@@ -88,9 +88,9 @@ function foo(o) {
 }
 ```
 
-In this code, the JavaScript function ends up capturing 'obj1', 'obj2', and 'obj3' from outside the function. If the code `(input: MyInputType) => { foo(obj1); /*...*/ }` was captured 'as-is' inside the Lambda, then it would simply fail to work properly when triggered in the cloud because the values for 'obj1' and the rest would not exist.  In order to support this, `pulumi` will analyze these functions to determine what values are captured, and it will "serialize" them into a form that can then be retrieved and used at 'run time' for use by the actual Lambda.
+In this code, the JavaScript function ends up capturing 'obj1', 'obj2', and 'obj3' from outside the function. If the code `(input: MyInputType) => { foo(obj1); /*...*/ }` were captured 'as-is' inside the Lambda, then it would simply fail to work properly when triggered in the cloud because the values for 'obj1' and the rest would not exist.  In order to support this, `pulumi` will analyze these functions to determine what values are captured, and it will "serialize" them into a form that can then be retrieved and used at 'run time' for use by the actual Lambda.
 
-The actual process of serialization is conceptually straightforward.  Because JavaScript itself allows unimpeded reflection over values, `pulumi` uses this to serialize the entire object graph for the referenced JavaScipt value, including the prototype chain, properties and methods on the object and any values those transitively reference.
+The actual process of serialization is conceptually straightforward.  Because JavaScript itself allows unimpeded reflection over values, `pulumi` uses this to serialize the entire object graph for the referenced JavaScript value, including the prototype chain, properties and methods on the object and any values those transitively reference.
 
 Because of this, almost all JavaScript values can be serialized with very few exceptions.  Importantly, Pulumi Resources themselves are captured in this fashion, allowing 'run time' code to simply references the defined Resources of a Pulumi application and to use them when a Lambda is triggered.  
 
@@ -243,7 +243,7 @@ In other words, the Lambda will first be created with appropriate values overrid
 
 ### Determining the Appropriate node_modules Packages to include with a Lambda
 
-Because a Pulumi application contains both 'deployment time' code and 'run time' code, it is necessary for the program's `package.json` definition to have a `dependencies` section which specifies all necessary packages needed for both execution times.  When `pulumi` and produces an Lambda from a user-provided function, it will transitively include all packages specified in that `dependencies` section in the final uploaded Lambda.
+Because a Pulumi application contains both 'deployment time' code and 'run time' code, it is necessary for the program's `package.json` definition to have a `dependencies` section which specifies all necessary packages needed for both execution times.  When `pulumi` and produces a Lambda from a user-provided function, it will transitively include all packages specified in that `dependencies` section in the final uploaded Lambda.
 
 Notes:
 1. `pulumi` will not include `@pulumi/...` packages with the Lambda.  These packages exist solely to provide 'deployment time' functionality, and do not contain any code that can work properly at 'run time'.  They are automatically stripped from a Lambda both to prevent accidently usage, as well as to help reduce the size of the uploaded Lambda.

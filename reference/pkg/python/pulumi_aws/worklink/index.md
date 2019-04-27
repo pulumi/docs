@@ -129,4 +129,87 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
+<dl class="class">
+<dt id="pulumi_aws.worklink.WebsiteCertificateAuthorityAssociation">
+<em class="property">class </em><code class="descclassname">pulumi_aws.worklink.</code><code class="descname">WebsiteCertificateAuthorityAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>certificate=None</em>, <em>display_name=None</em>, <em>fleet_arn=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.worklink.WebsiteCertificateAuthorityAssociation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a WebsiteCertificateAuthorityAssociation resource with the given unique name, props, and options.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>certificate</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The root certificate of the Certificate Authority.</li>
+<li><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The certificate name to display.</li>
+<li><strong>fleet_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the fleet.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_aws.worklink.WebsiteCertificateAuthorityAssociation.certificate">
+<code class="descname">certificate</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.worklink.WebsiteCertificateAuthorityAssociation.certificate" title="Permalink to this definition">¶</a></dt>
+<dd><p>The root certificate of the Certificate Authority.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.worklink.WebsiteCertificateAuthorityAssociation.display_name">
+<code class="descname">display_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.worklink.WebsiteCertificateAuthorityAssociation.display_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The certificate name to display.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.worklink.WebsiteCertificateAuthorityAssociation.fleet_arn">
+<code class="descname">fleet_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.worklink.WebsiteCertificateAuthorityAssociation.fleet_arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN of the fleet.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.worklink.WebsiteCertificateAuthorityAssociation.website_ca_id">
+<code class="descname">website_ca_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.worklink.WebsiteCertificateAuthorityAssociation.website_ca_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A unique identifier for the Certificate Authority.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.worklink.WebsiteCertificateAuthorityAssociation.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.worklink.WebsiteCertificateAuthorityAssociation.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.worklink.WebsiteCertificateAuthorityAssociation.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.worklink.WebsiteCertificateAuthorityAssociation.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
 </div>

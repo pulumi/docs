@@ -1,8 +1,39 @@
 <div class="section" id="module-pulumi_openstack.blockstorage">
 <span id="blockstorage"></span><h1>blockstorage<a class="headerlink" href="#module-pulumi_openstack.blockstorage" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
+<dt id="pulumi_openstack.blockstorage.GetAvailabilityZonesV3Result">
+<em class="property">class </em><code class="descclassname">pulumi_openstack.blockstorage.</code><code class="descname">GetAvailabilityZonesV3Result</code><span class="sig-paren">(</span><em>names=None</em>, <em>region=None</em>, <em>state=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.GetAvailabilityZonesV3Result" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getAvailabilityZonesV3.</p>
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.GetAvailabilityZonesV3Result.names">
+<code class="descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.GetAvailabilityZonesV3Result.names" title="Permalink to this definition">¶</a></dt>
+<dd><p>The names of the availability zones, ordered alphanumerically, that
+match the queried <code class="docutils literal notranslate"><span class="pre">state</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.GetAvailabilityZonesV3Result.region">
+<code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.GetAvailabilityZonesV3Result.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.GetAvailabilityZonesV3Result.state">
+<code class="descname">state</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.GetAvailabilityZonesV3Result.state" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.GetAvailabilityZonesV3Result.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.GetAvailabilityZonesV3Result.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_openstack.blockstorage.GetSnapshotV2Result">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.blockstorage.</code><code class="descname">GetSnapshotV2Result</code><span class="sig-paren">(</span><em>description=None</em>, <em>metadata=None</em>, <em>name=None</em>, <em>region=None</em>, <em>size=None</em>, <em>status=None</em>, <em>volume_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.GetSnapshotV2Result" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.blockstorage.</code><code class="descname">GetSnapshotV2Result</code><span class="sig-paren">(</span><em>description=None</em>, <em>metadata=None</em>, <em>most_recent=None</em>, <em>name=None</em>, <em>region=None</em>, <em>size=None</em>, <em>status=None</em>, <em>volume_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.GetSnapshotV2Result" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSnapshotV2.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.blockstorage.GetSnapshotV2Result.description">
@@ -56,7 +87,7 @@
 
 <dl class="class">
 <dt id="pulumi_openstack.blockstorage.GetSnapshotV3Result">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.blockstorage.</code><code class="descname">GetSnapshotV3Result</code><span class="sig-paren">(</span><em>description=None</em>, <em>metadata=None</em>, <em>name=None</em>, <em>region=None</em>, <em>size=None</em>, <em>status=None</em>, <em>volume_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.GetSnapshotV3Result" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.blockstorage.</code><code class="descname">GetSnapshotV3Result</code><span class="sig-paren">(</span><em>description=None</em>, <em>metadata=None</em>, <em>most_recent=None</em>, <em>name=None</em>, <em>region=None</em>, <em>size=None</em>, <em>status=None</em>, <em>volume_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.GetSnapshotV3Result" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSnapshotV3.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.blockstorage.GetSnapshotV3Result.description">
@@ -138,7 +169,7 @@ volume’s name.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to create the volume. If
 omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
 creates a new volume.</li>
-<li><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The size of the volume to create (in gigabytes).</li>
+<li><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The size of the volume to create (in gigabytes).</li>
 <li><strong>snapshot_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The snapshot ID from which to create the volume.
 Changing this creates a new volume.</li>
 <li><strong>source_replica</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The volume ID to replicate with.</li>
@@ -692,7 +723,7 @@ volume’s name.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to create the volume. If
 omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
 creates a new volume.</li>
-<li><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The size of the volume to create (in gigabytes). Changing
+<li><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The size of the volume to create (in gigabytes). Changing
 this creates a new volume.</li>
 <li><strong>snapshot_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The snapshot ID from which to create the volume.
 Changing this creates a new volume.</li>
@@ -850,7 +881,7 @@ volume’s name.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to create the volume. If
 omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
 creates a new volume.</li>
-<li><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The size of the volume to create (in gigabytes). Changing
+<li><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The size of the volume to create (in gigabytes). Changing
 this creates a new volume.</li>
 <li><strong>snapshot_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The snapshot ID from which to create the volume.
 Changing this creates a new volume.</li>
@@ -994,6 +1025,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </table>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_openstack.blockstorage.get_availability_zones_v3">
+<code class="descclassname">pulumi_openstack.blockstorage.</code><code class="descname">get_availability_zones_v3</code><span class="sig-paren">(</span><em>region=None</em>, <em>state=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.get_availability_zones_v3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to get a list of Block Storage availability zones from OpenStack</p>
 </dd></dl>
 
 <dl class="function">

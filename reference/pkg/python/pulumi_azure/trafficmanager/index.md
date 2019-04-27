@@ -196,7 +196,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.trafficmanager.GetGeographicalLocationResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.trafficmanager.</code><code class="descname">GetGeographicalLocationResult</code><span class="sig-paren">(</span><em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.trafficmanager.GetGeographicalLocationResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.trafficmanager.</code><code class="descname">GetGeographicalLocationResult</code><span class="sig-paren">(</span><em>name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.trafficmanager.GetGeographicalLocationResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getGeographicalLocation.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.trafficmanager.GetGeographicalLocationResult.id">
@@ -229,8 +229,7 @@ new resource to be created.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
 create the virtual network.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
-<li><strong>traffic_routing_method</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the algorithm used to route
-traffic, possible values are:</li>
+<li><strong>traffic_routing_method</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the algorithm used to route traffic, possible values are:</li>
 </ul>
 </td>
 </tr>
@@ -286,13 +285,14 @@ create the virtual network.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.trafficmanager.Profile.traffic_routing_method">
 <code class="descname">traffic_routing_method</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.trafficmanager.Profile.traffic_routing_method" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the algorithm used to route
-traffic, possible values are:</p>
+<dd><p>Specifies the algorithm used to route traffic, possible values are:</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">Geographic</span></code> - Traffic is routed based on Geographic regions specified in the Endpoint.</li>
+<li><code class="docutils literal notranslate"><span class="pre">MultiValue</span></code>- All healthy Endpoints are returned.  MultiValue routing method works only if all the endpoints of type ‘External’ and are specified as IPv4 or IPv6 addresses.</li>
 <li><code class="docutils literal notranslate"><span class="pre">Performance</span></code> - Traffic is routed via the User’s closest Endpoint</li>
-<li><code class="docutils literal notranslate"><span class="pre">Weighted</span></code> - Traffic is spread across Endpoints proportional to their <code class="docutils literal notranslate"><span class="pre">weight</span></code> value.</li>
 <li><code class="docutils literal notranslate"><span class="pre">Priority</span></code> - Traffic is routed to the Endpoint with the lowest <code class="docutils literal notranslate"><span class="pre">priority</span></code> value.</li>
+<li><code class="docutils literal notranslate"><span class="pre">Subnet</span></code> - Traffic is routed based on a mapping of sets of end-user IP address ranges to a specific Endpoint within a Traffic Manager profile.</li>
+<li><code class="docutils literal notranslate"><span class="pre">Weighted</span></code> - Traffic is spread across Endpoints proportional to their <code class="docutils literal notranslate"><span class="pre">weight</span></code> value.</li>
 </ul>
 </dd></dl>
 

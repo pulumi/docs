@@ -315,7 +315,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.kms.GetKMSCryptoKeyResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.kms.</code><code class="descname">GetKMSCryptoKeyResult</code><span class="sig-paren">(</span><em>rotation_period=None</em>, <em>self_link=None</em>, <em>version_templates=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.GetKMSCryptoKeyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.kms.</code><code class="descname">GetKMSCryptoKeyResult</code><span class="sig-paren">(</span><em>key_ring=None</em>, <em>name=None</em>, <em>rotation_period=None</em>, <em>self_link=None</em>, <em>version_templates=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.GetKMSCryptoKeyResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getKMSCryptoKey.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.kms.GetKMSCryptoKeyResult.rotation_period">
@@ -341,7 +341,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
 <dl class="class">
 <dt id="pulumi_gcp.kms.GetKMSKeyRingResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.kms.</code><code class="descname">GetKMSKeyRingResult</code><span class="sig-paren">(</span><em>self_link=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.GetKMSKeyRingResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.kms.</code><code class="descname">GetKMSKeyRingResult</code><span class="sig-paren">(</span><em>location=None</em>, <em>name=None</em>, <em>project=None</em>, <em>self_link=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.GetKMSKeyRingResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getKMSKeyRing.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.kms.GetKMSKeyRingResult.self_link">
@@ -359,7 +359,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
 <dl class="class">
 <dt id="pulumi_gcp.kms.GetKMSSecretResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.kms.</code><code class="descname">GetKMSSecretResult</code><span class="sig-paren">(</span><em>plaintext=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.GetKMSSecretResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.kms.</code><code class="descname">GetKMSSecretResult</code><span class="sig-paren">(</span><em>ciphertext=None</em>, <em>crypto_key=None</em>, <em>plaintext=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.GetKMSSecretResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getKMSSecret.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.kms.GetKMSSecretResult.plaintext">

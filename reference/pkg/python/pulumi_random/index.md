@@ -79,7 +79,7 @@ exist concurrently.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>byte_length</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of random bytes to produce. The
+<li><strong>byte_length</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of random bytes to produce. The
 minimum value is 1, which produces eight bits of randomness.</li>
 <li><strong>keepers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Arbitrary map of values that, when changed, will
 trigger a new id to be generated. See
@@ -197,8 +197,8 @@ exist concurrently.</p>
 <li><strong>keepers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Arbitrary map of values that, when changed, will
 trigger a new id to be generated. See
 the main provider documentation for more information.</li>
-<li><strong>max</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum inclusive value of the range.</li>
-<li><strong>min</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The minimum inclusive value of the range.</li>
+<li><strong>max</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum inclusive value of the range.</li>
+<li><strong>min</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The minimum inclusive value of the range.</li>
 <li><strong>seed</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A custom seed to always produce the same value.</li>
 </ul>
 </td>
@@ -296,7 +296,7 @@ exist concurrently.</p>
 <li><strong>keepers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Arbitrary map of values that, when changed, will
 trigger a new id to be generated. See
 the main provider documentation for more information.</li>
-<li><strong>length</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The length (in words) of the pet name.</li>
+<li><strong>length</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The length (in words) of the pet name.</li>
 <li><strong>prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string to prefix the name with.</li>
 <li><strong>separator</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The character to separate words in the pet name.</li>
 </ul>
@@ -386,7 +386,7 @@ of strings given as an argument.</p>
 <li><strong>keepers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Arbitrary map of values that, when changed, will
 trigger a new id to be generated. See
 the main provider documentation for more information.</li>
-<li><strong>result_count</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of results to return. Defaults to
+<li><strong>result_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of results to return. Defaults to
 the number of items in the <code class="docutils literal notranslate"><span class="pre">input</span></code> list. If fewer items are requested,
 some elements will be excluded from the result. If more items are requested,
 items will be repeated in the result but not more frequently than the number
@@ -499,16 +499,16 @@ characters and optionally special characters.</p>
 <li><strong>keepers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Arbitrary map of values that, when changed, will
 trigger a new id to be generated. See
 the main provider documentation for more information.</li>
-<li><strong>length</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The length of the string desired</li>
+<li><strong>length</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The length of the string desired</li>
 <li><strong>lower</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (default true) Include lowercase alphabet characters
 in random string.</li>
-<li><strong>min_lower</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – (default 0) Minimum number of lowercase alphabet
+<li><strong>min_lower</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – (default 0) Minimum number of lowercase alphabet
 characters in random string.</li>
-<li><strong>min_numeric</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – (default 0) Minimum number of numeric characters
+<li><strong>min_numeric</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – (default 0) Minimum number of numeric characters
 in random string.</li>
-<li><strong>min_special</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – (default 0) Minimum number of special characters
+<li><strong>min_special</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – (default 0) Minimum number of special characters
 in random string.</li>
-<li><strong>min_upper</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – (default 0) Minimum number of uppercase alphabet
+<li><strong>min_upper</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – (default 0) Minimum number of uppercase alphabet
 characters in random string.</li>
 <li><strong>number</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (default true) Include numeric characters in random
 string.</li>

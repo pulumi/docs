@@ -2,7 +2,7 @@
 <span id="keyvault"></span><h1>keyvault<a class="headerlink" href="#module-pulumi_azure.keyvault" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.keyvault.AccessPolicy">
-<em class="property">class </em><code class="descclassname">pulumi_azure.keyvault.</code><code class="descname">AccessPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>application_id=None</em>, <em>certificate_permissions=None</em>, <em>key_permissions=None</em>, <em>key_vault_id=None</em>, <em>object_id=None</em>, <em>resource_group_name=None</em>, <em>secret_permissions=None</em>, <em>tenant_id=None</em>, <em>vault_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.AccessPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.keyvault.</code><code class="descname">AccessPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>application_id=None</em>, <em>certificate_permissions=None</em>, <em>key_permissions=None</em>, <em>key_vault_id=None</em>, <em>object_id=None</em>, <em>resource_group_name=None</em>, <em>secret_permissions=None</em>, <em>storage_permissions=None</em>, <em>tenant_id=None</em>, <em>vault_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.AccessPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Key Vault Access Policy.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> It’s possible to define Key Vault Access Policies both within the <code class="docutils literal notranslate"><span class="pre">azurerm_key_vault</span></code> resource via the <code class="docutils literal notranslate"><span class="pre">access_policy</span></code> block and by using the <code class="docutils literal notranslate"><span class="pre">azurerm_key_vault_access_policy</span></code> resource. However it’s not possible to use both methods to manage Access Policies within a KeyVault, since there’ll be conflicts.</p>
@@ -30,6 +30,7 @@ to be created.</li>
 create the namespace. Changing this forces a new resource to be created.</li>
 <li><strong>secret_permissions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of secret permissions, must be one or more
 from the following: <code class="docutils literal notranslate"><span class="pre">backup</span></code>, <code class="docutils literal notranslate"><span class="pre">delete</span></code>, <code class="docutils literal notranslate"><span class="pre">get</span></code>, <code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">purge</span></code>, <code class="docutils literal notranslate"><span class="pre">recover</span></code>, <code class="docutils literal notranslate"><span class="pre">restore</span></code> and <code class="docutils literal notranslate"><span class="pre">set</span></code>.</li>
+<li><strong>storage_permissions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of storage permissions, must be one or more from the following: <code class="docutils literal notranslate"><span class="pre">backup</span></code>, <code class="docutils literal notranslate"><span class="pre">delete</span></code>, <code class="docutils literal notranslate"><span class="pre">deletesas</span></code>, <code class="docutils literal notranslate"><span class="pre">get</span></code>, <code class="docutils literal notranslate"><span class="pre">getsas</span></code>, <code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">listsas</span></code>, <code class="docutils literal notranslate"><span class="pre">purge</span></code>, <code class="docutils literal notranslate"><span class="pre">recover</span></code>, <code class="docutils literal notranslate"><span class="pre">regeneratekey</span></code>, <code class="docutils literal notranslate"><span class="pre">restore</span></code>, <code class="docutils literal notranslate"><span class="pre">set</span></code>, <code class="docutils literal notranslate"><span class="pre">setsas</span></code> and <code class="docutils literal notranslate"><span class="pre">update</span></code>.</li>
 <li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Azure Active Directory tenant ID that should be used
 for authenticating requests to the key vault. Changing this forces a new resource
 to be created.</li>
@@ -83,6 +84,12 @@ create the namespace. Changing this forces a new resource to be created.</p>
 <code class="descname">secret_permissions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.keyvault.AccessPolicy.secret_permissions" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of secret permissions, must be one or more
 from the following: <code class="docutils literal notranslate"><span class="pre">backup</span></code>, <code class="docutils literal notranslate"><span class="pre">delete</span></code>, <code class="docutils literal notranslate"><span class="pre">get</span></code>, <code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">purge</span></code>, <code class="docutils literal notranslate"><span class="pre">recover</span></code>, <code class="docutils literal notranslate"><span class="pre">restore</span></code> and <code class="docutils literal notranslate"><span class="pre">set</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.keyvault.AccessPolicy.storage_permissions">
+<code class="descname">storage_permissions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.keyvault.AccessPolicy.storage_permissions" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of storage permissions, must be one or more from the following: <code class="docutils literal notranslate"><span class="pre">backup</span></code>, <code class="docutils literal notranslate"><span class="pre">delete</span></code>, <code class="docutils literal notranslate"><span class="pre">deletesas</span></code>, <code class="docutils literal notranslate"><span class="pre">get</span></code>, <code class="docutils literal notranslate"><span class="pre">getsas</span></code>, <code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">listsas</span></code>, <code class="docutils literal notranslate"><span class="pre">purge</span></code>, <code class="docutils literal notranslate"><span class="pre">recover</span></code>, <code class="docutils literal notranslate"><span class="pre">regeneratekey</span></code>, <code class="docutils literal notranslate"><span class="pre">restore</span></code>, <code class="docutils literal notranslate"><span class="pre">set</span></code>, <code class="docutils literal notranslate"><span class="pre">setsas</span></code> and <code class="docutils literal notranslate"><span class="pre">update</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -257,7 +264,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.keyvault.GetAccessPolicyResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.keyvault.</code><code class="descname">GetAccessPolicyResult</code><span class="sig-paren">(</span><em>certificate_permissions=None</em>, <em>key_permissions=None</em>, <em>secret_permissions=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.GetAccessPolicyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.keyvault.</code><code class="descname">GetAccessPolicyResult</code><span class="sig-paren">(</span><em>certificate_permissions=None</em>, <em>key_permissions=None</em>, <em>name=None</em>, <em>secret_permissions=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.GetAccessPolicyResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAccessPolicy.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.keyvault.GetAccessPolicyResult.certificate_permissions">
@@ -287,7 +294,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.keyvault.GetKeyResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.keyvault.</code><code class="descname">GetKeyResult</code><span class="sig-paren">(</span><em>e=None</em>, <em>key_opts=None</em>, <em>key_size=None</em>, <em>key_type=None</em>, <em>key_vault_id=None</em>, <em>n=None</em>, <em>tags=None</em>, <em>vault_uri=None</em>, <em>version=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.GetKeyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.keyvault.</code><code class="descname">GetKeyResult</code><span class="sig-paren">(</span><em>e=None</em>, <em>key_opts=None</em>, <em>key_size=None</em>, <em>key_type=None</em>, <em>key_vault_id=None</em>, <em>n=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>vault_uri=None</em>, <em>version=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.GetKeyResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getKey.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.keyvault.GetKeyResult.e">
@@ -341,7 +348,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.keyvault.GetKeyVaultResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.keyvault.</code><code class="descname">GetKeyVaultResult</code><span class="sig-paren">(</span><em>access_policies=None</em>, <em>enabled_for_deployment=None</em>, <em>enabled_for_disk_encryption=None</em>, <em>enabled_for_template_deployment=None</em>, <em>location=None</em>, <em>network_acls=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>vault_uri=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.GetKeyVaultResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.keyvault.</code><code class="descname">GetKeyVaultResult</code><span class="sig-paren">(</span><em>access_policies=None</em>, <em>enabled_for_deployment=None</em>, <em>enabled_for_disk_encryption=None</em>, <em>enabled_for_template_deployment=None</em>, <em>location=None</em>, <em>name=None</em>, <em>network_acls=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>vault_uri=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.GetKeyVaultResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getKeyVault.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.keyvault.GetKeyVaultResult.access_policies">
@@ -371,6 +378,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.keyvault.GetKeyVaultResult.location">
 <code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.keyvault.GetKeyVaultResult.location" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Azure Region in which the Key Vault exists.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.keyvault.GetKeyVaultResult.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.keyvault.GetKeyVaultResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the SKU used for this Key Vault.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -407,7 +420,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.keyvault.GetSecretResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.keyvault.</code><code class="descname">GetSecretResult</code><span class="sig-paren">(</span><em>content_type=None</em>, <em>key_vault_id=None</em>, <em>tags=None</em>, <em>value=None</em>, <em>vault_uri=None</em>, <em>version=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.GetSecretResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.keyvault.</code><code class="descname">GetSecretResult</code><span class="sig-paren">(</span><em>content_type=None</em>, <em>key_vault_id=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>value=None</em>, <em>vault_uri=None</em>, <em>version=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.GetSecretResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSecret.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.keyvault.GetSecretResult.content_type">

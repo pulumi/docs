@@ -2,7 +2,7 @@
 <span id="pulumi-packet"></span><h1>Pulumi Packet<a class="headerlink" href="#module-pulumi_packet" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_packet.BgpSession">
-<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">BgpSession</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address_family=None</em>, <em>device_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.BgpSession" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">BgpSession</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address_family=None</em>, <em>default_route=None</em>, <em>device_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.BgpSession" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage BGP sessions in Packet Host. Refer to <a class="reference external" href="https://support.packet.com/kb/articles/bgp">Packet BGP documentation</a> for more details.</p>
 <p>You need to have BGP config enabled in your project.</p>
 <p>BGP session must be linked to a device running <a class="reference external" href="https://bird.network.cz">BIRD</a> or other BGP routing daemon which will control route advertisements via the session to Packet’s upstream routers.</p>
@@ -14,6 +14,7 @@
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>address_family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">ipv4</span></code> or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code></li>
+<li><strong>default_route</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag to set the default route policy. False by default.</li>
 <li><strong>device_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of device</li>
 </ul>
 </td>
@@ -24,6 +25,12 @@
 <dt id="pulumi_packet.BgpSession.address_family">
 <code class="descname">address_family</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.BgpSession.address_family" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ipv4</span></code> or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.BgpSession.default_route">
+<code class="descname">default_route</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.BgpSession.default_route" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean flag to set the default route policy. False by default.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -73,8 +80,132 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_packet.Connect">
+<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">Connect</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>facility=None</em>, <em>name=None</em>, <em>port_speed=None</em>, <em>project_id=None</em>, <em>provider_id=None</em>, <em>provider_payload=None</em>, <em>vxlan=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a resource for <a class="reference external" href="https://www.packet.com/cloud/all-features/packet-connect/">Packet Connect</a>, a link between Packet VLANs and VLANs in other cloud providers.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>facility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Facility where to create the VLAN</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name for the Connect resource</li>
+<li><strong>port_speed</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Port speed in Mbps</li>
+<li><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of parent project</li>
+<li><strong>provider_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of Connect Provider. Provider IDs are</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>provider_payload</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Authorization key for the Connect provider</li>
+<li><strong>vxlan</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – VXLAN Network identifier of the linked Packet VLAN</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_packet.Connect.facility">
+<code class="descname">facility</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Connect.facility" title="Permalink to this definition">¶</a></dt>
+<dd><p>Facility where to create the VLAN</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.Connect.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Connect.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name for the Connect resource</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.Connect.port_speed">
+<code class="descname">port_speed</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Connect.port_speed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Port speed in Mbps</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.Connect.project_id">
+<code class="descname">project_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Connect.project_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>ID of parent project</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.Connect.provider_id">
+<code class="descname">provider_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Connect.provider_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>ID of Connect Provider. Provider IDs are</p>
+<ul class="simple">
+<li>Azure ExpressRoute - “ed5de8e0-77a9-4d3b-9de0-65281d3aa831”</li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.Connect.provider_payload">
+<code class="descname">provider_payload</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Connect.provider_payload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Authorization key for the Connect provider</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.Connect.status">
+<code class="descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Connect.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Status of the Connect resource, one of PROVISIONING, PROVISIONED, DEPROVISIONING, DEPROVISIONED</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.Connect.vxlan">
+<code class="descname">vxlan</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Connect.vxlan" title="Permalink to this definition">¶</a></dt>
+<dd><p>VXLAN Network identifier of the linked Packet VLAN</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_packet.Connect.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Connect.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_packet.Connect.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Connect.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_packet.Device">
-<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">Device</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>always_pxe=None</em>, <em>billing_cycle=None</em>, <em>description=None</em>, <em>facilities=None</em>, <em>facility=None</em>, <em>hardware_reservation_id=None</em>, <em>hostname=None</em>, <em>ipxe_script_url=None</em>, <em>operating_system=None</em>, <em>plan=None</em>, <em>project_id=None</em>, <em>project_ssh_key_ids=None</em>, <em>public_ipv4_subnet_size=None</em>, <em>storage=None</em>, <em>tags=None</em>, <em>user_data=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Device" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">Device</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>always_pxe=None</em>, <em>billing_cycle=None</em>, <em>description=None</em>, <em>facilities=None</em>, <em>facility=None</em>, <em>hardware_reservation_id=None</em>, <em>hostname=None</em>, <em>ipxe_script_url=None</em>, <em>network_type=None</em>, <em>operating_system=None</em>, <em>plan=None</em>, <em>project_id=None</em>, <em>project_ssh_key_ids=None</em>, <em>public_ipv4_subnet_size=None</em>, <em>storage=None</em>, <em>tags=None</em>, <em>user_data=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Device" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Packet device resource. This can be used to create,
 modify, and delete devices.</p>
 <blockquote>
@@ -95,22 +226,23 @@ modify, and delete devices.</p>
 continue to boot via iPXE on reboots.</li>
 <li><strong>billing_cycle</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – monthly or hourly</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description string for the device</li>
-<li><strong>facilities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of facility codes with deployment preferences. Packet API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or <code class="docutils literal notranslate"><span class="pre">any</span></code> (a wildcard). To find the facility code, visit <a class="reference external" href="https://www.packet.net/developers/api/#facilities">Facilities API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</li>
+<li><strong>facilities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of facility codes with deployment preferences. Packet API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or <code class="docutils literal notranslate"><span class="pre">any</span></code> (a wildcard). To find the facility code, visit <a class="reference external" href="https://www.packet.com/developers/api/#facilities">Facilities API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</li>
 <li><strong>facility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The facility in which to create the device.</li>
 <li><strong>hardware_reservation_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of hardware reservation where you want this device deployed, or <code class="docutils literal notranslate"><span class="pre">next-available</span></code> if you want to pick your next available reservation automatically.</li>
 <li><strong>hostname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The device name</li>
 <li><strong>ipxe_script_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL pointing to a hosted iPXE script. More
 information is in the
-<a class="reference external" href="https://help.packet.net/article/26-custom-ipxe">Custom iPXE</a>
+<a class="reference external" href="https://support.packet.com/kb/articles/custom-ipxe">Custom iPXE</a>
 doc.</li>
-<li><strong>operating_system</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The operating system slug. To find the slug, or visit <a class="reference external" href="https://www.packet.net/developers/api/#operatingsystems">Operating Systems API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</li>
-<li><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The device plan slug. To find the plan slug, visit <a class="reference external" href="https://www.packet.net/developers/api/#plans">Device plans API docs</a>, set your auth token in the top of the page and see JSON from the API response.</li>
+<li><strong>network_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Network type of device, used for <a class="reference external" href="https://support.packet.com/kb/articles/layer-2-overview">Layer 2 networking</a>. Allowed values are <code class="docutils literal notranslate"><span class="pre">layer3</span></code>, <code class="docutils literal notranslate"><span class="pre">hybrid</span></code>, <code class="docutils literal notranslate"><span class="pre">layer2-individual</span></code> and <code class="docutils literal notranslate"><span class="pre">layer2-bonded</span></code>. If you keep it empty, Terraform will not handle the network type of the device.</li>
+<li><strong>operating_system</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The operating system slug. To find the slug, or visit <a class="reference external" href="https://www.packet.com/developers/api/#operatingsystems">Operating Systems API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</li>
+<li><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The device plan slug. To find the plan slug, visit <a class="reference external" href="https://www.packet.com/developers/api/#plans">Device plans API docs</a>, set your auth token in the top of the page and see JSON from the API response.</li>
 <li><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the project in which to create the device</li>
 <li><strong>project_ssh_key_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Array of IDs of the project SSH keys which should be added to the device. If you omit this, SSH keys of all the members of the parent project will be added to the device. If you specify this array, only the listed project SSH keys will be added. Project SSH keys can be created with the [packet_project_ssh_key][packet_project_ssh_key.html] resource.</li>
-<li><strong>public_ipv4_subnet_size</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Size of allocated subnet, more
+<li><strong>public_ipv4_subnet_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Size of allocated subnet, more
 information is in the
-<a class="reference external" href="https://help.packet.net/article/55-custom-subnet-size">Custom Subnet Size</a> doc.</li>
-<li><strong>storage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – JSON for custom partitioning. Only usable on reserved hardware. More information in in the <a class="reference external" href="https://help.packet.net/article/61-custom-partitioning-raid">Custom Partitioning and RAID</a> doc.</li>
+<a class="reference external" href="https://support.packet.com/kb/articles/custom-subnet-size">Custom Subnet Size</a> doc.</li>
+<li><strong>storage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – JSON for custom partitioning. Only usable on reserved hardware. More information in in the <a class="reference external" href="https://support.packet.com/kb/articles/custom-partitioning-raid">Custom Partitioning and RAID</a> doc.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Tags attached to the device</li>
 <li><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string of the desired User Data for the device.</li>
 </ul>
@@ -164,7 +296,7 @@ continue to boot via iPXE on reboots.</p>
 <dl class="attribute">
 <dt id="pulumi_packet.Device.facilities">
 <code class="descname">facilities</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Device.facilities" title="Permalink to this definition">¶</a></dt>
-<dd><p>List of facility codes with deployment preferences. Packet API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or <code class="docutils literal notranslate"><span class="pre">any</span></code> (a wildcard). To find the facility code, visit <a class="reference external" href="https://www.packet.net/developers/api/#facilities">Facilities API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</p>
+<dd><p>List of facility codes with deployment preferences. Packet API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or <code class="docutils literal notranslate"><span class="pre">any</span></code> (a wildcard). To find the facility code, visit <a class="reference external" href="https://www.packet.com/developers/api/#facilities">Facilities API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -190,7 +322,7 @@ continue to boot via iPXE on reboots.</p>
 <code class="descname">ipxe_script_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Device.ipxe_script_url" title="Permalink to this definition">¶</a></dt>
 <dd><p>URL pointing to a hosted iPXE script. More
 information is in the
-<a class="reference external" href="https://help.packet.net/article/26-custom-ipxe">Custom iPXE</a>
+<a class="reference external" href="https://support.packet.com/kb/articles/custom-ipxe">Custom iPXE</a>
 doc.</p>
 </dd></dl>
 
@@ -214,15 +346,21 @@ The fields of the network attributes are:</li>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_packet.Device.network_type">
+<code class="descname">network_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Device.network_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Network type of device, used for <a class="reference external" href="https://support.packet.com/kb/articles/layer-2-overview">Layer 2 networking</a>. Allowed values are <code class="docutils literal notranslate"><span class="pre">layer3</span></code>, <code class="docutils literal notranslate"><span class="pre">hybrid</span></code>, <code class="docutils literal notranslate"><span class="pre">layer2-individual</span></code> and <code class="docutils literal notranslate"><span class="pre">layer2-bonded</span></code>. If you keep it empty, Terraform will not handle the network type of the device.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_packet.Device.operating_system">
 <code class="descname">operating_system</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Device.operating_system" title="Permalink to this definition">¶</a></dt>
-<dd><p>The operating system slug. To find the slug, or visit <a class="reference external" href="https://www.packet.net/developers/api/#operatingsystems">Operating Systems API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</p>
+<dd><p>The operating system slug. To find the slug, or visit <a class="reference external" href="https://www.packet.com/developers/api/#operatingsystems">Operating Systems API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_packet.Device.plan">
 <code class="descname">plan</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Device.plan" title="Permalink to this definition">¶</a></dt>
-<dd><p>The device plan slug. To find the plan slug, visit <a class="reference external" href="https://www.packet.net/developers/api/#plans">Device plans API docs</a>, set your auth token in the top of the page and see JSON from the API response.</p>
+<dd><p>The device plan slug. To find the plan slug, visit <a class="reference external" href="https://www.packet.com/developers/api/#plans">Device plans API docs</a>, set your auth token in the top of the page and see JSON from the API response.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -242,7 +380,7 @@ The fields of the network attributes are:</li>
 <code class="descname">public_ipv4_subnet_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Device.public_ipv4_subnet_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>Size of allocated subnet, more
 information is in the
-<a class="reference external" href="https://help.packet.net/article/55-custom-subnet-size">Custom Subnet Size</a> doc.</p>
+<a class="reference external" href="https://support.packet.com/kb/articles/custom-subnet-size">Custom Subnet Size</a> doc.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -266,7 +404,7 @@ information is in the
 <dl class="attribute">
 <dt id="pulumi_packet.Device.storage">
 <code class="descname">storage</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Device.storage" title="Permalink to this definition">¶</a></dt>
-<dd><p>JSON for custom partitioning. Only usable on reserved hardware. More information in in the <a class="reference external" href="https://help.packet.net/article/61-custom-partitioning-raid">Custom Partitioning and RAID</a> doc.</p>
+<dd><p>JSON for custom partitioning. Only usable on reserved hardware. More information in in the <a class="reference external" href="https://support.packet.com/kb/articles/custom-partitioning-raid">Custom Partitioning and RAID</a> doc.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -329,7 +467,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_packet.GetOperatingSystemResult">
-<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">GetOperatingSystemResult</code><span class="sig-paren">(</span><em>slug=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.GetOperatingSystemResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">GetOperatingSystemResult</code><span class="sig-paren">(</span><em>distro=None</em>, <em>name=None</em>, <em>provisionable_on=None</em>, <em>slug=None</em>, <em>version=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.GetOperatingSystemResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getOperatingSystem.</p>
 <dl class="attribute">
 <dt id="pulumi_packet.GetOperatingSystemResult.slug">
@@ -347,7 +485,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_packet.GetPrecreatedIpBlockResult">
-<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">GetPrecreatedIpBlockResult</code><span class="sig-paren">(</span><em>address=None</em>, <em>cidr=None</em>, <em>cidr_notation=None</em>, <em>gateway=None</em>, <em>manageable=None</em>, <em>management=None</em>, <em>netmask=None</em>, <em>network=None</em>, <em>quantity=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.GetPrecreatedIpBlockResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">GetPrecreatedIpBlockResult</code><span class="sig-paren">(</span><em>address=None</em>, <em>address_family=None</em>, <em>cidr=None</em>, <em>cidr_notation=None</em>, <em>facility=None</em>, <em>gateway=None</em>, <em>global_=None</em>, <em>manageable=None</em>, <em>management=None</em>, <em>netmask=None</em>, <em>network=None</em>, <em>project_id=None</em>, <em>public=None</em>, <em>quantity=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.GetPrecreatedIpBlockResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getPrecreatedIpBlock.</p>
 <dl class="attribute">
 <dt id="pulumi_packet.GetPrecreatedIpBlockResult.cidr_notation">
@@ -365,7 +503,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_packet.GetSpotMarketPriceResult">
-<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">GetSpotMarketPriceResult</code><span class="sig-paren">(</span><em>price=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.GetSpotMarketPriceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">GetSpotMarketPriceResult</code><span class="sig-paren">(</span><em>facility=None</em>, <em>plan=None</em>, <em>price=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.GetSpotMarketPriceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSpotMarketPrice.</p>
 <dl class="attribute">
 <dt id="pulumi_packet.GetSpotMarketPriceResult.price">
@@ -389,7 +527,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 one of your reserved blocks in the same project and facility as the target device.</p>
 <p>For example, you have reserved IPv4 address block 147.229.10.152/30, you can choose to assign either the whole
 block as one subnet to a device; or 2 subnets with CIDRs 147.229.10.152/31’ and 147.229.10.154/31; or 4 subnets
-with mask prefix length 32. More about the elastic IP subnets is <a class="reference external" href="https://help.packet.net/article/54-elastic-ips">here</a>.</p>
+with mask prefix length 32. More about the elastic IP subnets is <a class="reference external" href="https://support.packet.com/kb/articles/elastic-ips">here</a>.</p>
 <p>Device and reserved block must be in the same facility.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -587,8 +725,104 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_packet.PortVlanAttachment">
+<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">PortVlanAttachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>device_id=None</em>, <em>force_bond=None</em>, <em>port_name=None</em>, <em>vlan_vnid=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.PortVlanAttachment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a resource to attach device ports to VLANs.</p>
+<p>Device and VLAN must be in the same facility.</p>
+<p>If you need this resource to add the port back to bond on removal, set <code class="docutils literal notranslate"><span class="pre">force_bond</span> <span class="pre">=</span> <span class="pre">true</span></code>.</p>
+<p>To learn more about Layer 2 networking in Packet, refer to</p>
+<ul class="simple">
+<li><a class="reference external" href="https://support.packet.com/kb/articles/layer-2-configurations">https://support.packet.com/kb/articles/layer-2-configurations</a></li>
+<li><a class="reference external" href="https://support.packet.com/kb/articles/layer-2-overview">https://support.packet.com/kb/articles/layer-2-overview</a></li>
+</ul>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">id</span></code> - UUID of device port used in the assignment</li>
+<li><code class="docutils literal notranslate"><span class="pre">vlan_id</span></code> - UUID of VLAN API resource</li>
+<li><code class="docutils literal notranslate"><span class="pre">port_id</span></code> - UUID of device port</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>device_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of device to be assigned to the VLAN</li>
+<li><strong>force_bond</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Add port back to the bond when this resource is removed. Default is false.</li>
+<li><strong>port_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of network port to be assigned to the VLAN</li>
+<li><strong>vlan_vnid</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – VXLAN Network Identifier, integer</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_packet.PortVlanAttachment.device_id">
+<code class="descname">device_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.PortVlanAttachment.device_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>ID of device to be assigned to the VLAN</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.PortVlanAttachment.force_bond">
+<code class="descname">force_bond</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.PortVlanAttachment.force_bond" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add port back to the bond when this resource is removed. Default is false.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.PortVlanAttachment.port_name">
+<code class="descname">port_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.PortVlanAttachment.port_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of network port to be assigned to the VLAN</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.PortVlanAttachment.vlan_vnid">
+<code class="descname">vlan_vnid</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.PortVlanAttachment.vlan_vnid" title="Permalink to this definition">¶</a></dt>
+<dd><p>VXLAN Network Identifier, integer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_packet.PortVlanAttachment.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.PortVlanAttachment.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_packet.PortVlanAttachment.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.PortVlanAttachment.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_packet.Project">
-<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">Project</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bgp_config=None</em>, <em>name=None</em>, <em>organization_id=None</em>, <em>payment_method_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Project" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">Project</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>backend_transfer=None</em>, <em>bgp_config=None</em>, <em>name=None</em>, <em>organization_id=None</em>, <em>payment_method_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Project" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Packet project resource to allow you manage devices
 in your projects.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -598,8 +832,9 @@ in your projects.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>backend_transfer</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable or disable <a class="reference external" href="https://support.packet.com/kb/articles/backend-transfer">Backend Transfer</a>, default is false</li>
 <li><strong>bgp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Optional BGP settings. Refer to <a class="reference external" href="https://support.packet.com/kb/articles/bgp">Packet guide for BGP</a>.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the project on Packet.net</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the project</li>
 <li><strong>organization_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The UUID of organization under which you want to create the project. If you leave it out, the project will be create under your the default organization of your account.</li>
 <li><strong>payment_method_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The UUID of payment method for this project. The payment method and the project need to belong to the same organization (passed with <code class="docutils literal notranslate"><span class="pre">organization_id</span></code>, or default).</li>
 </ul>
@@ -607,6 +842,12 @@ in your projects.</p>
 </tr>
 </tbody>
 </table>
+<dl class="attribute">
+<dt id="pulumi_packet.Project.backend_transfer">
+<code class="descname">backend_transfer</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Project.backend_transfer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable or disable <a class="reference external" href="https://support.packet.com/kb/articles/backend-transfer">Backend Transfer</a>, default is false</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_packet.Project.bgp_config">
 <code class="descname">bgp_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Project.bgp_config" title="Permalink to this definition">¶</a></dt>
@@ -622,7 +863,7 @@ in your projects.</p>
 <dl class="attribute">
 <dt id="pulumi_packet.Project.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Project.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the project on Packet.net</p>
+<dd><p>The name of the project</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -858,7 +1099,7 @@ The IPv6 and private IPv4 blocks can’t be created, only imported. With this re
 <li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>facility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4</li>
 <li><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The packet project ID where to allocate the address block</li>
-<li><strong>quantity</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of allocated /32 addresses, a power of 2</li>
+<li><strong>quantity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of allocated /32 addresses, a power of 2</li>
 <li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Either “global_ipv4” or “public_ipv4”, defaults to “public_ipv4” for backward compatibility</li>
 </ul>
 </td>
@@ -975,7 +1216,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_packet.SpotMarketRequest">
 <em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">SpotMarketRequest</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>devices_max=None</em>, <em>devices_min=None</em>, <em>facilities=None</em>, <em>instance_parameters=None</em>, <em>max_bid_price=None</em>, <em>project_id=None</em>, <em>wait_for_devices=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.SpotMarketRequest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Packet Spot Market Request resource to allow you to
-manage spot market requests on your account. <a class="reference external" href="https://help.packet.net/en-us/article/20-spot-market">https://help.packet.net/en-us/article/20-spot-market</a></p>
+manage spot market requests on your account. <a class="reference external" href="https://support.packet.com/kb/articles/spot-market">https://support.packet.com/kb/articles/spot-market</a></p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -983,8 +1224,8 @@ manage spot market requests on your account. <a class="reference external" href=
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>devices_max</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Maximum number devices to be created</li>
-<li><strong>devices_min</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Miniumum number devices to be created</li>
+<li><strong>devices_max</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum number devices to be created</li>
+<li><strong>devices_min</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Miniumum number devices to be created</li>
 <li><strong>facilities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Facility IDs where devices should be created</li>
 <li><strong>instance_parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Device parameters. See device resource for details</li>
 <li><strong>max_bid_price</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum price user is willing to pay per hour per device</li>
@@ -1171,7 +1412,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_packet.Vlan">
 <em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">Vlan</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>facility=None</em>, <em>project_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Vlan" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a resource to allow users to manage Virtual Networks in their projects. VLANs are used in <a class="reference external" href="https://packet.kayako.com/article/57-layer-2-overview">Layer 2 networking setup</a>.</p>
+<dd><p>Provides a resource to allow users to manage Virtual Networks in their projects.</p>
+<p>To learn more about Layer 2 networking in Packet, refer to</p>
+<ul class="simple">
+<li><a class="reference external" href="https://support.packet.com/kb/articles/layer-2-configurations">https://support.packet.com/kb/articles/layer-2-configurations</a></li>
+<li><a class="reference external" href="https://support.packet.com/kb/articles/layer-2-overview">https://support.packet.com/kb/articles/layer-2-overview</a></li>
+</ul>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1272,7 +1518,7 @@ scripts.</p>
 <li><strong>locked</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Lock or unlock the volume</li>
 <li><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service plan slug of the volume</li>
 <li><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The packet project ID to deploy the volume in</li>
-<li><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The size in GB to make the volume</li>
+<li><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The size in GB to make the volume</li>
 <li><strong>snapshot_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Optional list of snapshot policies</li>
 </ul>
 </td>

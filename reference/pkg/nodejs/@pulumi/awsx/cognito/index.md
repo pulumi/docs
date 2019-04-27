@@ -16,18 +16,30 @@ title: Module cognito
 <div class="pdoc-module-contents" markdown="1">
 * <a href="#metrics">module metrics</a>
 
+<<<<<<< HEAD
 <a href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/cognito/metrics.ts">cognito/metrics.ts</a> 
+=======
+<a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cognito/metrics.ts">cognito/metrics.ts</a> 
+>>>>>>> origin/master
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="metrics">
+<<<<<<< HEAD
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/cognito/metrics.ts#L20">module <b>metrics</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <h3 class="pdoc-member-header" id="accountTakeOverRisk">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/cognito/metrics.ts#L66">function <b>accountTakeOverRisk</b></a>
+=======
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cognito/metrics.ts#L20">module <b>metrics</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="accountTakeOverRisk">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cognito/metrics.ts#L66">function <b>accountTakeOverRisk</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -38,7 +50,11 @@ Requests where Amazon Cognito detected account take-over risk.
 
 </div>
 <h3 class="pdoc-member-header" id="compromisedCredentialsRisk">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/cognito/metrics.ts#L59">function <b>compromisedCredentialsRisk</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cognito/metrics.ts#L59">function <b>compromisedCredentialsRisk</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -49,7 +65,11 @@ Requests where Amazon Cognito detected compromised credentials.
 
 </div>
 <h3 class="pdoc-member-header" id="metric">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/cognito/metrics.ts#L43">function <b>metric</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cognito/metrics.ts#L43">function <b>metric</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -69,12 +89,17 @@ level.
 
 </div>
 <h3 class="pdoc-member-header" id="noRisk">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/cognito/metrics.ts#L87">function <b>noRisk</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cognito/metrics.ts#L87">function <b>noRisk</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>noRisk(change?: <a href='#CognitoMetricChange'>CognitoMetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
+<<<<<<< HEAD
 
 Requests where Amazon Cognito did not identify any risk.
 
@@ -87,11 +112,29 @@ Requests where Amazon Cognito did not identify any risk.
 <pre class="highlight"><span class='kd'></span>overrideBlock(change?: <a href='#CognitoMetricChange'>CognitoMetricChange</a>): <a href='#Metric'>Metric</a></pre>
 
 
+=======
+
+Requests where Amazon Cognito did not identify any risk.
+
+</div>
+<h3 class="pdoc-member-header" id="overrideBlock">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cognito/metrics.ts#L73">function <b>overrideBlock</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>overrideBlock(change?: <a href='#CognitoMetricChange'>CognitoMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+
+
+>>>>>>> origin/master
 Requests that Amazon Cognito blocked because of the configuration provided by the developer.
 
 </div>
 <h3 class="pdoc-member-header" id="risk">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/cognito/metrics.ts#L80">function <b>risk</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cognito/metrics.ts#L80">function <b>risk</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -102,12 +145,20 @@ Requests that Amazon Cognito marked as risky.
 
 </div>
 <h3 class="pdoc-member-header" id="CognitoMetricChange">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/cognito/metrics.ts#L24">interface <b>CognitoMetricChange</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cognito/metrics.ts#L24">interface <b>CognitoMetricChange</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 </div>
 <h3 class="pdoc-member-header" id="CognitoMetricName">
+<<<<<<< HEAD
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/cognito/metrics.ts#L21">type <b>CognitoMetricName</b></a>
+=======
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/cognito/metrics.ts#L21">type <b>CognitoMetricName</b></a>
+>>>>>>> origin/master
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>type</span> CognitoMetricName = <span class='s2'>"CompromisedCredentialsRisk"</span> | <span class='s2'>"AccountTakeOverRisk"</span> | <span class='s2'>"OverrideBlock"</span> | <span class='s2'>"Risk"</span> | <span class='s2'>"NoRisk"</span>;</pre>

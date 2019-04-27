@@ -77,7 +77,7 @@ Even with this alternative breakdown, it's likely your stack structure will mirr
 each project, you are apt to have multiple environments such as production, staging, testing, etc. And, indeed,
 you may have inter-dependencies between your stacks -- something that Pulumi supports in a first class manner.
 
-## Inter-Stack Dependencies
+## Inter-Stack Dependencies {#inter-stack-dependencies}
 
 Let's imagine that acmecorp decides to define its cluster infrastructure in one project and consume it from another.
 Perhaps one project, `infra`, defines the Kubernetes cluster and another, `services`, deploys
@@ -134,3 +134,9 @@ its associated Pulumi stack. Please read more about [how these mapping are maint
 ## Tagging Stacks
 
 Stacks have associated metadata in the form of name/value tags. You can assign custom tags to stacks (when logged into the [web backend](https://pulumi.io/reference/state.html)) to customize how stacks are listed in the [Pulumi Cloud Console](https://app.pulumi.com). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom `environment` tag to each stack, assigning a value of `production` to each production stack, `staging` to each staging stack, etc. Then in the Pulumi Cloud Console, you'll be able to group stacks by `Tag: environment`. Please read more about [how to manage stack tags here](stack.md#stack-tags).
+
+## Examples
+
+See also the use of multiple projects and stacks in [Kubernetes the Prod Way](https://pulumi.io/quickstart/k8s-the-prod-way/index.html), which contains a tutorial, reference architecture, and collection of prod-first code
+examples that demonstrate industry best-practices for **using Kubernetes** in contexts where an
+**organization of people** must ship **production applications.** 
