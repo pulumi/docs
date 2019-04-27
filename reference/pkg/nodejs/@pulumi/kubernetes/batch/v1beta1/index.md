@@ -17,14 +17,14 @@ title: Module batch/v1beta1
 * <a href="#CronJob">class CronJob</a>
 * <a href="#CronJobList">class CronJobList</a>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/batch/v1beta1/CronJob.ts">batch/v1beta1/CronJob.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/batch/v1beta1/CronJobList.ts">batch/v1beta1/CronJobList.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/a33e855465c06a2921aead18ba9f84519baacfd7/sdk/nodejs/batch/v1beta1/CronJob.ts">batch/v1beta1/CronJob.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/a33e855465c06a2921aead18ba9f84519baacfd7/sdk/nodejs/batch/v1beta1/CronJobList.ts">batch/v1beta1/CronJobList.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="CronJob">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/batch/v1beta1/CronJob.ts#L11">class <b>CronJob</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/a33e855465c06a2921aead18ba9f84519baacfd7/sdk/nodejs/batch/v1beta1/CronJob.ts#L11">class <b>CronJob</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -32,7 +32,7 @@ title: Module batch/v1beta1
 CronJob represents the configuration of a single cron job.
 
 <h3 class="pdoc-member-header" id="CronJob-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/batch/v1beta1/CronJob.ts#L63"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/a33e855465c06a2921aead18ba9f84519baacfd7/sdk/nodejs/batch/v1beta1/CronJob.ts#L63"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -47,7 +47,7 @@ Create a batch.v1beta1.CronJob resource with the given unique name, arguments, a
 
 </div>
 <h3 class="pdoc-member-header" id="CronJob-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/batch/v1beta1/CronJob.ts#L58">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/a33e855465c06a2921aead18ba9f84519baacfd7/sdk/nodejs/batch/v1beta1/CronJob.ts#L58">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -62,7 +62,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 </div>
 <h3 class="pdoc-member-header" id="CronJob-getInputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/batch/v1beta1/CronJob.ts#L62">method <b>getInputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/a33e855465c06a2921aead18ba9f84519baacfd7/sdk/nodejs/batch/v1beta1/CronJob.ts#L62">method <b>getInputs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -70,7 +70,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 </div>
 <h3 class="pdoc-member-header" id="CronJob-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/a33e855465c06a2921aead18ba9f84519baacfd7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -78,7 +78,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 </div>
 <h3 class="pdoc-member-header" id="CronJob-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/a33e855465c06a2921aead18ba9f84519baacfd7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -90,7 +90,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="CronJob-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/batch/v1beta1/CronJob.ts#L18">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/a33e855465c06a2921aead18ba9f84519baacfd7/sdk/nodejs/batch/v1beta1/CronJob.ts#L18">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"batch/v1beta1"</span>&gt;;</pre>
@@ -102,7 +102,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
 <h3 class="pdoc-member-header" id="CronJob-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/a33e855465c06a2921aead18ba9f84519baacfd7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -112,7 +112,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="CronJob-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/batch/v1beta1/CronJob.ts#L26">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/a33e855465c06a2921aead18ba9f84519baacfd7/sdk/nodejs/batch/v1beta1/CronJob.ts#L26">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"CronJob"</span>&gt;;</pre>
@@ -124,7 +124,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="CronJob-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/batch/v1beta1/CronJob.ts#L32">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/a33e855465c06a2921aead18ba9f84519baacfd7/sdk/nodejs/batch/v1beta1/CronJob.ts#L32">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
@@ -134,7 +134,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 </div>
 <h3 class="pdoc-member-header" id="CronJob-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/batch/v1beta1/CronJob.ts#L38">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/a33e855465c06a2921aead18ba9f84519baacfd7/sdk/nodejs/batch/v1beta1/CronJob.ts#L38">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>spec: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.batch.v1beta1.CronJobSpec&gt;;</pre>
@@ -144,7 +144,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 
 </div>
 <h3 class="pdoc-member-header" id="CronJob-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/batch/v1beta1/CronJob.ts#L44">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/a33e855465c06a2921aead18ba9f84519baacfd7/sdk/nodejs/batch/v1beta1/CronJob.ts#L44">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>status: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.batch.v1beta1.CronJobStatus&gt;;</pre>
@@ -154,7 +154,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 
 </div>
 <h3 class="pdoc-member-header" id="CronJob-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/a33e855465c06a2921aead18ba9f84519baacfd7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -165,7 +165,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CronJobList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/batch/v1beta1/CronJobList.ts#L11">class <b>CronJobList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/a33e855465c06a2921aead18ba9f84519baacfd7/sdk/nodejs/batch/v1beta1/CronJobList.ts#L11">class <b>CronJobList</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -173,7 +173,7 @@ deployments.
 CronJobList is a collection of cron jobs.
 
 <h3 class="pdoc-member-header" id="CronJobList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/batch/v1beta1/CronJobList.ts#L56"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/a33e855465c06a2921aead18ba9f84519baacfd7/sdk/nodejs/batch/v1beta1/CronJobList.ts#L56"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -188,7 +188,7 @@ Create a batch.v1beta1.CronJobList resource with the given unique name, argument
 
 </div>
 <h3 class="pdoc-member-header" id="CronJobList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/batch/v1beta1/CronJobList.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/a33e855465c06a2921aead18ba9f84519baacfd7/sdk/nodejs/batch/v1beta1/CronJobList.ts#L51">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -203,7 +203,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 </div>
 <h3 class="pdoc-member-header" id="CronJobList-getInputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/batch/v1beta1/CronJobList.ts#L55">method <b>getInputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/a33e855465c06a2921aead18ba9f84519baacfd7/sdk/nodejs/batch/v1beta1/CronJobList.ts#L55">method <b>getInputs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -211,7 +211,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 </div>
 <h3 class="pdoc-member-header" id="CronJobList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/a33e855465c06a2921aead18ba9f84519baacfd7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -219,7 +219,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 </div>
 <h3 class="pdoc-member-header" id="CronJobList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/a33e855465c06a2921aead18ba9f84519baacfd7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -231,7 +231,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="CronJobList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/batch/v1beta1/CronJobList.ts#L18">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/a33e855465c06a2921aead18ba9f84519baacfd7/sdk/nodejs/batch/v1beta1/CronJobList.ts#L18">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"batch/v1beta1"</span>&gt;;</pre>
@@ -243,7 +243,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
 <h3 class="pdoc-member-header" id="CronJobList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/a33e855465c06a2921aead18ba9f84519baacfd7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -253,7 +253,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="CronJobList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/batch/v1beta1/CronJobList.ts#L23">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/a33e855465c06a2921aead18ba9f84519baacfd7/sdk/nodejs/batch/v1beta1/CronJobList.ts#L23">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>items: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.batch.v1beta1.CronJob[]&gt;;</pre>
@@ -262,7 +262,7 @@ items is the list of CronJobs.
 
 </div>
 <h3 class="pdoc-member-header" id="CronJobList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/batch/v1beta1/CronJobList.ts#L31">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/a33e855465c06a2921aead18ba9f84519baacfd7/sdk/nodejs/batch/v1beta1/CronJobList.ts#L31">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"CronJobList"</span>&gt;;</pre>
@@ -274,7 +274,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="CronJobList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/batch/v1beta1/CronJobList.ts#L37">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/a33e855465c06a2921aead18ba9f84519baacfd7/sdk/nodejs/batch/v1beta1/CronJobList.ts#L37">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
@@ -284,7 +284,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 </div>
 <h3 class="pdoc-member-header" id="CronJobList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/a33e855465c06a2921aead18ba9f84519baacfd7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
