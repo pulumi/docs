@@ -3,7 +3,7 @@ title: Setup
 redirect_from: /install/azure.html
 ---
 
-The [Pulumi Azure provider](./index.html) uses the Azure SDK to manage and provision resources.
+The [Pulumi Azure provider](./) uses the Azure SDK to manage and provision resources.
 
 > Pulumi relies on the Azure SDK to authenticate requests from your computer to Azure. Your credentials are never sent
 > to pulumi.com.

@@ -50,7 +50,7 @@ In this tutorial, we'll use JavaScript to deploy a simple nginx container to Azu
 
 1.  To preview and deploy changes, run `pulumi update`. The command shows a preview of the resources that will be created and prompts on whether to proceed with the deployment.  Note that the stack itself is counted as a resource, though it does not correspond to an actual cloud resource.
 
-    ```bash
+    ```shell
     $ pulumi update
     Previewing update (azurewebserver-dev):
 
@@ -65,7 +65,7 @@ In this tutorial, we'll use JavaScript to deploy a simple nginx container to Azu
 
 1.  Now, proceed with the deployment. 
 
-    ```bash
+    ```shell
     Do you want to perform this update? yes
     Updating (azurewebserver-dev):
 
@@ -89,7 +89,7 @@ In this tutorial, we'll use JavaScript to deploy a simple nginx container to Azu
 
 1.  To view the provisioned resources on the command line, run `pulumi stack`. You'll also see a [stack output](/reference/stack.html#output) corresponding to the private IP address of the nginx container we've created.  
 
-    ```
+    ```shell
     $ pulumi stack
     ...
     Current stack resources (4):
@@ -106,7 +106,7 @@ In this tutorial, we'll use JavaScript to deploy a simple nginx container to Azu
 
 1.  Test out the container by `curl`ing the endpoint:
 
-    ```
+    ```shell
     $ curl $(pulumi stack output publicIP)
     <!DOCTYPE html>
     <html>

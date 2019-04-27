@@ -5688,7 +5688,7 @@ settings block.</li>
 guest virtual machine close to the end of both VM creation and update. This
 waiter is necessary to ensure that correct IP information gets reported to
 the guest virtual machine, mainly to facilitate the availability of a valid,
-reachable default IP address for any <a class="reference external" href="/docs/provisioners/index.html">provisioners</a>.
+reachable default IP address for any <a class="reference external" href="/docs/provisioners/">provisioners</a>.
 The behavior of the waiter can be controlled with the
 <code class="docutils literal notranslate"><span class="pre">wait_for_guest_net_timeout</span></code>,
 <code class="docutils literal notranslate"><span class="pre">wait_for_guest_net_routable</span></code>,

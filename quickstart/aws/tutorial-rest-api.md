@@ -47,7 +47,7 @@ Let's look at some of those.
 Normally, we'd write some code to define resources for our cloud stack, but in the quickstart this work is done for us. This is the content of `index.js`:
 
 ```javascript
-// Import the [pulumi/aws](https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/index.html) package
+// Import the [pulumi/aws](https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/) package
 const pulumi = require("@pulumi/pulumi");
 const aws = require("@pulumi/aws");
 const awsx = require("@pulumi/awsx");
@@ -81,7 +81,7 @@ const endpoint = new awsx.apigateway.API("hello", {
 exports.url = endpoint.url;
 ```
 
-See the [reference documentation](/reference/index.html) for details on the APIs we're using.
+See the [reference documentation](/reference/) for details on the APIs we're using.
 
 ## Deploy the stack
 
@@ -145,4 +145,4 @@ From here, you can dive deeper:
         REST APIs that use a document database
   - [Multi-cloud Serverless plus Containers](../cloudfx/tutorial-thumbnailer.html): Create a multi-cloud video
         thumbnail app that uses containers, serverless, and infrastructure together
-- Take [a tour of Pulumi](/tour/index.html).
+- Take [a tour of Pulumi](/tour/).

@@ -13,7 +13,7 @@ In this tutorial, we'll use Python to deploy an instance of Azure Kubernetes Ser
     This will create a base Pulumi program in Python, and is great
     recommendation to begin your journey.
 
-    ```bash
+    ```shell
     $ pulumi new azure-python --dir aks-hello-world
     ```
 
@@ -25,7 +25,7 @@ In this tutorial, we'll use Python to deploy an instance of Azure Kubernetes Ser
 
     Change directories to the newly created Pulumi project.
 
-    ```bash
+    ```shell
     $ cd aks-hello-world
     ```
 
@@ -33,7 +33,7 @@ In this tutorial, we'll use Python to deploy an instance of Azure Kubernetes Ser
 
     This installs the dependent packages [needed](https://pulumi.io/reference/how.html) for our Pulumi program.
 
-	```bash
+	```shell
 	$ pip install pulumi pulumi_azure pulumi_kubernetes
 	```
 
@@ -181,7 +181,7 @@ In this tutorial, we'll use Python to deploy an instance of Azure Kubernetes Ser
     pulumi.export('kubeconfig', aks.kube_config_raw)
     ```
 
-    This example uses the [@pulumi_azure](https://pulumi.io/reference/pkg/python/pulumi_azure/index.html) package to create and manage several Azure resources including: a [pulumi_azure.containerservice.KubernetesCluster](https://pulumi.io/reference/pkg/python/pulumi_azure/containerservice/#pulumi_azure.containerservice.KubernetesCluster), [pulumi_azure.containerservice.Registry](https://pulumi.io/reference/pkg/python/pulumi_azure/containerservice/#pulumi_azure.containerservice.Registry) which will store Docker images and [pulumi_azure.network.VirtualNetwork](https://pulumi.io/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.VirtualNetwork) that will contain AKS worker nodes and several others. We are using implicit and explicit dependencies in this configuration. For example, resource outputs can be used as inputs to imply dependency between resources, but you can also declare dependency using [ResourceOptions](/reference/programming-model.html#resources) passed to the resource as additional argumanets.
+    This example uses the [@pulumi_azure](https://pulumi.io/reference/pkg/python/pulumi_azure/) package to create and manage several Azure resources including: a [pulumi_azure.containerservice.KubernetesCluster](https://pulumi.io/reference/pkg/python/pulumi_azure/containerservice/#pulumi_azure.containerservice.KubernetesCluster), [pulumi_azure.containerservice.Registry](https://pulumi.io/reference/pkg/python/pulumi_azure/containerservice/#pulumi_azure.containerservice.Registry) which will store Docker images and [pulumi_azure.network.VirtualNetwork](https://pulumi.io/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.VirtualNetwork) that will contain AKS worker nodes and several others. We are using implicit and explicit dependencies in this configuration. For example, resource outputs can be used as inputs to imply dependency between resources, but you can also declare dependency using [ResourceOptions](/reference/programming-model.html#resources) passed to the resource as additional argumanets.
 
 4.  To preview and deploy changes, run `pulumi update` and select "yes."
 
@@ -196,7 +196,7 @@ In this tutorial, we'll use Python to deploy an instance of Azure Kubernetes Ser
     Running `pulumi up` will deploy the AKS cluster. Note, provisioning a
     new AKS cluster takes between 10-15 minutes.
 
-    ```bash
+    ```shell
     $ pulumi update
     Previewing update (dev):
 
@@ -308,7 +308,7 @@ To access your new Kubernetes cluster using `kubectl`, we need to setup the
 `kubeconfig` file and download `kubectl`. We can leverage the Pulumi stack
 output in the CLI, as Pulumi faciliates exporting these objects for us.
 
-```bash
+```shell
 $ pulumi stack output kubeconfig > kubeconfig
 $ export KUBECONFIG=`pwd`/kubeconfig
 $ export KUBERNETES_VERSION=1.11.5 && sudo curl -s -o /usr/local/bin/kubectl https://storage.googleapis.com/kubernetes-release/release/v${KUBERNETES_VERSION}/bin/linux/amd64/kubectl && sudo chmod +x /usr/local/bin/kubectl
@@ -320,7 +320,7 @@ $ kubectl get nodes
 
 We can also use the stack output to query the cluster for our newly created Deployment:
 
-```bash
+```shell
 $ kubectl get deployment $(pulumi stack output deploymentName) --namespace=$(pulumi stack output namespaceName)
 $ kubectl get service $(pulumi stack output serviceName) --namespace=$(pulumi stack output namespaceName)
 ```
@@ -328,7 +328,7 @@ $ kubectl get service $(pulumi stack output serviceName) --namespace=$(pulumi st
 We can also create another NGINX Deployment into the `default` namespace using
 `kubectl` natively:
 
-```bash
+```shell
 $ kubectl create deployment my-nginx --image=nginx
 $ kubectl get pods
 $ kubectl delete deployment my-nginx

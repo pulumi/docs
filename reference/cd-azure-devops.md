@@ -69,7 +69,7 @@ You can set [job-scoped out variables](https://docs.microsoft.com/en-us/azure/de
 
 `pulumi` requires a few environment variables in order to work in a CI/CD environment. More specifically, `PULUMI_ACCESS_TOKEN` is required
 to allow the `pulumi` CLI to perform an unattended login. In addition to this, you will also need to set the cloud provider-specific
-variables. For Azure, the environment variables you will need are documented [here](https://pulumi.io/quickstart/azure/index.html).
+variables. For Azure, the environment variables you will need are documented [here](https://pulumi.io/quickstart/azure/).
 
 ## Agents
 

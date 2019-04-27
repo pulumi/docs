@@ -43,7 +43,7 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container us
     exports.url = service.defaultEndpoint.apply(e => `http://${e.hostname}`);
     ```
 
-    This example uses [cloud.Service](/reference/pkg/nodejs/@pulumi/cloud/index.html#Service), which is a high-level, convenient interface for building containers and provisioning a container service on your target cloud.
+    This example uses [cloud.Service](/reference/pkg/nodejs/@pulumi/cloud/#Service), which is a high-level, convenient interface for building containers and provisioning a container service on your target cloud.
 
 1.  Create a subfolder `app` with the following files:
 

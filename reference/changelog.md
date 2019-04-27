@@ -4,7 +4,7 @@ redirect_from: /install/changelog.html
 ---
 
 <!-- Common links -->
-[`Output`]: /reference/pkg/nodejs/@pulumi/pulumi/index.html#Output
+[`Output`]: /reference/pkg/nodejs/@pulumi/pulumi/#Output
 [Python documentation]: ./python.html
 [Defining and setting stack settings]: ./config.html#config-stack
 [Configuration]: ./config.html
@@ -880,7 +880,7 @@ With the v0.14.0 CLI release, the following packages are now available:
 
 ### @pulumi/aws-serverless v0.14.0
 
-This package is new in this release! Use it to directly manage API Gateway and Lambda resources. See the reference documentation for [@pulumi/aws-serverless](../reference/pkg/nodejs/@pulumi/aws-serverless/index.html).
+This package is new in this release! Use it to directly manage API Gateway and Lambda resources. See the reference documentation for [@pulumi/aws-serverless](../reference/pkg/nodejs/@pulumi/aws-serverless/).
 
 ### @pulumi/cloud v0.14.0
 
@@ -892,7 +892,7 @@ This package is new in this release! Use it to directly manage API Gateway and L
 
 ### @pulumi/gcp v0.14.0
 
-This package is new in this release! Use it to deploy and manage resources for Google Cloud Platform. See the reference documentation for  [@pulumi/gcp](../reference/pkg/nodejs/@pulumi/gcp/index.html).
+This package is new in this release! Use it to deploy and manage resources for Google Cloud Platform. See the reference documentation for  [@pulumi/gcp](../reference/pkg/nodejs/@pulumi/gcp/).
 
 ## v0.12.2 {#v122}
 
@@ -916,10 +916,10 @@ With the v0.12.2 CLI release, we have also released the following packages:
 
 #### Added
 
--  Allow passing an existing `Role` to `serverless.Function` ([pulumi/pulumi-aws#210](https://github.com/pulumi/pulumi-aws/pull/210)). [FunctionOptions](../reference/pkg/nodejs/@pulumi/aws/serverless/index.html#FunctionOptions) now includes a `Role` property, for scenarios where you wish to use an existing `Role` or share one across multiple Lambda functions.
+-  Allow passing an existing `Role` to `serverless.Function` ([pulumi/pulumi-aws#210](https://github.com/pulumi/pulumi-aws/pull/210)). [FunctionOptions](../reference/pkg/nodejs/@pulumi/aws/serverless/#FunctionOptions) now includes a `Role` property, for scenarios where you wish to use an existing `Role` or share one across multiple Lambda functions.
 
 #### Changed
--  (**Breaking**) Support configuring the paths to include in `serverless.Function` ([pulumi/pulumi-aws#210](https://github.com/pulumi/pulumi-aws/pull/210)). Previously, all files in the directory would be included in the Lambda deployment package. With this change, only the generated `__index.js` and `./node_modules` are included by default. To add other files, use the new `includePaths` property in [FunctionOptions](../reference/pkg/nodejs/@pulumi/aws/serverless/index.html#FunctionOptions).
+-  (**Breaking**) Support configuring the paths to include in `serverless.Function` ([pulumi/pulumi-aws#210](https://github.com/pulumi/pulumi-aws/pull/210)). Previously, all files in the directory would be included in the Lambda deployment package. With this change, only the generated `__index.js` and `./node_modules` are included by default. To add other files, use the new `includePaths` property in [FunctionOptions](../reference/pkg/nodejs/@pulumi/aws/serverless/#FunctionOptions).
 
 -  (**Breaking**) Rename `aws.s3.Bucket#websites` to the singular `aws.s3.Bucket#website`. ([pulumi/pulumi-aws#207](https://github.com/pulumi/pulumi-aws/pull/207)). Since this property contains only one element, it has been renamed to `website` (singular) and is no longer an array property.
 

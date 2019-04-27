@@ -3,7 +3,7 @@ title: Setup
 redirect_from: /install/gcp.html
 ---
 
-[Pulumi Google Cloud Platform Provider]: ./index.html
+[Pulumi Google Cloud Platform Provider]: ./
 
 The [Pulumi Google Cloud Platform Provider] needs to be configured with Google credentials
 before it can be used to create resources.

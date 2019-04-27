@@ -2283,7 +2283,7 @@ unspecified.
 An existing custom attribute can be [imported][docs-import] into this resource
 via its name, using the following command:
 
-[docs-import]: https://www.terraform.io/docs/import/index.html
+[docs-import]: https://www.terraform.io/docs/import/
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -6371,8 +6371,8 @@ The convention of the id is a prefix, the host system [managed objectID][docs-ab
 name. An example would be `tf-HostVirtualSwitch:host-10:vSwitchTerraformTest`.
 Import can the be done via the following command:
 
-[docs-import]: https://www.terraform.io/docs/import/index.html
-[docs-about-morefs]: /docs/providers/vsphere/index.html#use-of-managed-object-references-by-the-vsphere-provider
+[docs-import]: https://www.terraform.io/docs/import/
+[docs-about-morefs]: /docs/providers/vsphere/#use-of-managed-object-references-by-the-vsphere-provider
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -7849,7 +7849,7 @@ const category = new vsphere.TagCategory("category", {
 An existing tag category can be [imported][docs-import] into this resource via
 its name, using the following command:
 
-[docs-import]: https://www.terraform.io/docs/import/index.html
+[docs-import]: https://www.terraform.io/docs/import/
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -8357,7 +8357,7 @@ const vm = new vsphere.VirtualMachine("vm", {
 An existing vApp entity can be [imported][docs-import] into this resource via
 the ID of the vApp Entity.
 
-[docs-import]: https://www.terraform.io/docs/import/index.html
+[docs-import]: https://www.terraform.io/docs/import/
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -8790,7 +8790,7 @@ Two waiters of note are:
   `wait_for_guest_ip_timeout`, and
   `ignored_guest_ips` settings.
 
-[tf-docs-provisioners]: /docs/provisioners/index.html
+[tf-docs-provisioners]: /docs/provisioners/
 
 ### Migrating from a previous version of this resource
 

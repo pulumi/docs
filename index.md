@@ -20,10 +20,10 @@ searchindex: false
 
 <div class="card-table" style="background: #fafafa; margin: 64px 0 0 0; border-top: 1px solid #eee">
     <div class="mdl-card mdl-shadow--2dp get-started-card">
-        <a href="/quickstart/aws/index.html"><img src="/images/quickstart/aws-purple.png" style="width: 250px"></a>
-        <a href="/quickstart/azure/index.html"><img src="/images/quickstart/azure-purple.png" style="width: 250px"></a>
-        <a href="/quickstart/gcp/index.html"><img src="/images/quickstart/gcp-purple.png" style="width: 250px"></a>
-        <a href="/quickstart/kubernetes/index.html"><img src="/images/quickstart/k8s-purple.png" style="width: 250px"></a>
+        <a href="/quickstart/aws/"><img src="/images/quickstart/aws-purple.png" style="width: 250px"></a>
+        <a href="/quickstart/azure/"><img src="/images/quickstart/azure-purple.png" style="width: 250px"></a>
+        <a href="/quickstart/gcp/"><img src="/images/quickstart/gcp-purple.png" style="width: 250px"></a>
+        <a href="/quickstart/kubernetes/"><img src="/images/quickstart/k8s-purple.png" style="width: 250px"></a>
     </div>
 </div>
 
@@ -143,13 +143,13 @@ searchindex: false
         </div>
     </div>
     <div class="mdl-card mdl-shadow--2dp get-started-card">
-        <a href="/quickstart/kubernetes/index.html">
+        <a href="/quickstart/kubernetes/">
           <img src="/images/icon-feature-kubernetes.svg"
               style="margin-bottom: 30px" width="125">
         </a>
         <div class="mdl-card__title">
             <h2 class="mdl-card__title-text no-anchor">
-                <a href="/quickstart/kubernetes/index.html">Kubernetes</a>
+                <a href="/quickstart/kubernetes/">Kubernetes</a>
             </h2>
         </div>
         <div class="mdl-card__supporting-text">
@@ -158,7 +158,7 @@ searchindex: false
             </span>
         </div>
         <div class="mdl-card__actions">
-            <a href="/quickstart/kubernetes/index.html">
+            <a href="/quickstart/kubernetes/">
                 <button class="button">START NOW</button>
             </a>
         </div>

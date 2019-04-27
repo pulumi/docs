@@ -106,7 +106,7 @@ In this tutorial, we'll show how to create a simple REST API that counts the num
 For an end-to-end application with a frontend, see the [URL shortener sample](https://github.com/pulumi/examples/tree/master/cloud-ts-url-shortener).
 
 <!-- LINKS -->
-[@pulumi/cloud]: ../cloudfx/index.html
-[cloud.API]: /reference/pkg/nodejs/@pulumi/cloud-aws/index.html#API
-[cloud.Table]: /reference/pkg/nodejs/@pulumi/cloud-aws/index.html#Table
+[@pulumi/cloud]: ../cloudfx/
+[cloud.API]: /reference/pkg/nodejs/@pulumi/cloud-aws/#API
+[cloud.Table]: /reference/pkg/nodejs/@pulumi/cloud-aws/#Table
 <!-- END LINKS -->

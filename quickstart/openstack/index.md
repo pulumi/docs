@@ -7,7 +7,7 @@ redirect_from: /reference/openstack.html
 
 The OpenStack provider for Pulumi can be used to provision any of the cloud resources available in [OpenStack](https://www.openstack.org/).  The OpenStack provider must be configured with credentials to deploy and update resources in an OpenStack cloud.
 
-See the [full API documentation](/reference/pkg/nodejs/@pulumi/openstack/index.html) for complete details of the available OpenStack provider APIs.
+See the [full API documentation](/reference/pkg/nodejs/@pulumi/openstack/) for complete details of the available OpenStack provider APIs.
 
 ## Setup
 

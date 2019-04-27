@@ -187,19 +187,19 @@ The full source of the example is available in the [Pulumi examples repo](https:
 To learn how to convert the raw AWS option to a high-level component, see the [Pulumi Components](/reference/component-tutorial.html) tutorial.
 
 <!-- Common links -->
-[@pulumi/aws]: /reference/pkg/nodejs/@pulumi/aws/index.html
-[aws.s3.Bucket]: /reference/pkg/nodejs/@pulumi/aws/s3/index.html#Bucket
-[aws.s3.Bucket.bucket]: /reference/pkg/nodejs/@pulumi/aws/s3/index.html#Bucket
-[aws.s3.BucketObject]: /reference/pkg/nodejs/@pulumi/aws/s3/index.html#BucketObject
-[pulumi.asset.FileAsset]: /reference/pkg/nodejs/@pulumi/pulumi/asset/index.html#FileAsset
-[aws.s3.BucketPolicy]: /reference/pkg/nodejs/@pulumi/aws/s3/index.html#BucketPolicy
-[aws.s3.Bucket.websites]: /reference/pkg/nodejs/@pulumi/aws/s3/index.html#Bucket
-[pulumi.Output]: /reference/pkg/nodejs/@pulumi/pulumi/index.html#Output
-[pulumi.Output.apply]: /reference/pkg/nodejs/@pulumi/pulumi/index.html#Output
-[pulumi.Input]: /reference/pkg/nodejs/@pulumi/pulumi/index.html#Input
-[pulumi.ComponentResource]: /reference/pkg/nodejs/@pulumi/pulumi/index.html#ComponentResource
+[@pulumi/aws]: /reference/pkg/nodejs/@pulumi/aws/
+[aws.s3.Bucket]: /reference/pkg/nodejs/@pulumi/aws/s3/#Bucket
+[aws.s3.Bucket.bucket]: /reference/pkg/nodejs/@pulumi/aws/s3/#Bucket
+[aws.s3.BucketObject]: /reference/pkg/nodejs/@pulumi/aws/s3/#BucketObject
+[pulumi.asset.FileAsset]: /reference/pkg/nodejs/@pulumi/pulumi/asset/#FileAsset
+[aws.s3.BucketPolicy]: /reference/pkg/nodejs/@pulumi/aws/s3/#BucketPolicy
+[aws.s3.Bucket.websites]: /reference/pkg/nodejs/@pulumi/aws/s3/#Bucket
+[pulumi.Output]: /reference/pkg/nodejs/@pulumi/pulumi/#Output
+[pulumi.Output.apply]: /reference/pkg/nodejs/@pulumi/pulumi/#Output
+[pulumi.Input]: /reference/pkg/nodejs/@pulumi/pulumi/#Input
+[pulumi.ComponentResource]: /reference/pkg/nodejs/@pulumi/pulumi/#ComponentResource
 [Component]: /reference/programming-model.html#components
 [s3-folder]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder
 [s3-folder-component]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder-component
-[Pulumi Cloud]: /quickstart/cloudfx/index.html
+[Pulumi Cloud]: /quickstart/cloudfx/
 <!-- End common links -->

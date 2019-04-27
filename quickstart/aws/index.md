@@ -7,7 +7,7 @@ redirect_from: /reference/aws.html
 
 The Amazon Web Services (AWS) provider for Pulumi can be used to provision any of the cloud resources available in [AWS](https://aws.amazon.com/).  The AWS provider must be configured with credentials to deploy and update resources in AWS.
 
-See the [full API documentation](/reference/pkg/nodejs/@pulumi/aws/index.html) for complete details of the available AWS provider APIs.
+See the [full API documentation](/reference/pkg/nodejs/@pulumi/aws/) for complete details of the available AWS provider APIs.
 
 ## Setup
 

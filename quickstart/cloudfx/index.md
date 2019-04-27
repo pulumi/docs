@@ -13,7 +13,7 @@ The Cloud framework for Pulumi lets you program infrastructure and application l
 
 The Cloud framework must be configured with credentials to deploy and update resources in the target cloud platform.
 
-See the [full API documentation](/reference/pkg/nodejs/@pulumi/cloud/index.html) for complete details of the available Cloud framework APIs.
+See the [full API documentation](/reference/pkg/nodejs/@pulumi/cloud/) for complete details of the available Cloud framework APIs.
 
 ## Getting Started
 

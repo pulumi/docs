@@ -2,7 +2,7 @@
 title: Beyond the Basics
 ---
 
-Now that you've completed [the first lesson](./index.html), let's dive into the core concepts a bit deeper.  In doing
+Now that you've completed [the first lesson](./), let's dive into the core concepts a bit deeper.  In doing
 so, we will discovery many new ways to extend the basic Pulumi program.
 
 > If you'd like to take a break from the tour, head on over to [the Tutorials section](/quickstart) to see specific

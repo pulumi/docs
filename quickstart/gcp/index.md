@@ -7,7 +7,7 @@ redirect_from: /reference/gcp.html
 
 The Google Cloud Platform (GCP) provider for Pulumi can be used to provision any of the cloud resources available in [GCP](https://cloud.google.com/).  The GCP provider must be configured with credentials to deploy and update resources in Google Cloud.
 
-See the [full API documentation](/reference/pkg/nodejs/@pulumi/gcp/index.html) for complete details of the available GCP provider APIs.
+See the [full API documentation](/reference/pkg/nodejs/@pulumi/gcp/) for complete details of the available GCP provider APIs.
 
 ## Setup
 
