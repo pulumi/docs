@@ -4,13 +4,16 @@ title: API Reference
 
 {% include mini-toc.html %}
 
-All Pulumi libraries are distributed in your chosen language's package manager, even those packages that define
-cloud resource definitions. That means NPM for Node.js and PyPI for Python, for instance. There is a dedicated
-package for each cloud that includes access to its full capabilities, including containers, serverless functions,
-infrastructure, data services, and more.
+Pulumi offers APIs for working with a wide variety of cloud platforms, as well
+as higher-level APIs that make it easier to deliver cloud applications and
+infrastructure.
 
-In addition to the cloud packages, Pulumi offers many convenience libraries that make common tasks easier, like
-setting up a network, creating a Kubernetes cluster, and building and publishing containers to private registries.
+These APIs are avaialble as packages in your chosen languages's package manager
+&mdash; NPM for Node.js and PyPI for Python. There is a dedicated package for
+each cloud that includes access to its full capabilities. In addition, Pulumi 
+offers many convenience packages that make common tasks easier, like setting
+up a network, creating a Kubernetes cluster, and building and publishing containers 
+to private registries.
 
 These packages can be mixed to enable multi-cloud and a spectrum of control to productivity:
 

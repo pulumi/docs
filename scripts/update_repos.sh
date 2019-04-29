@@ -8,7 +8,6 @@ TOOLS_REPOS=(
     "pulumi-aws"
     "pulumi-awsx"
     "pulumi-azure"
-    "pulumi-azure-serverless"
     "pulumi-cloud"
     "pulumi-cloudflare"
     "pulumi-docker"
