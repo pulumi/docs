@@ -168,8 +168,6 @@ var gitHubBaseURLs = map[string]string{
 	"@pulumi/awsx":             "https://github.com/pulumi/pulumi-awsx/blob/{githash}/nodejs/awsx",
 	"@pulumi/azure":            "https://github.com/pulumi/pulumi-azure/blob/{githash}/sdk/nodejs",
 	"@pulumi/cloud":            "https://github.com/pulumi/pulumi-cloud/blob/{githash}/api",
-	"@pulumi/cloud-aws":        "https://github.com/pulumi/pulumi-cloud/blob/{githash}/aws",
-	"@pulumi/cloud-azure":      "https://github.com/pulumi/pulumi-cloud/blob/{githash}/azure",
 	"@pulumi/docker":           "https://github.com/pulumi/pulumi-docker/blob/{githash}/sdk/nodejs",
 	"@pulumi/eks":              "https://github.com/pulumi/pulumi-eks/blob/{githash}/nodejs/eks",
 	"@pulumi/kubernetes":       "https://github.com/pulumi/pulumi-kubernetes/blob/{githash}/sdk/nodejs",
