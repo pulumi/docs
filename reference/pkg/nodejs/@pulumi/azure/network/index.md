@@ -141,14 +141,14 @@ title: Module network
 * <a href="#VirtualNetworkPeeringState">interface VirtualNetworkPeeringState</a>
 * <a href="#VirtualNetworkState">interface VirtualNetworkState</a>
 
-<a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts">network/applicationGateway.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationSecurityGroup.ts">network/applicationSecurityGroup.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/connectionMonitor.ts">network/connectionMonitor.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts">network/expressRouteCircuit.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitAuthorization.ts">network/expressRouteCircuitAuthorization.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts">network/expressRouteCircuitPeering.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewall.ts">network/firewall.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallApplicationRuleCollection.ts">network/firewallApplicationRuleCollection.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallNetworkRuleCollection.ts">network/firewallNetworkRuleCollection.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getApplicationSecurityGroup.ts">network/getApplicationSecurityGroup.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getExpressRouteCircuit.ts">network/getExpressRouteCircuit.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getFirewall.ts">network/getFirewall.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts">network/getNetworkInterface.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkSecurityGroup.ts">network/getNetworkSecurityGroup.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkWatcher.ts">network/getNetworkWatcher.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIP.ts">network/getPublicIP.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIPs.ts">network/getPublicIPs.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getRouteTable.ts">network/getRouteTable.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getSubnet.ts">network/getSubnet.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetwork.ts">network/getVirtualNetwork.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetworkGateway.ts">network/getVirtualNetworkGateway.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/localNetworkGateway.ts">network/localNetworkGateway.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts">network/networkInterface.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts">network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts">network/networkInterfaceApplicationSecurityGroupAssociation.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts">network/networkInterfaceBackendAddressPoolAssociation.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts">network/networkInterfaceNatRuleAssociation.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityGroup.ts">network/networkSecurityGroup.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts">network/networkSecurityRule.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkWatcher.ts">network/networkWatcher.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/packetCapture.ts">network/packetCapture.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts">network/publicIp.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIpPrefix.ts">network/publicIpPrefix.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/route.ts">network/route.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/routeTable.ts">network/routeTable.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts">network/subnet.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnetNetworkSecurityGroupAssociation.ts">network/subnetNetworkSecurityGroupAssociation.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnetRouteTableAssociation.ts">network/subnetRouteTableAssociation.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetwork.ts">network/virtualNetwork.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts">network/virtualNetworkGateway.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts">network/virtualNetworkGatewayConnection.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkPeering.ts">network/virtualNetworkPeering.ts</a> 
+<a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts">network/applicationGateway.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationSecurityGroup.ts">network/applicationSecurityGroup.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/connectionMonitor.ts">network/connectionMonitor.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts">network/expressRouteCircuit.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitAuthorization.ts">network/expressRouteCircuitAuthorization.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts">network/expressRouteCircuitPeering.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewall.ts">network/firewall.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallApplicationRuleCollection.ts">network/firewallApplicationRuleCollection.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallNetworkRuleCollection.ts">network/firewallNetworkRuleCollection.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getApplicationSecurityGroup.ts">network/getApplicationSecurityGroup.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getExpressRouteCircuit.ts">network/getExpressRouteCircuit.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getFirewall.ts">network/getFirewall.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkInterface.ts">network/getNetworkInterface.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkSecurityGroup.ts">network/getNetworkSecurityGroup.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkWatcher.ts">network/getNetworkWatcher.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIP.ts">network/getPublicIP.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIPs.ts">network/getPublicIPs.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getRouteTable.ts">network/getRouteTable.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getSubnet.ts">network/getSubnet.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getVirtualNetwork.ts">network/getVirtualNetwork.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getVirtualNetworkGateway.ts">network/getVirtualNetworkGateway.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/localNetworkGateway.ts">network/localNetworkGateway.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts">network/networkInterface.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts">network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts">network/networkInterfaceApplicationSecurityGroupAssociation.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts">network/networkInterfaceBackendAddressPoolAssociation.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts">network/networkInterfaceNatRuleAssociation.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityGroup.ts">network/networkSecurityGroup.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts">network/networkSecurityRule.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkWatcher.ts">network/networkWatcher.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/packetCapture.ts">network/packetCapture.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts">network/publicIp.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIpPrefix.ts">network/publicIpPrefix.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/route.ts">network/route.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/routeTable.ts">network/routeTable.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnet.ts">network/subnet.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnetNetworkSecurityGroupAssociation.ts">network/subnetNetworkSecurityGroupAssociation.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnetRouteTableAssociation.ts">network/subnetRouteTableAssociation.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetwork.ts">network/virtualNetwork.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts">network/virtualNetworkGateway.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts">network/virtualNetworkGatewayConnection.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkPeering.ts">network/virtualNetworkPeering.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="ApplicationGateway">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L99">class <b>ApplicationGateway</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L99">class <b>ApplicationGateway</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -245,7 +245,7 @@ const backend = new azure.network.Subnet("backend", {
 ```
 
 <h3 class="pdoc-member-header" id="ApplicationGateway-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L199"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L199"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -260,7 +260,7 @@ Create a ApplicationGateway resource with the given unique name, arguments, and 
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGateway-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L108">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L108">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -272,7 +272,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGateway-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -280,7 +280,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGateway-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -292,7 +292,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGateway-authenticationCertificates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L115">property <b>authenticationCertificates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L115">property <b>authenticationCertificates</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>authenticationCertificates: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -305,7 +305,7 @@ One or more `authentication_certificate` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGateway-backendAddressPools">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L119">property <b>backendAddressPools</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L119">property <b>backendAddressPools</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>backendAddressPools: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -321,7 +321,7 @@ One or more `backend_address_pool` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGateway-backendHttpSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L123">property <b>backendHttpSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L123">property <b>backendHttpSettings</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>backendHttpSettings: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -350,7 +350,7 @@ One or more `backend_http_settings` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGateway-customErrorConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L127">property <b>customErrorConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L127">property <b>customErrorConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>customErrorConfigurations: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -363,7 +363,7 @@ One or more `custom_error_configuration` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGateway-disabledSslProtocols">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L131">property <b>disabledSslProtocols</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L131">property <b>disabledSslProtocols</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>disabledSslProtocols: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -372,7 +372,7 @@ A list of SSL Protocols which should be disabled on this Application Gateway. Po
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGateway-enableHttp2">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L135">property <b>enableHttp2</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L135">property <b>enableHttp2</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>enableHttp2: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -381,7 +381,7 @@ Is HTTP2 enabled on the application gateway resource? Defaults to `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGateway-frontendIpConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L139">property <b>frontendIpConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L139">property <b>frontendIpConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>frontendIpConfigurations: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -397,7 +397,7 @@ One or more `frontend_ip_configuration` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGateway-frontendPorts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L143">property <b>frontendPorts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L143">property <b>frontendPorts</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>frontendPorts: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -410,7 +410,7 @@ One or more `frontend_port` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGateway-gatewayIpConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L147">property <b>gatewayIpConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L147">property <b>gatewayIpConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>gatewayIpConfigurations: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -423,7 +423,7 @@ One or more `gateway_ip_configuration` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGateway-httpListeners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L151">property <b>httpListeners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L151">property <b>httpListeners</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>httpListeners: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -449,7 +449,7 @@ One or more `http_listener` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGateway-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -459,7 +459,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGateway-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L155">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L155">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -468,7 +468,7 @@ The Azure region where the Application Gateway should exist. Changing this force
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGateway-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L159">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L159">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -477,7 +477,7 @@ The name of the Application Gateway. Changing this forces a new resource to be c
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGateway-probes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L163">property <b>probes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L163">property <b>probes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>probes: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -501,7 +501,7 @@ One or more `probe` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGateway-redirectConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L167">property <b>redirectConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L167">property <b>redirectConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>redirectConfigurations: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -519,7 +519,7 @@ A `redirect_configuration` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGateway-requestRoutingRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L171">property <b>requestRoutingRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L171">property <b>requestRoutingRules</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>requestRoutingRules: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -542,7 +542,7 @@ One or more `request_routing_rule` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGateway-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L175">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L175">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -551,7 +551,7 @@ The name of the resource group in which to the Application Gateway should exist.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGateway-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L179">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L179">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>sku: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -564,7 +564,7 @@ A `sku` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGateway-sslCertificates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L183">property <b>sslCertificates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L183">property <b>sslCertificates</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>sslCertificates: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -579,7 +579,7 @@ One or more `ssl_certificate` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGateway-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L187">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L187">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -588,7 +588,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGateway-urlPathMaps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L191">property <b>urlPathMaps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L191">property <b>urlPathMaps</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>urlPathMaps: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -617,7 +617,7 @@ One or more `url_path_map` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGateway-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -627,7 +627,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGateway-wafConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L195">property <b>wafConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L195">property <b>wafConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>wafConfiguration: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -644,7 +644,7 @@ A `waf_configuration` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGateway-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L199">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L199">property <b>zones</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>zones: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -654,7 +654,7 @@ A collection of availability zones to spread the Application Gateway over.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ApplicationSecurityGroup">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationSecurityGroup.ts#L30">class <b>ApplicationSecurityGroup</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationSecurityGroup.ts#L30">class <b>ApplicationSecurityGroup</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -682,7 +682,7 @@ const testApplicationSecurityGroup = new azure.network.ApplicationSecurityGroup(
 ```
 
 <h3 class="pdoc-member-header" id="ApplicationSecurityGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationSecurityGroup.ts#L58"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationSecurityGroup.ts#L58"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -697,7 +697,7 @@ Create a ApplicationSecurityGroup resource with the given unique name, arguments
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationSecurityGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationSecurityGroup.ts#L39">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationSecurityGroup.ts#L39">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -709,7 +709,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationSecurityGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -717,7 +717,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationSecurityGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -729,7 +729,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationSecurityGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -739,7 +739,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationSecurityGroup-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationSecurityGroup.ts#L46">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationSecurityGroup.ts#L46">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -748,7 +748,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationSecurityGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationSecurityGroup.ts#L50">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationSecurityGroup.ts#L50">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -757,7 +757,7 @@ Specifies the name of the Application Security Group. Changing this forces a new
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationSecurityGroup-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationSecurityGroup.ts#L54">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationSecurityGroup.ts#L54">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -766,7 +766,7 @@ The name of the resource group in which to create the Application Security Group
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationSecurityGroup-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationSecurityGroup.ts#L58">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationSecurityGroup.ts#L58">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -775,7 +775,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationSecurityGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -786,7 +786,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConnectionMonitor">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/connectionMonitor.ts#L103">class <b>ConnectionMonitor</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/connectionMonitor.ts#L103">class <b>ConnectionMonitor</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -887,7 +887,7 @@ const testConnectionMonitor = new azure.network.ConnectionMonitor("test", {
 > **NOTE:** This Resource requires that [the Network Watcher Agent Virtual Machine Extension](https://docs.microsoft.com/en-us/azure/network-watcher/connection-monitor) is installed on the Virtual Machine before monitoring can be started. The extension can be installed via the `azurerm_virtual_machine_extension` resource.
 
 <h3 class="pdoc-member-header" id="ConnectionMonitor-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/connectionMonitor.ts#L151"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/connectionMonitor.ts#L151"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -902,7 +902,7 @@ Create a ConnectionMonitor resource with the given unique name, arguments, and o
 
 </div>
 <h3 class="pdoc-member-header" id="ConnectionMonitor-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/connectionMonitor.ts#L112">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/connectionMonitor.ts#L112">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -914,7 +914,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ConnectionMonitor-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -922,7 +922,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ConnectionMonitor-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -934,7 +934,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="ConnectionMonitor-autoStart">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/connectionMonitor.ts#L119">property <b>autoStart</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/connectionMonitor.ts#L119">property <b>autoStart</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>autoStart: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -943,7 +943,7 @@ Specifies whether the connection monitor will start automatically once created. 
 
 </div>
 <h3 class="pdoc-member-header" id="ConnectionMonitor-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/connectionMonitor.ts#L123">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/connectionMonitor.ts#L123">property <b>destination</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>destination: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -956,7 +956,7 @@ A `destination` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ConnectionMonitor-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -966,7 +966,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="ConnectionMonitor-intervalInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/connectionMonitor.ts#L127">property <b>intervalInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/connectionMonitor.ts#L127">property <b>intervalInSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>intervalInSeconds: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -975,7 +975,7 @@ Monitoring interval in seconds. Defaults to `60`.
 
 </div>
 <h3 class="pdoc-member-header" id="ConnectionMonitor-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/connectionMonitor.ts#L131">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/connectionMonitor.ts#L131">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -984,7 +984,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="ConnectionMonitor-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/connectionMonitor.ts#L135">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/connectionMonitor.ts#L135">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -993,7 +993,7 @@ The name of the Connection Monitor. Changing this forces a new resource to be cr
 
 </div>
 <h3 class="pdoc-member-header" id="ConnectionMonitor-networkWatcherName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/connectionMonitor.ts#L139">property <b>networkWatcherName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/connectionMonitor.ts#L139">property <b>networkWatcherName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>networkWatcherName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1002,7 +1002,7 @@ The name of the Network Watcher. Changing this forces a new resource to be creat
 
 </div>
 <h3 class="pdoc-member-header" id="ConnectionMonitor-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/connectionMonitor.ts#L143">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/connectionMonitor.ts#L143">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1011,7 +1011,7 @@ The name of the resource group in which to create the Connection Monitor. Changi
 
 </div>
 <h3 class="pdoc-member-header" id="ConnectionMonitor-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/connectionMonitor.ts#L147">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/connectionMonitor.ts#L147">property <b>source</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>source: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1023,7 +1023,7 @@ A `source` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ConnectionMonitor-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/connectionMonitor.ts#L151">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/connectionMonitor.ts#L151">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1032,7 +1032,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="ConnectionMonitor-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1043,7 +1043,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ExpressRouteCircuit">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L37">class <b>ExpressRouteCircuit</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L37">class <b>ExpressRouteCircuit</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1078,7 +1078,7 @@ const testExpressRouteCircuit = new azure.network.ExpressRouteCircuit("test", {
 ```
 
 <h3 class="pdoc-member-header" id="ExpressRouteCircuit-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L93"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L93"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1093,7 +1093,7 @@ Create a ExpressRouteCircuit resource with the given unique name, arguments, and
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuit-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L46">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1105,7 +1105,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuit-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1113,7 +1113,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuit-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1125,7 +1125,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuit-allowClassicOperations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L53">property <b>allowClassicOperations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L53">property <b>allowClassicOperations</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>allowClassicOperations: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1134,7 +1134,7 @@ Allow the circuit to interact with classic (RDFE) resources. The default value i
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuit-bandwidthInMbps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L57">property <b>bandwidthInMbps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L57">property <b>bandwidthInMbps</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>bandwidthInMbps: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1143,7 +1143,7 @@ The bandwidth in Mbps of the circuit being created.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuit-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1153,7 +1153,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuit-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L61">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L61">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1162,7 +1162,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuit-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L65">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L65">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1171,7 +1171,7 @@ The name of the ExpressRoute circuit. Changing this forces a new resource to be 
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuit-peeringLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L69">property <b>peeringLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L69">property <b>peeringLocation</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>peeringLocation: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1180,7 +1180,7 @@ The name of the peering location and **not** the Azure resource location.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuit-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L73">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L73">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1189,7 +1189,7 @@ The name of the resource group in which to create the ExpressRoute circuit. Chan
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuit-serviceKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L77">property <b>serviceKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L77">property <b>serviceKey</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>serviceKey: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1198,7 +1198,7 @@ The string needed by the service provider to provision the ExpressRoute circuit.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuit-serviceProviderName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L81">property <b>serviceProviderName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L81">property <b>serviceProviderName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>serviceProviderName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1207,7 +1207,7 @@ The name of the ExpressRoute Service Provider.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuit-serviceProviderProvisioningState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L85">property <b>serviceProviderProvisioningState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L85">property <b>serviceProviderProvisioningState</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>serviceProviderProvisioningState: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1216,7 +1216,7 @@ The ExpressRoute circuit provisioning state from your chosen service provider. P
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuit-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L89">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L89">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>sku: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1228,7 +1228,7 @@ A `sku` block for the ExpressRoute circuit as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuit-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L93">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L93">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1237,7 +1237,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuit-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1248,7 +1248,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ExpressRouteCircuitAuthorization">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L43">class <b>ExpressRouteCircuitAuthorization</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L43">class <b>ExpressRouteCircuitAuthorization</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1289,7 +1289,7 @@ const testExpressRouteCircuitAuthorization = new azure.network.ExpressRouteCircu
 ```
 
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitAuthorization-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L77"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L77"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1304,7 +1304,7 @@ Create a ExpressRouteCircuitAuthorization resource with the given unique name, a
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitAuthorization-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L52">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1316,7 +1316,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitAuthorization-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1324,7 +1324,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitAuthorization-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1336,7 +1336,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitAuthorization-authorizationKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L59">property <b>authorizationKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L59">property <b>authorizationKey</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>authorizationKey: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1345,7 +1345,7 @@ The Authorization Key.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitAuthorization-authorizationUseStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L63">property <b>authorizationUseStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L63">property <b>authorizationUseStatus</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>authorizationUseStatus: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1354,7 +1354,7 @@ The authorization use status.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitAuthorization-expressRouteCircuitName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L67">property <b>expressRouteCircuitName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L67">property <b>expressRouteCircuitName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>expressRouteCircuitName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1363,7 +1363,7 @@ The name of the Express Route Circuit in which to create the Authorization.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitAuthorization-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1373,7 +1373,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitAuthorization-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L72">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L72">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1383,7 +1383,7 @@ new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitAuthorization-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L77">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L77">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1393,7 +1393,7 @@ create the ExpressRoute circuit. Changing this forces a new resource to be creat
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitAuthorization-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1404,7 +1404,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ExpressRouteCircuitPeering">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L50">class <b>ExpressRouteCircuitPeering</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L50">class <b>ExpressRouteCircuitPeering</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1452,7 +1452,7 @@ const testExpressRouteCircuitPeering = new azure.network.ExpressRouteCircuitPeer
 ```
 
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeering-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L111"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L111"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1467,7 +1467,7 @@ Create a ExpressRouteCircuitPeering resource with the given unique name, argumen
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeering-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L59">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L59">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1479,7 +1479,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeering-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1487,7 +1487,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeering-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1499,7 +1499,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeering-azureAsn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L66">property <b>azureAsn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L66">property <b>azureAsn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>azureAsn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1508,7 +1508,7 @@ The ASN used by Azure.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeering-expressRouteCircuitName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L70">property <b>expressRouteCircuitName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L70">property <b>expressRouteCircuitName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>expressRouteCircuitName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1517,7 +1517,7 @@ The name of the ExpressRoute Circuit in which to create the Peering.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeering-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1527,7 +1527,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeering-microsoftPeeringConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L74">property <b>microsoftPeeringConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L74">property <b>microsoftPeeringConfig</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>microsoftPeeringConfig: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1538,7 +1538,7 @@ A `microsoft_peering_config` block as defined below. Required when `peering_type
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeering-peerAsn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L78">property <b>peerAsn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L78">property <b>peerAsn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>peerAsn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1547,7 +1547,7 @@ The Either a 16-bit or a 32-bit ASN. Can either be public or private..
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeering-peeringType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L82">property <b>peeringType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L82">property <b>peeringType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>peeringType: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1556,7 +1556,7 @@ The type of the ExpressRoute Circuit Peering. Acceptable values include `AzurePr
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeering-primaryAzurePort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L86">property <b>primaryAzurePort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L86">property <b>primaryAzurePort</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>primaryAzurePort: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1565,7 +1565,7 @@ The Primary Port used by Azure for this Peering.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeering-primaryPeerAddressPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L90">property <b>primaryPeerAddressPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L90">property <b>primaryPeerAddressPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>primaryPeerAddressPrefix: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1574,7 +1574,7 @@ A `/30` subnet for the primary link.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeering-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L95">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L95">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1584,7 +1584,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeering-secondaryAzurePort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L99">property <b>secondaryAzurePort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L99">property <b>secondaryAzurePort</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>secondaryAzurePort: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1593,7 +1593,7 @@ The Secondary Port used by Azure for this Peering.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeering-secondaryPeerAddressPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L103">property <b>secondaryPeerAddressPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L103">property <b>secondaryPeerAddressPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>secondaryPeerAddressPrefix: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1602,7 +1602,7 @@ A `/30` subnet for the secondary link.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeering-sharedKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L107">property <b>sharedKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L107">property <b>sharedKey</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>sharedKey: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1611,7 +1611,7 @@ The shared key. Can be a maximum of 25 characters.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeering-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1621,7 +1621,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeering-vlanId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L111">property <b>vlanId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L111">property <b>vlanId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>vlanId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1631,7 +1631,7 @@ A valid VLAN ID to establish this peering on.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Firewall">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewall.ts#L51">class <b>Firewall</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewall.ts#L51">class <b>Firewall</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1680,7 +1680,7 @@ const testFirewall = new azure.network.Firewall("test", {
 ```
 
 <h3 class="pdoc-member-header" id="Firewall-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewall.ts#L83"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewall.ts#L83"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1695,7 +1695,7 @@ Create a Firewall resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="Firewall-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewall.ts#L60">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewall.ts#L60">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1707,7 +1707,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Firewall-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1715,7 +1715,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Firewall-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1727,7 +1727,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="Firewall-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1737,7 +1737,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="Firewall-ipConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewall.ts#L67">property <b>ipConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewall.ts#L67">property <b>ipConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>ipConfiguration: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1752,7 +1752,7 @@ A `ip_configuration` block as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="Firewall-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewall.ts#L71">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewall.ts#L71">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1761,7 +1761,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="Firewall-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewall.ts#L75">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewall.ts#L75">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1770,7 +1770,7 @@ Specifies the name of the Firewall. Changing this forces a new resource to be cr
 
 </div>
 <h3 class="pdoc-member-header" id="Firewall-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewall.ts#L79">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewall.ts#L79">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1779,7 +1779,7 @@ The name of the resource group in which to create the resource. Changing this fo
 
 </div>
 <h3 class="pdoc-member-header" id="Firewall-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewall.ts#L83">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewall.ts#L83">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1788,7 +1788,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="Firewall-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1799,7 +1799,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FirewallApplicationRuleCollection">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L67">class <b>FirewallApplicationRuleCollection</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L67">class <b>FirewallApplicationRuleCollection</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1864,7 +1864,7 @@ const testFirewallApplicationRuleCollection = new azure.network.FirewallApplicat
 ```
 
 <h3 class="pdoc-member-header" id="FirewallApplicationRuleCollection-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L103"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L103"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1879,7 +1879,7 @@ Create a FirewallApplicationRuleCollection resource with the given unique name, 
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallApplicationRuleCollection-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L76">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L76">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1891,7 +1891,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallApplicationRuleCollection-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1899,7 +1899,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallApplicationRuleCollection-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1911,7 +1911,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallApplicationRuleCollection-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L83">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L83">property <b>action</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>action: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1920,7 +1920,7 @@ Specifies the action the rule will apply to matching traffic. Possible values ar
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallApplicationRuleCollection-azureFirewallName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L87">property <b>azureFirewallName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L87">property <b>azureFirewallName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>azureFirewallName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1929,7 +1929,7 @@ Specifies the name of the Firewall in which the Application Rule Collection shou
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallApplicationRuleCollection-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1939,7 +1939,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallApplicationRuleCollection-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L91">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L91">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1948,7 +1948,7 @@ Specifies the name of the Application Rule Collection which must be unique withi
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallApplicationRuleCollection-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L95">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L95">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>priority: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1957,7 +1957,7 @@ Specifies the priority of the rule collection. Possible values are between `100`
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallApplicationRuleCollection-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L99">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L99">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1966,7 +1966,7 @@ Specifies the name of the Resource Group in which the Firewall exists. Changing 
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallApplicationRuleCollection-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L103">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L103">property <b>rules</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>rules: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1985,7 +1985,7 @@ One or more `rule` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallApplicationRuleCollection-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1996,7 +1996,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FirewallNetworkRuleCollection">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L71">class <b>FirewallNetworkRuleCollection</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L71">class <b>FirewallNetworkRuleCollection</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2065,7 +2065,7 @@ const testFirewallNetworkRuleCollection = new azure.network.FirewallNetworkRuleC
 ```
 
 <h3 class="pdoc-member-header" id="FirewallNetworkRuleCollection-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L107"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L107"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2080,7 +2080,7 @@ Create a FirewallNetworkRuleCollection resource with the given unique name, argu
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallNetworkRuleCollection-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L80">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L80">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2092,7 +2092,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallNetworkRuleCollection-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2100,7 +2100,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallNetworkRuleCollection-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2112,7 +2112,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallNetworkRuleCollection-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L87">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L87">property <b>action</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>action: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2121,7 +2121,7 @@ Specifies the action the rule will apply to matching traffic. Possible values ar
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallNetworkRuleCollection-azureFirewallName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L91">property <b>azureFirewallName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L91">property <b>azureFirewallName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>azureFirewallName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2130,7 +2130,7 @@ Specifies the name of the Firewall in which the Network Rule Collection should b
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallNetworkRuleCollection-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2140,7 +2140,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallNetworkRuleCollection-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L95">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L95">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2149,7 +2149,7 @@ Specifies the name of the Network Rule Collection which must be unique within th
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallNetworkRuleCollection-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L99">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L99">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>priority: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2158,7 +2158,7 @@ Specifies the priority of the rule collection. Possible values are between `100`
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallNetworkRuleCollection-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L103">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L103">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2167,7 +2167,7 @@ Specifies the name of the Resource Group in which the Firewall exists. Changing 
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallNetworkRuleCollection-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L107">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L107">property <b>rules</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>rules: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -2183,7 +2183,7 @@ One or more `rule` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallNetworkRuleCollection-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2194,7 +2194,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LocalNetworkGateway">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/localNetworkGateway.ts#L29">class <b>LocalNetworkGateway</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/localNetworkGateway.ts#L29">class <b>LocalNetworkGateway</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2221,7 +2221,7 @@ const home = new azure.network.LocalNetworkGateway("home", {
 ```
 
 <h3 class="pdoc-member-header" id="LocalNetworkGateway-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/localNetworkGateway.ts#L75"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/localNetworkGateway.ts#L75"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2236,7 +2236,7 @@ Create a LocalNetworkGateway resource with the given unique name, arguments, and
 
 </div>
 <h3 class="pdoc-member-header" id="LocalNetworkGateway-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/localNetworkGateway.ts#L38">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/localNetworkGateway.ts#L38">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2248,7 +2248,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="LocalNetworkGateway-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2256,7 +2256,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="LocalNetworkGateway-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2268,7 +2268,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="LocalNetworkGateway-addressSpaces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/localNetworkGateway.ts#L46">property <b>addressSpaces</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/localNetworkGateway.ts#L46">property <b>addressSpaces</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>addressSpaces: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -2278,7 +2278,7 @@ address spaces the gateway exposes.
 
 </div>
 <h3 class="pdoc-member-header" id="LocalNetworkGateway-bgpSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/localNetworkGateway.ts#L51">property <b>bgpSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/localNetworkGateway.ts#L51">property <b>bgpSettings</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>bgpSettings: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -2292,7 +2292,7 @@ Local Network Gateway's BGP speaker settings.
 
 </div>
 <h3 class="pdoc-member-header" id="LocalNetworkGateway-gatewayAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/localNetworkGateway.ts#L56">property <b>gatewayAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/localNetworkGateway.ts#L56">property <b>gatewayAddress</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>gatewayAddress: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2302,7 +2302,7 @@ connect.
 
 </div>
 <h3 class="pdoc-member-header" id="LocalNetworkGateway-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2312,7 +2312,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="LocalNetworkGateway-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/localNetworkGateway.ts#L61">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/localNetworkGateway.ts#L61">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2322,7 +2322,7 @@ created. Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="LocalNetworkGateway-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/localNetworkGateway.ts#L66">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/localNetworkGateway.ts#L66">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2332,7 +2332,7 @@ forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="LocalNetworkGateway-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/localNetworkGateway.ts#L71">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/localNetworkGateway.ts#L71">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2342,7 +2342,7 @@ create the local network gateway.
 
 </div>
 <h3 class="pdoc-member-header" id="LocalNetworkGateway-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/localNetworkGateway.ts#L75">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/localNetworkGateway.ts#L75">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -2351,7 +2351,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="LocalNetworkGateway-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2362,7 +2362,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkInterface">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L47">class <b>NetworkInterface</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L47">class <b>NetworkInterface</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2407,7 +2407,7 @@ const testNetworkInterface = new azure.network.NetworkInterface("test", {
 ```
 
 <h3 class="pdoc-member-header" id="NetworkInterface-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L120"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L120"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2422,7 +2422,7 @@ Create a NetworkInterface resource with the given unique name, arguments, and op
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterface-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L56">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L56">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2434,7 +2434,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterface-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2442,7 +2442,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterface-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2454,7 +2454,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterface-appliedDnsServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L63">property <b>appliedDnsServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L63">property <b>appliedDnsServers</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>appliedDnsServers: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -2463,7 +2463,7 @@ If the VM that uses this NIC is part of an Availability Set, then this list will
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterface-dnsServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L67">property <b>dnsServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L67">property <b>dnsServers</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>dnsServers: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -2472,7 +2472,7 @@ List of DNS servers IP addresses to use for this NIC, overrides the VNet-level s
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterface-enableAcceleratedNetworking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L71">property <b>enableAcceleratedNetworking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L71">property <b>enableAcceleratedNetworking</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>enableAcceleratedNetworking: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2481,7 +2481,7 @@ Enables Azure Accelerated Networking using SR-IOV. Only certain VM instance size
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterface-enableIpForwarding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L75">property <b>enableIpForwarding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L75">property <b>enableIpForwarding</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>enableIpForwarding: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2490,7 +2490,7 @@ Enables IP Forwarding on the NIC. Defaults to `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterface-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2500,7 +2500,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterface-internalDnsNameLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L79">property <b>internalDnsNameLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L79">property <b>internalDnsNameLabel</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>internalDnsNameLabel: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2509,13 +2509,13 @@ Relative DNS name for this NIC used for internal communications between VMs in t
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterface-internalFqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L80">property <b>internalFqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L80">property <b>internalFqdn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>internalFqdn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterface-ipConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L84">property <b>ipConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L84">property <b>ipConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>ipConfigurations: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -2536,7 +2536,7 @@ One or more `ip_configuration` associated with this NIC as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterface-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L88">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L88">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2545,7 +2545,7 @@ The location/region where the network interface is created. Changing this forces
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterface-macAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L92">property <b>macAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L92">property <b>macAddress</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>macAddress: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2554,7 +2554,7 @@ The media access control (MAC) address of the network interface.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterface-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L96">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L96">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2563,7 +2563,7 @@ The name of the network interface. Changing this forces a new resource to be cre
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterface-networkSecurityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L100">property <b>networkSecurityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L100">property <b>networkSecurityGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>networkSecurityGroupId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2572,7 +2572,7 @@ The ID of the Network Security Group to associate with the network interface.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterface-privateIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L104">property <b>privateIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L104">property <b>privateIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>privateIpAddress: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2581,7 +2581,7 @@ The first private IP address of the network interface.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterface-privateIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L108">property <b>privateIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L108">property <b>privateIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>privateIpAddresses: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -2590,7 +2590,7 @@ The private IP addresses of the network interface.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterface-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L112">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L112">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2599,7 +2599,7 @@ The name of the resource group in which to create the network interface. Changin
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterface-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L116">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L116">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -2608,7 +2608,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterface-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2618,7 +2618,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterface-virtualMachineId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L120">property <b>virtualMachineId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L120">property <b>virtualMachineId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>virtualMachineId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2628,7 +2628,7 @@ Reference to a VM with which this NIC has been associated.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts#L112">class <b>NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts#L112">class <b>NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2738,7 +2738,7 @@ const backend = new azure.network.Subnet("backend", {
 ```
 
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts#L136"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts#L136"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2753,7 +2753,7 @@ Create a NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation resourc
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts#L121">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts#L121">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2765,7 +2765,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2773,7 +2773,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2785,7 +2785,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation-backendAddressPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts#L128">property <b>backendAddressPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts#L128">property <b>backendAddressPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>backendAddressPoolId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2794,7 +2794,7 @@ The ID of the Application Gateway's Backend Address Pool which this Network Inte
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2804,7 +2804,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation-ipConfigurationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts#L132">property <b>ipConfigurationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts#L132">property <b>ipConfigurationName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>ipConfigurationName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2813,7 +2813,7 @@ The Name of the IP Configuration within the Network Interface which should be co
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation-networkInterfaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts#L136">property <b>networkInterfaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts#L136">property <b>networkInterfaceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>networkInterfaceId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2822,7 +2822,7 @@ The ID of the Network Interface. Changing this forces a new resource to be creat
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2833,7 +2833,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkInterfaceApplicationSecurityGroupAssociation">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts#L55">class <b>NetworkInterfaceApplicationSecurityGroupAssociation</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts#L55">class <b>NetworkInterfaceApplicationSecurityGroupAssociation</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2886,7 +2886,7 @@ const testNetworkInterfaceApplicationSecurityGroupAssociation = new azure.networ
 ```
 
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationSecurityGroupAssociation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts#L79"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts#L79"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2901,7 +2901,7 @@ Create a NetworkInterfaceApplicationSecurityGroupAssociation resource with the g
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationSecurityGroupAssociation-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts#L64">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts#L64">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2913,7 +2913,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationSecurityGroupAssociation-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2921,7 +2921,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationSecurityGroupAssociation-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2933,7 +2933,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationSecurityGroupAssociation-applicationSecurityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts#L71">property <b>applicationSecurityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts#L71">property <b>applicationSecurityGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>applicationSecurityGroupId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2942,7 +2942,7 @@ The ID of the Application Security Group which this Network Interface which shou
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationSecurityGroupAssociation-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2952,7 +2952,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationSecurityGroupAssociation-ipConfigurationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts#L75">property <b>ipConfigurationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts#L75">property <b>ipConfigurationName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>ipConfigurationName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2961,7 +2961,7 @@ The Name of the IP Configuration within the Network Interface which should be co
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationSecurityGroupAssociation-networkInterfaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts#L79">property <b>networkInterfaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts#L79">property <b>networkInterfaceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>networkInterfaceId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2970,7 +2970,7 @@ The ID of the Network Interface. Changing this forces a new resource to be creat
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationSecurityGroupAssociation-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2981,7 +2981,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkInterfaceBackendAddressPoolAssociation">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts#L69">class <b>NetworkInterfaceBackendAddressPoolAssociation</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts#L69">class <b>NetworkInterfaceBackendAddressPoolAssociation</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -3048,7 +3048,7 @@ const testNetworkInterfaceBackendAddressPoolAssociation = new azure.network.Netw
 ```
 
 <h3 class="pdoc-member-header" id="NetworkInterfaceBackendAddressPoolAssociation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts#L93"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts#L93"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3063,7 +3063,7 @@ Create a NetworkInterfaceBackendAddressPoolAssociation resource with the given u
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceBackendAddressPoolAssociation-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts#L78">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts#L78">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3075,7 +3075,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceBackendAddressPoolAssociation-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3083,7 +3083,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceBackendAddressPoolAssociation-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3095,7 +3095,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceBackendAddressPoolAssociation-backendAddressPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts#L85">property <b>backendAddressPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts#L85">property <b>backendAddressPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>backendAddressPoolId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3104,7 +3104,7 @@ The ID of the Load Balancer Backend Address Pool which this Network Interface wh
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceBackendAddressPoolAssociation-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3114,7 +3114,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceBackendAddressPoolAssociation-ipConfigurationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts#L89">property <b>ipConfigurationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts#L89">property <b>ipConfigurationName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>ipConfigurationName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3123,7 +3123,7 @@ The Name of the IP Configuration within the Network Interface which should be co
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceBackendAddressPoolAssociation-networkInterfaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts#L93">property <b>networkInterfaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts#L93">property <b>networkInterfaceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>networkInterfaceId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3132,7 +3132,7 @@ The ID of the Network Interface. Changing this forces a new resource to be creat
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceBackendAddressPoolAssociation-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3143,7 +3143,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkInterfaceNatRuleAssociation">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts#L73">class <b>NetworkInterfaceNatRuleAssociation</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts#L73">class <b>NetworkInterfaceNatRuleAssociation</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -3214,7 +3214,7 @@ const testNetworkInterfaceNatRuleAssociation = new azure.network.NetworkInterfac
 ```
 
 <h3 class="pdoc-member-header" id="NetworkInterfaceNatRuleAssociation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts#L97"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts#L97"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3229,7 +3229,7 @@ Create a NetworkInterfaceNatRuleAssociation resource with the given unique name,
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceNatRuleAssociation-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts#L82">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts#L82">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3241,7 +3241,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceNatRuleAssociation-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3249,7 +3249,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceNatRuleAssociation-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3261,7 +3261,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceNatRuleAssociation-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3271,7 +3271,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceNatRuleAssociation-ipConfigurationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts#L89">property <b>ipConfigurationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts#L89">property <b>ipConfigurationName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>ipConfigurationName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3280,7 +3280,7 @@ The Name of the IP Configuration within the Network Interface which should be co
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceNatRuleAssociation-natRuleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts#L93">property <b>natRuleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts#L93">property <b>natRuleId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>natRuleId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3289,7 +3289,7 @@ The ID of the Load Balancer NAT Rule which this Network Interface which should b
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceNatRuleAssociation-networkInterfaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts#L97">property <b>networkInterfaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts#L97">property <b>networkInterfaceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>networkInterfaceId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3298,7 +3298,7 @@ The ID of the Network Interface. Changing this forces a new resource to be creat
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceNatRuleAssociation-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3309,7 +3309,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkSecurityGroup">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityGroup.ts#L45">class <b>NetworkSecurityGroup</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityGroup.ts#L45">class <b>NetworkSecurityGroup</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -3352,7 +3352,7 @@ const testNetworkSecurityGroup = new azure.network.NetworkSecurityGroup("test", 
 ```
 
 <h3 class="pdoc-member-header" id="NetworkSecurityGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityGroup.ts#L77"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityGroup.ts#L77"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3367,7 +3367,7 @@ Create a NetworkSecurityGroup resource with the given unique name, arguments, an
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityGroup.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityGroup.ts#L54">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3379,7 +3379,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3387,7 +3387,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3399,7 +3399,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3409,7 +3409,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityGroup-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityGroup.ts#L61">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityGroup.ts#L61">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3418,7 +3418,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityGroup.ts#L65">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityGroup.ts#L65">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3427,7 +3427,7 @@ Specifies the name of the network security group. Changing this forces a new res
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityGroup-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityGroup.ts#L69">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityGroup.ts#L69">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3436,7 +3436,7 @@ The name of the resource group in which to create the network security group. Ch
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityGroup-securityRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityGroup.ts#L73">property <b>securityRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityGroup.ts#L73">property <b>securityRules</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>securityRules: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -3462,7 +3462,7 @@ One or more `security_rule` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityGroup-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityGroup.ts#L77">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityGroup.ts#L77">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3471,7 +3471,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3482,7 +3482,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkSecurityRule">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L44">class <b>NetworkSecurityRule</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L44">class <b>NetworkSecurityRule</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -3524,7 +3524,7 @@ const testNetworkSecurityRule = new azure.network.NetworkSecurityRule("test", {
 ```
 
 <h3 class="pdoc-member-header" id="NetworkSecurityRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L128"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L128"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3539,7 +3539,7 @@ Create a NetworkSecurityRule resource with the given unique name, arguments, and
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L53">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3551,7 +3551,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3559,7 +3559,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3571,7 +3571,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRule-access">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L60">property <b>access</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L60">property <b>access</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>access: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3580,7 +3580,7 @@ Specifies whether network traffic is allowed or denied. Possible values are `All
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRule-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L64">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L64">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3589,7 +3589,7 @@ A description for this rule. Restricted to 140 characters.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRule-destinationAddressPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L68">property <b>destinationAddressPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L68">property <b>destinationAddressPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>destinationAddressPrefix: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3598,7 +3598,7 @@ CIDR or destination IP range or * to match any IP. Tags such as ‘VirtualNetwor
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRule-destinationAddressPrefixes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L72">property <b>destinationAddressPrefixes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L72">property <b>destinationAddressPrefixes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>destinationAddressPrefixes: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3607,7 +3607,7 @@ List of destination address prefixes. Tags may not be used. This is required if 
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRule-destinationApplicationSecurityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L76">property <b>destinationApplicationSecurityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L76">property <b>destinationApplicationSecurityGroupIds</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>destinationApplicationSecurityGroupIds: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3616,7 +3616,7 @@ A List of destination Application Security Group ID's
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRule-destinationPortRange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L80">property <b>destinationPortRange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L80">property <b>destinationPortRange</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>destinationPortRange: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3625,7 +3625,7 @@ Destination Port or Range. Integer or range between `0` and `65535` or `*` to ma
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRule-destinationPortRanges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L84">property <b>destinationPortRanges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L84">property <b>destinationPortRanges</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>destinationPortRanges: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3634,7 +3634,7 @@ List of destination ports or port ranges. This is required if `destination_port_
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRule-direction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L88">property <b>direction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L88">property <b>direction</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>direction: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3643,7 +3643,7 @@ The direction specifies if rule will be evaluated on incoming or outgoing traffi
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3653,7 +3653,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L92">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L92">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3662,7 +3662,7 @@ The name of the security rule. This needs to be unique across all Rules in the N
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRule-networkSecurityGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L96">property <b>networkSecurityGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L96">property <b>networkSecurityGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>networkSecurityGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3671,7 +3671,7 @@ The name of the Network Security Group that we want to attach the rule to. Chang
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRule-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L100">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L100">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>priority: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3680,7 +3680,7 @@ Specifies the priority of the rule. The value can be between 100 and 4096. The p
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRule-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L104">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L104">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>protocol: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3689,7 +3689,7 @@ Network protocol this rule applies to. Possible values include `Tcp`, `Udp` or `
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRule-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L108">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L108">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3698,7 +3698,7 @@ The name of the resource group in which to create the Network Security Rule. Cha
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRule-sourceAddressPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L112">property <b>sourceAddressPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L112">property <b>sourceAddressPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>sourceAddressPrefix: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3707,7 +3707,7 @@ CIDR or source IP range or * to match any IP. Tags such as ‘VirtualNetwork’,
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRule-sourceAddressPrefixes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L116">property <b>sourceAddressPrefixes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L116">property <b>sourceAddressPrefixes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>sourceAddressPrefixes: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3716,7 +3716,7 @@ List of source address prefixes. Tags may not be used. This is required if `sour
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRule-sourceApplicationSecurityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L120">property <b>sourceApplicationSecurityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L120">property <b>sourceApplicationSecurityGroupIds</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>sourceApplicationSecurityGroupIds: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3725,7 +3725,7 @@ A List of source Application Security Group ID's
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRule-sourcePortRange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L124">property <b>sourcePortRange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L124">property <b>sourcePortRange</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>sourcePortRange: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3734,7 +3734,7 @@ Source Port or Range. Integer or range between `0` and `65535` or `*` to match a
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRule-sourcePortRanges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L128">property <b>sourcePortRanges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L128">property <b>sourcePortRanges</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>sourcePortRanges: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3743,7 +3743,7 @@ List of source ports or port ranges. This is required if `source_port_range` is 
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3754,7 +3754,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkWatcher">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkWatcher.ts#L27">class <b>NetworkWatcher</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkWatcher.ts#L27">class <b>NetworkWatcher</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -3779,7 +3779,7 @@ const testNetworkWatcher = new azure.network.NetworkWatcher("test", {
 ```
 
 <h3 class="pdoc-member-header" id="NetworkWatcher-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkWatcher.ts#L55"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkWatcher.ts#L55"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3794,7 +3794,7 @@ Create a NetworkWatcher resource with the given unique name, arguments, and opti
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkWatcher-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkWatcher.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkWatcher.ts#L36">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3806,7 +3806,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkWatcher-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3814,7 +3814,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkWatcher-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3826,7 +3826,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkWatcher-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3836,7 +3836,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkWatcher-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkWatcher.ts#L43">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkWatcher.ts#L43">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3845,7 +3845,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkWatcher-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkWatcher.ts#L47">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkWatcher.ts#L47">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3854,7 +3854,7 @@ The name of the Network Watcher. Changing this forces a new resource to be creat
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkWatcher-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkWatcher.ts#L51">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkWatcher.ts#L51">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3863,7 +3863,7 @@ The name of the resource group in which to create the Network Watcher. Changing 
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkWatcher-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkWatcher.ts#L55">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkWatcher.ts#L55">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3872,7 +3872,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkWatcher-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3883,7 +3883,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PacketCapture">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/packetCapture.ts#L106">class <b>PacketCapture</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/packetCapture.ts#L106">class <b>PacketCapture</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -3987,7 +3987,7 @@ const testPacketCapture = new azure.network.PacketCapture("test", {
 > **NOTE:** This Resource requires that [the Network Watcher Virtual Machine Extension](https://docs.microsoft.com/azure/network-watcher/network-watcher-packet-capture-manage-portal#before-you-begin) is installed on the Virtual Machine before capturing can be enabled which can be installed via the `azurerm_virtual_machine_extension` resource.
 
 <h3 class="pdoc-member-header" id="PacketCapture-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/packetCapture.ts#L154"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/packetCapture.ts#L154"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -4002,7 +4002,7 @@ Create a PacketCapture resource with the given unique name, arguments, and optio
 
 </div>
 <h3 class="pdoc-member-header" id="PacketCapture-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/packetCapture.ts#L115">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/packetCapture.ts#L115">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -4014,7 +4014,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="PacketCapture-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -4022,7 +4022,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="PacketCapture-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -4034,7 +4034,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="PacketCapture-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/packetCapture.ts#L122">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/packetCapture.ts#L122">property <b>filters</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>filters: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -4049,7 +4049,7 @@ One or more `filter` blocks as defined below. Changing this forces a new resourc
 
 </div>
 <h3 class="pdoc-member-header" id="PacketCapture-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4059,7 +4059,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="PacketCapture-maximumBytesPerPacket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/packetCapture.ts#L126">property <b>maximumBytesPerPacket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/packetCapture.ts#L126">property <b>maximumBytesPerPacket</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>maximumBytesPerPacket: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -4068,7 +4068,7 @@ The number of bytes captured per packet. The remaining bytes are truncated. Defa
 
 </div>
 <h3 class="pdoc-member-header" id="PacketCapture-maximumBytesPerSession">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/packetCapture.ts#L130">property <b>maximumBytesPerSession</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/packetCapture.ts#L130">property <b>maximumBytesPerSession</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>maximumBytesPerSession: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -4077,7 +4077,7 @@ Maximum size of the capture in Bytes. Defaults to `1073741824` (1GB). Changing t
 
 </div>
 <h3 class="pdoc-member-header" id="PacketCapture-maximumCaptureDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/packetCapture.ts#L134">property <b>maximumCaptureDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/packetCapture.ts#L134">property <b>maximumCaptureDuration</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>maximumCaptureDuration: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -4086,7 +4086,7 @@ The maximum duration of the capture session in seconds. Defaults to `18000` (5 h
 
 </div>
 <h3 class="pdoc-member-header" id="PacketCapture-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/packetCapture.ts#L138">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/packetCapture.ts#L138">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4095,7 +4095,7 @@ The name to use for this Packet Capture. Changing this forces a new resource to 
 
 </div>
 <h3 class="pdoc-member-header" id="PacketCapture-networkWatcherName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/packetCapture.ts#L142">property <b>networkWatcherName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/packetCapture.ts#L142">property <b>networkWatcherName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>networkWatcherName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4104,7 +4104,7 @@ The name of the Network Watcher. Changing this forces a new resource to be creat
 
 </div>
 <h3 class="pdoc-member-header" id="PacketCapture-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/packetCapture.ts#L146">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/packetCapture.ts#L146">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4113,7 +4113,7 @@ The name of the resource group in which the Network Watcher exists. Changing thi
 
 </div>
 <h3 class="pdoc-member-header" id="PacketCapture-storageLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/packetCapture.ts#L150">property <b>storageLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/packetCapture.ts#L150">property <b>storageLocation</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>storageLocation: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -4126,7 +4126,7 @@ A `storage_location` block as defined below. Changing this forces a new resource
 
 </div>
 <h3 class="pdoc-member-header" id="PacketCapture-targetResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/packetCapture.ts#L154">property <b>targetResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/packetCapture.ts#L154">property <b>targetResourceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>targetResourceId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4135,7 +4135,7 @@ The ID of the Resource to capture packets from. Changing this forces a new resou
 
 </div>
 <h3 class="pdoc-member-header" id="PacketCapture-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -4146,7 +4146,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PublicIp">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L31">class <b>PublicIp</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L31">class <b>PublicIp</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -4175,7 +4175,7 @@ const testPublicIp = new azure.network.PublicIp("test", {
 ```
 
 <h3 class="pdoc-member-header" id="PublicIp-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L102"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L102"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -4190,7 +4190,7 @@ Create a PublicIp resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIp-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L40">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -4202,7 +4202,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIp-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -4210,7 +4210,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIp-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -4222,7 +4222,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIp-allocationMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L47">property <b>allocationMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L47">property <b>allocationMethod</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>allocationMethod: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4231,7 +4231,7 @@ Defines the allocation method for this IP address. Possible values are `Static` 
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIp-domainNameLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L51">property <b>domainNameLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L51">property <b>domainNameLabel</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>domainNameLabel: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -4240,7 +4240,7 @@ Label for the Domain Name. Will be used to make up the FQDN.  If a domain name l
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIp-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L55">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L55">property <b>fqdn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>fqdn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4249,7 +4249,7 @@ Fully qualified domain name of the A DNS record associated with the public IP. T
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIp-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4259,7 +4259,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIp-idleTimeoutInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L59">property <b>idleTimeoutInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L59">property <b>idleTimeoutInMinutes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>idleTimeoutInMinutes: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -4268,7 +4268,7 @@ Specifies the timeout for the TCP idle connection. The value can be set between 
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIp-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L63">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L63">property <b>ipAddress</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>ipAddress: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4277,7 +4277,7 @@ The IP address value that was allocated.
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIp-ipVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L67">property <b>ipVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L67">property <b>ipVersion</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>ipVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -4286,7 +4286,7 @@ The IP Version to use, IPv6 or IPv4.
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIp-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L71">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L71">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4295,7 +4295,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIp-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L76">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4305,13 +4305,13 @@ new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIp-publicIpAddressAllocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L77">property <b>publicIpAddressAllocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L77">property <b>publicIpAddressAllocation</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>publicIpAddressAllocation: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="PublicIp-publicIpPrefixId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L81">property <b>publicIpPrefixId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L81">property <b>publicIpPrefixId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>publicIpPrefixId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -4320,7 +4320,7 @@ If specified then public IP address allocated will be provided from the public I
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIp-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L86">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L86">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4330,7 +4330,7 @@ create the public ip.
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIp-reverseFqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L90">property <b>reverseFqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L90">property <b>reverseFqdn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>reverseFqdn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -4339,7 +4339,7 @@ A fully qualified domain name that resolves to this public IP address. If the re
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIp-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L94">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L94">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>sku: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -4348,7 +4348,7 @@ The SKU of the Public IP. Accepted values are `Basic` and `Standard`. Defaults t
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIp-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L98">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L98">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -4357,7 +4357,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIp-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -4367,7 +4367,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIp-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L102">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L102">property <b>zones</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>zones: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -4377,7 +4377,7 @@ A collection containing the availability zone to allocate the Public IP in.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PublicIpPrefix">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIpPrefix.ts#L33">class <b>PublicIpPrefix</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIpPrefix.ts#L33">class <b>PublicIpPrefix</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -4408,7 +4408,7 @@ const testPublicIpPrefix = new azure.network.PublicIpPrefix("test", {
 ```
 
 <h3 class="pdoc-member-header" id="PublicIpPrefix-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIpPrefix.ts#L77"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIpPrefix.ts#L77"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -4423,7 +4423,7 @@ Create a PublicIpPrefix resource with the given unique name, arguments, and opti
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpPrefix-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIpPrefix.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIpPrefix.ts#L42">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -4435,7 +4435,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpPrefix-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -4443,7 +4443,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpPrefix-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -4455,7 +4455,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpPrefix-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4465,7 +4465,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpPrefix-ipPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIpPrefix.ts#L49">property <b>ipPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIpPrefix.ts#L49">property <b>ipPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>ipPrefix: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4474,7 +4474,7 @@ The IP address prefix value that was allocated.
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpPrefix-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIpPrefix.ts#L53">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIpPrefix.ts#L53">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4483,7 +4483,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpPrefix-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIpPrefix.ts#L57">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIpPrefix.ts#L57">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4492,7 +4492,7 @@ Specifies the name of the Public IP resource . Changing this forces a new resour
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpPrefix-prefixLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIpPrefix.ts#L61">property <b>prefixLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIpPrefix.ts#L61">property <b>prefixLength</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>prefixLength: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -4501,7 +4501,7 @@ Specifies the number of bits of the prefix. The value can be set between 24 (256
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpPrefix-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIpPrefix.ts#L65">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIpPrefix.ts#L65">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4510,7 +4510,7 @@ The name of the resource group in which to create the public IP.
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpPrefix-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIpPrefix.ts#L69">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIpPrefix.ts#L69">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>sku: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -4519,7 +4519,7 @@ The SKU of the Public IP Prefix. Accepted values are `Standard`. Defaults to `St
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpPrefix-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIpPrefix.ts#L73">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIpPrefix.ts#L73">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -4528,7 +4528,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpPrefix-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -4538,7 +4538,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpPrefix-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIpPrefix.ts#L77">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIpPrefix.ts#L77">property <b>zones</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>zones: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -4548,7 +4548,7 @@ A collection containing the availability zone to allocate the Public IP in.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Route">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/route.ts#L34">class <b>Route</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/route.ts#L34">class <b>Route</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -4580,7 +4580,7 @@ const testRoute = new azure.network.Route("test", {
 ```
 
 <h3 class="pdoc-member-header" id="Route-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/route.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/route.ts#L70"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -4595,7 +4595,7 @@ Create a Route resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="Route-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/route.ts#L43">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/route.ts#L43">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -4607,7 +4607,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Route-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -4615,7 +4615,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Route-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -4627,7 +4627,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="Route-addressPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/route.ts#L50">property <b>addressPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/route.ts#L50">property <b>addressPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>addressPrefix: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4636,7 +4636,7 @@ The destination CIDR to which the route applies, such as `10.1.0.0/16`
 
 </div>
 <h3 class="pdoc-member-header" id="Route-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4646,7 +4646,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="Route-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/route.ts#L54">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/route.ts#L54">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4655,7 +4655,7 @@ The name of the route. Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="Route-nextHopInIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/route.ts#L58">property <b>nextHopInIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/route.ts#L58">property <b>nextHopInIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>nextHopInIpAddress: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -4664,7 +4664,7 @@ Contains the IP address packets should be forwarded to. Next hop values are only
 
 </div>
 <h3 class="pdoc-member-header" id="Route-nextHopType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/route.ts#L62">property <b>nextHopType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/route.ts#L62">property <b>nextHopType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>nextHopType: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4673,7 +4673,7 @@ The type of Azure hop the packet should be sent to. Possible values are `Virtual
 
 </div>
 <h3 class="pdoc-member-header" id="Route-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/route.ts#L66">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/route.ts#L66">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4682,7 +4682,7 @@ The name of the resource group in which to create the route. Changing this force
 
 </div>
 <h3 class="pdoc-member-header" id="Route-routeTableName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/route.ts#L70">property <b>routeTableName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/route.ts#L70">property <b>routeTableName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>routeTableName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4691,7 +4691,7 @@ The name of the route table within which create the route. Changing this forces 
 
 </div>
 <h3 class="pdoc-member-header" id="Route-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -4702,7 +4702,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RouteTable">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/routeTable.ts#L36">class <b>RouteTable</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/routeTable.ts#L36">class <b>RouteTable</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -4736,7 +4736,7 @@ const testRouteTable = new azure.network.RouteTable("test", {
 ```
 
 <h3 class="pdoc-member-header" id="RouteTable-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/routeTable.ts#L76"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/routeTable.ts#L76"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -4751,7 +4751,7 @@ Create a RouteTable resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="RouteTable-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/routeTable.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/routeTable.ts#L45">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -4763,7 +4763,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="RouteTable-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -4771,7 +4771,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="RouteTable-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -4783,7 +4783,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="RouteTable-disableBgpRoutePropagation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/routeTable.ts#L52">property <b>disableBgpRoutePropagation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/routeTable.ts#L52">property <b>disableBgpRoutePropagation</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>disableBgpRoutePropagation: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -4792,7 +4792,7 @@ Boolean flag which controls propagation of routes learned by BGP on that route t
 
 </div>
 <h3 class="pdoc-member-header" id="RouteTable-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4802,7 +4802,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="RouteTable-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/routeTable.ts#L56">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/routeTable.ts#L56">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4811,7 +4811,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="RouteTable-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/routeTable.ts#L60">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/routeTable.ts#L60">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4820,7 +4820,7 @@ The name of the route table. Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="RouteTable-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/routeTable.ts#L64">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/routeTable.ts#L64">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4829,7 +4829,7 @@ The name of the resource group in which to create the route table. Changing this
 
 </div>
 <h3 class="pdoc-member-header" id="RouteTable-routes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/routeTable.ts#L68">property <b>routes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/routeTable.ts#L68">property <b>routes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>routes: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -4843,7 +4843,7 @@ Can be specified multiple times to define multiple routes. Each `route` block su
 
 </div>
 <h3 class="pdoc-member-header" id="RouteTable-subnets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/routeTable.ts#L72">property <b>subnets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/routeTable.ts#L72">property <b>subnets</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>subnets: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -4852,7 +4852,7 @@ The collection of Subnets associated with this route table.
 
 </div>
 <h3 class="pdoc-member-header" id="RouteTable-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/routeTable.ts#L76">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/routeTable.ts#L76">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -4861,7 +4861,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="RouteTable-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -4872,7 +4872,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Subnet">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L45">class <b>Subnet</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnet.ts#L45">class <b>Subnet</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -4915,7 +4915,7 @@ const testSubnet = new azure.network.Subnet("test", {
 ```
 
 <h3 class="pdoc-member-header" id="Subnet-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L93"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnet.ts#L93"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -4930,7 +4930,7 @@ Create a Subnet resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="Subnet-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnet.ts#L54">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -4942,7 +4942,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Subnet-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -4950,7 +4950,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Subnet-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -4962,7 +4962,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="Subnet-addressPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L61">property <b>addressPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnet.ts#L61">property <b>addressPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>addressPrefix: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4971,7 +4971,7 @@ The address prefix to use for the subnet.
 
 </div>
 <h3 class="pdoc-member-header" id="Subnet-delegations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L65">property <b>delegations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnet.ts#L65">property <b>delegations</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>delegations: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -4986,7 +4986,7 @@ One or more `delegation` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="Subnet-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4996,7 +4996,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="Subnet-ipConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L69">property <b>ipConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnet.ts#L69">property <b>ipConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>ipConfigurations: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -5005,7 +5005,7 @@ The collection of IP Configurations with IPs within this subnet.
 
 </div>
 <h3 class="pdoc-member-header" id="Subnet-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L73">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnet.ts#L73">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5014,7 +5014,7 @@ The name of the subnet. Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="Subnet-networkSecurityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L77">property <b>networkSecurityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnet.ts#L77">property <b>networkSecurityGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>networkSecurityGroupId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -5023,7 +5023,7 @@ The ID of the Network Security Group to associate with the subnet.
 
 </div>
 <h3 class="pdoc-member-header" id="Subnet-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L81">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnet.ts#L81">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5032,7 +5032,7 @@ The name of the resource group in which to create the subnet. Changing this forc
 
 </div>
 <h3 class="pdoc-member-header" id="Subnet-routeTableId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L85">property <b>routeTableId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnet.ts#L85">property <b>routeTableId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>routeTableId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -5041,7 +5041,7 @@ The ID of the Route Table to associate with the subnet.
 
 </div>
 <h3 class="pdoc-member-header" id="Subnet-serviceEndpoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L89">property <b>serviceEndpoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnet.ts#L89">property <b>serviceEndpoints</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>serviceEndpoints: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -5050,7 +5050,7 @@ The list of Service endpoints to associate with the subnet. Possible values incl
 
 </div>
 <h3 class="pdoc-member-header" id="Subnet-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -5060,7 +5060,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="Subnet-virtualNetworkName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L93">property <b>virtualNetworkName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnet.ts#L93">property <b>virtualNetworkName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>virtualNetworkName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5070,7 +5070,7 @@ The name of the virtual network to which to attach the subnet. Changing this for
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubnetNetworkSecurityGroupAssociation">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnetNetworkSecurityGroupAssociation.ts#L57">class <b>SubnetNetworkSecurityGroupAssociation</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnetNetworkSecurityGroupAssociation.ts#L57">class <b>SubnetNetworkSecurityGroupAssociation</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -5125,7 +5125,7 @@ const testSubnetNetworkSecurityGroupAssociation = new azure.network.SubnetNetwor
 ```
 
 <h3 class="pdoc-member-header" id="SubnetNetworkSecurityGroupAssociation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnetNetworkSecurityGroupAssociation.ts#L77"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnetNetworkSecurityGroupAssociation.ts#L77"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -5140,7 +5140,7 @@ Create a SubnetNetworkSecurityGroupAssociation resource with the given unique na
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetNetworkSecurityGroupAssociation-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnetNetworkSecurityGroupAssociation.ts#L66">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnetNetworkSecurityGroupAssociation.ts#L66">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -5152,7 +5152,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetNetworkSecurityGroupAssociation-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -5160,7 +5160,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetNetworkSecurityGroupAssociation-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -5172,7 +5172,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetNetworkSecurityGroupAssociation-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -5182,7 +5182,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetNetworkSecurityGroupAssociation-networkSecurityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnetNetworkSecurityGroupAssociation.ts#L73">property <b>networkSecurityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnetNetworkSecurityGroupAssociation.ts#L73">property <b>networkSecurityGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>networkSecurityGroupId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5191,7 +5191,7 @@ The ID of the Network Security Group which should be associated with the Subnet.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetNetworkSecurityGroupAssociation-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnetNetworkSecurityGroupAssociation.ts#L77">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnetNetworkSecurityGroupAssociation.ts#L77">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>subnetId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5200,7 +5200,7 @@ The ID of the Subnet. Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetNetworkSecurityGroupAssociation-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -5211,7 +5211,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubnetRouteTableAssociation">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnetRouteTableAssociation.ts#L52">class <b>SubnetRouteTableAssociation</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnetRouteTableAssociation.ts#L52">class <b>SubnetRouteTableAssociation</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -5261,7 +5261,7 @@ const testSubnetRouteTableAssociation = new azure.network.SubnetRouteTableAssoci
 ```
 
 <h3 class="pdoc-member-header" id="SubnetRouteTableAssociation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnetRouteTableAssociation.ts#L72"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnetRouteTableAssociation.ts#L72"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -5276,7 +5276,7 @@ Create a SubnetRouteTableAssociation resource with the given unique name, argume
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetRouteTableAssociation-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnetRouteTableAssociation.ts#L61">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnetRouteTableAssociation.ts#L61">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -5288,7 +5288,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetRouteTableAssociation-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -5296,7 +5296,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetRouteTableAssociation-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -5308,7 +5308,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetRouteTableAssociation-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -5318,7 +5318,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetRouteTableAssociation-routeTableId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnetRouteTableAssociation.ts#L68">property <b>routeTableId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnetRouteTableAssociation.ts#L68">property <b>routeTableId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>routeTableId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5327,7 +5327,7 @@ The ID of the Route Table which should be associated with the Subnet. Changing t
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetRouteTableAssociation-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnetRouteTableAssociation.ts#L72">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnetRouteTableAssociation.ts#L72">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>subnetId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5336,7 +5336,7 @@ The ID of the Subnet. Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetRouteTableAssociation-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -5347,7 +5347,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VirtualNetwork">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetwork.ts#L69">class <b>VirtualNetwork</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetwork.ts#L69">class <b>VirtualNetwork</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -5414,7 +5414,7 @@ const testVirtualNetwork = new azure.network.VirtualNetwork("test", {
 ```
 
 <h3 class="pdoc-member-header" id="VirtualNetwork-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetwork.ts#L119"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetwork.ts#L119"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -5429,7 +5429,7 @@ Create a VirtualNetwork resource with the given unique name, arguments, and opti
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetwork-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetwork.ts#L78">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetwork.ts#L78">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -5441,7 +5441,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetwork-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -5449,7 +5449,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetwork-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -5461,7 +5461,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetwork-addressSpaces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetwork.ts#L87">property <b>addressSpaces</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetwork.ts#L87">property <b>addressSpaces</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>addressSpaces: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -5472,7 +5472,7 @@ a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetwork-ddosProtectionPlan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetwork.ts#L91">property <b>ddosProtectionPlan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetwork.ts#L91">property <b>ddosProtectionPlan</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>ddosProtectionPlan: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -5484,7 +5484,7 @@ A `ddos_protection_plan` block as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetwork-dnsServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetwork.ts#L95">property <b>dnsServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetwork.ts#L95">property <b>dnsServers</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>dnsServers: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -5493,7 +5493,7 @@ List of IP addresses of DNS servers
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetwork-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -5503,7 +5503,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetwork-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetwork.ts#L100">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetwork.ts#L100">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5513,7 +5513,7 @@ created. Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetwork-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetwork.ts#L105">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetwork.ts#L105">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5523,7 +5523,7 @@ new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetwork-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetwork.ts#L110">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetwork.ts#L110">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5533,7 +5533,7 @@ create the virtual network.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetwork-subnets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetwork.ts#L115">property <b>subnets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetwork.ts#L115">property <b>subnets</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>subnets: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -5548,7 +5548,7 @@ subnets. Each `subnet` block supports fields documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetwork-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetwork.ts#L119">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetwork.ts#L119">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -5557,7 +5557,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetwork-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -5568,7 +5568,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VirtualNetworkGateway">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L89">class <b>VirtualNetworkGateway</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L89">class <b>VirtualNetworkGateway</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -5655,7 +5655,7 @@ M/s/1JRtO3bDSzD9TazRVzn2oBqzSa8VgIo5C1nOnoAKJTlsClJKvIhnRlaLQqk=
 ```
 
 <h3 class="pdoc-member-header" id="VirtualNetworkGateway-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L173"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L173"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -5670,7 +5670,7 @@ Create a VirtualNetworkGateway resource with the given unique name, arguments, a
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGateway-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L98">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L98">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -5682,7 +5682,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGateway-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -5690,7 +5690,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGateway-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -5702,7 +5702,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGateway-activeActive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L108">property <b>activeActive</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L108">property <b>activeActive</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>activeActive: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5714,7 +5714,7 @@ Defaults to `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGateway-bgpSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L109">property <b>bgpSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L109">property <b>bgpSettings</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>bgpSettings: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -5724,7 +5724,7 @@ Defaults to `false`.
 }&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGateway-defaultLocalNetworkGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L117">property <b>defaultLocalNetworkGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L117">property <b>defaultLocalNetworkGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>defaultLocalNetworkGatewayId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -5737,7 +5737,7 @@ If not specified, forced tunneling is disabled.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGateway-enableBgp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L122">property <b>enableBgp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L122">property <b>enableBgp</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>enableBgp: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5747,7 +5747,7 @@ for this Virtual Network Gateway. Defaults to `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGateway-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -5757,7 +5757,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGateway-ipConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L128">property <b>ipConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L128">property <b>ipConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>ipConfigurations: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -5773,7 +5773,7 @@ an active-active gateway requires exactly two `ip_configuration` blocks.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGateway-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L133">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L133">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5783,7 +5783,7 @@ located. Changing the location/region forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGateway-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L138">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L138">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5793,7 +5793,7 @@ forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGateway-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L144">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L144">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5804,7 +5804,7 @@ a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGateway-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L153">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L153">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>sku: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5818,7 +5818,7 @@ sku is only supported by an `ExpressRoute` gateway.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGateway-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L157">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L157">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -5827,7 +5827,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGateway-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L162">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L162">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>type: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5837,7 +5837,7 @@ The type of the Virtual Network Gateway. Valid options are
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGateway-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -5847,7 +5847,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGateway-vpnClientConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L168">property <b>vpnClientConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L168">property <b>vpnClientConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>vpnClientConfiguration: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -5871,7 +5871,7 @@ to accept IPSec point-to-site connections.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGateway-vpnType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L173">property <b>vpnType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L173">property <b>vpnType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>vpnType: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -5882,7 +5882,7 @@ options are `RouteBased` or `PolicyBased`. Defaults to `RouteBased`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VirtualNetworkGatewayConnection">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L175">class <b>VirtualNetworkGatewayConnection</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L175">class <b>VirtualNetworkGatewayConnection</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -6055,7 +6055,7 @@ const usToEurope = new azure.network.VirtualNetworkGatewayConnection("us_to_euro
 ```
 
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnection-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L275"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L275"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -6070,7 +6070,7 @@ Create a VirtualNetworkGatewayConnection resource with the given unique name, ar
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnection-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L184">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L184">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -6082,7 +6082,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnection-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -6090,7 +6090,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnection-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -6102,7 +6102,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnection-authorizationKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L193">property <b>authorizationKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L193">property <b>authorizationKey</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>authorizationKey: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -6113,7 +6113,7 @@ ExpressRoute connection.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnection-enableBgp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L198">property <b>enableBgp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L198">property <b>enableBgp</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>enableBgp: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6123,7 +6123,7 @@ for this connection. Defaults to `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnection-expressRouteCircuitId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L204">property <b>expressRouteCircuitId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L204">property <b>expressRouteCircuitId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>expressRouteCircuitId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -6134,7 +6134,7 @@ The Express Route Circuit can be in the same or in a different subscription.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnection-expressRouteGatewayBypass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L208">property <b>expressRouteGatewayBypass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L208">property <b>expressRouteGatewayBypass</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>expressRouteGatewayBypass: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6143,7 +6143,7 @@ If `true`, data packets will bypass ExpressRoute Gateway for data forwarding Thi
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnection-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -6153,7 +6153,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnection-ipsecPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L214">property <b>ipsecPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L214">property <b>ipsecPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>ipsecPolicy: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -6173,7 +6173,7 @@ custom policies refer to [the relevant section in the Azure documentation](https
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnection-localNetworkGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L219">property <b>localNetworkGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L219">property <b>localNetworkGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>localNetworkGatewayId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -6183,7 +6183,7 @@ when creating Site-to-Site connection (i.e. when `type` is `IPsec`).
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnection-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L224">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L224">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6193,7 +6193,7 @@ located. Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnection-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L229">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L229">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6203,7 +6203,7 @@ new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnection-peerVirtualNetworkGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L236">property <b>peerVirtualNetworkGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L236">property <b>peerVirtualNetworkGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>peerVirtualNetworkGatewayId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -6215,7 +6215,7 @@ in a different subscription.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnection-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L241">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L241">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6225,7 +6225,7 @@ create the connection Changing the name forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnection-routingWeight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L245">property <b>routingWeight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L245">property <b>routingWeight</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>routingWeight: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -6234,7 +6234,7 @@ The routing weight. Defaults to `10`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnection-sharedKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L251">property <b>sharedKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L251">property <b>sharedKey</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>sharedKey: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -6245,7 +6245,7 @@ connections do not need a shared key.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnection-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L255">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L255">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -6254,7 +6254,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnection-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L263">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L263">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>type: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6267,7 +6267,7 @@ to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnection-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -6277,7 +6277,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnection-usePolicyBasedTrafficSelectors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L269">property <b>usePolicyBasedTrafficSelectors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L269">property <b>usePolicyBasedTrafficSelectors</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>usePolicyBasedTrafficSelectors: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6288,7 +6288,7 @@ selectors requires an `ipsec_policy` block. Defaults to `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnection-virtualNetworkGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L275">property <b>virtualNetworkGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L275">property <b>virtualNetworkGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>virtualNetworkGatewayId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6300,7 +6300,7 @@ resource to be created.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VirtualNetworkPeering">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkPeering.ts#L111">class <b>VirtualNetworkPeering</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkPeering.ts#L111">class <b>VirtualNetworkPeering</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -6409,7 +6409,7 @@ for (let i = 0; i < location.length; i++) {
 Virtual Network peerings cannot be created, updated or deleted concurrently.
 
 <h3 class="pdoc-member-header" id="VirtualNetworkPeering-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkPeering.ts#L169"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkPeering.ts#L169"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -6424,7 +6424,7 @@ Create a VirtualNetworkPeering resource with the given unique name, arguments, a
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkPeering-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkPeering.ts#L120">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkPeering.ts#L120">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -6436,7 +6436,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkPeering-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -6444,7 +6444,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkPeering-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -6456,7 +6456,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkPeering-allowForwardedTraffic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkPeering.ts#L128">property <b>allowForwardedTraffic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkPeering.ts#L128">property <b>allowForwardedTraffic</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>allowForwardedTraffic: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6466,7 +6466,7 @@ in the remote virtual network is allowed. Defaults to false.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkPeering-allowGatewayTransit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkPeering.ts#L133">property <b>allowGatewayTransit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkPeering.ts#L133">property <b>allowGatewayTransit</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>allowGatewayTransit: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6476,7 +6476,7 @@ remote virtual network’s link to the local virtual network.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkPeering-allowVirtualNetworkAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkPeering.ts#L139">property <b>allowVirtualNetworkAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkPeering.ts#L139">property <b>allowVirtualNetworkAccess</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>allowVirtualNetworkAccess: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6487,7 +6487,7 @@ false.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkPeering-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -6497,7 +6497,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkPeering-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkPeering.ts#L144">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkPeering.ts#L144">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6507,7 +6507,7 @@ forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkPeering-remoteVirtualNetworkId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkPeering.ts#L149">property <b>remoteVirtualNetworkId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkPeering.ts#L149">property <b>remoteVirtualNetworkId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>remoteVirtualNetworkId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6517,7 +6517,7 @@ remote virtual network.  Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkPeering-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkPeering.ts#L155">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkPeering.ts#L155">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6528,7 +6528,7 @@ created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkPeering-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -6538,7 +6538,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkPeering-useRemoteGateways">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkPeering.ts#L164">property <b>useRemoteGateways</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkPeering.ts#L164">property <b>useRemoteGateways</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>useRemoteGateways: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6552,7 +6552,7 @@ already has a gateway. Defaults to `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkPeering-virtualNetworkName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkPeering.ts#L169">property <b>virtualNetworkName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkPeering.ts#L169">property <b>virtualNetworkName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>virtualNetworkName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6563,7 +6563,7 @@ this forces a new resource to be created.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getApplicationSecurityGroup">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getApplicationSecurityGroup.ts#L24">function <b>getApplicationSecurityGroup</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getApplicationSecurityGroup.ts#L24">function <b>getApplicationSecurityGroup</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -6588,7 +6588,7 @@ export const applicationSecurityGroupId = test.apply(test => test.id);
 
 </div>
 <h2 class="pdoc-module-header" id="getExpressRouteCircuit">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getExpressRouteCircuit.ts#L25">function <b>getExpressRouteCircuit</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getExpressRouteCircuit.ts#L25">function <b>getExpressRouteCircuit</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -6614,7 +6614,7 @@ export const serviceKey = test.apply(test => test.serviceKey);
 
 </div>
 <h2 class="pdoc-module-header" id="getFirewall">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getFirewall.ts#L24">function <b>getFirewall</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getFirewall.ts#L24">function <b>getFirewall</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -6639,7 +6639,7 @@ export const firewallPrivateIp = test.apply(test => test.ipConfiguration.private
 
 </div>
 <h2 class="pdoc-module-header" id="getNetworkInterface">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L24">function <b>getNetworkInterface</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkInterface.ts#L24">function <b>getNetworkInterface</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -6664,7 +6664,7 @@ export const networkInterfaceId = test.apply(test => test.id);
 
 </div>
 <h2 class="pdoc-module-header" id="getNetworkSecurityGroup">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkSecurityGroup.ts#L24">function <b>getNetworkSecurityGroup</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkSecurityGroup.ts#L24">function <b>getNetworkSecurityGroup</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -6689,7 +6689,7 @@ export const location = test.apply(test => test.location);
 
 </div>
 <h2 class="pdoc-module-header" id="getNetworkWatcher">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkWatcher.ts#L24">function <b>getNetworkWatcher</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkWatcher.ts#L24">function <b>getNetworkWatcher</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -6714,7 +6714,7 @@ export const networkWatcherId = test.apply(test => test.id);
 
 </div>
 <h2 class="pdoc-module-header" id="getPublicIP">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIP.ts#L83">function <b>getPublicIP</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIP.ts#L83">function <b>getPublicIP</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -6798,7 +6798,7 @@ export const publicIpAddress = testPublicIP.apply(testPublicIP => testPublicIP.i
 
 </div>
 <h2 class="pdoc-module-header" id="getPublicIPs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIPs.ts#L22">function <b>getPublicIPs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIPs.ts#L22">function <b>getPublicIPs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -6821,7 +6821,7 @@ const test = pulumi.output(azure.network.getPublicIPs({
 
 </div>
 <h2 class="pdoc-module-header" id="getRouteTable">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getRouteTable.ts#L22">function <b>getRouteTable</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getRouteTable.ts#L22">function <b>getRouteTable</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -6844,7 +6844,7 @@ const test = pulumi.output(azure.network.getRouteTable({
 
 </div>
 <h2 class="pdoc-module-header" id="getSubnet">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getSubnet.ts#L25">function <b>getSubnet</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getSubnet.ts#L25">function <b>getSubnet</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -6870,7 +6870,7 @@ export const subnetId = test.apply(test => test.id);
 
 </div>
 <h2 class="pdoc-module-header" id="getVirtualNetwork">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetwork.ts#L24">function <b>getVirtualNetwork</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getVirtualNetwork.ts#L24">function <b>getVirtualNetwork</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -6895,7 +6895,7 @@ export const virtualNetworkId = test.apply(test => test.id);
 
 </div>
 <h2 class="pdoc-module-header" id="getVirtualNetworkGateway">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetworkGateway.ts#L24">function <b>getVirtualNetworkGateway</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getVirtualNetworkGateway.ts#L24">function <b>getVirtualNetworkGateway</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -6920,14 +6920,14 @@ export const virtualNetworkGatewayId = test.apply(test => test.id);
 
 </div>
 <h2 class="pdoc-module-header" id="ApplicationGatewayArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L391">interface <b>ApplicationGatewayArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L391">interface <b>ApplicationGatewayArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a ApplicationGateway resource.
 
 <h3 class="pdoc-member-header" id="ApplicationGatewayArgs-authenticationCertificates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L395">property <b>authenticationCertificates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L395">property <b>authenticationCertificates</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>authenticationCertificates?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6940,7 +6940,7 @@ One or more `authentication_certificate` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayArgs-backendAddressPools">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L399">property <b>backendAddressPools</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L399">property <b>backendAddressPools</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>backendAddressPools: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6956,7 +6956,7 @@ One or more `backend_address_pool` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayArgs-backendHttpSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L403">property <b>backendHttpSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L403">property <b>backendHttpSettings</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>backendHttpSettings: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6985,7 +6985,7 @@ One or more `backend_http_settings` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayArgs-customErrorConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L407">property <b>customErrorConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L407">property <b>customErrorConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>customErrorConfigurations?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6998,7 +6998,7 @@ One or more `custom_error_configuration` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayArgs-disabledSslProtocols">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L411">property <b>disabledSslProtocols</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L411">property <b>disabledSslProtocols</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>disabledSslProtocols?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -7007,7 +7007,7 @@ A list of SSL Protocols which should be disabled on this Application Gateway. Po
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayArgs-enableHttp2">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L415">property <b>enableHttp2</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L415">property <b>enableHttp2</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>enableHttp2?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7016,7 +7016,7 @@ Is HTTP2 enabled on the application gateway resource? Defaults to `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayArgs-frontendIpConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L419">property <b>frontendIpConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L419">property <b>frontendIpConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>frontendIpConfigurations: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7032,7 +7032,7 @@ One or more `frontend_ip_configuration` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayArgs-frontendPorts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L423">property <b>frontendPorts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L423">property <b>frontendPorts</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>frontendPorts: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7045,7 +7045,7 @@ One or more `frontend_port` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayArgs-gatewayIpConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L427">property <b>gatewayIpConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L427">property <b>gatewayIpConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>gatewayIpConfigurations: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7058,7 +7058,7 @@ One or more `gateway_ip_configuration` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayArgs-httpListeners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L431">property <b>httpListeners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L431">property <b>httpListeners</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>httpListeners: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7084,7 +7084,7 @@ One or more `http_listener` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L435">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L435">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7093,7 +7093,7 @@ The Azure region where the Application Gateway should exist. Changing this force
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L439">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L439">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7102,7 +7102,7 @@ The name of the Application Gateway. Changing this forces a new resource to be c
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayArgs-probes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L443">property <b>probes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L443">property <b>probes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>probes?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7126,7 +7126,7 @@ One or more `probe` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayArgs-redirectConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L447">property <b>redirectConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L447">property <b>redirectConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>redirectConfigurations?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7144,7 +7144,7 @@ A `redirect_configuration` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayArgs-requestRoutingRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L451">property <b>requestRoutingRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L451">property <b>requestRoutingRules</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>requestRoutingRules: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7167,7 +7167,7 @@ One or more `request_routing_rule` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L455">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L455">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7176,7 +7176,7 @@ The name of the resource group in which to the Application Gateway should exist.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayArgs-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L459">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L459">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sku: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7189,7 +7189,7 @@ A `sku` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayArgs-sslCertificates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L463">property <b>sslCertificates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L463">property <b>sslCertificates</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sslCertificates?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7204,7 +7204,7 @@ One or more `ssl_certificate` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L467">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L467">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -7213,7 +7213,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayArgs-urlPathMaps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L471">property <b>urlPathMaps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L471">property <b>urlPathMaps</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urlPathMaps?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7242,7 +7242,7 @@ One or more `url_path_map` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayArgs-wafConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L475">property <b>wafConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L475">property <b>wafConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>wafConfiguration?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7259,7 +7259,7 @@ A `waf_configuration` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayArgs-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L479">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L479">property <b>zones</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>zones?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -7269,14 +7269,14 @@ A collection of availability zones to spread the Application Gateway over.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ApplicationGatewayState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L297">interface <b>ApplicationGatewayState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L297">interface <b>ApplicationGatewayState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering ApplicationGateway resources.
 
 <h3 class="pdoc-member-header" id="ApplicationGatewayState-authenticationCertificates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L301">property <b>authenticationCertificates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L301">property <b>authenticationCertificates</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>authenticationCertificates?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7289,7 +7289,7 @@ One or more `authentication_certificate` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayState-backendAddressPools">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L305">property <b>backendAddressPools</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L305">property <b>backendAddressPools</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>backendAddressPools?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7305,7 +7305,7 @@ One or more `backend_address_pool` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayState-backendHttpSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L309">property <b>backendHttpSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L309">property <b>backendHttpSettings</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>backendHttpSettings?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7334,7 +7334,7 @@ One or more `backend_http_settings` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayState-customErrorConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L313">property <b>customErrorConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L313">property <b>customErrorConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>customErrorConfigurations?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7347,7 +7347,7 @@ One or more `custom_error_configuration` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayState-disabledSslProtocols">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L317">property <b>disabledSslProtocols</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L317">property <b>disabledSslProtocols</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>disabledSslProtocols?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -7356,7 +7356,7 @@ A list of SSL Protocols which should be disabled on this Application Gateway. Po
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayState-enableHttp2">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L321">property <b>enableHttp2</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L321">property <b>enableHttp2</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>enableHttp2?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7365,7 +7365,7 @@ Is HTTP2 enabled on the application gateway resource? Defaults to `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayState-frontendIpConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L325">property <b>frontendIpConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L325">property <b>frontendIpConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>frontendIpConfigurations?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7381,7 +7381,7 @@ One or more `frontend_ip_configuration` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayState-frontendPorts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L329">property <b>frontendPorts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L329">property <b>frontendPorts</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>frontendPorts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7394,7 +7394,7 @@ One or more `frontend_port` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayState-gatewayIpConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L333">property <b>gatewayIpConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L333">property <b>gatewayIpConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>gatewayIpConfigurations?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7407,7 +7407,7 @@ One or more `gateway_ip_configuration` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayState-httpListeners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L337">property <b>httpListeners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L337">property <b>httpListeners</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>httpListeners?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7433,7 +7433,7 @@ One or more `http_listener` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L341">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L341">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7442,7 +7442,7 @@ The Azure region where the Application Gateway should exist. Changing this force
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L345">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L345">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7451,7 +7451,7 @@ The name of the Application Gateway. Changing this forces a new resource to be c
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayState-probes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L349">property <b>probes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L349">property <b>probes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>probes?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7475,7 +7475,7 @@ One or more `probe` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayState-redirectConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L353">property <b>redirectConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L353">property <b>redirectConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>redirectConfigurations?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7493,7 +7493,7 @@ A `redirect_configuration` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayState-requestRoutingRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L357">property <b>requestRoutingRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L357">property <b>requestRoutingRules</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>requestRoutingRules?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7516,7 +7516,7 @@ One or more `request_routing_rule` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L361">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L361">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7525,7 +7525,7 @@ The name of the resource group in which to the Application Gateway should exist.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayState-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L365">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L365">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sku?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7538,7 +7538,7 @@ A `sku` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayState-sslCertificates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L369">property <b>sslCertificates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L369">property <b>sslCertificates</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sslCertificates?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7553,7 +7553,7 @@ One or more `ssl_certificate` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L373">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L373">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -7562,7 +7562,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayState-urlPathMaps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L377">property <b>urlPathMaps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L377">property <b>urlPathMaps</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urlPathMaps?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7591,7 +7591,7 @@ One or more `url_path_map` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayState-wafConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L381">property <b>wafConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L381">property <b>wafConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>wafConfiguration?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7608,7 +7608,7 @@ A `waf_configuration` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationGatewayState-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationGateway.ts#L385">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationGateway.ts#L385">property <b>zones</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>zones?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -7618,14 +7618,14 @@ A collection of availability zones to spread the Application Gateway over.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ApplicationSecurityGroupArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationSecurityGroup.ts#L118">interface <b>ApplicationSecurityGroupArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationSecurityGroup.ts#L118">interface <b>ApplicationSecurityGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a ApplicationSecurityGroup resource.
 
 <h3 class="pdoc-member-header" id="ApplicationSecurityGroupArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationSecurityGroup.ts#L122">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationSecurityGroup.ts#L122">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7634,7 +7634,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationSecurityGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationSecurityGroup.ts#L126">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationSecurityGroup.ts#L126">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7643,7 +7643,7 @@ Specifies the name of the Application Security Group. Changing this forces a new
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationSecurityGroupArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationSecurityGroup.ts#L130">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationSecurityGroup.ts#L130">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7652,7 +7652,7 @@ The name of the resource group in which to create the Application Security Group
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationSecurityGroupArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationSecurityGroup.ts#L134">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationSecurityGroup.ts#L134">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -7662,14 +7662,14 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ApplicationSecurityGroupState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationSecurityGroup.ts#L96">interface <b>ApplicationSecurityGroupState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationSecurityGroup.ts#L96">interface <b>ApplicationSecurityGroupState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering ApplicationSecurityGroup resources.
 
 <h3 class="pdoc-member-header" id="ApplicationSecurityGroupState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationSecurityGroup.ts#L100">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationSecurityGroup.ts#L100">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7678,7 +7678,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationSecurityGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationSecurityGroup.ts#L104">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationSecurityGroup.ts#L104">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7687,7 +7687,7 @@ Specifies the name of the Application Security Group. Changing this forces a new
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationSecurityGroupState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationSecurityGroup.ts#L108">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationSecurityGroup.ts#L108">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7696,7 +7696,7 @@ The name of the resource group in which to create the Application Security Group
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationSecurityGroupState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/applicationSecurityGroup.ts#L112">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/applicationSecurityGroup.ts#L112">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -7706,14 +7706,14 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConnectionMonitorArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/connectionMonitor.ts#L250">interface <b>ConnectionMonitorArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/connectionMonitor.ts#L250">interface <b>ConnectionMonitorArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a ConnectionMonitor resource.
 
 <h3 class="pdoc-member-header" id="ConnectionMonitorArgs-autoStart">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/connectionMonitor.ts#L254">property <b>autoStart</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/connectionMonitor.ts#L254">property <b>autoStart</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>autoStart?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7722,7 +7722,7 @@ Specifies whether the connection monitor will start automatically once created. 
 
 </div>
 <h3 class="pdoc-member-header" id="ConnectionMonitorArgs-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/connectionMonitor.ts#L258">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/connectionMonitor.ts#L258">property <b>destination</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>destination: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7735,7 +7735,7 @@ A `destination` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ConnectionMonitorArgs-intervalInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/connectionMonitor.ts#L262">property <b>intervalInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/connectionMonitor.ts#L262">property <b>intervalInSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>intervalInSeconds?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -7744,7 +7744,7 @@ Monitoring interval in seconds. Defaults to `60`.
 
 </div>
 <h3 class="pdoc-member-header" id="ConnectionMonitorArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/connectionMonitor.ts#L266">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/connectionMonitor.ts#L266">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7753,7 +7753,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="ConnectionMonitorArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/connectionMonitor.ts#L270">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/connectionMonitor.ts#L270">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7762,7 +7762,7 @@ The name of the Connection Monitor. Changing this forces a new resource to be cr
 
 </div>
 <h3 class="pdoc-member-header" id="ConnectionMonitorArgs-networkWatcherName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/connectionMonitor.ts#L274">property <b>networkWatcherName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/connectionMonitor.ts#L274">property <b>networkWatcherName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>networkWatcherName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7771,7 +7771,7 @@ The name of the Network Watcher. Changing this forces a new resource to be creat
 
 </div>
 <h3 class="pdoc-member-header" id="ConnectionMonitorArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/connectionMonitor.ts#L278">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/connectionMonitor.ts#L278">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7780,7 +7780,7 @@ The name of the resource group in which to create the Connection Monitor. Changi
 
 </div>
 <h3 class="pdoc-member-header" id="ConnectionMonitorArgs-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/connectionMonitor.ts#L282">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/connectionMonitor.ts#L282">property <b>source</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>source: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7792,7 +7792,7 @@ A `source` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ConnectionMonitorArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/connectionMonitor.ts#L286">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/connectionMonitor.ts#L286">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -7802,14 +7802,14 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConnectionMonitorState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/connectionMonitor.ts#L208">interface <b>ConnectionMonitorState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/connectionMonitor.ts#L208">interface <b>ConnectionMonitorState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering ConnectionMonitor resources.
 
 <h3 class="pdoc-member-header" id="ConnectionMonitorState-autoStart">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/connectionMonitor.ts#L212">property <b>autoStart</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/connectionMonitor.ts#L212">property <b>autoStart</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>autoStart?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7818,7 +7818,7 @@ Specifies whether the connection monitor will start automatically once created. 
 
 </div>
 <h3 class="pdoc-member-header" id="ConnectionMonitorState-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/connectionMonitor.ts#L216">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/connectionMonitor.ts#L216">property <b>destination</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>destination?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7831,7 +7831,7 @@ A `destination` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ConnectionMonitorState-intervalInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/connectionMonitor.ts#L220">property <b>intervalInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/connectionMonitor.ts#L220">property <b>intervalInSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>intervalInSeconds?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -7840,7 +7840,7 @@ Monitoring interval in seconds. Defaults to `60`.
 
 </div>
 <h3 class="pdoc-member-header" id="ConnectionMonitorState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/connectionMonitor.ts#L224">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/connectionMonitor.ts#L224">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7849,7 +7849,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="ConnectionMonitorState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/connectionMonitor.ts#L228">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/connectionMonitor.ts#L228">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7858,7 +7858,7 @@ The name of the Connection Monitor. Changing this forces a new resource to be cr
 
 </div>
 <h3 class="pdoc-member-header" id="ConnectionMonitorState-networkWatcherName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/connectionMonitor.ts#L232">property <b>networkWatcherName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/connectionMonitor.ts#L232">property <b>networkWatcherName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>networkWatcherName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7867,7 +7867,7 @@ The name of the Network Watcher. Changing this forces a new resource to be creat
 
 </div>
 <h3 class="pdoc-member-header" id="ConnectionMonitorState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/connectionMonitor.ts#L236">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/connectionMonitor.ts#L236">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7876,7 +7876,7 @@ The name of the resource group in which to create the Connection Monitor. Changi
 
 </div>
 <h3 class="pdoc-member-header" id="ConnectionMonitorState-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/connectionMonitor.ts#L240">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/connectionMonitor.ts#L240">property <b>source</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>source?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7888,7 +7888,7 @@ A `source` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ConnectionMonitorState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/connectionMonitor.ts#L244">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/connectionMonitor.ts#L244">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -7898,14 +7898,14 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ExpressRouteCircuitArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L207">interface <b>ExpressRouteCircuitArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L207">interface <b>ExpressRouteCircuitArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a ExpressRouteCircuit resource.
 
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitArgs-allowClassicOperations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L211">property <b>allowClassicOperations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L211">property <b>allowClassicOperations</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>allowClassicOperations?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7914,7 +7914,7 @@ Allow the circuit to interact with classic (RDFE) resources. The default value i
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitArgs-bandwidthInMbps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L215">property <b>bandwidthInMbps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L215">property <b>bandwidthInMbps</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>bandwidthInMbps: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -7923,7 +7923,7 @@ The bandwidth in Mbps of the circuit being created.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L219">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L219">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7932,7 +7932,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L223">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L223">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7941,7 +7941,7 @@ The name of the ExpressRoute circuit. Changing this forces a new resource to be 
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitArgs-peeringLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L227">property <b>peeringLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L227">property <b>peeringLocation</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>peeringLocation: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7950,7 +7950,7 @@ The name of the peering location and **not** the Azure resource location.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L231">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L231">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7959,7 +7959,7 @@ The name of the resource group in which to create the ExpressRoute circuit. Chan
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitArgs-serviceProviderName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L235">property <b>serviceProviderName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L235">property <b>serviceProviderName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>serviceProviderName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7968,7 +7968,7 @@ The name of the ExpressRoute Service Provider.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitArgs-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L239">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L239">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sku: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7980,7 +7980,7 @@ A `sku` block for the ExpressRoute circuit as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L243">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L243">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -7990,14 +7990,14 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ExpressRouteCircuitAuthorizationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L145">interface <b>ExpressRouteCircuitAuthorizationArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L145">interface <b>ExpressRouteCircuitAuthorizationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a ExpressRouteCircuitAuthorization resource.
 
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitAuthorizationArgs-expressRouteCircuitName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L149">property <b>expressRouteCircuitName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L149">property <b>expressRouteCircuitName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>expressRouteCircuitName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8006,7 +8006,7 @@ The name of the Express Route Circuit in which to create the Authorization.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitAuthorizationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L154">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L154">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8016,7 +8016,7 @@ new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitAuthorizationArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L159">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L159">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8027,14 +8027,14 @@ create the ExpressRoute circuit. Changing this forces a new resource to be creat
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ExpressRouteCircuitAuthorizationState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L117">interface <b>ExpressRouteCircuitAuthorizationState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L117">interface <b>ExpressRouteCircuitAuthorizationState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering ExpressRouteCircuitAuthorization resources.
 
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitAuthorizationState-authorizationKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L121">property <b>authorizationKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L121">property <b>authorizationKey</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>authorizationKey?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8043,7 +8043,7 @@ The Authorization Key.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitAuthorizationState-authorizationUseStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L125">property <b>authorizationUseStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L125">property <b>authorizationUseStatus</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>authorizationUseStatus?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8052,7 +8052,7 @@ The authorization use status.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitAuthorizationState-expressRouteCircuitName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L129">property <b>expressRouteCircuitName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L129">property <b>expressRouteCircuitName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>expressRouteCircuitName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8061,7 +8061,7 @@ The name of the Express Route Circuit in which to create the Authorization.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitAuthorizationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L134">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L134">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8071,7 +8071,7 @@ new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitAuthorizationState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L139">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L139">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8082,14 +8082,14 @@ create the ExpressRoute circuit. Changing this forces a new resource to be creat
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ExpressRouteCircuitPeeringArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L232">interface <b>ExpressRouteCircuitPeeringArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L232">interface <b>ExpressRouteCircuitPeeringArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a ExpressRouteCircuitPeering resource.
 
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeeringArgs-expressRouteCircuitName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L236">property <b>expressRouteCircuitName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L236">property <b>expressRouteCircuitName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>expressRouteCircuitName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8098,7 +8098,7 @@ The name of the ExpressRoute Circuit in which to create the Peering.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeeringArgs-microsoftPeeringConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L240">property <b>microsoftPeeringConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L240">property <b>microsoftPeeringConfig</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>microsoftPeeringConfig?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -8109,7 +8109,7 @@ A `microsoft_peering_config` block as defined below. Required when `peering_type
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeeringArgs-peerAsn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L244">property <b>peerAsn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L244">property <b>peerAsn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>peerAsn?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -8118,7 +8118,7 @@ The Either a 16-bit or a 32-bit ASN. Can either be public or private..
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeeringArgs-peeringType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L248">property <b>peeringType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L248">property <b>peeringType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>peeringType: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8127,7 +8127,7 @@ The type of the ExpressRoute Circuit Peering. Acceptable values include `AzurePr
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeeringArgs-primaryPeerAddressPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L252">property <b>primaryPeerAddressPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L252">property <b>primaryPeerAddressPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>primaryPeerAddressPrefix: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8136,7 +8136,7 @@ A `/30` subnet for the primary link.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeeringArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L257">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L257">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8146,7 +8146,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeeringArgs-secondaryPeerAddressPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L261">property <b>secondaryPeerAddressPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L261">property <b>secondaryPeerAddressPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>secondaryPeerAddressPrefix: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8155,7 +8155,7 @@ A `/30` subnet for the secondary link.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeeringArgs-sharedKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L265">property <b>sharedKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L265">property <b>sharedKey</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sharedKey?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8164,7 +8164,7 @@ The shared key. Can be a maximum of 25 characters.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeeringArgs-vlanId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L269">property <b>vlanId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L269">property <b>vlanId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>vlanId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -8174,14 +8174,14 @@ A valid VLAN ID to establish this peering on.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ExpressRouteCircuitPeeringState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L177">interface <b>ExpressRouteCircuitPeeringState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L177">interface <b>ExpressRouteCircuitPeeringState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering ExpressRouteCircuitPeering resources.
 
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeeringState-azureAsn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L181">property <b>azureAsn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L181">property <b>azureAsn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>azureAsn?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -8190,7 +8190,7 @@ The ASN used by Azure.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeeringState-expressRouteCircuitName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L185">property <b>expressRouteCircuitName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L185">property <b>expressRouteCircuitName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>expressRouteCircuitName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8199,7 +8199,7 @@ The name of the ExpressRoute Circuit in which to create the Peering.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeeringState-microsoftPeeringConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L189">property <b>microsoftPeeringConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L189">property <b>microsoftPeeringConfig</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>microsoftPeeringConfig?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -8210,7 +8210,7 @@ A `microsoft_peering_config` block as defined below. Required when `peering_type
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeeringState-peerAsn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L193">property <b>peerAsn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L193">property <b>peerAsn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>peerAsn?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -8219,7 +8219,7 @@ The Either a 16-bit or a 32-bit ASN. Can either be public or private..
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeeringState-peeringType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L197">property <b>peeringType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L197">property <b>peeringType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>peeringType?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8228,7 +8228,7 @@ The type of the ExpressRoute Circuit Peering. Acceptable values include `AzurePr
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeeringState-primaryAzurePort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L201">property <b>primaryAzurePort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L201">property <b>primaryAzurePort</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>primaryAzurePort?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8237,7 +8237,7 @@ The Primary Port used by Azure for this Peering.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeeringState-primaryPeerAddressPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L205">property <b>primaryPeerAddressPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L205">property <b>primaryPeerAddressPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>primaryPeerAddressPrefix?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8246,7 +8246,7 @@ A `/30` subnet for the primary link.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeeringState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L210">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L210">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8256,7 +8256,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeeringState-secondaryAzurePort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L214">property <b>secondaryAzurePort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L214">property <b>secondaryAzurePort</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>secondaryAzurePort?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8265,7 +8265,7 @@ The Secondary Port used by Azure for this Peering.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeeringState-secondaryPeerAddressPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L218">property <b>secondaryPeerAddressPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L218">property <b>secondaryPeerAddressPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>secondaryPeerAddressPrefix?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8274,7 +8274,7 @@ A `/30` subnet for the secondary link.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeeringState-sharedKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L222">property <b>sharedKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L222">property <b>sharedKey</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sharedKey?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8283,7 +8283,7 @@ The shared key. Can be a maximum of 25 characters.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeeringState-vlanId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuitPeering.ts#L226">property <b>vlanId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuitPeering.ts#L226">property <b>vlanId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>vlanId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -8293,14 +8293,14 @@ A valid VLAN ID to establish this peering on.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ExpressRouteCircuitState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L157">interface <b>ExpressRouteCircuitState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L157">interface <b>ExpressRouteCircuitState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering ExpressRouteCircuit resources.
 
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitState-allowClassicOperations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L161">property <b>allowClassicOperations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L161">property <b>allowClassicOperations</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>allowClassicOperations?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -8309,7 +8309,7 @@ Allow the circuit to interact with classic (RDFE) resources. The default value i
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitState-bandwidthInMbps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L165">property <b>bandwidthInMbps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L165">property <b>bandwidthInMbps</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>bandwidthInMbps?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -8318,7 +8318,7 @@ The bandwidth in Mbps of the circuit being created.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L169">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L169">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8327,7 +8327,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L173">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L173">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8336,7 +8336,7 @@ The name of the ExpressRoute circuit. Changing this forces a new resource to be 
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitState-peeringLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L177">property <b>peeringLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L177">property <b>peeringLocation</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>peeringLocation?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8345,7 +8345,7 @@ The name of the peering location and **not** the Azure resource location.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L181">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L181">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8354,7 +8354,7 @@ The name of the resource group in which to create the ExpressRoute circuit. Chan
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitState-serviceKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L185">property <b>serviceKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L185">property <b>serviceKey</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>serviceKey?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8363,7 +8363,7 @@ The string needed by the service provider to provision the ExpressRoute circuit.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitState-serviceProviderName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L189">property <b>serviceProviderName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L189">property <b>serviceProviderName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>serviceProviderName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8372,7 +8372,7 @@ The name of the ExpressRoute Service Provider.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitState-serviceProviderProvisioningState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L193">property <b>serviceProviderProvisioningState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L193">property <b>serviceProviderProvisioningState</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>serviceProviderProvisioningState?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8381,7 +8381,7 @@ The ExpressRoute circuit provisioning state from your chosen service provider. P
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitState-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L197">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L197">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sku?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -8393,7 +8393,7 @@ A `sku` block for the ExpressRoute circuit as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/expressRouteCircuit.ts#L201">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/expressRouteCircuit.ts#L201">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -8403,14 +8403,14 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FirewallApplicationRuleCollectionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L184">interface <b>FirewallApplicationRuleCollectionArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L184">interface <b>FirewallApplicationRuleCollectionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a FirewallApplicationRuleCollection resource.
 
 <h3 class="pdoc-member-header" id="FirewallApplicationRuleCollectionArgs-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L188">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L188">property <b>action</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>action: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8419,7 +8419,7 @@ Specifies the action the rule will apply to matching traffic. Possible values ar
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallApplicationRuleCollectionArgs-azureFirewallName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L192">property <b>azureFirewallName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L192">property <b>azureFirewallName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>azureFirewallName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8428,7 +8428,7 @@ Specifies the name of the Firewall in which the Application Rule Collection shou
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallApplicationRuleCollectionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L196">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L196">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8437,7 +8437,7 @@ Specifies the name of the Application Rule Collection which must be unique withi
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallApplicationRuleCollectionArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L200">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L200">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>priority: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -8446,7 +8446,7 @@ Specifies the priority of the rule collection. Possible values are between `100`
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallApplicationRuleCollectionArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L204">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L204">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8455,7 +8455,7 @@ Specifies the name of the Resource Group in which the Firewall exists. Changing 
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallApplicationRuleCollectionArgs-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L208">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L208">property <b>rules</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>rules: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -8475,14 +8475,14 @@ One or more `rule` blocks as defined below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FirewallApplicationRuleCollectionState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L154">interface <b>FirewallApplicationRuleCollectionState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L154">interface <b>FirewallApplicationRuleCollectionState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering FirewallApplicationRuleCollection resources.
 
 <h3 class="pdoc-member-header" id="FirewallApplicationRuleCollectionState-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L158">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L158">property <b>action</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>action?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8491,7 +8491,7 @@ Specifies the action the rule will apply to matching traffic. Possible values ar
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallApplicationRuleCollectionState-azureFirewallName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L162">property <b>azureFirewallName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L162">property <b>azureFirewallName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>azureFirewallName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8500,7 +8500,7 @@ Specifies the name of the Firewall in which the Application Rule Collection shou
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallApplicationRuleCollectionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L166">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L166">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8509,7 +8509,7 @@ Specifies the name of the Application Rule Collection which must be unique withi
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallApplicationRuleCollectionState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L170">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L170">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>priority?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -8518,7 +8518,7 @@ Specifies the priority of the rule collection. Possible values are between `100`
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallApplicationRuleCollectionState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L174">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L174">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8527,7 +8527,7 @@ Specifies the name of the Resource Group in which the Firewall exists. Changing 
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallApplicationRuleCollectionState-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L178">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L178">property <b>rules</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>rules?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -8547,14 +8547,14 @@ One or more `rule` blocks as defined below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FirewallArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewall.ts#L152">interface <b>FirewallArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewall.ts#L152">interface <b>FirewallArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a Firewall resource.
 
 <h3 class="pdoc-member-header" id="FirewallArgs-ipConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewall.ts#L156">property <b>ipConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewall.ts#L156">property <b>ipConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipConfiguration: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -8569,7 +8569,7 @@ A `ip_configuration` block as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewall.ts#L160">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewall.ts#L160">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8578,7 +8578,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewall.ts#L164">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewall.ts#L164">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8587,7 +8587,7 @@ Specifies the name of the Firewall. Changing this forces a new resource to be cr
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewall.ts#L168">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewall.ts#L168">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8596,7 +8596,7 @@ The name of the resource group in which to create the resource. Changing this fo
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewall.ts#L172">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewall.ts#L172">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -8606,14 +8606,14 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FirewallNetworkRuleCollectionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L188">interface <b>FirewallNetworkRuleCollectionArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L188">interface <b>FirewallNetworkRuleCollectionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a FirewallNetworkRuleCollection resource.
 
 <h3 class="pdoc-member-header" id="FirewallNetworkRuleCollectionArgs-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L192">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L192">property <b>action</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>action: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8622,7 +8622,7 @@ Specifies the action the rule will apply to matching traffic. Possible values ar
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallNetworkRuleCollectionArgs-azureFirewallName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L196">property <b>azureFirewallName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L196">property <b>azureFirewallName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>azureFirewallName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8631,7 +8631,7 @@ Specifies the name of the Firewall in which the Network Rule Collection should b
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallNetworkRuleCollectionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L200">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L200">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8640,7 +8640,7 @@ Specifies the name of the Network Rule Collection which must be unique within th
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallNetworkRuleCollectionArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L204">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L204">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>priority: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -8649,7 +8649,7 @@ Specifies the priority of the rule collection. Possible values are between `100`
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallNetworkRuleCollectionArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L208">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L208">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8658,7 +8658,7 @@ Specifies the name of the Resource Group in which the Firewall exists. Changing 
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallNetworkRuleCollectionArgs-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L212">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L212">property <b>rules</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>rules: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -8675,14 +8675,14 @@ One or more `rule` blocks as defined below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FirewallNetworkRuleCollectionState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L158">interface <b>FirewallNetworkRuleCollectionState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L158">interface <b>FirewallNetworkRuleCollectionState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering FirewallNetworkRuleCollection resources.
 
 <h3 class="pdoc-member-header" id="FirewallNetworkRuleCollectionState-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L162">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L162">property <b>action</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>action?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8691,7 +8691,7 @@ Specifies the action the rule will apply to matching traffic. Possible values ar
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallNetworkRuleCollectionState-azureFirewallName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L166">property <b>azureFirewallName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L166">property <b>azureFirewallName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>azureFirewallName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8700,7 +8700,7 @@ Specifies the name of the Firewall in which the Network Rule Collection should b
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallNetworkRuleCollectionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L170">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L170">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8709,7 +8709,7 @@ Specifies the name of the Network Rule Collection which must be unique within th
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallNetworkRuleCollectionState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L174">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L174">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>priority?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -8718,7 +8718,7 @@ Specifies the priority of the rule collection. Possible values are between `100`
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallNetworkRuleCollectionState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L178">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L178">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8727,7 +8727,7 @@ Specifies the name of the Resource Group in which the Firewall exists. Changing 
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallNetworkRuleCollectionState-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L182">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L182">property <b>rules</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>rules?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -8744,14 +8744,14 @@ One or more `rule` blocks as defined below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FirewallState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewall.ts#L126">interface <b>FirewallState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewall.ts#L126">interface <b>FirewallState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering Firewall resources.
 
 <h3 class="pdoc-member-header" id="FirewallState-ipConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewall.ts#L130">property <b>ipConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewall.ts#L130">property <b>ipConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipConfiguration?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -8766,7 +8766,7 @@ A `ip_configuration` block as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewall.ts#L134">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewall.ts#L134">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8775,7 +8775,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewall.ts#L138">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewall.ts#L138">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8784,7 +8784,7 @@ Specifies the name of the Firewall. Changing this forces a new resource to be cr
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewall.ts#L142">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewall.ts#L142">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8793,7 +8793,7 @@ The name of the resource group in which to create the resource. Changing this fo
 
 </div>
 <h3 class="pdoc-member-header" id="FirewallState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/firewall.ts#L146">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/firewall.ts#L146">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -8803,14 +8803,14 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetApplicationSecurityGroupArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getApplicationSecurityGroup.ts#L34">interface <b>GetApplicationSecurityGroupArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getApplicationSecurityGroup.ts#L34">interface <b>GetApplicationSecurityGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of arguments for invoking getApplicationSecurityGroup.
 
 <h3 class="pdoc-member-header" id="GetApplicationSecurityGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getApplicationSecurityGroup.ts#L38">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getApplicationSecurityGroup.ts#L38">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8819,7 +8819,7 @@ The name of the Application Security Group.
 
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationSecurityGroupArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getApplicationSecurityGroup.ts#L42">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getApplicationSecurityGroup.ts#L42">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8829,14 +8829,14 @@ The name of the resource group in which the Application Security Group exists.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetApplicationSecurityGroupResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getApplicationSecurityGroup.ts#L48">interface <b>GetApplicationSecurityGroupResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getApplicationSecurityGroup.ts#L48">interface <b>GetApplicationSecurityGroupResult</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of values returned by getApplicationSecurityGroup.
 
 <h3 class="pdoc-member-header" id="GetApplicationSecurityGroupResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getApplicationSecurityGroup.ts#L62">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getApplicationSecurityGroup.ts#L62">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8845,7 +8845,7 @@ id is the provider-assigned unique ID for this managed resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationSecurityGroupResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getApplicationSecurityGroup.ts#L52">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getApplicationSecurityGroup.ts#L52">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8854,19 +8854,19 @@ The supported Azure location where the Application Security Group exists.
 
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationSecurityGroupResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getApplicationSecurityGroup.ts#L53">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getApplicationSecurityGroup.ts#L53">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationSecurityGroupResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getApplicationSecurityGroup.ts#L54">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getApplicationSecurityGroup.ts#L54">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationSecurityGroupResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getApplicationSecurityGroup.ts#L58">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getApplicationSecurityGroup.ts#L58">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -8876,14 +8876,14 @@ A mapping of tags assigned to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetExpressRouteCircuitArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getExpressRouteCircuit.ts#L35">interface <b>GetExpressRouteCircuitArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getExpressRouteCircuit.ts#L35">interface <b>GetExpressRouteCircuitArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of arguments for invoking getExpressRouteCircuit.
 
 <h3 class="pdoc-member-header" id="GetExpressRouteCircuitArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getExpressRouteCircuit.ts#L39">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getExpressRouteCircuit.ts#L39">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8892,7 +8892,7 @@ The name of the ExpressRoute circuit.
 
 </div>
 <h3 class="pdoc-member-header" id="GetExpressRouteCircuitArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getExpressRouteCircuit.ts#L43">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getExpressRouteCircuit.ts#L43">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8902,14 +8902,14 @@ The Name of the Resource Group where the ExpressRoute circuit exists.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetExpressRouteCircuitResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getExpressRouteCircuit.ts#L49">interface <b>GetExpressRouteCircuitResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getExpressRouteCircuit.ts#L49">interface <b>GetExpressRouteCircuitResult</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of values returned by getExpressRouteCircuit.
 
 <h3 class="pdoc-member-header" id="GetExpressRouteCircuitResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getExpressRouteCircuit.ts#L79">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getExpressRouteCircuit.ts#L79">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8918,7 +8918,7 @@ id is the provider-assigned unique ID for this managed resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetExpressRouteCircuitResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getExpressRouteCircuit.ts#L53">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getExpressRouteCircuit.ts#L53">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8927,13 +8927,13 @@ The Azure location where the ExpressRoute circuit exists
 
 </div>
 <h3 class="pdoc-member-header" id="GetExpressRouteCircuitResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getExpressRouteCircuit.ts#L54">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getExpressRouteCircuit.ts#L54">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetExpressRouteCircuitResult-peerings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getExpressRouteCircuit.ts#L58">property <b>peerings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getExpressRouteCircuit.ts#L58">property <b>peerings</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>peerings: {
@@ -8950,13 +8950,13 @@ A `peerings` block for the ExpressRoute circuit as documented below
 
 </div>
 <h3 class="pdoc-member-header" id="GetExpressRouteCircuitResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getExpressRouteCircuit.ts#L59">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getExpressRouteCircuit.ts#L59">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetExpressRouteCircuitResult-serviceKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getExpressRouteCircuit.ts#L63">property <b>serviceKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getExpressRouteCircuit.ts#L63">property <b>serviceKey</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>serviceKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8965,7 +8965,7 @@ The string needed by the service provider to provision the ExpressRoute circuit.
 
 </div>
 <h3 class="pdoc-member-header" id="GetExpressRouteCircuitResult-serviceProviderProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getExpressRouteCircuit.ts#L67">property <b>serviceProviderProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getExpressRouteCircuit.ts#L67">property <b>serviceProviderProperties</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>serviceProviderProperties: {
@@ -8978,7 +8978,7 @@ A `service_provider_properties` block for the ExpressRoute circuit as documented
 
 </div>
 <h3 class="pdoc-member-header" id="GetExpressRouteCircuitResult-serviceProviderProvisioningState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getExpressRouteCircuit.ts#L71">property <b>serviceProviderProvisioningState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getExpressRouteCircuit.ts#L71">property <b>serviceProviderProvisioningState</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>serviceProviderProvisioningState: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -8987,7 +8987,7 @@ The ExpressRoute circuit provisioning state from your chosen service provider. P
 
 </div>
 <h3 class="pdoc-member-header" id="GetExpressRouteCircuitResult-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getExpressRouteCircuit.ts#L75">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getExpressRouteCircuit.ts#L75">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sku: {
@@ -9000,14 +9000,14 @@ A `sku` block for the ExpressRoute circuit as documented below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetFirewallArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getFirewall.ts#L34">interface <b>GetFirewallArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getFirewall.ts#L34">interface <b>GetFirewallArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of arguments for invoking getFirewall.
 
 <h3 class="pdoc-member-header" id="GetFirewallArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getFirewall.ts#L38">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getFirewall.ts#L38">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9016,7 +9016,7 @@ The name of the Azure Firewall.
 
 </div>
 <h3 class="pdoc-member-header" id="GetFirewallArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getFirewall.ts#L42">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getFirewall.ts#L42">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9026,14 +9026,14 @@ The name of the Resource Group in which the Azure Firewall exists.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetFirewallResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getFirewall.ts#L48">interface <b>GetFirewallResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getFirewall.ts#L48">interface <b>GetFirewallResult</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of values returned by getFirewall.
 
 <h3 class="pdoc-member-header" id="GetFirewallResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getFirewall.ts#L60">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getFirewall.ts#L60">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9042,7 +9042,7 @@ id is the provider-assigned unique ID for this managed resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetFirewallResult-ipConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getFirewall.ts#L52">property <b>ipConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getFirewall.ts#L52">property <b>ipConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipConfiguration: {
@@ -9057,39 +9057,39 @@ A `ip_configuration` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="GetFirewallResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getFirewall.ts#L53">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getFirewall.ts#L53">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetFirewallResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getFirewall.ts#L54">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getFirewall.ts#L54">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetFirewallResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getFirewall.ts#L55">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getFirewall.ts#L55">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetFirewallResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getFirewall.ts#L56">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getFirewall.ts#L56">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetNetworkInterfaceArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L34">interface <b>GetNetworkInterfaceArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkInterface.ts#L34">interface <b>GetNetworkInterfaceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of arguments for invoking getNetworkInterface.
 
 <h3 class="pdoc-member-header" id="GetNetworkInterfaceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L38">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkInterface.ts#L38">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9098,7 +9098,7 @@ Specifies the name of the Network Interface.
 
 </div>
 <h3 class="pdoc-member-header" id="GetNetworkInterfaceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L42">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkInterface.ts#L42">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9108,14 +9108,14 @@ Specifies the name of the resource group the Network Interface is located in.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetNetworkInterfaceResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L48">interface <b>GetNetworkInterfaceResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkInterface.ts#L48">interface <b>GetNetworkInterfaceResult</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of values returned by getNetworkInterface.
 
 <h3 class="pdoc-member-header" id="GetNetworkInterfaceResult-appliedDnsServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L52">property <b>appliedDnsServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkInterface.ts#L52">property <b>appliedDnsServers</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>appliedDnsServers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -9124,7 +9124,7 @@ List of DNS servers applied to the specified Network Interface.
 
 </div>
 <h3 class="pdoc-member-header" id="GetNetworkInterfaceResult-dnsServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L56">property <b>dnsServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkInterface.ts#L56">property <b>dnsServers</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>dnsServers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -9133,7 +9133,7 @@ The list of DNS servers used by the specified Network Interface.
 
 </div>
 <h3 class="pdoc-member-header" id="GetNetworkInterfaceResult-enableAcceleratedNetworking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L60">property <b>enableAcceleratedNetworking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkInterface.ts#L60">property <b>enableAcceleratedNetworking</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>enableAcceleratedNetworking: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -9142,7 +9142,7 @@ Indicates if accelerated networking is set on the specified Network Interface.
 
 </div>
 <h3 class="pdoc-member-header" id="GetNetworkInterfaceResult-enableIpForwarding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L64">property <b>enableIpForwarding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkInterface.ts#L64">property <b>enableIpForwarding</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>enableIpForwarding: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -9151,7 +9151,7 @@ Indicate if IP forwarding is set on the specified Network Interface.
 
 </div>
 <h3 class="pdoc-member-header" id="GetNetworkInterfaceResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L110">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkInterface.ts#L110">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9160,7 +9160,7 @@ id is the provider-assigned unique ID for this managed resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetNetworkInterfaceResult-internalDnsNameLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L68">property <b>internalDnsNameLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkInterface.ts#L68">property <b>internalDnsNameLabel</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>internalDnsNameLabel: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9169,13 +9169,13 @@ The internal dns name label of the specified Network Interface.
 
 </div>
 <h3 class="pdoc-member-header" id="GetNetworkInterfaceResult-internalFqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L69">property <b>internalFqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkInterface.ts#L69">property <b>internalFqdn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>internalFqdn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetNetworkInterfaceResult-ipConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L73">property <b>ipConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkInterface.ts#L73">property <b>ipConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipConfigurations: {
@@ -9196,7 +9196,7 @@ One or more `ip_configuration` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="GetNetworkInterfaceResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L77">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkInterface.ts#L77">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9205,7 +9205,7 @@ The location of the specified Network Interface.
 
 </div>
 <h3 class="pdoc-member-header" id="GetNetworkInterfaceResult-macAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L81">property <b>macAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkInterface.ts#L81">property <b>macAddress</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>macAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9214,7 +9214,7 @@ The MAC address used by the specified Network Interface.
 
 </div>
 <h3 class="pdoc-member-header" id="GetNetworkInterfaceResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L85">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkInterface.ts#L85">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9223,7 +9223,7 @@ The name of the IP Configuration.
 
 </div>
 <h3 class="pdoc-member-header" id="GetNetworkInterfaceResult-networkSecurityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L89">property <b>networkSecurityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkInterface.ts#L89">property <b>networkSecurityGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>networkSecurityGroupId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9232,7 +9232,7 @@ The ID of the network security group associated to the specified Network Interfa
 
 </div>
 <h3 class="pdoc-member-header" id="GetNetworkInterfaceResult-privateIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L93">property <b>privateIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkInterface.ts#L93">property <b>privateIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>privateIpAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9241,7 +9241,7 @@ The Private IP Address assigned to this Network Interface.
 
 </div>
 <h3 class="pdoc-member-header" id="GetNetworkInterfaceResult-privateIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L97">property <b>privateIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkInterface.ts#L97">property <b>privateIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>privateIpAddresses: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -9250,13 +9250,13 @@ The list of private ip addresses associates to the specified Network Interface.
 
 </div>
 <h3 class="pdoc-member-header" id="GetNetworkInterfaceResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L98">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkInterface.ts#L98">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetNetworkInterfaceResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L102">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkInterface.ts#L102">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -9265,7 +9265,7 @@ List the tags associated to the specified Network Interface.
 
 </div>
 <h3 class="pdoc-member-header" id="GetNetworkInterfaceResult-virtualMachineId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L106">property <b>virtualMachineId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkInterface.ts#L106">property <b>virtualMachineId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>virtualMachineId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9275,14 +9275,14 @@ The ID of the virtual machine that the specified Network Interface is attached t
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetNetworkSecurityGroupArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkSecurityGroup.ts#L34">interface <b>GetNetworkSecurityGroupArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkSecurityGroup.ts#L34">interface <b>GetNetworkSecurityGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of arguments for invoking getNetworkSecurityGroup.
 
 <h3 class="pdoc-member-header" id="GetNetworkSecurityGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkSecurityGroup.ts#L38">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkSecurityGroup.ts#L38">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9291,7 +9291,7 @@ Specifies the Name of the Network Security Group.
 
 </div>
 <h3 class="pdoc-member-header" id="GetNetworkSecurityGroupArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkSecurityGroup.ts#L42">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkSecurityGroup.ts#L42">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9301,14 +9301,14 @@ Specifies the Name of the Resource Group within which the Network Security Group
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetNetworkSecurityGroupResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkSecurityGroup.ts#L48">interface <b>GetNetworkSecurityGroupResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkSecurityGroup.ts#L48">interface <b>GetNetworkSecurityGroupResult</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of values returned by getNetworkSecurityGroup.
 
 <h3 class="pdoc-member-header" id="GetNetworkSecurityGroupResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkSecurityGroup.ts#L69">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkSecurityGroup.ts#L69">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9317,7 +9317,7 @@ id is the provider-assigned unique ID for this managed resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetNetworkSecurityGroupResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkSecurityGroup.ts#L52">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkSecurityGroup.ts#L52">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9326,7 +9326,7 @@ The supported Azure location where the resource exists.
 
 </div>
 <h3 class="pdoc-member-header" id="GetNetworkSecurityGroupResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkSecurityGroup.ts#L56">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkSecurityGroup.ts#L56">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9335,13 +9335,13 @@ The name of the security rule.
 
 </div>
 <h3 class="pdoc-member-header" id="GetNetworkSecurityGroupResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkSecurityGroup.ts#L57">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkSecurityGroup.ts#L57">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetNetworkSecurityGroupResult-securityRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkSecurityGroup.ts#L61">property <b>securityRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkSecurityGroup.ts#L61">property <b>securityRules</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>securityRules: {
@@ -9367,7 +9367,7 @@ One or more `security_rule` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="GetNetworkSecurityGroupResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkSecurityGroup.ts#L65">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkSecurityGroup.ts#L65">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -9377,14 +9377,14 @@ A mapping of tags assigned to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetNetworkWatcherArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkWatcher.ts#L34">interface <b>GetNetworkWatcherArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkWatcher.ts#L34">interface <b>GetNetworkWatcherArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of arguments for invoking getNetworkWatcher.
 
 <h3 class="pdoc-member-header" id="GetNetworkWatcherArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkWatcher.ts#L38">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkWatcher.ts#L38">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9393,7 +9393,7 @@ Specifies the Name of the Network Watcher.
 
 </div>
 <h3 class="pdoc-member-header" id="GetNetworkWatcherArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkWatcher.ts#L42">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkWatcher.ts#L42">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9403,14 +9403,14 @@ Specifies the Name of the Resource Group within which the Network Watcher exists
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetNetworkWatcherResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkWatcher.ts#L48">interface <b>GetNetworkWatcherResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkWatcher.ts#L48">interface <b>GetNetworkWatcherResult</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of values returned by getNetworkWatcher.
 
 <h3 class="pdoc-member-header" id="GetNetworkWatcherResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkWatcher.ts#L62">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkWatcher.ts#L62">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9419,7 +9419,7 @@ id is the provider-assigned unique ID for this managed resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetNetworkWatcherResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkWatcher.ts#L52">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkWatcher.ts#L52">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9428,19 +9428,19 @@ The supported Azure location where the resource exists.
 
 </div>
 <h3 class="pdoc-member-header" id="GetNetworkWatcherResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkWatcher.ts#L53">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkWatcher.ts#L53">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetNetworkWatcherResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkWatcher.ts#L54">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkWatcher.ts#L54">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetNetworkWatcherResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkWatcher.ts#L58">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getNetworkWatcher.ts#L58">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -9450,14 +9450,14 @@ A mapping of tags assigned to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetPublicIPArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIP.ts#L95">interface <b>GetPublicIPArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIP.ts#L95">interface <b>GetPublicIPArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of arguments for invoking getPublicIP.
 
 <h3 class="pdoc-member-header" id="GetPublicIPArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIP.ts#L99">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIP.ts#L99">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9466,7 +9466,7 @@ Specifies the name of the public IP address.
 
 </div>
 <h3 class="pdoc-member-header" id="GetPublicIPArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIP.ts#L103">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIP.ts#L103">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9475,33 +9475,33 @@ Specifies the name of the resource group.
 
 </div>
 <h3 class="pdoc-member-header" id="GetPublicIPArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIP.ts#L104">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIP.ts#L104">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetPublicIPArgs-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIP.ts#L105">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIP.ts#L105">property <b>zones</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>zones?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetPublicIPResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIP.ts#L111">interface <b>GetPublicIPResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIP.ts#L111">interface <b>GetPublicIPResult</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of values returned by getPublicIP.
 
 <h3 class="pdoc-member-header" id="GetPublicIPResult-allocationMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIP.ts#L112">property <b>allocationMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIP.ts#L112">property <b>allocationMethod</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>allocationMethod: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetPublicIPResult-domainNameLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIP.ts#L116">property <b>domainNameLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIP.ts#L116">property <b>domainNameLabel</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>domainNameLabel: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9510,7 +9510,7 @@ The label for the Domain Name.
 
 </div>
 <h3 class="pdoc-member-header" id="GetPublicIPResult-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIP.ts#L120">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIP.ts#L120">property <b>fqdn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>fqdn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9519,7 +9519,7 @@ Fully qualified domain name of the A DNS record associated with the public IP. T
 
 </div>
 <h3 class="pdoc-member-header" id="GetPublicIPResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIP.ts#L146">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIP.ts#L146">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9528,7 +9528,7 @@ id is the provider-assigned unique ID for this managed resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetPublicIPResult-idleTimeoutInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIP.ts#L124">property <b>idleTimeoutInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIP.ts#L124">property <b>idleTimeoutInMinutes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>idleTimeoutInMinutes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -9537,7 +9537,7 @@ Specifies the timeout for the TCP idle connection.
 
 </div>
 <h3 class="pdoc-member-header" id="GetPublicIPResult-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIP.ts#L128">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIP.ts#L128">property <b>ipAddress</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9546,7 +9546,7 @@ The IP address value that was allocated.
 
 </div>
 <h3 class="pdoc-member-header" id="GetPublicIPResult-ipVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIP.ts#L132">property <b>ipVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIP.ts#L132">property <b>ipVersion</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9555,37 +9555,37 @@ The IP version being used, for example `IPv4` or `IPv6`.
 
 </div>
 <h3 class="pdoc-member-header" id="GetPublicIPResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIP.ts#L133">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIP.ts#L133">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetPublicIPResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIP.ts#L134">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIP.ts#L134">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetPublicIPResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIP.ts#L135">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIP.ts#L135">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetPublicIPResult-reverseFqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIP.ts#L136">property <b>reverseFqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIP.ts#L136">property <b>reverseFqdn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>reverseFqdn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetPublicIPResult-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIP.ts#L137">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIP.ts#L137">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sku: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetPublicIPResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIP.ts#L141">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIP.ts#L141">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -9594,21 +9594,21 @@ A mapping of tags to assigned to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetPublicIPResult-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIP.ts#L142">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIP.ts#L142">property <b>zones</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>zones: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetPublicIPsArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIPs.ts#L34">interface <b>GetPublicIPsArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIPs.ts#L34">interface <b>GetPublicIPsArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of arguments for invoking getPublicIPs.
 
 <h3 class="pdoc-member-header" id="GetPublicIPsArgs-allocationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIPs.ts#L38">property <b>allocationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIPs.ts#L38">property <b>allocationType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>allocationType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9617,7 +9617,7 @@ The Allocation Type for the Public IP Address. Possible values include `Static` 
 
 </div>
 <h3 class="pdoc-member-header" id="GetPublicIPsArgs-attached">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIPs.ts#L42">property <b>attached</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIPs.ts#L42">property <b>attached</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>attached?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -9626,7 +9626,7 @@ Filter to include IP Addresses which are attached to a device, such as a VM/LB (
 
 </div>
 <h3 class="pdoc-member-header" id="GetPublicIPsArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIPs.ts#L46">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIPs.ts#L46">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>namePrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9635,7 +9635,7 @@ A prefix match used for the IP Addresses `name` field, case sensitive.
 
 </div>
 <h3 class="pdoc-member-header" id="GetPublicIPsArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIPs.ts#L50">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIPs.ts#L50">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9645,26 +9645,26 @@ Specifies the name of the resource group.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetPublicIPsResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIPs.ts#L56">interface <b>GetPublicIPsResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIPs.ts#L56">interface <b>GetPublicIPsResult</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of values returned by getPublicIPs.
 
 <h3 class="pdoc-member-header" id="GetPublicIPsResult-allocationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIPs.ts#L57">property <b>allocationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIPs.ts#L57">property <b>allocationType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>allocationType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetPublicIPsResult-attached">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIPs.ts#L58">property <b>attached</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIPs.ts#L58">property <b>attached</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>attached?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetPublicIPsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIPs.ts#L68">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIPs.ts#L68">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9673,13 +9673,13 @@ id is the provider-assigned unique ID for this managed resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetPublicIPsResult-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIPs.ts#L59">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIPs.ts#L59">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>namePrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetPublicIPsResult-publicIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIPs.ts#L63">property <b>publicIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIPs.ts#L63">property <b>publicIps</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>publicIps: {
@@ -9694,21 +9694,21 @@ A List of `public_ips` blocks as defined below filtered by the criteria above.
 
 </div>
 <h3 class="pdoc-member-header" id="GetPublicIPsResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getPublicIPs.ts#L64">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getPublicIPs.ts#L64">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetRouteTableArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getRouteTable.ts#L32">interface <b>GetRouteTableArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getRouteTable.ts#L32">interface <b>GetRouteTableArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of arguments for invoking getRouteTable.
 
 <h3 class="pdoc-member-header" id="GetRouteTableArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getRouteTable.ts#L36">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getRouteTable.ts#L36">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9717,7 +9717,7 @@ The name of the Route Table.
 
 </div>
 <h3 class="pdoc-member-header" id="GetRouteTableArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getRouteTable.ts#L40">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getRouteTable.ts#L40">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9727,14 +9727,14 @@ The name of the Resource Group in which the Route Table exists.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetRouteTableResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getRouteTable.ts#L46">interface <b>GetRouteTableResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getRouteTable.ts#L46">interface <b>GetRouteTableResult</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of values returned by getRouteTable.
 
 <h3 class="pdoc-member-header" id="GetRouteTableResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getRouteTable.ts#L71">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getRouteTable.ts#L71">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9743,7 +9743,7 @@ id is the provider-assigned unique ID for this managed resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetRouteTableResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getRouteTable.ts#L50">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getRouteTable.ts#L50">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9752,7 +9752,7 @@ The Azure Region in which the Route Table exists.
 
 </div>
 <h3 class="pdoc-member-header" id="GetRouteTableResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getRouteTable.ts#L54">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getRouteTable.ts#L54">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9761,13 +9761,13 @@ The name of the Route.
 
 </div>
 <h3 class="pdoc-member-header" id="GetRouteTableResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getRouteTable.ts#L55">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getRouteTable.ts#L55">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetRouteTableResult-routes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getRouteTable.ts#L59">property <b>routes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getRouteTable.ts#L59">property <b>routes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>routes: {
@@ -9781,7 +9781,7 @@ One or more `route` blocks as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="GetRouteTableResult-subnets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getRouteTable.ts#L63">property <b>subnets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getRouteTable.ts#L63">property <b>subnets</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>subnets: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -9790,7 +9790,7 @@ The collection of Subnets associated with this route table.
 
 </div>
 <h3 class="pdoc-member-header" id="GetRouteTableResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getRouteTable.ts#L67">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getRouteTable.ts#L67">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -9800,14 +9800,14 @@ A mapping of tags assigned to the Route Table.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetSubnetArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getSubnet.ts#L36">interface <b>GetSubnetArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getSubnet.ts#L36">interface <b>GetSubnetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of arguments for invoking getSubnet.
 
 <h3 class="pdoc-member-header" id="GetSubnetArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getSubnet.ts#L40">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getSubnet.ts#L40">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9816,7 +9816,7 @@ Specifies the name of the Subnet.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSubnetArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getSubnet.ts#L44">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getSubnet.ts#L44">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9825,7 +9825,7 @@ Specifies the name of the resource group the Virtual Network is located in.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSubnetArgs-virtualNetworkName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getSubnet.ts#L48">property <b>virtualNetworkName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getSubnet.ts#L48">property <b>virtualNetworkName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>virtualNetworkName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9835,14 +9835,14 @@ Specifies the name of the Virtual Network this Subnet is located within.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetSubnetResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getSubnet.ts#L54">interface <b>GetSubnetResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getSubnet.ts#L54">interface <b>GetSubnetResult</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of values returned by getSubnet.
 
 <h3 class="pdoc-member-header" id="GetSubnetResult-addressPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getSubnet.ts#L58">property <b>addressPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getSubnet.ts#L58">property <b>addressPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>addressPrefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9851,7 +9851,7 @@ The address prefix used for the subnet.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSubnetResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getSubnet.ts#L81">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getSubnet.ts#L81">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9860,7 +9860,7 @@ id is the provider-assigned unique ID for this managed resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSubnetResult-ipConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getSubnet.ts#L62">property <b>ipConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getSubnet.ts#L62">property <b>ipConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipConfigurations: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -9869,13 +9869,13 @@ The collection of IP Configurations with IPs within this subnet.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSubnetResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getSubnet.ts#L63">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getSubnet.ts#L63">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetSubnetResult-networkSecurityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getSubnet.ts#L67">property <b>networkSecurityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getSubnet.ts#L67">property <b>networkSecurityGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>networkSecurityGroupId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9884,13 +9884,13 @@ The ID of the Network Security Group associated with the subnet.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSubnetResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getSubnet.ts#L68">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getSubnet.ts#L68">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetSubnetResult-routeTableId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getSubnet.ts#L72">property <b>routeTableId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getSubnet.ts#L72">property <b>routeTableId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>routeTableId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9899,7 +9899,7 @@ The ID of the Route Table associated with this subnet.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSubnetResult-serviceEndpoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getSubnet.ts#L76">property <b>serviceEndpoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getSubnet.ts#L76">property <b>serviceEndpoints</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>serviceEndpoints: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -9908,21 +9908,21 @@ A list of Service Endpoints within this subnet.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSubnetResult-virtualNetworkName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getSubnet.ts#L77">property <b>virtualNetworkName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getSubnet.ts#L77">property <b>virtualNetworkName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>virtualNetworkName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetVirtualNetworkArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetwork.ts#L34">interface <b>GetVirtualNetworkArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getVirtualNetwork.ts#L34">interface <b>GetVirtualNetworkArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of arguments for invoking getVirtualNetwork.
 
 <h3 class="pdoc-member-header" id="GetVirtualNetworkArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetwork.ts#L38">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getVirtualNetwork.ts#L38">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9931,7 +9931,7 @@ Specifies the name of the Virtual Network.
 
 </div>
 <h3 class="pdoc-member-header" id="GetVirtualNetworkArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetwork.ts#L42">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getVirtualNetwork.ts#L42">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9941,14 +9941,14 @@ Specifies the name of the resource group the Virtual Network is located in.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetVirtualNetworkGatewayArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetworkGateway.ts#L34">interface <b>GetVirtualNetworkGatewayArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getVirtualNetworkGateway.ts#L34">interface <b>GetVirtualNetworkGatewayArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of arguments for invoking getVirtualNetworkGateway.
 
 <h3 class="pdoc-member-header" id="GetVirtualNetworkGatewayArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetworkGateway.ts#L38">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getVirtualNetworkGateway.ts#L38">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9957,7 +9957,7 @@ Specifies the name of the Virtual Network Gateway.
 
 </div>
 <h3 class="pdoc-member-header" id="GetVirtualNetworkGatewayArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetworkGateway.ts#L42">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getVirtualNetworkGateway.ts#L42">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -9967,14 +9967,14 @@ Specifies the name of the resource group the Virtual Network Gateway is located 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetVirtualNetworkGatewayResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetworkGateway.ts#L48">interface <b>GetVirtualNetworkGatewayResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getVirtualNetworkGateway.ts#L48">interface <b>GetVirtualNetworkGatewayResult</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of values returned by getVirtualNetworkGateway.
 
 <h3 class="pdoc-member-header" id="GetVirtualNetworkGatewayResult-activeActive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetworkGateway.ts#L52">property <b>activeActive</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getVirtualNetworkGateway.ts#L52">property <b>activeActive</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>activeActive: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -9983,7 +9983,7 @@ A collection of values returned by getVirtualNetworkGateway.
 
 </div>
 <h3 class="pdoc-member-header" id="GetVirtualNetworkGatewayResult-bgpSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetworkGateway.ts#L53">property <b>bgpSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getVirtualNetworkGateway.ts#L53">property <b>bgpSettings</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>bgpSettings: {
@@ -9993,7 +9993,7 @@ A collection of values returned by getVirtualNetworkGateway.
 }[];</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetVirtualNetworkGatewayResult-defaultLocalNetworkGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetworkGateway.ts#L60">property <b>defaultLocalNetworkGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getVirtualNetworkGateway.ts#L60">property <b>defaultLocalNetworkGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>defaultLocalNetworkGatewayId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -10005,7 +10005,7 @@ gateway is created will be routed (*forced tunneling*). Refer to the
 
 </div>
 <h3 class="pdoc-member-header" id="GetVirtualNetworkGatewayResult-enableBgp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetworkGateway.ts#L65">property <b>enableBgp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getVirtualNetworkGateway.ts#L65">property <b>enableBgp</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>enableBgp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -10015,7 +10015,7 @@ for this Virtual Network Gateway.
 
 </div>
 <h3 class="pdoc-member-header" id="GetVirtualNetworkGatewayResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetworkGateway.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getVirtualNetworkGateway.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -10024,7 +10024,7 @@ id is the provider-assigned unique ID for this managed resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetVirtualNetworkGatewayResult-ipConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetworkGateway.ts#L69">property <b>ipConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getVirtualNetworkGateway.ts#L69">property <b>ipConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipConfigurations: {
@@ -10038,7 +10038,7 @@ One or two `ip_configuration` blocks documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="GetVirtualNetworkGatewayResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetworkGateway.ts#L73">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getVirtualNetworkGateway.ts#L73">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -10047,7 +10047,7 @@ The location/region where the Virtual Network Gateway is located.
 
 </div>
 <h3 class="pdoc-member-header" id="GetVirtualNetworkGatewayResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetworkGateway.ts#L77">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getVirtualNetworkGateway.ts#L77">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -10056,13 +10056,13 @@ The user-defined name of the revoked certificate.
 
 </div>
 <h3 class="pdoc-member-header" id="GetVirtualNetworkGatewayResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetworkGateway.ts#L78">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getVirtualNetworkGateway.ts#L78">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetVirtualNetworkGatewayResult-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetworkGateway.ts#L82">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getVirtualNetworkGateway.ts#L82">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sku: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -10071,7 +10071,7 @@ Configuration of the size and capacity of the Virtual Network Gateway.
 
 </div>
 <h3 class="pdoc-member-header" id="GetVirtualNetworkGatewayResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetworkGateway.ts#L86">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getVirtualNetworkGateway.ts#L86">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -10080,7 +10080,7 @@ A mapping of tags assigned to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetVirtualNetworkGatewayResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetworkGateway.ts#L90">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getVirtualNetworkGateway.ts#L90">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -10089,7 +10089,7 @@ The type of the Virtual Network Gateway.
 
 </div>
 <h3 class="pdoc-member-header" id="GetVirtualNetworkGatewayResult-vpnClientConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetworkGateway.ts#L94">property <b>vpnClientConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getVirtualNetworkGateway.ts#L94">property <b>vpnClientConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>vpnClientConfigurations: {
@@ -10111,7 +10111,7 @@ A `vpn_client_configuration` block which is documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="GetVirtualNetworkGatewayResult-vpnType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetworkGateway.ts#L98">property <b>vpnType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getVirtualNetworkGateway.ts#L98">property <b>vpnType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>vpnType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -10121,14 +10121,14 @@ The routing type of the Virtual Network Gateway.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetVirtualNetworkResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetwork.ts#L48">interface <b>GetVirtualNetworkResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getVirtualNetwork.ts#L48">interface <b>GetVirtualNetworkResult</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of values returned by getVirtualNetwork.
 
 <h3 class="pdoc-member-header" id="GetVirtualNetworkResult-addressSpaces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetwork.ts#L52">property <b>addressSpaces</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getVirtualNetwork.ts#L52">property <b>addressSpaces</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>addressSpaces: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -10137,7 +10137,7 @@ The list of address spaces used by the virtual network.
 
 </div>
 <h3 class="pdoc-member-header" id="GetVirtualNetworkResult-dnsServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetwork.ts#L56">property <b>dnsServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getVirtualNetwork.ts#L56">property <b>dnsServers</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>dnsServers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -10146,7 +10146,7 @@ The list of DNS servers used by the virtual network.
 
 </div>
 <h3 class="pdoc-member-header" id="GetVirtualNetworkResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetwork.ts#L70">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getVirtualNetwork.ts#L70">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -10155,19 +10155,19 @@ id is the provider-assigned unique ID for this managed resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetVirtualNetworkResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetwork.ts#L57">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getVirtualNetwork.ts#L57">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetVirtualNetworkResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetwork.ts#L58">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getVirtualNetwork.ts#L58">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetVirtualNetworkResult-subnets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetwork.ts#L62">property <b>subnets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getVirtualNetwork.ts#L62">property <b>subnets</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>subnets: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -10176,7 +10176,7 @@ The list of name of the subnets that are attached to this virtual network.
 
 </div>
 <h3 class="pdoc-member-header" id="GetVirtualNetworkResult-vnetPeerings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getVirtualNetwork.ts#L66">property <b>vnetPeerings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/getVirtualNetwork.ts#L66">property <b>vnetPeerings</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>vnetPeerings: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -10186,14 +10186,14 @@ A mapping of name - virtual network id of the virtual network peerings.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LocalNetworkGatewayArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/localNetworkGateway.ts#L165">interface <b>LocalNetworkGatewayArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/localNetworkGateway.ts#L165">interface <b>LocalNetworkGatewayArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a LocalNetworkGateway resource.
 
 <h3 class="pdoc-member-header" id="LocalNetworkGatewayArgs-addressSpaces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/localNetworkGateway.ts#L170">property <b>addressSpaces</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/localNetworkGateway.ts#L170">property <b>addressSpaces</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>addressSpaces: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -10203,7 +10203,7 @@ address spaces the gateway exposes.
 
 </div>
 <h3 class="pdoc-member-header" id="LocalNetworkGatewayArgs-bgpSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/localNetworkGateway.ts#L175">property <b>bgpSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/localNetworkGateway.ts#L175">property <b>bgpSettings</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>bgpSettings?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -10217,7 +10217,7 @@ Local Network Gateway's BGP speaker settings.
 
 </div>
 <h3 class="pdoc-member-header" id="LocalNetworkGatewayArgs-gatewayAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/localNetworkGateway.ts#L180">property <b>gatewayAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/localNetworkGateway.ts#L180">property <b>gatewayAddress</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>gatewayAddress: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10227,7 +10227,7 @@ connect.
 
 </div>
 <h3 class="pdoc-member-header" id="LocalNetworkGatewayArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/localNetworkGateway.ts#L185">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/localNetworkGateway.ts#L185">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10237,7 +10237,7 @@ created. Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="LocalNetworkGatewayArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/localNetworkGateway.ts#L190">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/localNetworkGateway.ts#L190">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10247,7 +10247,7 @@ forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="LocalNetworkGatewayArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/localNetworkGateway.ts#L195">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/localNetworkGateway.ts#L195">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10257,7 +10257,7 @@ create the local network gateway.
 
 </div>
 <h3 class="pdoc-member-header" id="LocalNetworkGatewayArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/localNetworkGateway.ts#L199">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/localNetworkGateway.ts#L199">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -10267,14 +10267,14 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LocalNetworkGatewayState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/localNetworkGateway.ts#L125">interface <b>LocalNetworkGatewayState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/localNetworkGateway.ts#L125">interface <b>LocalNetworkGatewayState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering LocalNetworkGateway resources.
 
 <h3 class="pdoc-member-header" id="LocalNetworkGatewayState-addressSpaces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/localNetworkGateway.ts#L130">property <b>addressSpaces</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/localNetworkGateway.ts#L130">property <b>addressSpaces</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>addressSpaces?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -10284,7 +10284,7 @@ address spaces the gateway exposes.
 
 </div>
 <h3 class="pdoc-member-header" id="LocalNetworkGatewayState-bgpSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/localNetworkGateway.ts#L135">property <b>bgpSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/localNetworkGateway.ts#L135">property <b>bgpSettings</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>bgpSettings?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -10298,7 +10298,7 @@ Local Network Gateway's BGP speaker settings.
 
 </div>
 <h3 class="pdoc-member-header" id="LocalNetworkGatewayState-gatewayAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/localNetworkGateway.ts#L140">property <b>gatewayAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/localNetworkGateway.ts#L140">property <b>gatewayAddress</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>gatewayAddress?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10308,7 +10308,7 @@ connect.
 
 </div>
 <h3 class="pdoc-member-header" id="LocalNetworkGatewayState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/localNetworkGateway.ts#L145">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/localNetworkGateway.ts#L145">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10318,7 +10318,7 @@ created. Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="LocalNetworkGatewayState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/localNetworkGateway.ts#L150">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/localNetworkGateway.ts#L150">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10328,7 +10328,7 @@ forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="LocalNetworkGatewayState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/localNetworkGateway.ts#L155">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/localNetworkGateway.ts#L155">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10338,7 +10338,7 @@ create the local network gateway.
 
 </div>
 <h3 class="pdoc-member-header" id="LocalNetworkGatewayState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/localNetworkGateway.ts#L159">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/localNetworkGateway.ts#L159">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -10348,14 +10348,14 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts#L193">interface <b>NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts#L193">interface <b>NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation resource.
 
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationArgs-backendAddressPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts#L197">property <b>backendAddressPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts#L197">property <b>backendAddressPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>backendAddressPoolId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10364,7 +10364,7 @@ The ID of the Application Gateway's Backend Address Pool which this Network Inte
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationArgs-ipConfigurationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts#L201">property <b>ipConfigurationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts#L201">property <b>ipConfigurationName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipConfigurationName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10373,7 +10373,7 @@ The Name of the IP Configuration within the Network Interface which should be co
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationArgs-networkInterfaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts#L205">property <b>networkInterfaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts#L205">property <b>networkInterfaceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>networkInterfaceId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10383,14 +10383,14 @@ The ID of the Network Interface. Changing this forces a new resource to be creat
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts#L175">interface <b>NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts#L175">interface <b>NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation resources.
 
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationState-backendAddressPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts#L179">property <b>backendAddressPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts#L179">property <b>backendAddressPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>backendAddressPoolId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10399,7 +10399,7 @@ The ID of the Application Gateway's Backend Address Pool which this Network Inte
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationState-ipConfigurationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts#L183">property <b>ipConfigurationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts#L183">property <b>ipConfigurationName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipConfigurationName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10408,7 +10408,7 @@ The Name of the IP Configuration within the Network Interface which should be co
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationState-networkInterfaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts#L187">property <b>networkInterfaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts#L187">property <b>networkInterfaceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>networkInterfaceId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10418,14 +10418,14 @@ The ID of the Network Interface. Changing this forces a new resource to be creat
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkInterfaceApplicationSecurityGroupAssociationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts#L136">interface <b>NetworkInterfaceApplicationSecurityGroupAssociationArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts#L136">interface <b>NetworkInterfaceApplicationSecurityGroupAssociationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a NetworkInterfaceApplicationSecurityGroupAssociation resource.
 
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationSecurityGroupAssociationArgs-applicationSecurityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts#L140">property <b>applicationSecurityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts#L140">property <b>applicationSecurityGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>applicationSecurityGroupId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10434,7 +10434,7 @@ The ID of the Application Security Group which this Network Interface which shou
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationSecurityGroupAssociationArgs-ipConfigurationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts#L144">property <b>ipConfigurationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts#L144">property <b>ipConfigurationName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipConfigurationName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10443,7 +10443,7 @@ The Name of the IP Configuration within the Network Interface which should be co
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationSecurityGroupAssociationArgs-networkInterfaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts#L148">property <b>networkInterfaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts#L148">property <b>networkInterfaceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>networkInterfaceId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10453,14 +10453,14 @@ The ID of the Network Interface. Changing this forces a new resource to be creat
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkInterfaceApplicationSecurityGroupAssociationState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts#L118">interface <b>NetworkInterfaceApplicationSecurityGroupAssociationState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts#L118">interface <b>NetworkInterfaceApplicationSecurityGroupAssociationState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering NetworkInterfaceApplicationSecurityGroupAssociation resources.
 
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationSecurityGroupAssociationState-applicationSecurityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts#L122">property <b>applicationSecurityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts#L122">property <b>applicationSecurityGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>applicationSecurityGroupId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10469,7 +10469,7 @@ The ID of the Application Security Group which this Network Interface which shou
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationSecurityGroupAssociationState-ipConfigurationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts#L126">property <b>ipConfigurationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts#L126">property <b>ipConfigurationName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipConfigurationName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10478,7 +10478,7 @@ The Name of the IP Configuration within the Network Interface which should be co
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationSecurityGroupAssociationState-networkInterfaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts#L130">property <b>networkInterfaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts#L130">property <b>networkInterfaceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>networkInterfaceId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10488,14 +10488,14 @@ The ID of the Network Interface. Changing this forces a new resource to be creat
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkInterfaceArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L252">interface <b>NetworkInterfaceArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L252">interface <b>NetworkInterfaceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a NetworkInterface resource.
 
 <h3 class="pdoc-member-header" id="NetworkInterfaceArgs-appliedDnsServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L256">property <b>appliedDnsServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L256">property <b>appliedDnsServers</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>appliedDnsServers?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -10504,7 +10504,7 @@ If the VM that uses this NIC is part of an Availability Set, then this list will
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceArgs-dnsServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L260">property <b>dnsServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L260">property <b>dnsServers</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>dnsServers?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -10513,7 +10513,7 @@ List of DNS servers IP addresses to use for this NIC, overrides the VNet-level s
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceArgs-enableAcceleratedNetworking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L264">property <b>enableAcceleratedNetworking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L264">property <b>enableAcceleratedNetworking</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>enableAcceleratedNetworking?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -10522,7 +10522,7 @@ Enables Azure Accelerated Networking using SR-IOV. Only certain VM instance size
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceArgs-enableIpForwarding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L268">property <b>enableIpForwarding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L268">property <b>enableIpForwarding</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>enableIpForwarding?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -10531,7 +10531,7 @@ Enables IP Forwarding on the NIC. Defaults to `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceArgs-internalDnsNameLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L272">property <b>internalDnsNameLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L272">property <b>internalDnsNameLabel</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>internalDnsNameLabel?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10540,13 +10540,13 @@ Relative DNS name for this NIC used for internal communications between VMs in t
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceArgs-internalFqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L273">property <b>internalFqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L273">property <b>internalFqdn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>internalFqdn?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceArgs-ipConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L277">property <b>ipConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L277">property <b>ipConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipConfigurations: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -10567,7 +10567,7 @@ One or more `ip_configuration` associated with this NIC as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L281">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L281">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10576,7 +10576,7 @@ The location/region where the network interface is created. Changing this forces
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceArgs-macAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L285">property <b>macAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L285">property <b>macAddress</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>macAddress?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10585,7 +10585,7 @@ The media access control (MAC) address of the network interface.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L289">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L289">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10594,7 +10594,7 @@ The name of the network interface. Changing this forces a new resource to be cre
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceArgs-networkSecurityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L293">property <b>networkSecurityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L293">property <b>networkSecurityGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>networkSecurityGroupId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10603,7 +10603,7 @@ The ID of the Network Security Group to associate with the network interface.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L297">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L297">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10612,7 +10612,7 @@ The name of the resource group in which to create the network interface. Changin
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L301">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L301">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -10621,7 +10621,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceArgs-virtualMachineId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L305">property <b>virtualMachineId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L305">property <b>virtualMachineId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>virtualMachineId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10631,14 +10631,14 @@ Reference to a VM with which this NIC has been associated.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkInterfaceBackendAddressPoolAssociationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts#L150">interface <b>NetworkInterfaceBackendAddressPoolAssociationArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts#L150">interface <b>NetworkInterfaceBackendAddressPoolAssociationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a NetworkInterfaceBackendAddressPoolAssociation resource.
 
 <h3 class="pdoc-member-header" id="NetworkInterfaceBackendAddressPoolAssociationArgs-backendAddressPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts#L154">property <b>backendAddressPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts#L154">property <b>backendAddressPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>backendAddressPoolId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10647,7 +10647,7 @@ The ID of the Load Balancer Backend Address Pool which this Network Interface wh
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceBackendAddressPoolAssociationArgs-ipConfigurationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts#L158">property <b>ipConfigurationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts#L158">property <b>ipConfigurationName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipConfigurationName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10656,7 +10656,7 @@ The Name of the IP Configuration within the Network Interface which should be co
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceBackendAddressPoolAssociationArgs-networkInterfaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts#L162">property <b>networkInterfaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts#L162">property <b>networkInterfaceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>networkInterfaceId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10666,14 +10666,14 @@ The ID of the Network Interface. Changing this forces a new resource to be creat
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkInterfaceBackendAddressPoolAssociationState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts#L132">interface <b>NetworkInterfaceBackendAddressPoolAssociationState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts#L132">interface <b>NetworkInterfaceBackendAddressPoolAssociationState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering NetworkInterfaceBackendAddressPoolAssociation resources.
 
 <h3 class="pdoc-member-header" id="NetworkInterfaceBackendAddressPoolAssociationState-backendAddressPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts#L136">property <b>backendAddressPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts#L136">property <b>backendAddressPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>backendAddressPoolId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10682,7 +10682,7 @@ The ID of the Load Balancer Backend Address Pool which this Network Interface wh
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceBackendAddressPoolAssociationState-ipConfigurationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts#L140">property <b>ipConfigurationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts#L140">property <b>ipConfigurationName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipConfigurationName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10691,7 +10691,7 @@ The Name of the IP Configuration within the Network Interface which should be co
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceBackendAddressPoolAssociationState-networkInterfaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts#L144">property <b>networkInterfaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts#L144">property <b>networkInterfaceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>networkInterfaceId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10701,14 +10701,14 @@ The ID of the Network Interface. Changing this forces a new resource to be creat
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkInterfaceNatRuleAssociationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts#L154">interface <b>NetworkInterfaceNatRuleAssociationArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts#L154">interface <b>NetworkInterfaceNatRuleAssociationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a NetworkInterfaceNatRuleAssociation resource.
 
 <h3 class="pdoc-member-header" id="NetworkInterfaceNatRuleAssociationArgs-ipConfigurationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts#L158">property <b>ipConfigurationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts#L158">property <b>ipConfigurationName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipConfigurationName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10717,7 +10717,7 @@ The Name of the IP Configuration within the Network Interface which should be co
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceNatRuleAssociationArgs-natRuleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts#L162">property <b>natRuleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts#L162">property <b>natRuleId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>natRuleId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10726,7 +10726,7 @@ The ID of the Load Balancer NAT Rule which this Network Interface which should b
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceNatRuleAssociationArgs-networkInterfaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts#L166">property <b>networkInterfaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts#L166">property <b>networkInterfaceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>networkInterfaceId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10736,14 +10736,14 @@ The ID of the Network Interface. Changing this forces a new resource to be creat
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkInterfaceNatRuleAssociationState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts#L136">interface <b>NetworkInterfaceNatRuleAssociationState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts#L136">interface <b>NetworkInterfaceNatRuleAssociationState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering NetworkInterfaceNatRuleAssociation resources.
 
 <h3 class="pdoc-member-header" id="NetworkInterfaceNatRuleAssociationState-ipConfigurationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts#L140">property <b>ipConfigurationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts#L140">property <b>ipConfigurationName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipConfigurationName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10752,7 +10752,7 @@ The Name of the IP Configuration within the Network Interface which should be co
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceNatRuleAssociationState-natRuleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts#L144">property <b>natRuleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts#L144">property <b>natRuleId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>natRuleId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10761,7 +10761,7 @@ The ID of the Load Balancer NAT Rule which this Network Interface which should b
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceNatRuleAssociationState-networkInterfaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts#L148">property <b>networkInterfaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts#L148">property <b>networkInterfaceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>networkInterfaceId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10771,14 +10771,14 @@ The ID of the Network Interface. Changing this forces a new resource to be creat
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkInterfaceState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L185">interface <b>NetworkInterfaceState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L185">interface <b>NetworkInterfaceState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering NetworkInterface resources.
 
 <h3 class="pdoc-member-header" id="NetworkInterfaceState-appliedDnsServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L189">property <b>appliedDnsServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L189">property <b>appliedDnsServers</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>appliedDnsServers?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -10787,7 +10787,7 @@ If the VM that uses this NIC is part of an Availability Set, then this list will
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceState-dnsServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L193">property <b>dnsServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L193">property <b>dnsServers</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>dnsServers?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -10796,7 +10796,7 @@ List of DNS servers IP addresses to use for this NIC, overrides the VNet-level s
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceState-enableAcceleratedNetworking">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L197">property <b>enableAcceleratedNetworking</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L197">property <b>enableAcceleratedNetworking</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>enableAcceleratedNetworking?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -10805,7 +10805,7 @@ Enables Azure Accelerated Networking using SR-IOV. Only certain VM instance size
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceState-enableIpForwarding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L201">property <b>enableIpForwarding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L201">property <b>enableIpForwarding</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>enableIpForwarding?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -10814,7 +10814,7 @@ Enables IP Forwarding on the NIC. Defaults to `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceState-internalDnsNameLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L205">property <b>internalDnsNameLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L205">property <b>internalDnsNameLabel</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>internalDnsNameLabel?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10823,13 +10823,13 @@ Relative DNS name for this NIC used for internal communications between VMs in t
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceState-internalFqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L206">property <b>internalFqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L206">property <b>internalFqdn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>internalFqdn?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceState-ipConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L210">property <b>ipConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L210">property <b>ipConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipConfigurations?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -10850,7 +10850,7 @@ One or more `ip_configuration` associated with this NIC as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L214">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L214">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10859,7 +10859,7 @@ The location/region where the network interface is created. Changing this forces
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceState-macAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L218">property <b>macAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L218">property <b>macAddress</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>macAddress?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10868,7 +10868,7 @@ The media access control (MAC) address of the network interface.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L222">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L222">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10877,7 +10877,7 @@ The name of the network interface. Changing this forces a new resource to be cre
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceState-networkSecurityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L226">property <b>networkSecurityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L226">property <b>networkSecurityGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>networkSecurityGroupId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10886,7 +10886,7 @@ The ID of the Network Security Group to associate with the network interface.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceState-privateIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L230">property <b>privateIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L230">property <b>privateIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>privateIpAddress?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10895,7 +10895,7 @@ The first private IP address of the network interface.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceState-privateIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L234">property <b>privateIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L234">property <b>privateIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>privateIpAddresses?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -10904,7 +10904,7 @@ The private IP addresses of the network interface.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L238">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L238">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10913,7 +10913,7 @@ The name of the resource group in which to create the network interface. Changin
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L242">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L242">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -10922,7 +10922,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkInterfaceState-virtualMachineId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L246">property <b>virtualMachineId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkInterface.ts#L246">property <b>virtualMachineId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>virtualMachineId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10932,14 +10932,14 @@ Reference to a VM with which this NIC has been associated.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkSecurityGroupArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityGroup.ts#L143">interface <b>NetworkSecurityGroupArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityGroup.ts#L143">interface <b>NetworkSecurityGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a NetworkSecurityGroup resource.
 
 <h3 class="pdoc-member-header" id="NetworkSecurityGroupArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityGroup.ts#L147">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityGroup.ts#L147">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10948,7 +10948,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityGroup.ts#L151">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityGroup.ts#L151">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10957,7 +10957,7 @@ Specifies the name of the network security group. Changing this forces a new res
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityGroupArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityGroup.ts#L155">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityGroup.ts#L155">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -10966,7 +10966,7 @@ The name of the resource group in which to create the network security group. Ch
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityGroupArgs-securityRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityGroup.ts#L159">property <b>securityRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityGroup.ts#L159">property <b>securityRules</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>securityRules?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -10992,7 +10992,7 @@ One or more `security_rule` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityGroupArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityGroup.ts#L163">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityGroup.ts#L163">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -11002,14 +11002,14 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkSecurityGroupState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityGroup.ts#L117">interface <b>NetworkSecurityGroupState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityGroup.ts#L117">interface <b>NetworkSecurityGroupState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering NetworkSecurityGroup resources.
 
 <h3 class="pdoc-member-header" id="NetworkSecurityGroupState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityGroup.ts#L121">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityGroup.ts#L121">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11018,7 +11018,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityGroup.ts#L125">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityGroup.ts#L125">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11027,7 +11027,7 @@ Specifies the name of the network security group. Changing this forces a new res
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityGroupState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityGroup.ts#L129">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityGroup.ts#L129">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11036,7 +11036,7 @@ The name of the resource group in which to create the network security group. Ch
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityGroupState-securityRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityGroup.ts#L133">property <b>securityRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityGroup.ts#L133">property <b>securityRules</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>securityRules?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -11062,7 +11062,7 @@ One or more `security_rule` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityGroupState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityGroup.ts#L137">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityGroup.ts#L137">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -11072,14 +11072,14 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkSecurityRuleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L284">interface <b>NetworkSecurityRuleArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L284">interface <b>NetworkSecurityRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a NetworkSecurityRule resource.
 
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleArgs-access">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L288">property <b>access</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L288">property <b>access</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>access: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11088,7 +11088,7 @@ Specifies whether network traffic is allowed or denied. Possible values are `All
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L292">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L292">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>description?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11097,7 +11097,7 @@ A description for this rule. Restricted to 140 characters.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleArgs-destinationAddressPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L296">property <b>destinationAddressPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L296">property <b>destinationAddressPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>destinationAddressPrefix?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11106,7 +11106,7 @@ CIDR or destination IP range or * to match any IP. Tags such as ‘VirtualNetwor
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleArgs-destinationAddressPrefixes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L300">property <b>destinationAddressPrefixes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L300">property <b>destinationAddressPrefixes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>destinationAddressPrefixes?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -11115,7 +11115,7 @@ List of destination address prefixes. Tags may not be used. This is required if 
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleArgs-destinationApplicationSecurityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L304">property <b>destinationApplicationSecurityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L304">property <b>destinationApplicationSecurityGroupIds</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>destinationApplicationSecurityGroupIds?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11124,7 +11124,7 @@ A List of destination Application Security Group ID's
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleArgs-destinationPortRange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L308">property <b>destinationPortRange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L308">property <b>destinationPortRange</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>destinationPortRange?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11133,7 +11133,7 @@ Destination Port or Range. Integer or range between `0` and `65535` or `*` to ma
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleArgs-destinationPortRanges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L312">property <b>destinationPortRanges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L312">property <b>destinationPortRanges</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>destinationPortRanges?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -11142,7 +11142,7 @@ List of destination ports or port ranges. This is required if `destination_port_
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleArgs-direction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L316">property <b>direction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L316">property <b>direction</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>direction: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11151,7 +11151,7 @@ The direction specifies if rule will be evaluated on incoming or outgoing traffi
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L320">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L320">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11160,7 +11160,7 @@ The name of the security rule. This needs to be unique across all Rules in the N
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleArgs-networkSecurityGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L324">property <b>networkSecurityGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L324">property <b>networkSecurityGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>networkSecurityGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11169,7 +11169,7 @@ The name of the Network Security Group that we want to attach the rule to. Chang
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L328">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L328">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>priority: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -11178,7 +11178,7 @@ Specifies the priority of the rule. The value can be between 100 and 4096. The p
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleArgs-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L332">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L332">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>protocol: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11187,7 +11187,7 @@ Network protocol this rule applies to. Possible values include `Tcp`, `Udp` or `
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L336">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L336">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11196,7 +11196,7 @@ The name of the resource group in which to create the Network Security Rule. Cha
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleArgs-sourceAddressPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L340">property <b>sourceAddressPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L340">property <b>sourceAddressPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sourceAddressPrefix?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11205,7 +11205,7 @@ CIDR or source IP range or * to match any IP. Tags such as ‘VirtualNetwork’,
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleArgs-sourceAddressPrefixes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L344">property <b>sourceAddressPrefixes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L344">property <b>sourceAddressPrefixes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sourceAddressPrefixes?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -11214,7 +11214,7 @@ List of source address prefixes. Tags may not be used. This is required if `sour
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleArgs-sourceApplicationSecurityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L348">property <b>sourceApplicationSecurityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L348">property <b>sourceApplicationSecurityGroupIds</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sourceApplicationSecurityGroupIds?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11223,7 +11223,7 @@ A List of source Application Security Group ID's
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleArgs-sourcePortRange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L352">property <b>sourcePortRange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L352">property <b>sourcePortRange</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sourcePortRange?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11232,7 +11232,7 @@ Source Port or Range. Integer or range between `0` and `65535` or `*` to match a
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleArgs-sourcePortRanges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L356">property <b>sourcePortRanges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L356">property <b>sourcePortRanges</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sourcePortRanges?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -11242,14 +11242,14 @@ List of source ports or port ranges. This is required if `source_port_range` is 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkSecurityRuleState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L206">interface <b>NetworkSecurityRuleState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L206">interface <b>NetworkSecurityRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering NetworkSecurityRule resources.
 
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleState-access">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L210">property <b>access</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L210">property <b>access</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>access?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11258,7 +11258,7 @@ Specifies whether network traffic is allowed or denied. Possible values are `All
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L214">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L214">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>description?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11267,7 +11267,7 @@ A description for this rule. Restricted to 140 characters.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleState-destinationAddressPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L218">property <b>destinationAddressPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L218">property <b>destinationAddressPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>destinationAddressPrefix?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11276,7 +11276,7 @@ CIDR or destination IP range or * to match any IP. Tags such as ‘VirtualNetwor
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleState-destinationAddressPrefixes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L222">property <b>destinationAddressPrefixes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L222">property <b>destinationAddressPrefixes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>destinationAddressPrefixes?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -11285,7 +11285,7 @@ List of destination address prefixes. Tags may not be used. This is required if 
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleState-destinationApplicationSecurityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L226">property <b>destinationApplicationSecurityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L226">property <b>destinationApplicationSecurityGroupIds</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>destinationApplicationSecurityGroupIds?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11294,7 +11294,7 @@ A List of destination Application Security Group ID's
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleState-destinationPortRange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L230">property <b>destinationPortRange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L230">property <b>destinationPortRange</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>destinationPortRange?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11303,7 +11303,7 @@ Destination Port or Range. Integer or range between `0` and `65535` or `*` to ma
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleState-destinationPortRanges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L234">property <b>destinationPortRanges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L234">property <b>destinationPortRanges</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>destinationPortRanges?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -11312,7 +11312,7 @@ List of destination ports or port ranges. This is required if `destination_port_
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleState-direction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L238">property <b>direction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L238">property <b>direction</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>direction?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11321,7 +11321,7 @@ The direction specifies if rule will be evaluated on incoming or outgoing traffi
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L242">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L242">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11330,7 +11330,7 @@ The name of the security rule. This needs to be unique across all Rules in the N
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleState-networkSecurityGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L246">property <b>networkSecurityGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L246">property <b>networkSecurityGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>networkSecurityGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11339,7 +11339,7 @@ The name of the Network Security Group that we want to attach the rule to. Chang
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L250">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L250">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>priority?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -11348,7 +11348,7 @@ Specifies the priority of the rule. The value can be between 100 and 4096. The p
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleState-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L254">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L254">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>protocol?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11357,7 +11357,7 @@ Network protocol this rule applies to. Possible values include `Tcp`, `Udp` or `
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L258">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L258">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11366,7 +11366,7 @@ The name of the resource group in which to create the Network Security Rule. Cha
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleState-sourceAddressPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L262">property <b>sourceAddressPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L262">property <b>sourceAddressPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sourceAddressPrefix?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11375,7 +11375,7 @@ CIDR or source IP range or * to match any IP. Tags such as ‘VirtualNetwork’,
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleState-sourceAddressPrefixes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L266">property <b>sourceAddressPrefixes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L266">property <b>sourceAddressPrefixes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sourceAddressPrefixes?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -11384,7 +11384,7 @@ List of source address prefixes. Tags may not be used. This is required if `sour
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleState-sourceApplicationSecurityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L270">property <b>sourceApplicationSecurityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L270">property <b>sourceApplicationSecurityGroupIds</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sourceApplicationSecurityGroupIds?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11393,7 +11393,7 @@ A List of source Application Security Group ID's
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleState-sourcePortRange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L274">property <b>sourcePortRange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L274">property <b>sourcePortRange</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sourcePortRange?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11402,7 +11402,7 @@ Source Port or Range. Integer or range between `0` and `65535` or `*` to match a
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleState-sourcePortRanges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkSecurityRule.ts#L278">property <b>sourcePortRanges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkSecurityRule.ts#L278">property <b>sourcePortRanges</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sourcePortRanges?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -11412,14 +11412,14 @@ List of source ports or port ranges. This is required if `source_port_range` is 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkWatcherArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkWatcher.ts#L115">interface <b>NetworkWatcherArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkWatcher.ts#L115">interface <b>NetworkWatcherArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a NetworkWatcher resource.
 
 <h3 class="pdoc-member-header" id="NetworkWatcherArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkWatcher.ts#L119">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkWatcher.ts#L119">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11428,7 +11428,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkWatcherArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkWatcher.ts#L123">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkWatcher.ts#L123">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11437,7 +11437,7 @@ The name of the Network Watcher. Changing this forces a new resource to be creat
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkWatcherArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkWatcher.ts#L127">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkWatcher.ts#L127">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11446,7 +11446,7 @@ The name of the resource group in which to create the Network Watcher. Changing 
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkWatcherArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkWatcher.ts#L131">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkWatcher.ts#L131">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -11456,14 +11456,14 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkWatcherState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkWatcher.ts#L93">interface <b>NetworkWatcherState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkWatcher.ts#L93">interface <b>NetworkWatcherState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering NetworkWatcher resources.
 
 <h3 class="pdoc-member-header" id="NetworkWatcherState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkWatcher.ts#L97">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkWatcher.ts#L97">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11472,7 +11472,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkWatcherState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkWatcher.ts#L101">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkWatcher.ts#L101">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11481,7 +11481,7 @@ The name of the Network Watcher. Changing this forces a new resource to be creat
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkWatcherState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkWatcher.ts#L105">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkWatcher.ts#L105">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11490,7 +11490,7 @@ The name of the resource group in which to create the Network Watcher. Changing 
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkWatcherState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkWatcher.ts#L109">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/networkWatcher.ts#L109">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -11500,14 +11500,14 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PacketCaptureArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/packetCapture.ts#L250">interface <b>PacketCaptureArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/packetCapture.ts#L250">interface <b>PacketCaptureArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a PacketCapture resource.
 
 <h3 class="pdoc-member-header" id="PacketCaptureArgs-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/packetCapture.ts#L254">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/packetCapture.ts#L254">property <b>filters</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>filters?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -11522,7 +11522,7 @@ One or more `filter` blocks as defined below. Changing this forces a new resourc
 
 </div>
 <h3 class="pdoc-member-header" id="PacketCaptureArgs-maximumBytesPerPacket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/packetCapture.ts#L258">property <b>maximumBytesPerPacket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/packetCapture.ts#L258">property <b>maximumBytesPerPacket</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>maximumBytesPerPacket?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -11531,7 +11531,7 @@ The number of bytes captured per packet. The remaining bytes are truncated. Defa
 
 </div>
 <h3 class="pdoc-member-header" id="PacketCaptureArgs-maximumBytesPerSession">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/packetCapture.ts#L262">property <b>maximumBytesPerSession</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/packetCapture.ts#L262">property <b>maximumBytesPerSession</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>maximumBytesPerSession?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -11540,7 +11540,7 @@ Maximum size of the capture in Bytes. Defaults to `1073741824` (1GB). Changing t
 
 </div>
 <h3 class="pdoc-member-header" id="PacketCaptureArgs-maximumCaptureDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/packetCapture.ts#L266">property <b>maximumCaptureDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/packetCapture.ts#L266">property <b>maximumCaptureDuration</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>maximumCaptureDuration?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -11549,7 +11549,7 @@ The maximum duration of the capture session in seconds. Defaults to `18000` (5 h
 
 </div>
 <h3 class="pdoc-member-header" id="PacketCaptureArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/packetCapture.ts#L270">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/packetCapture.ts#L270">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11558,7 +11558,7 @@ The name to use for this Packet Capture. Changing this forces a new resource to 
 
 </div>
 <h3 class="pdoc-member-header" id="PacketCaptureArgs-networkWatcherName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/packetCapture.ts#L274">property <b>networkWatcherName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/packetCapture.ts#L274">property <b>networkWatcherName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>networkWatcherName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11567,7 +11567,7 @@ The name of the Network Watcher. Changing this forces a new resource to be creat
 
 </div>
 <h3 class="pdoc-member-header" id="PacketCaptureArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/packetCapture.ts#L278">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/packetCapture.ts#L278">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11576,7 +11576,7 @@ The name of the resource group in which the Network Watcher exists. Changing thi
 
 </div>
 <h3 class="pdoc-member-header" id="PacketCaptureArgs-storageLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/packetCapture.ts#L282">property <b>storageLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/packetCapture.ts#L282">property <b>storageLocation</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>storageLocation: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -11589,7 +11589,7 @@ A `storage_location` block as defined below. Changing this forces a new resource
 
 </div>
 <h3 class="pdoc-member-header" id="PacketCaptureArgs-targetResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/packetCapture.ts#L286">property <b>targetResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/packetCapture.ts#L286">property <b>targetResourceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>targetResourceId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11599,14 +11599,14 @@ The ID of the Resource to capture packets from. Changing this forces a new resou
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PacketCaptureState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/packetCapture.ts#L208">interface <b>PacketCaptureState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/packetCapture.ts#L208">interface <b>PacketCaptureState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering PacketCapture resources.
 
 <h3 class="pdoc-member-header" id="PacketCaptureState-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/packetCapture.ts#L212">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/packetCapture.ts#L212">property <b>filters</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>filters?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -11621,7 +11621,7 @@ One or more `filter` blocks as defined below. Changing this forces a new resourc
 
 </div>
 <h3 class="pdoc-member-header" id="PacketCaptureState-maximumBytesPerPacket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/packetCapture.ts#L216">property <b>maximumBytesPerPacket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/packetCapture.ts#L216">property <b>maximumBytesPerPacket</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>maximumBytesPerPacket?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -11630,7 +11630,7 @@ The number of bytes captured per packet. The remaining bytes are truncated. Defa
 
 </div>
 <h3 class="pdoc-member-header" id="PacketCaptureState-maximumBytesPerSession">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/packetCapture.ts#L220">property <b>maximumBytesPerSession</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/packetCapture.ts#L220">property <b>maximumBytesPerSession</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>maximumBytesPerSession?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -11639,7 +11639,7 @@ Maximum size of the capture in Bytes. Defaults to `1073741824` (1GB). Changing t
 
 </div>
 <h3 class="pdoc-member-header" id="PacketCaptureState-maximumCaptureDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/packetCapture.ts#L224">property <b>maximumCaptureDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/packetCapture.ts#L224">property <b>maximumCaptureDuration</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>maximumCaptureDuration?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -11648,7 +11648,7 @@ The maximum duration of the capture session in seconds. Defaults to `18000` (5 h
 
 </div>
 <h3 class="pdoc-member-header" id="PacketCaptureState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/packetCapture.ts#L228">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/packetCapture.ts#L228">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11657,7 +11657,7 @@ The name to use for this Packet Capture. Changing this forces a new resource to 
 
 </div>
 <h3 class="pdoc-member-header" id="PacketCaptureState-networkWatcherName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/packetCapture.ts#L232">property <b>networkWatcherName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/packetCapture.ts#L232">property <b>networkWatcherName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>networkWatcherName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11666,7 +11666,7 @@ The name of the Network Watcher. Changing this forces a new resource to be creat
 
 </div>
 <h3 class="pdoc-member-header" id="PacketCaptureState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/packetCapture.ts#L236">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/packetCapture.ts#L236">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11675,7 +11675,7 @@ The name of the resource group in which the Network Watcher exists. Changing thi
 
 </div>
 <h3 class="pdoc-member-header" id="PacketCaptureState-storageLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/packetCapture.ts#L240">property <b>storageLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/packetCapture.ts#L240">property <b>storageLocation</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>storageLocation?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -11688,7 +11688,7 @@ A `storage_location` block as defined below. Changing this forces a new resource
 
 </div>
 <h3 class="pdoc-member-header" id="PacketCaptureState-targetResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/packetCapture.ts#L244">property <b>targetResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/packetCapture.ts#L244">property <b>targetResourceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>targetResourceId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11698,14 +11698,14 @@ The ID of the Resource to capture packets from. Changing this forces a new resou
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PublicIpArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L227">interface <b>PublicIpArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L227">interface <b>PublicIpArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a PublicIp resource.
 
 <h3 class="pdoc-member-header" id="PublicIpArgs-allocationMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L231">property <b>allocationMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L231">property <b>allocationMethod</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>allocationMethod?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11714,7 +11714,7 @@ Defines the allocation method for this IP address. Possible values are `Static` 
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpArgs-domainNameLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L235">property <b>domainNameLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L235">property <b>domainNameLabel</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>domainNameLabel?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11723,7 +11723,7 @@ Label for the Domain Name. Will be used to make up the FQDN.  If a domain name l
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpArgs-idleTimeoutInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L239">property <b>idleTimeoutInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L239">property <b>idleTimeoutInMinutes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>idleTimeoutInMinutes?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -11732,7 +11732,7 @@ Specifies the timeout for the TCP idle connection. The value can be set between 
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpArgs-ipVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L243">property <b>ipVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L243">property <b>ipVersion</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipVersion?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11741,7 +11741,7 @@ The IP Version to use, IPv6 or IPv4.
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L247">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L247">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11750,7 +11750,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L252">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L252">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11760,13 +11760,13 @@ new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpArgs-publicIpAddressAllocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L253">property <b>publicIpAddressAllocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L253">property <b>publicIpAddressAllocation</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>publicIpAddressAllocation?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="PublicIpArgs-publicIpPrefixId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L257">property <b>publicIpPrefixId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L257">property <b>publicIpPrefixId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>publicIpPrefixId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11775,7 +11775,7 @@ If specified then public IP address allocated will be provided from the public I
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L262">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L262">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11785,7 +11785,7 @@ create the public ip.
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpArgs-reverseFqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L266">property <b>reverseFqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L266">property <b>reverseFqdn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>reverseFqdn?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11794,7 +11794,7 @@ A fully qualified domain name that resolves to this public IP address. If the re
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpArgs-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L270">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L270">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sku?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11803,7 +11803,7 @@ The SKU of the Public IP. Accepted values are `Basic` and `Standard`. Defaults t
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L274">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L274">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -11812,7 +11812,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpArgs-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L278">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L278">property <b>zones</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>zones?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11822,14 +11822,14 @@ A collection containing the availability zone to allocate the Public IP in.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PublicIpPrefixArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIpPrefix.ts#L161">interface <b>PublicIpPrefixArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIpPrefix.ts#L161">interface <b>PublicIpPrefixArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a PublicIpPrefix resource.
 
 <h3 class="pdoc-member-header" id="PublicIpPrefixArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIpPrefix.ts#L165">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIpPrefix.ts#L165">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11838,7 +11838,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpPrefixArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIpPrefix.ts#L169">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIpPrefix.ts#L169">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11847,7 +11847,7 @@ Specifies the name of the Public IP resource . Changing this forces a new resour
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpPrefixArgs-prefixLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIpPrefix.ts#L173">property <b>prefixLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIpPrefix.ts#L173">property <b>prefixLength</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>prefixLength?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -11856,7 +11856,7 @@ Specifies the number of bits of the prefix. The value can be set between 24 (256
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpPrefixArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIpPrefix.ts#L177">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIpPrefix.ts#L177">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11865,7 +11865,7 @@ The name of the resource group in which to create the public IP.
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpPrefixArgs-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIpPrefix.ts#L181">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIpPrefix.ts#L181">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sku?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11874,7 +11874,7 @@ The SKU of the Public IP Prefix. Accepted values are `Standard`. Defaults to `St
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpPrefixArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIpPrefix.ts#L185">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIpPrefix.ts#L185">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -11883,7 +11883,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpPrefixArgs-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIpPrefix.ts#L189">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIpPrefix.ts#L189">property <b>zones</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>zones?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11893,14 +11893,14 @@ A collection containing the availability zone to allocate the Public IP in.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PublicIpPrefixState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIpPrefix.ts#L123">interface <b>PublicIpPrefixState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIpPrefix.ts#L123">interface <b>PublicIpPrefixState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering PublicIpPrefix resources.
 
 <h3 class="pdoc-member-header" id="PublicIpPrefixState-ipPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIpPrefix.ts#L127">property <b>ipPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIpPrefix.ts#L127">property <b>ipPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipPrefix?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11909,7 +11909,7 @@ The IP address prefix value that was allocated.
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpPrefixState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIpPrefix.ts#L131">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIpPrefix.ts#L131">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11918,7 +11918,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpPrefixState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIpPrefix.ts#L135">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIpPrefix.ts#L135">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11927,7 +11927,7 @@ Specifies the name of the Public IP resource . Changing this forces a new resour
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpPrefixState-prefixLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIpPrefix.ts#L139">property <b>prefixLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIpPrefix.ts#L139">property <b>prefixLength</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>prefixLength?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -11936,7 +11936,7 @@ Specifies the number of bits of the prefix. The value can be set between 24 (256
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpPrefixState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIpPrefix.ts#L143">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIpPrefix.ts#L143">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11945,7 +11945,7 @@ The name of the resource group in which to create the public IP.
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpPrefixState-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIpPrefix.ts#L147">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIpPrefix.ts#L147">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sku?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11954,7 +11954,7 @@ The SKU of the Public IP Prefix. Accepted values are `Standard`. Defaults to `St
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpPrefixState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIpPrefix.ts#L151">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIpPrefix.ts#L151">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -11963,7 +11963,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpPrefixState-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIpPrefix.ts#L155">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIpPrefix.ts#L155">property <b>zones</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>zones?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11973,14 +11973,14 @@ A collection containing the availability zone to allocate the Public IP in.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PublicIpState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L162">interface <b>PublicIpState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L162">interface <b>PublicIpState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering PublicIp resources.
 
 <h3 class="pdoc-member-header" id="PublicIpState-allocationMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L166">property <b>allocationMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L166">property <b>allocationMethod</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>allocationMethod?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11989,7 +11989,7 @@ Defines the allocation method for this IP address. Possible values are `Static` 
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpState-domainNameLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L170">property <b>domainNameLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L170">property <b>domainNameLabel</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>domainNameLabel?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -11998,7 +11998,7 @@ Label for the Domain Name. Will be used to make up the FQDN.  If a domain name l
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpState-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L174">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L174">property <b>fqdn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>fqdn?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12007,7 +12007,7 @@ Fully qualified domain name of the A DNS record associated with the public IP. T
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpState-idleTimeoutInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L178">property <b>idleTimeoutInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L178">property <b>idleTimeoutInMinutes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>idleTimeoutInMinutes?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -12016,7 +12016,7 @@ Specifies the timeout for the TCP idle connection. The value can be set between 
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpState-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L182">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L182">property <b>ipAddress</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipAddress?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12025,7 +12025,7 @@ The IP address value that was allocated.
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpState-ipVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L186">property <b>ipVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L186">property <b>ipVersion</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipVersion?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12034,7 +12034,7 @@ The IP Version to use, IPv6 or IPv4.
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L190">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L190">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12043,7 +12043,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L195">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L195">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12053,13 +12053,13 @@ new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpState-publicIpAddressAllocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L196">property <b>publicIpAddressAllocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L196">property <b>publicIpAddressAllocation</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>publicIpAddressAllocation?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="PublicIpState-publicIpPrefixId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L200">property <b>publicIpPrefixId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L200">property <b>publicIpPrefixId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>publicIpPrefixId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12068,7 +12068,7 @@ If specified then public IP address allocated will be provided from the public I
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L205">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L205">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12078,7 +12078,7 @@ create the public ip.
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpState-reverseFqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L209">property <b>reverseFqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L209">property <b>reverseFqdn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>reverseFqdn?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12087,7 +12087,7 @@ A fully qualified domain name that resolves to this public IP address. If the re
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpState-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L213">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L213">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sku?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12096,7 +12096,7 @@ The SKU of the Public IP. Accepted values are `Basic` and `Standard`. Defaults t
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L217">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L217">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -12105,7 +12105,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="PublicIpState-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/publicIp.ts#L221">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/publicIp.ts#L221">property <b>zones</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>zones?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12115,14 +12115,14 @@ A collection containing the availability zone to allocate the Public IP in.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RouteArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/route.ts#L148">interface <b>RouteArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/route.ts#L148">interface <b>RouteArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a Route resource.
 
 <h3 class="pdoc-member-header" id="RouteArgs-addressPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/route.ts#L152">property <b>addressPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/route.ts#L152">property <b>addressPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>addressPrefix: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12131,7 +12131,7 @@ The destination CIDR to which the route applies, such as `10.1.0.0/16`
 
 </div>
 <h3 class="pdoc-member-header" id="RouteArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/route.ts#L156">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/route.ts#L156">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12140,7 +12140,7 @@ The name of the route. Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="RouteArgs-nextHopInIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/route.ts#L160">property <b>nextHopInIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/route.ts#L160">property <b>nextHopInIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>nextHopInIpAddress?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12149,7 +12149,7 @@ Contains the IP address packets should be forwarded to. Next hop values are only
 
 </div>
 <h3 class="pdoc-member-header" id="RouteArgs-nextHopType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/route.ts#L164">property <b>nextHopType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/route.ts#L164">property <b>nextHopType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>nextHopType: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12158,7 +12158,7 @@ The type of Azure hop the packet should be sent to. Possible values are `Virtual
 
 </div>
 <h3 class="pdoc-member-header" id="RouteArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/route.ts#L168">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/route.ts#L168">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12167,7 +12167,7 @@ The name of the resource group in which to create the route. Changing this force
 
 </div>
 <h3 class="pdoc-member-header" id="RouteArgs-routeTableName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/route.ts#L172">property <b>routeTableName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/route.ts#L172">property <b>routeTableName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>routeTableName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12177,14 +12177,14 @@ The name of the route table within which create the route. Changing this forces 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RouteState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/route.ts#L118">interface <b>RouteState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/route.ts#L118">interface <b>RouteState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering Route resources.
 
 <h3 class="pdoc-member-header" id="RouteState-addressPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/route.ts#L122">property <b>addressPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/route.ts#L122">property <b>addressPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>addressPrefix?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12193,7 +12193,7 @@ The destination CIDR to which the route applies, such as `10.1.0.0/16`
 
 </div>
 <h3 class="pdoc-member-header" id="RouteState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/route.ts#L126">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/route.ts#L126">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12202,7 +12202,7 @@ The name of the route. Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="RouteState-nextHopInIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/route.ts#L130">property <b>nextHopInIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/route.ts#L130">property <b>nextHopInIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>nextHopInIpAddress?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12211,7 +12211,7 @@ Contains the IP address packets should be forwarded to. Next hop values are only
 
 </div>
 <h3 class="pdoc-member-header" id="RouteState-nextHopType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/route.ts#L134">property <b>nextHopType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/route.ts#L134">property <b>nextHopType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>nextHopType?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12220,7 +12220,7 @@ The type of Azure hop the packet should be sent to. Possible values are `Virtual
 
 </div>
 <h3 class="pdoc-member-header" id="RouteState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/route.ts#L138">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/route.ts#L138">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12229,7 +12229,7 @@ The name of the resource group in which to create the route. Changing this force
 
 </div>
 <h3 class="pdoc-member-header" id="RouteState-routeTableName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/route.ts#L142">property <b>routeTableName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/route.ts#L142">property <b>routeTableName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>routeTableName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12239,14 +12239,14 @@ The name of the route table within which create the route. Changing this forces 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RouteTableArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/routeTable.ts#L154">interface <b>RouteTableArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/routeTable.ts#L154">interface <b>RouteTableArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a RouteTable resource.
 
 <h3 class="pdoc-member-header" id="RouteTableArgs-disableBgpRoutePropagation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/routeTable.ts#L158">property <b>disableBgpRoutePropagation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/routeTable.ts#L158">property <b>disableBgpRoutePropagation</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>disableBgpRoutePropagation?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -12255,7 +12255,7 @@ Boolean flag which controls propagation of routes learned by BGP on that route t
 
 </div>
 <h3 class="pdoc-member-header" id="RouteTableArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/routeTable.ts#L162">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/routeTable.ts#L162">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12264,7 +12264,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="RouteTableArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/routeTable.ts#L166">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/routeTable.ts#L166">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12273,7 +12273,7 @@ The name of the route table. Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="RouteTableArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/routeTable.ts#L170">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/routeTable.ts#L170">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12282,7 +12282,7 @@ The name of the resource group in which to create the route table. Changing this
 
 </div>
 <h3 class="pdoc-member-header" id="RouteTableArgs-routes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/routeTable.ts#L174">property <b>routes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/routeTable.ts#L174">property <b>routes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>routes?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -12296,7 +12296,7 @@ Can be specified multiple times to define multiple routes. Each `route` block su
 
 </div>
 <h3 class="pdoc-member-header" id="RouteTableArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/routeTable.ts#L178">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/routeTable.ts#L178">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -12306,14 +12306,14 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RouteTableState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/routeTable.ts#L120">interface <b>RouteTableState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/routeTable.ts#L120">interface <b>RouteTableState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering RouteTable resources.
 
 <h3 class="pdoc-member-header" id="RouteTableState-disableBgpRoutePropagation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/routeTable.ts#L124">property <b>disableBgpRoutePropagation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/routeTable.ts#L124">property <b>disableBgpRoutePropagation</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>disableBgpRoutePropagation?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -12322,7 +12322,7 @@ Boolean flag which controls propagation of routes learned by BGP on that route t
 
 </div>
 <h3 class="pdoc-member-header" id="RouteTableState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/routeTable.ts#L128">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/routeTable.ts#L128">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12331,7 +12331,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="RouteTableState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/routeTable.ts#L132">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/routeTable.ts#L132">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12340,7 +12340,7 @@ The name of the route table. Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="RouteTableState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/routeTable.ts#L136">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/routeTable.ts#L136">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12349,7 +12349,7 @@ The name of the resource group in which to create the route table. Changing this
 
 </div>
 <h3 class="pdoc-member-header" id="RouteTableState-routes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/routeTable.ts#L140">property <b>routes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/routeTable.ts#L140">property <b>routes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>routes?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -12363,7 +12363,7 @@ Can be specified multiple times to define multiple routes. Each `route` block su
 
 </div>
 <h3 class="pdoc-member-header" id="RouteTableState-subnets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/routeTable.ts#L144">property <b>subnets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/routeTable.ts#L144">property <b>subnets</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>subnets?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -12372,7 +12372,7 @@ The collection of Subnets associated with this route table.
 
 </div>
 <h3 class="pdoc-member-header" id="RouteTableState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/routeTable.ts#L148">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/routeTable.ts#L148">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -12382,14 +12382,14 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubnetArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L186">interface <b>SubnetArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnet.ts#L186">interface <b>SubnetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a Subnet resource.
 
 <h3 class="pdoc-member-header" id="SubnetArgs-addressPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L190">property <b>addressPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnet.ts#L190">property <b>addressPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>addressPrefix: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12398,7 +12398,7 @@ The address prefix to use for the subnet.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetArgs-delegations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L194">property <b>delegations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnet.ts#L194">property <b>delegations</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>delegations?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -12413,7 +12413,7 @@ One or more `delegation` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetArgs-ipConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L198">property <b>ipConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnet.ts#L198">property <b>ipConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipConfigurations?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -12422,7 +12422,7 @@ The collection of IP Configurations with IPs within this subnet.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L202">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnet.ts#L202">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12431,7 +12431,7 @@ The name of the subnet. Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetArgs-networkSecurityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L206">property <b>networkSecurityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnet.ts#L206">property <b>networkSecurityGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>networkSecurityGroupId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12440,7 +12440,7 @@ The ID of the Network Security Group to associate with the subnet.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L210">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnet.ts#L210">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12449,7 +12449,7 @@ The name of the resource group in which to create the subnet. Changing this forc
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetArgs-routeTableId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L214">property <b>routeTableId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnet.ts#L214">property <b>routeTableId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>routeTableId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12458,7 +12458,7 @@ The ID of the Route Table to associate with the subnet.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetArgs-serviceEndpoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L218">property <b>serviceEndpoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnet.ts#L218">property <b>serviceEndpoints</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>serviceEndpoints?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -12467,7 +12467,7 @@ The list of Service endpoints to associate with the subnet. Possible values incl
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetArgs-virtualNetworkName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L222">property <b>virtualNetworkName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnet.ts#L222">property <b>virtualNetworkName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>virtualNetworkName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12477,14 +12477,14 @@ The name of the virtual network to which to attach the subnet. Changing this for
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubnetNetworkSecurityGroupAssociationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnetNetworkSecurityGroupAssociation.ts#L125">interface <b>SubnetNetworkSecurityGroupAssociationArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnetNetworkSecurityGroupAssociation.ts#L125">interface <b>SubnetNetworkSecurityGroupAssociationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a SubnetNetworkSecurityGroupAssociation resource.
 
 <h3 class="pdoc-member-header" id="SubnetNetworkSecurityGroupAssociationArgs-networkSecurityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnetNetworkSecurityGroupAssociation.ts#L129">property <b>networkSecurityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnetNetworkSecurityGroupAssociation.ts#L129">property <b>networkSecurityGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>networkSecurityGroupId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12493,7 +12493,7 @@ The ID of the Network Security Group which should be associated with the Subnet.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetNetworkSecurityGroupAssociationArgs-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnetNetworkSecurityGroupAssociation.ts#L133">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnetNetworkSecurityGroupAssociation.ts#L133">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>subnetId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12503,14 +12503,14 @@ The ID of the Subnet. Changing this forces a new resource to be created.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubnetNetworkSecurityGroupAssociationState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnetNetworkSecurityGroupAssociation.ts#L111">interface <b>SubnetNetworkSecurityGroupAssociationState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnetNetworkSecurityGroupAssociation.ts#L111">interface <b>SubnetNetworkSecurityGroupAssociationState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering SubnetNetworkSecurityGroupAssociation resources.
 
 <h3 class="pdoc-member-header" id="SubnetNetworkSecurityGroupAssociationState-networkSecurityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnetNetworkSecurityGroupAssociation.ts#L115">property <b>networkSecurityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnetNetworkSecurityGroupAssociation.ts#L115">property <b>networkSecurityGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>networkSecurityGroupId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12519,7 +12519,7 @@ The ID of the Network Security Group which should be associated with the Subnet.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetNetworkSecurityGroupAssociationState-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnetNetworkSecurityGroupAssociation.ts#L119">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnetNetworkSecurityGroupAssociation.ts#L119">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>subnetId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12529,14 +12529,14 @@ The ID of the Subnet. Changing this forces a new resource to be created.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubnetRouteTableAssociationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnetRouteTableAssociation.ts#L120">interface <b>SubnetRouteTableAssociationArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnetRouteTableAssociation.ts#L120">interface <b>SubnetRouteTableAssociationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a SubnetRouteTableAssociation resource.
 
 <h3 class="pdoc-member-header" id="SubnetRouteTableAssociationArgs-routeTableId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnetRouteTableAssociation.ts#L124">property <b>routeTableId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnetRouteTableAssociation.ts#L124">property <b>routeTableId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>routeTableId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12545,7 +12545,7 @@ The ID of the Route Table which should be associated with the Subnet. Changing t
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetRouteTableAssociationArgs-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnetRouteTableAssociation.ts#L128">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnetRouteTableAssociation.ts#L128">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>subnetId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12555,14 +12555,14 @@ The ID of the Subnet. Changing this forces a new resource to be created.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubnetRouteTableAssociationState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnetRouteTableAssociation.ts#L106">interface <b>SubnetRouteTableAssociationState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnetRouteTableAssociation.ts#L106">interface <b>SubnetRouteTableAssociationState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering SubnetRouteTableAssociation resources.
 
 <h3 class="pdoc-member-header" id="SubnetRouteTableAssociationState-routeTableId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnetRouteTableAssociation.ts#L110">property <b>routeTableId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnetRouteTableAssociation.ts#L110">property <b>routeTableId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>routeTableId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12571,7 +12571,7 @@ The ID of the Route Table which should be associated with the Subnet. Changing t
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetRouteTableAssociationState-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnetRouteTableAssociation.ts#L114">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnetRouteTableAssociation.ts#L114">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>subnetId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12581,14 +12581,14 @@ The ID of the Subnet. Changing this forces a new resource to be created.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubnetState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L144">interface <b>SubnetState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnet.ts#L144">interface <b>SubnetState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering Subnet resources.
 
 <h3 class="pdoc-member-header" id="SubnetState-addressPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L148">property <b>addressPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnet.ts#L148">property <b>addressPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>addressPrefix?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12597,7 +12597,7 @@ The address prefix to use for the subnet.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetState-delegations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L152">property <b>delegations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnet.ts#L152">property <b>delegations</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>delegations?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -12612,7 +12612,7 @@ One or more `delegation` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetState-ipConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L156">property <b>ipConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnet.ts#L156">property <b>ipConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipConfigurations?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -12621,7 +12621,7 @@ The collection of IP Configurations with IPs within this subnet.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L160">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnet.ts#L160">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12630,7 +12630,7 @@ The name of the subnet. Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetState-networkSecurityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L164">property <b>networkSecurityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnet.ts#L164">property <b>networkSecurityGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>networkSecurityGroupId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12639,7 +12639,7 @@ The ID of the Network Security Group to associate with the subnet.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L168">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnet.ts#L168">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12648,7 +12648,7 @@ The name of the resource group in which to create the subnet. Changing this forc
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetState-routeTableId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L172">property <b>routeTableId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnet.ts#L172">property <b>routeTableId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>routeTableId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12657,7 +12657,7 @@ The ID of the Route Table to associate with the subnet.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetState-serviceEndpoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L176">property <b>serviceEndpoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnet.ts#L176">property <b>serviceEndpoints</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>serviceEndpoints?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -12666,7 +12666,7 @@ The list of Service endpoints to associate with the subnet. Possible values incl
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetState-virtualNetworkName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L180">property <b>virtualNetworkName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/subnet.ts#L180">property <b>virtualNetworkName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>virtualNetworkName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12676,14 +12676,14 @@ The name of the virtual network to which to attach the subnet. Changing this for
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VirtualNetworkArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetwork.ts#L212">interface <b>VirtualNetworkArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetwork.ts#L212">interface <b>VirtualNetworkArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a VirtualNetwork resource.
 
 <h3 class="pdoc-member-header" id="VirtualNetworkArgs-addressSpaces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetwork.ts#L218">property <b>addressSpaces</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetwork.ts#L218">property <b>addressSpaces</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>addressSpaces: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -12694,7 +12694,7 @@ a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkArgs-ddosProtectionPlan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetwork.ts#L222">property <b>ddosProtectionPlan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetwork.ts#L222">property <b>ddosProtectionPlan</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ddosProtectionPlan?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -12706,7 +12706,7 @@ A `ddos_protection_plan` block as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkArgs-dnsServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetwork.ts#L226">property <b>dnsServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetwork.ts#L226">property <b>dnsServers</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>dnsServers?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -12715,7 +12715,7 @@ List of IP addresses of DNS servers
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetwork.ts#L231">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetwork.ts#L231">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12725,7 +12725,7 @@ created. Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetwork.ts#L236">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetwork.ts#L236">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12735,7 +12735,7 @@ new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetwork.ts#L241">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetwork.ts#L241">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12745,7 +12745,7 @@ create the virtual network.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkArgs-subnets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetwork.ts#L246">property <b>subnets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetwork.ts#L246">property <b>subnets</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>subnets?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -12760,7 +12760,7 @@ subnets. Each `subnet` block supports fields documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetwork.ts#L250">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetwork.ts#L250">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -12770,14 +12770,14 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VirtualNetworkGatewayArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L316">interface <b>VirtualNetworkGatewayArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L316">interface <b>VirtualNetworkGatewayArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a VirtualNetworkGateway resource.
 
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayArgs-activeActive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L323">property <b>activeActive</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L323">property <b>activeActive</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>activeActive?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -12789,7 +12789,7 @@ Defaults to `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayArgs-bgpSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L324">property <b>bgpSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L324">property <b>bgpSettings</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>bgpSettings?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -12799,7 +12799,7 @@ Defaults to `false`.
 }&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayArgs-defaultLocalNetworkGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L332">property <b>defaultLocalNetworkGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L332">property <b>defaultLocalNetworkGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>defaultLocalNetworkGatewayId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12812,7 +12812,7 @@ If not specified, forced tunneling is disabled.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayArgs-enableBgp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L337">property <b>enableBgp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L337">property <b>enableBgp</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>enableBgp?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -12822,7 +12822,7 @@ for this Virtual Network Gateway. Defaults to `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayArgs-ipConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L343">property <b>ipConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L343">property <b>ipConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipConfigurations: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -12838,7 +12838,7 @@ an active-active gateway requires exactly two `ip_configuration` blocks.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L348">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L348">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12848,7 +12848,7 @@ located. Changing the location/region forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L353">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L353">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12858,7 +12858,7 @@ forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L359">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L359">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12869,7 +12869,7 @@ a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayArgs-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L368">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L368">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sku: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12883,7 +12883,7 @@ sku is only supported by an `ExpressRoute` gateway.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L372">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L372">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -12892,7 +12892,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L377">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L377">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>type: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12902,7 +12902,7 @@ The type of the Virtual Network Gateway. Valid options are
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayArgs-vpnClientConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L383">property <b>vpnClientConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L383">property <b>vpnClientConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>vpnClientConfiguration?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -12926,7 +12926,7 @@ to accept IPSec point-to-site connections.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayArgs-vpnType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L388">property <b>vpnType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L388">property <b>vpnType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>vpnType?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12937,14 +12937,14 @@ options are `RouteBased` or `PolicyBased`. Defaults to `RouteBased`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VirtualNetworkGatewayConnectionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L437">interface <b>VirtualNetworkGatewayConnectionArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L437">interface <b>VirtualNetworkGatewayConnectionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a VirtualNetworkGatewayConnection resource.
 
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionArgs-authorizationKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L443">property <b>authorizationKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L443">property <b>authorizationKey</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>authorizationKey?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12955,7 +12955,7 @@ ExpressRoute connection.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionArgs-enableBgp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L448">property <b>enableBgp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L448">property <b>enableBgp</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>enableBgp?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -12965,7 +12965,7 @@ for this connection. Defaults to `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionArgs-expressRouteCircuitId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L454">property <b>expressRouteCircuitId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L454">property <b>expressRouteCircuitId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>expressRouteCircuitId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -12976,7 +12976,7 @@ The Express Route Circuit can be in the same or in a different subscription.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionArgs-expressRouteGatewayBypass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L458">property <b>expressRouteGatewayBypass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L458">property <b>expressRouteGatewayBypass</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>expressRouteGatewayBypass?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -12985,7 +12985,7 @@ If `true`, data packets will bypass ExpressRoute Gateway for data forwarding Thi
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionArgs-ipsecPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L464">property <b>ipsecPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L464">property <b>ipsecPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipsecPolicy?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -13005,7 +13005,7 @@ custom policies refer to [the relevant section in the Azure documentation](https
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionArgs-localNetworkGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L469">property <b>localNetworkGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L469">property <b>localNetworkGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>localNetworkGatewayId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13015,7 +13015,7 @@ when creating Site-to-Site connection (i.e. when `type` is `IPsec`).
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L474">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L474">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13025,7 +13025,7 @@ located. Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L479">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L479">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13035,7 +13035,7 @@ new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionArgs-peerVirtualNetworkGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L486">property <b>peerVirtualNetworkGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L486">property <b>peerVirtualNetworkGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>peerVirtualNetworkGatewayId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13047,7 +13047,7 @@ in a different subscription.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L491">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L491">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13057,7 +13057,7 @@ create the connection Changing the name forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionArgs-routingWeight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L495">property <b>routingWeight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L495">property <b>routingWeight</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>routingWeight?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -13066,7 +13066,7 @@ The routing weight. Defaults to `10`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionArgs-sharedKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L501">property <b>sharedKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L501">property <b>sharedKey</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sharedKey?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13077,7 +13077,7 @@ connections do not need a shared key.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L505">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L505">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -13086,7 +13086,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L513">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L513">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>type: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13099,7 +13099,7 @@ to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionArgs-usePolicyBasedTrafficSelectors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L519">property <b>usePolicyBasedTrafficSelectors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L519">property <b>usePolicyBasedTrafficSelectors</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>usePolicyBasedTrafficSelectors?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -13110,7 +13110,7 @@ selectors requires an `ipsec_policy` block. Defaults to `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionArgs-virtualNetworkGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L525">property <b>virtualNetworkGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L525">property <b>virtualNetworkGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>virtualNetworkGatewayId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13122,14 +13122,14 @@ resource to be created.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VirtualNetworkGatewayConnectionState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L343">interface <b>VirtualNetworkGatewayConnectionState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L343">interface <b>VirtualNetworkGatewayConnectionState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering VirtualNetworkGatewayConnection resources.
 
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionState-authorizationKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L349">property <b>authorizationKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L349">property <b>authorizationKey</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>authorizationKey?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13140,7 +13140,7 @@ ExpressRoute connection.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionState-enableBgp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L354">property <b>enableBgp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L354">property <b>enableBgp</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>enableBgp?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -13150,7 +13150,7 @@ for this connection. Defaults to `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionState-expressRouteCircuitId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L360">property <b>expressRouteCircuitId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L360">property <b>expressRouteCircuitId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>expressRouteCircuitId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13161,7 +13161,7 @@ The Express Route Circuit can be in the same or in a different subscription.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionState-expressRouteGatewayBypass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L364">property <b>expressRouteGatewayBypass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L364">property <b>expressRouteGatewayBypass</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>expressRouteGatewayBypass?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -13170,7 +13170,7 @@ If `true`, data packets will bypass ExpressRoute Gateway for data forwarding Thi
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionState-ipsecPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L370">property <b>ipsecPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L370">property <b>ipsecPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipsecPolicy?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -13190,7 +13190,7 @@ custom policies refer to [the relevant section in the Azure documentation](https
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionState-localNetworkGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L375">property <b>localNetworkGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L375">property <b>localNetworkGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>localNetworkGatewayId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13200,7 +13200,7 @@ when creating Site-to-Site connection (i.e. when `type` is `IPsec`).
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L380">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L380">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13210,7 +13210,7 @@ located. Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L385">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L385">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13220,7 +13220,7 @@ new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionState-peerVirtualNetworkGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L392">property <b>peerVirtualNetworkGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L392">property <b>peerVirtualNetworkGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>peerVirtualNetworkGatewayId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13232,7 +13232,7 @@ in a different subscription.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L397">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L397">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13242,7 +13242,7 @@ create the connection Changing the name forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionState-routingWeight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L401">property <b>routingWeight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L401">property <b>routingWeight</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>routingWeight?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -13251,7 +13251,7 @@ The routing weight. Defaults to `10`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionState-sharedKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L407">property <b>sharedKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L407">property <b>sharedKey</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sharedKey?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13262,7 +13262,7 @@ connections do not need a shared key.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L411">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L411">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -13271,7 +13271,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L419">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L419">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>type?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13284,7 +13284,7 @@ to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionState-usePolicyBasedTrafficSelectors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L425">property <b>usePolicyBasedTrafficSelectors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L425">property <b>usePolicyBasedTrafficSelectors</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>usePolicyBasedTrafficSelectors?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -13295,7 +13295,7 @@ selectors requires an `ipsec_policy` block. Defaults to `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionState-virtualNetworkGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L431">property <b>virtualNetworkGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L431">property <b>virtualNetworkGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>virtualNetworkGatewayId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13307,14 +13307,14 @@ resource to be created.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VirtualNetworkGatewayState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L238">interface <b>VirtualNetworkGatewayState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L238">interface <b>VirtualNetworkGatewayState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering VirtualNetworkGateway resources.
 
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayState-activeActive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L245">property <b>activeActive</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L245">property <b>activeActive</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>activeActive?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -13326,7 +13326,7 @@ Defaults to `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayState-bgpSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L246">property <b>bgpSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L246">property <b>bgpSettings</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>bgpSettings?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -13336,7 +13336,7 @@ Defaults to `false`.
 }&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayState-defaultLocalNetworkGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L254">property <b>defaultLocalNetworkGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L254">property <b>defaultLocalNetworkGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>defaultLocalNetworkGatewayId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13349,7 +13349,7 @@ If not specified, forced tunneling is disabled.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayState-enableBgp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L259">property <b>enableBgp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L259">property <b>enableBgp</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>enableBgp?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -13359,7 +13359,7 @@ for this Virtual Network Gateway. Defaults to `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayState-ipConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L265">property <b>ipConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L265">property <b>ipConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipConfigurations?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -13375,7 +13375,7 @@ an active-active gateway requires exactly two `ip_configuration` blocks.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L270">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L270">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13385,7 +13385,7 @@ located. Changing the location/region forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L275">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L275">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13395,7 +13395,7 @@ forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L281">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L281">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13406,7 +13406,7 @@ a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayState-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L290">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L290">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sku?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13420,7 +13420,7 @@ sku is only supported by an `ExpressRoute` gateway.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L294">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L294">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -13429,7 +13429,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L299">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L299">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>type?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13439,7 +13439,7 @@ The type of the Virtual Network Gateway. Valid options are
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayState-vpnClientConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L305">property <b>vpnClientConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L305">property <b>vpnClientConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>vpnClientConfiguration?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -13463,7 +13463,7 @@ to accept IPSec point-to-site connections.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayState-vpnType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L310">property <b>vpnType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkGateway.ts#L310">property <b>vpnType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>vpnType?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13474,14 +13474,14 @@ options are `RouteBased` or `PolicyBased`. Defaults to `RouteBased`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VirtualNetworkPeeringArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkPeering.ts#L270">interface <b>VirtualNetworkPeeringArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkPeering.ts#L270">interface <b>VirtualNetworkPeeringArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a VirtualNetworkPeering resource.
 
 <h3 class="pdoc-member-header" id="VirtualNetworkPeeringArgs-allowForwardedTraffic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkPeering.ts#L275">property <b>allowForwardedTraffic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkPeering.ts#L275">property <b>allowForwardedTraffic</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>allowForwardedTraffic?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -13491,7 +13491,7 @@ in the remote virtual network is allowed. Defaults to false.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkPeeringArgs-allowGatewayTransit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkPeering.ts#L280">property <b>allowGatewayTransit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkPeering.ts#L280">property <b>allowGatewayTransit</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>allowGatewayTransit?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -13501,7 +13501,7 @@ remote virtual network’s link to the local virtual network.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkPeeringArgs-allowVirtualNetworkAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkPeering.ts#L286">property <b>allowVirtualNetworkAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkPeering.ts#L286">property <b>allowVirtualNetworkAccess</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>allowVirtualNetworkAccess?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -13512,7 +13512,7 @@ false.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkPeeringArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkPeering.ts#L291">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkPeering.ts#L291">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13522,7 +13522,7 @@ forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkPeeringArgs-remoteVirtualNetworkId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkPeering.ts#L296">property <b>remoteVirtualNetworkId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkPeering.ts#L296">property <b>remoteVirtualNetworkId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>remoteVirtualNetworkId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13532,7 +13532,7 @@ remote virtual network.  Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkPeeringArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkPeering.ts#L302">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkPeering.ts#L302">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13543,7 +13543,7 @@ created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkPeeringArgs-useRemoteGateways">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkPeering.ts#L311">property <b>useRemoteGateways</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkPeering.ts#L311">property <b>useRemoteGateways</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>useRemoteGateways?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -13557,7 +13557,7 @@ already has a gateway. Defaults to `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkPeeringArgs-virtualNetworkName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkPeering.ts#L316">property <b>virtualNetworkName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkPeering.ts#L316">property <b>virtualNetworkName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>virtualNetworkName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13568,14 +13568,14 @@ this forces a new resource to be created.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VirtualNetworkPeeringState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkPeering.ts#L218">interface <b>VirtualNetworkPeeringState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkPeering.ts#L218">interface <b>VirtualNetworkPeeringState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering VirtualNetworkPeering resources.
 
 <h3 class="pdoc-member-header" id="VirtualNetworkPeeringState-allowForwardedTraffic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkPeering.ts#L223">property <b>allowForwardedTraffic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkPeering.ts#L223">property <b>allowForwardedTraffic</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>allowForwardedTraffic?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -13585,7 +13585,7 @@ in the remote virtual network is allowed. Defaults to false.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkPeeringState-allowGatewayTransit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkPeering.ts#L228">property <b>allowGatewayTransit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkPeering.ts#L228">property <b>allowGatewayTransit</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>allowGatewayTransit?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -13595,7 +13595,7 @@ remote virtual network’s link to the local virtual network.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkPeeringState-allowVirtualNetworkAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkPeering.ts#L234">property <b>allowVirtualNetworkAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkPeering.ts#L234">property <b>allowVirtualNetworkAccess</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>allowVirtualNetworkAccess?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -13606,7 +13606,7 @@ false.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkPeeringState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkPeering.ts#L239">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkPeering.ts#L239">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13616,7 +13616,7 @@ forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkPeeringState-remoteVirtualNetworkId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkPeering.ts#L244">property <b>remoteVirtualNetworkId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkPeering.ts#L244">property <b>remoteVirtualNetworkId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>remoteVirtualNetworkId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13626,7 +13626,7 @@ remote virtual network.  Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkPeeringState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkPeering.ts#L250">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkPeering.ts#L250">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13637,7 +13637,7 @@ created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkPeeringState-useRemoteGateways">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkPeering.ts#L259">property <b>useRemoteGateways</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkPeering.ts#L259">property <b>useRemoteGateways</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>useRemoteGateways?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -13651,7 +13651,7 @@ already has a gateway. Defaults to `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkPeeringState-virtualNetworkName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkPeering.ts#L264">property <b>virtualNetworkName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetworkPeering.ts#L264">property <b>virtualNetworkName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>virtualNetworkName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13662,14 +13662,14 @@ this forces a new resource to be created.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VirtualNetworkState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetwork.ts#L168">interface <b>VirtualNetworkState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetwork.ts#L168">interface <b>VirtualNetworkState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering VirtualNetwork resources.
 
 <h3 class="pdoc-member-header" id="VirtualNetworkState-addressSpaces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetwork.ts#L174">property <b>addressSpaces</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetwork.ts#L174">property <b>addressSpaces</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>addressSpaces?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -13680,7 +13680,7 @@ a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkState-ddosProtectionPlan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetwork.ts#L178">property <b>ddosProtectionPlan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetwork.ts#L178">property <b>ddosProtectionPlan</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ddosProtectionPlan?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -13692,7 +13692,7 @@ A `ddos_protection_plan` block as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkState-dnsServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetwork.ts#L182">property <b>dnsServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetwork.ts#L182">property <b>dnsServers</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>dnsServers?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -13701,7 +13701,7 @@ List of IP addresses of DNS servers
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetwork.ts#L187">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetwork.ts#L187">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13711,7 +13711,7 @@ created. Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetwork.ts#L192">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetwork.ts#L192">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13721,7 +13721,7 @@ new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetwork.ts#L197">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetwork.ts#L197">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -13731,7 +13731,7 @@ create the virtual network.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkState-subnets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetwork.ts#L202">property <b>subnets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetwork.ts#L202">property <b>subnets</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>subnets?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -13746,7 +13746,7 @@ subnets. Each `subnet` block supports fields documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualNetworkState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetwork.ts#L206">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/network/virtualNetwork.ts#L206">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
