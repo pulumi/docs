@@ -81,8 +81,6 @@ First things first, let's install the Pulumi CLI on your machine.
     <p>Please select your operating system.</p>
 </div>
 
-After installation, or if you've already installed Pulumi, let's [choose a cloud to get started](./clouds.html).
-
 <div id="macos_installation" markdown="1">
 ## macOS
 
