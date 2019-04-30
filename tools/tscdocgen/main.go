@@ -163,17 +163,17 @@ func hasInternalTag(node *typeDocNode) bool {
 // gitHubBaseURLs is a *hackhackhack* hard-coded list of URLs for our packages.
 // TODO(joe): base this off the package.json file.
 var gitHubBaseURLs = map[string]string{
-	"@pulumi/pulumi":           "https://github.com/pulumi/pulumi/blob/{githash}/sdk/nodejs",
-	"@pulumi/aws":              "https://github.com/pulumi/pulumi-aws/blob/{githash}/sdk/nodejs",
-	"@pulumi/awsx":             "https://github.com/pulumi/pulumi-awsx/blob/{githash}/nodejs/awsx",
-	"@pulumi/azure":            "https://github.com/pulumi/pulumi-azure/blob/{githash}/sdk/nodejs",
-	"@pulumi/cloud":            "https://github.com/pulumi/pulumi-cloud/blob/{githash}/api",
-	"@pulumi/docker":           "https://github.com/pulumi/pulumi-docker/blob/{githash}/sdk/nodejs",
-	"@pulumi/eks":              "https://github.com/pulumi/pulumi-eks/blob/{githash}/nodejs/eks",
-	"@pulumi/kubernetes":       "https://github.com/pulumi/pulumi-kubernetes/blob/{githash}/sdk/nodejs",
-	"@pulumi/gcp":              "https://github.com/pulumi/pulumi-gcp/blob/{githash}/sdk/nodejs",
-	"@pulumi/openstack":        "https://github.com/pulumi/pulumi-openstack/blob/{githash}/sdk/nodejs",
-	"@pulumi/vsphere":          "https://github.com/pulumi/pulumi-vsphere/blob/{githash}/sdk/nodejs",
+	"@pulumi/pulumi":     "https://github.com/pulumi/pulumi/blob/{githash}/sdk/nodejs",
+	"@pulumi/aws":        "https://github.com/pulumi/pulumi-aws/blob/{githash}/sdk/nodejs",
+	"@pulumi/awsx":       "https://github.com/pulumi/pulumi-awsx/blob/{githash}/nodejs/awsx",
+	"@pulumi/azure":      "https://github.com/pulumi/pulumi-azure/blob/{githash}/sdk/nodejs",
+	"@pulumi/cloud":      "https://github.com/pulumi/pulumi-cloud/blob/{githash}/api",
+	"@pulumi/docker":     "https://github.com/pulumi/pulumi-docker/blob/{githash}/sdk/nodejs",
+	"@pulumi/eks":        "https://github.com/pulumi/pulumi-eks/blob/{githash}/nodejs/eks",
+	"@pulumi/kubernetes": "https://github.com/pulumi/pulumi-kubernetes/blob/{githash}/sdk/nodejs",
+	"@pulumi/gcp":        "https://github.com/pulumi/pulumi-gcp/blob/{githash}/sdk/nodejs",
+	"@pulumi/openstack":  "https://github.com/pulumi/pulumi-openstack/blob/{githash}/sdk/nodejs",
+	"@pulumi/vsphere":    "https://github.com/pulumi/pulumi-vsphere/blob/{githash}/sdk/nodejs",
 }
 
 // emitMarkdownDocs takes as input a full Typedoc AST, transforms it into Markdown suitable for our documentation
