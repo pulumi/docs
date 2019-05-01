@@ -3,7 +3,7 @@ title: Pulumi Webhooks
 ---
 
 Webhooks allow you to build applications that will be notified when events
-happen on Pulumi. For example, whenever a stack is updated, a team is modified,
+happen on Pulumi. For example, whenever a stack is updated, a team is notified,
 and so on. Whenever an event occurs, Pulumi will send an HTTP `POST` request to
 all registered webhooks. The webhook then can then be used to emit some
 notification, start running integration tests, or even update additional stacks.
