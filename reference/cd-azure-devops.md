@@ -23,7 +23,7 @@ the steps outlined in the sample YAML file below to the Visual Designer as well.
 ## Stack and Branch Mappings
 > The names used above are purely for demonstration purposes only. You may choose a naming convention that best suits your organization.
 
-The scripts below act on a hypothetical stack: `acme/acme-ui`.
+The scripts below act on a hypothetical stack: `acmeCorp/acmeProject/acme-ui`.
 `acme-ui` contains the infrastructure code or `pulumi` program. It also contains an Angular-based SPA.
 The git repo for this look like this:
 ```
@@ -76,58 +76,41 @@ variables. For Azure, the environment variables you will need are documented [he
 Azure DevOps allows you to specify a build agent for each of your jobs in your pipeline. You may have a requirement to run certain jobs on a
 Ubuntu agent, and some on a Windows agent. `pulumi` can be installed on these agents by following the directions from [this](https://pulumi.io/quickstart/install.html) page.
 
-## Scripts
+## Setup
 
 For the YAML-driven DevOps pipeline, the repository must contain the `azure-pipelines.yml` in the root of the repo for Azure DevOps to use it automatically.
 The following are samples only. You may choose to structure your configuration any way you like.
 
-The `run-pulumi.sh` script runs `pulumi preview` for PR builds and the `pulumi up --yes` command with explicit consent,
-for master branches.
+### Pulumi Task Extension
 
-### Sample `run-pulumi.sh`
-```bash
-#!/bin/bash
+We have built a task extension that will allow you to easily use the Azure Pipelines wizard UI or the YAML config to install the Pulumi CLI, and run any commands without the need for any scripts.
 
-# exit if a command returns a non-zero exit code and also print the commands and their args as they are executed
-set -e -x
+Install the Pulumi task from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task) to your Azure DevOps organization.
 
-# Add the pulumi CLI to the PATH
-export PATH=$PATH:$HOME/.pulumi/bin
+The task requires the use of a service connection, which allows the pipeline to connect to your Azure Subscription, which is cleaner than creating environment variables per pipeline with your service principal credentials. The task also automatically looks for the build variable `pulumi.access.token`, and automatically maps it to the environment variable `PULUMI_ACCESS_TOKEN` that is used by the CLI for non-interactive logins. You may also use the `env` directive to map any other environment variables you wish to make available to your Pulumi app still.
 
-pushd infra/
+You can get your Pulumi access token from https://app.pulumi.com/account/tokens.
 
-npm install
-npm run build
+Here's an example snippet of how you can use the task in your pipeline yaml.
 
-pulumi stack select acmecorp/acme-ui
-
-# https://docs.microsoft.com/en-us/azure/devops/pipelines/build/variables?view=vsts
-case $BUILD_REASON in
-  PullRequest)
-      pulumi preview
-    ;;
-  BuildCompletion|BatchedCI)
-      pulumi up --yes
-    ;;
-  *)
-esac
-
-# Save the stack output variables to job variables.
-# Note: Before the `pulumi up` is run for the first time, there are no stack output variables.
-# The pulumi program exports three values: resourceGroupName, storageAccountName and containerName.
-echo "##vso[task.setvariable variable=resourceGroupName;isOutput=true]$(pulumi stack output resourceGroupName)"
-echo "##vso[task.setvariable variable=storageAccountName;isOutput=true]$(pulumi stack output storageAccountName)"
-echo "##vso[task.setvariable variable=containerName;isOutput=true]$(pulumi stack output containerName)"
-
-popd
+```yaml
+...
+...
+  - task: Pulumi@0
+    condition: or(eq(variables['Build.Reason'], 'PullRequest'), eq(variables['Build.Reason'], 'Manual'))
+    inputs:
+      azureSubscription: "My Service Connection"
+      command: "preview"
+      cwd: "infra/"
+      stack: "acmeCorp/acmeProject/acme-ui"
+...
+...
 ```
 
 ### Sample `azure-pipelines.yml`
 
 The following environment variables are set in the build pipeline using the Azure DevOps portal.
 - `pulumi.access.token`
-- `arm.client.secret`
-- `arm.subscription.id`
 
 These variables are _mapped-in_ to the job using the `env:` directive as described [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=vsts&tabs=yaml%2Cbatch#secret-variables).
 
@@ -142,16 +125,21 @@ jobs:
   pool:
     vmImage: 'ubuntu-16.04'
   steps:
-  - script: |
-      chmod +x infra/scripts/*.sh
-      ./infra/scripts/setup.sh
-      ./infra/scripts/run-pulumi.sh
-    displayName: 'Install pulumi and run infra code'
-    name: pulumi
-    env:
-      PULUMI_ACCESS_TOKEN: $(pulumi.access.token)
-      ARM_CLIENT_SECRET: $(arm.client.secret)
-      ARM_SUBSCRIPTION_ID: $(arm.subscription.id)
+  - task: Pulumi@0
+    condition: or(eq(variables['Build.Reason'], 'PullRequest'), eq(variables['Build.Reason'], 'Manual'))
+    inputs:
+      azureSubscription: 'My Service Connection'
+      command: "preview"
+      cwd: "infra/"
+      stack: "acmeCorp/acmeProject/acme-ui"
+  - task: Pulumi@0
+    condition: or(eq(variables['Build.Reason'], 'IndividualCI'), eq(variables['Build.Reason'], 'BatchedCI'))
+    inputs:
+      azureSubscription: 'My Service Connection'
+      command: "up"
+      cwd: "infra/"
+      stack: "acmeCorp/acmeProject/acme-ui"
+      args: "--yes"
 
 - job: build_and_deploy
   condition: ne(dependencies.infrastructure.outputs['pulumi.containerName'], '')
@@ -275,4 +263,93 @@ If($storageAccount)
 } else {
   Write-Warning "'$storageAccountName' storage account not found."
 }
+```
+
+### Using Scripts
+
+If you prefer to control the installation of the Pulumi CLI and how it runs your Pulumi app, you can use scripts in your pipeline builds for a more direct approach. Below are some sample scripts to install the CLI and run your Pulumi app.
+
+The `run-pulumi.sh` script runs `pulumi preview` for PR builds and the `pulumi up --yes` command with explicit consent,
+for master branches.
+
+#### `azure-pipelines.yml`
+
+In your pipeline configuration, you need to then call these scripts when appropriate. Here's an example:
+
+```yaml
+...
+...
+  # Some lines omitted for brevity.
+  - script: |
+      chmod +x infra/scripts/*.sh
+      ./infra/scripts/setup.sh
+      ./infra/scripts/run-pulumi.sh
+    displayName: 'Install pulumi and run infra code'
+    name: pulumi
+    env:
+      PULUMI_ACCESS_TOKEN: $(pulumi.access.token)
+      ARM_CLIENT_SECRET: $(arm.client.secret)
+      ARM_SUBSCRIPTION_ID: $(arm.subscription.id)
+...
+...
+```
+
+#### Sample `setup.sh`
+```bash
+#!/bin/bash
+
+# exit if a command returns a non-zero exit code and also print the commands and their args as they are executed
+set -e -x
+# Download and install required tools.
+# pulumi
+curl -L https://get.pulumi.com/ | bash
+export PATH=$PATH:$HOME/.pulumi/bin
+# Login into pulumi. This will require the PULUMI_ACCESS_TOKEN environment variable
+pulumi login
+# update the GitLab Runner's packages
+apt-get update -y
+apt-get install sudo -y
+# nodejs
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+apt-get install -y nodejs
+# yarn
+npm i -g yarn
+```
+
+#### Sample `run-pulumi.sh`
+```bash
+#!/bin/bash
+
+# exit if a command returns a non-zero exit code and also print the commands and their args as they are executed
+set -e -x
+
+# Add the pulumi CLI to the PATH
+export PATH=$PATH:$HOME/.pulumi/bin
+
+pushd infra/
+
+npm install
+npm run build
+
+pulumi stack select acmeCorp/acmeProject/acme-ui
+
+# https://docs.microsoft.com/en-us/azure/devops/pipelines/build/variables?view=vsts
+case $BUILD_REASON in
+  PullRequest)
+      pulumi preview
+    ;;
+  BuildCompletion|BatchedCI)
+      pulumi up --yes
+    ;;
+  *)
+esac
+
+# Save the stack output variables to job variables.
+# Note: Before the `pulumi up` is run for the first time, there are no stack output variables.
+# The pulumi program exports three values: resourceGroupName, storageAccountName and containerName.
+echo "##vso[task.setvariable variable=resourceGroupName;isOutput=true]$(pulumi stack output resourceGroupName)"
+echo "##vso[task.setvariable variable=storageAccountName;isOutput=true]$(pulumi stack output storageAccountName)"
+echo "##vso[task.setvariable variable=containerName;isOutput=true]$(pulumi stack output containerName)"
+
+popd
 ```
