@@ -109,19 +109,22 @@ The `args` provided to a resource determine what inputs will be used to initiali
 All resource constructors also accept an `options` argument which can provide the following additional resource options controlling how the resource will be managed by Pulumi. 
 
 ###### `dependsOn`
-Optionally provides a list of explicit resource dependencies to add to the implicit dependencies from inputs to the resource.  Every resource referenced directly or indirectly by an `Output` passed in to the resource constructor will implicitly be included, so this is only needed when the dependency is on something that is not already an input to the resource.  The default is `[]`.
+Provides a list of explicit resource dependencies to add to the resource. Every resource referenced either directly or indirectly by an `Output` that is passed in to the resource constructor will implicitly be included, so this additional information is only needed when the dependency is on something that is not already an input to the resource. The default is `[]`.
 
 ###### `protect`
-Optionally marks a resource as protected. A protected resource cannot be deleted directly: first you must set `protect: false` and run `pulumi update`. Then, the resource can be deleted, either by removing the line of code or by running `pulumi destroy`.  The default is to inherit this value from the parent resource, and `false` for resources without a parent.
+Marks a resource as protected. A protected resource cannot be deleted directly: first you must set `protect: false` and run `pulumi update`. Then, the resource can be deleted, either by removing the line of code or by running `pulumi destroy`.  The default is to inherit this value from the parent resource, and `false` for resources without a parent.
 
 ###### `parent`
-Optional parent for the resource. See [Components](#components).  The default is to parent to the implicitly-created `Stack` resource that is a root resource for all Pulumi stacks.
+A parent for the resource. See [Components](#components).  The default is to parent to the implicitly-created `Stack` resource that is a root resource for all Pulumi stacks.
 
 ###### `provider`
-Optional provider for the resource. See [Providers](#providers).  The default is to inherit this value from the parent resource, and to use the ambient provider specified by Pulumi configuration for resources without a parent.
+A provider for the resource. See [Providers](#providers).  The default is to inherit this value from the parent resource, and to use the ambient provider specified by Pulumi configuration for resources without a parent.
 
 ###### `deleteBeforeReplace`
-Optionally specify that replacements of the resource will delete the existing resource before creating it's replacement.  This will lead to downtime during the replacement, but may be necessary for some resources that manage scarce resources behind the scenes.  The default is `false`.
+Specify that replacements of the resource will delete the existing resource before creating it's replacement.  This will lead to downtime during the replacement, but may be necessary for some resources that manage scarce resources behind the scenes.  The default is `false`.
+
+###### `ignoreChanges`
+Provides a list of properties which will be ignored as part of updates. The value of the property will be used for newly created resources, but will not be used as part of updates. This is typically used to avoid changes in properties leading to diffs or to change defaults for a property without forcing all existing deployed stacks to update or replace the affected resource.
 
 ### Resource names {#names}
 
