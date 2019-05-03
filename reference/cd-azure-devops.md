@@ -136,6 +136,12 @@ jobs:
       cwd: 'infra/'
       stack: 'acmeCorp/acmeProject/acme-ui'
       args: '--yes'
+  - script: |
+      echo "##vso[task.setvariable variable=resourceGroupName;isOutput=true]$(pulumi stack output resourceGroupName)"
+      echo "##vso[task.setvariable variable=storageAccountName;isOutput=true]$(pulumi stack output storageAccountName)"
+      echo "##vso[task.setvariable variable=containerName;isOutput=true]$(pulumi stack output containerName)"
+    displayName: 'Set stack outputs as variables'
+    name: 'pulumi'
 
 # The following job is optional, and shown here for demonstration purposes only.
 - job: build_and_deploy
