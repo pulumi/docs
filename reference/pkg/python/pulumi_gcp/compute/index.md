@@ -241,7 +241,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.BackendBucket">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">BackendBucket</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bucket_name=None</em>, <em>description=None</em>, <em>enable_cdn=None</em>, <em>name=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.BackendBucket" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">BackendBucket</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bucket_name=None</em>, <em>cdn_policy=None</em>, <em>description=None</em>, <em>enable_cdn=None</em>, <em>name=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.BackendBucket" title="Permalink to this definition">¶</a></dt>
 <dd><p>Backend buckets allow you to use Google Cloud Storage buckets with HTTP(S)
 load balancing.</p>
 <p>An HTTP(S) load balancer can direct traffic to specified URLs to a
@@ -325,11 +325,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.BackendService">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">BackendService</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>affinity_cookie_ttl_sec=None</em>, <em>backends=None</em>, <em>cdn_policy=None</em>, <em>connection_draining_timeout_sec=None</em>, <em>custom_request_headers=None</em>, <em>description=None</em>, <em>enable_cdn=None</em>, <em>health_checks=None</em>, <em>iap=None</em>, <em>name=None</em>, <em>port_name=None</em>, <em>project=None</em>, <em>protocol=None</em>, <em>security_policy=None</em>, <em>session_affinity=None</em>, <em>timeout_sec=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.BackendService" title="Permalink to this definition">¶</a></dt>
-<dd><p>A Backend Service defines a group of virtual machines that will serve traffic for load balancing. For more information
-see <a class="reference external" href="https://cloud.google.com/compute/docs/load-balancing/http/backend-service">the official documentation</a>
-and the <a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/backendServices">API</a>.</p>
-<p>For internal load balancing, use a <a class="reference external" href="https://www.terraform.io/docs/providers/google/r/compute_region_backend_service.html">google_compute_region_backend_service</a>.</p>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">BackendService</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>affinity_cookie_ttl_sec=None</em>, <em>backends=None</em>, <em>cdn_policy=None</em>, <em>connection_draining_timeout_sec=None</em>, <em>custom_request_headers=None</em>, <em>description=None</em>, <em>enable_cdn=None</em>, <em>health_checks=None</em>, <em>iap=None</em>, <em>load_balancing_scheme=None</em>, <em>name=None</em>, <em>port_name=None</em>, <em>project=None</em>, <em>protocol=None</em>, <em>security_policy=None</em>, <em>session_affinity=None</em>, <em>timeout_sec=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.BackendService" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a BackendService resource in the specified project using the data
+included in the request.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -337,159 +335,24 @@ and the <a class="reference external" href="https://cloud.google.com/compute/doc
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>affinity_cookie_ttl_sec</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Lifetime of cookies in seconds if session_affinity is
-<code class="docutils literal notranslate"><span class="pre">GENERATED_COOKIE</span></code>. If set to 0, the cookie is non-persistent and lasts only until the end of
-the browser session (or equivalent). The maximum allowed value for TTL is one day.</li>
-<li><strong>backends</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of backends that serve this BackendService. Structure is documented below.</li>
-<li><strong>cdn_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Cloud CDN configuration for this BackendService. Structure is documented below.</li>
-<li><strong>connection_draining_timeout_sec</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Time for which instance will be drained (not accept new connections,
-but still work to finish started ones). Defaults to <code class="docutils literal notranslate"><span class="pre">300</span></code>.</li>
-<li><strong>custom_request_headers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – ) Headers that the
-HTTP/S load balancer should add to proxied requests. See <a class="reference external" href="https://cloud.google.com/compute/docs/load-balancing/http/backend-service#user-defined-request-headers">guide</a> for details.</li>
-<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The textual description for the backend service.</li>
-<li><strong>enable_cdn</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not to enable the Cloud CDN on the backend service.</li>
-<li><strong>health_checks</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies a list of HTTP/HTTPS health checks
-for checking the health of the backend service. Currently at most one health
-check can be specified, and a health check is required.</li>
-<li><strong>iap</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specification for the Identity-Aware proxy. Disabled if not specified. Structure is documented below.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the backend service.</li>
-<li><strong>port_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a service that has been added to an
-instance group in this backend. See <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/#specifying_service_endpoints">related docs</a> for details. Defaults to http.</li>
-<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.</li>
-<li><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol for incoming requests. Defaults to
-<code class="docutils literal notranslate"><span class="pre">HTTP</span></code>.</li>
-<li><strong>security_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name or URI of a
-<a class="reference external" href="https://cloud.google.com/armor/docs/security-policy-concepts">security policy</a> to add to the backend service.</li>
-<li><strong>session_affinity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – How to distribute load. Options are <code class="docutils literal notranslate"><span class="pre">NONE</span></code> (no
-affinity), <code class="docutils literal notranslate"><span class="pre">CLIENT_IP</span></code> (hash of the source/dest addresses / ports), and
-<code class="docutils literal notranslate"><span class="pre">GENERATED_COOKIE</span></code> (distribute load using a generated session cookie).</li>
-<li><strong>timeout_sec</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of secs to wait for a backend to respond
-to a request before considering the request failed. Defaults to <code class="docutils literal notranslate"><span class="pre">30</span></code>.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
 <dl class="attribute">
-<dt id="pulumi_gcp.compute.BackendService.affinity_cookie_ttl_sec">
-<code class="descname">affinity_cookie_ttl_sec</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.BackendService.affinity_cookie_ttl_sec" title="Permalink to this definition">¶</a></dt>
-<dd><p>Lifetime of cookies in seconds if session_affinity is
-<code class="docutils literal notranslate"><span class="pre">GENERATED_COOKIE</span></code>. If set to 0, the cookie is non-persistent and lasts only until the end of
-the browser session (or equivalent). The maximum allowed value for TTL is one day.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.compute.BackendService.backends">
-<code class="descname">backends</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.BackendService.backends" title="Permalink to this definition">¶</a></dt>
-<dd><p>The list of backends that serve this BackendService. Structure is documented below.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.compute.BackendService.cdn_policy">
-<code class="descname">cdn_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.BackendService.cdn_policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Cloud CDN configuration for this BackendService. Structure is documented below.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.compute.BackendService.connection_draining_timeout_sec">
-<code class="descname">connection_draining_timeout_sec</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.BackendService.connection_draining_timeout_sec" title="Permalink to this definition">¶</a></dt>
-<dd><p>Time for which instance will be drained (not accept new connections,
-but still work to finish started ones). Defaults to <code class="docutils literal notranslate"><span class="pre">300</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.compute.BackendService.custom_request_headers">
-<code class="descname">custom_request_headers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.BackendService.custom_request_headers" title="Permalink to this definition">¶</a></dt>
-<dd><p>) Headers that the
-HTTP/S load balancer should add to proxied requests. See <a class="reference external" href="https://cloud.google.com/compute/docs/load-balancing/http/backend-service#user-defined-request-headers">guide</a> for details.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.compute.BackendService.description">
-<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.BackendService.description" title="Permalink to this definition">¶</a></dt>
-<dd><p>The textual description for the backend service.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.compute.BackendService.enable_cdn">
-<code class="descname">enable_cdn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.BackendService.enable_cdn" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether or not to enable the Cloud CDN on the backend service.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.compute.BackendService.fingerprint">
-<code class="descname">fingerprint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.BackendService.fingerprint" title="Permalink to this definition">¶</a></dt>
-<dd><p>The fingerprint of the backend service.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.compute.BackendService.health_checks">
-<code class="descname">health_checks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.BackendService.health_checks" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies a list of HTTP/HTTPS health checks
-for checking the health of the backend service. Currently at most one health
-check can be specified, and a health check is required.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.compute.BackendService.iap">
-<code class="descname">iap</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.BackendService.iap" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specification for the Identity-Aware proxy. Disabled if not specified. Structure is documented below.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.compute.BackendService.name">
-<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.BackendService.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the backend service.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.compute.BackendService.port_name">
-<code class="descname">port_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.BackendService.port_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of a service that has been added to an
-instance group in this backend. See <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/#specifying_service_endpoints">related docs</a> for details. Defaults to http.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_gcp.compute.BackendService.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.BackendService.project" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.compute.BackendService.protocol">
-<code class="descname">protocol</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.BackendService.protocol" title="Permalink to this definition">¶</a></dt>
-<dd><p>The protocol for incoming requests. Defaults to
-<code class="docutils literal notranslate"><span class="pre">HTTP</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.compute.BackendService.security_policy">
-<code class="descname">security_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.BackendService.security_policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Name or URI of a
-<a class="reference external" href="https://cloud.google.com/armor/docs/security-policy-concepts">security policy</a> to add to the backend service.</p>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.BackendService.self_link">
 <code class="descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.BackendService.self_link" title="Permalink to this definition">¶</a></dt>
 <dd><p>The URI of the created resource.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.compute.BackendService.session_affinity">
-<code class="descname">session_affinity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.BackendService.session_affinity" title="Permalink to this definition">¶</a></dt>
-<dd><p>How to distribute load. Options are <code class="docutils literal notranslate"><span class="pre">NONE</span></code> (no
-affinity), <code class="docutils literal notranslate"><span class="pre">CLIENT_IP</span></code> (hash of the source/dest addresses / ports), and
-<code class="docutils literal notranslate"><span class="pre">GENERATED_COOKIE</span></code> (distribute load using a generated session cookie).</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.compute.BackendService.timeout_sec">
-<code class="descname">timeout_sec</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.BackendService.timeout_sec" title="Permalink to this definition">¶</a></dt>
-<dd><p>The number of secs to wait for a backend to respond
-to a request before considering the request failed. Defaults to <code class="docutils literal notranslate"><span class="pre">30</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -828,7 +691,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.GetBackendServiceResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">GetBackendServiceResult</code><span class="sig-paren">(</span><em>affinity_cookie_ttl_sec=None</em>, <em>backends=None</em>, <em>cdn_policies=None</em>, <em>connection_draining_timeout_sec=None</em>, <em>custom_request_headers=None</em>, <em>description=None</em>, <em>enable_cdn=None</em>, <em>fingerprint=None</em>, <em>health_checks=None</em>, <em>iaps=None</em>, <em>name=None</em>, <em>port_name=None</em>, <em>project=None</em>, <em>protocol=None</em>, <em>region=None</em>, <em>security_policy=None</em>, <em>self_link=None</em>, <em>session_affinity=None</em>, <em>timeout_sec=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetBackendServiceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">GetBackendServiceResult</code><span class="sig-paren">(</span><em>affinity_cookie_ttl_sec=None</em>, <em>backends=None</em>, <em>cdn_policies=None</em>, <em>connection_draining_timeout_sec=None</em>, <em>creation_timestamp=None</em>, <em>custom_request_headers=None</em>, <em>description=None</em>, <em>enable_cdn=None</em>, <em>fingerprint=None</em>, <em>health_checks=None</em>, <em>iaps=None</em>, <em>load_balancing_scheme=None</em>, <em>name=None</em>, <em>port_name=None</em>, <em>project=None</em>, <em>protocol=None</em>, <em>security_policy=None</em>, <em>self_link=None</em>, <em>session_affinity=None</em>, <em>timeout_sec=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetBackendServiceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getBackendService.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.GetBackendServiceResult.backends">
@@ -1222,7 +1085,7 @@ that protects this image.</p>
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.GetInstanceResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">GetInstanceResult</code><span class="sig-paren">(</span><em>allow_stopping_for_update=None</em>, <em>attached_disks=None</em>, <em>boot_disks=None</em>, <em>can_ip_forward=None</em>, <em>cpu_platform=None</em>, <em>create_timeout=None</em>, <em>deletion_protection=None</em>, <em>description=None</em>, <em>disks=None</em>, <em>guest_accelerators=None</em>, <em>hostname=None</em>, <em>instance_id=None</em>, <em>label_fingerprint=None</em>, <em>labels=None</em>, <em>machine_type=None</em>, <em>metadata=None</em>, <em>metadata_fingerprint=None</em>, <em>metadata_startup_script=None</em>, <em>min_cpu_platform=None</em>, <em>name=None</em>, <em>network_interfaces=None</em>, <em>project=None</em>, <em>schedulings=None</em>, <em>scratch_disks=None</em>, <em>self_link=None</em>, <em>service_accounts=None</em>, <em>tags=None</em>, <em>tags_fingerprint=None</em>, <em>zone=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetInstanceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">GetInstanceResult</code><span class="sig-paren">(</span><em>allow_stopping_for_update=None</em>, <em>attached_disks=None</em>, <em>boot_disks=None</em>, <em>can_ip_forward=None</em>, <em>cpu_platform=None</em>, <em>deletion_protection=None</em>, <em>description=None</em>, <em>disks=None</em>, <em>guest_accelerators=None</em>, <em>hostname=None</em>, <em>instance_id=None</em>, <em>label_fingerprint=None</em>, <em>labels=None</em>, <em>machine_type=None</em>, <em>metadata=None</em>, <em>metadata_fingerprint=None</em>, <em>metadata_startup_script=None</em>, <em>min_cpu_platform=None</em>, <em>name=None</em>, <em>network_interfaces=None</em>, <em>project=None</em>, <em>schedulings=None</em>, <em>scratch_disks=None</em>, <em>self_link=None</em>, <em>service_accounts=None</em>, <em>tags=None</em>, <em>tags_fingerprint=None</em>, <em>zone=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetInstanceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getInstance.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.GetInstanceResult.attached_disks">
@@ -3415,7 +3278,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.Network">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">Network</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auto_create_subnetworks=None</em>, <em>description=None</em>, <em>ipv4_range=None</em>, <em>name=None</em>, <em>project=None</em>, <em>routing_mode=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Network" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">Network</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auto_create_subnetworks=None</em>, <em>delete_default_routes_on_create=None</em>, <em>description=None</em>, <em>ipv4_range=None</em>, <em>name=None</em>, <em>project=None</em>, <em>routing_mode=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Network" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a VPC network or legacy network resource on GCP.</p>
 <p>To get more information about Network, see:</p>
 <ul class="simple">

@@ -1,6 +1,17 @@
 <div class="section" id="module-pulumi_kubernetes.helm.v2">
 <span id="v2"></span><h1>v2<a class="headerlink" href="#module-pulumi_kubernetes.helm.v2" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
+<dt id="pulumi_kubernetes.helm.v2.Callable">
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.helm.v2.</code><code class="descname">Callable</code><a class="headerlink" href="#pulumi_kubernetes.helm.v2.Callable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Callable type; Callable[[int], str] is a function of (int) -&gt; str.</p>
+<p>The subscription syntax must always be used with exactly two
+values: the argument list and the return type.  The argument list
+must be a list of types or ellipsis; the return type must be a single type.</p>
+<p>There is no syntax to indicate optional or keyword arguments,
+such function types are rarely used as callback types.</p>
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_kubernetes.helm.v2.Chart">
 <em class="property">class </em><code class="descclassname">pulumi_kubernetes.helm.v2.</code><code class="descname">Chart</code><span class="sig-paren">(</span><em>release_name: str, config: Union[pulumi_kubernetes.helm.v2.helm.ChartOpts, pulumi_kubernetes.helm.v2.helm.LocalChartOpts], opts: Optional[pulumi.resource.ResourceOptions] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.helm.v2.Chart" title="Permalink to this definition">¶</a></dt>
 <dd><p>Chart is a component representing a collection of resources described by an arbitrary Helm
@@ -32,7 +43,7 @@ resource’s behavior.</li>
 
 <dl class="class">
 <dt id="pulumi_kubernetes.helm.v2.ChartOpts">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.helm.v2.</code><code class="descname">ChartOpts</code><span class="sig-paren">(</span><em>chart: Union[str, Awaitable[str], Output[T]], namespace: Union[str, Awaitable[str], Output[T], None] = None, values: Optional[Mapping[str, Union[Any, Awaitable[Any], Output[T]]]] = None, transformations: Optional[List[Callable]] = None, repo: Union[str, Awaitable[str], Output[T], None] = None, version: Union[str, Awaitable[str], Output[T], None] = None, fetch_opts: Union[pulumi_kubernetes.helm.v2.helm.FetchOpts, Awaitable[pulumi_kubernetes.helm.v2.helm.FetchOpts], Output[T], None] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.helm.v2.ChartOpts" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.helm.v2.</code><code class="descname">ChartOpts</code><span class="sig-paren">(</span><em>chart: Union[T, Awaitable[T], Output[T]], namespace: Optional[Union[T, Awaitable[T], Output[T]]] = None, values: Optional[Mapping[str, Union[T, Awaitable[T], Output[T]]]] = None, transformations: Optional[List[Callable]] = None, repo: Optional[Union[T, Awaitable[T], Output[T]]] = None, version: Optional[Union[T, Awaitable[T], Output[T]]] = None, fetch_opts: Optional[Union[T, Awaitable[T], Output[T]]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.helm.v2.ChartOpts" title="Permalink to this definition">¶</a></dt>
 <dd><p>ChartOpts is a bag of configuration options for a remote Helm chart.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -44,7 +55,7 @@ looked up in the given repository. Otherwise, this chart name must be a fully qu
 chart URL or <code class="docutils literal notranslate"><span class="pre">repo/chartname</span></code>.</li>
 <li><strong>namespace</strong> (<em>Optional</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em>) – Optional namespace to install chart resources into.</li>
 <li><strong>values</strong> (<em>Optional</em><em>[</em><em>pulumi.Inputs</em><em>]</em>) – Optional overrides for chart values.</li>
-<li><strong>transformations</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>Callable</em><em>]</em>) – Optional list of transformations to apply to
+<li><strong>transformations</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi_kubernetes.helm.v2.List" title="pulumi_kubernetes.helm.v2.List"><em>List</em></a><em>[</em><a class="reference internal" href="#pulumi_kubernetes.helm.v2.Callable" title="pulumi_kubernetes.helm.v2.Callable"><em>Callable</em></a><em>]</em>) – Optional list of transformations to apply to
 resources that will be created by this chart prior to creation. Allows customization of the
 chart behaviour without directly modifying the chart itself.</li>
 <li><strong>repo</strong> (<em>Optional</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em>) – The repository containing the desired chart.  If not
@@ -107,7 +118,7 @@ chart URL or repo/chartname.</p>
 
 <dl class="class">
 <dt id="pulumi_kubernetes.helm.v2.FetchOpts">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.helm.v2.</code><code class="descname">FetchOpts</code><span class="sig-paren">(</span><em>version: Union[str, Awaitable[str], Output[T], None] = None, ca_file: Union[str, Awaitable[str], Output[T], None] = None, cert_file: Union[str, Awaitable[str], Output[T], None] = None, key_file: Union[str, Awaitable[str], Output[T], None] = None, destination: Union[str, Awaitable[str], Output[T], None] = None, keyring: Union[str, Awaitable[str], Output[T], None] = None, password: Union[str, Awaitable[str], Output[T], None] = None, repo: Union[str, Awaitable[str], Output[T], None] = None, untar_dir: Union[str, Awaitable[str], Output[T], None] = None, username: Union[str, Awaitable[str], Output[T], None] = None, home: Union[str, Awaitable[str], Output[T], None] = None, devel: Union[bool, Awaitable[bool], Output[T], None] = None, prov: Union[bool, Awaitable[bool], Output[T], None] = None, untar: Union[bool, Awaitable[bool], Output[T], None] = None, verify: Union[bool, Awaitable[bool], Output[T], None] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.helm.v2.FetchOpts" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.helm.v2.</code><code class="descname">FetchOpts</code><span class="sig-paren">(</span><em>version: Optional[Union[T, Awaitable[T], Output[T]]] = None, ca_file: Optional[Union[T, Awaitable[T], Output[T]]] = None, cert_file: Optional[Union[T, Awaitable[T], Output[T]]] = None, key_file: Optional[Union[T, Awaitable[T], Output[T]]] = None, destination: Optional[Union[T, Awaitable[T], Output[T]]] = None, keyring: Optional[Union[T, Awaitable[T], Output[T]]] = None, password: Optional[Union[T, Awaitable[T], Output[T]]] = None, repo: Optional[Union[T, Awaitable[T], Output[T]]] = None, untar_dir: Optional[Union[T, Awaitable[T], Output[T]]] = None, username: Optional[Union[T, Awaitable[T], Output[T]]] = None, home: Optional[Union[T, Awaitable[T], Output[T]]] = None, devel: Optional[Union[T, Awaitable[T], Output[T]]] = None, prov: Optional[Union[T, Awaitable[T], Output[T]]] = None, untar: Optional[Union[T, Awaitable[T], Output[T]]] = None, verify: Optional[Union[T, Awaitable[T], Output[T]]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.helm.v2.FetchOpts" title="Permalink to this definition">¶</a></dt>
 <dd><p>FetchOpts is a bag of configuration options to customize the fetching of the Helm chart.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -243,8 +254,13 @@ this is ignored.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_kubernetes.helm.v2.List">
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.helm.v2.</code><code class="descname">List</code><a class="headerlink" href="#pulumi_kubernetes.helm.v2.List" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_kubernetes.helm.v2.LocalChartOpts">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.helm.v2.</code><code class="descname">LocalChartOpts</code><span class="sig-paren">(</span><em>path: Union[str, Awaitable[str], Output[T]], namespace: Union[str, Awaitable[str], Output[T], None] = None, values: Optional[Mapping[str, Union[Any, Awaitable[Any], Output[T]]]] = None, transformations: Optional[List[Callable]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.helm.v2.LocalChartOpts" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.helm.v2.</code><code class="descname">LocalChartOpts</code><span class="sig-paren">(</span><em>path: Union[T, Awaitable[T], Output[T]], namespace: Optional[Union[T, Awaitable[T], Output[T]]] = None, values: Optional[Mapping[str, Union[T, Awaitable[T], Output[T]]]] = None, transformations: Optional[List[Callable]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.helm.v2.LocalChartOpts" title="Permalink to this definition">¶</a></dt>
 <dd><p>LocalChartOpts is a bag of configuration options for a local Helm chart.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -255,7 +271,7 @@ this is ignored.</p>
 <code class="docutils literal notranslate"><span class="pre">Chart.yaml</span></code> file.</li>
 <li><strong>namespace</strong> (<em>Optional</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em>) – Optional namespace to install chart resources into.</li>
 <li><strong>values</strong> (<em>Optional</em><em>[</em><em>pulumi.Inputs</em><em>]</em>) – Optional overrides for chart values.</li>
-<li><strong>transformations</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>Callable</em><em>]</em><em>]</em>) – Optional list of transformations to apply to
+<li><strong>transformations</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi_kubernetes.helm.v2.List" title="pulumi_kubernetes.helm.v2.List"><em>List</em></a><em>[</em><a class="reference internal" href="#pulumi_kubernetes.helm.v2.Callable" title="pulumi_kubernetes.helm.v2.Callable"><em>Callable</em></a><em>]</em><em>]</em>) – Optional list of transformations to apply to
 resources that will be created by this chart prior to creation. Allows customization of the
 chart behaviour without directly modifying the chart itself.</li>
 </ul>
@@ -315,6 +331,16 @@ behavior as mkdtemp but can be used as a context manager.  For
 example:</p>
 <p>Upon exiting the context, the directory and everything contained
 in it are removed.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_kubernetes.helm.v2.Tuple">
+<em class="property">class </em><code class="descclassname">pulumi_kubernetes.helm.v2.</code><code class="descname">Tuple</code><a class="headerlink" href="#pulumi_kubernetes.helm.v2.Tuple" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tuple type; Tuple[X, Y] is the cross-product type of X and Y.</p>
+<p>Example: Tuple[T1, T2] is a tuple of two elements corresponding
+to type variables T1 and T2.  Tuple[int, float, str] is a tuple
+of an int, a float and a string.</p>
+<p>To specify a variable-length tuple of homogeneous type, use Tuple[T, …].</p>
 </dd></dl>
 
 </div>

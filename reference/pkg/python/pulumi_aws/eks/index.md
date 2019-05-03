@@ -135,7 +135,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.eks.GetClusterResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.eks.</code><code class="descname">GetClusterResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>certificate_authority=None</em>, <em>created_at=None</em>, <em>endpoint=None</em>, <em>name=None</em>, <em>platform_version=None</em>, <em>role_arn=None</em>, <em>version=None</em>, <em>vpc_config=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.GetClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.eks.</code><code class="descname">GetClusterResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>certificate_authority=None</em>, <em>created_at=None</em>, <em>enabled_cluster_log_types=None</em>, <em>endpoint=None</em>, <em>name=None</em>, <em>platform_version=None</em>, <em>role_arn=None</em>, <em>version=None</em>, <em>vpc_config=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.GetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCluster.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.eks.GetClusterResult.arn">
@@ -153,6 +153,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.eks.GetClusterResult.created_at">
 <code class="descname">created_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.GetClusterResult.created_at" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Unix epoch time stamp in seconds for when the cluster was created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.eks.GetClusterResult.enabled_cluster_log_types">
+<code class="descname">enabled_cluster_log_types</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.GetClusterResult.enabled_cluster_log_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>The enabled control plane logs.</p>
 </dd></dl>
 
 <dl class="attribute">
