@@ -125,18 +125,19 @@ jobs:
     condition: or(eq(variables['Build.Reason'], 'PullRequest'), eq(variables['Build.Reason'], 'Manual'))
     inputs:
       azureSubscription: 'My Service Connection'
-      command: "preview"
-      cwd: "infra/"
-      stack: "acmeCorp/acmeProject/acme-ui"
+      command: 'preview'
+      cwd: 'infra/'
+      stack: 'acmeCorp/acmeProject/acme-ui'
   - task: Pulumi@0
     condition: or(eq(variables['Build.Reason'], 'IndividualCI'), eq(variables['Build.Reason'], 'BatchedCI'))
     inputs:
       azureSubscription: 'My Service Connection'
-      command: "up"
-      cwd: "infra/"
-      stack: "acmeCorp/acmeProject/acme-ui"
-      args: "--yes"
+      command: 'up'
+      cwd: 'infra/'
+      stack: 'acmeCorp/acmeProject/acme-ui'
+      args: '--yes'
 
+# The following job is optional, and shown here for demonstration purposes only.
 - job: build_and_deploy
   condition: ne(dependencies.infrastructure.outputs['pulumi.containerName'], '')
   dependsOn: infrastructure
@@ -169,7 +170,7 @@ jobs:
       azurePowerShellVersion: 'LatestVersion'
 ```
 
-### Sample `build-and-deploy.ps1`
+### Sample `build-and-deploy.ps1` (Optional)
 
 This `PowerShell` script simply builds the UI app, and uploads the `dist/` folder to an Azure Storage blob container. You don't have to use a script like this. You can always use the built-in Azure DevOps task to accomplish the steps in this script. This script is just an example of how `pulumi` can be easily integrated into your existing app.
 
