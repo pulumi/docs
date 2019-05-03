@@ -20,6 +20,10 @@
       "package_name": "pulumi_azure"
     },
     {
+      "name": "Pulumi Azure Active Directory",
+      "package_name": "pulumi_azuread"
+    },
+    {
       "name": "Pulumi Cloudflare",
       "package_name": "pulumi_cloudflare"
     },

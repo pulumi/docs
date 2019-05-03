@@ -75,6 +75,7 @@ REPOS=(
     "pulumi,pulumi/sdk/nodejs"
     "random,pulumi-random,sdk/nodejs"
     "vsphere,pulumi-vsphere,sdk/nodejs"
+    "azuread,pulumi-azuread,sdk/nodejs"
 )
 
 PIDS=()

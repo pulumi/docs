@@ -15,6 +15,7 @@ PACKAGES=(
   "pulumi_f5bigip"
   "pulumi_packet"
   "pulumi_kubernetes"
+  "pulumi_azuread"
 )
 
 run_pydocgen() {
