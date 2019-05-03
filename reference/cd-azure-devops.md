@@ -71,6 +71,8 @@ You can set [job-scoped output variables](https://docs.microsoft.com/en-us/azure
 to allow the `pulumi` CLI to perform an unattended login. In addition to this, you will also need to set the cloud provider-specific
 variables. For Azure, the environment variables you will need are documented [here](https://pulumi.io/quickstart/azure/index.html).
 
+**Note**: If you are using the [Pulumi task extension](https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task) for Azure Pipelines, you don't need to manually configure the environment variables in your pipeline builds. You can use [Service Connections](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/service-endpoints?view=azure-devops) to centralize access to your Azure subscription(s).
+
 ## Agents
 
 Azure DevOps allows you to specify a build agent for each of your jobs in your pipeline. You may have a requirement to run certain jobs on a
@@ -81,19 +83,18 @@ Ubuntu agent, and some on a Windows agent. `pulumi` can be installed on these ag
 For the YAML-driven DevOps pipeline, the repository must contain the `azure-pipelines.yml` in the root of the repo for Azure DevOps to use it automatically.
 The following are samples only. You may choose to structure your configuration any way you like.
 
-### Pulumi Task Extension
+### Pulumi Task Extension for Azure Pipelines
 
-We have built a task extension that will allow you to easily use the Azure Pipelines wizard UI or the YAML config to install the Pulumi CLI, and run any commands without the need for any scripts.
+We built a task extension that will let you easily use Pulumi in your CI/CD pipelines. It can be used with the Azure Pipelines wizard UI or the YAML config. The task handles installing the Pulumi CLI, and running any commands without the need for any scripts.
 
 Install the Pulumi task from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task) to your Azure DevOps organization.
 
-The task requires the use of a service connection, which allows the pipeline to connect to your Azure Subscription, which is cleaner than creating environment variables per pipeline with your service principal credentials. The task also automatically looks for the build variable `pulumi.access.token`, and automatically maps it to the environment variable `PULUMI_ACCESS_TOKEN` that is used by the CLI for non-interactive logins. You may also use the `env` directive to map any other environment variables you wish to make available to your Pulumi app still.
+The task requires the use of a service connection, which allows the pipeline to connect to your Azure Subscription. The task also looks for the build variable `pulumi.access.token`, and automatically maps it to the environment variable `PULUMI_ACCESS_TOKEN`, that is used by the CLI for non-interactive logins. You may still use the `env` directive to map any other environment variables you wish to make available to your Pulumi app.
 
-You can get your Pulumi access token from https://app.pulumi.com/account/tokens.
-
-Here's an example snippet of how you can use the task in your pipeline yaml.
+You can get your Pulumi access token from https://app.pulumi.com/account/tokens. Here's an example snippet of how you can use the task in your pipeline yaml.
 
 ```yaml
+# Lines omitted for brevity.
 ...
 ...
   - task: Pulumi@0
@@ -108,11 +109,6 @@ Here's an example snippet of how you can use the task in your pipeline yaml.
 ```
 
 ### Sample `azure-pipelines.yml`
-
-The following environment variables are set in the build pipeline using the Azure DevOps portal.
-- `pulumi.access.token`
-
-These variables are _mapped-in_ to the job using the `env:` directive as described [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=vsts&tabs=yaml%2Cbatch#secret-variables).
 
 ```yaml
 # Node.js with Angular
@@ -163,8 +159,9 @@ jobs:
     displayName: 'Upload UI dist bundle to Storage Account'
     inputs:
       azureConnectionType: 'ConnectedServiceNameARM'
-      azureSubscription: $(arm.subscription.id)
+      azureSubscription: 'My Service Connection'
       scriptType: 'FilePath'
+      # This script file is shown below in the next section.
       scriptPath: 'build-and-deploy.ps1'
       scriptArguments: '-resourceGroupName $(resourceGroupName) -storageAccountName $(storageAccountName) -containerName $(containerName) -isAzurePipelineBuild $true -skipBuild $true -localFolder $(Build.SourcesDirectory)/dist'
       errorActionPreference: 'stop'
@@ -265,12 +262,21 @@ If($storageAccount)
 }
 ```
 
-### Using Scripts
+## Using Scripts (Manual Approach)
 
-If you prefer to control the installation of the Pulumi CLI and how it runs your Pulumi app, you can use scripts in your pipeline builds for a more direct approach. Below are some sample scripts to install the CLI and run your Pulumi app.
+If you prefer to control the installation of the Pulumi CLI and how it runs your Pulumi app, you can use scripts in your pipeline builds. Below are some sample scripts to help you get started in order to install the CLI and run your Pulumi app.
 
 The `run-pulumi.sh` script runs `pulumi preview` for PR builds and the `pulumi up --yes` command with explicit consent,
 for master branches.
+
+The following environment variables are set in the build pipeline using the Azure DevOps portal.
+- `pulumi.access.token`
+- `arm.client.id`
+- `arm.client.secret`
+- `arm.subscription.id`
+- `arm.tenant.id`
+
+The above variables are _mapped-in_ to the job using the `env:` directive as described [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=vsts&tabs=yaml%2Cbatch#secret-variables).
 
 #### `azure-pipelines.yml`
 
@@ -290,11 +296,14 @@ In your pipeline configuration, you need to then call these scripts when appropr
       PULUMI_ACCESS_TOKEN: $(pulumi.access.token)
       ARM_CLIENT_SECRET: $(arm.client.secret)
       ARM_SUBSCRIPTION_ID: $(arm.subscription.id)
+      ARM_CLIENT_ID: $(arm.client.id)
+      ARM_TENANT_ID: $(arm.tenant.id)
 ...
 ...
 ```
 
 #### Sample `setup.sh`
+
 ```bash
 #!/bin/bash
 
@@ -317,6 +326,7 @@ npm i -g yarn
 ```
 
 #### Sample `run-pulumi.sh`
+
 ```bash
 #!/bin/bash
 
