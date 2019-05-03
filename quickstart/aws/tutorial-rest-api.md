@@ -23,8 +23,9 @@ concepts to explore additional containers, serverless, and infrastructure tutori
 Let's use the Pulumi CLI to initialize a new project:
 
 ```
-pulumi new hello-aws-javascript --dir ahoy-pulumi
+mkdir ahoy-pulumi 
 cd ahoy-pulumi
+pulumi new hello-aws-javascript
 ```
 
 You can accept the defaults for this command. For instance, you can change the AWS region to `us-west-2`.
