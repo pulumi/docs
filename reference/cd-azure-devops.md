@@ -63,7 +63,7 @@ you can access a build variable correctly depending on your agent OS.
 
 ### User-Defined Output Variables
 
-You can set [job-scoped out variables](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=vsts&tabs=yaml%2Cbatch#set-a-job-scoped-variable-from-a-script) or [multi-job variables](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=vsts&tabs=yaml%2Cbatch#set-an-output-multi-job-variable). In this article, we demonstrate the use of multi-job variables with job dependencies, using the `dependsOn` job constraint.
+You can set [job-scoped output variables](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=vsts&tabs=yaml%2Cbatch#set-a-job-scoped-variable-from-a-script) or [multi-job variables](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=vsts&tabs=yaml%2Cbatch#set-an-output-multi-job-variable). In this article, we demonstrate the use of multi-job variables with job dependencies, using the `dependsOn` job constraint.
 
 ### Environment Variables
 
