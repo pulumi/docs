@@ -75,7 +75,7 @@ secretValue                                      S3cr37
 
 ## Using Configuration in Code
 
-On `pulumi update`, secret values are decrypted. Your Pulumi program can read any configuration value that is set via `pulumi config`. Since secret values are decrypted before your program is executed, secret and plaintext values are accessed the same way, through APIs specific to each language.
+On `pulumi up`, secret values are decrypted. Your Pulumi program can read any configuration value that is set via `pulumi config`. Since secret values are decrypted before your program is executed, secret and plaintext values are accessed the same way, through APIs specific to each language.
 
 Additionally, all shell environment variables are passed to the running program and can be accessed via standard runtime APIs, such as `process.env` in Node.js and `os.environ` in Python.
 

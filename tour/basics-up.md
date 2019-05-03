@@ -2,15 +2,15 @@
 title: Spinning up
 ---
 
-As soon as we're ready to deploy changes, we can run `pulumi update` (or `pulumi up`, for short).
+As soon as we're ready to deploy changes, we can run `pulumi up`.
 
 This will re-run our program and show us a preview again.  Because of this, we don't necessarily need to run
 `pulumi preview` manually each time.  If you want to be safe, however, it's always there for you when you need it.
 
-Running `pulumi update` will show us all the same things we just saw, followed by a prompt:
+Running `pulumi up` will show us all the same things we just saw, followed by a prompt:
 
 ```bash
-$ pulumi update
+$ pulumi up
 Previewing update of stack 'ahoy-pulumi-dev'
 Previewing changes:
 

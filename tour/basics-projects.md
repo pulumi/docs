@@ -24,7 +24,7 @@ project description: Ahoy, Pulumi!
 stack name: (ahoy-pulumi-dev)
 aws:region: (us-east-1)
 
-New project is configured and ready to deploy with 'pulumi update'.
+New project is configured and ready to deploy with 'pulumi up'.
 ```
 
 <div class="language-prologue-typescript"></div>
@@ -39,7 +39,7 @@ project description: Ahoy, Pulumi!
 stack name: (ahoy-pulumi-dev)
 aws:region: (us-east-1)
 
-New project is configured and ready to deploy with 'pulumi update'.
+New project is configured and ready to deploy with 'pulumi up'.
 ```
 
 <div class="language-prologue-python"></div>
@@ -54,7 +54,7 @@ project description: Ahoy, Pulumi!
 stack name: (ahoy-pulumi-dev)
 aws:region: (us-east-1)
 
-New project is configured and ready to deploy with 'pulumi update'.
+New project is configured and ready to deploy with 'pulumi up'.
 ```
 
 <div class="language-prologue-go"></div>
@@ -69,7 +69,7 @@ project description: Ahoy, Pulumi!
 stack name: (ahoy-pulumi-dev)
 aws:region: (us-east-1)
 
-New project is configured and ready to deploy with 'pulumi update'.
+New project is configured and ready to deploy with 'pulumi up'.
 ```
 
 This single command created a project, program, stack, and even configured it.

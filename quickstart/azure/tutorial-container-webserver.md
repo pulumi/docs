@@ -48,10 +48,10 @@ In this tutorial, we'll use JavaScript to deploy a simple nginx container to Azu
 
     This example uses the [@pulumi/azure](https://pulumi.io/reference/pkg/nodejs/@pulumi/azure/) package to create and manage two Azure resources including: an [azure.core.ResourceGroup](https://pulumi.io/reference/pkg/nodejs/@pulumi/azure/core/#ResourceGroup) which will contain the ACI instance and [azure.containerservice.Group](https://pulumi.io/reference/pkg/nodejs/@pulumi/azure/containerservice/#Group) which will run an `nginx` Docker container.
 
-1.  To preview and deploy changes, run `pulumi update`. The command shows a preview of the resources that will be created and prompts on whether to proceed with the deployment.  Note that the stack itself is counted as a resource, though it does not correspond to an actual cloud resource.
+1.  To preview and deploy changes, run `pulumi up`. The command shows a preview of the resources that will be created and prompts on whether to proceed with the deployment.  Note that the stack itself is counted as a resource, though it does not correspond to an actual cloud resource.
 
     ```bash
-    $ pulumi update
+    $ pulumi up
     Previewing update (azurewebserver-dev):
 
         Type                             Name                               Plan
@@ -145,4 +145,4 @@ Before moving on, let's tear down the resources that are part of our stack.
 
 ## Summary
 
-In this tutorial, we saw how to use Pulumi programs to create and manage cloud resources in Microsoft Azure, using regular JavaScript and NPM packages. To preview and update infrastructure, use `pulumi update`. To clean up resources, run `pulumi destroy`.
+In this tutorial, we saw how to use Pulumi programs to create and manage cloud resources in Microsoft Azure, using regular JavaScript and NPM packages. To preview and update infrastructure, use `pulumi up`. To clean up resources, run `pulumi destroy`.

@@ -2,7 +2,7 @@
 
 # Runs travisqueue to ensure that only one `push` job is running
 # concurrently for a given branch. This is how we can avoid conflicts
-# when running `pulumi update` in response to any push.
+# when running `pulumi up` in response to any push.
 
 # Travis doesn't make secret config available on forks, so we skip
 # it when TRAVIS_TOKEN is not set.

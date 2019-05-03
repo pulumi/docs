@@ -73,7 +73,7 @@ In this tutorial, we'll show how you can use [@pulumi/aws] to provision raw reso
     $ pulumi config set aws:region us-west-2
     ```
 
-1.  Run `pulumi update` to preview and deploy AWS resources. This creates a stack component, a Bucket and two S3 Objects (one for each file in the `www` folder).
+1.  Run `pulumi up` to preview and deploy AWS resources. This creates a stack component, a Bucket and two S3 Objects (one for each file in the `www` folder).
 
 1.  To see the name of the bucket that was created, run `pulumi stack output`. Note that an extra 7-digit identifier is appended to the name. All Pulumi resources add this identifier automatically, so that you don't have to manually create unique names.
 
@@ -147,10 +147,10 @@ In this section, we configure the S3 bucket to serve the files to a browser. To 
 
     Whenever you need to create a dependency between resources, simply use the output property of one resource as the input to another one. Pulumi uses this information to create physical resources in the correct order. 
 
-1.  Run `pulumi update`, which shows the change to **update** the `Bucket` resource and **create** a new `BucketPolicy` resource:
+1.  Run `pulumi up`, which shows the change to **update** the `Bucket` resource and **create** a new `BucketPolicy` resource:
 
     ```bash
-    $ pulumi update
+    $ pulumi up
     ...
 
     #: Resource Type        Name                       Status     Extra Info

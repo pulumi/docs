@@ -113,7 +113,7 @@ If the Pulumi CLI is interrupted when performing a deployment, you may see an er
 that looks something like this on your next update:
 
 ```
-$ pulumi update
+$ pulumi up
 Previewing update of stack 'interruptedstack'
 error: the current deployment has 1 resource(s) with pending operations:
   * ...

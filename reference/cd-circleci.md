@@ -8,7 +8,7 @@ You can refer to [CircleCI's documentation](https://circleci.com/docs/2.0/config
 for information on how to configure your CircleCI jobs and workflows.
 
 When it comes to integrating Pulumi, just like Like other CI/CD services, it is generally a matter
-of downloading the Pulumi command-line tool and running `pulumi update` from within the CircleCI
+of downloading the Pulumi command-line tool and running `pulumi up` from within the CircleCI
 environment. However, [Pulumi Orbs for CircleCI](https://circleci.com/orbs/registry/orb/pulumi/pulumi)
 enable a standard way to do this integration, without needing any custom scripting.
 

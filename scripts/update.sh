@@ -34,4 +34,4 @@ yarn build
 
 # Login, select the stack, and update.
 pulumi stack select "pulumi/pulumi.io-${ENVIRONMENT}"
-pulumi update --yes --skip-preview
+pulumi up --yes --skip-preview

@@ -39,9 +39,9 @@ In this tutorial, we'll create a simplified version of the example above, that j
     module.exports.S3Folder = S3Folder;
     ```
 
-    The call to `super` specifies the string name for the component, which is typically in the form `namespace:className`. This name is shown in `pulumi update` command as well as at pulumi.com. The second parameter to the `super` call is the name of the resource. In this case, we use the `bucketName` constructor parameter.
+    The call to `super` specifies the string name for the component, which is typically in the form `namespace:className`. This name is shown in `pulumi up` command as well as at pulumi.com. The second parameter to the `super` call is the name of the resource. In this case, we use the `bucketName` constructor parameter.
 
-    Since the `path` parameter is not used, we just log its value via `console.log`. During `pulumi update`, this log message is shown.
+    Since the `path` parameter is not used, we just log its value via `console.log`. During `pulumi up`, this log message is shown.
 
     When creating a resource within a component, add a parent property as the last argument to the constructor, as in the definition of `siteBucket`. When resources are created at the top level, they do not need an explicit parent; the Pulumi stack resource is the parent of all top-level resources and components.
 
@@ -61,7 +61,7 @@ In this tutorial, we'll create a simplified version of the example above, that j
 
     Since we want a stack output for `bucketName`, we create a stack output of the component output property `folder.bucketName`.
 
-1.  Run `pulumi update`. The output of `console.log` is printed in the "Diagnostics" section. Note the parent-child relationship between the resources that have been created. 
+1.  Run `pulumi up`. The output of `console.log` is printed in the "Diagnostics" section. Note the parent-child relationship between the resources that have been created. 
 
 1.  Verify the bucket exists by using the AWS Console or CLI:
 

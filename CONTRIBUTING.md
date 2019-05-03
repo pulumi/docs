@@ -39,7 +39,7 @@
 
 ### Referring to "things"
 
-- References to the Pulumi CLI or CLI commands should be enclosed in backticks (e.g., `pulumi update`).
+- References to the Pulumi CLI or CLI commands should be enclosed in backticks (e.g., `pulumi up`).
 - References to UI elements within a webpage should be **bold**. (e.g., "Go to the **Account** page in the Pulumi Console and select **sync profile with GitHub**").
 - Use arrows to indicate a navigation. (e.g., "Go to **FooPage** -> **BarItem**").
 

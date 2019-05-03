@@ -112,7 +112,7 @@ If you lose the checkpoint for your stack, Pulumi will be unable to manage any e
 Pulumi will believe your stack is empty, the next update will attempt to re-create all of the resources in your stack.
 
 Some commands may behave slightly differently when using the local endpoint. For example, when connected to pulumi.com,
-`pulumi update` ensures there are no other updates in flight for a given stack, something that doesn't happen with the
+`pulumi up` ensures there are no other updates in flight for a given stack, something that doesn't happen with the
 local endpoint. Secrets are also managed using a key encrypted with a passphrase and stored in
 `Pulumi.<stack-name>.yaml`. This requires you to enter the passphrase when you preview, update or delete your stack.
 If you want to collaborate with another person, you'll need to share this passphrase with them as well.

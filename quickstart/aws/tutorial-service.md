@@ -94,10 +94,10 @@ In this tutorial, we'll use TypeScript to build and deploy a simple container us
     $ pulumi config set aws:region us-east-1
     ```
 
-1.  Preview and deploy changes via `pulumi update`. This will take a few minutes. Pulumi automatically builds and provisions an ecr container registry, builds the Docker container, and pushed the image into the repository. This all happens automatically and does not require manual configuration on your part.
+1.  Preview and deploy changes via `pulumi up`. This will take a few minutes. Pulumi automatically builds and provisions an ecr container registry, builds the Docker container, and pushed the image into the repository. This all happens automatically and does not require manual configuration on your part.
 
     ```
-    $ pulumi update
+    $ pulumi up
     Previewing update of stack 'container-quickstart-dev'
     Previewing changes:
     ...
