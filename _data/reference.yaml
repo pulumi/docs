@@ -123,6 +123,8 @@ toc:
         path: /reference/pkg/nodejs/@pulumi/awsx/index.html
       - title: azure
         path: /reference/pkg/nodejs/@pulumi/azure/index.html
+      - title: azuread
+        path: /reference/pkg/nodejs/@pulumi/azuread/index.html
       - title: cloud
         path: /reference/pkg/nodejs/@pulumi/cloud/index.html
       # These aren't really independent pacakges - they are implementation details for `cloud`
@@ -163,6 +165,8 @@ toc:
         path: /reference/pkg/python/pulumi_aws/index.html
       - title: pulumi_azure
         path: /reference/pkg/python/pulumi_azure/index.html
+      - title: pulumi_azuread
+        path: /reference/pkg/python/pulumi_azuread/index.html
       - title: pulumi_cloudflare
         path: /reference/pkg/python/pulumi_cloudflare/index.html
       - title: pulumi_f5bigip
