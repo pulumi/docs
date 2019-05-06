@@ -147,6 +147,10 @@ toc:
         path: /reference/pkg/nodejs/@pulumi/gcp/index.html
       - title: kubernetes
         path: /reference/pkg/nodejs/@pulumi/kubernetes/index.html
+      - title: linode
+        path: /reference/pkg/nodejs/@pulumi/linode/index.html
+      - title: newrelic
+        path: /reference/pkg/nodejs/@pulumi/newrelic/index.html
       - title: openstack
         path: /reference/pkg/nodejs/@pulumi/openstack/index.html
       - title: packet
@@ -175,6 +179,10 @@ toc:
         path: /reference/pkg/python/pulumi_gcp/index.html
       - title: pulumi_kubernetes
         path: /reference/pkg/python/pulumi_kubernetes/index.html
+      - title: pulumi_linode
+        path: /reference/pkg/python/pulumi_linode/index.html
+      - title: pulumi_newrelic
+        path: /reference/pkg/python/pulumi_newrelic/index.html
       - title: pulumi_openstack
         path: /reference/pkg/python/pulumi_openstack/index.html
       # - title: pulumi_packet
