@@ -183,7 +183,7 @@ In this tutorial, we'll use Python to deploy an instance of Azure Kubernetes Ser
 
     This example uses the [@pulumi_azure](https://pulumi.io/reference/pkg/python/pulumi_azure/index.html) package to create and manage several Azure resources including: a [pulumi_azure.containerservice.KubernetesCluster](https://pulumi.io/reference/pkg/python/pulumi_azure/containerservice/#pulumi_azure.containerservice.KubernetesCluster), [pulumi_azure.containerservice.Registry](https://pulumi.io/reference/pkg/python/pulumi_azure/containerservice/#pulumi_azure.containerservice.Registry) which will store Docker images and [pulumi_azure.network.VirtualNetwork](https://pulumi.io/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.VirtualNetwork) that will contain AKS worker nodes and several others. We are using implicit and explicit dependencies in this configuration. For example, resource outputs can be used as inputs to imply dependency between resources, but you can also declare dependency using [ResourceOptions](/reference/programming-model.html#resources) passed to the resource as additional argumanets.
 
-4.  To preview and deploy changes, run `pulumi update` and select "yes."
+4.  To preview and deploy changes, run `pulumi up` and select "yes."
 
     The `update` sub-command shows a preview of the resources that will be created
     and prompts on whether to proceed with the deployment. Note that the stack
@@ -197,7 +197,7 @@ In this tutorial, we'll use Python to deploy an instance of Azure Kubernetes Ser
     new AKS cluster takes between 10-15 minutes.
 
     ```bash
-    $ pulumi update
+    $ pulumi up
     Previewing update (dev):
 
         Type                                         Name                Plan       Info
@@ -347,7 +347,7 @@ Before moving on, let's tear down the resources that are part of our stack.
 
 ## Summary
 
-In this tutorial, we saw how to use Pulumi programs to create and manage cloud resources in Microsoft Azure, using Python and pypi packages. To preview and update infrastructure, use `pulumi update`. To clean up resources, run `pulumi destroy`.
+In this tutorial, we saw how to use Pulumi programs to create and manage cloud resources in Microsoft Azure, using Python and pypi packages. To preview and update infrastructure, use `pulumi up`. To clean up resources, run `pulumi destroy`.
 
 For a follow-up example on how to use Pulumi programs to create a Kubernetes
 apps on your new cluster, see [Kubernetes Tutorial: Getting Started With Pulumi](../kubernetes/tutorial-configmap-rollout.html).

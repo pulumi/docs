@@ -114,10 +114,10 @@ and a video walkthrough of this example is [available on YouTube](https://www.yo
     $ pulumi config set cloud-aws:useFargate true
     ```
 
-1.  Preview and deploy changes via `pulumi update`, which will take a few minutes. During the preview phase, Pulumi runs the Docker build. 
+1.  Preview and deploy changes via `pulumi up`, which will take a few minutes. During the preview phase, Pulumi runs the Docker build. 
 
     ```bash
-    $ pulumi update
+    $ pulumi up
     Previewing update of stack 'thumbnailer-testing'
     ...
 

@@ -56,7 +56,7 @@ other Pulumi-managed resources.
 
 ## CI Integration
 
-Once installed in your organization, any `pulumi preview` or `pulumi update` that is run in your CI
+Once installed in your organization, any `pulumi preview` or `pulumi up` that is run in your CI
 system will have its results reported back to GitHub.
 
 Pulumi supports a wide array of CI/CD systems, and the Pulumi GitHub App should pick up your changes

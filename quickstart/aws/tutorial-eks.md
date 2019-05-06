@@ -73,7 +73,7 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Elastic Conta
     // Export the clusters' kubeconfig.
     export const kubeconfig = cluster.kubeconfig
     ```
-1.  To preview and deploy changes, run `pulumi update` and select "yes."
+1.  To preview and deploy changes, run `pulumi up` and select "yes."
 
     The `update` sub-command shows a preview of the resources that will be created
     and prompts on whether to proceed with the deployment. Note that the stack
@@ -87,7 +87,7 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Elastic Conta
     new EKS cluster takes between 10-15 minutes.
 
     ```bash
-    $ pulumi update
+    $ pulumi up
     Previewing update (eks-demo):
 
         Type                                          Name                              	Plan

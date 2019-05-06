@@ -50,7 +50,7 @@ test                                      2 weeks ago              121
 
 ## Deploy a project
 
-To deploy your project to the currently selected stack, run `pulumi update`. The operation uses the latest [configuration values](config.html) for the active stack.
+To deploy your project to the currently selected stack, run `pulumi up`. The operation uses the latest [configuration values](config.html) for the active stack.
 
 > **Note:** Your stack can distinguish between execution for preview versus for update by using [pulumi.runtime.isDryRun()](/reference/pkg/nodejs/@pulumi/pulumi/runtime/#isDryRun).
 

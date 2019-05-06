@@ -39,7 +39,7 @@ Secret configuration values are encrypted on pulumi.com, and are safe to check i
 
 The easiest way to achieve a Pulumi-based CD flow is to simply integrate it into your existing CI process.
 
-After running your usual CI processes upon merging a commit into a release branch, you can proceed to a Pulumi deployment.  This usually entails running `pulumi update --yes`. After the deployment completes, you may want to perform additional post-deployment verification.
+After running your usual CI processes upon merging a commit into a release branch, you can proceed to a Pulumi deployment.  This usually entails running `pulumi up --yes`. After the deployment completes, you may want to perform additional post-deployment verification.
 
 There are many variants of this. For instance, Pulumi makes easy to stand up new developer stacks, so you can create a one-off stack for a branch via `pulumi stack init testing-<branch>`, stand it up from scratch (using the flow above), test it out, and finally tear it down using `pulumi destroy` and `pulumi stack rm`.
 

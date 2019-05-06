@@ -60,7 +60,7 @@ In Pulumi, you can group multiple resources in a [component](#components). A com
 
 Pulumi programs are authored in general purpose programming languages such as [JavaScript](javascript.html) or [Python](python.html). You can use any packages supported by the language's package manager, as well as [Pulumi packages](pkg/). 
 
-When `pulumi update` is run, your Pulumi program is run and the Pulumi CLI determines the desired state of application resources. A Pulumi program can reference artifacts that have already been published (such as S3 objects or pre-built Docker images) or it can define application resources itself so that everything is versioned together. For example, if your program uses `cloud.Service` with a `build` step, or defines a Lambda for an S3 trigger, you're defining application code that is implicitly deployed during the `pulumi update`.
+When `pulumi up` is run, your Pulumi program is run and the Pulumi CLI determines the desired state of application resources. A Pulumi program can reference artifacts that have already been published (such as S3 objects or pre-built Docker images) or it can define application resources itself so that everything is versioned together. For example, if your program uses `cloud.Service` with a `build` step, or defines a Lambda for an S3 trigger, you're defining application code that is implicitly deployed during the `pulumi up`.
 
 A Pulumi program is contained within a [project](project.html). In JavaScript, the `main` property of `package.json` defines the entry point for the Pulumi program. 
 
@@ -112,7 +112,7 @@ All resource constructors also accept an `options` argument which can provide th
 Provides a list of explicit resource dependencies to add to the resource. Every resource referenced either directly or indirectly by an `Output` that is passed in to the resource constructor will implicitly be included, so this additional information is only needed when the dependency is on something that is not already an input to the resource. The default is `[]`.
 
 ###### `protect`
-Marks a resource as protected. A protected resource cannot be deleted directly: first you must set `protect: false` and run `pulumi update`. Then, the resource can be deleted, either by removing the line of code or by running `pulumi destroy`.  The default is to inherit this value from the parent resource, and `false` for resources without a parent.
+Marks a resource as protected. A protected resource cannot be deleted directly: first you must set `protect: false` and run `pulumi up`. Then, the resource can be deleted, either by removing the line of code or by running `pulumi destroy`.  The default is to inherit this value from the parent resource, and `false` for resources without a parent.
 
 ###### `parent`
 A parent for the resource. See [Components](#components).  The default is to parent to the implicitly-created `Stack` resource that is a root resource for all Pulumi stacks.
@@ -461,7 +461,7 @@ ctx.Export("url", resource.Url())
 
 From the CLI, you can then use `pulumi stack output url` to get the value and incorporate into other scripts or tools. 
 
-The right-hand side of a stack export can be a regular JavaScript value, an [Output](#outputs), or a `Promise`. The actual value will be resolved at the end of `pulumi update`.
+The right-hand side of a stack export can be a regular JavaScript value, an [Output](#outputs), or a `Promise`. The actual value will be resolved at the end of `pulumi up`.
 
 Stack exports are JSON serialized, though quotes are removed when exporting just a string value. For example:
 

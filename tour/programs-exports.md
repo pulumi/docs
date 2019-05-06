@@ -62,7 +62,7 @@ func main() {
 }
 ```
 
-After deploying this program with `pulumi update`, the exports will be printed, including any diffs.
+After deploying this program with `pulumi up`, the exports will be printed, including any diffs.
 
 And the `pulumi stack output` command may be used to retrieve all of them:
 
