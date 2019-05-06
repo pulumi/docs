@@ -7,15 +7,17 @@ PACKAGES=(
   "pulumi"
   "pulumi_aws"
   "pulumi_azure"
+  "pulumi_azuread"
   "pulumi_cloudflare"
+  "pulumi_f5bigip"
   "pulumi_gcp"
+  "pulumi_kubernetes"
+	"pulumi_linode"
+	"pulumi_newrelic"
+  "pulumi_openstack"
+  "pulumi_packet"
   "pulumi_random"
   "pulumi_vsphere"
-  "pulumi_openstack"
-  "pulumi_f5bigip"
-  "pulumi_packet"
-  "pulumi_kubernetes"
-  "pulumi_azuread"
 )
 
 run_pydocgen() {

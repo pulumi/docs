@@ -5,12 +5,9 @@
 <em class="property">class </em><code class="descclassname">pulumi_gcp.accesscontextmanager.</code><code class="descname">AccessLevel</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>basic=None</em>, <em>description=None</em>, <em>name=None</em>, <em>parent=None</em>, <em>title=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.accesscontextmanager.AccessLevel" title="Permalink to this definition">¶</a></dt>
 <dd><p>An AccessLevel is a label that can be applied to requests to GCP services,
 along with a list of requirements necessary for the label to be applied.</p>
-<blockquote>
-<div><strong>Warning:</strong> This resource is in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta resources.</div></blockquote>
 <p>To get more information about AccessLevel, see:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://cloud.google.com/access-context-manager/docs/reference/rest/v1beta/accessPolicies.accessLevels">API documentation</a></li>
+<li><a class="reference external" href="https://cloud.google.com/access-context-manager/docs/reference/rest/v1/accessPolicies.accessLevels">API documentation</a></li>
 <li>How-to Guides<ul>
 <li><a class="reference external" href="https://cloud.google.com/access-context-manager/docs/quickstart">Access Policy Quickstart</a></li>
 </ul>
@@ -76,12 +73,9 @@ attributes to use GCP services) and ServicePerimeters (which define
 regions of services able to freely pass data within a perimeter). An
 access policy is globally visible within an organization, and the
 restrictions it specifies apply to all projects within an organization.</p>
-<blockquote>
-<div><strong>Warning:</strong> This resource is in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta resources.</div></blockquote>
 <p>To get more information about AccessPolicy, see:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://cloud.google.com/access-context-manager/docs/reference/rest/v1beta/accessPolicies">API documentation</a></li>
+<li><a class="reference external" href="https://cloud.google.com/access-context-manager/docs/reference/rest/v1/accessPolicies">API documentation</a></li>
 <li>How-to Guides<ul>
 <li><a class="reference external" href="https://cloud.google.com/access-context-manager/docs/quickstart">Access Policy Quickstart</a></li>
 </ul>
@@ -153,14 +147,11 @@ GCP project can only belong to a single regular Service Perimeter. Service
 Perimeter Bridges can contain only GCP projects as members, a single GCP
 project may belong to multiple Service Perimeter Bridges.</li>
 </ul>
-<blockquote>
-<div><strong>Warning:</strong> This resource is in beta, and should be used with the terraform-provider-google-beta provider.
-See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta resources.</div></blockquote>
 <p>To get more information about ServicePerimeter, see:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://cloud.google.com/access-context-manager/docs/reference/rest/v1beta/accessPolicies.servicePerimeters">API documentation</a></li>
+<li><a class="reference external" href="https://cloud.google.com/access-context-manager/docs/reference/rest/v1/accessPolicies.servicePerimeters">API documentation</a></li>
 <li>How-to Guides<ul>
-<li><a class="reference external" href="https://cloud.google.com/access-context-manager/docs/quickstart">Access Policy Quickstart</a></li>
+<li><a class="reference external" href="https://cloud.google.com/vpc-service-controls/docs/quickstart">Service Perimeter Quickstart</a></li>
 </ul>
 </li>
 </ul>

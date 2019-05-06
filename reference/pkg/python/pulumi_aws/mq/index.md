@@ -31,7 +31,7 @@ are applied immediately, or during the next maintenance window. Default is <code
 <li><strong>configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration of the broker. See below.</li>
 <li><strong>deployment_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The deployment mode of the broker. Supported: <code class="docutils literal notranslate"><span class="pre">SINGLE_INSTANCE</span></code> and <code class="docutils literal notranslate"><span class="pre">ACTIVE_STANDBY_MULTI_AZ</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">SINGLE_INSTANCE</span></code>.</li>
 <li><strong>engine_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of broker engine. Currently, Amazon MQ supports only <code class="docutils literal notranslate"><span class="pre">ActiveMQ</span></code>.</li>
-<li><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of the broker engine. Currently, Amazon MQ supports only <code class="docutils literal notranslate"><span class="pre">5.15.0</span></code> or <code class="docutils literal notranslate"><span class="pre">5.15.6</span></code>.</li>
+<li><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of the broker engine. Currently, See the <a class="reference external" href="https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html">AmazonMQ Broker Engine docs</a> for supported versions.</li>
 <li><strong>host_instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The broker’s instance type. e.g. <code class="docutils literal notranslate"><span class="pre">mq.t2.micro</span></code> or <code class="docutils literal notranslate"><span class="pre">mq.m4.large</span></code></li>
 <li><strong>logs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Logging configuration of the broker. See below.</li>
 <li><strong>maintenance_window_start_time</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Maintenance window start time. See below.</li>
@@ -91,7 +91,7 @@ are applied immediately, or during the next maintenance window. Default is <code
 <dl class="attribute">
 <dt id="pulumi_aws.mq.Broker.engine_version">
 <code class="descname">engine_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.engine_version" title="Permalink to this definition">¶</a></dt>
-<dd><p>The version of the broker engine. Currently, Amazon MQ supports only <code class="docutils literal notranslate"><span class="pre">5.15.0</span></code> or <code class="docutils literal notranslate"><span class="pre">5.15.6</span></code>.</p>
+<dd><p>The version of the broker engine. Currently, See the <a class="reference external" href="https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html">AmazonMQ Broker Engine docs</a> for supported versions.</p>
 </dd></dl>
 
 <dl class="attribute">

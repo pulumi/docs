@@ -854,7 +854,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="descname">ignore_public_acls</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.BucketPublicAccessBlock.ignore_public_acls" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether Amazon S3 should ignore public ACLs for this bucket. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Enabling this setting does not affect the persistence of any existing ACLs and doesn’t prevent new public ACLs from being set. When set to <code class="docutils literal notranslate"><span class="pre">true</span></code> causes Amazon S3 to:</p>
 <ul class="simple">
-<li>Ignore all public ACLs on buckets in this account and any objects that they contain.</li>
+<li>Ignore public ACLs on this bucket and any objects that it contains.</li>
 </ul>
 </dd></dl>
 

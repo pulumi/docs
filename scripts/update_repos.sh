@@ -16,6 +16,8 @@ TOOLS_REPOS=(
     "pulumi-f5bigip"
     "pulumi-gcp"
     "pulumi-kubernetes"
+    "pulumi-linode"
+    "pulumi-newrelic"
     "pulumi-openstack"
     "pulumi-packet"
     "pulumi-random"

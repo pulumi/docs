@@ -459,7 +459,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.rds.ClusterInstance">
 <em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">ClusterInstance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>apply_immediately=None</em>, <em>auto_minor_version_upgrade=None</em>, <em>availability_zone=None</em>, <em>cluster_identifier=None</em>, <em>copy_tags_to_snapshot=None</em>, <em>db_parameter_group_name=None</em>, <em>db_subnet_group_name=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>identifier=None</em>, <em>identifier_prefix=None</em>, <em>instance_class=None</em>, <em>monitoring_interval=None</em>, <em>monitoring_role_arn=None</em>, <em>performance_insights_enabled=None</em>, <em>performance_insights_kms_key_id=None</em>, <em>preferred_backup_window=None</em>, <em>preferred_maintenance_window=None</em>, <em>promotion_tier=None</em>, <em>publicly_accessible=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.ClusterInstance" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides an RDS Cluster Resource Instance. A Cluster Instance Resource defines
+<dd><p>Provides an RDS Cluster Instance Resource. A Cluster Instance Resource defines
 attributes that are specific to a single instance in a [RDS Cluster][3],
 specifically running Amazon Aurora.</p>
 <p>Unlike other RDS resources that support replication, with Amazon Aurora you do
@@ -495,18 +495,7 @@ in the Amazon RDS User Guide.</p>
 <li><strong>identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The indentifier for the RDS instance, if omitted, Terraform will assign a random, unique identifier.</li>
 <li><strong>identifier_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique identifier beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">identifier</span></code>.</li>
 <li><strong>instance_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The instance class to use. For details on CPU
-and memory, see [Scaling Aurora DB Instances][4]. Aurora currently
-supports the below instance classes. Please see [AWS Documentation][7] for complete details.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+and memory, see [Scaling Aurora DB Instances][4]. Aurora uses <code class="docutils literal notranslate"><span class="pre">db.*</span></code> instance classes/types. Please see [AWS Documentation][7] for currently available instance classes and complete details.</li>
 <li><strong>monitoring_interval</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid Values: 0, 1, 5, 10, 15, 30, 60.</li>
 <li><strong>monitoring_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The ARN for the IAM role that permits RDS to send
 enhanced monitoring metrics to CloudWatch Logs. You can find more information on the <a class="reference external" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.html">AWS Documentation</a>
@@ -620,23 +609,7 @@ in the Amazon RDS User Guide.</p>
 <dt id="pulumi_aws.rds.ClusterInstance.instance_class">
 <code class="descname">instance_class</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.ClusterInstance.instance_class" title="Permalink to this definition">¶</a></dt>
 <dd><p>The instance class to use. For details on CPU
-and memory, see [Scaling Aurora DB Instances][4]. Aurora currently
-supports the below instance classes. Please see [AWS Documentation][7] for complete details.</p>
-<ul class="simple">
-<li>db.t2.small</li>
-<li>db.t2.medium</li>
-<li>db.r3.large</li>
-<li>db.r3.xlarge</li>
-<li>db.r3.2xlarge</li>
-<li>db.r3.4xlarge</li>
-<li>db.r3.8xlarge</li>
-<li>db.r4.large</li>
-<li>db.r4.xlarge</li>
-<li>db.r4.2xlarge</li>
-<li>db.r4.4xlarge</li>
-<li>db.r4.8xlarge</li>
-<li>db.r4.16xlarge</li>
-</ul>
+and memory, see [Scaling Aurora DB Instances][4]. Aurora uses <code class="docutils literal notranslate"><span class="pre">db.*</span></code> instance classes/types. Please see [AWS Documentation][7] for currently available instance classes and complete details.</p>
 </dd></dl>
 
 <dl class="attribute">
