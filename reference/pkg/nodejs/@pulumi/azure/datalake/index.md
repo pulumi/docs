@@ -33,14 +33,14 @@ title: Module datalake
 * <a href="#StoreFirewallRuleState">interface StoreFirewallRuleState</a>
 * <a href="#StoreState">interface StoreState</a>
 
-<a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsAccount.ts">datalake/analyticsAccount.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsFirewallRule.ts">datalake/analyticsFirewallRule.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/getStore.ts">datalake/getStore.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts">datalake/store.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFile.ts">datalake/storeFile.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFirewallRule.ts">datalake/storeFirewallRule.ts</a> 
+<a href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsAccount.ts">datalake/analyticsAccount.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsFirewallRule.ts">datalake/analyticsFirewallRule.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/getStore.ts">datalake/getStore.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts">datalake/store.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFile.ts">datalake/storeFile.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFirewallRule.ts">datalake/storeFirewallRule.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="AnalyticsAccount">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsAccount.ts#L33">class <b>AnalyticsAccount</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsAccount.ts#L33">class <b>AnalyticsAccount</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -71,7 +71,7 @@ const exampleAnalyticsAccount = new azure.datalake.AnalyticsAccount("example", {
 ```
 
 <h3 class="pdoc-member-header" id="AnalyticsAccount-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsAccount.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsAccount.ts#L69"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -86,7 +86,7 @@ Create a AnalyticsAccount resource with the given unique name, arguments, and op
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsAccount-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsAccount.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsAccount.ts#L42">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -98,7 +98,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsAccount-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -106,7 +106,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsAccount-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -118,7 +118,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsAccount-defaultStoreAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsAccount.ts#L49">property <b>defaultStoreAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsAccount.ts#L49">property <b>defaultStoreAccountName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>defaultStoreAccountName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -127,7 +127,7 @@ Specifies the data lake store to use by default. Changing this forces a new reso
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsAccount-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -137,7 +137,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsAccount-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsAccount.ts#L53">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsAccount.ts#L53">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -146,7 +146,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsAccount-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsAccount.ts#L57">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsAccount.ts#L57">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -155,7 +155,7 @@ Specifies the name of the Data Lake Analytics Account. Changing this forces a ne
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsAccount-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsAccount.ts#L61">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsAccount.ts#L61">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -164,7 +164,7 @@ The name of the resource group in which to create the Data Lake Analytics Accoun
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsAccount-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsAccount.ts#L65">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsAccount.ts#L65">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -173,7 +173,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsAccount-tier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsAccount.ts#L69">property <b>tier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsAccount.ts#L69">property <b>tier</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tier: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -182,7 +182,7 @@ The monthly commitment tier for Data Lake Analytics Account. Accepted values are
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsAccount-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -193,7 +193,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AnalyticsFirewallRule">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsFirewallRule.ts#L40">class <b>AnalyticsFirewallRule</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsFirewallRule.ts#L40">class <b>AnalyticsFirewallRule</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -231,7 +231,7 @@ const exampleAnalyticsFirewallRule = new azure.datalake.AnalyticsFirewallRule("e
 ```
 
 <h3 class="pdoc-member-header" id="AnalyticsFirewallRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsFirewallRule.ts#L72"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsFirewallRule.ts#L72"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -246,7 +246,7 @@ Create a AnalyticsFirewallRule resource with the given unique name, arguments, a
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsFirewallRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsFirewallRule.ts#L49">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsFirewallRule.ts#L49">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -258,7 +258,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsFirewallRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -266,7 +266,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsFirewallRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -278,7 +278,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsFirewallRule-accountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsFirewallRule.ts#L56">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsFirewallRule.ts#L56">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>accountName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -287,7 +287,7 @@ Specifies the name of the Data Lake Analytics for which the Firewall Rule should
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsFirewallRule-endIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsFirewallRule.ts#L60">property <b>endIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsFirewallRule.ts#L60">property <b>endIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>endIpAddress: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -296,7 +296,7 @@ The End IP Address for the firewall rule.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsFirewallRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -306,7 +306,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsFirewallRule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsFirewallRule.ts#L64">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsFirewallRule.ts#L64">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -315,7 +315,7 @@ Specifies the name of the Data Lake Analytics. Changing this forces a new resour
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsFirewallRule-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsFirewallRule.ts#L68">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsFirewallRule.ts#L68">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -324,7 +324,7 @@ The name of the resource group in which to create the Data Lake Analytics.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsFirewallRule-startIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsFirewallRule.ts#L72">property <b>startIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsFirewallRule.ts#L72">property <b>startIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>startIpAddress: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -333,7 +333,7 @@ The Start IP address for the firewall rule.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsFirewallRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -344,7 +344,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Store">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L29">class <b>Store</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L29">class <b>Store</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -371,7 +371,7 @@ const exampleStore = new azure.datalake.Store("example", {
 ```
 
 <h3 class="pdoc-member-header" id="Store-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L81"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L81"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -386,7 +386,7 @@ Create a Store resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="Store-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L38">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L38">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -398,7 +398,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Store-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -406,7 +406,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Store-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -418,7 +418,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="Store-encryptionState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L45">property <b>encryptionState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L45">property <b>encryptionState</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>encryptionState: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -427,7 +427,7 @@ Is Encryption enabled on this Data Lake Store Account? Possible values are `Enab
 
 </div>
 <h3 class="pdoc-member-header" id="Store-encryptionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L49">property <b>encryptionType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L49">property <b>encryptionType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>encryptionType: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -436,7 +436,7 @@ The Encryption Type used for this Data Lake Store Account. Currently can be set 
 
 </div>
 <h3 class="pdoc-member-header" id="Store-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L53">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L53">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>endpoint: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -445,7 +445,7 @@ The Endpoint for the Data Lake Store.
 
 </div>
 <h3 class="pdoc-member-header" id="Store-firewallAllowAzureIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L57">property <b>firewallAllowAzureIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L57">property <b>firewallAllowAzureIps</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>firewallAllowAzureIps: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -454,7 +454,7 @@ are Azure Service IP's allowed through the firewall? Possible values are `Enable
 
 </div>
 <h3 class="pdoc-member-header" id="Store-firewallState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L61">property <b>firewallState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L61">property <b>firewallState</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>firewallState: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -463,7 +463,7 @@ the state of the Firewall. Possible values are `Enabled` and `Disabled`. Default
 
 </div>
 <h3 class="pdoc-member-header" id="Store-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -473,7 +473,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="Store-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L65">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L65">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -482,7 +482,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="Store-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L69">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L69">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -491,7 +491,7 @@ Specifies the name of the Data Lake Store. Changing this forces a new resource t
 
 </div>
 <h3 class="pdoc-member-header" id="Store-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L73">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L73">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -500,7 +500,7 @@ The name of the resource group in which to create the Data Lake Store.
 
 </div>
 <h3 class="pdoc-member-header" id="Store-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L77">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L77">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -509,7 +509,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="Store-tier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L81">property <b>tier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L81">property <b>tier</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tier: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -518,7 +518,7 @@ The monthly commitment tier for Data Lake Store. Accepted values are `Consumptio
 
 </div>
 <h3 class="pdoc-member-header" id="Store-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -529,7 +529,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="StoreFile">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFile.ts#L35">class <b>StoreFile</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFile.ts#L35">class <b>StoreFile</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -562,7 +562,7 @@ const exampleStoreFile = new azure.datalake.StoreFile("example", {
 ```
 
 <h3 class="pdoc-member-header" id="StoreFile-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFile.ts#L59"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFile.ts#L59"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -577,7 +577,7 @@ Create a StoreFile resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="StoreFile-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFile.ts#L44">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFile.ts#L44">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -589,7 +589,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="StoreFile-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -597,7 +597,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="StoreFile-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -609,7 +609,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="StoreFile-accountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFile.ts#L51">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFile.ts#L51">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>accountName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -618,7 +618,7 @@ Specifies the name of the Data Lake Store for which the File should created.
 
 </div>
 <h3 class="pdoc-member-header" id="StoreFile-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -628,7 +628,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="StoreFile-localFilePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFile.ts#L55">property <b>localFilePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFile.ts#L55">property <b>localFilePath</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>localFilePath: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -637,7 +637,7 @@ The path to the local file to be added to the Data Lake Store.
 
 </div>
 <h3 class="pdoc-member-header" id="StoreFile-remoteFilePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFile.ts#L59">property <b>remoteFilePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFile.ts#L59">property <b>remoteFilePath</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>remoteFilePath: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -646,7 +646,7 @@ The path created for the file on the Data Lake Store.
 
 </div>
 <h3 class="pdoc-member-header" id="StoreFile-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -657,7 +657,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="StoreFirewallRule">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFirewallRule.ts#L34">class <b>StoreFirewallRule</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFirewallRule.ts#L34">class <b>StoreFirewallRule</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -689,7 +689,7 @@ const exampleStoreFirewallRule = new azure.datalake.StoreFirewallRule("example",
 ```
 
 <h3 class="pdoc-member-header" id="StoreFirewallRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFirewallRule.ts#L66"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFirewallRule.ts#L66"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -704,7 +704,7 @@ Create a StoreFirewallRule resource with the given unique name, arguments, and o
 
 </div>
 <h3 class="pdoc-member-header" id="StoreFirewallRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFirewallRule.ts#L43">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFirewallRule.ts#L43">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -716,7 +716,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="StoreFirewallRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -724,7 +724,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="StoreFirewallRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -736,7 +736,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="StoreFirewallRule-accountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFirewallRule.ts#L50">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFirewallRule.ts#L50">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>accountName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -745,7 +745,7 @@ Specifies the name of the Data Lake Store for which the Firewall Rule should tak
 
 </div>
 <h3 class="pdoc-member-header" id="StoreFirewallRule-endIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFirewallRule.ts#L54">property <b>endIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFirewallRule.ts#L54">property <b>endIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>endIpAddress: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -754,7 +754,7 @@ The End IP Address for the firewall rule.
 
 </div>
 <h3 class="pdoc-member-header" id="StoreFirewallRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -764,7 +764,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="StoreFirewallRule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFirewallRule.ts#L58">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFirewallRule.ts#L58">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -773,7 +773,7 @@ Specifies the name of the Data Lake Store. Changing this forces a new resource t
 
 </div>
 <h3 class="pdoc-member-header" id="StoreFirewallRule-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFirewallRule.ts#L62">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFirewallRule.ts#L62">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -782,7 +782,7 @@ The name of the resource group in which to create the Data Lake Store.
 
 </div>
 <h3 class="pdoc-member-header" id="StoreFirewallRule-startIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFirewallRule.ts#L66">property <b>startIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFirewallRule.ts#L66">property <b>startIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>startIpAddress: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -791,7 +791,7 @@ The Start IP address for the firewall rule.
 
 </div>
 <h3 class="pdoc-member-header" id="StoreFirewallRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -802,7 +802,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getStore">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/getStore.ts#L24">function <b>getStore</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/getStore.ts#L24">function <b>getStore</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -827,14 +827,14 @@ export const dataLakeStoreId = test.apply(test => test.id);
 
 </div>
 <h2 class="pdoc-module-header" id="AnalyticsAccountArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsAccount.ts#L144">interface <b>AnalyticsAccountArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsAccount.ts#L141">interface <b>AnalyticsAccountArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a AnalyticsAccount resource.
 
 <h3 class="pdoc-member-header" id="AnalyticsAccountArgs-defaultStoreAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsAccount.ts#L148">property <b>defaultStoreAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsAccount.ts#L145">property <b>defaultStoreAccountName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>defaultStoreAccountName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -843,16 +843,16 @@ Specifies the data lake store to use by default. Changing this forces a new reso
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsAccountArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsAccount.ts#L152">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsAccount.ts#L149">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsAccountArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsAccount.ts#L156">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsAccount.ts#L153">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -861,7 +861,7 @@ Specifies the name of the Data Lake Analytics Account. Changing this forces a ne
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsAccountArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsAccount.ts#L160">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsAccount.ts#L157">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -870,7 +870,7 @@ The name of the resource group in which to create the Data Lake Analytics Accoun
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsAccountArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsAccount.ts#L164">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsAccount.ts#L161">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -879,7 +879,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsAccountArgs-tier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsAccount.ts#L168">property <b>tier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsAccount.ts#L165">property <b>tier</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tier?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -889,14 +889,14 @@ The monthly commitment tier for Data Lake Analytics Account. Accepted values are
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AnalyticsAccountState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsAccount.ts#L114">interface <b>AnalyticsAccountState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsAccount.ts#L111">interface <b>AnalyticsAccountState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering AnalyticsAccount resources.
 
 <h3 class="pdoc-member-header" id="AnalyticsAccountState-defaultStoreAccountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsAccount.ts#L118">property <b>defaultStoreAccountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsAccount.ts#L115">property <b>defaultStoreAccountName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>defaultStoreAccountName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -905,7 +905,7 @@ Specifies the data lake store to use by default. Changing this forces a new reso
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsAccountState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsAccount.ts#L122">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsAccount.ts#L119">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -914,7 +914,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsAccountState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsAccount.ts#L126">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsAccount.ts#L123">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -923,7 +923,7 @@ Specifies the name of the Data Lake Analytics Account. Changing this forces a ne
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsAccountState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsAccount.ts#L130">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsAccount.ts#L127">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -932,7 +932,7 @@ The name of the resource group in which to create the Data Lake Analytics Accoun
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsAccountState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsAccount.ts#L134">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsAccount.ts#L131">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -941,7 +941,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsAccountState-tier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsAccount.ts#L138">property <b>tier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsAccount.ts#L135">property <b>tier</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tier?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -951,14 +951,14 @@ The monthly commitment tier for Data Lake Analytics Account. Accepted values are
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AnalyticsFirewallRuleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsFirewallRule.ts#L144">interface <b>AnalyticsFirewallRuleArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsFirewallRule.ts#L144">interface <b>AnalyticsFirewallRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a AnalyticsFirewallRule resource.
 
 <h3 class="pdoc-member-header" id="AnalyticsFirewallRuleArgs-accountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsFirewallRule.ts#L148">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsFirewallRule.ts#L148">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>accountName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -967,7 +967,7 @@ Specifies the name of the Data Lake Analytics for which the Firewall Rule should
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsFirewallRuleArgs-endIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsFirewallRule.ts#L152">property <b>endIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsFirewallRule.ts#L152">property <b>endIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>endIpAddress: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -976,7 +976,7 @@ The End IP Address for the firewall rule.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsFirewallRuleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsFirewallRule.ts#L156">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsFirewallRule.ts#L156">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -985,7 +985,7 @@ Specifies the name of the Data Lake Analytics. Changing this forces a new resour
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsFirewallRuleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsFirewallRule.ts#L160">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsFirewallRule.ts#L160">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -994,7 +994,7 @@ The name of the resource group in which to create the Data Lake Analytics.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsFirewallRuleArgs-startIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsFirewallRule.ts#L164">property <b>startIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsFirewallRule.ts#L164">property <b>startIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>startIpAddress: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1004,14 +1004,14 @@ The Start IP address for the firewall rule.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AnalyticsFirewallRuleState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsFirewallRule.ts#L118">interface <b>AnalyticsFirewallRuleState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsFirewallRule.ts#L118">interface <b>AnalyticsFirewallRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering AnalyticsFirewallRule resources.
 
 <h3 class="pdoc-member-header" id="AnalyticsFirewallRuleState-accountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsFirewallRule.ts#L122">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsFirewallRule.ts#L122">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>accountName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1020,7 +1020,7 @@ Specifies the name of the Data Lake Analytics for which the Firewall Rule should
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsFirewallRuleState-endIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsFirewallRule.ts#L126">property <b>endIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsFirewallRule.ts#L126">property <b>endIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>endIpAddress?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1029,7 +1029,7 @@ The End IP Address for the firewall rule.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsFirewallRuleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsFirewallRule.ts#L130">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsFirewallRule.ts#L130">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1038,7 +1038,7 @@ Specifies the name of the Data Lake Analytics. Changing this forces a new resour
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsFirewallRuleState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsFirewallRule.ts#L134">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsFirewallRule.ts#L134">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1047,7 +1047,7 @@ The name of the resource group in which to create the Data Lake Analytics.
 
 </div>
 <h3 class="pdoc-member-header" id="AnalyticsFirewallRuleState-startIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/analyticsFirewallRule.ts#L138">property <b>startIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/analyticsFirewallRule.ts#L138">property <b>startIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>startIpAddress?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1057,14 +1057,14 @@ The Start IP address for the firewall rule.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetStoreArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/getStore.ts#L34">interface <b>GetStoreArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/getStore.ts#L34">interface <b>GetStoreArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of arguments for invoking getStore.
 
 <h3 class="pdoc-member-header" id="GetStoreArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/getStore.ts#L38">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/getStore.ts#L38">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1073,7 +1073,7 @@ The name of the Data Lake Store.
 
 </div>
 <h3 class="pdoc-member-header" id="GetStoreArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/getStore.ts#L42">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/getStore.ts#L42">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1083,14 +1083,14 @@ The Name of the Resource Group where the Data Lake Store exists.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetStoreResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/getStore.ts#L48">interface <b>GetStoreResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/getStore.ts#L48">interface <b>GetStoreResult</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of values returned by getStore.
 
 <h3 class="pdoc-member-header" id="GetStoreResult-encryptionState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/getStore.ts#L52">property <b>encryptionState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/getStore.ts#L52">property <b>encryptionState</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>encryptionState: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1099,7 +1099,7 @@ the Encryption State of this Data Lake Store Account, such as `Enabled` or `Disa
 
 </div>
 <h3 class="pdoc-member-header" id="GetStoreResult-encryptionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/getStore.ts#L56">property <b>encryptionType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/getStore.ts#L56">property <b>encryptionType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>encryptionType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1108,7 +1108,7 @@ the Encryption Type used for this Data Lake Store Account.
 
 </div>
 <h3 class="pdoc-member-header" id="GetStoreResult-firewallAllowAzureIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/getStore.ts#L60">property <b>firewallAllowAzureIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/getStore.ts#L60">property <b>firewallAllowAzureIps</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>firewallAllowAzureIps: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1117,7 +1117,7 @@ are Azure Service IP's allowed through the firewall?
 
 </div>
 <h3 class="pdoc-member-header" id="GetStoreResult-firewallState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/getStore.ts#L64">property <b>firewallState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/getStore.ts#L64">property <b>firewallState</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>firewallState: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1126,7 +1126,7 @@ the state of the firewall, such as `Enabled` or `Disabled`.
 
 </div>
 <h3 class="pdoc-member-header" id="GetStoreResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/getStore.ts#L79">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/getStore.ts#L79">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1135,25 +1135,25 @@ id is the provider-assigned unique ID for this managed resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetStoreResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/getStore.ts#L65">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/getStore.ts#L65">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetStoreResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/getStore.ts#L66">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/getStore.ts#L66">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetStoreResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/getStore.ts#L67">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/getStore.ts#L67">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetStoreResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/getStore.ts#L71">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/getStore.ts#L71">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -1162,7 +1162,7 @@ A mapping of tags to assign to the Data Lake Store.
 
 </div>
 <h3 class="pdoc-member-header" id="GetStoreResult-tier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/getStore.ts#L75">property <b>tier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/getStore.ts#L75">property <b>tier</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tier: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1172,14 +1172,14 @@ Current monthly commitment tier for the account.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="StoreArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L177">interface <b>StoreArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L174">interface <b>StoreArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a Store resource.
 
 <h3 class="pdoc-member-header" id="StoreArgs-encryptionState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L181">property <b>encryptionState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L178">property <b>encryptionState</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>encryptionState?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1188,7 +1188,7 @@ Is Encryption enabled on this Data Lake Store Account? Possible values are `Enab
 
 </div>
 <h3 class="pdoc-member-header" id="StoreArgs-encryptionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L185">property <b>encryptionType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L182">property <b>encryptionType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>encryptionType?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1197,7 +1197,7 @@ The Encryption Type used for this Data Lake Store Account. Currently can be set 
 
 </div>
 <h3 class="pdoc-member-header" id="StoreArgs-firewallAllowAzureIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L189">property <b>firewallAllowAzureIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L186">property <b>firewallAllowAzureIps</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>firewallAllowAzureIps?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1206,7 +1206,7 @@ are Azure Service IP's allowed through the firewall? Possible values are `Enable
 
 </div>
 <h3 class="pdoc-member-header" id="StoreArgs-firewallState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L193">property <b>firewallState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L190">property <b>firewallState</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>firewallState?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1215,16 +1215,16 @@ the state of the Firewall. Possible values are `Enabled` and `Disabled`. Default
 
 </div>
 <h3 class="pdoc-member-header" id="StoreArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L197">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L194">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="StoreArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L201">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L198">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1233,7 +1233,7 @@ Specifies the name of the Data Lake Store. Changing this forces a new resource t
 
 </div>
 <h3 class="pdoc-member-header" id="StoreArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L205">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L202">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1242,7 +1242,7 @@ The name of the resource group in which to create the Data Lake Store.
 
 </div>
 <h3 class="pdoc-member-header" id="StoreArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L209">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L206">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1251,7 +1251,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="StoreArgs-tier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L213">property <b>tier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L210">property <b>tier</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tier?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1261,14 +1261,14 @@ The monthly commitment tier for Data Lake Store. Accepted values are `Consumptio
 </div>
 </div>
 <h2 class="pdoc-module-header" id="StoreFileArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFile.ts#L116">interface <b>StoreFileArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFile.ts#L116">interface <b>StoreFileArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a StoreFile resource.
 
 <h3 class="pdoc-member-header" id="StoreFileArgs-accountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFile.ts#L120">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFile.ts#L120">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>accountName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1277,7 +1277,7 @@ Specifies the name of the Data Lake Store for which the File should created.
 
 </div>
 <h3 class="pdoc-member-header" id="StoreFileArgs-localFilePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFile.ts#L124">property <b>localFilePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFile.ts#L124">property <b>localFilePath</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>localFilePath: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1286,7 +1286,7 @@ The path to the local file to be added to the Data Lake Store.
 
 </div>
 <h3 class="pdoc-member-header" id="StoreFileArgs-remoteFilePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFile.ts#L128">property <b>remoteFilePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFile.ts#L128">property <b>remoteFilePath</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>remoteFilePath: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1296,14 +1296,14 @@ The path created for the file on the Data Lake Store.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="StoreFileState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFile.ts#L98">interface <b>StoreFileState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFile.ts#L98">interface <b>StoreFileState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering StoreFile resources.
 
 <h3 class="pdoc-member-header" id="StoreFileState-accountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFile.ts#L102">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFile.ts#L102">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>accountName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1312,7 +1312,7 @@ Specifies the name of the Data Lake Store for which the File should created.
 
 </div>
 <h3 class="pdoc-member-header" id="StoreFileState-localFilePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFile.ts#L106">property <b>localFilePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFile.ts#L106">property <b>localFilePath</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>localFilePath?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1321,7 +1321,7 @@ The path to the local file to be added to the Data Lake Store.
 
 </div>
 <h3 class="pdoc-member-header" id="StoreFileState-remoteFilePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFile.ts#L110">property <b>remoteFilePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFile.ts#L110">property <b>remoteFilePath</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>remoteFilePath?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1331,14 +1331,14 @@ The path created for the file on the Data Lake Store.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="StoreFirewallRuleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFirewallRule.ts#L138">interface <b>StoreFirewallRuleArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFirewallRule.ts#L138">interface <b>StoreFirewallRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a StoreFirewallRule resource.
 
 <h3 class="pdoc-member-header" id="StoreFirewallRuleArgs-accountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFirewallRule.ts#L142">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFirewallRule.ts#L142">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>accountName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1347,7 +1347,7 @@ Specifies the name of the Data Lake Store for which the Firewall Rule should tak
 
 </div>
 <h3 class="pdoc-member-header" id="StoreFirewallRuleArgs-endIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFirewallRule.ts#L146">property <b>endIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFirewallRule.ts#L146">property <b>endIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>endIpAddress: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1356,7 +1356,7 @@ The End IP Address for the firewall rule.
 
 </div>
 <h3 class="pdoc-member-header" id="StoreFirewallRuleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFirewallRule.ts#L150">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFirewallRule.ts#L150">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1365,7 +1365,7 @@ Specifies the name of the Data Lake Store. Changing this forces a new resource t
 
 </div>
 <h3 class="pdoc-member-header" id="StoreFirewallRuleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFirewallRule.ts#L154">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFirewallRule.ts#L154">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1374,7 +1374,7 @@ The name of the resource group in which to create the Data Lake Store.
 
 </div>
 <h3 class="pdoc-member-header" id="StoreFirewallRuleArgs-startIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFirewallRule.ts#L158">property <b>startIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFirewallRule.ts#L158">property <b>startIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>startIpAddress: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1384,14 +1384,14 @@ The Start IP address for the firewall rule.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="StoreFirewallRuleState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFirewallRule.ts#L112">interface <b>StoreFirewallRuleState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFirewallRule.ts#L112">interface <b>StoreFirewallRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering StoreFirewallRule resources.
 
 <h3 class="pdoc-member-header" id="StoreFirewallRuleState-accountName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFirewallRule.ts#L116">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFirewallRule.ts#L116">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>accountName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1400,7 +1400,7 @@ Specifies the name of the Data Lake Store for which the Firewall Rule should tak
 
 </div>
 <h3 class="pdoc-member-header" id="StoreFirewallRuleState-endIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFirewallRule.ts#L120">property <b>endIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFirewallRule.ts#L120">property <b>endIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>endIpAddress?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1409,7 +1409,7 @@ The End IP Address for the firewall rule.
 
 </div>
 <h3 class="pdoc-member-header" id="StoreFirewallRuleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFirewallRule.ts#L124">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFirewallRule.ts#L124">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1418,7 +1418,7 @@ Specifies the name of the Data Lake Store. Changing this forces a new resource t
 
 </div>
 <h3 class="pdoc-member-header" id="StoreFirewallRuleState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFirewallRule.ts#L128">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFirewallRule.ts#L128">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1427,7 +1427,7 @@ The name of the resource group in which to create the Data Lake Store.
 
 </div>
 <h3 class="pdoc-member-header" id="StoreFirewallRuleState-startIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/storeFirewallRule.ts#L132">property <b>startIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/storeFirewallRule.ts#L132">property <b>startIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>startIpAddress?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1437,14 +1437,14 @@ The Start IP address for the firewall rule.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="StoreState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L131">interface <b>StoreState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L128">interface <b>StoreState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering Store resources.
 
 <h3 class="pdoc-member-header" id="StoreState-encryptionState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L135">property <b>encryptionState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L132">property <b>encryptionState</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>encryptionState?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1453,7 +1453,7 @@ Is Encryption enabled on this Data Lake Store Account? Possible values are `Enab
 
 </div>
 <h3 class="pdoc-member-header" id="StoreState-encryptionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L139">property <b>encryptionType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L136">property <b>encryptionType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>encryptionType?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1462,7 +1462,7 @@ The Encryption Type used for this Data Lake Store Account. Currently can be set 
 
 </div>
 <h3 class="pdoc-member-header" id="StoreState-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L143">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L140">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>endpoint?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1471,7 +1471,7 @@ The Endpoint for the Data Lake Store.
 
 </div>
 <h3 class="pdoc-member-header" id="StoreState-firewallAllowAzureIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L147">property <b>firewallAllowAzureIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L144">property <b>firewallAllowAzureIps</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>firewallAllowAzureIps?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1480,7 +1480,7 @@ are Azure Service IP's allowed through the firewall? Possible values are `Enable
 
 </div>
 <h3 class="pdoc-member-header" id="StoreState-firewallState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L151">property <b>firewallState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L148">property <b>firewallState</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>firewallState?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1489,7 +1489,7 @@ the state of the Firewall. Possible values are `Enabled` and `Disabled`. Default
 
 </div>
 <h3 class="pdoc-member-header" id="StoreState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L155">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L152">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1498,7 +1498,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="StoreState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L159">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L156">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1507,7 +1507,7 @@ Specifies the name of the Data Lake Store. Changing this forces a new resource t
 
 </div>
 <h3 class="pdoc-member-header" id="StoreState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L163">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L160">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1516,7 +1516,7 @@ The name of the resource group in which to create the Data Lake Store.
 
 </div>
 <h3 class="pdoc-member-header" id="StoreState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L167">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L164">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1525,7 +1525,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="StoreState-tier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/33be347f8eaeea8b472b3347d9d7f334b07275a4/sdk/nodejs/datalake/store.ts#L171">property <b>tier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/datalake/store.ts#L168">property <b>tier</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tier?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

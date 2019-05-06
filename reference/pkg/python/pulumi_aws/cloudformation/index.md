@@ -108,7 +108,7 @@
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>capabilities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of capabilities.
-Valid values: <code class="docutils literal notranslate"><span class="pre">CAPABILITY_IAM</span></code> or <code class="docutils literal notranslate"><span class="pre">CAPABILITY_NAMED_IAM</span></code></li>
+Valid values: <code class="docutils literal notranslate"><span class="pre">CAPABILITY_IAM</span></code>, <code class="docutils literal notranslate"><span class="pre">CAPABILITY_NAMED_IAM</span></code>, or <code class="docutils literal notranslate"><span class="pre">CAPABILITY_AUTO_EXPAND</span></code></li>
 <li><strong>disable_rollback</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to true to disable rollback of the stack if stack creation failed.
 Conflicts with <code class="docutils literal notranslate"><span class="pre">on_failure</span></code>.</li>
 <li><strong>iam_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of an IAM role that AWS CloudFormation assumes to create the stack. If you don’t specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.</li>
@@ -134,7 +134,7 @@ Conflicts w/ <code class="docutils literal notranslate"><span class="pre">policy
 <dt id="pulumi_aws.cloudformation.Stack.capabilities">
 <code class="descname">capabilities</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.capabilities" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of capabilities.
-Valid values: <code class="docutils literal notranslate"><span class="pre">CAPABILITY_IAM</span></code> or <code class="docutils literal notranslate"><span class="pre">CAPABILITY_NAMED_IAM</span></code></p>
+Valid values: <code class="docutils literal notranslate"><span class="pre">CAPABILITY_IAM</span></code>, <code class="docutils literal notranslate"><span class="pre">CAPABILITY_NAMED_IAM</span></code>, or <code class="docutils literal notranslate"><span class="pre">CAPABILITY_AUTO_EXPAND</span></code></p>
 </dd></dl>
 
 <dl class="attribute">

@@ -320,7 +320,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>access_logs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An Access Logs block. Access Logs documented below. Only valid for Load Balancers of type <code class="docutils literal notranslate"><span class="pre">application</span></code>.</li>
+<li><strong>access_logs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An Access Logs block. Access Logs documented below.</li>
 <li><strong>enable_cross_zone_load_balancing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, cross-zone load balancing of the load balancer will be enabled.
 This is a <code class="docutils literal notranslate"><span class="pre">network</span></code> load balancer feature. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>enable_deletion_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, deletion of the load balancer will be disabled via
@@ -348,7 +348,7 @@ for load balancers of type <code class="docutils literal notranslate"><span clas
 <dl class="attribute">
 <dt id="pulumi_aws.elasticloadbalancingv2.LoadBalancer.access_logs">
 <code class="descname">access_logs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancingv2.LoadBalancer.access_logs" title="Permalink to this definition">¶</a></dt>
-<dd><p>An Access Logs block. Access Logs documented below. Only valid for Load Balancers of type <code class="docutils literal notranslate"><span class="pre">application</span></code>.</p>
+<dd><p>An Access Logs block. Access Logs documented below.</p>
 </dd></dl>
 
 <dl class="attribute">
