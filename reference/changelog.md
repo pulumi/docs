@@ -24,12 +24,7 @@ redirect_from: /install/changelog.html
     </thead>
     <tbody>
         <tr>
-            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0179-released-april-30-2019">0.17.9</a></th>
-            <td>2019/04/30</td>
-            <td>{% include sdk-links.html version='0.17.9' %}</td>
-        </tr>
-        <tr>
-            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0178-released-april-23-2019">0.17.8</a></th>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0175-released-april-23-2019">0.17.8</a></th>
             <td>2019/04/23</td>
             <td>{% include sdk-links.html version='0.17.8' %}</td>
         </tr>
@@ -448,7 +443,7 @@ In addition to the above features, we've made a handfull of day to day improveme
 
 - Support `pulumi` in a projects in a Yarn workspaces. [pulumi/pulumi#1893](https://github.com/pulumi/pulumi/pull/1893)
 - Improve error message when there are errors decrypting secret configuration values. [pulumi/pulumi#1815](https://github.com/pulumi/pulumi/pull/1815)
-- Don't fail `pulumi up` when plugin discovery fails. [pulumi/pulumi#1745](https://github.com/pulumi/pulumi/pull/1745)
+- Don't fail `pulumi update` when plugin discovery fails. [pulumi/pulumi#1745](https://github.com/pulumi/pulumi/pull/1745)
 
 ### @pulumi/pulumi 0.15.2
 
@@ -752,7 +747,7 @@ There were no changes to the API surface area for `@pulumi/cloud`, but it shares
 
 #### Fixed
 
-- Associate docker output with individual resources so it is clearer what is going on (([pulumi/pulumi-cloud#526](https://github.com/pulumi/pulumi-azure/pull/526)). When doing a `pulumi up` or `pulumi preview` output for the docker build for a cloud.Service is now associated with the actual cloud.Service that is being updated, instead of just being in the general output stream in the CLI.
+- Associate docker output with individual resources so it is clearer what is going on (([pulumi/pulumi-cloud#526](https://github.com/pulumi/pulumi-azure/pull/526)). When doing a `pulumi update` or `pulumi preview` output for the docker build for a cloud.Service is now associated with the actual cloud.Service that is being updated, instead of just being in the general output stream in the CLI.
 
 ### @pulumi/gcp v0.14.3
 
@@ -833,7 +828,7 @@ In addition to the 0.14.1 CLI release, the following packages have been updated:
 
 -  Improve misleading `pulumi new` summary message ([pulumi/pulumi#1571](https://github.com/pulumi/pulumi/pull/1571)).
 
--  Fix printing out outputs in a pulumi program ([pulumi/pulumi#1531](https://github.com/pulumi/pulumi/pull/1531)). Pulumi now shows the values of output properties after a `pulumi up` instead of requiring you to run `pulumi stack output`.
+-  Fix printing out outputs in a pulumi program ([pulumi/pulumi#1531](https://github.com/pulumi/pulumi/pull/1531)). Pulumi now shows the values of output properties after a `pulumi update` instead of requiring you to run `pulumi stack output`.
 
 ### @pulumi/pulumi v0.14.1
 
@@ -938,7 +933,7 @@ Released on May 9, 2018
 
 -  Many enhancements to `pulumi new` ([pulumi/pulumi#1307](https://github.com/pulumi/pulumi/pull/1307)).  The command now interactively walks through creating everything needed to deploy a new stack, including selecting a template, providing a name, creating a stack, setting default configuration, and installing dependencies.
 
--  Several improvements to the `pulumi up` CLI experience ([pulumi/pulumi#1260](https://github.com/pulumi/pulumi/pull/1260)): a tree view display, more details from logs during deployments, and rendering of stack outputs at the end of updates.
+-  Several improvements to the `pulumi update` CLI experience ([pulumi/pulumi#1260](https://github.com/pulumi/pulumi/pull/1260)): a tree view display, more details from logs during deployments, and rendering of stack outputs at the end of updates.
 
 -  A new `@pulumi/aws-infra` package is available which contains useful AWS infrastructure components for `Network` and `Cluster` ([pulumi/pulumi-cloud#472](https://github.com/pulumi/pulumi-cloud/pull/472)).
 
@@ -946,12 +941,12 @@ Released on May 9, 2018
 
 -  (**Breaking**) Removed the `LogCollector` and `onError` handler from `@pulumi-cloud` ([pulumi/pulumi-cloud#474](https://github.com/pulumi/pulumi-cloud/pull/474)).  These were previously created in all stacks using `@pulumi/cloud`, but in practice were not being used.
 
--  (**Breaking**) Remove the `--preview` flag in `pulumi up`, in favor of reintroducing `pulumi preview` ([pulumi/pulumi#1290](https://github.com/pulumi/pulumi/pull/1290)). Also, to accept an update without the interactive prompt, use the `--yes` flag, rather than `--force`.
+-  (**Breaking**) Remove the `--preview` flag in `pulumi update`, in favor of reintroducing `pulumi preview` ([pulumi/pulumi#1290](https://github.com/pulumi/pulumi/pull/1290)). Also, to accept an update without the interactive prompt, use the `--yes` flag, rather than `--force`.
 
 
 ### Fixed
 
--  Significant performance improvements for `pulumi up` ([pulumi/pulumi#1319](https://github.com/pulumi/pulumi/pull/1319)).
+-  Significant performance improvements for `pulumi update` ([pulumi/pulumi#1319](https://github.com/pulumi/pulumi/pull/1319)).
 
 -  JavaScript `async` functions in Node 7.6+ now work with Pulumi function serialization ([pulumi/pulumi#1311](https://github.com/pulumi/pulumi/pull/1311).
 
@@ -969,16 +964,16 @@ Released on April 26, 2018
 ### Changed
 -  (**Breaking**) Eliminate `pulumi init` requirement ([pulumi/pulumi#1226](https://github.com/pulumi/pulumi/pull/1226)). The `pulumi init` command is no longer required and should not be used for new stacks. For stacks created prior to the v0.12.0 SDK, `pulumi init` should still be run in the project directory if you are connecting to an existing stack. For new projects, stacks will be created under the currently logged in account. After upgrading the CLI, it is necessary to run `pulumi stack select`, as the location of bookkeeping files has been changed. For more information, see [Creating Stacks](../reference/stack.html#create-stack).
 
--  (**Breaking**) Remove the explicit 'pulumi preview' command ([pulumi/pulumi#1170](https://github.com/pulumi/pulumi/pull/1170)). The `pulumi preview` output has now been merged in to the `pulumi up` command. Before an update is run, the preview is shown and you can choose whether to proceed or see more update details. To see just the preview operation, run `pulumi up --preview`.
+-  (**Breaking**) Remove the explicit 'pulumi preview' command ([pulumi/pulumi#1170](https://github.com/pulumi/pulumi/pull/1170)). The `pulumi preview` output has now been merged in to the `pulumi update` command. Before an update is run, the preview is shown and you can choose whether to proceed or see more update details. To see just the preview operation, run `pulumi update --preview`.
 
 -  (**Breaking**) Add support for Node 8.10 for AWS Lambda ([pulumi/pulumi-aws#195](https://github.com/pulumi/pulumi-aws/pull/195)). Lambdas created with `aws.serverless.Function` and via JavaScript callbacks in `@pulumi/cloud` now default to Node.js 8.10.
 
--  Switch to a more streamlined view for property diffs in `pulumi up` ([pulumi/pulumi#1212](https://github.com/pulumi/pulumi/pull/1212)).
+-  Switch to a more streamlined view for property diffs in `pulumi update` ([pulumi/pulumi#1212](https://github.com/pulumi/pulumi/pull/1212)).
 
 -  Allow multiple versions of the `@pulumi/pulumi` package to be loaded ([pulumi/pulumi#1209](https://github.com/pulumi/pulumi/pull/1209)). This allows packages and dependencies to be versioned independently.
 
 ### Fixed
--  When running a `pulumi up` or `destroy` operation, a single ctrl-c will cancel the current operation, waiting for it to complete. A second ctrl-c will terminate the operation immediately. ([pulumi/pulumi#1231](https://github.com/pulumi/pulumi/pull/1231)).
+-  When running a `pulumi update` or `destroy` operation, a single ctrl-c will cancel the current operation, waiting for it to complete. A second ctrl-c will terminate the operation immediately. ([pulumi/pulumi#1231](https://github.com/pulumi/pulumi/pull/1231)).
 
 -  When getting update logs, get all results ([pulumi/pulumi#1220](https://github.com/pulumi/pulumi/pull/1220)). Fixes a bug where logs could sometimes be truncated in the pulumi.com console.
 
@@ -1075,7 +1070,7 @@ Released on March 20, 2018
 
 ### Fixed
 
--  In `cloud.Service`, wait for ECS services to reach a steady state ([pulumi/pulumi-cloud#396](https://github.com/pulumi/pulumi-cloud/pull/396)). Previously, when a `cloud.Service` resource was updated (for example, to point to a new container image), the update operation did not wait for the underlying service to reach a new steady state, but only waited for the service update to start. Now, `pulumi up` waits for the service to reach a new steady state, ensuring that the service is in a healthy state before continuing to make further changes to your infrastructure.
+-  In `cloud.Service`, wait for ECS services to reach a steady state ([pulumi/pulumi-cloud#396](https://github.com/pulumi/pulumi-cloud/pull/396)). Previously, when a `cloud.Service` resource was updated (for example, to point to a new container image), the update operation did not wait for the underlying service to reach a new steady state, but only waited for the service update to start. Now, `pulumi update` waits for the service to reach a new steady state, ensuring that the service is in a healthy state before continuing to make further changes to your infrastructure.
 
 -  Improve error messages output by the CLI ([pulumi/pulumi#1011](https://github.com/pulumi/pulumi/pull/1011)). RPC endpoint errors have been improved. Errors such as "catastrophic error" and "fatal error" are no longer duplicated in the output.
 
@@ -1237,7 +1232,7 @@ Resource naming is now more consistent, but there is a new file format for check
 
 - Support for `.pulumiignore`, for files that should not be uploaded when deploying a managed stack through Pulumi. [pulumi-service \#122](https://github.com/pulumi/pulumi-service/issues/122)
 - [Allow overriding a `Pulumi.yaml`'s entry point #575](https://github.com/pulumi/pulumi/issues/575). To specify the entry directory, specify `main` in `Pulumi.yaml`. For instance, `main: a/path/to/main/`.
-- Support for *protected* resources. A resource can be marked as `protect: true`, which prevents deletion of the resource. For example, `let res = new MyResource("precious", { .. }, { protect: true });`. To "unprotect" the resource, change `protect: false` then run `pulumi up`. See [Allow resources to be flagged "protected" #689](https://github.com/pulumi/pulumi/issues/689).
+- Support for *protected* resources. A resource can be marked as `protect: true`, which prevents deletion of the resource. For example, `let res = new MyResource("precious", { .. }, { protect: true });`. To "unprotect" the resource, change `protect: false` then run `pulumi update`. See [Allow resources to be flagged "protected" #689](https://github.com/pulumi/pulumi/issues/689).
 - Changed defaults for workspace and stack configuration. See [Workspace configuration is error prone #714](https://github.com/pulumi/pulumi/issues/714).
 - Allow configuring the number of availability zones in auto-cluster via the setting `cloud-aws:config:ecsAutoClusterNumberOfAZs`. See [Provide config for auto-cluster's number of availability zones #300](https://github.com/pulumi/pulumi-cloud/issues/300).
 - [Save configuration under the stack by default](https://github.com/pulumi/pulumi/issues/693).

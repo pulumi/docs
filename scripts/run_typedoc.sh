@@ -18,9 +18,6 @@ TOOL_APIDOCGEN="go run ./tools/tscdocgen/*.go"
 PULUMI_DOC_TMP=`mktemp -d`
 PULUMI_DOC_BASE=./reference/pkg/nodejs/@pulumi
 
-# Set this to 1 to run all generation in parallel.
-PARALLEL=0
-
 # Generates API documentation for a given package. The arguments are:
 #     * $1 - the simple name of the package
 #     * $2 - the package root directory (to run `make ensure` for dependency updates)
@@ -43,7 +40,6 @@ generate_docs() {
         echo -e "\033[0;93mGenerating typedocs\033[0m"
         pushd ../$2
         if [[ -z "$NOBUILD" ]]; then
-            git clean -xdf
             make ensure && make build && make install
         fi
         if [[ ! -z "$3" ]]; then
@@ -51,59 +47,29 @@ generate_docs() {
         fi
         ${TOOL_TYPEDOC} --json "${PULUMI_DOC_TMP}/$1.docs.json" \
             --mode modules --includeDeclarations --excludeExternals --excludePrivate
-        HEAD_COMMIT=$(git rev-parse HEAD)
         popd
         echo -e "\033[0;93mGenerating pulumi.io API docs\033[0m"
-        echo -e ${TOOL_APIDOCGEN} "${PULUMI_DOC_TMP}/$1.docs.json" "${PULUMI_DOC_BASE}/$1" $HEAD_COMMIT
-        ${TOOL_APIDOCGEN} "${PULUMI_DOC_TMP}/$1.docs.json" "${PULUMI_DOC_BASE}/$1" $HEAD_COMMIT
+        ${TOOL_APIDOCGEN} "${PULUMI_DOC_TMP}/$1.docs.json" "${PULUMI_DOC_BASE}/$1"
     fi
 }
 
-REPOS=(
-    "aws,pulumi-aws,sdk/nodejs"
-    "awsx,pulumi-awsx/nodejs/awsx"
-    "azure,pulumi-azure,sdk/nodejs"
-    "cloud,pulumi-cloud/api"
-    "cloudflare,pulumi-cloudflare,sdk/nodejs"
-    "docker,pulumi-docker,sdk/nodejs"
-    "eks,pulumi-eks/nodejs/eks"
-    "f5bigip,pulumi-f5bigip,sdk/nodejs"
-    "gcp,pulumi-gcp,sdk/nodejs"
-    "kubernetes,pulumi-kubernetes,sdk/nodejs"
-		"linode,pulumi-linode,sdk/nodejs"
-		"newrelic,pulumi-newrelic,sdk/nodejs"
-    "openstack,pulumi-openstack,sdk/nodejs"
-    "packet,pulumi-packet,sdk/nodejs"
-    "pulumi,pulumi/sdk/nodejs"
-    "random,pulumi-random,sdk/nodejs"
-    "vsphere,pulumi-vsphere,sdk/nodejs"
-    "azuread,pulumi-azuread,sdk/nodejs"
-)
-
-PIDS=()
-
-# run processes and store pids in array
-for repo in ${REPOS[*]}
-do
-    IFS=',' read -r -a repo_parts <<< "$repo"
-    SIMPLE_NAME=${repo_parts[0]}
-    PACKAGE_NAME=${repo_parts[1]}
-    ROOT_PATH=${repo_parts[2]}
-    if [ "$PARALLEL" -eq "1" ]; then
-        generate_docs $SIMPLE_NAME $PACKAGE_NAME $ROOT_PATH &
-        PIDS+=($!)
-    else
-        generate_docs $SIMPLE_NAME $PACKAGE_NAME $ROOT_PATH
-        PIDS+=($!)
-    fi
-    echo -e $!
-done
-
-# wait for all pids
-for pid in ${PIDS[*]}
-do
-    echo -e "Waiting on: $pid"
-    wait $pid
-done
+generate_docs "aws" "pulumi-aws" "sdk/nodejs"
+generate_docs "awsx" "pulumi-awsx/nodejs/awsx"
+generate_docs "azure" "pulumi-azure" "sdk/nodejs"
+generate_docs "azure-serverless" "pulumi-azure-serverless/nodejs/azure-serverless"
+generate_docs "cloud" "pulumi-cloud/api"
+generate_docs "cloud-aws" "pulumi-cloud/aws"
+generate_docs "cloud-azure" "pulumi-cloud/azure"
+generate_docs "cloudflare" "pulumi-cloudflare" "sdk/nodejs"
+generate_docs "docker" "pulumi-docker" "sdk/nodejs"
+generate_docs "eks" "pulumi-eks/nodejs/eks"
+generate_docs "f5bigip" "pulumi-f5bigip" "sdk/nodejs"
+generate_docs "gcp" "pulumi-gcp" "sdk/nodejs"
+generate_docs "kubernetes" "pulumi-kubernetes" "sdk/nodejs"
+generate_docs "openstack" "pulumi-openstack" "sdk/nodejs"
+generate_docs "packet" "pulumi-packet" "sdk/nodejs"
+generate_docs "pulumi" "pulumi/sdk/nodejs"
+generate_docs "random" "pulumi-random" "sdk/nodejs"
+generate_docs "vsphere" "pulumi-vsphere" "sdk/nodejs"
 
 echo "Done"

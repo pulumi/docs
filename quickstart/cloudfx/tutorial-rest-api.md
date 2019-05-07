@@ -57,10 +57,10 @@ In this tutorial, we'll show how to create a simple REST API that counts the num
     $ npm install --save @pulumi/cloud @pulumi/cloud-aws
     ```
 
-1.  Preview and deploy changes via `pulumi up`:
+1.  Preview and deploy changes via `pulumi update`:
 
     ```
-    $ pulumi up
+    $ pulumi update
     Previewing update of stack 'hello-http'
     ...
 

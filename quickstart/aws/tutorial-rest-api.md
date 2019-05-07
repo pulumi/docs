@@ -23,9 +23,8 @@ concepts to explore additional containers, serverless, and infrastructure tutori
 Let's use the Pulumi CLI to initialize a new project:
 
 ```
-mkdir ahoy-pulumi 
+pulumi new hello-aws-javascript --dir ahoy-pulumi
 cd ahoy-pulumi
-pulumi new hello-aws-javascript
 ```
 
 You can accept the defaults for this command. For instance, you can change the AWS region to `us-west-2`.
@@ -100,7 +99,7 @@ Choosing `yes` will create resources in AWS. This may take a minute or two.
 
 ![Stack update](https://user-images.githubusercontent.com/4564579/46555042-fcfeb280-c896-11e8-8731-51c9ee78af23.png){:width="700px"}
 
-Since there was a stack export (via `exports.url` in the code), this is printed in the output of `pulumi up`. We can easily `curl` this URL via `pulumi stack output`:
+Since there was a stack export (via `exports.url` in the code), this is printed in the output of `pulumi update`. We can easily `curl` this URL via `pulumi stack output`:
 
 ```bash
 curl $(pulumi stack output url)

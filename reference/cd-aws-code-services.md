@@ -29,7 +29,7 @@ providing auditable access to CodeBuild.
 ### Service Role
 
 When Pulumi runs, it needs credentials in order to make any changes to AWS resources. When
-`pulumi up` is running on the CloudBuild machine, it will default to using the credentials of
+`pulumi update` is running on the CloudBuild machine, it will default to using the credentials of
 the AWS CodeBuild Service role defined in the CodeBuild project.
 
 In order for Pulumi to successfully update the stack, the running CodeBuild service role needs to
@@ -84,7 +84,7 @@ npm run build
 
 # Update the stack
 pulumi stack select acme/website-production
-pulumi up --yes
+pulumi update --yes
 ```
 
 That's it! With the CloudBuild project configured to update your Pulumi stack on-demand,
