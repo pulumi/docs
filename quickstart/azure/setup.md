@@ -33,6 +33,14 @@ To sign in, use a web browser to open the page https://aka.ms/devicelogin and en
 
 Do as instructed to login.  After completed, `az login` will return and you are ready to go.
 
+For most cases `az login` should suffice, but in certain scenarios such as
+working with AKS you may hit issues with Bearer tokens not being refreshed
+during an operation. To work around this, login using the device code flag:
+
+```bash
+$ az login --use-device-code
+```
+
 > **Note:** If you're using Government, China, or German Clouds, you'll need to configure the Azure CLI to work
 > with that cloud.  Do so by running `az cloud set --name <Cloud>`, where `<Cloud>` is one of `AzureUSGovernment`,
 > `AzureChinaCloud`, or `AzureGermanCloud`.
