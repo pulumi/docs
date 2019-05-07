@@ -1,6 +1,6 @@
 ---
 title: "Download and Install"
-installer_version: "0.17.8"
+installer_version: "0.17.9"
 redirect_from: "/install/index.html"
 ---
 
@@ -81,24 +81,10 @@ First things first, let's install the Pulumi CLI on your machine.
     <p>Please select your operating system.</p>
 </div>
 
-After installation, or if you've already installed Pulumi, let's [choose a cloud to get started](./clouds.html).
-
 <div id="macos_installation" markdown="1">
 ## macOS
 
-To install Pulumi, run our installation script:
-
-```bash
-$ curl -fsSL https://get.pulumi.com | sh
-```
-
-This will install the `pulumi` CLI to `~/.pulumi/bin` and add it to your path.
-
-The installer script can be rerun to subsequently install new updates.
-
-### (Alternative) Homebrew
-
-If you prefer, you can install Pulumi through the [Homebrew package manager](https://brew.sh/):
+You can install Pulumi through the [Homebrew package manager](https://brew.sh/):
 
 ```bash
 $ brew install pulumi
@@ -111,6 +97,18 @@ Subsequent updates can be installed in the usual way:
 ```bash
 $ brew upgrade pulumi
 ```
+
+### (Alternative) Installation script
+
+Alternatively, our installation script can be run:
+
+```bash
+$ curl -fsSL https://get.pulumi.com | sh
+```
+
+This will install the `pulumi` CLI to `~/.pulumi/bin` and add it to your path.
+
+The installer script can be rerun to subsequently install new updates.
 </div>
 
 <div id="linux_installation" markdown="1">

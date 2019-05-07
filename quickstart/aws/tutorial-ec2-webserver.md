@@ -49,10 +49,10 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver EC2 instance
     [aws.ec2.Instance][EC2 Instance], which is created in that security group using the appropriate Amazon
     Machine Image (AMI) for the region where you deploy the program.
 
-1.  To preview and deploy changes, run `pulumi update`. The command shows a preview of the resources that will be created and prompts on whether to proceed with the deployment.  Note that the stack itself is counted as a resource, though it does not correspond to a physical cloud resource.
+1.  To preview and deploy changes, run `pulumi up`. The command shows a preview of the resources that will be created and prompts on whether to proceed with the deployment.  Note that the stack itself is counted as a resource, though it does not correspond to a physical cloud resource.
 
     ```bash
-    $ pulumi update
+    $ pulumi up
     Previewing update of stack 'webserver-dev'
     Previewing changes:
 
@@ -111,7 +111,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver EC2 instance
 ## Updating the Pulumi program
 
 Now that we have an instance of our Pulumi program deployed, we may want to make changes. We do this by updating our
-Pulumi program to define the new state we want our infrastructure to be in, then and running `pulumi update` to commit the changes.
+Pulumi program to define the new state we want our infrastructure to be in, then and running `pulumi up` to commit the changes.
 
 1.  Replace the creation of the two resources with the following. This exposes an additional port and adds a startup
     script to run a simple HTTP server at startup.
@@ -147,10 +147,10 @@ Pulumi program to define the new state we want our infrastructure to be in, then
     defined in our program.  We'll see in later sections how we can deploy and version the application code of our
     program in a variety of different ways using Pulumi.
 
-1.  Run `pulumi update` to preview and deploy the changes. You'll see two changes: the `ingress` property of the `SecurityGroup` will be _updated_ in-place.  Second, the `Instance` will be _replaced_ with a new EC2 Instance which will run the new script on startup. Pulumi understands which changes to a given cloud resource can be made in-place, and which require replacement, and computes the minimally disruptive change to achieve the desired state.
+1.  Run `pulumi up` to preview and deploy the changes. You'll see two changes: the `ingress` property of the `SecurityGroup` will be _updated_ in-place.  Second, the `Instance` will be _replaced_ with a new EC2 Instance which will run the new script on startup. Pulumi understands which changes to a given cloud resource can be made in-place, and which require replacement, and computes the minimally disruptive change to achieve the desired state.
 
     ```bash
-    $ pulumi update
+    $ pulumi up
     Previewing update of stack 'ec2-quickstart-dev'
     ...
 
@@ -194,7 +194,7 @@ Before moving on, let's tear down the resources that are part of our stack.
 
 ## Summary
 
-In this tutorial, we saw how to use Pulumi programs to create and manage cloud resources in AWS, using regular JavaScript and NPM packages. To preview and update infrastructure, use `pulumi update`. To clean up resources, run `pulumi destroy`.
+In this tutorial, we saw how to use Pulumi programs to create and manage cloud resources in AWS, using regular JavaScript and NPM packages. To preview and update infrastructure, use `pulumi up`. To clean up resources, run `pulumi destroy`.
 
 For a similar example in other languages and clouds, see the [Web Server examples collection](https://github.com/pulumi/examples#web-server).
 

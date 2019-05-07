@@ -27,7 +27,7 @@ To support this deployment strategy, you need to enable Travis to create both `p
 "Build pushed pull requests" options.
 
 `push` jobs are created when a Git push is made to a branch. We configure the build script for
-`push` jobs to run `pulumi update`, i.e. carry out the push-to-deploy operation.
+`push` jobs to run `pulumi up`, i.e. carry out the push-to-deploy operation.
 
 `pull_request` jobs are created when a push is made to a _pull request topic branch_. (That same
 push will also trigger a separate `push` job.) We configure the `pull_request` job to run
@@ -78,7 +78,7 @@ script:
 ### scripts/travis_push.sh
 
 `scripts/travis_push.sh` is the script that is executed on `push` jobs. And for the push-to-deploy stategy,
-is when we will run `pulumi update`. For `push` jobs, the `TRAVIS_BRANCH` environment variable is the
+is when we will run `pulumi up`. For `push` jobs, the `TRAVIS_BRANCH` environment variable is the
 pushed branch. So we use that to determine which stack to update, e.g. pushes to `master` update the
 staging stack and `production` update the production stack.
 
@@ -95,11 +95,11 @@ npm run build
 case ${TRAVIS_BRANCH} in
     master)
         pulumi stack select acme/website-staging
-        pulumi update --yes
+        pulumi up --yes
         ;;
     production)
         pulumi stack select acme/website-production
-        pulumi update --yes
+        pulumi up --yes
         ;;
     *)
         echo "No Pulumi stack associated with branch ${TRAVIS_BRANCH}."
@@ -144,7 +144,7 @@ esac
 When using Travis to continuously deploy your Pulumi stacks, you may run into a problem. What
 happens if there are multiple commits merged into the `master` branch in rapid succession?
 
-Travis will trigger multiple `push` jobs, which will then both try to run `pulumi update` on the
+Travis will trigger multiple `push` jobs, which will then both try to run `pulumi up` on the
 same stack at the same time.
 
 Pulumi blocks any stack updates while one is already in progress. (To avoid conflicting resource

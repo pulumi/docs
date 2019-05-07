@@ -108,6 +108,12 @@
 <li class="toctree-l2"><a class="reference internal" href="storage/v1beta1/">v1beta1</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="helm/">helm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="helm/v2/">v2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="provider/">provider</a></li>
+<li class="toctree-l1"><a class="reference internal" href="yaml/">yaml</a></li>
 </ul>
 </div>
 </div>

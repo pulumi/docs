@@ -205,7 +205,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_packet.Device">
-<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">Device</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>always_pxe=None</em>, <em>billing_cycle=None</em>, <em>description=None</em>, <em>facilities=None</em>, <em>facility=None</em>, <em>hardware_reservation_id=None</em>, <em>hostname=None</em>, <em>ipxe_script_url=None</em>, <em>network_type=None</em>, <em>operating_system=None</em>, <em>plan=None</em>, <em>project_id=None</em>, <em>project_ssh_key_ids=None</em>, <em>public_ipv4_subnet_size=None</em>, <em>storage=None</em>, <em>tags=None</em>, <em>user_data=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Device" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">Device</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>always_pxe=None</em>, <em>billing_cycle=None</em>, <em>description=None</em>, <em>facilities=None</em>, <em>hardware_reservation_id=None</em>, <em>hostname=None</em>, <em>ipxe_script_url=None</em>, <em>network_type=None</em>, <em>operating_system=None</em>, <em>plan=None</em>, <em>project_id=None</em>, <em>project_ssh_key_ids=None</em>, <em>public_ipv4_subnet_size=None</em>, <em>storage=None</em>, <em>tags=None</em>, <em>user_data=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Device" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Packet device resource. This can be used to create,
 modify, and delete devices.</p>
 <blockquote>
@@ -227,7 +227,6 @@ continue to boot via iPXE on reboots.</li>
 <li><strong>billing_cycle</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – monthly or hourly</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description string for the device</li>
 <li><strong>facilities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of facility codes with deployment preferences. Packet API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or <code class="docutils literal notranslate"><span class="pre">any</span></code> (a wildcard). To find the facility code, visit <a class="reference external" href="https://www.packet.com/developers/api/#facilities">Facilities API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</li>
-<li><strong>facility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The facility in which to create the device.</li>
 <li><strong>hardware_reservation_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of hardware reservation where you want this device deployed, or <code class="docutils literal notranslate"><span class="pre">next-available</span></code> if you want to pick your next available reservation automatically.</li>
 <li><strong>hostname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The device name</li>
 <li><strong>ipxe_script_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL pointing to a hosted iPXE script. More
@@ -288,6 +287,12 @@ continue to boot via iPXE on reboots.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_packet.Device.deployed_facility">
+<code class="descname">deployed_facility</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Device.deployed_facility" title="Permalink to this definition">¶</a></dt>
+<dd><p>The facility where the device is deployed.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_packet.Device.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Device.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>Description string for the device</p>
@@ -297,12 +302,6 @@ continue to boot via iPXE on reboots.</p>
 <dt id="pulumi_packet.Device.facilities">
 <code class="descname">facilities</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Device.facilities" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of facility codes with deployment preferences. Packet API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or <code class="docutils literal notranslate"><span class="pre">any</span></code> (a wildcard). To find the facility code, visit <a class="reference external" href="https://www.packet.com/developers/api/#facilities">Facilities API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_packet.Device.facility">
-<code class="descname">facility</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Device.facility" title="Permalink to this definition">¶</a></dt>
-<dd><p>The facility in which to create the device.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -726,7 +725,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_packet.PortVlanAttachment">
-<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">PortVlanAttachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>device_id=None</em>, <em>force_bond=None</em>, <em>port_name=None</em>, <em>vlan_vnid=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.PortVlanAttachment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">PortVlanAttachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>device_id=None</em>, <em>force_bond=None</em>, <em>native=None</em>, <em>port_name=None</em>, <em>vlan_vnid=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.PortVlanAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to attach device ports to VLANs.</p>
 <p>Device and VLAN must be in the same facility.</p>
 <p>If you need this resource to add the port back to bond on removal, set <code class="docutils literal notranslate"><span class="pre">force_bond</span> <span class="pre">=</span> <span class="pre">true</span></code>.</p>
@@ -749,6 +748,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>device_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of device to be assigned to the VLAN</li>
 <li><strong>force_bond</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Add port back to the bond when this resource is removed. Default is false.</li>
+<li><strong>native</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Mark this VLAN a native VLAN on the port. This can be used only if this assignment assigns second or further VLAN to the port. To ensure that this attachment is not first on a port, you can use <code class="docutils literal notranslate"><span class="pre">depends_on</span></code> pointing to another packet_port_vlan_attachment, just like in the layer2-individual example above.</li>
 <li><strong>port_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of network port to be assigned to the VLAN</li>
 <li><strong>vlan_vnid</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – VXLAN Network Identifier, integer</li>
 </ul>
@@ -766,6 +766,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_packet.PortVlanAttachment.force_bond">
 <code class="descname">force_bond</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.PortVlanAttachment.force_bond" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add port back to the bond when this resource is removed. Default is false.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.PortVlanAttachment.native">
+<code class="descname">native</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.PortVlanAttachment.native" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mark this VLAN a native VLAN on the port. This can be used only if this assignment assigns second or further VLAN to the port. To ensure that this attachment is not first on a port, you can use <code class="docutils literal notranslate"><span class="pre">depends_on</span></code> pointing to another packet_port_vlan_attachment, just like in the layer2-individual example above.</p>
 </dd></dl>
 
 <dl class="attribute">

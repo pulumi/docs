@@ -16,14 +16,14 @@ title: Module cmd/dynamic-provider
 <div class="pdoc-module-contents" markdown="1">
 * <a href="#main">function main</a>
 
-<a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts">cmd/dynamic-provider/index.ts</a> 
+<a href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/cmd/dynamic-provider/index.ts">cmd/dynamic-provider/index.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="main">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L296">function <b>main</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/cmd/dynamic-provider/index.ts#L296">function <b>main</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 

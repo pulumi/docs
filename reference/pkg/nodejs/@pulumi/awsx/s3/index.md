@@ -16,18 +16,18 @@ title: Module s3
 <div class="pdoc-module-contents" markdown="1">
 * <a href="#metrics">module metrics</a>
 
-<a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts">s3/metrics.ts</a> 
+<a href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/s3/metrics.ts">s3/metrics.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="metrics">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L20">module <b>metrics</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/s3/metrics.ts#L20">module <b>metrics</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <h3 class="pdoc-member-header" id="allRequests">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L196">function <b>allRequests</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/s3/metrics.ts#L196">function <b>allRequests</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -44,7 +44,7 @@ Valid statistics: Sum
 
 </div>
 <h3 class="pdoc-member-header" id="bucketSizeBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L169">function <b>bucketSizeBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/s3/metrics.ts#L169">function <b>bucketSizeBytes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -64,7 +64,7 @@ Valid statistics: Average
 
 </div>
 <h3 class="pdoc-member-header" id="bytesDownloaded">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L319">function <b>bytesDownloaded</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/s3/metrics.ts#L319">function <b>bytesDownloaded</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -80,7 +80,7 @@ Valid statistics: Average (bytes per request), Sum (bytes per period), Sample Co
 
 </div>
 <h3 class="pdoc-member-header" id="bytesUploaded">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L330">function <b>bytesUploaded</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/s3/metrics.ts#L330">function <b>bytesUploaded</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -95,7 +95,7 @@ Valid statistics: Average (bytes per request), Sum (bytes per period), Sample Co
 
 </div>
 <h3 class="pdoc-member-header" id="deleteRequests">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L235">function <b>deleteRequests</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/s3/metrics.ts#L235">function <b>deleteRequests</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -112,7 +112,7 @@ Valid statistics: Sum
 
 </div>
 <h3 class="pdoc-member-header" id="errors4xx">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L344">function <b>errors4xx</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/s3/metrics.ts#L344">function <b>errors4xx</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -130,7 +130,7 @@ Count
 
 </div>
 <h3 class="pdoc-member-header" id="errors5xx">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L358">function <b>errors5xx</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/s3/metrics.ts#L358">function <b>errors5xx</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -148,7 +148,7 @@ Count
 
 </div>
 <h3 class="pdoc-member-header" id="firstByteLatency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L370">function <b>firstByteLatency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/s3/metrics.ts#L370">function <b>firstByteLatency</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -164,7 +164,7 @@ Valid statistics: Average, Sum, Min, Max, Sample Count
 
 </div>
 <h3 class="pdoc-member-header" id="getRequests">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L211">function <b>getRequests</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/s3/metrics.ts#L211">function <b>getRequests</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -183,7 +183,7 @@ Valid statistics: Sum
 
 </div>
 <h3 class="pdoc-member-header" id="headRequests">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L246">function <b>headRequests</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/s3/metrics.ts#L246">function <b>headRequests</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -198,7 +198,7 @@ Valid statistics: Sum
 
 </div>
 <h3 class="pdoc-member-header" id="listRequests">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L307">function <b>listRequests</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/s3/metrics.ts#L307">function <b>listRequests</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -213,7 +213,7 @@ Valid statistics: Sum
 
 </div>
 <h3 class="pdoc-member-header" id="metric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L136">function <b>metric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/s3/metrics.ts#L136">function <b>metric</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -282,7 +282,7 @@ The following dimensions are used to filter Amazon S3 metrics:
 
 </div>
 <h3 class="pdoc-member-header" id="numberOfObjects">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L183">function <b>numberOfObjects</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/s3/metrics.ts#L183">function <b>numberOfObjects</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -300,7 +300,7 @@ Valid statistics: Average
 
 </div>
 <h3 class="pdoc-member-header" id="postRequests">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L260">function <b>postRequests</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/s3/metrics.ts#L260">function <b>postRequests</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -318,7 +318,7 @@ Valid statistics: Sum
 
 </div>
 <h3 class="pdoc-member-header" id="putRequests">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L222">function <b>putRequests</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/s3/metrics.ts#L222">function <b>putRequests</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -333,7 +333,7 @@ Valid statistics: Sum
 
 </div>
 <h3 class="pdoc-member-header" id="selectRequests">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L272">function <b>selectRequests</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/s3/metrics.ts#L272">function <b>selectRequests</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -349,7 +349,7 @@ Valid statistics: Sum
 
 </div>
 <h3 class="pdoc-member-header" id="selectReturnedBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L296">function <b>selectReturnedBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/s3/metrics.ts#L296">function <b>selectReturnedBytes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -365,7 +365,7 @@ Valid statistics: Average (bytes per request), Sum (bytes per period), Sample Co
 
 </div>
 <h3 class="pdoc-member-header" id="selectScannedBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L284">function <b>selectScannedBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/s3/metrics.ts#L284">function <b>selectScannedBytes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -381,7 +381,7 @@ Valid statistics: Average (bytes per request), Sum (bytes per period), Sample Co
 
 </div>
 <h3 class="pdoc-member-header" id="totalRequestLatency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L383">function <b>totalRequestLatency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/s3/metrics.ts#L383">function <b>totalRequestLatency</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -398,12 +398,12 @@ Valid statistics: Average, Sum, Min, Max, Sample Count
 
 </div>
 <h3 class="pdoc-member-header" id="S3MetricChange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L29">interface <b>S3MetricChange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/s3/metrics.ts#L29">interface <b>S3MetricChange</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 </div>
 <h3 class="pdoc-member-header" id="S3MetricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/s3/metrics.ts#L21">type <b>S3MetricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/s3/metrics.ts#L21">type <b>S3MetricName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>type</span> S3MetricName = <span class='s2'>"BucketSizeBytes"</span> | <span class='s2'>"NumberOfObjects"</span> | <span class='s2'>"AllRequests"</span> | <span class='s2'>"GetRequests"</span> | <span class='s2'>"PutRequests"</span> | <span class='s2'>"DeleteRequests"</span> | <span class='s2'>"HeadRequests"</span> | <span class='s2'>"PostRequests"</span> | <span class='s2'>"SelectRequests"</span> | <span class='s2'>"SelectScannedBytes"</span> | <span class='s2'>"SelectReturnedBytes"</span> | <span class='s2'>"ListRequests"</span> | <span class='s2'>"BytesDownloaded"</span> | <span class='s2'>"BytesUploaded"</span> | <span class='s2'>"4xxErrors"</span> | <span class='s2'>"5xxErrors"</span> | <span class='s2'>"FirstByteLatency"</span> | <span class='s2'>"TotalRequestLatency"</span>;</pre>

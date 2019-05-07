@@ -35,8 +35,8 @@ func main() {
 	// Grab the args.
 	flag.Parse()
 	args := flag.Args()
-	if len(args) < 2 {
-		fmt.Fprintf(os.Stderr, "error: usage: %s <doc-file> <out-dir>\n", os.Args[0])
+	if len(args) < 3 {
+		fmt.Fprintf(os.Stderr, "error: usage: %s <doc-file> <out-dir> <git-hash>\n", os.Args[0])
 		os.Exit(1)
 	}
 
@@ -48,7 +48,7 @@ func main() {
 	}
 
 	// Assuming that succeeded, simply emit the Markdown docs now.
-	if err = emitMarkdownDocs(doc, args[1]); err != nil {
+	if err = emitMarkdownDocs(doc, args[1], args[2]); err != nil {
 		fmt.Fprintf(os.Stderr, "error: emitting Markdown docs: %v\n", err)
 		os.Exit(2)
 	}
@@ -163,25 +163,22 @@ func hasInternalTag(node *typeDocNode) bool {
 // gitHubBaseURLs is a *hackhackhack* hard-coded list of URLs for our packages.
 // TODO(joe): base this off the package.json file.
 var gitHubBaseURLs = map[string]string{
-	"@pulumi/pulumi":           "https://github.com/pulumi/pulumi/blob/master/sdk/nodejs",
-	"@pulumi/aws":              "https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs",
-	"@pulumi/awsx":             "https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx",
-	"@pulumi/azure":            "https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs",
-	"@pulumi/azure-serverless": "https://github.com/pulumi/pulumi-azure-serverless/blob/master/nodejs",
-	"@pulumi/cloud":            "https://github.com/pulumi/pulumi-cloud/blob/master/api",
-	"@pulumi/cloud-aws":        "https://github.com/pulumi/pulumi-cloud/blob/master/aws",
-	"@pulumi/cloud-azure":      "https://github.com/pulumi/pulumi-cloud/blob/master/azure",
-	"@pulumi/docker":           "https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs",
-	"@pulumi/eks":              "https://github.com/pulumi/pulumi-eks/blob/master/nodejs/eks",
-	"@pulumi/kubernetes":       "https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs",
-	"@pulumi/gcp":              "https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs",
-	"@pulumi/openstack":        "https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs",
-	"@pulumi/vsphere":          "https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs",
+	"@pulumi/pulumi":     "https://github.com/pulumi/pulumi/blob/{githash}/sdk/nodejs",
+	"@pulumi/aws":        "https://github.com/pulumi/pulumi-aws/blob/{githash}/sdk/nodejs",
+	"@pulumi/awsx":       "https://github.com/pulumi/pulumi-awsx/blob/{githash}/nodejs/awsx",
+	"@pulumi/azure":      "https://github.com/pulumi/pulumi-azure/blob/{githash}/sdk/nodejs",
+	"@pulumi/cloud":      "https://github.com/pulumi/pulumi-cloud/blob/{githash}/api",
+	"@pulumi/docker":     "https://github.com/pulumi/pulumi-docker/blob/{githash}/sdk/nodejs",
+	"@pulumi/eks":        "https://github.com/pulumi/pulumi-eks/blob/{githash}/nodejs/eks",
+	"@pulumi/kubernetes": "https://github.com/pulumi/pulumi-kubernetes/blob/{githash}/sdk/nodejs",
+	"@pulumi/gcp":        "https://github.com/pulumi/pulumi-gcp/blob/{githash}/sdk/nodejs",
+	"@pulumi/openstack":  "https://github.com/pulumi/pulumi-openstack/blob/{githash}/sdk/nodejs",
+	"@pulumi/vsphere":    "https://github.com/pulumi/pulumi-vsphere/blob/{githash}/sdk/nodejs",
 }
 
 // emitMarkdownDocs takes as input a full Typedoc AST, transforms it into Markdown suitable for our documentation
 // website, and emits those files into the target directory.  If the target doesn't exist, it will be created.
-func emitMarkdownDocs(doc *typeDocNode, outdir string) error {
+func emitMarkdownDocs(doc *typeDocNode, outdir string, githash string) error {
 	// First, gather up the entries by module.  Note that we are doing something dubious here to make our docs
 	// easier to use and navigate than the default ones that Typedoc generates.  We are assuming an idiomatic module
 	// structure with top-level index-style exports for each submodule.  In the general case, this isn't always true,
@@ -189,7 +186,7 @@ func emitMarkdownDocs(doc *typeDocNode, outdir string) error {
 	// important details about the specific inner modules that truly contain the members in question.  I'm sure we'll
 	// want to revisit this and make the logic here more sophisticated and general purpose someday.
 	pkg := doc.Name
-	repoURL := gitHubBaseURLs[pkg]
+	repoURL := strings.Replace(gitHubBaseURLs[pkg], "{githash}", githash, -1)
 	e := newEmitter(pkg, repoURL, outdir)
 
 	// The kubernetes package requires some special handling since the structure differs from

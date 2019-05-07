@@ -27,12 +27,15 @@ deprecated in favour of <code class="docutils literal notranslate"><span class="
 <li><strong>addons_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The configuration for addons supported by GKE.
 Structure is documented below.</li>
 <li><strong>cluster_autoscaling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>)
-Configuration for cluster autoscaling (also called autoprovisioning), as described in
-<a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning">the docs</a>.
-Structure is documented below.</p>
+Configuration for per-cluster autoscaling features, including node autoprovisioning. See <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning">guide in Google docs</a>. Structure is documented below.</p>
 </li>
 <li><strong>cluster_ipv4_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address range of the kubernetes pods in
 this cluster. Default is an automatically assigned CIDR.</li>
+<li><strong>default_max_pods_per_node</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – ) The default maximum number of pods per node in this cluster.
+Note that this does not work on node pools which are “route-based” - that is, node
+pools belonging to clusters that do not have IP Aliasing enabled.
+See the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr">official documentation</a>
+for more information.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the cluster.</li>
 <li><strong>enable_binary_authorization</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – ) Enable Binary Authorization for this cluster.
 If enabled, all container images will be validated by Google Binary Authorization.</li>
@@ -43,8 +46,9 @@ and will be automatically deleted after 30 days.</li>
 When enabled, identities in the system, including service accounts, nodes, and controllers,
 will have statically granted permissions beyond those provided by the RBAC configuration or IAM.
 Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code></li>
-<li><strong>enable_tpu</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – ) Whether to enable Cloud TPU resources in this cluster.
-See the <a class="reference external" href="https://cloud.google.com/tpu/docs/kubernetes-engine-setup">official documentation</a>.</li>
+<li><strong>enable_tpu</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>) Whether to enable Cloud TPU resources in this cluster.
+See the <a class="reference external" href="https://cloud.google.com/tpu/docs/kubernetes-engine-setup">official documentation</a>.</p>
+</li>
 <li><strong>initial_node_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of nodes to create in this
 cluster’s default node pool. Must be set if <code class="docutils literal notranslate"><span class="pre">node_pool</span></code> is not set. If
 you’re using <code class="docutils literal notranslate"><span class="pre">google_container_node_pool</span></code> objects with no default node pool,
@@ -52,7 +56,8 @@ you’ll need to set this to a value of at least <code class="docutils literal n
 <code class="docutils literal notranslate"><span class="pre">remove_default_node_pool</span></code> to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</li>
 <li><strong>ip_allocation_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Configuration for cluster IP allocation. As of now, only pre-allocated subnetworks (custom type with secondary ranges) are supported.
 This will activate IP aliases. See the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases">official documentation</a>
-Structure is documented below.</p>
+Structure is documented below. This field is marked to use <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">Attribute as Block</a>
+in order to support explicit removal with <code class="docutils literal notranslate"><span class="pre">ip_allocation_policy</span> <span class="pre">=</span> <span class="pre">[]</span></code>.</p>
 </li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location (region or zone) in which the cluster
 master will be created, as well as the default node location. If you specify a
@@ -70,7 +75,7 @@ Kubernetes master. Structure is documented below.</li>
 <li><strong>master_authorized_networks_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The desired configuration options
 for master authorized networks. Omit the nested <code class="docutils literal notranslate"><span class="pre">cidr_blocks</span></code> attribute to disallow
 external access (except the cluster node IPs, which GKE automatically whitelists).</li>
-<li><strong>min_master_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The minimum version of the master. GKE
+<li><strong>min_master_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The minimum version of the master. GKE
 will auto-update the master to new versions, so this does not guarantee the
 current master version–use the read-only <code class="docutils literal notranslate"><span class="pre">master_version</span></code> field to obtain that.
 If unset, the cluster’s version will be set by GKE to the version of the most recent
@@ -79,8 +84,7 @@ the <code class="docutils literal notranslate"><span class="pre">google_containe
 are available, and can be use to approximate fuzzy versions in a
 Terraform-compatible way. If you intend to specify versions manually,
 <a class="reference external" href="https://cloud.google.com/kubernetes-engine/versioning-and-upgrades#specifying_cluster_version">the docs</a>
-describe the various acceptable formats for this field.</p>
-</li>
+describe the various acceptable formats for this field.</li>
 <li><strong>monitoring_service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The monitoring service that the cluster
 should write metrics to.
 Automatically send metrics from pods in the cluster to the Google Cloud Monitoring API.
@@ -166,9 +170,7 @@ Structure is documented below.</p>
 <dt id="pulumi_gcp.container.Cluster.cluster_autoscaling">
 <code class="descname">cluster_autoscaling</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.cluster_autoscaling" title="Permalink to this definition">¶</a></dt>
 <dd><p>)
-Configuration for cluster autoscaling (also called autoprovisioning), as described in
-<a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning">the docs</a>.
-Structure is documented below.</p>
+Configuration for per-cluster autoscaling features, including node autoprovisioning. See <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning">guide in Google docs</a>. Structure is documented below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -176,6 +178,16 @@ Structure is documented below.</p>
 <code class="descname">cluster_ipv4_cidr</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.cluster_ipv4_cidr" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IP address range of the kubernetes pods in
 this cluster. Default is an automatically assigned CIDR.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.container.Cluster.default_max_pods_per_node">
+<code class="descname">default_max_pods_per_node</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.default_max_pods_per_node" title="Permalink to this definition">¶</a></dt>
+<dd><p>) The default maximum number of pods per node in this cluster.
+Note that this does not work on node pools which are “route-based” - that is, node
+pools belonging to clusters that do not have IP Aliasing enabled.
+See the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr">official documentation</a>
+for more information.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -243,7 +255,8 @@ to the cluster.</p>
 <code class="descname">ip_allocation_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.Cluster.ip_allocation_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration for cluster IP allocation. As of now, only pre-allocated subnetworks (custom type with secondary ranges) are supported.
 This will activate IP aliases. See the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases">official documentation</a>
-Structure is documented below.</p>
+Structure is documented below. This field is marked to use <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">Attribute as Block</a>
+in order to support explicit removal with <code class="docutils literal notranslate"><span class="pre">ip_allocation_policy</span> <span class="pre">=</span> <span class="pre">[]</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -492,7 +505,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.container.GetClusterResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.container.</code><code class="descname">GetClusterResult</code><span class="sig-paren">(</span><em>additional_zones=None</em>, <em>addons_configs=None</em>, <em>cluster_autoscalings=None</em>, <em>cluster_ipv4_cidr=None</em>, <em>default_max_pods_per_node=None</em>, <em>description=None</em>, <em>enable_binary_authorization=None</em>, <em>enable_kubernetes_alpha=None</em>, <em>enable_legacy_abac=None</em>, <em>enable_tpu=None</em>, <em>endpoint=None</em>, <em>initial_node_count=None</em>, <em>instance_group_urls=None</em>, <em>ip_allocation_policies=None</em>, <em>location=None</em>, <em>logging_service=None</em>, <em>maintenance_policies=None</em>, <em>master_auths=None</em>, <em>master_authorized_networks_configs=None</em>, <em>master_ipv4_cidr_block=None</em>, <em>master_version=None</em>, <em>min_master_version=None</em>, <em>monitoring_service=None</em>, <em>name=None</em>, <em>network=None</em>, <em>network_policies=None</em>, <em>node_configs=None</em>, <em>node_locations=None</em>, <em>node_pools=None</em>, <em>node_version=None</em>, <em>pod_security_policy_configs=None</em>, <em>private_cluster=None</em>, <em>private_cluster_configs=None</em>, <em>project=None</em>, <em>region=None</em>, <em>remove_default_node_pool=None</em>, <em>resource_labels=None</em>, <em>subnetwork=None</em>, <em>tpu_ipv4_cidr_block=None</em>, <em>zone=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.GetClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.container.</code><code class="descname">GetClusterResult</code><span class="sig-paren">(</span><em>additional_zones=None</em>, <em>addons_configs=None</em>, <em>cluster_autoscalings=None</em>, <em>cluster_ipv4_cidr=None</em>, <em>default_max_pods_per_node=None</em>, <em>description=None</em>, <em>enable_binary_authorization=None</em>, <em>enable_kubernetes_alpha=None</em>, <em>enable_legacy_abac=None</em>, <em>enable_tpu=None</em>, <em>endpoint=None</em>, <em>initial_node_count=None</em>, <em>instance_group_urls=None</em>, <em>ip_allocation_policies=None</em>, <em>location=None</em>, <em>logging_service=None</em>, <em>maintenance_policies=None</em>, <em>master_auths=None</em>, <em>master_authorized_networks_configs=None</em>, <em>master_version=None</em>, <em>min_master_version=None</em>, <em>monitoring_service=None</em>, <em>name=None</em>, <em>network=None</em>, <em>network_policies=None</em>, <em>node_configs=None</em>, <em>node_locations=None</em>, <em>node_pools=None</em>, <em>node_version=None</em>, <em>pod_security_policy_configs=None</em>, <em>private_cluster_configs=None</em>, <em>project=None</em>, <em>region=None</em>, <em>remove_default_node_pool=None</em>, <em>resource_labels=None</em>, <em>subnetwork=None</em>, <em>tpu_ipv4_cidr_block=None</em>, <em>zone=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.GetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCluster.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.container.GetClusterResult.id">
@@ -590,9 +603,12 @@ recreation of the resource.</li>
 resides.</li>
 <li><strong>management</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Node management configuration, wherein auto-repair and
 auto-upgrade is configured. Structure is documented below.</li>
-<li><strong>max_pods_per_node</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – ) The maximum number of pods per node in this node pool.
+<li><strong>max_pods_per_node</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <p>) The maximum number of pods per node in this node pool.
 Note that this does not work on node pools which are “route-based” - that is, node
-pools belonging to clusters that do not have IP Aliasing enabled.</li>
+pools belonging to clusters that do not have IP Aliasing enabled.
+See the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr">official documentation</a>
+for more information.</p>
+</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the node pool. If left blank, Terraform will
 auto-generate a unique name.</li>
 <li><strong>node_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The node configuration of the pool. See
@@ -655,7 +671,9 @@ auto-upgrade is configured. Structure is documented below.</p>
 <code class="descname">max_pods_per_node</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.container.NodePool.max_pods_per_node" title="Permalink to this definition">¶</a></dt>
 <dd><p>) The maximum number of pods per node in this node pool.
 Note that this does not work on node pools which are “route-based” - that is, node
-pools belonging to clusters that do not have IP Aliasing enabled.</p>
+pools belonging to clusters that do not have IP Aliasing enabled.
+See the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr">official documentation</a>
+for more information.</p>
 </dd></dl>
 
 <dl class="attribute">
