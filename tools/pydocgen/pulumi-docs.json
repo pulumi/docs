@@ -40,6 +40,10 @@
       "package_name": "pulumi_openstack"
     },
     {
+      "name": "Pulumi Linode",
+      "package_name": "pulumi_linode"
+    },
+    {
       "name": "Pulumi F5BigIP",
       "package_name": "pulumi_f5bigip"
     },
