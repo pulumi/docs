@@ -1,16 +1,18 @@
-<div class="section" id="module-pulumi_gcp.filestore">
-<span id="filestore"></span><h1>filestore<a class="headerlink" href="#module-pulumi_gcp.filestore" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-pulumi_gcp.firestore">
+<span id="firestore"></span><h1>firestore<a class="headerlink" href="#module-pulumi_gcp.firestore" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="pulumi_gcp.filestore.Instance">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.filestore.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>file_shares=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>networks=None</em>, <em>project=None</em>, <em>tier=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.filestore.Instance" title="Permalink to this definition">¶</a></dt>
-<dd><p>A Google Cloud Filestore instance.</p>
-<p>To get more information about Instance, see:</p>
+<dt id="pulumi_gcp.firestore.Index">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.firestore.</code><code class="descname">Index</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>collection=None</em>, <em>database=None</em>, <em>fields=None</em>, <em>project=None</em>, <em>query_scope=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.firestore.Index" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Cloud Firestore indexes enable simple and complex queries against documents in a database.</dt>
+<dd>This resource manages composite indexes and not single</dd>
+</dl>
+<p>field indexes.</p>
+<p>To get more information about Index, see:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://cloud.google.com/filestore/docs/reference/rest/v1beta1/projects.locations.instances/create">API documentation</a></li>
+<li><a class="reference external" href="https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases.collectionGroups.indexes">API documentation</a></li>
 <li>How-to Guides<ul>
-<li><a class="reference external" href="https://cloud.google.com/filestore/docs/creating-instances">Official Documentation</a></li>
-<li><a class="reference external" href="https://cloud.google.com/filestore/docs/accessing-fileshares">Use with Kubernetes</a></li>
-<li><a class="reference external" href="https://cloud.google.com/filestore/docs/copying-data">Copying Data In/Out</a></li>
+<li><a class="reference external" href="https://cloud.google.com/firestore/docs/query-data/indexing">Official Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -27,8 +29,8 @@
 </tbody>
 </table>
 <dl class="method">
-<dt id="pulumi_gcp.filestore.Instance.translate_output_property">
-<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.filestore.Instance.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dt id="pulumi_gcp.firestore.Index.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.firestore.Index.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -46,8 +48,8 @@ into a format of their choosing before writing those properties to the resource 
 </dd></dl>
 
 <dl class="method">
-<dt id="pulumi_gcp.filestore.Instance.translate_input_property">
-<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.filestore.Instance.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dt id="pulumi_gcp.firestore.Index.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.firestore.Index.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <table class="docutils field-list" frame="void" rules="none">

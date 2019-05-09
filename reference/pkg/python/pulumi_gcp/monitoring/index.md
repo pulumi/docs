@@ -2,7 +2,7 @@
 <span id="monitoring"></span><h1>monitoring<a class="headerlink" href="#module-pulumi_gcp.monitoring" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.monitoring.AlertPolicy">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.monitoring.</code><code class="descname">AlertPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>combiner=None</em>, <em>conditions=None</em>, <em>display_name=None</em>, <em>documentation=None</em>, <em>enabled=None</em>, <em>labels=None</em>, <em>notification_channels=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.AlertPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.monitoring.</code><code class="descname">AlertPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>combiner=None</em>, <em>conditions=None</em>, <em>display_name=None</em>, <em>documentation=None</em>, <em>enabled=None</em>, <em>labels=None</em>, <em>notification_channels=None</em>, <em>project=None</em>, <em>user_labels=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.AlertPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A description of the conditions under which some aspect of your system is
 considered to be “unhealthy” and the ways to notify people or services
 about this state.</p>

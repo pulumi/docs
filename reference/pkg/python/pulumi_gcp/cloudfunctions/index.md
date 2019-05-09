@@ -2,7 +2,7 @@
 <span id="cloudfunctions"></span><h1>cloudfunctions<a class="headerlink" href="#module-pulumi_gcp.cloudfunctions" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.cloudfunctions.Function">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.cloudfunctions.</code><code class="descname">Function</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>available_memory_mb=None</em>, <em>description=None</em>, <em>entry_point=None</em>, <em>environment_variables=None</em>, <em>event_trigger=None</em>, <em>https_trigger_url=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>runtime=None</em>, <em>service_account_email=None</em>, <em>source_archive_bucket=None</em>, <em>source_archive_object=None</em>, <em>source_repository=None</em>, <em>timeout=None</em>, <em>trigger_http=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.cloudfunctions.</code><code class="descname">Function</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>available_memory_mb=None</em>, <em>description=None</em>, <em>entry_point=None</em>, <em>environment_variables=None</em>, <em>event_trigger=None</em>, <em>https_trigger_url=None</em>, <em>labels=None</em>, <em>max_instances=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>runtime=None</em>, <em>service_account_email=None</em>, <em>source_archive_bucket=None</em>, <em>source_archive_object=None</em>, <em>source_repository=None</em>, <em>timeout=None</em>, <em>trigger_http=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new Cloud Function. For more information see
 <a class="reference external" href="https://cloud.google.com/functions/docs/">the official documentation</a>
 and
@@ -21,6 +21,7 @@ and
 <li><strong>event_trigger</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with <code class="docutils literal notranslate"><span class="pre">trigger_http</span></code>.</li>
 <li><strong>https_trigger_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL which triggers function execution. Returned only if <code class="docutils literal notranslate"><span class="pre">trigger_http</span></code> is used.</li>
 <li><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A set of key/value label pairs to assign to the function.</li>
+<li><strong>max_instances</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The limit on the maximum number of function instances that may coexist at a given time.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A user-defined name of the function. Function names must be unique globally.</li>
 <li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Project of the function. If it is not provided, the provider project is used.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Region of function. Currently can be only “us-central1”. If it is not provided, the provider region is used.</li>
@@ -77,6 +78,12 @@ Cannot be set alongside <code class="docutils literal notranslate"><span class="
 <dt id="pulumi_gcp.cloudfunctions.Function.labels">
 <code class="descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function.labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>A set of key/value label pairs to assign to the function.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.cloudfunctions.Function.max_instances">
+<code class="descname">max_instances</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function.max_instances" title="Permalink to this definition">¶</a></dt>
+<dd><p>The limit on the maximum number of function instances that may coexist at a given time.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -182,7 +189,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.cloudfunctions.GetFunctionResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.cloudfunctions.</code><code class="descname">GetFunctionResult</code><span class="sig-paren">(</span><em>available_memory_mb=None</em>, <em>description=None</em>, <em>entry_point=None</em>, <em>environment_variables=None</em>, <em>event_triggers=None</em>, <em>https_trigger_url=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>runtime=None</em>, <em>service_account_email=None</em>, <em>source_archive_bucket=None</em>, <em>source_archive_object=None</em>, <em>source_repositories=None</em>, <em>timeout=None</em>, <em>trigger_bucket=None</em>, <em>trigger_http=None</em>, <em>trigger_topic=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudfunctions.GetFunctionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.cloudfunctions.</code><code class="descname">GetFunctionResult</code><span class="sig-paren">(</span><em>available_memory_mb=None</em>, <em>description=None</em>, <em>entry_point=None</em>, <em>environment_variables=None</em>, <em>event_triggers=None</em>, <em>https_trigger_url=None</em>, <em>labels=None</em>, <em>max_instances=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>runtime=None</em>, <em>service_account_email=None</em>, <em>source_archive_bucket=None</em>, <em>source_archive_object=None</em>, <em>source_repositories=None</em>, <em>timeout=None</em>, <em>trigger_bucket=None</em>, <em>trigger_http=None</em>, <em>trigger_topic=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudfunctions.GetFunctionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getFunction.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.cloudfunctions.GetFunctionResult.available_memory_mb">

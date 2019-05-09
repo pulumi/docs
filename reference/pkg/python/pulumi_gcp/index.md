@@ -20,6 +20,7 @@
 <li class="toctree-l1"><a class="reference internal" href="dns/">dns</a></li>
 <li class="toctree-l1"><a class="reference internal" href="endpoints/">endpoints</a></li>
 <li class="toctree-l1"><a class="reference internal" href="filestore/">filestore</a></li>
+<li class="toctree-l1"><a class="reference internal" href="firestore/">firestore</a></li>
 <li class="toctree-l1"><a class="reference internal" href="folder/">folder</a></li>
 <li class="toctree-l1"><a class="reference internal" href="iam/">iam</a></li>
 <li class="toctree-l1"><a class="reference internal" href="kms/">kms</a></li>

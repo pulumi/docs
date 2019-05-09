@@ -1,6 +1,18 @@
 <div class="section" id="module-pulumi_gcp.tpu">
 <span id="tpu"></span><h1>tpu<a class="headerlink" href="#module-pulumi_gcp.tpu" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
+<dt id="pulumi_gcp.tpu.GetTensorflowVersionsResult">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.tpu.</code><code class="descname">GetTensorflowVersionsResult</code><span class="sig-paren">(</span><em>project=None</em>, <em>versions=None</em>, <em>zone=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.tpu.GetTensorflowVersionsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getTensorflowVersions.</p>
+<dl class="attribute">
+<dt id="pulumi_gcp.tpu.GetTensorflowVersionsResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.tpu.GetTensorflowVersionsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_gcp.tpu.Node">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.tpu.</code><code class="descname">Node</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>accelerator_type=None</em>, <em>cidr_block=None</em>, <em>description=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>network=None</em>, <em>project=None</em>, <em>scheduling_config=None</em>, <em>tensorflow_version=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.tpu.Node" title="Permalink to this definition">¶</a></dt>
 <dd><p>A Cloud TPU instance.</p>

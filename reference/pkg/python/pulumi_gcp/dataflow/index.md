@@ -2,7 +2,7 @@
 <span id="dataflow"></span><h1>dataflow<a class="headerlink" href="#module-pulumi_gcp.dataflow" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.dataflow.Job">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.dataflow.</code><code class="descname">Job</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>max_workers=None</em>, <em>name=None</em>, <em>on_delete=None</em>, <em>parameters=None</em>, <em>project=None</em>, <em>region=None</em>, <em>service_account_email=None</em>, <em>temp_gcs_location=None</em>, <em>template_gcs_path=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.dataflow.Job" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.dataflow.</code><code class="descname">Job</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>max_workers=None</em>, <em>name=None</em>, <em>network=None</em>, <em>on_delete=None</em>, <em>parameters=None</em>, <em>project=None</em>, <em>region=None</em>, <em>service_account_email=None</em>, <em>subnetwork=None</em>, <em>temp_gcs_location=None</em>, <em>template_gcs_path=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.dataflow.Job" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a job on Dataflow, which is an implementation of Apache Beam running on Google Compute Engine. For more information see
 the official documentation for
 <a class="reference external" href="https://beam.apache.org">Beam</a> and <a class="reference external" href="https://cloud.google.com/dataflow/">Dataflow</a>.</p>
@@ -18,10 +18,12 @@ the official documentation for
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>max_workers</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of workers permitted to work on the job.  More workers may improve processing speed at additional cost.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the resource, required by Dataflow.</li>
+<li><strong>network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network to which VMs will be assigned. If it is not provided, “default” will be used.</li>
 <li><strong>on_delete</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – One of “drain” or “cancel”.  Specifies behavior of deletion during <code class="docutils literal notranslate"><span class="pre">terraform</span> <span class="pre">destroy</span></code>.  See above note.</li>
 <li><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key/Value pairs to be passed to the Dataflow job (as used in the template).</li>
 <li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project in which the resource belongs. If it is not provided, the provider project is used.</li>
 <li><strong>service_account_email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Service Account email used to create the job.</li>
+<li><strong>subnetwork</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The subnetwork to which VMs will be assigned. Should be of the form “regions/REGION/subnetworks/SUBNETWORK”.</li>
 <li><strong>temp_gcs_location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A writeable location on GCS for the Dataflow job to dump its temporary data.</li>
 <li><strong>template_gcs_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GCS path to the Dataflow job template.</li>
 <li><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone in which the created job should run. If it is not provided, the provider zone is used.</li>
@@ -40,6 +42,12 @@ the official documentation for
 <dt id="pulumi_gcp.dataflow.Job.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dataflow.Job.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>A unique name for the resource, required by Dataflow.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.dataflow.Job.network">
+<code class="descname">network</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dataflow.Job.network" title="Permalink to this definition">¶</a></dt>
+<dd><p>The network to which VMs will be assigned. If it is not provided, “default” will be used.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -70,6 +78,12 @@ the official documentation for
 <dt id="pulumi_gcp.dataflow.Job.state">
 <code class="descname">state</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dataflow.Job.state" title="Permalink to this definition">¶</a></dt>
 <dd><p>The current state of the resource, selected from the <a class="reference external" href="https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobState">JobState enum</a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.dataflow.Job.subnetwork">
+<code class="descname">subnetwork</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dataflow.Job.subnetwork" title="Permalink to this definition">¶</a></dt>
+<dd><p>The subnetwork to which VMs will be assigned. Should be of the form “regions/REGION/subnetworks/SUBNETWORK”.</p>
 </dd></dl>
 
 <dl class="attribute">

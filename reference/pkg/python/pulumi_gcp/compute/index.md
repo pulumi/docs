@@ -114,6 +114,7 @@ numbers of disks using the <code class="docutils literal notranslate"><span clas
 </ul>
 </li>
 </ul>
+<p><strong>Note:</strong> When using <code class="docutils literal notranslate"><span class="pre">compute_attached_disk</span></code> you <strong>must</strong> use <code class="docutils literal notranslate"><span class="pre">lifecycle.ignore_changes</span> <span class="pre">=</span> <span class="pre">[&quot;attached_disk&quot;]</span></code> on the <code class="docutils literal notranslate"><span class="pre">compute_instance</span></code> resource that has the disks attached. Otherwise the two resources will fight for control of the attached disk block.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -326,8 +327,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.compute.BackendService">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">BackendService</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>affinity_cookie_ttl_sec=None</em>, <em>backends=None</em>, <em>cdn_policy=None</em>, <em>connection_draining_timeout_sec=None</em>, <em>custom_request_headers=None</em>, <em>description=None</em>, <em>enable_cdn=None</em>, <em>health_checks=None</em>, <em>iap=None</em>, <em>load_balancing_scheme=None</em>, <em>name=None</em>, <em>port_name=None</em>, <em>project=None</em>, <em>protocol=None</em>, <em>security_policy=None</em>, <em>session_affinity=None</em>, <em>timeout_sec=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.BackendService" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a BackendService resource in the specified project using the data
-included in the request.</p>
+<dd><p>A Backend Service defines a group of virtual machines that will serve
+traffic for load balancing. This resource is a global backend service,
+appropriate for external load balancing. For internal load balancing, use
+a regional backend service instead.</p>
+<p>To get more information about BackendService, see:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/v1/backendServices">API documentation</a></li>
+<li>How-to Guides<ul>
+<li><a class="reference external" href="https://cloud.google.com/compute/docs/load-balancing/http/backend-service">Official Documentation</a></li>
+</ul>
+</li>
+</ul>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1306,6 +1317,24 @@ that protects this image.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.GetNetworkResult.id">
 <code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.GetNetworkResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gcp.compute.GetNodeTypesResult">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">GetNodeTypesResult</code><span class="sig-paren">(</span><em>names=None</em>, <em>project=None</em>, <em>zone=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GetNodeTypesResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getNodeTypes.</p>
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.GetNodeTypesResult.names">
+<code class="descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.GetNodeTypesResult.names" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of node types available in the given zone and project.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.GetNodeTypesResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.GetNodeTypesResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -2862,7 +2891,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.InstanceTemplate">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">InstanceTemplate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>can_ip_forward=None</em>, <em>description=None</em>, <em>disks=None</em>, <em>guest_accelerators=None</em>, <em>instance_description=None</em>, <em>labels=None</em>, <em>machine_type=None</em>, <em>metadata=None</em>, <em>metadata_startup_script=None</em>, <em>min_cpu_platform=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>network_interfaces=None</em>, <em>project=None</em>, <em>region=None</em>, <em>schedulings=None</em>, <em>service_account=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceTemplate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">InstanceTemplate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>can_ip_forward=None</em>, <em>description=None</em>, <em>disks=None</em>, <em>guest_accelerators=None</em>, <em>instance_description=None</em>, <em>labels=None</em>, <em>machine_type=None</em>, <em>metadata=None</em>, <em>metadata_startup_script=None</em>, <em>min_cpu_platform=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>network_interfaces=None</em>, <em>project=None</em>, <em>region=None</em>, <em>scheduling=None</em>, <em>service_account=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceTemplate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a VM instance template resource within GCE. For more information see
 <a class="reference external" href="https://cloud.google.com/compute/docs/instance-templates">the official documentation</a>
 and
@@ -2910,7 +2939,7 @@ resources in an instance template, which restricts the template to the
 region where that resource resides. For example, a custom <code class="docutils literal notranslate"><span class="pre">subnetwork</span></code>
 resource is tied to a specific region. Defaults to the region of the
 Provider if no value is given.</li>
-<li><strong>schedulings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The scheduling strategy to use. More details about
+<li><strong>scheduling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The scheduling strategy to use. More details about
 this configuration option are detailed below.</li>
 <li><strong>service_account</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Service account to attach to the instance. Structure is documented below.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Tags to attach to the instance.</li>
@@ -3036,8 +3065,8 @@ Provider if no value is given.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_gcp.compute.InstanceTemplate.schedulings">
-<code class="descname">schedulings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceTemplate.schedulings" title="Permalink to this definition">¶</a></dt>
+<dt id="pulumi_gcp.compute.InstanceTemplate.scheduling">
+<code class="descname">scheduling</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceTemplate.scheduling" title="Permalink to this definition">¶</a></dt>
 <dd><p>The scheduling strategy to use. More details about
 this configuration option are detailed below.</p>
 </dd></dl>
@@ -3356,6 +3385,90 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_gcp.compute.NetworkEndpointGroup">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">NetworkEndpointGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>default_port=None</em>, <em>description=None</em>, <em>name=None</em>, <em>network=None</em>, <em>network_endpoint_type=None</em>, <em>project=None</em>, <em>subnetwork=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.NetworkEndpointGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Network endpoint groups (NEGs) are zonal resources that represent
+collections of IP address and port combinations for GCP resources within a
+single subnet. Each IP address and port combination is called a network
+endpoint.</p>
+<p>Network endpoint groups can be used as backends in backend services for
+HTTP(S), TCP proxy, and SSL proxy load balancers. You cannot use NEGs as a
+backend with internal load balancers. Because NEG backends allow you to
+specify IP addresses and ports, you can distribute traffic in a granular
+fashion among applications or containers running within VM instances.</p>
+<blockquote>
+<div><strong>Warning:</strong> This resource is in beta, and should be used with the terraform-provider-google-beta provider.
+See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta resources.</div></blockquote>
+<p>To get more information about NetworkEndpointGroup, see:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/beta/networkEndpointGroups">API documentation</a></li>
+<li>How-to Guides<ul>
+<li><a class="reference external" href="https://cloud.google.com/load-balancing/docs/negs/">Official Documentation</a></li>
+</ul>
+</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.NetworkEndpointGroup.project">
+<code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.NetworkEndpointGroup.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.NetworkEndpointGroup.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.NetworkEndpointGroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.NetworkEndpointGroup.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.NetworkEndpointGroup.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_gcp.compute.NetworkPeering">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">NetworkPeering</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auto_create_routes=None</em>, <em>name=None</em>, <em>network=None</em>, <em>peer_network=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.NetworkPeering" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a network peering within GCE. For more information see
@@ -3442,6 +3555,171 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_gcp.compute.NetworkPeering.translate_input_property">
 <code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.NetworkPeering.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gcp.compute.NodeGroup">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">NodeGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>node_template=None</em>, <em>project=None</em>, <em>size=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.NodeGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents a NodeGroup resource to manage a group of sole-tenant nodes.</p>
+<p>To get more information about NodeGroup, see:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/v1/nodeGroups">API documentation</a></li>
+<li>How-to Guides<ul>
+<li><a class="reference external" href="https://cloud.google.com/compute/docs/nodes/">Sole-Tenant Nodes</a></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<div><strong>Warning:</strong> Due to limitations of the API, Terraform cannot update the
+number of nodes in a node group and changes to node group size either
+through Terraform config or through external changes will cause
+Terraform to delete and recreate the node group.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.NodeGroup.project">
+<code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.NodeGroup.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.NodeGroup.self_link">
+<code class="descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.NodeGroup.self_link" title="Permalink to this definition">¶</a></dt>
+<dd><p>The URI of the created resource.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.NodeGroup.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.NodeGroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.NodeGroup.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.NodeGroup.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gcp.compute.NodeTemplate">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">NodeTemplate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>node_affinity_labels=None</em>, <em>node_type=None</em>, <em>node_type_flexibility=None</em>, <em>project=None</em>, <em>region=None</em>, <em>server_binding=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.NodeTemplate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents a NodeTemplate resource. Node templates specify properties
+for creating sole-tenant nodes, such as node type, vCPU and memory
+requirments, node affinity labels, and region.</p>
+<p>To get more information about NodeTemplate, see:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/v1/nodeTemplates">API documentation</a></li>
+<li>How-to Guides<ul>
+<li><a class="reference external" href="https://cloud.google.com/compute/docs/nodes/">Sole-Tenant Nodes</a></li>
+</ul>
+</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.NodeTemplate.project">
+<code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.NodeTemplate.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.NodeTemplate.self_link">
+<code class="descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.NodeTemplate.self_link" title="Permalink to this definition">¶</a></dt>
+<dd><p>The URI of the created resource.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.NodeTemplate.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.NodeTemplate.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.NodeTemplate.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.NodeTemplate.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -3697,16 +3975,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.RegionBackendService">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">RegionBackendService</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>backends=None</em>, <em>connection_draining_timeout_sec=None</em>, <em>description=None</em>, <em>health_checks=None</em>, <em>name=None</em>, <em>project=None</em>, <em>protocol=None</em>, <em>region=None</em>, <em>session_affinity=None</em>, <em>timeout_sec=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionBackendService" title="Permalink to this definition">¶</a></dt>
-<dd><p>A Region Backend Service defines a regionally-scoped group of virtual machines that will serve traffic for load balancing.
-For more information see <a class="reference external" href="https://cloud.google.com/compute/docs/load-balancing/internal/">the official documentation</a>
-and <a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/regionBackendServices">API</a>.</p>
-<blockquote>
-<div><dl class="docutils">
-<dt><strong>Note</strong>\ <span class="classifier-delimiter">:</span> <span class="classifier">Region backend services can only be used when using internal load balancing. For external load balancing, use</span></dt>
-<dd><code class="docutils literal notranslate"><span class="pre">google_compute_backend_service</span></code> instead.</dd>
-</dl>
-</div></blockquote>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">RegionBackendService</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>backends=None</em>, <em>connection_draining_timeout_sec=None</em>, <em>description=None</em>, <em>health_checks=None</em>, <em>load_balancing_scheme=None</em>, <em>name=None</em>, <em>project=None</em>, <em>protocol=None</em>, <em>region=None</em>, <em>session_affinity=None</em>, <em>timeout_sec=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionBackendService" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Region Backend Service defines a regionally-scoped group of virtual
+machines that will serve traffic for load balancing.</p>
+<p>Region backend services can only be used when using internal load balancing.
+For external load balancing, use a global backend service instead.</p>
+<p>To get more information about RegionBackendService, see:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/regionBackendServices">API documentation</a></li>
+<li>How-to Guides<ul>
+<li><a class="reference external" href="https://cloud.google.com/compute/docs/load-balancing/internal/">Internal TCP/UDP Load Balancing</a></li>
+</ul>
+</li>
+</ul>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -3714,111 +3995,24 @@ and <a class="reference external" href="https://cloud.google.com/compute/docs/re
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>backends</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of backends that serve this BackendService.
-Structure is documented below.</li>
-<li><strong>connection_draining_timeout_sec</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Time for which instance will be drained
-(not accept new connections, but still work to finish started ones). Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</li>
-<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The textual description for the backend service.</li>
-<li><strong>health_checks</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies a list of health checks
-for checking the health of the backend service. Currently at most
-one health check can be specified, and a health check is required.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the backend service.</li>
-<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.</li>
-<li><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol for incoming requests. Defaults to
-<code class="docutils literal notranslate"><span class="pre">TCP</span></code>.</li>
-<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Region in which the created address should reside.
-If it is not provided, the provider region is used.</li>
-<li><strong>session_affinity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – How to distribute load. Options are <code class="docutils literal notranslate"><span class="pre">NONE</span></code> (no
-affinity), <code class="docutils literal notranslate"><span class="pre">CLIENT_IP</span></code>, <code class="docutils literal notranslate"><span class="pre">CLIENT_IP_PROTO</span></code>, or <code class="docutils literal notranslate"><span class="pre">CLIENT_IP_PORT_PROTO</span></code>.
-Defaults to <code class="docutils literal notranslate"><span class="pre">NONE</span></code>.</li>
-<li><strong>timeout_sec</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of secs to wait for a backend to respond
-to a request before considering the request failed. Defaults to <code class="docutils literal notranslate"><span class="pre">30</span></code>.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
 <dl class="attribute">
-<dt id="pulumi_gcp.compute.RegionBackendService.backends">
-<code class="descname">backends</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionBackendService.backends" title="Permalink to this definition">¶</a></dt>
-<dd><p>The list of backends that serve this BackendService.
-Structure is documented below.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.compute.RegionBackendService.connection_draining_timeout_sec">
-<code class="descname">connection_draining_timeout_sec</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionBackendService.connection_draining_timeout_sec" title="Permalink to this definition">¶</a></dt>
-<dd><p>Time for which instance will be drained
-(not accept new connections, but still work to finish started ones). Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.compute.RegionBackendService.description">
-<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionBackendService.description" title="Permalink to this definition">¶</a></dt>
-<dd><p>The textual description for the backend service.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.compute.RegionBackendService.fingerprint">
-<code class="descname">fingerprint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionBackendService.fingerprint" title="Permalink to this definition">¶</a></dt>
-<dd><p>The fingerprint of the backend service.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.compute.RegionBackendService.health_checks">
-<code class="descname">health_checks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionBackendService.health_checks" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies a list of health checks
-for checking the health of the backend service. Currently at most
-one health check can be specified, and a health check is required.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.compute.RegionBackendService.name">
-<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionBackendService.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the backend service.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_gcp.compute.RegionBackendService.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionBackendService.project" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.compute.RegionBackendService.protocol">
-<code class="descname">protocol</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionBackendService.protocol" title="Permalink to this definition">¶</a></dt>
-<dd><p>The protocol for incoming requests. Defaults to
-<code class="docutils literal notranslate"><span class="pre">TCP</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.compute.RegionBackendService.region">
-<code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionBackendService.region" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Region in which the created address should reside.
-If it is not provided, the provider region is used.</p>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.RegionBackendService.self_link">
 <code class="descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionBackendService.self_link" title="Permalink to this definition">¶</a></dt>
 <dd><p>The URI of the created resource.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.compute.RegionBackendService.session_affinity">
-<code class="descname">session_affinity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionBackendService.session_affinity" title="Permalink to this definition">¶</a></dt>
-<dd><p>How to distribute load. Options are <code class="docutils literal notranslate"><span class="pre">NONE</span></code> (no
-affinity), <code class="docutils literal notranslate"><span class="pre">CLIENT_IP</span></code>, <code class="docutils literal notranslate"><span class="pre">CLIENT_IP_PROTO</span></code>, or <code class="docutils literal notranslate"><span class="pre">CLIENT_IP_PORT_PROTO</span></code>.
-Defaults to <code class="docutils literal notranslate"><span class="pre">NONE</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.compute.RegionBackendService.timeout_sec">
-<code class="descname">timeout_sec</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionBackendService.timeout_sec" title="Permalink to this definition">¶</a></dt>
-<dd><p>The number of secs to wait for a backend to respond
-to a request before considering the request failed. Defaults to <code class="docutils literal notranslate"><span class="pre">30</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -5094,6 +5288,82 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_gcp.compute.SecurityScanConfig">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">SecurityScanConfig</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>authentication=None</em>, <em>blacklist_patterns=None</em>, <em>display_name=None</em>, <em>export_to_security_command_center=None</em>, <em>max_qps=None</em>, <em>project=None</em>, <em>schedule=None</em>, <em>starting_urls=None</em>, <em>target_platforms=None</em>, <em>user_agent=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SecurityScanConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>A ScanConfig resource contains the configurations to launch a scan.</p>
+<blockquote>
+<div><strong>Warning:</strong> This resource is in beta, and should be used with the terraform-provider-google-beta provider.
+See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta resources.</div></blockquote>
+<p>To get more information about ScanConfig, see:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://cloud.google.com/security-scanner/docs/reference/rest/v1beta/projects.scanConfigs">API documentation</a></li>
+<li>How-to Guides<ul>
+<li><a class="reference external" href="https://cloud.google.com/security-scanner/docs/scanning">Using Cloud Security Scanner</a></li>
+</ul>
+</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.SecurityScanConfig.project">
+<code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SecurityScanConfig.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.SecurityScanConfig.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SecurityScanConfig.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.SecurityScanConfig.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SecurityScanConfig.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_gcp.compute.SharedVPCHostProject">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">SharedVPCHostProject</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SharedVPCHostProject" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables the Google Compute Engine
@@ -5327,7 +5597,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.Subnetwork">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">Subnetwork</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>enable_flow_logs=None</em>, <em>ip_cidr_range=None</em>, <em>name=None</em>, <em>network=None</em>, <em>private_ip_google_access=None</em>, <em>project=None</em>, <em>region=None</em>, <em>secondary_ip_ranges=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Subnetwork" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">Subnetwork</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>enable_flow_logs=None</em>, <em>ip_cidr_range=None</em>, <em>log_config=None</em>, <em>name=None</em>, <em>network=None</em>, <em>private_ip_google_access=None</em>, <em>project=None</em>, <em>region=None</em>, <em>secondary_ip_ranges=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Subnetwork" title="Permalink to this definition">¶</a></dt>
 <dd><p>A VPC network is a virtual version of the traditional physical networks
 that exist within and between physical data centers. A VPC network
 provides connectivity for your Compute Engine virtual machine (VM)
@@ -5893,6 +6163,90 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_gcp.compute.TargetHttpsProxy.translate_input_property">
 <code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.TargetHttpsProxy.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_gcp.compute.TargetInstance">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">TargetInstance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>instance=None</em>, <em>name=None</em>, <em>nat_policy=None</em>, <em>project=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.TargetInstance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents a TargetInstance resource which defines an endpoint instance
+that terminates traffic of certain protocols. In particular, they are used
+in Protocol Forwarding, where forwarding rules can send packets to a
+non-NAT’ed target instance. Each target instance contains a single
+virtual machine instance that receives and handles traffic from the
+corresponding forwarding rules.</p>
+<p>To get more information about TargetInstance, see:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://cloud.google.com/compute/docs/reference/v1/targetInstances">API documentation</a></li>
+<li>How-to Guides<ul>
+<li><a class="reference external" href="https://cloud.google.com/compute/docs/protocol-forwarding">Using Protocol Forwarding</a></li>
+</ul>
+</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.TargetInstance.project">
+<code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.TargetInstance.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.compute.TargetInstance.self_link">
+<code class="descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.TargetInstance.self_link" title="Permalink to this definition">¶</a></dt>
+<dd><p>The URI of the created resource.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.TargetInstance.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.TargetInstance.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_gcp.compute.TargetInstance.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.TargetInstance.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -6534,6 +6888,13 @@ and <a class="reference external" href="https://cloud.google.com/compute/docs/re
 <dt id="pulumi_gcp.compute.get_network">
 <code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_network</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_network" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a network within GCE from its name.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_gcp.compute.get_node_types">
+<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_node_types</code><span class="sig-paren">(</span><em>project=None</em>, <em>zone=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_node_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides available node types for Compute Engine sole-tenant nodes in a zone
+for a given project. For more information, see <a class="reference external" href="https://cloud.google.com/compute/docs/nodes/#types">the official documentation</a> and <a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/v1/nodeTypes">API</a>.</p>
 </dd></dl>
 
 <dl class="function">
