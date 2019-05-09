@@ -19,8 +19,8 @@ In this tutorial, we'll use TypeScript to build and deploy a simple container us
 1.  Run `pulumi new`:
 
     ```bash
-    $ pulumi new aws-typescript --dir container-quickstart
-    $ cd container-quickstart
+    $ mkdir container-quickstart && cd container-quickstart
+    $ pulumi new aws-typescript
     ```
 
 1.  Replace the contents of `index.ts` with the following:

@@ -32,23 +32,14 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
 
 1.  In a new folder `gke-hello-world`, create an empty project with `pulumi new`.
 
-    Alternatively, the following command will create a base Pulumi program in TypeScript as well as the `gke-hello-world` folder:
-
     ```bash
-    pulumi new typescript --dir gke-hello-world
+    $ mkdir gke-hello-world && cd gke-hello-world
+    $ pulumi new typescript
     ```
 
     * Enter in a Pulumi project name, and description to detail what this
       Pulumi program does
     * Enter in a name for the [Pulumi stack](https://pulumi.io/reference/stack.html), which is an instance of our Pulumi program, and is used to distinguish amongst different development phases and environments of your work streams.
-    * Select 'no' when prompted to 'perform this update,' as we'll be
-    interactively editing files in the upcoming steps.
-
-    Change directories to the newly created Pulumi project.
-
-    ```bash
-    cd gke-hello-world
-    ```
 
 1. Add the required dependencies:
 

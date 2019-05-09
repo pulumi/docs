@@ -12,11 +12,11 @@ Pulumi supports programs written in Python 3.
 
 ## Getting Started
 
-The fastest way to get started with Pulumi Python is by using a template.  From the directory in which you'd like to create a new project:
+The fastest way to get started with Pulumi Python is by using a template.  From an empty directory in which you'd like to create a new project:
 
 ```
+$ mkdir myproject && cd myproject
 $ pulumi new python
-Your project was created successfully.
 ```
 
 This will leave behind a `Pulumi.yaml` file, containing some minimal metadata about your project (including a name and description which you may wish to change), a `requirements.txt` file, where you will specify your dependencies (see #pypi-packages below), and a `__main__.py` file, containing your program.

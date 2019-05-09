@@ -13,8 +13,8 @@ In this tutorial, we'll use JavaScript to deploy a simple nginx container to Azu
 
 1.  In a new folder `webserver`, create an empty project with `pulumi new`. Make sure you have run `az login` or configured credentials for Azure.
     ```
-    $ pulumi new azure-javascript --dir webserver
-    $ cd webserver
+    $ mkdir webserver && cd webserver
+    $ pulumi new azure-javascript
     ```
 
 1.  Open `index.js` and replace the contents with the following:

@@ -15,20 +15,13 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Elastic Conta
     recommendation to begin your journey.
 
     ```bash
-    $ pulumi new aws-typescript --dir eks-hello-world
+    $ mkdir eks-hello-world && cd eks-hello-world
+    $ pulumi new aws-typescript
     ```
 
     * Enter in a Pulumi project name, and description to detail what this
       Pulumi program does
     * Enter in a name for the [Pulumi stack](https://pulumi.io/reference/stack.html), which is an instance of our Pulumi program, and is used to distinguish amongst different development phases and environments of your work streams.
-    * Select 'no' when prompted to 'perform this update,' as we'll be
-    interactively editing files in the upcoming steps.
-
-    Change directories to the newly created Pulumi project.
-
-    ```bash
-    $ cd eks-hello-world
-    ```
 
 1. Add the required dependencies:
 
@@ -75,7 +68,7 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Elastic Conta
     ```
 1.  To preview and deploy changes, run `pulumi up` and select "yes."
 
-    The `update` sub-command shows a preview of the resources that will be created
+    The `up` sub-command shows a preview of the resources that will be created
     and prompts on whether to proceed with the deployment. Note that the stack
     itself is counted as a resource, though it does not correspond
     to a physical cloud resource.

@@ -14,7 +14,8 @@ In this tutorial, we'll use Python to deploy an instance of Azure Kubernetes Ser
     recommendation to begin your journey.
 
     ```bash
-    $ pulumi new azure-python --dir aks-hello-world
+    $ mkdir aks-hello-world && cd aks-hello-world
+    $ pulumi new azure-python
     ```
 
     * Enter in a Pulumi project name, and description to detail what this
@@ -190,7 +191,7 @@ In this tutorial, we'll use Python to deploy an instance of Azure Kubernetes Ser
 
 1.  To preview and deploy changes, run `pulumi up` and select "yes."
 
-    The `update` sub-command shows a preview of the resources that will be created
+    The `up` sub-command shows a preview of the resources that will be created
     and prompts on whether to proceed with the deployment. Note that the stack
     itself is counted as a resource, though it does not correspond
     to a physical cloud resource.
