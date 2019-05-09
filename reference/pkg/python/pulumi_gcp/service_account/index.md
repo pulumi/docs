@@ -113,6 +113,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_gcp.service_account.GetAccountAccessTokenResult">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.service_account.</code><code class="descname">GetAccountAccessTokenResult</code><span class="sig-paren">(</span><em>access_token=None</em>, <em>delegates=None</em>, <em>lifetime=None</em>, <em>scopes=None</em>, <em>target_service_account=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.GetAccountAccessTokenResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getAccountAccessToken.</p>
+<dl class="attribute">
+<dt id="pulumi_gcp.service_account.GetAccountAccessTokenResult.access_token">
+<code class="descname">access_token</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.service_account.GetAccountAccessTokenResult.access_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">access_token</span></code> representing the new generated identity.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.service_account.GetAccountAccessTokenResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.service_account.GetAccountAccessTokenResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_gcp.service_account.GetAccountKeyResult">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.service_account.</code><code class="descname">GetAccountKeyResult</code><span class="sig-paren">(</span><em>key_algorithm=None</em>, <em>name=None</em>, <em>project=None</em>, <em>public_key=None</em>, <em>public_key_type=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.GetAccountKeyResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAccountKey.</p>
@@ -596,6 +614,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="descclassname">pulumi_gcp.service_account.</code><code class="descname">get_account</code><span class="sig-paren">(</span><em>account_id=None</em>, <em>project=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.get_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the service account from a project. For more information see
 the official <a class="reference external" href="https://cloud.google.com/compute/docs/access/service-accounts">API</a> documentation.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_gcp.service_account.get_account_access_token">
+<code class="descclassname">pulumi_gcp.service_account.</code><code class="descname">get_account_access_token</code><span class="sig-paren">(</span><em>delegates=None</em>, <em>lifetime=None</em>, <em>scopes=None</em>, <em>target_service_account=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.get_account_access_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>This data source provides a google <code class="docutils literal notranslate"><span class="pre">oauth2</span></code> <code class="docutils literal notranslate"><span class="pre">access_token</span></code> for a different service account than the one initially running the script.</p>
+<p>For more information see
+<a class="reference external" href="https://cloud.google.com/iam/docs/creating-short-lived-service-account-credentials">the official documentation</a> as well as <a class="reference external" href="https://cloud.google.com/iam/credentials/reference/rest/v1/projects.serviceAccounts/generateAccessToken">iamcredentials.generateAccessToken()</a></p>
 </dd></dl>
 
 <dl class="function">

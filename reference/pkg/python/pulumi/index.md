@@ -208,7 +208,7 @@ resource.</li>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>parent</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi.Resource" title="pulumi.Resource"><em>Resource</em></a><em>]</em>) – If provided, the currently-constructing resource should be the child of
 the provided parent resource.</li>
-<li><strong>depends_on</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><a class="reference internal" href="#pulumi.Resource" title="pulumi.Resource"><em>Resource</em></a><em>]</em><em>]</em>) – If provided, the currently-constructing resource depends on the
+<li><strong>depends_on</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../pulumi_kubernetes/helm/v2/#pulumi_kubernetes.helm.v2.List" title="pulumi_kubernetes.helm.v2.List"><em>List</em></a><em>[</em><a class="reference internal" href="#pulumi.Resource" title="pulumi.Resource"><em>Resource</em></a><em>]</em><em>]</em>) – If provided, the currently-constructing resource depends on the
 provided list of resources.</li>
 <li><strong>protect</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em>) – If provided and True, this resource is not allowed to be deleted.</li>
 <li><strong>provider</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#pulumi.ProviderResource" title="pulumi.ProviderResource"><em>ProviderResource</em></a><em>]</em>) – An optional provider to use for this resource’s CRUD operations.
@@ -217,7 +217,7 @@ provider is pulled from the parent’s provider bag.</li>
 <li><strong>providers</strong> (<em>Optional</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em><a class="reference internal" href="#pulumi.ProviderResource" title="pulumi.ProviderResource"><em>ProviderResource</em></a><em>]</em><em>]</em>) – An optional set of providers to use for child resources. Keyed
 by package name (e.g. “aws”)</li>
 <li><strong>delete_before_replace</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em>) – If provided and True, this resource must be deleted before it is replaced.</li>
-<li><strong>ignore_changes</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>string</em><em>]</em><em>]</em>) – If provided, a list of property names to ignore for purposes of updates
+<li><strong>ignore_changes</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../pulumi_kubernetes/helm/v2/#pulumi_kubernetes.helm.v2.List" title="pulumi_kubernetes.helm.v2.List"><em>List</em></a><em>[</em><em>string</em><em>]</em><em>]</em>) – If provided, a list of property names to ignore for purposes of updates
 or replacements.</li>
 </ul>
 </td>
@@ -644,7 +644,7 @@ value as well as the Resource the value came from.  This allows for a precise �
 dependency graph’ to be created, which properly tracks the relationship between resources.</p>
 <dl class="method">
 <dt id="pulumi.Output.__getitem__">
-<code class="descname">__getitem__</code><span class="sig-paren">(</span><em>key: Any</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[typing.Any][Any]<a class="headerlink" href="#pulumi.Output.__getitem__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__getitem__</code><span class="sig-paren">(</span><em>key: Any</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[Any]<a class="headerlink" href="#pulumi.Output.__getitem__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Syntax sugar for looking up attributes dynamically off of outputs.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -662,7 +662,7 @@ dependency graph’ to be created, which properly tracks the relationship betwee
 
 <dl class="method">
 <dt id="pulumi.Output.__getattr__">
-<code class="descname">__getattr__</code><span class="sig-paren">(</span><em>item: str</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[typing.Any][Any]<a class="headerlink" href="#pulumi.Output.__getattr__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__getattr__</code><span class="sig-paren">(</span><em>item: str</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[Any]<a class="headerlink" href="#pulumi.Output.__getattr__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Syntax sugar for retrieving attributes off of outputs.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -680,7 +680,7 @@ dependency graph’ to be created, which properly tracks the relationship betwee
 
 <dl class="method">
 <dt id="pulumi.Output.apply">
-<code class="descname">apply</code><span class="sig-paren">(</span><em>func: Callable[[T], Union[U, Awaitable[U], Output[T]]]</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[~U][U]<a class="headerlink" href="#pulumi.Output.apply" title="Permalink to this definition">¶</a></dt>
+<code class="descname">apply</code><span class="sig-paren">(</span><em>func: Callable[T, Union[T, Awaitable[T], Output[T]]]</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[U]<a class="headerlink" href="#pulumi.Output.apply" title="Permalink to this definition">¶</a></dt>
 <dd><p>Transforms the data of the output with the provided func.  The result remains a
 Output so that dependent resources can be properly tracked.</p>
 <p>‘func’ is not allowed to make resources.</p>
@@ -692,7 +692,7 @@ during ‘pulumi preview’ (as the values of resources are of course may not be
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>func</strong> (<em>Callable</em><em>[</em><em>[</em><em>T</em><em>]</em><em>,</em><em>Input</em><em>[</em><em>U</em><em>]</em><em>]</em>) – A function that will, given this Output’s value, transform the value to
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>func</strong> (<a class="reference internal" href="../pulumi_kubernetes/helm/v2/#pulumi_kubernetes.helm.v2.Callable" title="pulumi_kubernetes.helm.v2.Callable"><em>Callable</em></a><em>[</em><em>[</em><em>T</em><em>]</em><em>,</em><em>Input</em><em>[</em><em>U</em><em>]</em><em>]</em>) – A function that will, given this Output’s value, transform the value to
 an Input of some kind, where an Input is either a prompt value, a Future, or another Output of the given
 type.</td>
 </tr>
@@ -706,7 +706,7 @@ type.</td>
 
 <dl class="staticmethod">
 <dt id="pulumi.Output.from_input">
-<em class="property">static </em><code class="descname">from_input</code><span class="sig-paren">(</span><em>val: Union[T, Awaitable[T], Output[T]]</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[~T][T]<a class="headerlink" href="#pulumi.Output.from_input" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">from_input</code><span class="sig-paren">(</span><em>val: Union[T, Awaitable[T], Output[T]]</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[T]<a class="headerlink" href="#pulumi.Output.from_input" title="Permalink to this definition">¶</a></dt>
 <dd><p>Takes an Input value and produces an Output value from it, deeply unwrapping nested Input values as necessary
 given the type.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -725,7 +725,7 @@ given the type.</p>
 
 <dl class="staticmethod">
 <dt id="pulumi.Output.all">
-<em class="property">static </em><code class="descname">all</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[typing.List[~T]][List[T]]<a class="headerlink" href="#pulumi.Output.all" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">all</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[List[T]]<a class="headerlink" href="#pulumi.Output.all" title="Permalink to this definition">¶</a></dt>
 <dd><p>Produces an Output of Lists from a List of Inputs.</p>
 <p>This function can be used to combine multiple, separate Inputs into a single
 Output which can then be used as the target of <code class="docutils literal notranslate"><span class="pre">apply</span></code>. Resource dependencies
@@ -734,11 +734,11 @@ are preserved in the returned Output.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>args</strong> (<em>List</em><em>[</em><em>Input</em><em>[</em><em>T</em><em>]</em><em>]</em>) – A list of Inputs to convert.</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>args</strong> (<a class="reference internal" href="../pulumi_kubernetes/helm/v2/#pulumi_kubernetes.helm.v2.List" title="pulumi_kubernetes.helm.v2.List"><em>List</em></a><em>[</em><em>Input</em><em>[</em><em>T</em><em>]</em><em>]</em>) – A list of Inputs to convert.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">An output of lists, converted from an Input to prompt values.</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pulumi.Output" title="pulumi.Output">Output</a>[List[T]]</td>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pulumi.Output" title="pulumi.Output">Output</a>[<a class="reference internal" href="../pulumi_kubernetes/helm/v2/#pulumi_kubernetes.helm.v2.List" title="pulumi_kubernetes.helm.v2.List">List</a>[T]]</td>
 </tr>
 </tbody>
 </table>

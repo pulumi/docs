@@ -2,7 +2,7 @@
 <span id="pubsub"></span><h1>pubsub<a class="headerlink" href="#module-pulumi_gcp.pubsub" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.pubsub.Subscription">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.pubsub.</code><code class="descname">Subscription</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>ack_deadline_seconds=None</em>, <em>labels=None</em>, <em>message_retention_duration=None</em>, <em>name=None</em>, <em>project=None</em>, <em>push_config=None</em>, <em>retain_acked_messages=None</em>, <em>topic=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.pubsub.Subscription" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.pubsub.</code><code class="descname">Subscription</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>ack_deadline_seconds=None</em>, <em>expiration_policy=None</em>, <em>labels=None</em>, <em>message_retention_duration=None</em>, <em>name=None</em>, <em>project=None</em>, <em>push_config=None</em>, <em>retain_acked_messages=None</em>, <em>topic=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.pubsub.Subscription" title="Permalink to this definition">¶</a></dt>
 <dd><p>A named resource representing the stream of messages from a single,
 specific topic, to be delivered to the subscribing application.</p>
 <p>To get more information about Subscription, see:</p>
