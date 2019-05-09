@@ -171,6 +171,7 @@ var gitHubBaseURLs = map[string]string{
 	"@pulumi/docker":     "https://github.com/pulumi/pulumi-docker/blob/{githash}/sdk/nodejs",
 	"@pulumi/eks":        "https://github.com/pulumi/pulumi-eks/blob/{githash}/nodejs/eks",
 	"@pulumi/kubernetes": "https://github.com/pulumi/pulumi-kubernetes/blob/{githash}/sdk/nodejs",
+	"@pulumi/mysql":      "https://github.com/pulumi/pulumi-mysql/blob/{githash}/sdk/nodejs",
 	"@pulumi/gcp":        "https://github.com/pulumi/pulumi-gcp/blob/{githash}/sdk/nodejs",
 	"@pulumi/openstack":  "https://github.com/pulumi/pulumi-openstack/blob/{githash}/sdk/nodejs",
 	"@pulumi/vsphere":    "https://github.com/pulumi/pulumi-vsphere/blob/{githash}/sdk/nodejs",
