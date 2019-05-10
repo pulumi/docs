@@ -19,8 +19,8 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container us
 1.  Run `pulumi new`:
 
     ```bash
-    $ pulumi new javascript --dir container-quickstart
-    $ cd container-quickstart
+    $ mkdir container-quickstart && cd container-quickstart
+    $ pulumi new javascript
     ```
 
 1.  Replace the contents of `index.js` with the following:

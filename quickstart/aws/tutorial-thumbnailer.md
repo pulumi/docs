@@ -21,8 +21,8 @@ and a video walkthrough of this example is [available on YouTube](https://www.yo
 1.  Run `pulumi new`:
 
     ```bash
-    $ pulumi new aws-typescript --dir video-thumbnail
-    $ cd video-thumbnail
+    $ mkdir video-thumbnail && cd video-thumbnail
+    $ pulumi new aws-typescript
     ```
 
 1.  Replace the contents of `index.ts` with the following:

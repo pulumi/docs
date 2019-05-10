@@ -17,11 +17,11 @@ Any Node.js version after 6.10.x is supported, as long it is under **Active LTS*
 
 ## Getting Started
 
-The fastest way to get started in JavaScript is using a template.  From the directory in which you'd like to create a new project:
+The fastest way to get started in JavaScript is using a template.  From an empty directory in which you'd like to create a new project:
 
 ```bash
+$ mkdir myproject && cd myproject
 $ pulumi new javascript
-Your project was created successfully.
 ```
 
 This will create a `Pulumi.yaml` [project file](./project.html), a `package.json` file for dependencies, and an `index.js` file, containing your program. The name of the directory is used as the project name in `Pulumi.yaml`.
@@ -35,8 +35,8 @@ If you would like full control of the TypeScript build process, you can compile 
 The fastest way to get started with Pulumi in TypeScript, is to use a template:
 
 ```bash
+$ mkdir myproject && cd myproject
 $ pulumi new typescript
-Your project was created successfully.
 ```
 
 This will auto-generate all the basic artifacts required to use TypeScript. If you prefer, you can instead run the following manual steps.

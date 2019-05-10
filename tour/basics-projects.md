@@ -14,7 +14,8 @@ Use [`pulumi new <template-name>`](/reference/cli/pulumi_new.html) to quickly sc
 
 <div class="language-prologue-javascript"></div>
 ```bash
-$ pulumi new aws-javascript --dir ahoy-pulumi
+$ mkdir ahoy-pulumi && cd ahoy-pulumi
+$ pulumi new aws-javascript
 This command will walk you through creating a new Pulumi project.
 Enter a value or leave blank to accept the default, and press <ENTER>.
 Press ^C at any time to quit.
@@ -29,7 +30,8 @@ New project is configured and ready to deploy with 'pulumi up'.
 
 <div class="language-prologue-typescript"></div>
 ```bash
-$ pulumi new aws-typescript --dir ahoy-pulumi
+$ mkdir ahoy-pulumi && cd ahoy-pulumi
+$ pulumi new aws-typescript
 This command will walk you through creating a new Pulumi project.
 Enter a value or leave blank to accept the default, and press <ENTER>.
 Press ^C at any time to quit.
@@ -44,7 +46,8 @@ New project is configured and ready to deploy with 'pulumi up'.
 
 <div class="language-prologue-python"></div>
 ```bash
-$ pulumi new aws-python --dir ahoy-pulumi
+$ mkdir ahoy-pulumi && cd ahoy-pulumi
+$ pulumi new aws-python
 This command will walk you through creating a new Pulumi project.
 Enter a value or leave blank to accept the default, and press <ENTER>.
 Press ^C at any time to quit.
@@ -59,7 +62,8 @@ New project is configured and ready to deploy with 'pulumi up'.
 
 <div class="language-prologue-go"></div>
 ```bash
-$ pulumi new aws-go --dir ahoy-pulumi
+$ mkdir ahoy-pulumi && cd ahoy-pulumi
+$ pulumi new aws-go
 This command will walk you through creating a new Pulumi project.
 Enter a value or leave blank to accept the default, and press <ENTER>.
 Press ^C at any time to quit.

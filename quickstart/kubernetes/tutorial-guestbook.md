@@ -45,10 +45,11 @@ To start, we'll need to create a project and stack (a deployment target) for our
 1.  To create a new Pulumi project, let's use a template:
 
     ```shell
-    $ pulumi new kubernetes-typescript --dir k8s-guestbook && cd k8s-guestbook
+    $ mkdir k8s-guestbook && cd k8s-guestbook
+    $ pulumi new kubernetes-typescript
     ```
 
-    This command will have initialized a fresh project in the `k8s-guestbook` directory and `cd`'d into it.
+    This command will initialize a fresh project in the `k8s-guestbook` newly-created directory.
 
 2.  Next, replace the minimal contents of the template's `index.ts` file with the full guestbook:
 

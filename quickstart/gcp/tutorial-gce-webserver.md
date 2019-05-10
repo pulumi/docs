@@ -11,11 +11,11 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver Virtual Mach
 
 ## Create a Virtual Machine with SSH access {#webserver}
 
-1.  In a new folder `webserver`, create an empty project with `pulumi new`. Choose a Google Cloud `project` you have access to creater Virtual Machines within.
+1.  In a new folder `webserver`, create an empty project with `pulumi new`. Choose a Google Cloud `project` you have access to create Virtual Machines within.
 
     ```
-    $ pulumi new gcp-javascript --dir webserver
-    $ cd webserver
+    $ mkdir webserver && cd webserver
+    $ pulumi new gcp-javascript
     ...
     gcp:project: The Google Cloud project to deploy into: <your project>
     ```

@@ -14,8 +14,8 @@ In this tutorial, we'll show how to create a simple REST API that counts the num
 1.  Run `pulumi new`:
 
     ```bash
-    $ pulumi new aws-javascript --dir hello-http
-    $ cd hello-http
+    $ mkdir hello-http && cd hello-http
+    $ pulumi new aws-javascript
     ```
 
 1.  Replace the contents of `index.js` with the following:

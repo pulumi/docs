@@ -23,8 +23,7 @@ concepts to explore additional containers, serverless, and infrastructure tutori
 Let's use the Pulumi CLI to initialize a new project:
 
 ```
-mkdir ahoy-pulumi 
-cd ahoy-pulumi
+mkdir ahoy-pulumi && cd ahoy-pulumi
 pulumi new hello-aws-javascript
 ```
 
