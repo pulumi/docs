@@ -3,49 +3,40 @@ title: Teams
 redirect_from: "/reference/service/collaboration.html"
 ---
 
-The Pulumi Cloud Console offers multiple ways for people to collaborate on a
-stack.
+The Pulumi Cloud Console offers role-based access control using teams.
 
-> Note: This feature is only available on organizations using the Pulumi Team Edition.
-> For more information, see [Organizations](./orgs.html).
+> Note: This feature is only available to organizations using the Pulumi Team Pro or
+> Enterprise editions. To learn more about Pulumi editions, see [pulumi.com](https://www.pulumi.com/pricing/).
 
 ## Teams
 
-Teams allow organization admins to assign permissions to access a group of stacks
+Teams allow organization administrators to assign permissions for accessing stacks
 to a group of users.
 
-### Adding a Team
+### Creating a Team
 
 You can add a new team by going to the organization's TEAMS tab, and then
 clicking the NEW button. Only organization administrators can create or update teams.
 
-Similar to importing a GitHub organization into Pulumi, teams are imported from
-GitHub. To create a new team, simply create one within the backing GitHub
-organization and then import it within the Pulumi Cloud Console.
+![Adding a new team](../../images/reference/service/new-team-card.png)
 
-![Adding a new Pulumi team](../../images/reference/service/add-github-team-card.png)
+#### GitHub-based Teams
 
-The membership of a Pulumi team is managed on GitHub, while set of stack
+If your Pulumi organization is backed by GitHub, then you can import your existing
+GitHub teams into Pulumi.
+
+For these teams, membership is managed on GitHub, while the set of stack
 permissions granted to team members is managed on the Pulumi Cloud Console.
 
-## Stack Collaborators
+![Importing a GitHub-based team](../../images/reference/service/add-github-team-card.png)
 
-Stack collaborators are Pulumi users who have been explicitly invited to
-collaborate on a stack. Inviting stack collaborators allows people who are not
-members of the stack's containing organization to have access to a stack.
+## Team / Stack Permissions
 
-On organization members with `ADMIN` permission will be able to invite stack
-collaborators.
+Membership within a team will grant a Pulumi user a specific permission level for each
+stack in the team. For example, members of `network-team` may have `WRITE` access to the
+`backend/production` stack, but only `READ` access to `datastore/production`.
 
-### Inviting Collaborators
+![Editing team stacks and permissions](../../images/reference/service/editing-stack-permissions.png)
 
-To invite a stack collaborator, navigate to the stack's SETTINGS page and click
-the INVITE button.
-
-![Inviting a stack collaborator](../../images/reference/service/invite-stack-collaborator.png)
-
-Stack collaborators are added by email. They will recieve a requested to accept
-the invite, and only then be granted access to the stack. The invite will
-expire and no longer be available after five days.
-
-All stack collaborators are given `WRITE` permission to the stack.
+For more information about stack permissions see
+[Roles and Access Controls](./roles-and-access-controls.html).
