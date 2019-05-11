@@ -1,117 +1,118 @@
 // Font smoothing mixin
 @mixin font-smoothing() {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 //clearfix
 @mixin clearfix() {
-	&:before, &:after {
-		content: " ";
-		display: block;
-		clear: both;
-	}
+    &:before, &:after {
+        content: " ";
+        display: block;
+        clear: both;
+    }
 }
 
 //font calling
 @mixin opensans($weight:null){
-	font-family: 'Open Sans', sans-serif;
-	
-	@if($weight){
-		font-weight: $weight;
-	}
+    font-family: 'Open Sans', sans-serif;
+
+    @if($weight){
+        font-weight: $weight;
+    }
 }
 
 @mixin ptMono($weight:null){
-	font-family: 'PT Mono', monospace;
-	
-	@if($weight){
-		font-weight: $weight;
-	}
+    font-family: 'PT Mono', monospace;
+
+    @if($weight){
+        font-weight: $weight;
+    }
 }
 
 @mixin codeFont($weight:null){
-	font-family: 'Menlo', 'Monaco', 'Consolas', monospace;
-	
-	@if($weight){
-		font-weight: $weight;
-	}
+    font-family: 'Menlo', 'Monaco', 'Consolas', monospace;
+
+    @if($weight){
+        font-weight: $weight;
+    }
 }
- 
+
 
 @mixin ubuntu($weight:null){
     font-family: 'Ubuntu', sans-serif;
-	
-	@if($weight){
-		font-weight: $weight;
-	}
+
+    @if($weight){
+        font-weight: $weight;
+    }
 }
 
 @mixin fas() {
-	font-family: "Font Awesome 5 Free";
-	font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
 }
 
 @mixin fa() {
-	font-family: "Font Awesome 5 Free";
-	font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
 }
 
 @mixin far() {
-	font-family: "Font Awesome 5 Free";
-	font-weight: normal;
+    font-family: "Font Awesome 5 Free";
+    font-weight: normal;
 }
 
 @mixin fab() {
-	font-family: "Font Awesome 5 Brands";
-	font-weight: normal;
+    font-family: "Font Awesome 5 Brands";
+    font-weight: normal;
 }
 
 //base typography
 @mixin base-type(){
-	@include opensans(400);
-	font-size: 16px;
-	line-height: 1.625;
-	letter-spacing: normal;
+    @include opensans(400);
+    font-size: 16px;
+    line-height: 1.625;
+    letter-spacing: normal;
 }
 
 //animation
 @mixin transition() {
-	transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
 }
 
 //button
 @mixin button() {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	border: none;
-	outline: none;
-	background: none;
-	text-decoration: none;
-	@include transition();
-	
-	@include opensans(400);
-	font-size: 16px;
-	line-height: 1.375;
-	background-color: $blue;
-	color: white;
-	padding: 19px 25px;
-    border-radius: 3px;
-	display: inline-block;
-	text-align: center;
-	
-	&:hover{
-		color: white;
-		background-color: $blue-hover;
-	}
-	
-	&:active, &:focus {
-		color: white;
-		outline: none;
-		text-decoration: none;
-	}
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+    text-decoration: none;
+    @include transition();
+
+    @include opensans(400);
+    font-size: 16px;
+    line-height: 1.375;
+    background-color: $blue;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 4px;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid $blue-hover;
+
+    &:hover {
+        color: white;
+        background-color: $blue-hover;
+    }
+
+    &:active, &:focus {
+        color: white;
+        outline: none;
+        text-decoration: none;
+    }
 }
 
 //bg cover
@@ -123,31 +124,31 @@
 
 //gradients
 @mixin gradient($left, $right, $dir:""){
-	@if($dir != ""){
-		background: linear-gradient($dir, $left, $right);
-	}
-	@else {
-		background: linear-gradient(to right, $left, $right);
-	}
-	
+    @if($dir != ""){
+        background: linear-gradient($dir, $left, $right);
+    }
+    @else {
+        background: linear-gradient(to right, $left, $right);
+    }
+
 }
 
 @mixin reset-ul(){
-	margin: 0;
-	padding: 0;
-	
-	li {
-		padding: 0;
-		margin: 0;
-		
-		&:before {
-			display: none;
-		}
-	}
+    margin: 0;
+    padding: 0;
+
+    li {
+        padding: 0;
+        margin: 0;
+
+        &:before {
+            display: none;
+        }
+    }
 }
 
 @mixin box-shadow(){
-	box-shadow: 0 8px 24px 0 rgba(0,0,0,0.08);
+    box-shadow: 0 8px 24px 0 rgba(0,0,0,0.08);
 }
 
 //transparent color

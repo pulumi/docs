@@ -35,24 +35,33 @@ $primary2: #00acf2; // primary blue
 // Styling for the search form at the top of the page.
 // Useful docs: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/search
 #search-form {
-    @media(min-width: $screen-md){
-        position: absolute;
-        top: 50%;
-        right: 120px;
-        transform: translateY(-50%);
-    }
-
-    padding-left: 8px;
 
     // Just make the two elements adjacent to each other.
     display: flex;
-    height: 38px;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 4px;
+    border: 1px solid #5C3073;
+    margin-right: 22px;
+    width: 100%;
+
+    @media(min-width: $screen-md) {
+        margin-right: 16px;
+        width: auto;
+    }
 
     input {
         outline: 0;
-        border: 0;
+        border: none;
+        border-radius: 0;
+        font-size: 14px;
+        padding: 0 12px;
+        width: 100%;
+        flex: 1;
 
-        padding-left: 8px;
+        @media(min-width: $screen-md) {
+            width: 180px;
+        }
 
         // WebKit hijacks the size of search forms. Old blog post for context:
         // http://tonibarrett.com/forcing-my-style-onto-input-typesearch/
@@ -60,26 +69,45 @@ $primary2: #00acf2; // primary blue
         box-sizing: content-box;
     }
 
-    button {
-        i { color: white; }  // The FontAwesome icon.
-        outline: 0;
-        border: 1px solid #007dbf;
-        border-radius: 3px;
-
-        background-color: $primary2;
-
-        padding: 7px 21px;
-        width: 100px;
-    }
-    button:hover {
-        background-color: #66deff;
+    .button {
+        border-radius: 0;
+        padding: 0 12px;
+        flex: 0 0 38px;
+        background-color: rgba(255, 255, 255, 0.15);
     }
 }
 
-#right-nav-block {
-    position: absolute;
-    right: 0;
+.right-nav-block {
     display: flex;
+    align-items: center;
+
+    input, .button {
+        line-height: 38px;
+    }
+
+    .button {
+        outline: 0;
+        border-radius: 4px;
+        color: #fff;
+        border: none;
+        background-color: $primary2;
+        text-align: center;
+        padding: 0;
+        margin-bottom: 0;
+        min-width: 0;
+    }
+
+    @media(min-width: $screen-md) {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+
+    #sign-in-button {
+        width: auto;
+        padding: 0 24px;
+    }
 }
 
 @media(max-width: $screen-md){
@@ -145,31 +173,32 @@ $code-font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
 }
 
 .button {
-    padding: 16px;
     min-width: 120px;
     font-size: 14px;
     font-weight: bold;
     color: $primary2;
     background-color: #fff;
-    border: 1px solid #007dbf;
-}
-.button:hover {
-    background-color: #66deff;
-}
+    border: 1px solid $blue-hover;
 
-.button.small {
-    font-size: 12px;
-    padding: 8px;
-    margin-bottom: 10px;
-}
+    &:hover {
+        background-color: #66deff;
+    }
 
-.button.primary {
-    color: #fff;
-    background-color: $primary2;
-}
-.button.primary:hover {
-    border: 1px solid #007dbf;
-    background-color: #66deff;
+    &.small {
+        font-size: 12px;
+        padding: 8px;
+        margin-bottom: 10px;
+    }
+
+    &.primary {
+        color: #fff;
+        background-color: $primary2;
+        border: none;
+
+        :hover {
+            background-color: #66deff;
+        }
+    }
 }
 
 .no-wrap {
@@ -666,9 +695,6 @@ h4 { font-size: 22px; font-weight: 500; }
     }
 }
 
-.tour-button.enabled {
-}
-
 .tour-button.enabled:hover {
     cursor: pointer;
     text-decoration: none;
@@ -973,7 +999,7 @@ div[id^="module-"], div[id="pulumi-python-sdk"] {
             > em.property {
                 font-weight: bold;
             }
-            
+
             // descclassname identifies the package to which this thing belongs. We'll leave it in,
             // code font, but with no padding.
             > code.descclassname {
