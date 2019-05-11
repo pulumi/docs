@@ -17,6 +17,7 @@ TOOLS_REPOS=(
     "pulumi-gcp"
     "pulumi-kubernetes"
     "pulumi-linode"
+    "pulumi-mysql"
     "pulumi-newrelic"
     "pulumi-openstack"
     "pulumi-packet"
