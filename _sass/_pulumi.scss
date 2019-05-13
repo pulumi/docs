@@ -58,15 +58,11 @@ $primary2: #00acf2; // primary blue
         padding: 0 12px;
         width: 100%;
         flex: 1;
+        box-sizing: content-box;
 
         @media(min-width: $screen-md) {
             width: 180px;
         }
-
-        // WebKit hijacks the size of search forms. Old blog post for context:
-        // http://tonibarrett.com/forcing-my-style-onto-input-typesearch/
-        -webkit-appearance: textfield;
-        box-sizing: content-box;
     }
 
     .button {
