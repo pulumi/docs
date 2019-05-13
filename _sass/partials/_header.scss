@@ -97,13 +97,20 @@ body{
                 margin-right: 4px;
             }
         }
-    }
-}
 
-.gh-widget {
-    > span {
-        position: relative;
-        top: 3px;
+        &.gh-widget {
+            margin-left: 0;
+
+            > a {
+                display: none;
+            }
+
+            > span {
+                margin-left: 40px;
+                position: relative;
+                top: 4px;
+            }
+        }
     }
 }
 
