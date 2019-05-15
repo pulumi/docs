@@ -17,14 +17,14 @@ title: Module autoscaling/v1
 * <a href="#HorizontalPodAutoscaler">class HorizontalPodAutoscaler</a>
 * <a href="#HorizontalPodAutoscalerList">class HorizontalPodAutoscalerList</a>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscaler.ts">autoscaling/v1/HorizontalPodAutoscaler.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscalerList.ts">autoscaling/v1/HorizontalPodAutoscalerList.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscaler.ts">autoscaling/v1/HorizontalPodAutoscaler.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscalerList.ts">autoscaling/v1/HorizontalPodAutoscalerList.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="HorizontalPodAutoscaler">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscaler.ts#L11">class <b>HorizontalPodAutoscaler</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscaler.ts#L11">class <b>HorizontalPodAutoscaler</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -32,7 +32,7 @@ title: Module autoscaling/v1
 configuration of a horizontal pod autoscaler.
 
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscaler.ts#L62"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscaler.ts#L62"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -47,7 +47,7 @@ Create a autoscaling.v1.HorizontalPodAutoscaler resource with the given unique n
 
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscaler.ts#L57">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscaler.ts#L57">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -62,7 +62,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-getInputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscaler.ts#L61">method <b>getInputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscaler.ts#L61">method <b>getInputs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -70,7 +70,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -78,7 +78,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -90,7 +90,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscaler.ts#L18">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscaler.ts#L18">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"autoscaling/v1"</span>&gt;;</pre>
@@ -102,7 +102,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -112,7 +112,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscaler.ts#L26">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscaler.ts#L26">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"HorizontalPodAutoscaler"</span>&gt;;</pre>
@@ -124,7 +124,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscaler.ts#L32">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscaler.ts#L32">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
@@ -134,7 +134,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscaler.ts#L38">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscaler.ts#L38">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>spec: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.autoscaling.v1.HorizontalPodAutoscalerSpec&gt;;</pre>
@@ -144,7 +144,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscaler.ts#L43">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscaler.ts#L43">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>status: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.autoscaling.v1.HorizontalPodAutoscalerStatus&gt;;</pre>
@@ -153,7 +153,7 @@ current information about the autoscaler.
 
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -164,7 +164,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HorizontalPodAutoscalerList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscalerList.ts#L11">class <b>HorizontalPodAutoscalerList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscalerList.ts#L11">class <b>HorizontalPodAutoscalerList</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -172,7 +172,7 @@ deployments.
 list of horizontal pod autoscaler objects.
 
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscalerList.ts#L55"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscalerList.ts#L55"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -187,7 +187,7 @@ Create a autoscaling.v1.HorizontalPodAutoscalerList resource with the given uniq
 
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscalerList.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscalerList.ts#L50">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -202,7 +202,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-getInputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscalerList.ts#L54">method <b>getInputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscalerList.ts#L54">method <b>getInputs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -210,7 +210,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -218,7 +218,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -230,7 +230,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscalerList.ts#L18">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscalerList.ts#L18">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"autoscaling/v1"</span>&gt;;</pre>
@@ -242,7 +242,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -252,7 +252,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscalerList.ts#L23">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscalerList.ts#L23">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>items: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.autoscaling.v1.HorizontalPodAutoscaler[]&gt;;</pre>
@@ -261,7 +261,7 @@ list of horizontal pod autoscaler objects.
 
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscalerList.ts#L31">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscalerList.ts#L31">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"HorizontalPodAutoscalerList"</span>&gt;;</pre>
@@ -273,7 +273,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscalerList.ts#L36">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscalerList.ts#L36">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
@@ -282,7 +282,7 @@ Standard list metadata.
 
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>

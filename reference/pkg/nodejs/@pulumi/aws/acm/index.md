@@ -107,7 +107,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Certificate-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -169,7 +169,7 @@ A list of attributes to feed into other resources to complete certificate valida
 
 </div>
 <h3 class="pdoc-member-header" id="Certificate-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -268,10 +268,10 @@ const zone = pulumi.output(aws.route53.getZone({
     privateZone: false,
 }));
 const certValidation = new aws.route53.Record("cert_validation", {
-    records: [certCertificate.domainValidationOptions.apply(domainValidationOptions => domainValidationOptions[0].resourceRecordValue)],
+    records: [certCertificate.domainValidationOptions[0].resourceRecordValue],
     ttl: 60,
-    type: certCertificate.domainValidationOptions.apply(domainValidationOptions => domainValidationOptions[0].resourceRecordType),
-    zoneId: zone.apply(zone => zone.id),
+    type: certCertificate.domainValidationOptions[0].resourceRecordType,
+    zoneId: zone.id,
 });
 const certCertificateValidation = new aws.acm.CertificateValidation("cert", {
     certificateArn: certCertificate.arn,
@@ -306,22 +306,22 @@ const zoneAlt = pulumi.output(aws.route53.getZone({
     privateZone: false,
 }));
 const certValidation = new aws.route53.Record("cert_validation", {
-    records: [certCertificate.domainValidationOptions.apply(domainValidationOptions => domainValidationOptions[0].resourceRecordValue)],
+    records: [certCertificate.domainValidationOptions[0].resourceRecordValue],
     ttl: 60,
-    type: certCertificate.domainValidationOptions.apply(domainValidationOptions => domainValidationOptions[0].resourceRecordType),
-    zoneId: zone.apply(zone => zone.id),
+    type: certCertificate.domainValidationOptions[0].resourceRecordType,
+    zoneId: zone.id,
 });
 const certValidationAlt1 = new aws.route53.Record("cert_validation_alt1", {
-    records: [certCertificate.domainValidationOptions.apply(domainValidationOptions => domainValidationOptions[1].resourceRecordValue)],
+    records: [certCertificate.domainValidationOptions[1].resourceRecordValue],
     ttl: 60,
-    type: certCertificate.domainValidationOptions.apply(domainValidationOptions => domainValidationOptions[1].resourceRecordType),
-    zoneId: zone.apply(zone => zone.id),
+    type: certCertificate.domainValidationOptions[1].resourceRecordType,
+    zoneId: zone.id,
 });
 const certValidationAlt2 = new aws.route53.Record("cert_validation_alt2", {
-    records: [certCertificate.domainValidationOptions.apply(domainValidationOptions => domainValidationOptions[2].resourceRecordValue)],
+    records: [certCertificate.domainValidationOptions[2].resourceRecordValue],
     ttl: 60,
-    type: certCertificate.domainValidationOptions.apply(domainValidationOptions => domainValidationOptions[2].resourceRecordType),
-    zoneId: zoneAlt.apply(zoneAlt => zoneAlt.id),
+    type: certCertificate.domainValidationOptions[2].resourceRecordType,
+    zoneId: zoneAlt.id,
 });
 const certCertificateValidation = new aws.acm.CertificateValidation("cert", {
     certificateArn: certCertificate.arn,
@@ -390,7 +390,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="CertificateValidation-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -411,7 +411,7 @@ The ARN of the certificate that is being validated.
 
 </div>
 <h3 class="pdoc-member-header" id="CertificateValidation-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>

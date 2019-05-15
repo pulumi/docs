@@ -18,7 +18,7 @@ title: Module tests
 * <a href="#asyncTest">function asyncTest</a>
 * <a href="#MochaFunc">type MochaFunc</a>
 
-<a href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/tests/util.ts">tests/util.ts</a> 
+<a href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/tests/util.ts">tests/util.ts</a> 
 </div>
 </div>
 </div>
@@ -37,7 +37,7 @@ title: Module tests
 </div>
 
 <h2 class="pdoc-module-header" id="assertAsyncThrows">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/tests/util.ts#L40">function <b>assertAsyncThrows</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/tests/util.ts#L40">function <b>assertAsyncThrows</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -45,7 +45,7 @@ title: Module tests
 
 </div>
 <h2 class="pdoc-module-header" id="asyncTest">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/tests/util.ts#L21">function <b>asyncTest</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/tests/util.ts#L21">function <b>asyncTest</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -53,7 +53,7 @@ title: Module tests
 
 </div>
 <h2 class="pdoc-module-header" id="MochaFunc">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/tests/util.ts#L17">type <b>MochaFunc</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/tests/util.ts#L17">type <b>MochaFunc</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>type</span> MochaFunc = (err: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error'>Error</a>) => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>;</pre>

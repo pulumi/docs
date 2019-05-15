@@ -42,7 +42,7 @@ import * as awsx from "@pulumi/awsx";
 * <a href="#NetworkVpcArgs">interface NetworkVpcArgs</a>
 * <a href="#Overwrite">type Overwrite</a>
 
-<a href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/aws.ts">aws.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/cluster.ts">cluster.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/index.ts">index.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/network.ts">network.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/utils.ts">utils.ts</a> 
+<a href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/aws.ts">aws.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/cluster.ts">cluster.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/index.ts">index.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/network.ts">network.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/utils.ts">utils.ts</a> 
 </div>
 </div>
 </div>
@@ -64,6 +64,7 @@ import * as awsx from "@pulumi/awsx";
 * <a href="dynamodb">dynamodb</a>
 * <a href="ebs">ebs</a>
 * <a href="ec2">ec2</a>
+* <a href="ecr">ecr</a>
 * <a href="ecs">ecs</a>
 * <a href="efs">efs</a>
 * <a href="elasticloadbalancingv2">elasticloadbalancingv2</a>
@@ -77,7 +78,7 @@ import * as awsx from "@pulumi/awsx";
 </div>
 
 <h2 class="pdoc-module-header" id="Cluster">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/cluster.ts#L107">class <b>Cluster</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/cluster.ts#L107">class <b>Cluster</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
@@ -86,7 +87,7 @@ A Cluster is a general purpose ECS cluster configured to run in a provided
 Network.
 
 <h3 class="pdoc-member-header" id="Cluster-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/cluster.ts#L128"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/cluster.ts#L128"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -94,7 +95,7 @@ Network.
 
 </div>
 <h3 class="pdoc-member-header" id="Cluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -102,7 +103,7 @@ Network.
 
 </div>
 <h3 class="pdoc-member-header" id="Cluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L142">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L148">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -114,7 +115,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="Cluster-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L157">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L163">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -122,7 +123,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="Cluster-autoScalingGroupStack">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/cluster.ts#L124">property <b>autoScalingGroupStack</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/cluster.ts#L124">property <b>autoScalingGroupStack</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>autoScalingGroupStack?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Resource'>pulumi.Resource</a>;</pre>
@@ -132,7 +133,7 @@ The auto-scaling group that ECS Service's should add to their
 
 </div>
 <h3 class="pdoc-member-header" id="Cluster-ecsClusterARN">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/cluster.ts#L115">property <b>ecsClusterARN</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/cluster.ts#L115">property <b>ecsClusterARN</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>ecsClusterARN: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -141,7 +142,7 @@ The ECS Cluster ARN.
 
 </div>
 <h3 class="pdoc-member-header" id="Cluster-efsMountPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/cluster.ts#L128">property <b>efsMountPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/cluster.ts#L128">property <b>efsMountPath</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>efsMountPath?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -150,7 +151,7 @@ The EFS host mount path if EFS is enabled on this Cluster.
 
 </div>
 <h3 class="pdoc-member-header" id="Cluster-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/cluster.ts#L111">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/cluster.ts#L111">property <b>network</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>network: <a href='#ClusterNetworkArgs'>ClusterNetworkArgs</a>;</pre>
@@ -159,7 +160,7 @@ The network in which to create this cluster.
 
 </div>
 <h3 class="pdoc-member-header" id="Cluster-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/cluster.ts#L119">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/cluster.ts#L119">property <b>securityGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>securityGroupId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -168,7 +169,7 @@ The ECS Cluster's Security Group ID.
 
 </div>
 <h3 class="pdoc-member-header" id="Cluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -179,7 +180,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Network">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/network.ts#L90">class <b>Network</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/network.ts#L90">class <b>Network</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
@@ -191,7 +192,7 @@ Subnets (NAT)](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Scenar
 supported.
 
 <h3 class="pdoc-member-header" id="Network-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/network.ts#L164"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/network.ts#L164"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -199,7 +200,7 @@ supported.
 
 </div>
 <h3 class="pdoc-member-header" id="Network-fromVpc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/network.ts#L149">method <b>fromVpc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/network.ts#L149">method <b>fromVpc</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -210,7 +211,7 @@ Creates a new network using the configuration values of an existing VPC.
 
 </div>
 <h3 class="pdoc-member-header" id="Network-getDefault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/network.ts#L123">method <b>getDefault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/network.ts#L123">method <b>getDefault</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -223,7 +224,7 @@ subsequent calls will return that same network even if different opts are provid
 
 </div>
 <h3 class="pdoc-member-header" id="Network-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -231,7 +232,7 @@ subsequent calls will return that same network even if different opts are provid
 
 </div>
 <h3 class="pdoc-member-header" id="Network-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L142">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L148">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -243,7 +244,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="Network-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L157">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L163">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -251,16 +252,16 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="Network-publicRouteTableId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/network.ts#L117">property <b>publicRouteTableId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/network.ts#L117">property <b>publicRouteTableId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>publicRouteTableId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>publicRouteTableId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</pre>
 
 The public subnet route table for the VPC.
 
 </div>
 <h3 class="pdoc-member-header" id="Network-publicSubnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/network.ts#L112">property <b>publicSubnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/network.ts#L112">property <b>publicSubnetIds</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>publicSubnetIds: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[];</pre>
@@ -270,7 +271,7 @@ The public subnets for the VPC.  In case [usePrivateSubnets] == false, these are
 
 </div>
 <h3 class="pdoc-member-header" id="Network-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/network.ts#L102">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/network.ts#L102">property <b>securityGroupIds</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>securityGroupIds: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[];</pre>
@@ -279,7 +280,7 @@ The security group IDs for the network.
 
 </div>
 <h3 class="pdoc-member-header" id="Network-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/network.ts#L107">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/network.ts#L107">property <b>subnetIds</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>subnetIds: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[];</pre>
@@ -289,7 +290,7 @@ The subnets in which compute should run.  These are the private subnets if
 
 </div>
 <h3 class="pdoc-member-header" id="Network-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -299,7 +300,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="Network-usePrivateSubnets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/network.ts#L98">property <b>usePrivateSubnets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/network.ts#L98">property <b>usePrivateSubnets</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>usePrivateSubnets: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -308,7 +309,7 @@ Whether the network includes private subnets.
 
 </div>
 <h3 class="pdoc-member-header" id="Network-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/network.ts#L94">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/network.ts#L94">property <b>vpcId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>vpcId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -318,23 +319,23 @@ The VPC id of the network.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="deploymentOnlyModule">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/index.ts#L63">const <b>deploymentOnlyModule</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/index.ts#L65">const <b>deploymentOnlyModule</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>const</span> deploymentOnlyModule: <span class='kd'>true</span> = <span class='s2'>true</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="checkCompat">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/utils.ts#L66">function <b>checkCompat</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/utils.ts#L66">function <b>checkCompat</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 </div>
 <h2 class="pdoc-module-header" id="combineArrays">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/utils.ts#L43">function <b>combineArrays</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/utils.ts#L43">function <b>combineArrays</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 </div>
 <h2 class="pdoc-module-header" id="getAvailabilityZone">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/aws.ts#L23">function <b>getAvailabilityZone</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/aws.ts#L23">function <b>getAvailabilityZone</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -342,7 +343,7 @@ The VPC id of the network.
 
 </div>
 <h2 class="pdoc-module-header" id="getAvailabilityZones">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/aws.ts#L28">function <b>getAvailabilityZones</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/aws.ts#L28">function <b>getAvailabilityZones</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -350,39 +351,39 @@ The VPC id of the network.
 
 </div>
 <h2 class="pdoc-module-header" id="hasTrueBooleanMember">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/utils.ts#L94">function <b>hasTrueBooleanMember</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/utils.ts#L94">function <b>hasTrueBooleanMember</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 </div>
 <h2 class="pdoc-module-header" id="ifUndefined">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/utils.ts#L57">function <b>ifUndefined</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/utils.ts#L57">function <b>ifUndefined</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 </div>
 <h2 class="pdoc-module-header" id="isInstance">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/utils.ts#L89">function <b>isInstance</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/utils.ts#L89">function <b>isInstance</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 </div>
 <h2 class="pdoc-module-header" id="mergeTags">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/utils.ts#L71">function <b>mergeTags</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/utils.ts#L71">function <b>mergeTags</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 </div>
 <h2 class="pdoc-module-header" id="sha1hash">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/utils.ts#L34">function <b>sha1hash</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/utils.ts#L34">function <b>sha1hash</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 </div>
 <h2 class="pdoc-module-header" id="ClusterArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/cluster.ts#L39">interface <b>ClusterArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/cluster.ts#L39">interface <b>ClusterArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Arguments bag for creating infrastrcture for a new Cluster.
 
 <h3 class="pdoc-member-header" id="ClusterArgs-addEFS">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/cluster.ts#L47">property <b>addEFS</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/cluster.ts#L47">property <b>addEFS</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>addEFS: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -391,7 +392,7 @@ Whether to create an EFS File System to manage volumes across the cluster.
 
 </div>
 <h3 class="pdoc-member-header" id="ClusterArgs-ecsOptimizedAMIName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/cluster.ts#L100">property <b>ecsOptimizedAMIName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/cluster.ts#L100">property <b>ecsOptimizedAMIName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ecsOptimizedAMIName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -405,7 +406,7 @@ See http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI
 
 </div>
 <h3 class="pdoc-member-header" id="ClusterArgs-instanceDockerImageVolumeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/cluster.ts#L70">property <b>instanceDockerImageVolumeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/cluster.ts#L70">property <b>instanceDockerImageVolumeSize</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>instanceDockerImageVolumeSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -416,7 +417,7 @@ The default is 50 GiB.
 
 </div>
 <h3 class="pdoc-member-header" id="ClusterArgs-instanceRolePolicyARNs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/cluster.ts#L58">property <b>instanceRolePolicyARNs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/cluster.ts#L58">property <b>instanceRolePolicyARNs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>instanceRolePolicyARNs?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -428,7 +429,7 @@ The default is `["arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerService
 
 </div>
 <h3 class="pdoc-member-header" id="ClusterArgs-instanceRootVolumeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/cluster.ts#L64">property <b>instanceRootVolumeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/cluster.ts#L64">property <b>instanceRootVolumeSize</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>instanceRootVolumeSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -439,7 +440,7 @@ The default is 8 GiB.
 
 </div>
 <h3 class="pdoc-member-header" id="ClusterArgs-instanceSwapVolumeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/cluster.ts#L76">property <b>instanceSwapVolumeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/cluster.ts#L76">property <b>instanceSwapVolumeSize</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>instanceSwapVolumeSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -450,7 +451,7 @@ The default is 5 GiB.
 
 </div>
 <h3 class="pdoc-member-header" id="ClusterArgs-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/cluster.ts#L51">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/cluster.ts#L51">property <b>instanceType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>instanceType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -459,7 +460,7 @@ The EC2 instance type to use for the Cluster.  Defaults to `t2.micro`.
 
 </div>
 <h3 class="pdoc-member-header" id="ClusterArgs-maxSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/cluster.ts#L85">property <b>maxSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/cluster.ts#L85">property <b>maxSize</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>maxSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -469,7 +470,7 @@ to 100.
 
 </div>
 <h3 class="pdoc-member-header" id="ClusterArgs-minSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/cluster.ts#L80">property <b>minSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/cluster.ts#L80">property <b>minSize</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>minSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -478,7 +479,7 @@ The minimum size of the cluster. Defaults to 2.
 
 </div>
 <h3 class="pdoc-member-header" id="ClusterArgs-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/cluster.ts#L43">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/cluster.ts#L43">property <b>network</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>network: <a href='#ClusterNetworkArgs'>ClusterNetworkArgs</a>;</pre>
@@ -487,7 +488,7 @@ The network in which to create this cluster.
 
 </div>
 <h3 class="pdoc-member-header" id="ClusterArgs-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/cluster.ts#L91">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/cluster.ts#L91">property <b>publicKey</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>publicKey?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -499,11 +500,11 @@ If not provided, no SSH access is enabled on VMs.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ClusterNetworkArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/cluster.ts#L25">interface <b>ClusterNetworkArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/cluster.ts#L25">interface <b>ClusterNetworkArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <h3 class="pdoc-member-header" id="ClusterNetworkArgs-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/cluster.ts#L33">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/cluster.ts#L33">property <b>subnetIds</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>subnetIds: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[];</pre>
@@ -512,7 +513,7 @@ The network subnets for the clusters
 
 </div>
 <h3 class="pdoc-member-header" id="ClusterNetworkArgs-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/cluster.ts#L29">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/cluster.ts#L29">property <b>vpcId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>vpcId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -522,14 +523,14 @@ The VPC id of the network for the cluster
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/network.ts#L26">interface <b>NetworkArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/network.ts#L26">interface <b>NetworkArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Optional arguments that can be provided when creating a network.
 
 <h3 class="pdoc-member-header" id="NetworkArgs-cidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/network.ts#L37">property <b>cidrBlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/network.ts#L37">property <b>cidrBlock</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>cidrBlock?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -538,7 +539,7 @@ The CIDR block for the VPC.  Defaults to "10.10.0.0/16" if unspecified.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkArgs-enableDnsHostnames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/network.ts#L42">property <b>enableDnsHostnames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/network.ts#L42">property <b>enableDnsHostnames</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>enableDnsHostnames?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -547,7 +548,7 @@ Whether or not to have DNS hostnames in the VPC. Defaults to 'true' if unspecifi
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkArgs-enableDnsSupport">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/network.ts#L47">property <b>enableDnsSupport</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/network.ts#L47">property <b>enableDnsSupport</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>enableDnsSupport?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -556,7 +557,7 @@ Whether or not to have DNS support in the VPC.  Defaults to 'true' if unspecifie
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkArgs-instanceTenancy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/network.ts#L52">property <b>instanceTenancy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/network.ts#L52">property <b>instanceTenancy</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>instanceTenancy?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"default"</span> | <span class='s2'>"dedicated"</span>&gt;;</pre>
@@ -565,7 +566,7 @@ A tenancy option for instances launched into the VPC.  Defaults to 'default' if 
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkArgs-numberOfAvailabilityZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/network.ts#L31">property <b>numberOfAvailabilityZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/network.ts#L31">property <b>numberOfAvailabilityZones</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>numberOfAvailabilityZones?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -575,21 +576,21 @@ unspecified.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkArgs-usePrivateSubnets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/network.ts#L32">property <b>usePrivateSubnets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/network.ts#L32">property <b>usePrivateSubnets</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>usePrivateSubnets?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkVpcArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/network.ts#L58">interface <b>NetworkVpcArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/network.ts#L58">interface <b>NetworkVpcArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Arguments necessary when creating a network using Network.fromVpc.
 
 <h3 class="pdoc-member-header" id="NetworkVpcArgs-publicSubnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/network.ts#L78">property <b>publicSubnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/network.ts#L78">property <b>publicSubnetIds</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>publicSubnetIds: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[];</pre>
@@ -598,7 +599,7 @@ The public subnets for the VPC.  In case [usePrivateSubnets] == false, these are
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkVpcArgs-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/network.ts#L74">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/network.ts#L74">property <b>securityGroupIds</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>securityGroupIds: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[];</pre>
@@ -607,7 +608,7 @@ The security group IDs for the network.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkVpcArgs-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/network.ts#L66">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/network.ts#L66">property <b>subnetIds</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>subnetIds: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[];</pre>
@@ -616,7 +617,7 @@ The network subnets for the clusters
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkVpcArgs-usePrivateSubnets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/network.ts#L70">property <b>usePrivateSubnets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/network.ts#L70">property <b>usePrivateSubnets</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>usePrivateSubnets: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -625,7 +626,7 @@ Whether the network includes private subnets.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkVpcArgs-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/network.ts#L62">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/network.ts#L62">property <b>vpcId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>vpcId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -635,7 +636,7 @@ The VPC id of the network for the cluster
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Overwrite">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/a64b1117969d34a54cf53f40abbcf9248a643e58/nodejs/awsx/utils.ts#L25">type <b>Overwrite</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/981ae02e2b51acc7a00d74b9332688490b5846d1/nodejs/awsx/utils.ts#L25">type <b>Overwrite</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>type</span> Overwrite = Pick&lt;T, <a href='#Diff'>Diff</a>&lt;keyof T, keyof U&gt;&gt; &amp; U;</pre>

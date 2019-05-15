@@ -24,21 +24,21 @@ title: Module asset
 * <a href="#StringAsset">class StringAsset</a>
 * <a href="#AssetMap">type AssetMap</a>
 
-<a href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/asset/archive.ts">asset/archive.ts</a> <a href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/asset/asset.ts">asset/asset.ts</a> 
+<a href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/asset/archive.ts">asset/archive.ts</a> <a href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/asset/asset.ts">asset/asset.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Archive">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/asset/archive.ts#L21">class <b>Archive</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/asset/archive.ts#L21">class <b>Archive</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 An Archive represents a collection of named assets.
 
 <h3 class="pdoc-member-header" id="Archive-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/asset/archive.ts#L33">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/asset/archive.ts#L33">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -51,14 +51,14 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Asset">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/asset/asset.ts#L20">class <b>Asset</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/asset/asset.ts#L20">class <b>Asset</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Asset represents a single blob of text or data that is managed as a first class entity.
 
 <h3 class="pdoc-member-header" id="Asset-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/asset/asset.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/asset/asset.ts#L32">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -71,7 +71,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AssetArchive">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/asset/archive.ts#L46">class <b>AssetArchive</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/asset/archive.ts#L46">class <b>AssetArchive</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Archive'>Archive</a></pre>
@@ -79,7 +79,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 An AssetArchive is an archive created from an in-memory collection of named assets or other archives.
 
 <h3 class="pdoc-member-header" id="AssetArchive-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/asset/archive.ts#L50"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/asset/archive.ts#L50"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -87,7 +87,7 @@ An AssetArchive is an archive created from an in-memory collection of named asse
 
 </div>
 <h3 class="pdoc-member-header" id="AssetArchive-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/asset/archive.ts#L33">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/asset/archive.ts#L33">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -99,7 +99,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="AssetArchive-assets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/asset/archive.ts#L50">property <b>assets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/asset/archive.ts#L50">property <b>assets</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>assets: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#AssetMap'>AssetMap</a>&gt;;</pre>
@@ -109,7 +109,7 @@ A map of names to assets.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FileArchive">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/asset/archive.ts#L62">class <b>FileArchive</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/asset/archive.ts#L62">class <b>FileArchive</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Archive'>Archive</a></pre>
@@ -118,7 +118,7 @@ A FileArchive is a file-based archive, or a collection of file-based assets.  Th
 single archive file in one of the supported formats (.tar, .tar.gz, or .zip).
 
 <h3 class="pdoc-member-header" id="FileArchive-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/asset/archive.ts#L66"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/asset/archive.ts#L66"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -126,7 +126,7 @@ single archive file in one of the supported formats (.tar, .tar.gz, or .zip).
 
 </div>
 <h3 class="pdoc-member-header" id="FileArchive-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/asset/archive.ts#L33">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/asset/archive.ts#L33">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -138,7 +138,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="FileArchive-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/asset/archive.ts#L66">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/asset/archive.ts#L66">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>path: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -148,7 +148,7 @@ The path to the asset file.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FileAsset">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/asset/asset.ts#L51">class <b>FileAsset</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/asset/asset.ts#L51">class <b>FileAsset</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Asset'>Asset</a></pre>
@@ -156,7 +156,7 @@ The path to the asset file.
 FileAsset is a kind of asset produced from a given path to a file on the local filesystem.
 
 <h3 class="pdoc-member-header" id="FileAsset-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/asset/asset.ts#L55"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/asset/asset.ts#L55"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -164,7 +164,7 @@ FileAsset is a kind of asset produced from a given path to a file on the local f
 
 </div>
 <h3 class="pdoc-member-header" id="FileAsset-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/asset/asset.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/asset/asset.ts#L32">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -176,7 +176,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="FileAsset-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/asset/asset.ts#L55">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/asset/asset.ts#L55">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>path: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -186,7 +186,7 @@ The path to the asset file.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RemoteArchive">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/asset/archive.ts#L79">class <b>RemoteArchive</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/asset/archive.ts#L79">class <b>RemoteArchive</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Archive'>Archive</a></pre>
@@ -196,7 +196,7 @@ protocol for fetching the archive's contents: `file://` is a local file (just li
 `https://` specify HTTP and HTTPS, respectively, and specific providers may recognize custom schemes.
 
 <h3 class="pdoc-member-header" id="RemoteArchive-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/asset/archive.ts#L83"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/asset/archive.ts#L83"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -204,7 +204,7 @@ protocol for fetching the archive's contents: `file://` is a local file (just li
 
 </div>
 <h3 class="pdoc-member-header" id="RemoteArchive-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/asset/archive.ts#L33">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/asset/archive.ts#L33">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -216,7 +216,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="RemoteArchive-uri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/asset/archive.ts#L83">property <b>uri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/asset/archive.ts#L83">property <b>uri</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>uri: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -226,7 +226,7 @@ The URI where the archive lives.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RemoteAsset">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/asset/asset.ts#L83">class <b>RemoteAsset</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/asset/asset.ts#L83">class <b>RemoteAsset</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Asset'>Asset</a></pre>
@@ -236,7 +236,7 @@ contents: `file://` specifies a local file, `http://` and `https://` specify HTT
 specific providers may recognize alternative schemes; this is merely the base-most set that all providers support.
 
 <h3 class="pdoc-member-header" id="RemoteAsset-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/asset/asset.ts#L87"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/asset/asset.ts#L87"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -244,7 +244,7 @@ specific providers may recognize alternative schemes; this is merely the base-mo
 
 </div>
 <h3 class="pdoc-member-header" id="RemoteAsset-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/asset/asset.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/asset/asset.ts#L32">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -256,7 +256,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="RemoteAsset-uri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/asset/asset.ts#L87">property <b>uri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/asset/asset.ts#L87">property <b>uri</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>uri: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -266,7 +266,7 @@ The URI where the asset lives.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="StringAsset">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/asset/asset.ts#L66">class <b>StringAsset</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/asset/asset.ts#L66">class <b>StringAsset</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Asset'>Asset</a></pre>
@@ -274,7 +274,7 @@ The URI where the asset lives.
 StringAsset is a kind of asset produced from an in-memory UTF8-encoded string.
 
 <h3 class="pdoc-member-header" id="StringAsset-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/asset/asset.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/asset/asset.ts#L70"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -282,7 +282,7 @@ StringAsset is a kind of asset produced from an in-memory UTF8-encoded string.
 
 </div>
 <h3 class="pdoc-member-header" id="StringAsset-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/asset/asset.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/asset/asset.ts#L32">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -294,7 +294,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="StringAsset-text">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/asset/asset.ts#L70">property <b>text</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/asset/asset.ts#L70">property <b>text</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>text: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -304,7 +304,7 @@ The string contents.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AssetMap">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/asset/archive.ts#L41">type <b>AssetMap</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/asset/archive.ts#L41">type <b>AssetMap</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>type</span> AssetMap = {[name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='#Asset'>Asset</a> | <a href='#Archive'>Archive</a>};</pre>

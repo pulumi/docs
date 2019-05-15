@@ -50,7 +50,7 @@ const dynamodbTableReadTarget = new aws.appautoscaling.Target("dynamodb_table_re
     maxCapacity: 100,
     minCapacity: 5,
     resourceId: "table/tableName",
-    roleArn: aws_iam_role_DynamoDBAutoscaleRole.arn.apply(arn => arn),
+    roleArn: aws_iam_role_DynamoDBAutoscaleRole.arn,
     scalableDimension: "dynamodb:table:ReadCapacityUnits",
     serviceNamespace: "dynamodb",
 });
@@ -121,7 +121,7 @@ import * as aws from "@pulumi/aws";
 const replicasTarget = new aws.appautoscaling.Target("replicas", {
     maxCapacity: 15,
     minCapacity: 1,
-    resourceId: aws_rds_cluster_example.id.apply(id => `cluster:${id}`),
+    resourceId: pulumi.interpolate`cluster:${aws_rds_cluster_example.id}`,
     scalableDimension: "rds:cluster:ReadReplicaCount",
     serviceNamespace: "rds",
 });
@@ -201,7 +201,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Policy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -228,7 +228,7 @@ The ARN assigned by AWS to the scaling policy.
 
 </div>
 <h3 class="pdoc-member-header" id="Policy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -360,7 +360,7 @@ const dynamodbTarget = new aws.appautoscaling.Target("dynamodb", {
     maxCapacity: 100,
     minCapacity: 5,
     resourceId: "table/tableName",
-    roleArn: aws_iam_role_DynamoDBAutoscaleRole.arn.apply(arn => arn),
+    roleArn: aws_iam_role_DynamoDBAutoscaleRole.arn,
     scalableDimension: "dynamodb:table:ReadCapacityUnits",
     serviceNamespace: "dynamodb",
 });
@@ -438,7 +438,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ScheduledAction-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -468,7 +468,7 @@ The date and time for the scheduled action to end. Specify the following format:
 
 </div>
 <h3 class="pdoc-member-header" id="ScheduledAction-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -573,8 +573,8 @@ import * as aws from "@pulumi/aws";
 const dynamodbTableReadTarget = new aws.appautoscaling.Target("dynamodb_table_read_target", {
     maxCapacity: 100,
     minCapacity: 5,
-    resourceId: aws_dynamodb_table_example.name.apply(name => `table/${name}`),
-    roleArn: aws_iam_role_DynamoDBAutoscaleRole.arn.apply(arn => arn),
+    resourceId: pulumi.interpolate`table/${aws_dynamodb_table_example.name}`,
+    roleArn: aws_iam_role_DynamoDBAutoscaleRole.arn,
     scalableDimension: "dynamodb:table:ReadCapacityUnits",
     serviceNamespace: "dynamodb",
 });
@@ -589,8 +589,8 @@ import * as aws from "@pulumi/aws";
 const dynamodbIndexReadTarget = new aws.appautoscaling.Target("dynamodb_index_read_target", {
     maxCapacity: 100,
     minCapacity: 5,
-    resourceId: aws_dynamodb_table_example.name.apply(name => `table/${name}/index/${var_index_name}`),
-    roleArn: aws_iam_role_DynamoDBAutoscaleRole.arn.apply(arn => arn),
+    resourceId: pulumi.interpolate`table/${aws_dynamodb_table_example.name}/index/${var_index_name}`,
+    roleArn: aws_iam_role_DynamoDBAutoscaleRole.arn,
     scalableDimension: "dynamodb:index:ReadCapacityUnits",
     serviceNamespace: "dynamodb",
 });
@@ -605,7 +605,7 @@ import * as aws from "@pulumi/aws";
 const ecsTarget = new aws.appautoscaling.Target("ecs_target", {
     maxCapacity: 4,
     minCapacity: 1,
-    resourceId: pulumi.all([aws_ecs_cluster_example.name, aws_ecs_service_example.name]).apply(([aws_ecs_cluster_exampleName, aws_ecs_service_exampleName]) => `service/${aws_ecs_cluster_exampleName}/${aws_ecs_service_exampleName}`),
+    resourceId: pulumi.interpolate`service/${aws_ecs_cluster_example.name}/${aws_ecs_service_example.name}`,
     roleArn: var_ecs_iam_role,
     scalableDimension: "ecs:service:DesiredCount",
     serviceNamespace: "ecs",
@@ -621,7 +621,7 @@ import * as aws from "@pulumi/aws";
 const replicas = new aws.appautoscaling.Target("replicas", {
     maxCapacity: 15,
     minCapacity: 1,
-    resourceId: aws_rds_cluster_example.id.apply(id => `cluster:${id}`),
+    resourceId: pulumi.interpolate`cluster:${aws_rds_cluster_example.id}`,
     scalableDimension: "rds:cluster:ReadReplicaCount",
     serviceNamespace: "rds",
 });
@@ -663,7 +663,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Target-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -675,7 +675,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="Target-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
