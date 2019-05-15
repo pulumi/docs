@@ -204,7 +204,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Cluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -429,7 +429,7 @@ A List of ARNs for the IAM roles to associate to the RDS Cluster.
 
 </div>
 <h3 class="pdoc-member-header" id="Cluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -707,7 +707,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ClusterEndpoint-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -773,7 +773,7 @@ List of DB instance identifiers that aren't part of the custom endpoint group. A
 
 </div>
 <h3 class="pdoc-member-header" id="ClusterEndpoint-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -886,7 +886,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ClusterInstance-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1010,7 +1010,7 @@ The database engine version.
 
 </div>
 <h3 class="pdoc-member-header" id="ClusterInstance-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1250,7 +1250,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ClusterParameterGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1289,7 +1289,7 @@ The family of the DB cluster parameter group.
 
 </div>
 <h3 class="pdoc-member-header" id="ClusterParameterGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1405,7 +1405,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ClusterSnapshot-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1480,7 +1480,7 @@ Version of the database engine for this DB cluster snapshot.
 
 </div>
 <h3 class="pdoc-member-header" id="ClusterSnapshot-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1655,7 +1655,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="EventSubscription-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1697,7 +1697,7 @@ A list of event categories for a SourceType that you want to subscribe to. See h
 
 </div>
 <h3 class="pdoc-member-header" id="EventSubscription-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1819,7 +1819,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="GlobalCluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1891,7 +1891,7 @@ AWS Region-unique, immutable identifier for the global database cluster. This id
 
 </div>
 <h3 class="pdoc-member-header" id="GlobalCluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2008,7 +2008,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Instance-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2262,7 +2262,7 @@ accounts is enabled.
 
 </div>
 <h3 class="pdoc-member-header" id="Instance-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2683,7 +2683,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="OptionGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2713,7 +2713,7 @@ Specifies the name of the engine that this option group should be associated wit
 
 </div>
 <h3 class="pdoc-member-header" id="OptionGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2867,7 +2867,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ParameterGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2906,7 +2906,7 @@ The family of the DB parameter group.
 
 </div>
 <h3 class="pdoc-member-header" id="ParameterGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3026,7 +3026,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3056,7 +3056,7 @@ The description of the DB security group. Defaults to "Managed by Terraform".
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3176,7 +3176,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Snapshot-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3260,7 +3260,7 @@ Specifies the version of the database engine.
 
 </div>
 <h3 class="pdoc-member-header" id="Snapshot-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3443,7 +3443,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3473,7 +3473,7 @@ The description of the DB subnet group. Defaults to "Managed by Terraform".
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3579,7 +3579,7 @@ const developmentFinalSnapshot = pulumi.output(aws.rds.getClusterSnapshot({
 const auroraCluster = new aws.rds.Cluster("aurora", {
     clusterIdentifier: "development_cluster",
     dbSubnetGroupName: "my_db_subnet_group",
-    snapshotIdentifier: developmentFinalSnapshot.apply(developmentFinalSnapshot => developmentFinalSnapshot.id),
+    snapshotIdentifier: developmentFinalSnapshot.id,
 });
 const auroraClusterInstance = new aws.rds.ClusterInstance("aurora", {
     clusterIdentifier: auroraCluster.id,
@@ -3607,7 +3607,7 @@ import * as aws from "@pulumi/aws";
 
 const exampleEventCategories = pulumi.output(aws.rds.getEventCategories({}));
 
-export const example = exampleEventCategories.apply(exampleEventCategories => exampleEventCategories.eventCategories);
+export const example = exampleEventCategories.eventCategories;
 ```
 
 List the event categories specific to the RDS resource `db-snapshot`.
@@ -3620,7 +3620,7 @@ const exampleEventCategories = pulumi.output(aws.rds.getEventCategories({
     sourceType: "db-snapshot",
 }));
 
-export const example = exampleEventCategories.apply(exampleEventCategories => exampleEventCategories.eventCategories);
+export const example = exampleEventCategories.eventCategories;
 ```
 
 </div>
@@ -3684,7 +3684,7 @@ const latestProdSnapshot = prod.id.apply(id => aws.rds.getSnapshot({
 const dev = new aws.rds.Instance("dev", {
     instanceClass: "db.t2.micro",
     name: "mydbdev",
-    snapshotIdentifier: latestProdSnapshot.apply(latestProdSnapshot => latestProdSnapshot.id),
+    snapshotIdentifier: latestProdSnapshot.id,
 });
 ```
 

@@ -238,7 +238,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -250,7 +250,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -388,7 +388,7 @@ const groups = pulumi.output(aws.getAutoscalingGroups({
     ],
 }));
 const slackNotifications = new aws.autoscaling.Notification("slack_notifications", {
-    groupNames: groups.apply(groups => groups.names),
+    groupNames: groups.names,
     notifications: [
         "autoscaling:EC2_INSTANCE_LAUNCH",
         "autoscaling:EC2_INSTANCE_TERMINATE",
@@ -520,7 +520,7 @@ import * as aws from "@pulumi/aws";
 const main = pulumi.output(aws.getBillingServiceAccount({}));
 const billingLogs = new aws.s3.Bucket("billing_logs", {
     acl: "private",
-    policy: pulumi.all([main, main]).apply(([main, main1]) => `{
+    policy: pulumi.interpolate`{
   "Id": "Policy",
   "Version": "2012-10-17",
   "Statement": [
@@ -544,13 +544,13 @@ const billingLogs = new aws.s3.Bucket("billing_logs", {
       "Resource": "arn:aws:s3:::my-billing-tf-test-bucket/*",
       "Principal": {
         "AWS": [
-          "${main1.arn}"
+          "${main.arn}"
         ]
       }
     }
   ]
 }
-`),
+`,
 });
 ```
 
@@ -574,9 +574,9 @@ import * as aws from "@pulumi/aws";
 
 const current = pulumi.output(aws.getCallerIdentity({}));
 
-export const accountId = current.apply(current => current.accountId);
-export const callerArn = current.apply(current => current.arn);
-export const callerUser = current.apply(current => current.userId);
+export const accountId = current.accountId;
+export const callerArn = current.arn;
+export const callerUser = current.userId;
 ```
 
 </div>
@@ -599,7 +599,7 @@ import * as aws from "@pulumi/aws";
 
 const current = pulumi.output(aws.getCanonicalUserId({}));
 
-export const canonicalUserId = current.apply(current => current.id);
+export const canonicalUserId = current.id;
 ```
 
 </div>
@@ -714,15 +714,15 @@ const europeanEc2 = pulumi.output(aws.getIpRanges({
 }));
 const fromEurope = new aws.ec2.SecurityGroup("from_europe", {
     ingress: [{
-        cidrBlocks: europeanEc2.apply(europeanEc2 => europeanEc2.cidrBlocks),
+        cidrBlocks: europeanEc2.cidrBlocks,
         fromPort: 443,
-        ipv6CidrBlocks: europeanEc2.apply(europeanEc2 => europeanEc2.ipv6CidrBlocks),
+        ipv6CidrBlocks: europeanEc2.ipv6CidrBlocks,
         protocol: "tcp",
         toPort: 443,
     }],
     tags: {
-        CreateDate: europeanEc2.apply(europeanEc2 => europeanEc2.createDate),
-        SyncToken: europeanEc2.apply(europeanEc2 => europeanEc2.syncToken),
+        CreateDate: europeanEc2.createDate,
+        SyncToken: europeanEc2.syncToken,
     },
 });
 ```

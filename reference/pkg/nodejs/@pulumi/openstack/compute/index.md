@@ -121,7 +121,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Flavor-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -158,7 +158,7 @@ Key/Value pairs of metadata for the flavor.
 
 </div>
 <h3 class="pdoc-member-header" id="Flavor-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -318,7 +318,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="FlavorAccess-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -339,7 +339,7 @@ The UUID of flavor to use. Changing this creates a new flavor access.
 
 </div>
 <h3 class="pdoc-member-header" id="FlavorAccess-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -441,7 +441,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="FloatingIp-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -471,7 +471,7 @@ The fixed IP address corresponding to the floating IP.
 
 </div>
 <h3 class="pdoc-member-header" id="FloatingIp-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -621,7 +621,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="FloatingIpAssociate-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -651,7 +651,7 @@ The floating IP to associate.
 
 </div>
 <h3 class="pdoc-member-header" id="FloatingIpAssociate-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1125,7 +1125,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Instance-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1250,7 +1250,7 @@ deletion enabled.
 
 </div>
 <h3 class="pdoc-member-header" id="Instance-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1611,7 +1611,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="InterfaceAttach-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1633,7 +1633,7 @@ _NOTE_: This option cannot be used with port_id. You must specifiy a network_id.
 
 </div>
 <h3 class="pdoc-member-header" id="InterfaceAttach-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1765,7 +1765,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Keypair-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1786,7 +1786,7 @@ The fingerprint of the public key.
 
 </div>
 <h3 class="pdoc-member-header" id="Keypair-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1962,7 +1962,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="SecGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1984,7 +1984,7 @@ updates the `description` of an existing security group.
 
 </div>
 <h3 class="pdoc-member-header" id="SecGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2119,7 +2119,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ServerGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2131,7 +2131,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="ServerGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2358,7 +2358,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttach-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2384,7 +2384,7 @@ to be detached and reattached indefinitely. Please use with caution.
 
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttach-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/4e0cb2ae258b028a225fe5343d20c2278f36332f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>

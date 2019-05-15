@@ -24,14 +24,14 @@ title: Module iot
 * <a href="#SharedAccessPolicyArgs">interface SharedAccessPolicyArgs</a>
 * <a href="#SharedAccessPolicyState">interface SharedAccessPolicyState</a>
 
-<a href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/consumerGroup.ts">iot/consumerGroup.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts">iot/ioTHub.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts">iot/sharedAccessPolicy.ts</a> 
+<a href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/consumerGroup.ts">iot/consumerGroup.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts">iot/ioTHub.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts">iot/sharedAccessPolicy.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="ConsumerGroup">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/consumerGroup.ts#L41">class <b>ConsumerGroup</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/consumerGroup.ts#L41">class <b>ConsumerGroup</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -70,7 +70,7 @@ const testConsumerGroup = new azure.iot.ConsumerGroup("test", {
 ```
 
 <h3 class="pdoc-member-header" id="ConsumerGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/consumerGroup.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/consumerGroup.ts#L69"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -85,7 +85,7 @@ Create a ConsumerGroup resource with the given unique name, arguments, and optio
 
 </div>
 <h3 class="pdoc-member-header" id="ConsumerGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/consumerGroup.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/consumerGroup.ts#L50">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -97,7 +97,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ConsumerGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -105,7 +105,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ConsumerGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -117,7 +117,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="ConsumerGroup-eventhubEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/consumerGroup.ts#L57">property <b>eventhubEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/consumerGroup.ts#L57">property <b>eventhubEndpointName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>eventhubEndpointName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -126,7 +126,7 @@ The name of the Event Hub-compatible endpoint in the IoT hub. Changing this forc
 
 </div>
 <h3 class="pdoc-member-header" id="ConsumerGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -136,7 +136,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="ConsumerGroup-iothubName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/consumerGroup.ts#L61">property <b>iothubName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/consumerGroup.ts#L61">property <b>iothubName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>iothubName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -145,7 +145,7 @@ The name of the IoT Hub. Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="ConsumerGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/consumerGroup.ts#L65">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/consumerGroup.ts#L65">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -154,7 +154,7 @@ The name of this Consumer Group. Changing this forces a new resource to be creat
 
 </div>
 <h3 class="pdoc-member-header" id="ConsumerGroup-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/consumerGroup.ts#L69">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/consumerGroup.ts#L69">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -163,7 +163,7 @@ The name of the resource group that contains the IoT hub. Changing this forces a
 
 </div>
 <h3 class="pdoc-member-header" id="ConsumerGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -174,7 +174,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IoTHub">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L68">class <b>IoTHub</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L68">class <b>IoTHub</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -240,7 +240,7 @@ const testContainer = new azure.storage.Container("test", {
 ```
 
 <h3 class="pdoc-member-header" id="IoTHub-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L141"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L141"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -255,7 +255,7 @@ Create a IoTHub resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L77">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L77">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -267,7 +267,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -275,7 +275,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -287,16 +287,16 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-endpoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L84">property <b>endpoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L84">property <b>endpoints</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>endpoints: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    batchFrequencyInSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
+    batchFrequencyInSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
     connectionString: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    containerName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    encoding: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    fileNameFormat: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    maxChunkSizeInBytes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
+    containerName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    encoding: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    fileNameFormat: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    maxChunkSizeInBytes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
     name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 }[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -305,7 +305,7 @@ An `endpoint` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-eventHubEventsEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L88">property <b>eventHubEventsEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L88">property <b>eventHubEventsEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>eventHubEventsEndpoint: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -314,7 +314,7 @@ The EventHub compatible endpoint for events data
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-eventHubEventsPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L92">property <b>eventHubEventsPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L92">property <b>eventHubEventsPath</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>eventHubEventsPath: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -323,7 +323,7 @@ The EventHub compatible path for events data
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-eventHubOperationsEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L96">property <b>eventHubOperationsEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L96">property <b>eventHubOperationsEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>eventHubOperationsEndpoint: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -332,7 +332,7 @@ The EventHub compatible endpoint for operational data
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-eventHubOperationsPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L100">property <b>eventHubOperationsPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L100">property <b>eventHubOperationsPath</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>eventHubOperationsPath: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -341,21 +341,21 @@ The EventHub compatible path for operational data
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-fallbackRoute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L104">property <b>fallbackRoute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L104">property <b>fallbackRoute</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>fallbackRoute: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    condition: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    condition: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
     endpointNames: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    source: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    source: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 }&gt;;</pre>
 
 A `fallback_route` block as defined below. If the fallback route is enabled, messages that don't match any of the supplied routes are automatically sent to this route. Defaults to messages/events.
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L108">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L108">property <b>hostname</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>hostname: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -364,7 +364,7 @@ The hostname of the IotHub Resource.
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -374,7 +374,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-ipFilterRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L112">property <b>ipFilterRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L112">property <b>ipFilterRules</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>ipFilterRules: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -387,7 +387,7 @@ One or more `ip_filter_rule` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L116">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L116">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -396,7 +396,7 @@ Specifies the supported Azure location where the resource has to be createc. Cha
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L120">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L120">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -405,7 +405,7 @@ Specifies the name of the IotHub resource. Changing this forces a new resource t
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L124">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L124">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -414,11 +414,11 @@ The name of the resource group under which the IotHub resource has to be created
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-routes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L128">property <b>routes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L128">property <b>routes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>routes: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    condition: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    condition: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
     endpointNames: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
     name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
@@ -429,7 +429,7 @@ A `route` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-sharedAccessPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L132">property <b>sharedAccessPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L132">property <b>sharedAccessPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>sharedAccessPolicies: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -443,7 +443,7 @@ One or more `shared_access_policy` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L136">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L136">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>sku: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -456,7 +456,7 @@ A `sku` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L140">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L140">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -465,13 +465,13 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L141">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L141">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>type: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="IoTHub-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -482,7 +482,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SharedAccessPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L39">class <b>SharedAccessPolicy</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L39">class <b>SharedAccessPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -519,7 +519,7 @@ const exampleSharedAccessPolicy = new azure.iot.SharedAccessPolicy("example", {
 ```
 
 <h3 class="pdoc-member-header" id="SharedAccessPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L95"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L95"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -534,7 +534,7 @@ Create a SharedAccessPolicy resource with the given unique name, arguments, and 
 
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L48">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -546,7 +546,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -554,7 +554,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -566,7 +566,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicy-deviceConnect">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L55">property <b>deviceConnect</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L55">property <b>deviceConnect</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>deviceConnect: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -575,7 +575,7 @@ Adds `DeviceConnect` permission to this Shared Access Account. It allows sending
 
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -585,7 +585,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicy-iothubName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L59">property <b>iothubName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L59">property <b>iothubName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>iothubName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -594,7 +594,7 @@ The name of the IoTHub to which this Shared Access Policy belongs. Changing this
 
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L63">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L63">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -603,7 +603,7 @@ Specifies the name of the IotHub Shared Access Policy resource. Changing this fo
 
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicy-primaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L67">property <b>primaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L67">property <b>primaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>primaryConnectionString: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -612,7 +612,7 @@ The primary connection string of the Shared Access Policy.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicy-primaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L71">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L71">property <b>primaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>primaryKey: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -621,7 +621,7 @@ The primary key used to create the authentication token.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicy-registryRead">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L75">property <b>registryRead</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L75">property <b>registryRead</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>registryRead: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -630,7 +630,7 @@ Adds `RegistryRead` permission to this Shared Access Account. It allows read acc
 
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicy-registryWrite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L79">property <b>registryWrite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L79">property <b>registryWrite</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>registryWrite: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -639,7 +639,7 @@ Adds `RegistryWrite` permission to this Shared Access Account. It allows write a
 
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicy-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L83">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L83">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -648,7 +648,7 @@ The name of the resource group under which the IotHub Shared Access Policy resou
 
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicy-secondaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L87">property <b>secondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L87">property <b>secondaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>secondaryConnectionString: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -657,7 +657,7 @@ The secondary connection string of the Shared Access Policy.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicy-secondaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L91">property <b>secondaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L91">property <b>secondaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>secondaryKey: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -666,7 +666,7 @@ The secondary key used to create the authentication token.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicy-serviceConnect">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L95">property <b>serviceConnect</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L95">property <b>serviceConnect</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>serviceConnect: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -675,7 +675,7 @@ Adds `ServiceConnect` permission to this Shared Access Account. It allows sendin
 
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -686,14 +686,14 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConsumerGroupArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/consumerGroup.ts#L132">interface <b>ConsumerGroupArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/consumerGroup.ts#L132">interface <b>ConsumerGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a ConsumerGroup resource.
 
 <h3 class="pdoc-member-header" id="ConsumerGroupArgs-eventhubEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/consumerGroup.ts#L136">property <b>eventhubEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/consumerGroup.ts#L136">property <b>eventhubEndpointName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>eventhubEndpointName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -702,7 +702,7 @@ The name of the Event Hub-compatible endpoint in the IoT hub. Changing this forc
 
 </div>
 <h3 class="pdoc-member-header" id="ConsumerGroupArgs-iothubName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/consumerGroup.ts#L140">property <b>iothubName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/consumerGroup.ts#L140">property <b>iothubName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>iothubName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -711,7 +711,7 @@ The name of the IoT Hub. Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="ConsumerGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/consumerGroup.ts#L144">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/consumerGroup.ts#L144">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -720,7 +720,7 @@ The name of this Consumer Group. Changing this forces a new resource to be creat
 
 </div>
 <h3 class="pdoc-member-header" id="ConsumerGroupArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/consumerGroup.ts#L148">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/consumerGroup.ts#L148">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -730,14 +730,14 @@ The name of the resource group that contains the IoT hub. Changing this forces a
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConsumerGroupState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/consumerGroup.ts#L110">interface <b>ConsumerGroupState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/consumerGroup.ts#L110">interface <b>ConsumerGroupState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering ConsumerGroup resources.
 
 <h3 class="pdoc-member-header" id="ConsumerGroupState-eventhubEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/consumerGroup.ts#L114">property <b>eventhubEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/consumerGroup.ts#L114">property <b>eventhubEndpointName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>eventhubEndpointName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -746,7 +746,7 @@ The name of the Event Hub-compatible endpoint in the IoT hub. Changing this forc
 
 </div>
 <h3 class="pdoc-member-header" id="ConsumerGroupState-iothubName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/consumerGroup.ts#L118">property <b>iothubName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/consumerGroup.ts#L118">property <b>iothubName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>iothubName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -755,7 +755,7 @@ The name of the IoT Hub. Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="ConsumerGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/consumerGroup.ts#L122">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/consumerGroup.ts#L122">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -764,7 +764,7 @@ The name of this Consumer Group. Changing this forces a new resource to be creat
 
 </div>
 <h3 class="pdoc-member-header" id="ConsumerGroupState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/consumerGroup.ts#L126">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/consumerGroup.ts#L126">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -774,14 +774,14 @@ The name of the resource group that contains the IoT hub. Changing this forces a
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IoTHubArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L270">interface <b>IoTHubArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L270">interface <b>IoTHubArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a IoTHub resource.
 
 <h3 class="pdoc-member-header" id="IoTHubArgs-endpoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L274">property <b>endpoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L274">property <b>endpoints</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>endpoints?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -799,7 +799,7 @@ An `endpoint` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHubArgs-fallbackRoute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L278">property <b>fallbackRoute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L278">property <b>fallbackRoute</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>fallbackRoute?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -813,7 +813,7 @@ A `fallback_route` block as defined below. If the fallback route is enabled, mes
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHubArgs-ipFilterRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L282">property <b>ipFilterRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L282">property <b>ipFilterRules</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipFilterRules?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -826,7 +826,7 @@ One or more `ip_filter_rule` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHubArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L286">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L286">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -835,7 +835,7 @@ Specifies the supported Azure location where the resource has to be createc. Cha
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHubArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L290">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L290">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -844,7 +844,7 @@ Specifies the name of the IotHub resource. Changing this forces a new resource t
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHubArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L294">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L294">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -853,7 +853,7 @@ The name of the resource group under which the IotHub resource has to be created
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHubArgs-routes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L298">property <b>routes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L298">property <b>routes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>routes?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -868,7 +868,7 @@ A `route` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHubArgs-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L302">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L302">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sku: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -881,7 +881,7 @@ A `sku` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHubArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L306">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L306">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -891,14 +891,14 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IoTHubState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L203">interface <b>IoTHubState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L203">interface <b>IoTHubState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering IoTHub resources.
 
 <h3 class="pdoc-member-header" id="IoTHubState-endpoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L207">property <b>endpoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L207">property <b>endpoints</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>endpoints?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -916,7 +916,7 @@ An `endpoint` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHubState-eventHubEventsEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L211">property <b>eventHubEventsEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L211">property <b>eventHubEventsEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>eventHubEventsEndpoint?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -925,7 +925,7 @@ The EventHub compatible endpoint for events data
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHubState-eventHubEventsPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L215">property <b>eventHubEventsPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L215">property <b>eventHubEventsPath</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>eventHubEventsPath?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -934,7 +934,7 @@ The EventHub compatible path for events data
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHubState-eventHubOperationsEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L219">property <b>eventHubOperationsEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L219">property <b>eventHubOperationsEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>eventHubOperationsEndpoint?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -943,7 +943,7 @@ The EventHub compatible endpoint for operational data
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHubState-eventHubOperationsPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L223">property <b>eventHubOperationsPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L223">property <b>eventHubOperationsPath</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>eventHubOperationsPath?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -952,7 +952,7 @@ The EventHub compatible path for operational data
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHubState-fallbackRoute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L227">property <b>fallbackRoute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L227">property <b>fallbackRoute</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>fallbackRoute?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -966,7 +966,7 @@ A `fallback_route` block as defined below. If the fallback route is enabled, mes
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHubState-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L231">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L231">property <b>hostname</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>hostname?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -975,7 +975,7 @@ The hostname of the IotHub Resource.
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHubState-ipFilterRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L235">property <b>ipFilterRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L235">property <b>ipFilterRules</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipFilterRules?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -988,7 +988,7 @@ One or more `ip_filter_rule` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHubState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L239">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L239">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -997,7 +997,7 @@ Specifies the supported Azure location where the resource has to be createc. Cha
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHubState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L243">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L243">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1006,7 +1006,7 @@ Specifies the name of the IotHub resource. Changing this forces a new resource t
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHubState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L247">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L247">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1015,7 +1015,7 @@ The name of the resource group under which the IotHub resource has to be created
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHubState-routes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L251">property <b>routes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L251">property <b>routes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>routes?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1030,7 +1030,7 @@ A `route` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHubState-sharedAccessPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L255">property <b>sharedAccessPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L255">property <b>sharedAccessPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sharedAccessPolicies?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1044,7 +1044,7 @@ One or more `shared_access_policy` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHubState-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L259">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L259">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sku?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1057,7 +1057,7 @@ A `sku` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHubState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L263">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L263">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1066,21 +1066,21 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="IoTHubState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/ioTHub.ts#L264">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/ioTHub.ts#L264">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>type?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SharedAccessPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L197">interface <b>SharedAccessPolicyArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L197">interface <b>SharedAccessPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a SharedAccessPolicy resource.
 
 <h3 class="pdoc-member-header" id="SharedAccessPolicyArgs-deviceConnect">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L201">property <b>deviceConnect</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L201">property <b>deviceConnect</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>deviceConnect?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1089,7 +1089,7 @@ Adds `DeviceConnect` permission to this Shared Access Account. It allows sending
 
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicyArgs-iothubName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L205">property <b>iothubName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L205">property <b>iothubName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>iothubName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1098,7 +1098,7 @@ The name of the IoTHub to which this Shared Access Policy belongs. Changing this
 
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L209">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L209">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1107,7 +1107,7 @@ Specifies the name of the IotHub Shared Access Policy resource. Changing this fo
 
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicyArgs-registryRead">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L213">property <b>registryRead</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L213">property <b>registryRead</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>registryRead?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1116,7 +1116,7 @@ Adds `RegistryRead` permission to this Shared Access Account. It allows read acc
 
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicyArgs-registryWrite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L217">property <b>registryWrite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L217">property <b>registryWrite</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>registryWrite?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1125,7 +1125,7 @@ Adds `RegistryWrite` permission to this Shared Access Account. It allows write a
 
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicyArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L221">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L221">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1134,7 +1134,7 @@ The name of the resource group under which the IotHub Shared Access Policy resou
 
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicyArgs-serviceConnect">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L225">property <b>serviceConnect</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L225">property <b>serviceConnect</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>serviceConnect?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1144,14 +1144,14 @@ Adds `ServiceConnect` permission to this Shared Access Account. It allows sendin
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SharedAccessPolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L147">interface <b>SharedAccessPolicyState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L147">interface <b>SharedAccessPolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering SharedAccessPolicy resources.
 
 <h3 class="pdoc-member-header" id="SharedAccessPolicyState-deviceConnect">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L151">property <b>deviceConnect</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L151">property <b>deviceConnect</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>deviceConnect?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1160,7 +1160,7 @@ Adds `DeviceConnect` permission to this Shared Access Account. It allows sending
 
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicyState-iothubName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L155">property <b>iothubName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L155">property <b>iothubName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>iothubName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1169,7 +1169,7 @@ The name of the IoTHub to which this Shared Access Policy belongs. Changing this
 
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L159">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L159">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1178,7 +1178,7 @@ Specifies the name of the IotHub Shared Access Policy resource. Changing this fo
 
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicyState-primaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L163">property <b>primaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L163">property <b>primaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>primaryConnectionString?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1187,7 +1187,7 @@ The primary connection string of the Shared Access Policy.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicyState-primaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L167">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L167">property <b>primaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>primaryKey?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1196,7 +1196,7 @@ The primary key used to create the authentication token.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicyState-registryRead">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L171">property <b>registryRead</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L171">property <b>registryRead</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>registryRead?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1205,7 +1205,7 @@ Adds `RegistryRead` permission to this Shared Access Account. It allows read acc
 
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicyState-registryWrite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L175">property <b>registryWrite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L175">property <b>registryWrite</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>registryWrite?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1214,7 +1214,7 @@ Adds `RegistryWrite` permission to this Shared Access Account. It allows write a
 
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicyState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L179">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L179">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1223,7 +1223,7 @@ The name of the resource group under which the IotHub Shared Access Policy resou
 
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicyState-secondaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L183">property <b>secondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L183">property <b>secondaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>secondaryConnectionString?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1232,7 +1232,7 @@ The secondary connection string of the Shared Access Policy.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicyState-secondaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L187">property <b>secondaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L187">property <b>secondaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>secondaryKey?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1241,7 +1241,7 @@ The secondary key used to create the authentication token.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedAccessPolicyState-serviceConnect">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/iot/sharedAccessPolicy.ts#L191">property <b>serviceConnect</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/iot/sharedAccessPolicy.ts#L191">property <b>serviceConnect</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>serviceConnect?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>

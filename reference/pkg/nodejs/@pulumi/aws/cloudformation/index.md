@@ -114,7 +114,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Stack-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -155,7 +155,7 @@ The ARN of an IAM role that AWS CloudFormation assumes to create the stack. If y
 
 </div>
 <h3 class="pdoc-member-header" id="Stack-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -306,7 +306,7 @@ const aWSCloudFormationStackSetAdministrationRoleAssumeRolePolicy = pulumi.outpu
     }],
 }));
 const aWSCloudFormationStackSetAdministrationRole = new aws.iam.Role("AWSCloudFormationStackSetAdministrationRole", {
-    assumeRolePolicy: aWSCloudFormationStackSetAdministrationRoleAssumeRolePolicy.apply(aWSCloudFormationStackSetAdministrationRoleAssumeRolePolicy => aWSCloudFormationStackSetAdministrationRoleAssumeRolePolicy.json),
+    assumeRolePolicy: aWSCloudFormationStackSetAdministrationRoleAssumeRolePolicy.json,
 });
 const example = new aws.cloudformation.StackSet("example", {
     administrationRoleArn: aWSCloudFormationStackSetAdministrationRole.arn,
@@ -343,7 +343,7 @@ const aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument =
     }],
 }));
 const aWSCloudFormationStackSetAdministrationRoleExecutionPolicyRolePolicy = new aws.iam.RolePolicy("AWSCloudFormationStackSetAdministrationRole_ExecutionPolicy", {
-    policy: aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument.apply(aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument => aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument.json),
+    policy: aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument.json,
     role: aWSCloudFormationStackSetAdministrationRole.name,
 });
 ```
@@ -384,7 +384,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="StackSet-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -441,7 +441,7 @@ Name of the IAM Role in all target accounts for Stack Set operations. Defaults t
 
 </div>
 <h3 class="pdoc-member-header" id="StackSet-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -570,10 +570,10 @@ const aWSCloudFormationStackSetExecutionRoleAssumeRolePolicy = aws_iam_role_AWSC
     }],
 }));
 const aWSCloudFormationStackSetExecutionRole = new aws.iam.Role("AWSCloudFormationStackSetExecutionRole", {
-    assumeRolePolicy: aWSCloudFormationStackSetExecutionRoleAssumeRolePolicy.apply(aWSCloudFormationStackSetExecutionRoleAssumeRolePolicy => aWSCloudFormationStackSetExecutionRoleAssumeRolePolicy.json),
+    assumeRolePolicy: aWSCloudFormationStackSetExecutionRoleAssumeRolePolicy.json,
 });
 const aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyRolePolicy = new aws.iam.RolePolicy("AWSCloudFormationStackSetExecutionRole_MinimumExecutionPolicy", {
-    policy: aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyPolicyDocument.apply(aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyPolicyDocument => aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyPolicyDocument.json),
+    policy: aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyPolicyDocument.json,
     role: aWSCloudFormationStackSetExecutionRole.name,
 });
 ```
@@ -614,7 +614,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="StackSetInstance-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -635,7 +635,7 @@ Target AWS Account ID to create a Stack based on the Stack Set. Defaults to curr
 
 </div>
 <h3 class="pdoc-member-header" id="StackSetInstance-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -725,7 +725,7 @@ const subnetId = pulumi.output(aws.cloudformation.getExport({
 const web = new aws.ec2.Instance("web", {
     ami: "ami-abb07bcb",
     instanceType: "t1.micro",
-    subnetId: subnetId.apply(subnetId => subnetId.value),
+    subnetId: subnetId.value,
 });
 ```
 

@@ -20,14 +20,14 @@ title: Module log
 * <a href="#info">function info</a>
 * <a href="#warn">function warn</a>
 
-<a href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/log/index.ts">log/index.ts</a> 
+<a href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/log/index.ts">log/index.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="debug">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/log/index.ts#L35">function <b>debug</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/log/index.ts#L35">function <b>debug</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -38,7 +38,7 @@ debug logs a debug-level message that is generally hidden from end-users.
 
 </div>
 <h2 class="pdoc-module-header" id="error">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/log/index.ts#L76">function <b>error</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/log/index.ts#L76">function <b>error</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -49,7 +49,7 @@ error logs a fatal error to indicate that the tool should stop processing resour
 
 </div>
 <h2 class="pdoc-module-header" id="hasErrors">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/log/index.ts#L28">function <b>hasErrors</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/log/index.ts#L28">function <b>hasErrors</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -60,7 +60,7 @@ hasErrors returns true if any errors have occurred in the program.
 
 </div>
 <h2 class="pdoc-module-header" id="info">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/log/index.ts#L48">function <b>info</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/log/index.ts#L48">function <b>info</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -71,7 +71,7 @@ info logs an informational message that is generally printed to stdout during re
 
 </div>
 <h2 class="pdoc-module-header" id="warn">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/55b233fbdc4d59706f17d64e7618f28ddab6412d/sdk/nodejs/log/index.ts#L62">function <b>warn</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/f6c25b7d2dd881ef892ce03b5cf1ca579b8c71e4/sdk/nodejs/log/index.ts#L62">function <b>warn</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 

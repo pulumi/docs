@@ -47,7 +47,7 @@ import * as mysql from "@pulumi/mysql";
 * <a href="#UserPasswordState">interface UserPasswordState</a>
 * <a href="#UserState">interface UserState</a>
 
-<a href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/database.ts">database.ts</a> <a href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/grant.ts">grant.ts</a> <a href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/provider.ts">provider.ts</a> <a href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/role.ts">role.ts</a> <a href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/user.ts">user.ts</a> <a href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/userPassword.ts">userPassword.ts</a> <a href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/utilities.ts">utilities.ts</a> 
+<a href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/database.ts">database.ts</a> <a href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/grant.ts">grant.ts</a> <a href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/provider.ts">provider.ts</a> <a href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/role.ts">role.ts</a> <a href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/user.ts">user.ts</a> <a href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/userPassword.ts">userPassword.ts</a> <a href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/utilities.ts">utilities.ts</a> 
 </div>
 </div>
 </div>
@@ -65,7 +65,7 @@ import * as mysql from "@pulumi/mysql";
 </div>
 
 <h2 class="pdoc-module-header" id="Database">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/database.ts#L17">class <b>Database</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/database.ts#L26">class <b>Database</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -79,8 +79,17 @@ consider setting
 [``prevent_destroy``](https://www.terraform.io/docs/configuration/resources.html#prevent_destroy)
 on your database resources as an extra safety measure.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as mysql from "@pulumi/mysql";
+
+const app = new mysql.Database("app", {});
+```
+
 <h3 class="pdoc-member-header" id="Database-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/database.ts#L48"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/database.ts#L57"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -95,7 +104,7 @@ Create a Database resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="Database-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/database.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/database.ts#L35">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -107,7 +116,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Database-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -115,7 +124,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Database-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -127,7 +136,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="Database-defaultCharacterSet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/database.ts#L35">property <b>defaultCharacterSet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/database.ts#L44">property <b>defaultCharacterSet</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>defaultCharacterSet: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -138,7 +147,7 @@ to "utf8".
 
 </div>
 <h3 class="pdoc-member-header" id="Database-defaultCollation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/database.ts#L42">property <b>defaultCollation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/database.ts#L51">property <b>defaultCollation</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>defaultCollation: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -150,7 +159,7 @@ changing the character set requires also changing the collation.
 
 </div>
 <h3 class="pdoc-member-header" id="Database-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -160,7 +169,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="Database-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/database.ts#L48">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/database.ts#L57">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -171,7 +180,7 @@ the operating system on which the MySQL server is running.
 
 </div>
 <h3 class="pdoc-member-header" id="Database-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -182,7 +191,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Grant">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/grant.ts#L11">class <b>Grant</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/grant.ts#L70">class <b>Grant</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -190,8 +199,67 @@ deployments.
 The ``mysql_grant`` resource creates and manages privileges given to
 a user on a MySQL server.
 
+## Granting Privileges to a User
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as mysql from "@pulumi/mysql";
+
+const jdoeUser = new mysql.User("jdoe", {
+    host: "example.com",
+    password: "password",
+    user: "jdoe",
+});
+const jdoeGrant = new mysql.Grant("jdoe", {
+    database: "app",
+    host: jdoeUser.host,
+    privileges: [
+        "SELECT",
+        "UPDATE",
+    ],
+    user: jdoeUser.user,
+});
+```
+
+## Granting Privileges to a Role
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as mysql from "@pulumi/mysql";
+
+const developerRole = new mysql.Role("developer", {});
+const developerGrant = new mysql.Grant("developer", {
+    database: "app",
+    privileges: [
+        "SELECT",
+        "UPDATE",
+    ],
+    role: developerRole.name,
+});
+```
+
+## Adding a Role to a User
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as mysql from "@pulumi/mysql";
+
+const developerRole = new mysql.Role("developer", {});
+const jdoe = new mysql.User("jdoe", {
+    host: "example.com",
+    password: "password",
+    user: "jdoe",
+});
+const developerGrant = new mysql.Grant("developer", {
+    database: "app",
+    host: jdoe.host,
+    roles: [developerRole.name],
+    user: jdoe.user,
+});
+```
+
 <h3 class="pdoc-member-header" id="Grant-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/grant.ts#L59"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/grant.ts#L118"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -206,7 +274,7 @@ Create a Grant resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="Grant-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/grant.ts#L20">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/grant.ts#L79">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -218,7 +286,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Grant-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -226,7 +294,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Grant-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -238,7 +306,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="Grant-database">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/grant.ts#L27">property <b>database</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/grant.ts#L86">property <b>database</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>database: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -247,7 +315,7 @@ The database to grant privileges on.
 
 </div>
 <h3 class="pdoc-member-header" id="Grant-grant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/grant.ts#L31">property <b>grant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/grant.ts#L90">property <b>grant</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>grant: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -256,7 +324,7 @@ Whether to also give the user privileges to grant the same privileges to other u
 
 </div>
 <h3 class="pdoc-member-header" id="Grant-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/grant.ts#L35">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/grant.ts#L94">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>host: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -265,7 +333,7 @@ The source host of the user. Defaults to "localhost". Conflicts with `role`.
 
 </div>
 <h3 class="pdoc-member-header" id="Grant-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -275,7 +343,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="Grant-privileges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/grant.ts#L39">property <b>privileges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/grant.ts#L98">property <b>privileges</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>privileges: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -284,7 +352,7 @@ A list of privileges to grant to the user. Refer to a list of privileges (such a
 
 </div>
 <h3 class="pdoc-member-header" id="Grant-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/grant.ts#L43">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/grant.ts#L102">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>role: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -293,7 +361,7 @@ The role to grant `privileges` to. Conflicts with `user` and `host`.
 
 </div>
 <h3 class="pdoc-member-header" id="Grant-roles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/grant.ts#L47">property <b>roles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/grant.ts#L106">property <b>roles</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>roles: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -302,7 +370,7 @@ A list of rols to grant to the user. Conflicts with `privileges`.
 
 </div>
 <h3 class="pdoc-member-header" id="Grant-table">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/grant.ts#L51">property <b>table</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/grant.ts#L110">property <b>table</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>table: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -311,7 +379,7 @@ Which table to grant `privileges` on. Defaults to `*`, which is all tables.
 
 </div>
 <h3 class="pdoc-member-header" id="Grant-tlsOption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/grant.ts#L55">property <b>tlsOption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/grant.ts#L114">property <b>tlsOption</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tlsOption: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -320,7 +388,7 @@ An TLS-Option for the `GRANT` statement. The value is suffixed to `REQUIRE`. A v
 
 </div>
 <h3 class="pdoc-member-header" id="Grant-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -330,7 +398,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="Grant-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/grant.ts#L59">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/grant.ts#L118">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>user: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -340,7 +408,7 @@ The name of the user. Conflicts with `role`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Provider">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/provider.ts#L13">class <b>Provider</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/provider.ts#L13">class <b>Provider</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> ProviderResource</pre>
@@ -351,7 +419,7 @@ construction to achieve fine-grained programmatic control over provider settings
 [documentation](https://pulumi.io/reference/programming-model.html#providers) for more information.
 
 <h3 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/provider.ts#L13"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/provider.ts#L13"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -366,7 +434,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -374,7 +442,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -386,7 +454,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -396,7 +464,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -407,7 +475,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Role">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/role.ts#L13">class <b>Role</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/role.ts#L22">class <b>Role</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -417,8 +485,17 @@ server.
 
 > **Note:** MySQL introduced roles in version 8. They do not work on MySQL 5 and lower.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as mysql from "@pulumi/mysql";
+
+const developer = new mysql.Role("developer", {});
+```
+
 <h3 class="pdoc-member-header" id="Role-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/role.ts#L29"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/role.ts#L38"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -433,7 +510,7 @@ Create a Role resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="Role-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/role.ts#L22">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/role.ts#L31">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -445,7 +522,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Role-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -453,7 +530,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Role-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -465,7 +542,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="Role-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -475,7 +552,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="Role-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/role.ts#L29">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/role.ts#L38">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -484,7 +561,7 @@ The name of the role.
 
 </div>
 <h3 class="pdoc-member-header" id="Role-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -495,7 +572,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="User">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/user.ts#L16">class <b>User</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/user.ts#L42">class <b>User</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -508,8 +585,34 @@ obscured by an unsalted hash in the state
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 Care is required when using this resource, to avoid disclosing the password.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as mysql from "@pulumi/mysql";
+
+const jdoe = new mysql.User("jdoe", {
+    host: "example.com",
+    plaintextPassword: "password",
+    user: "jdoe",
+});
+```
+
+## Example Usage with an Authentication Plugin
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as mysql from "@pulumi/mysql";
+
+const nologin = new mysql.User("nologin", {
+    authPlugin: "mysql_no_login",
+    host: "example.com",
+    user: "nologin",
+});
+```
+
 <h3 class="pdoc-member-header" id="User-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/user.ts#L52"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/user.ts#L78"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -524,7 +627,7 @@ Create a User resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="User-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/user.ts#L25">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/user.ts#L51">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -536,7 +639,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="User-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -544,7 +647,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="User-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -556,7 +659,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="User-authPlugin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/user.ts#L32">property <b>authPlugin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/user.ts#L58">property <b>authPlugin</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>authPlugin: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -565,7 +668,7 @@ Use an [authentication plugin][ref-auth-plugins] to authenticate the user instea
 
 </div>
 <h3 class="pdoc-member-header" id="User-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/user.ts#L36">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/user.ts#L62">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>host: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -574,7 +677,7 @@ The source host of the user. Defaults to "localhost".
 
 </div>
 <h3 class="pdoc-member-header" id="User-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -584,7 +687,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="User-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/user.ts#L40">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/user.ts#L66">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>password: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -593,7 +696,7 @@ Deprecated alias of `plaintext_password`, whose value is *stored as plaintext in
 
 </div>
 <h3 class="pdoc-member-header" id="User-plaintextPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/user.ts#L44">property <b>plaintextPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/user.ts#L70">property <b>plaintextPassword</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>plaintextPassword: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -602,7 +705,7 @@ The password for the user. This must be provided in plain text, so the data sour
 
 </div>
 <h3 class="pdoc-member-header" id="User-tlsOption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/user.ts#L48">property <b>tlsOption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/user.ts#L74">property <b>tlsOption</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tlsOption: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -611,7 +714,7 @@ An TLS-Option for the `CREATE USER` or `ALTER USER` statement. The value is suff
 
 </div>
 <h3 class="pdoc-member-header" id="User-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -621,7 +724,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="User-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/user.ts#L52">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/user.ts#L78">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>user: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -631,7 +734,7 @@ The name of the user.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserPassword">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/userPassword.ts#L18">class <b>UserPassword</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/userPassword.ts#L18">class <b>UserPassword</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -647,7 +750,7 @@ user on a MySQL server.
    generates a **random** password. The password will be a random UUID.
 
 <h3 class="pdoc-member-header" id="UserPassword-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/userPassword.ts#L50"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/userPassword.ts#L50"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -662,7 +765,7 @@ Create a UserPassword resource with the given unique name, arguments, and option
 
 </div>
 <h3 class="pdoc-member-header" id="UserPassword-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/userPassword.ts#L27">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/userPassword.ts#L27">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -674,7 +777,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="UserPassword-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -682,7 +785,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="UserPassword-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -694,7 +797,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="UserPassword-encryptedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/userPassword.ts#L34">property <b>encryptedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/userPassword.ts#L34">property <b>encryptedPassword</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>encryptedPassword: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -703,7 +806,7 @@ The encrypted password, base64 encoded.
 
 </div>
 <h3 class="pdoc-member-header" id="UserPassword-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/userPassword.ts#L38">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/userPassword.ts#L38">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>host: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -712,7 +815,7 @@ The source host of the user. Defaults to `localhost`.
 
 </div>
 <h3 class="pdoc-member-header" id="UserPassword-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -722,7 +825,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="UserPassword-keyFingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/userPassword.ts#L42">property <b>keyFingerprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/userPassword.ts#L42">property <b>keyFingerprint</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>keyFingerprint: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -731,7 +834,7 @@ The fingerprint of the PGP key used to encrypt the password
 
 </div>
 <h3 class="pdoc-member-header" id="UserPassword-pgpKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/userPassword.ts#L46">property <b>pgpKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/userPassword.ts#L46">property <b>pgpKey</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>pgpKey: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -740,7 +843,7 @@ Either a base-64 encoded PGP public key, or a keybase username in the form `keyb
 
 </div>
 <h3 class="pdoc-member-header" id="UserPassword-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -750,7 +853,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="UserPassword-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/userPassword.ts#L50">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/userPassword.ts#L50">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>user: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -760,7 +863,7 @@ The IAM user to associate with this access key.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getEnv">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/utilities.ts#L7">function <b>getEnv</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/utilities.ts#L7">function <b>getEnv</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -768,7 +871,7 @@ The IAM user to associate with this access key.
 
 </div>
 <h2 class="pdoc-module-header" id="getEnvBoolean">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/utilities.ts#L17">function <b>getEnvBoolean</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/utilities.ts#L17">function <b>getEnvBoolean</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -776,7 +879,7 @@ The IAM user to associate with this access key.
 
 </div>
 <h2 class="pdoc-module-header" id="getEnvNumber">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/utilities.ts#L32">function <b>getEnvNumber</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/utilities.ts#L32">function <b>getEnvNumber</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -784,7 +887,7 @@ The IAM user to associate with this access key.
 
 </div>
 <h2 class="pdoc-module-header" id="getVersion">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/utilities.ts#L54">function <b>getVersion</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/utilities.ts#L54">function <b>getVersion</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -792,7 +895,7 @@ The IAM user to associate with this access key.
 
 </div>
 <h2 class="pdoc-module-header" id="requireWithDefault">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/utilities.ts#L43">function <b>requireWithDefault</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/utilities.ts#L43">function <b>requireWithDefault</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -800,14 +903,14 @@ The IAM user to associate with this access key.
 
 </div>
 <h2 class="pdoc-module-header" id="DatabaseArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/database.ts#L110">interface <b>DatabaseArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/database.ts#L119">interface <b>DatabaseArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a Database resource.
 
 <h3 class="pdoc-member-header" id="DatabaseArgs-defaultCharacterSet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/database.ts#L116">property <b>defaultCharacterSet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/database.ts#L125">property <b>defaultCharacterSet</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>defaultCharacterSet?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -818,7 +921,7 @@ to "utf8".
 
 </div>
 <h3 class="pdoc-member-header" id="DatabaseArgs-defaultCollation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/database.ts#L123">property <b>defaultCollation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/database.ts#L132">property <b>defaultCollation</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>defaultCollation?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -830,7 +933,7 @@ changing the character set requires also changing the collation.
 
 </div>
 <h3 class="pdoc-member-header" id="DatabaseArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/database.ts#L129">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/database.ts#L138">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -842,14 +945,14 @@ the operating system on which the MySQL server is running.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DatabaseState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/database.ts#L85">interface <b>DatabaseState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/database.ts#L94">interface <b>DatabaseState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering Database resources.
 
 <h3 class="pdoc-member-header" id="DatabaseState-defaultCharacterSet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/database.ts#L91">property <b>defaultCharacterSet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/database.ts#L100">property <b>defaultCharacterSet</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>defaultCharacterSet?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -860,7 +963,7 @@ to "utf8".
 
 </div>
 <h3 class="pdoc-member-header" id="DatabaseState-defaultCollation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/database.ts#L98">property <b>defaultCollation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/database.ts#L107">property <b>defaultCollation</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>defaultCollation?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -872,7 +975,7 @@ changing the character set requires also changing the collation.
 
 </div>
 <h3 class="pdoc-member-header" id="DatabaseState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/database.ts#L104">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/database.ts#L113">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -884,14 +987,14 @@ the operating system on which the MySQL server is running.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GrantArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/grant.ts#L153">interface <b>GrantArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/grant.ts#L212">interface <b>GrantArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a Grant resource.
 
 <h3 class="pdoc-member-header" id="GrantArgs-database">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/grant.ts#L157">property <b>database</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/grant.ts#L216">property <b>database</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>database: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -900,7 +1003,7 @@ The database to grant privileges on.
 
 </div>
 <h3 class="pdoc-member-header" id="GrantArgs-grant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/grant.ts#L161">property <b>grant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/grant.ts#L220">property <b>grant</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>grant?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -909,7 +1012,7 @@ Whether to also give the user privileges to grant the same privileges to other u
 
 </div>
 <h3 class="pdoc-member-header" id="GrantArgs-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/grant.ts#L165">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/grant.ts#L224">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>host?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -918,7 +1021,7 @@ The source host of the user. Defaults to "localhost". Conflicts with `role`.
 
 </div>
 <h3 class="pdoc-member-header" id="GrantArgs-privileges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/grant.ts#L169">property <b>privileges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/grant.ts#L228">property <b>privileges</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>privileges?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -927,7 +1030,7 @@ A list of privileges to grant to the user. Refer to a list of privileges (such a
 
 </div>
 <h3 class="pdoc-member-header" id="GrantArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/grant.ts#L173">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/grant.ts#L232">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>role?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -936,7 +1039,7 @@ The role to grant `privileges` to. Conflicts with `user` and `host`.
 
 </div>
 <h3 class="pdoc-member-header" id="GrantArgs-roles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/grant.ts#L177">property <b>roles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/grant.ts#L236">property <b>roles</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>roles?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -945,7 +1048,7 @@ A list of rols to grant to the user. Conflicts with `privileges`.
 
 </div>
 <h3 class="pdoc-member-header" id="GrantArgs-table">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/grant.ts#L181">property <b>table</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/grant.ts#L240">property <b>table</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>table?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -954,7 +1057,7 @@ Which table to grant `privileges` on. Defaults to `*`, which is all tables.
 
 </div>
 <h3 class="pdoc-member-header" id="GrantArgs-tlsOption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/grant.ts#L185">property <b>tlsOption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/grant.ts#L244">property <b>tlsOption</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tlsOption?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -963,7 +1066,7 @@ An TLS-Option for the `GRANT` statement. The value is suffixed to `REQUIRE`. A v
 
 </div>
 <h3 class="pdoc-member-header" id="GrantArgs-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/grant.ts#L189">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/grant.ts#L248">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>user?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -973,14 +1076,14 @@ The name of the user. Conflicts with `role`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GrantState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/grant.ts#L111">interface <b>GrantState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/grant.ts#L170">interface <b>GrantState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering Grant resources.
 
 <h3 class="pdoc-member-header" id="GrantState-database">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/grant.ts#L115">property <b>database</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/grant.ts#L174">property <b>database</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>database?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -989,7 +1092,7 @@ The database to grant privileges on.
 
 </div>
 <h3 class="pdoc-member-header" id="GrantState-grant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/grant.ts#L119">property <b>grant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/grant.ts#L178">property <b>grant</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>grant?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -998,7 +1101,7 @@ Whether to also give the user privileges to grant the same privileges to other u
 
 </div>
 <h3 class="pdoc-member-header" id="GrantState-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/grant.ts#L123">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/grant.ts#L182">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>host?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1007,7 +1110,7 @@ The source host of the user. Defaults to "localhost". Conflicts with `role`.
 
 </div>
 <h3 class="pdoc-member-header" id="GrantState-privileges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/grant.ts#L127">property <b>privileges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/grant.ts#L186">property <b>privileges</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>privileges?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1016,7 +1119,7 @@ A list of privileges to grant to the user. Refer to a list of privileges (such a
 
 </div>
 <h3 class="pdoc-member-header" id="GrantState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/grant.ts#L131">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/grant.ts#L190">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>role?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1025,7 +1128,7 @@ The role to grant `privileges` to. Conflicts with `user` and `host`.
 
 </div>
 <h3 class="pdoc-member-header" id="GrantState-roles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/grant.ts#L135">property <b>roles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/grant.ts#L194">property <b>roles</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>roles?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1034,7 +1137,7 @@ A list of rols to grant to the user. Conflicts with `privileges`.
 
 </div>
 <h3 class="pdoc-member-header" id="GrantState-table">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/grant.ts#L139">property <b>table</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/grant.ts#L198">property <b>table</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>table?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1043,7 +1146,7 @@ Which table to grant `privileges` on. Defaults to `*`, which is all tables.
 
 </div>
 <h3 class="pdoc-member-header" id="GrantState-tlsOption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/grant.ts#L143">property <b>tlsOption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/grant.ts#L202">property <b>tlsOption</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tlsOption?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1052,7 +1155,7 @@ An TLS-Option for the `GRANT` statement. The value is suffixed to `REQUIRE`. A v
 
 </div>
 <h3 class="pdoc-member-header" id="GrantState-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/grant.ts#L147">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/grant.ts#L206">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>user?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1062,46 +1165,46 @@ The name of the user. Conflicts with `role`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProviderArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/provider.ts#L50">interface <b>ProviderArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/provider.ts#L50">interface <b>ProviderArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a Provider resource.
 
 <h3 class="pdoc-member-header" id="ProviderArgs-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/provider.ts#L51">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/provider.ts#L51">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>endpoint: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/provider.ts#L52">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/provider.ts#L52">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>password?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-tls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/provider.ts#L53">property <b>tls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/provider.ts#L53">property <b>tls</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tls?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/provider.ts#L54">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/provider.ts#L54">property <b>username</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>username: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RoleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/role.ts#L72">interface <b>RoleArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/role.ts#L81">interface <b>RoleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a Role resource.
 
 <h3 class="pdoc-member-header" id="RoleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/role.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/role.ts#L85">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1111,14 +1214,14 @@ The name of the role.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RoleState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/role.ts#L62">interface <b>RoleState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/role.ts#L71">interface <b>RoleState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering Role resources.
 
 <h3 class="pdoc-member-header" id="RoleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/role.ts#L66">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/role.ts#L75">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1128,14 +1231,14 @@ The name of the role.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/user.ts#L128">interface <b>UserArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/user.ts#L154">interface <b>UserArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a User resource.
 
 <h3 class="pdoc-member-header" id="UserArgs-authPlugin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/user.ts#L132">property <b>authPlugin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/user.ts#L158">property <b>authPlugin</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>authPlugin?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1144,7 +1247,7 @@ Use an [authentication plugin][ref-auth-plugins] to authenticate the user instea
 
 </div>
 <h3 class="pdoc-member-header" id="UserArgs-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/user.ts#L136">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/user.ts#L162">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>host?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1153,7 +1256,7 @@ The source host of the user. Defaults to "localhost".
 
 </div>
 <h3 class="pdoc-member-header" id="UserArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/user.ts#L140">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/user.ts#L166">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>password?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1162,7 +1265,7 @@ Deprecated alias of `plaintext_password`, whose value is *stored as plaintext in
 
 </div>
 <h3 class="pdoc-member-header" id="UserArgs-plaintextPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/user.ts#L144">property <b>plaintextPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/user.ts#L170">property <b>plaintextPassword</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>plaintextPassword?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1171,7 +1274,7 @@ The password for the user. This must be provided in plain text, so the data sour
 
 </div>
 <h3 class="pdoc-member-header" id="UserArgs-tlsOption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/user.ts#L148">property <b>tlsOption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/user.ts#L174">property <b>tlsOption</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tlsOption?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1180,7 +1283,7 @@ An TLS-Option for the `CREATE USER` or `ALTER USER` statement. The value is suff
 
 </div>
 <h3 class="pdoc-member-header" id="UserArgs-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/user.ts#L152">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/user.ts#L178">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>user: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1190,14 +1293,14 @@ The name of the user.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserPasswordArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/userPassword.ts#L123">interface <b>UserPasswordArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/userPassword.ts#L123">interface <b>UserPasswordArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a UserPassword resource.
 
 <h3 class="pdoc-member-header" id="UserPasswordArgs-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/userPassword.ts#L127">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/userPassword.ts#L127">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>host?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1206,7 +1309,7 @@ The source host of the user. Defaults to `localhost`.
 
 </div>
 <h3 class="pdoc-member-header" id="UserPasswordArgs-pgpKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/userPassword.ts#L131">property <b>pgpKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/userPassword.ts#L131">property <b>pgpKey</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>pgpKey: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1215,7 +1318,7 @@ Either a base-64 encoded PGP public key, or a keybase username in the form `keyb
 
 </div>
 <h3 class="pdoc-member-header" id="UserPasswordArgs-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/userPassword.ts#L135">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/userPassword.ts#L135">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>user: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1225,14 +1328,14 @@ The IAM user to associate with this access key.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserPasswordState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/userPassword.ts#L97">interface <b>UserPasswordState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/userPassword.ts#L97">interface <b>UserPasswordState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering UserPassword resources.
 
 <h3 class="pdoc-member-header" id="UserPasswordState-encryptedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/userPassword.ts#L101">property <b>encryptedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/userPassword.ts#L101">property <b>encryptedPassword</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>encryptedPassword?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1241,7 +1344,7 @@ The encrypted password, base64 encoded.
 
 </div>
 <h3 class="pdoc-member-header" id="UserPasswordState-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/userPassword.ts#L105">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/userPassword.ts#L105">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>host?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1250,7 +1353,7 @@ The source host of the user. Defaults to `localhost`.
 
 </div>
 <h3 class="pdoc-member-header" id="UserPasswordState-keyFingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/userPassword.ts#L109">property <b>keyFingerprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/userPassword.ts#L109">property <b>keyFingerprint</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>keyFingerprint?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1259,7 +1362,7 @@ The fingerprint of the PGP key used to encrypt the password
 
 </div>
 <h3 class="pdoc-member-header" id="UserPasswordState-pgpKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/userPassword.ts#L113">property <b>pgpKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/userPassword.ts#L113">property <b>pgpKey</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>pgpKey?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1268,7 +1371,7 @@ Either a base-64 encoded PGP public key, or a keybase username in the form `keyb
 
 </div>
 <h3 class="pdoc-member-header" id="UserPasswordState-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/userPassword.ts#L117">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/userPassword.ts#L117">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>user?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1278,14 +1381,14 @@ The IAM user to associate with this access key.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/user.ts#L98">interface <b>UserState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/user.ts#L124">interface <b>UserState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering User resources.
 
 <h3 class="pdoc-member-header" id="UserState-authPlugin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/user.ts#L102">property <b>authPlugin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/user.ts#L128">property <b>authPlugin</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>authPlugin?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1294,7 +1397,7 @@ Use an [authentication plugin][ref-auth-plugins] to authenticate the user instea
 
 </div>
 <h3 class="pdoc-member-header" id="UserState-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/user.ts#L106">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/user.ts#L132">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>host?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1303,7 +1406,7 @@ The source host of the user. Defaults to "localhost".
 
 </div>
 <h3 class="pdoc-member-header" id="UserState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/user.ts#L110">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/user.ts#L136">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>password?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1312,7 +1415,7 @@ Deprecated alias of `plaintext_password`, whose value is *stored as plaintext in
 
 </div>
 <h3 class="pdoc-member-header" id="UserState-plaintextPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/user.ts#L114">property <b>plaintextPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/user.ts#L140">property <b>plaintextPassword</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>plaintextPassword?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1321,7 +1424,7 @@ The password for the user. This must be provided in plain text, so the data sour
 
 </div>
 <h3 class="pdoc-member-header" id="UserState-tlsOption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/user.ts#L118">property <b>tlsOption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/user.ts#L144">property <b>tlsOption</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tlsOption?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1330,7 +1433,7 @@ An TLS-Option for the `CREATE USER` or `ALTER USER` statement. The value is suff
 
 </div>
 <h3 class="pdoc-member-header" id="UserState-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/55c15adbb785bd89eb1aa969dd1bf3fff8275683/sdk/nodejs/user.ts#L122">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/8f9390def43be228cced39df2acf1173d57ad257/sdk/nodejs/user.ts#L148">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>user?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

@@ -18,14 +18,14 @@ title: Module dataflow
 * <a href="#JobArgs">interface JobArgs</a>
 * <a href="#JobState">interface JobState</a>
 
-<a href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts">dataflow/job.ts</a> 
+<a href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts">dataflow/job.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Job">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L37">class <b>Job</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L37">class <b>Job</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -59,7 +59,7 @@ The Dataflow resource is considered 'existing' while it is in a nonterminal stat
 A Dataflow job which is 'destroyed' may be "cancelled" or "drained".  If "cancelled", the job terminates - any data written remains where it is, but no new data will be processed.  If "drained", no new data will enter the pipeline, but any data currently in the pipeline will finish being processed.  The default is "cancelled", but if a user sets `on_delete` to `"drain"` in the configuration, you may experience a long wait for your `terraform destroy` to complete.
 
 <h3 class="pdoc-member-header" id="Job-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L90"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L90"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -74,7 +74,7 @@ Create a Job resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="Job-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L46">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -86,7 +86,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Job-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -94,7 +94,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Job-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -106,7 +106,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="Job-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -116,7 +116,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="Job-maxWorkers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L53">property <b>maxWorkers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L53">property <b>maxWorkers</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>maxWorkers: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -125,7 +125,7 @@ The number of workers permitted to work on the job.  More workers may improve pr
 
 </div>
 <h3 class="pdoc-member-header" id="Job-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L57">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L57">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -134,7 +134,7 @@ A unique name for the resource, required by Dataflow.
 
 </div>
 <h3 class="pdoc-member-header" id="Job-onDelete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L61">property <b>onDelete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L61">property <b>onDelete</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>onDelete: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -143,7 +143,7 @@ One of "drain" or "cancel".  Specifies behavior of deletion during `terraform de
 
 </div>
 <h3 class="pdoc-member-header" id="Job-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L65">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L65">property <b>parameters</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>parameters: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -152,22 +152,22 @@ Key/Value pairs to be passed to the Dataflow job (as used in the template).
 
 </div>
 <h3 class="pdoc-member-header" id="Job-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L69">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L69">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>project: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>project: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 The project in which the resource belongs. If it is not provided, the provider project is used.
 
 </div>
 <h3 class="pdoc-member-header" id="Job-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L70">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L70">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>region: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="Job-serviceAccountEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L74">property <b>serviceAccountEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L74">property <b>serviceAccountEmail</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>serviceAccountEmail: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -176,7 +176,7 @@ The Service Account email used to create the job.
 
 </div>
 <h3 class="pdoc-member-header" id="Job-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L78">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L78">property <b>state</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>state: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -185,7 +185,7 @@ The current state of the resource, selected from the [JobState enum](https://clo
 
 </div>
 <h3 class="pdoc-member-header" id="Job-tempGcsLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L82">property <b>tempGcsLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L82">property <b>tempGcsLocation</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tempGcsLocation: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -194,7 +194,7 @@ A writeable location on GCS for the Dataflow job to dump its temporary data.
 
 </div>
 <h3 class="pdoc-member-header" id="Job-templateGcsPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L86">property <b>templateGcsPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L86">property <b>templateGcsPath</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>templateGcsPath: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -203,7 +203,7 @@ The GCS path to the Dataflow job template.
 
 </div>
 <h3 class="pdoc-member-header" id="Job-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -213,7 +213,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="Job-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L90">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L90">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>zone: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -223,14 +223,14 @@ The zone in which the created job should run. If it is not provided, the provide
 </div>
 </div>
 <h2 class="pdoc-module-header" id="JobArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L189">interface <b>JobArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L189">interface <b>JobArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a Job resource.
 
 <h3 class="pdoc-member-header" id="JobArgs-maxWorkers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L193">property <b>maxWorkers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L193">property <b>maxWorkers</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>maxWorkers?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -239,7 +239,7 @@ The number of workers permitted to work on the job.  More workers may improve pr
 
 </div>
 <h3 class="pdoc-member-header" id="JobArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L197">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L197">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -248,7 +248,7 @@ A unique name for the resource, required by Dataflow.
 
 </div>
 <h3 class="pdoc-member-header" id="JobArgs-onDelete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L201">property <b>onDelete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L201">property <b>onDelete</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>onDelete?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -257,7 +257,7 @@ One of "drain" or "cancel".  Specifies behavior of deletion during `terraform de
 
 </div>
 <h3 class="pdoc-member-header" id="JobArgs-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L205">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L205">property <b>parameters</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>parameters?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -266,7 +266,7 @@ Key/Value pairs to be passed to the Dataflow job (as used in the template).
 
 </div>
 <h3 class="pdoc-member-header" id="JobArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L209">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L209">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>project?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -275,13 +275,13 @@ The project in which the resource belongs. If it is not provided, the provider p
 
 </div>
 <h3 class="pdoc-member-header" id="JobArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L210">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L210">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>region?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="JobArgs-serviceAccountEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L214">property <b>serviceAccountEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L214">property <b>serviceAccountEmail</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>serviceAccountEmail?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -290,7 +290,7 @@ The Service Account email used to create the job.
 
 </div>
 <h3 class="pdoc-member-header" id="JobArgs-tempGcsLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L218">property <b>tempGcsLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L218">property <b>tempGcsLocation</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tempGcsLocation: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -299,7 +299,7 @@ A writeable location on GCS for the Dataflow job to dump its temporary data.
 
 </div>
 <h3 class="pdoc-member-header" id="JobArgs-templateGcsPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L222">property <b>templateGcsPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L222">property <b>templateGcsPath</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>templateGcsPath: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -308,7 +308,7 @@ The GCS path to the Dataflow job template.
 
 </div>
 <h3 class="pdoc-member-header" id="JobArgs-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L226">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L226">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>zone?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -318,14 +318,14 @@ The zone in which the created job should run. If it is not provided, the provide
 </div>
 </div>
 <h2 class="pdoc-module-header" id="JobState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L142">interface <b>JobState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L142">interface <b>JobState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering Job resources.
 
 <h3 class="pdoc-member-header" id="JobState-maxWorkers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L146">property <b>maxWorkers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L146">property <b>maxWorkers</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>maxWorkers?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -334,7 +334,7 @@ The number of workers permitted to work on the job.  More workers may improve pr
 
 </div>
 <h3 class="pdoc-member-header" id="JobState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L150">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L150">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -343,7 +343,7 @@ A unique name for the resource, required by Dataflow.
 
 </div>
 <h3 class="pdoc-member-header" id="JobState-onDelete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L154">property <b>onDelete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L154">property <b>onDelete</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>onDelete?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -352,7 +352,7 @@ One of "drain" or "cancel".  Specifies behavior of deletion during `terraform de
 
 </div>
 <h3 class="pdoc-member-header" id="JobState-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L158">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L158">property <b>parameters</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>parameters?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -361,7 +361,7 @@ Key/Value pairs to be passed to the Dataflow job (as used in the template).
 
 </div>
 <h3 class="pdoc-member-header" id="JobState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L162">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L162">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>project?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -370,13 +370,13 @@ The project in which the resource belongs. If it is not provided, the provider p
 
 </div>
 <h3 class="pdoc-member-header" id="JobState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L163">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L163">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>region?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="JobState-serviceAccountEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L167">property <b>serviceAccountEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L167">property <b>serviceAccountEmail</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>serviceAccountEmail?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -385,7 +385,7 @@ The Service Account email used to create the job.
 
 </div>
 <h3 class="pdoc-member-header" id="JobState-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L171">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L171">property <b>state</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>state?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -394,7 +394,7 @@ The current state of the resource, selected from the [JobState enum](https://clo
 
 </div>
 <h3 class="pdoc-member-header" id="JobState-tempGcsLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L175">property <b>tempGcsLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L175">property <b>tempGcsLocation</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tempGcsLocation?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -403,7 +403,7 @@ A writeable location on GCS for the Dataflow job to dump its temporary data.
 
 </div>
 <h3 class="pdoc-member-header" id="JobState-templateGcsPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L179">property <b>templateGcsPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L179">property <b>templateGcsPath</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>templateGcsPath?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -412,7 +412,7 @@ The GCS path to the Dataflow job template.
 
 </div>
 <h3 class="pdoc-member-header" id="JobState-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/dataflow/job.ts#L183">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/dataflow/job.ts#L183">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>zone?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

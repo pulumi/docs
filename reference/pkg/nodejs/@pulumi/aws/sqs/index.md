@@ -53,7 +53,7 @@ const terraformQueue = new aws.sqs.Queue("terraform_queue", {
     maxMessageSize: 2048,
     messageRetentionSeconds: 86400,
     receiveWaitTimeSeconds: 10,
-    redrivePolicy: aws_sqs_queue_terraform_queue_deadletter.arn.apply(arn => `{"deadLetterTargetArn":"${arn}","maxReceiveCount":4}`),
+    redrivePolicy: pulumi.interpolate`{"deadLetterTargetArn":"${aws_sqs_queue_terraform_queue_deadletter.arn}","maxReceiveCount":4}`,
     tags: {
         Environment: "production",
     },
@@ -120,7 +120,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Queue-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -180,7 +180,7 @@ Boolean designating a FIFO queue. If not set, it defaults to `false` making it s
 
 </div>
 <h3 class="pdoc-member-header" id="Queue-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -321,7 +321,7 @@ The visibility timeout for the queue. An integer from 0 to 43200 (12 hours). The
 
 </div>
 <h3 class="pdoc-member-header" id="QueueEventSubscription-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L142">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L148">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -333,7 +333,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="QueueEventSubscription-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L157">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L163">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -395,7 +395,7 @@ import * as aws from "@pulumi/aws";
 
 const queue = new aws.sqs.Queue("q", {});
 const test = new aws.sqs.QueuePolicy("test", {
-    policy: pulumi.all([queue.arn, queue.arn]).apply(([queueArn, queueArn1]) => `{
+    policy: pulumi.interpolate`{
   "Version": "2012-10-17",
   "Id": "sqspolicy",
   "Statement": [
@@ -404,16 +404,16 @@ const test = new aws.sqs.QueuePolicy("test", {
       "Effect": "Allow",
       "Principal": "*",
       "Action": "sqs:SendMessage",
-      "Resource": "${queueArn}",
+      "Resource": "${queue.arn}",
       "Condition": {
         "ArnEquals": {
-          "aws:SourceArn": "${queueArn1}"
+          "aws:SourceArn": "${queue.arn}"
         }
       }
     }
   ]
 }
-`),
+`,
     queueUrl: queue.id,
 });
 ```
@@ -454,7 +454,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="QueuePolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -466,7 +466,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="QueuePolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>

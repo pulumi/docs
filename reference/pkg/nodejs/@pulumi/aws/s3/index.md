@@ -128,7 +128,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="AccountPublicAccessBlock-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -170,7 +170,7 @@ Whether Amazon S3 should block public bucket policies for buckets in this accoun
 
 </div>
 <h3 class="pdoc-member-header" id="AccountPublicAccessBlock-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -438,7 +438,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Bucket-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -586,7 +586,7 @@ The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rand
 
 </div>
 <h3 class="pdoc-member-header" id="Bucket-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -831,7 +831,7 @@ completion and all subscriptions have been heard about.
 
 </div>
 <h3 class="pdoc-member-header" id="BucketEventSubscription-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L142">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L148">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -843,7 +843,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="BucketEventSubscription-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L157">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L163">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -956,7 +956,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="BucketMetric-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -989,7 +989,7 @@ The name of the bucket to put metric configuration.
 
 </div>
 <h3 class="pdoc-member-header" id="BucketMetric-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1038,7 +1038,7 @@ import * as aws from "@pulumi/aws";
 
 const bucket = new aws.s3.Bucket("bucket", {});
 const topic = new aws.sns.Topic("topic", {
-    policy: bucket.arn.apply(arn => `{
+    policy: pulumi.interpolate`{
     "Version":"2012-10-17",
     "Statement":[{
         "Effect": "Allow",
@@ -1046,11 +1046,11 @@ const topic = new aws.sns.Topic("topic", {
         "Action": "SNS:Publish",
         "Resource": "arn:aws:sns:*:*:s3-event-notification-topic",
         "Condition":{
-            "ArnLike":{"aws:SourceArn":"${arn}"}
+            "ArnLike":{"aws:SourceArn":"${bucket.arn}"}
         }
     }]
 }
-`),
+`,
 });
 const bucketNotification = new aws.s3.BucketNotification("bucket_notification", {
     bucket: bucket.id,
@@ -1070,7 +1070,7 @@ import * as aws from "@pulumi/aws";
 
 const bucket = new aws.s3.Bucket("bucket", {});
 const queue = new aws.sqs.Queue("queue", {
-    policy: bucket.arn.apply(arn => `{
+    policy: pulumi.interpolate`{
   "Version": "2012-10-17",
   "Statement": [
     {
@@ -1079,12 +1079,12 @@ const queue = new aws.sqs.Queue("queue", {
       "Action": "sqs:SendMessage",
 	  "Resource": "arn:aws:sqs:*:*:s3-event-notification-queue",
       "Condition": {
-        "ArnEquals": { "aws:SourceArn": "${arn}" }
+        "ArnEquals": { "aws:SourceArn": "${bucket.arn}" }
       }
     }
   ]
 }
-`),
+`,
 });
 const bucketNotification = new aws.s3.BucketNotification("bucket_notification", {
     bucket: bucket.id,
@@ -1213,7 +1213,7 @@ import * as aws from "@pulumi/aws";
 
 const bucket = new aws.s3.Bucket("bucket", {});
 const queue = new aws.sqs.Queue("queue", {
-    policy: bucket.arn.apply(arn => `{
+    policy: pulumi.interpolate`{
   "Version": "2012-10-17",
   "Statement": [
     {
@@ -1222,12 +1222,12 @@ const queue = new aws.sqs.Queue("queue", {
       "Action": "sqs:SendMessage",
 	  "Resource": "arn:aws:sqs:*:*:s3-event-notification-queue",
       "Condition": {
-        "ArnEquals": { "aws:SourceArn": "${arn}" }
+        "ArnEquals": { "aws:SourceArn": "${bucket.arn}" }
       }
     }
   ]
 }
-`),
+`,
 });
 const bucketNotification = new aws.s3.BucketNotification("bucket_notification", {
     bucket: bucket.id,
@@ -1290,7 +1290,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="BucketNotification-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1311,7 +1311,7 @@ The name of the bucket to put notification configuration.
 
 </div>
 <h3 class="pdoc-member-header" id="BucketNotification-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1497,7 +1497,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="BucketObject-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1600,7 +1600,7 @@ This attribute is not compatible with KMS encryption, `kms_key_id` or `server_si
 
 </div>
 <h3 class="pdoc-member-header" id="BucketObject-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1772,7 +1772,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="BucketPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1793,7 +1793,7 @@ The name of the bucket to which to apply the policy.
 
 </div>
 <h3 class="pdoc-member-header" id="BucketPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1880,7 +1880,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="BucketPublicAccessBlock-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1922,7 +1922,7 @@ S3 Bucket to which this Public Access Block configuration should be applied.
 
 </div>
 <h3 class="pdoc-member-header" id="BucketPublicAccessBlock-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2058,7 +2058,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Inventory-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2121,7 +2121,7 @@ Object filtering that accepts a prefix (documented below).
 
 </div>
 <h3 class="pdoc-member-header" id="Inventory-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a998eb1436459bca87792641e7c9fb49e4a5e61c/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2208,11 +2208,11 @@ const selected = pulumi.output(aws.s3.getBucket({
 }));
 const example = new aws.route53.Record("example", {
     aliases: [{
-        name: selected.apply(selected => selected.websiteDomain),
-        zoneId: selected.apply(selected => selected.hostedZoneId),
+        name: selected.websiteDomain,
+        zoneId: selected.hostedZoneId,
     }],
     type: "A",
-    zoneId: testZone.apply(testZone => testZone.id),
+    zoneId: testZone.id,
 });
 ```
 
@@ -2227,7 +2227,7 @@ const selected = pulumi.output(aws.s3.getBucket({
 }));
 const test = new aws.cloudfront.Distribution("test", {
     origins: [{
-        domainName: selected.apply(selected => selected.bucketDomainName),
+        domainName: selected.bucketDomainName,
         originId: "s3-selected-bucket",
     }],
 });
@@ -2263,7 +2263,7 @@ const bootstrapScript = pulumi.output(aws.s3.getBucketObject({
 const example = new aws.ec2.Instance("example", {
     ami: "ami-2757f631",
     instanceType: "t2.micro",
-    userData: bootstrapScript.apply(bootstrapScript => bootstrapScript.body),
+    userData: bootstrapScript.body,
 });
 ```
 
@@ -2284,9 +2284,9 @@ const lambda = pulumi.output(aws.s3.getBucketObject({
 const testLambda = new aws.lambda.Function("test_lambda", {
     handler: "exports.test",
     role: aws_iam_role_iam_for_lambda.arn, // (not shown)
-    s3Bucket: lambda.apply(lambda => lambda.bucket),
-    s3Key: lambda.apply(lambda => lambda.key),
-    s3ObjectVersion: lambda.apply(lambda => lambda.versionId),
+    s3Bucket: lambda.bucket,
+    s3Key: lambda.key,
+    s3ObjectVersion: lambda.versionId,
 });
 ```
 

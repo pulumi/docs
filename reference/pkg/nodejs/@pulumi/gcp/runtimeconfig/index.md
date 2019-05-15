@@ -21,14 +21,14 @@ title: Module runtimeconfig
 * <a href="#VariableArgs">interface VariableArgs</a>
 * <a href="#VariableState">interface VariableState</a>
 
-<a href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/config.ts">runtimeconfig/config.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/variable.ts">runtimeconfig/variable.ts</a> 
+<a href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/config.ts">runtimeconfig/config.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/variable.ts">runtimeconfig/variable.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Config">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/config.ts#L26">class <b>Config</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/config.ts#L26">class <b>Config</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -52,7 +52,7 @@ const my_runtime_config = new gcp.runtimeconfig.Config("my-runtime-config", {
 ```
 
 <h3 class="pdoc-member-header" id="Config-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/config.ts#L52"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/config.ts#L52"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -67,7 +67,7 @@ Create a Config resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="Config-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/config.ts#L35">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/config.ts#L35">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -79,7 +79,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Config-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -87,7 +87,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Config-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -99,7 +99,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="Config-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/config.ts#L43">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/config.ts#L43">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -109,7 +109,7 @@ config.
 
 </div>
 <h3 class="pdoc-member-header" id="Config-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -119,7 +119,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="Config-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/config.ts#L47">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/config.ts#L47">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -128,7 +128,7 @@ The name of the runtime config.
 
 </div>
 <h3 class="pdoc-member-header" id="Config-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/config.ts#L52">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/config.ts#L52">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -138,7 +138,7 @@ is not provided, the provider project is used.
 
 </div>
 <h3 class="pdoc-member-header" id="Config-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -149,7 +149,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Variable">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/variable.ts#L49">class <b>Variable</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/variable.ts#L49">class <b>Variable</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -196,7 +196,7 @@ const my_secret = new gcp.runtimeconfig.Variable("my-secret", {
 ```
 
 <h3 class="pdoc-member-header" id="Variable-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/variable.ts#L84"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/variable.ts#L84"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -211,7 +211,7 @@ Create a Variable resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="Variable-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/variable.ts#L58">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/variable.ts#L58">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -223,7 +223,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Variable-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -231,7 +231,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Variable-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -243,7 +243,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="Variable-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -253,7 +253,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="Variable-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/variable.ts#L66">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/variable.ts#L66">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -263,7 +263,7 @@ names can be hierarchical using slashes (e.g. "prod-variables/hostname").
 
 </div>
 <h3 class="pdoc-member-header" id="Variable-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/variable.ts#L71">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/variable.ts#L71">property <b>parent</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>parent: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -273,7 +273,7 @@ variable.
 
 </div>
 <h3 class="pdoc-member-header" id="Variable-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/variable.ts#L76">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/variable.ts#L76">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -283,13 +283,13 @@ is not provided, the provider project is used.
 
 </div>
 <h3 class="pdoc-member-header" id="Variable-text">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/variable.ts#L77">property <b>text</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/variable.ts#L77">property <b>text</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>text: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="Variable-updateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/variable.ts#L83">property <b>updateTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/variable.ts#L83">property <b>updateTime</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>updateTime: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -300,7 +300,7 @@ Example: "2016-10-09T12:33:37.578138407Z".
 
 </div>
 <h3 class="pdoc-member-header" id="Variable-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -310,21 +310,21 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="Variable-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/variable.ts#L84">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/variable.ts#L84">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>value: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConfigArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/config.ts#L102">interface <b>ConfigArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/config.ts#L102">interface <b>ConfigArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a Config resource.
 
 <h3 class="pdoc-member-header" id="ConfigArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/config.ts#L107">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/config.ts#L107">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>description?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -334,7 +334,7 @@ config.
 
 </div>
 <h3 class="pdoc-member-header" id="ConfigArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/config.ts#L111">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/config.ts#L111">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -343,7 +343,7 @@ The name of the runtime config.
 
 </div>
 <h3 class="pdoc-member-header" id="ConfigArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/config.ts#L116">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/config.ts#L116">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>project?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -354,14 +354,14 @@ is not provided, the provider project is used.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConfigState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/config.ts#L82">interface <b>ConfigState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/config.ts#L82">interface <b>ConfigState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering Config resources.
 
 <h3 class="pdoc-member-header" id="ConfigState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/config.ts#L87">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/config.ts#L87">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>description?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -371,7 +371,7 @@ config.
 
 </div>
 <h3 class="pdoc-member-header" id="ConfigState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/config.ts#L91">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/config.ts#L91">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -380,7 +380,7 @@ The name of the runtime config.
 
 </div>
 <h3 class="pdoc-member-header" id="ConfigState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/config.ts#L96">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/config.ts#L96">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>project?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -391,14 +391,14 @@ is not provided, the provider project is used.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VariableArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/variable.ts#L152">interface <b>VariableArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/variable.ts#L152">interface <b>VariableArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a Variable resource.
 
 <h3 class="pdoc-member-header" id="VariableArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/variable.ts#L157">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/variable.ts#L157">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -408,7 +408,7 @@ names can be hierarchical using slashes (e.g. "prod-variables/hostname").
 
 </div>
 <h3 class="pdoc-member-header" id="VariableArgs-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/variable.ts#L162">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/variable.ts#L162">property <b>parent</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>parent: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -418,7 +418,7 @@ variable.
 
 </div>
 <h3 class="pdoc-member-header" id="VariableArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/variable.ts#L167">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/variable.ts#L167">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>project?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -428,27 +428,27 @@ is not provided, the provider project is used.
 
 </div>
 <h3 class="pdoc-member-header" id="VariableArgs-text">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/variable.ts#L168">property <b>text</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/variable.ts#L168">property <b>text</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>text?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="VariableArgs-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/variable.ts#L169">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/variable.ts#L169">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>value?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VariableState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/variable.ts#L123">interface <b>VariableState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/variable.ts#L123">interface <b>VariableState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering Variable resources.
 
 <h3 class="pdoc-member-header" id="VariableState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/variable.ts#L128">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/variable.ts#L128">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -458,7 +458,7 @@ names can be hierarchical using slashes (e.g. "prod-variables/hostname").
 
 </div>
 <h3 class="pdoc-member-header" id="VariableState-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/variable.ts#L133">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/variable.ts#L133">property <b>parent</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>parent?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -468,7 +468,7 @@ variable.
 
 </div>
 <h3 class="pdoc-member-header" id="VariableState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/variable.ts#L138">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/variable.ts#L138">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>project?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -478,13 +478,13 @@ is not provided, the provider project is used.
 
 </div>
 <h3 class="pdoc-member-header" id="VariableState-text">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/variable.ts#L139">property <b>text</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/variable.ts#L139">property <b>text</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>text?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="VariableState-updateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/variable.ts#L145">property <b>updateTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/variable.ts#L145">property <b>updateTime</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>updateTime?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -495,7 +495,7 @@ Example: "2016-10-09T12:33:37.578138407Z".
 
 </div>
 <h3 class="pdoc-member-header" id="VariableState-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/65c7a44d62f0ea5edd3833c6f7b1f0c253503f0f/sdk/nodejs/runtimeconfig/variable.ts#L146">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/dfd50d3cd37076dc64bfff16a687877050b08fcb/sdk/nodejs/runtimeconfig/variable.ts#L146">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>value?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

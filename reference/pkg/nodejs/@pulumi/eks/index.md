@@ -97,7 +97,7 @@ requested.
 
 </div>
 <h3 class="pdoc-member-header" id="Cluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/node_modules/@pulumi/pulumi/resource.d.ts#L142">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/node_modules/@pulumi/pulumi/resource.d.ts#L148">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -109,7 +109,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="Cluster-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/node_modules/@pulumi/pulumi/resource.d.ts#L157">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/node_modules/@pulumi/pulumi/resource.d.ts#L163">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -248,7 +248,7 @@ requested.
 
 </div>
 <h3 class="pdoc-member-header" id="NodeGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/node_modules/@pulumi/pulumi/resource.d.ts#L142">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/node_modules/@pulumi/pulumi/resource.d.ts#L148">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -260,7 +260,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="NodeGroup-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/node_modules/@pulumi/pulumi/resource.d.ts#L157">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/node_modules/@pulumi/pulumi/resource.d.ts#L163">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -338,7 +338,7 @@ Create a new ServiceRole.
 
 </div>
 <h3 class="pdoc-member-header" id="ServiceRole-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/node_modules/@pulumi/pulumi/resource.d.ts#L142">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/node_modules/@pulumi/pulumi/resource.d.ts#L148">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -350,7 +350,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="ServiceRole-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/node_modules/@pulumi/pulumi/resource.d.ts#L157">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/node_modules/@pulumi/pulumi/resource.d.ts#L163">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -400,7 +400,7 @@ able to programatically manage existing infrastructure, we can replace this with
 
 </div>
 <h3 class="pdoc-member-header" id="VpcCni-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -412,7 +412,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="VpcCni-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>

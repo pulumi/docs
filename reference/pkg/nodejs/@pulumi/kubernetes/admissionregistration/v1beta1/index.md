@@ -19,14 +19,14 @@ title: Module admissionregistration/v1beta1
 * <a href="#ValidatingWebhookConfiguration">class ValidatingWebhookConfiguration</a>
 * <a href="#ValidatingWebhookConfigurationList">class ValidatingWebhookConfigurationList</a>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfiguration.ts">admissionregistration/v1beta1/MutatingWebhookConfiguration.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfigurationList.ts">admissionregistration/v1beta1/MutatingWebhookConfigurationList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfiguration.ts">admissionregistration/v1beta1/ValidatingWebhookConfiguration.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfigurationList.ts">admissionregistration/v1beta1/ValidatingWebhookConfigurationList.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfiguration.ts">admissionregistration/v1beta1/MutatingWebhookConfiguration.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfigurationList.ts">admissionregistration/v1beta1/MutatingWebhookConfigurationList.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfiguration.ts">admissionregistration/v1beta1/ValidatingWebhookConfiguration.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfigurationList.ts">admissionregistration/v1beta1/ValidatingWebhookConfigurationList.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="MutatingWebhookConfiguration">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfiguration.ts#L12">class <b>MutatingWebhookConfiguration</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfiguration.ts#L12">class <b>MutatingWebhookConfiguration</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -35,7 +35,7 @@ MutatingWebhookConfiguration describes the configuration of and admission webhoo
 or reject and may change the object.
 
 <h3 class="pdoc-member-header" id="MutatingWebhookConfiguration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfiguration.ts#L57"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfiguration.ts#L57"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -50,7 +50,7 @@ Create a admissionregistration.v1beta1.MutatingWebhookConfiguration resource wit
 
 </div>
 <h3 class="pdoc-member-header" id="MutatingWebhookConfiguration-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfiguration.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfiguration.ts#L52">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -65,7 +65,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 </div>
 <h3 class="pdoc-member-header" id="MutatingWebhookConfiguration-getInputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfiguration.ts#L56">method <b>getInputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfiguration.ts#L56">method <b>getInputs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -73,7 +73,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 </div>
 <h3 class="pdoc-member-header" id="MutatingWebhookConfiguration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -81,7 +81,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 </div>
 <h3 class="pdoc-member-header" id="MutatingWebhookConfiguration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -93,7 +93,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="MutatingWebhookConfiguration-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfiguration.ts#L19">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfiguration.ts#L19">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"admissionregistration.k8s.io/v1beta1"</span>&gt;;</pre>
@@ -105,7 +105,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
 <h3 class="pdoc-member-header" id="MutatingWebhookConfiguration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -115,7 +115,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="MutatingWebhookConfiguration-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfiguration.ts#L27">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfiguration.ts#L27">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"MutatingWebhookConfiguration"</span>&gt;;</pre>
@@ -127,7 +127,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="MutatingWebhookConfiguration-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfiguration.ts#L33">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfiguration.ts#L33">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
@@ -137,7 +137,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata.
 
 </div>
 <h3 class="pdoc-member-header" id="MutatingWebhookConfiguration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -147,7 +147,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="MutatingWebhookConfiguration-webhooks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfiguration.ts#L38">property <b>webhooks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfiguration.ts#L38">property <b>webhooks</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>webhooks: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.admissionregistration.v1beta1.Webhook[]&gt;;</pre>
@@ -157,7 +157,7 @@ Webhooks is a list of webhooks and the affected resources and operations.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MutatingWebhookConfigurationList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfigurationList.ts#L11">class <b>MutatingWebhookConfigurationList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfigurationList.ts#L11">class <b>MutatingWebhookConfigurationList</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -165,7 +165,7 @@ Webhooks is a list of webhooks and the affected resources and operations.
 MutatingWebhookConfigurationList is a list of MutatingWebhookConfiguration.
 
 <h3 class="pdoc-member-header" id="MutatingWebhookConfigurationList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfigurationList.ts#L56"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfigurationList.ts#L56"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -180,7 +180,7 @@ Create a admissionregistration.v1beta1.MutatingWebhookConfigurationList resource
 
 </div>
 <h3 class="pdoc-member-header" id="MutatingWebhookConfigurationList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfigurationList.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfigurationList.ts#L51">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -195,7 +195,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 </div>
 <h3 class="pdoc-member-header" id="MutatingWebhookConfigurationList-getInputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfigurationList.ts#L55">method <b>getInputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfigurationList.ts#L55">method <b>getInputs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -203,7 +203,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 </div>
 <h3 class="pdoc-member-header" id="MutatingWebhookConfigurationList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -211,7 +211,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 </div>
 <h3 class="pdoc-member-header" id="MutatingWebhookConfigurationList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -223,7 +223,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="MutatingWebhookConfigurationList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfigurationList.ts#L18">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfigurationList.ts#L18">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"admissionregistration.k8s.io/v1beta1"</span>&gt;;</pre>
@@ -235,7 +235,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
 <h3 class="pdoc-member-header" id="MutatingWebhookConfigurationList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -245,7 +245,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="MutatingWebhookConfigurationList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfigurationList.ts#L23">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfigurationList.ts#L23">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>items: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.admissionregistration.v1beta1.MutatingWebhookConfiguration[]&gt;;</pre>
@@ -254,7 +254,7 @@ List of MutatingWebhookConfiguration.
 
 </div>
 <h3 class="pdoc-member-header" id="MutatingWebhookConfigurationList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfigurationList.ts#L31">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfigurationList.ts#L31">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"MutatingWebhookConfigurationList"</span>&gt;;</pre>
@@ -266,7 +266,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="MutatingWebhookConfigurationList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfigurationList.ts#L37">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfigurationList.ts#L37">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
@@ -276,7 +276,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="MutatingWebhookConfigurationList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -287,7 +287,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ValidatingWebhookConfiguration">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfiguration.ts#L12">class <b>ValidatingWebhookConfiguration</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfiguration.ts#L12">class <b>ValidatingWebhookConfiguration</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -296,7 +296,7 @@ ValidatingWebhookConfiguration describes the configuration of and admission webh
 accept or reject and object without changing it.
 
 <h3 class="pdoc-member-header" id="ValidatingWebhookConfiguration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfiguration.ts#L57"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfiguration.ts#L57"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -311,7 +311,7 @@ Create a admissionregistration.v1beta1.ValidatingWebhookConfiguration resource w
 
 </div>
 <h3 class="pdoc-member-header" id="ValidatingWebhookConfiguration-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfiguration.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfiguration.ts#L52">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -326,7 +326,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 </div>
 <h3 class="pdoc-member-header" id="ValidatingWebhookConfiguration-getInputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfiguration.ts#L56">method <b>getInputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfiguration.ts#L56">method <b>getInputs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -334,7 +334,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 </div>
 <h3 class="pdoc-member-header" id="ValidatingWebhookConfiguration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -342,7 +342,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 </div>
 <h3 class="pdoc-member-header" id="ValidatingWebhookConfiguration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -354,7 +354,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="ValidatingWebhookConfiguration-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfiguration.ts#L19">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfiguration.ts#L19">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"admissionregistration.k8s.io/v1beta1"</span>&gt;;</pre>
@@ -366,7 +366,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
 <h3 class="pdoc-member-header" id="ValidatingWebhookConfiguration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -376,7 +376,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="ValidatingWebhookConfiguration-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfiguration.ts#L27">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfiguration.ts#L27">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ValidatingWebhookConfiguration"</span>&gt;;</pre>
@@ -388,7 +388,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="ValidatingWebhookConfiguration-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfiguration.ts#L33">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfiguration.ts#L33">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
@@ -398,7 +398,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata.
 
 </div>
 <h3 class="pdoc-member-header" id="ValidatingWebhookConfiguration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -408,7 +408,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="ValidatingWebhookConfiguration-webhooks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfiguration.ts#L38">property <b>webhooks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfiguration.ts#L38">property <b>webhooks</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>webhooks: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.admissionregistration.v1beta1.Webhook[]&gt;;</pre>
@@ -418,7 +418,7 @@ Webhooks is a list of webhooks and the affected resources and operations.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ValidatingWebhookConfigurationList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfigurationList.ts#L11">class <b>ValidatingWebhookConfigurationList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfigurationList.ts#L11">class <b>ValidatingWebhookConfigurationList</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -426,7 +426,7 @@ Webhooks is a list of webhooks and the affected resources and operations.
 ValidatingWebhookConfigurationList is a list of ValidatingWebhookConfiguration.
 
 <h3 class="pdoc-member-header" id="ValidatingWebhookConfigurationList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfigurationList.ts#L56"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfigurationList.ts#L56"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -441,7 +441,7 @@ Create a admissionregistration.v1beta1.ValidatingWebhookConfigurationList resour
 
 </div>
 <h3 class="pdoc-member-header" id="ValidatingWebhookConfigurationList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfigurationList.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfigurationList.ts#L51">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -456,7 +456,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 </div>
 <h3 class="pdoc-member-header" id="ValidatingWebhookConfigurationList-getInputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfigurationList.ts#L55">method <b>getInputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfigurationList.ts#L55">method <b>getInputs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -464,7 +464,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 </div>
 <h3 class="pdoc-member-header" id="ValidatingWebhookConfigurationList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -472,7 +472,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 </div>
 <h3 class="pdoc-member-header" id="ValidatingWebhookConfigurationList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -484,7 +484,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="ValidatingWebhookConfigurationList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfigurationList.ts#L18">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfigurationList.ts#L18">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"admissionregistration.k8s.io/v1beta1"</span>&gt;;</pre>
@@ -496,7 +496,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 </div>
 <h3 class="pdoc-member-header" id="ValidatingWebhookConfigurationList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -506,7 +506,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="ValidatingWebhookConfigurationList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfigurationList.ts#L23">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfigurationList.ts#L23">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>items: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.admissionregistration.v1beta1.ValidatingWebhookConfiguration[]&gt;;</pre>
@@ -515,7 +515,7 @@ List of ValidatingWebhookConfiguration.
 
 </div>
 <h3 class="pdoc-member-header" id="ValidatingWebhookConfigurationList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfigurationList.ts#L31">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfigurationList.ts#L31">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ValidatingWebhookConfigurationList"</span>&gt;;</pre>
@@ -527,7 +527,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="ValidatingWebhookConfigurationList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfigurationList.ts#L37">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfigurationList.ts#L37">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ListMeta&gt;;</pre>
@@ -537,7 +537,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 </div>
 <h3 class="pdoc-member-header" id="ValidatingWebhookConfigurationList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f56730d2e7af6121d8e7db6c2c2b188bd2b78602/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>

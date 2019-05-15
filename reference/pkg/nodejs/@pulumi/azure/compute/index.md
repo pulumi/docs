@@ -75,14 +75,14 @@ title: Module compute
 * <a href="#VirtualMachineArgs">interface VirtualMachineArgs</a>
 * <a href="#VirtualMachineState">interface VirtualMachineState</a>
 
-<a href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/availabilitySet.ts">compute/availabilitySet.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/dataDiskAttachment.ts">compute/dataDiskAttachment.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts">compute/extension.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getAvailabilitySet.ts">compute/getAvailabilitySet.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getImage.ts">compute/getImage.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getManagedDisk.ts">compute/getManagedDisk.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getPlatformImage.ts">compute/getPlatformImage.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImage.ts">compute/getSharedImage.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImageGallery.ts">compute/getSharedImageGallery.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImageVersion.ts">compute/getSharedImageVersion.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSnapshot.ts">compute/getSnapshot.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getVirtualMachine.ts">compute/getVirtualMachine.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/image.ts">compute/image.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts">compute/managedDisk.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts">compute/scaleSet.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts">compute/sharedImage.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageGallery.ts">compute/sharedImageGallery.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageVersion.ts">compute/sharedImageVersion.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts">compute/snapshot.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts">compute/virtualMachine.ts</a> 
+<a href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/availabilitySet.ts">compute/availabilitySet.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/dataDiskAttachment.ts">compute/dataDiskAttachment.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts">compute/extension.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getAvailabilitySet.ts">compute/getAvailabilitySet.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getImage.ts">compute/getImage.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getManagedDisk.ts">compute/getManagedDisk.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getPlatformImage.ts">compute/getPlatformImage.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImage.ts">compute/getSharedImage.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImageGallery.ts">compute/getSharedImageGallery.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImageVersion.ts">compute/getSharedImageVersion.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSnapshot.ts">compute/getSnapshot.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getVirtualMachine.ts">compute/getVirtualMachine.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/image.ts">compute/image.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts">compute/managedDisk.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts">compute/scaleSet.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts">compute/sharedImage.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageGallery.ts">compute/sharedImageGallery.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageVersion.ts">compute/sharedImageVersion.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts">compute/snapshot.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts">compute/virtualMachine.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="AvailabilitySet">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/availabilitySet.ts#L30">class <b>AvailabilitySet</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/availabilitySet.ts#L30">class <b>AvailabilitySet</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -110,7 +110,7 @@ const testAvailabilitySet = new azure.compute.AvailabilitySet("test", {
 ```
 
 <h3 class="pdoc-member-header" id="AvailabilitySet-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/availabilitySet.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/availabilitySet.ts#L70"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -125,7 +125,7 @@ Create a AvailabilitySet resource with the given unique name, arguments, and opt
 
 </div>
 <h3 class="pdoc-member-header" id="AvailabilitySet-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/availabilitySet.ts#L39">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/availabilitySet.ts#L39">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -137,7 +137,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="AvailabilitySet-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -145,7 +145,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="AvailabilitySet-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -157,7 +157,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="AvailabilitySet-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -167,7 +167,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="AvailabilitySet-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/availabilitySet.ts#L46">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/availabilitySet.ts#L46">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -176,7 +176,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="AvailabilitySet-managed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/availabilitySet.ts#L50">property <b>managed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/availabilitySet.ts#L50">property <b>managed</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>managed: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -185,7 +185,7 @@ Specifies whether the availability set is managed or not. Possible values are `t
 
 </div>
 <h3 class="pdoc-member-header" id="AvailabilitySet-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/availabilitySet.ts#L54">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/availabilitySet.ts#L54">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -194,7 +194,7 @@ Specifies the name of the availability set. Changing this forces a new resource 
 
 </div>
 <h3 class="pdoc-member-header" id="AvailabilitySet-platformFaultDomainCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/availabilitySet.ts#L58">property <b>platformFaultDomainCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/availabilitySet.ts#L58">property <b>platformFaultDomainCount</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>platformFaultDomainCount: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -203,7 +203,7 @@ Specifies the number of fault domains that are used. Defaults to 3.
 
 </div>
 <h3 class="pdoc-member-header" id="AvailabilitySet-platformUpdateDomainCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/availabilitySet.ts#L62">property <b>platformUpdateDomainCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/availabilitySet.ts#L62">property <b>platformUpdateDomainCount</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>platformUpdateDomainCount: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -212,7 +212,7 @@ Specifies the number of update domains that are used. Defaults to 5.
 
 </div>
 <h3 class="pdoc-member-header" id="AvailabilitySet-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/availabilitySet.ts#L66">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/availabilitySet.ts#L66">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -221,7 +221,7 @@ The name of the resource group in which to create the availability set. Changing
 
 </div>
 <h3 class="pdoc-member-header" id="AvailabilitySet-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/availabilitySet.ts#L70">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/availabilitySet.ts#L70">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -230,7 +230,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="AvailabilitySet-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -241,7 +241,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DataDiskAttachment">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/dataDiskAttachment.ts#L93">class <b>DataDiskAttachment</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/dataDiskAttachment.ts#L93">class <b>DataDiskAttachment</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -332,7 +332,7 @@ const testDataDiskAttachment = new azure.compute.DataDiskAttachment("test", {
 ```
 
 <h3 class="pdoc-member-header" id="DataDiskAttachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/dataDiskAttachment.ts#L129"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/dataDiskAttachment.ts#L129"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -347,7 +347,7 @@ Create a DataDiskAttachment resource with the given unique name, arguments, and 
 
 </div>
 <h3 class="pdoc-member-header" id="DataDiskAttachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/dataDiskAttachment.ts#L102">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/dataDiskAttachment.ts#L102">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -359,7 +359,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="DataDiskAttachment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -367,7 +367,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="DataDiskAttachment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -379,7 +379,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="DataDiskAttachment-caching">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/dataDiskAttachment.ts#L109">property <b>caching</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/dataDiskAttachment.ts#L109">property <b>caching</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>caching: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -388,7 +388,7 @@ Specifies the caching requirements for this Data Disk. Possible values include `
 
 </div>
 <h3 class="pdoc-member-header" id="DataDiskAttachment-createOption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/dataDiskAttachment.ts#L113">property <b>createOption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/dataDiskAttachment.ts#L113">property <b>createOption</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>createOption: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -397,7 +397,7 @@ The Create Option of the Data Disk, such as `Empty` or `Attach`. Defaults to `At
 
 </div>
 <h3 class="pdoc-member-header" id="DataDiskAttachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -407,7 +407,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="DataDiskAttachment-lun">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/dataDiskAttachment.ts#L117">property <b>lun</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/dataDiskAttachment.ts#L117">property <b>lun</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>lun: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -416,7 +416,7 @@ The Logical Unit Number of the Data Disk, which needs to be unique within the Vi
 
 </div>
 <h3 class="pdoc-member-header" id="DataDiskAttachment-managedDiskId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/dataDiskAttachment.ts#L121">property <b>managedDiskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/dataDiskAttachment.ts#L121">property <b>managedDiskId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>managedDiskId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -425,7 +425,7 @@ The ID of an existing Managed Disk which should be attached. Changing this force
 
 </div>
 <h3 class="pdoc-member-header" id="DataDiskAttachment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -435,7 +435,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="DataDiskAttachment-virtualMachineId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/dataDiskAttachment.ts#L125">property <b>virtualMachineId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/dataDiskAttachment.ts#L125">property <b>virtualMachineId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>virtualMachineId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -444,7 +444,7 @@ The ID of the Virtual Machine to which the Data Disk should be attached. Changin
 
 </div>
 <h3 class="pdoc-member-header" id="DataDiskAttachment-writeAcceleratorEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/dataDiskAttachment.ts#L129">property <b>writeAcceleratorEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/dataDiskAttachment.ts#L129">property <b>writeAcceleratorEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>writeAcceleratorEnabled: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -454,7 +454,7 @@ Specifies if Write Accelerator is enabled on the disk. This can only be enabled 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Extension">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L111">class <b>Extension</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L111">class <b>Extension</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -563,7 +563,7 @@ const testExtension = new azure.compute.Extension("test", {
 ```
 
 <h3 class="pdoc-member-header" id="Extension-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L178"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L178"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -578,7 +578,7 @@ Create a Extension resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="Extension-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L120">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L120">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -590,7 +590,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Extension-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -598,7 +598,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Extension-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -610,7 +610,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="Extension-autoUpgradeMinorVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L128">property <b>autoUpgradeMinorVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L128">property <b>autoUpgradeMinorVersion</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>autoUpgradeMinorVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -620,7 +620,7 @@ the latest minor version update to the `type_handler_version` specified.
 
 </div>
 <h3 class="pdoc-member-header" id="Extension-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -630,7 +630,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="Extension-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L133">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L133">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -640,7 +640,7 @@ this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="Extension-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L138">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L138">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -650,7 +650,7 @@ this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="Extension-protectedSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L143">property <b>protectedSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L143">property <b>protectedSettings</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>protectedSettings: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -660,7 +660,7 @@ extension, like settings, these are specified as a JSON object in a string.
 
 </div>
 <h3 class="pdoc-member-header" id="Extension-publisher">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L148">property <b>publisher</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L148">property <b>publisher</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>publisher: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -670,7 +670,7 @@ can be found by using the Azure CLI.
 
 </div>
 <h3 class="pdoc-member-header" id="Extension-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L154">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L154">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -681,7 +681,7 @@ created.
 
 </div>
 <h3 class="pdoc-member-header" id="Extension-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L159">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L159">property <b>settings</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>settings: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -691,7 +691,7 @@ specified as a JSON object in a string.
 
 </div>
 <h3 class="pdoc-member-header" id="Extension-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L163">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L163">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -700,7 +700,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="Extension-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L168">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L168">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>type: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -710,7 +710,7 @@ be found using the Azure CLI.
 
 </div>
 <h3 class="pdoc-member-header" id="Extension-typeHandlerVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L173">property <b>typeHandlerVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L173">property <b>typeHandlerVersion</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>typeHandlerVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -720,7 +720,7 @@ use, available versions can be found using the Azure CLI.
 
 </div>
 <h3 class="pdoc-member-header" id="Extension-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -730,7 +730,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="Extension-virtualMachineName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L178">property <b>virtualMachineName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L178">property <b>virtualMachineName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>virtualMachineName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -741,7 +741,7 @@ this forces a new resource to be created.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Image">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/image.ts#L51">class <b>Image</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/image.ts#L51">class <b>Image</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -790,7 +790,7 @@ const testImage = new azure.compute.Image("test", {
 ```
 
 <h3 class="pdoc-member-header" id="Image-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/image.ts#L98"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/image.ts#L98"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -805,7 +805,7 @@ Create a Image resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="Image-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/image.ts#L60">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/image.ts#L60">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -817,7 +817,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Image-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -825,7 +825,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Image-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -837,14 +837,14 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="Image-dataDisks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/image.ts#L67">property <b>dataDisks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/image.ts#L67">property <b>dataDisks</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>dataDisks: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
     blobUri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    caching: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    lun: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    managedDiskId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    caching: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    lun: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
+    managedDiskId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     sizeGb: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
 }[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 
@@ -852,7 +852,7 @@ One or more `data_disk` elements as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="Image-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -862,7 +862,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="Image-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/image.ts#L72">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/image.ts#L72">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -872,7 +872,7 @@ Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="Image-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/image.ts#L77">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/image.ts#L77">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -882,15 +882,15 @@ new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="Image-osDisk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/image.ts#L81">property <b>osDisk</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/image.ts#L81">property <b>osDisk</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>osDisk: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
     blobUri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    caching: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    caching: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     managedDiskId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    osState: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    osType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    osState: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    osType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     sizeGb: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
 } | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 
@@ -898,7 +898,7 @@ One or more `os_disk` elements as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="Image-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/image.ts#L86">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/image.ts#L86">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -908,7 +908,7 @@ the image. Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="Image-sourceVirtualMachineId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/image.ts#L90">property <b>sourceVirtualMachineId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/image.ts#L90">property <b>sourceVirtualMachineId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>sourceVirtualMachineId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -917,7 +917,7 @@ The Virtual Machine ID from which to create the image.
 
 </div>
 <h3 class="pdoc-member-header" id="Image-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/image.ts#L94">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/image.ts#L94">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -926,7 +926,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="Image-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -936,7 +936,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="Image-zoneResilient">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/image.ts#L98">property <b>zoneResilient</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/image.ts#L98">property <b>zoneResilient</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>zoneResilient: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -946,7 +946,7 @@ Is zone resiliency enabled?  Defaults to `false`.  Changing this forces a new re
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ManagedDisk">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L68">class <b>ManagedDisk</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L68">class <b>ManagedDisk</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1012,7 +1012,7 @@ const copy = new azure.compute.ManagedDisk("copy", {
 ```
 
 <h3 class="pdoc-member-header" id="ManagedDisk-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L138"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L138"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1027,7 +1027,7 @@ Create a ManagedDisk resource with the given unique name, arguments, and options
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDisk-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L77">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L77">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1039,7 +1039,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDisk-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1047,7 +1047,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDisk-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1059,7 +1059,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDisk-createOption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L84">property <b>createOption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L84">property <b>createOption</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>createOption: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1068,7 +1068,7 @@ The method to use when creating the managed disk. Possible values include:
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDisk-diskSizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L89">property <b>diskSizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L89">property <b>diskSizeGb</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>diskSizeGb: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1078,16 +1078,16 @@ If `create_option` is `Copy` or `FromImage`, then the value must be equal to or 
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDisk-encryptionSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L93">property <b>encryptionSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L93">property <b>encryptionSettings</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>encryptionSettings: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    diskEncryptionKey: {
+    diskEncryptionKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
         secretUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
         sourceVaultId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     };
     enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    keyEncryptionKey: {
+    keyEncryptionKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
         keyUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
         sourceVaultId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     };
@@ -1097,7 +1097,7 @@ an `encryption_settings` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDisk-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1107,7 +1107,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDisk-imageReferenceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L97">property <b>imageReferenceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L97">property <b>imageReferenceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>imageReferenceId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1116,7 +1116,7 @@ ID of an existing platform/marketplace disk image to copy when `create_option` i
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDisk-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L102">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L102">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1126,7 +1126,7 @@ Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDisk-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L107">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L107">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1136,7 +1136,7 @@ new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDisk-osType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L112">property <b>osType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L112">property <b>osType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>osType: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1146,7 +1146,7 @@ operation targets a source that contains an operating system. Valid values are `
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDisk-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L117">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L117">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1156,7 +1156,7 @@ the managed disk.
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDisk-sourceResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L121">property <b>sourceResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L121">property <b>sourceResourceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>sourceResourceId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1165,7 +1165,7 @@ ID of an existing managed disk to copy when `create_option` is `Copy`.
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDisk-sourceUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L125">property <b>sourceUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L125">property <b>sourceUri</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>sourceUri: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1174,7 +1174,7 @@ URI to a valid VHD file to be used when `create_option` is `Import`.
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDisk-storageAccountType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L130">property <b>storageAccountType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L130">property <b>storageAccountType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>storageAccountType: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1184,7 +1184,7 @@ Allowable values are `Standard_LRS`, `Premium_LRS`, `StandardSSD_LRS` or `UltraS
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDisk-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L134">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L134">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1193,7 +1193,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDisk-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1203,7 +1203,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDisk-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L138">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L138">property <b>zones</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>zones: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1213,7 +1213,7 @@ A collection containing the availability zone to allocate the Managed Disk in.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ScaleSet">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L245">class <b>ScaleSet</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L245">class <b>ScaleSet</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1456,7 +1456,7 @@ const testScaleSet = new azure.compute.ScaleSet("test", {
 ```
 
 <h3 class="pdoc-member-header" id="ScaleSet-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L362"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L362"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1471,7 +1471,7 @@ Create a ScaleSet resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSet-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L254">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L254">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1483,7 +1483,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSet-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1491,7 +1491,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSet-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1503,7 +1503,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSet-automaticOsUpgrade">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L261">property <b>automaticOsUpgrade</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L261">property <b>automaticOsUpgrade</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>automaticOsUpgrade: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1512,11 +1512,11 @@ Automatic OS patches can be applied by Azure to your scaleset. This is particula
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSet-bootDiagnostics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L265">property <b>bootDiagnostics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L265">property <b>bootDiagnostics</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>bootDiagnostics: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
+    enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
     storageUri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 } | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 
@@ -1524,7 +1524,7 @@ A boot diagnostics profile block as referenced below.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSet-evictionPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L269">property <b>evictionPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L269">property <b>evictionPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>evictionPolicy: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1533,15 +1533,15 @@ Specifies the eviction policy for Virtual Machines in this Scale Set. Possible v
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSet-extensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L273">property <b>extensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L273">property <b>extensions</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>extensions: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    autoUpgradeMinorVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
+    autoUpgradeMinorVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
     name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    protectedSettings: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    protectedSettings: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     publisher: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    settings: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    settings: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     typeHandlerVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 }[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1550,7 +1550,7 @@ Can be specified multiple times to add extension profiles to the scale set. Each
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSet-healthProbeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L277">property <b>healthProbeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L277">property <b>healthProbeId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>healthProbeId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1559,7 +1559,7 @@ Specifies the identifier for the load balancer health probe. Required when using
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSet-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1569,7 +1569,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSet-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L278">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L278">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>identity: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1579,7 +1579,7 @@ deployments and may be missing (undefined) during planning phases.
 }&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ScaleSet-licenseType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L282">property <b>licenseType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L282">property <b>licenseType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>licenseType: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1588,7 +1588,7 @@ Specifies the Windows OS license type. If supplied, the only allowed values are 
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSet-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L286">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L286">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1597,7 +1597,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSet-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L290">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L290">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1606,12 +1606,12 @@ Specifies the name of the image from the marketplace.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSet-networkProfiles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L294">property <b>networkProfiles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L294">property <b>networkProfiles</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>networkProfiles: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    acceleratedNetworking: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    dnsSettings: {
+    acceleratedNetworking: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
+    dnsSettings: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
         dnsServers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
     };
     ipConfigurations: {
@@ -1621,16 +1621,16 @@ Specifies the name of the image from the marketplace.
         loadBalancerInboundNatRulesIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
         name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
         primary: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-        publicIpAddressConfiguration: {
+        publicIpAddressConfiguration: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
             domainNameLabel: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
             idleTimeout: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
             name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
         };
         subnetId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     }[];
-    ipForwarding: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
+    ipForwarding: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
     name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    networkSecurityGroupId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    networkSecurityGroupId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     primary: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
 }[]&gt;;</pre>
 
@@ -1638,27 +1638,27 @@ A collection of network profile block as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSet-osProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L298">property <b>osProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L298">property <b>osProfile</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>osProfile: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    adminPassword: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    adminPassword: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     adminUsername: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     computerNamePrefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    customData: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    customData: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 }&gt;;</pre>
 
 A Virtual Machine OS Profile block as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSet-osProfileLinuxConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L302">property <b>osProfileLinuxConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L302">property <b>osProfileLinuxConfig</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>osProfileLinuxConfig: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    disablePasswordAuthentication: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
+    disablePasswordAuthentication: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
     sshKeys: {
-        keyData: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+        keyData: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
         path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     }[];
 }&gt;;</pre>
@@ -1667,13 +1667,13 @@ A Linux config block as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSet-osProfileSecrets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L306">property <b>osProfileSecrets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L306">property <b>osProfileSecrets</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>osProfileSecrets: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
     sourceVaultId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     vaultCertificates: {
-        certificateStore: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+        certificateStore: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
         certificateUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     }[];
 }[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1682,7 +1682,7 @@ A collection of Secret blocks as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSet-osProfileWindowsConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L310">property <b>osProfileWindowsConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L310">property <b>osProfileWindowsConfig</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>osProfileWindowsConfig: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1692,10 +1692,10 @@ A collection of Secret blocks as documented below.
         pass: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
         settingName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     }[];
-    enableAutomaticUpgrades: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    provisionVmAgent: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
+    enableAutomaticUpgrades: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
+    provisionVmAgent: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
     winrms: {
-        certificateUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+        certificateUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
         protocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     }[];
 } | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1704,7 +1704,7 @@ A Windows config block as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSet-overprovision">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L314">property <b>overprovision</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L314">property <b>overprovision</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>overprovision: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1713,7 +1713,7 @@ Specifies whether the virtual machine scale set should be overprovisioned.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSet-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L318">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L318">property <b>plan</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>plan: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1726,7 +1726,7 @@ A plan block as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSet-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L322">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L322">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>priority: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1735,7 +1735,7 @@ Specifies the priority for the Virtual Machines in the Scale Set. Defaults to `R
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSet-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L326">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L326">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1744,21 +1744,21 @@ The name of the resource group in which to create the virtual machine scale set.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSet-rollingUpgradePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L330">property <b>rollingUpgradePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L330">property <b>rollingUpgradePolicy</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>rollingUpgradePolicy: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    maxBatchInstancePercent: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    maxUnhealthyInstancePercent: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    maxUnhealthyUpgradedInstancePercent: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    pauseTimeBetweenBatches: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    maxBatchInstancePercent: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
+    maxUnhealthyInstancePercent: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
+    maxUnhealthyUpgradedInstancePercent: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
+    pauseTimeBetweenBatches: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 } | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 
 A `rolling_upgrade_policy` block as defined below. This is only applicable when the `upgrade_policy_mode` is `Rolling`.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSet-singlePlacementGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L334">property <b>singlePlacementGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L334">property <b>singlePlacementGroup</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>singlePlacementGroup: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1767,7 +1767,7 @@ Specifies whether the scale set is limited to a single placement group with a ma
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSet-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L338">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L338">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>sku: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1780,7 +1780,7 @@ Specifies the SKU of the image used to create the virtual machines.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSet-storageProfileDataDisks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L342">property <b>storageProfileDataDisks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L342">property <b>storageProfileDataDisks</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>storageProfileDataDisks: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1795,31 +1795,31 @@ A storage profile data disk block as documented below
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSet-storageProfileImageReference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L346">property <b>storageProfileImageReference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L346">property <b>storageProfileImageReference</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>storageProfileImageReference: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    offer: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    publisher: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    sku: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    offer: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    publisher: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    sku: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 }&gt;;</pre>
 
 A storage profile image reference block as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSet-storageProfileOsDisk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L350">property <b>storageProfileOsDisk</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L350">property <b>storageProfileOsDisk</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>storageProfileOsDisk: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
     caching: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     createOption: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    image: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    image: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     managedDiskType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    osType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    osType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     vhdContainers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
 }&gt;;</pre>
 
@@ -1827,7 +1827,7 @@ A storage profile os disk block as documented below
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSet-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L354">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L354">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1836,7 +1836,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSet-upgradePolicyMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L358">property <b>upgradePolicyMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L358">property <b>upgradePolicyMode</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>upgradePolicyMode: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1845,7 +1845,7 @@ Specifies the mode of an upgrade to virtual machines in the scale set. Possible 
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSet-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1855,7 +1855,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSet-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L362">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L362">property <b>zones</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>zones: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1865,7 +1865,7 @@ A collection of availability zones to spread the Virtual Machines over.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SharedImage">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L46">class <b>SharedImage</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L46">class <b>SharedImage</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1909,7 +1909,7 @@ const testSharedImage = new azure.compute.SharedImage("test", {
 ```
 
 <h3 class="pdoc-member-header" id="SharedImage-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L102"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L102"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1924,7 +1924,7 @@ Create a SharedImage resource with the given unique name, arguments, and options
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImage-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L55">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L55">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1936,7 +1936,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImage-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1944,7 +1944,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImage-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1956,7 +1956,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImage-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L62">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L62">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1965,7 +1965,7 @@ A description of this Shared Image.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImage-eula">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L66">property <b>eula</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L66">property <b>eula</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>eula: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1974,7 +1974,7 @@ The End User Licence Agreement for the Shared Image.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImage-galleryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L70">property <b>galleryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L70">property <b>galleryName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>galleryName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1983,7 +1983,7 @@ Specifies the name of the Shared Image Gallery in which this Shared Image should
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImage-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1993,7 +1993,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImage-identifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L74">property <b>identifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L74">property <b>identifier</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>identifier: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -2006,7 +2006,7 @@ An `identifier` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImage-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L78">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L78">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2015,7 +2015,7 @@ Specifies the supported Azure location where the Shared Image Gallery exists. Ch
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImage-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L82">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L82">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2024,7 +2024,7 @@ Specifies the name of the Shared Image. Changing this forces a new resource to b
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImage-osType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L86">property <b>osType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L86">property <b>osType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>osType: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2033,7 +2033,7 @@ The type of Operating System present in this Shared Image. Possible values are `
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImage-privacyStatementUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L90">property <b>privacyStatementUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L90">property <b>privacyStatementUri</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>privacyStatementUri: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2042,7 +2042,7 @@ The URI containing the Privacy Statement associated with this Shared Image.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImage-releaseNoteUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L94">property <b>releaseNoteUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L94">property <b>releaseNoteUri</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>releaseNoteUri: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2051,7 +2051,7 @@ The URI containing the Release Notes associated with this Shared Image.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImage-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L98">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L98">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2060,7 +2060,7 @@ The name of the resource group in which the Shared Image Gallery exists. Changin
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImage-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L102">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L102">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -2069,7 +2069,7 @@ A mapping of tags to assign to the Shared Image.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImage-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2080,7 +2080,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SharedImageGallery">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageGallery.ts#L34">class <b>SharedImageGallery</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageGallery.ts#L34">class <b>SharedImageGallery</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2112,7 +2112,7 @@ const testSharedImageGallery = new azure.compute.SharedImageGallery("test", {
 ```
 
 <h3 class="pdoc-member-header" id="SharedImageGallery-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageGallery.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageGallery.ts#L70"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2127,7 +2127,7 @@ Create a SharedImageGallery resource with the given unique name, arguments, and 
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageGallery-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageGallery.ts#L43">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageGallery.ts#L43">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2139,7 +2139,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageGallery-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2147,7 +2147,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageGallery-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2159,7 +2159,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageGallery-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageGallery.ts#L50">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageGallery.ts#L50">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2168,7 +2168,7 @@ A description for this Shared Image Gallery.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageGallery-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2178,7 +2178,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageGallery-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageGallery.ts#L54">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageGallery.ts#L54">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2187,7 +2187,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageGallery-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageGallery.ts#L58">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageGallery.ts#L58">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2196,7 +2196,7 @@ Specifies the name of the Shared Image Gallery. Changing this forces a new resou
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageGallery-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageGallery.ts#L62">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageGallery.ts#L62">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2205,7 +2205,7 @@ The name of the resource group in which to create the Shared Image Gallery. Chan
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageGallery-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageGallery.ts#L66">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageGallery.ts#L66">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -2214,7 +2214,7 @@ A mapping of tags to assign to the Shared Image Gallery.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageGallery-uniqueName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageGallery.ts#L70">property <b>uniqueName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageGallery.ts#L70">property <b>uniqueName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>uniqueName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2223,7 +2223,7 @@ The Unique Name for this Shared Image Gallery.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageGallery-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2234,7 +2234,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SharedImageVersion">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageVersion.ts#L41">class <b>SharedImageVersion</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageVersion.ts#L41">class <b>SharedImageVersion</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2273,7 +2273,7 @@ const test = new azure.compute.SharedImageVersion("test", {
 ```
 
 <h3 class="pdoc-member-header" id="SharedImageVersion-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageVersion.ts#L89"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageVersion.ts#L89"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2288,7 +2288,7 @@ Create a SharedImageVersion resource with the given unique name, arguments, and 
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageVersion-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageVersion.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageVersion.ts#L50">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2300,7 +2300,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageVersion-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2308,7 +2308,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageVersion-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2320,7 +2320,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageVersion-excludeFromLatest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageVersion.ts#L57">property <b>excludeFromLatest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageVersion.ts#L57">property <b>excludeFromLatest</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>excludeFromLatest: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2329,7 +2329,7 @@ Should this Image Version be excluded from the `latest` filter? If set to `true`
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageVersion-galleryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageVersion.ts#L61">property <b>galleryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageVersion.ts#L61">property <b>galleryName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>galleryName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2338,7 +2338,7 @@ The name of the Shared Image Gallery in which the Shared Image exists. Changing 
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageVersion-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2348,7 +2348,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageVersion-imageName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageVersion.ts#L65">property <b>imageName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageVersion.ts#L65">property <b>imageName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>imageName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2357,7 +2357,7 @@ The name of the Shared Image within the Shared Image Gallery in which this Versi
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageVersion-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageVersion.ts#L69">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageVersion.ts#L69">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2366,7 +2366,7 @@ The Azure Region in which the Shared Image Gallery exists. Changing this forces 
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageVersion-managedImageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageVersion.ts#L73">property <b>managedImageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageVersion.ts#L73">property <b>managedImageId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>managedImageId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2375,7 +2375,7 @@ The ID of the Managed Image which should be used for this Shared Image Version. 
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageVersion-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageVersion.ts#L77">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageVersion.ts#L77">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2384,7 +2384,7 @@ The version number for this Image Version, such as `1.0.0`. Changing this forces
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageVersion-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageVersion.ts#L81">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageVersion.ts#L81">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2393,7 +2393,7 @@ The name of the Resource Group in which the Shared Image Gallery exists. Changin
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageVersion-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageVersion.ts#L85">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageVersion.ts#L85">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -2402,7 +2402,7 @@ A collection of tags which should be applied to this resource.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageVersion-targetRegions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageVersion.ts#L89">property <b>targetRegions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageVersion.ts#L89">property <b>targetRegions</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>targetRegions: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -2414,7 +2414,7 @@ One or more `target_region` blocks as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageVersion-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2425,7 +2425,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Snapshot">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L37">class <b>Snapshot</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L37">class <b>Snapshot</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2460,7 +2460,7 @@ const testSnapshot = new azure.compute.Snapshot("test", {
 ```
 
 <h3 class="pdoc-member-header" id="Snapshot-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L86"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L86"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2475,7 +2475,7 @@ Create a Snapshot resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="Snapshot-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L46">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2487,7 +2487,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Snapshot-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2495,7 +2495,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Snapshot-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2507,7 +2507,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="Snapshot-createOption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L53">property <b>createOption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L53">property <b>createOption</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>createOption: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2516,7 +2516,7 @@ Indicates how the snapshot is to be created. Possible values are `Copy` or `Impo
 
 </div>
 <h3 class="pdoc-member-header" id="Snapshot-diskSizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L57">property <b>diskSizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L57">property <b>diskSizeGb</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>diskSizeGb: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2525,23 +2525,23 @@ The size of the Snapshotted Disk in GB.
 
 </div>
 <h3 class="pdoc-member-header" id="Snapshot-encryptionSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L58">property <b>encryptionSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L58">property <b>encryptionSettings</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>encryptionSettings: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    diskEncryptionKey: {
+    diskEncryptionKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
         secretUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
         sourceVaultId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     };
     enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    keyEncryptionKey: {
+    keyEncryptionKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
         keyUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
         sourceVaultId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     };
 } | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="Snapshot-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2551,7 +2551,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="Snapshot-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L62">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L62">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2560,7 +2560,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="Snapshot-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L66">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L66">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2569,7 +2569,7 @@ Specifies the name of the Snapshot resource. Changing this forces a new resource
 
 </div>
 <h3 class="pdoc-member-header" id="Snapshot-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L70">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L70">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2578,7 +2578,7 @@ The name of the resource group in which to create the Snapshot. Changing this fo
 
 </div>
 <h3 class="pdoc-member-header" id="Snapshot-sourceResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L74">property <b>sourceResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L74">property <b>sourceResourceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>sourceResourceId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2587,7 +2587,7 @@ Specifies a reference to an existing snapshot, when `create_option` is `Copy`. C
 
 </div>
 <h3 class="pdoc-member-header" id="Snapshot-sourceUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L78">property <b>sourceUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L78">property <b>sourceUri</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>sourceUri: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2596,7 +2596,7 @@ Specifies the URI to a Managed or Unmanaged Disk. Changing this forces a new res
 
 </div>
 <h3 class="pdoc-member-header" id="Snapshot-storageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L82">property <b>storageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L82">property <b>storageAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>storageAccountId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2605,7 +2605,7 @@ Specifies the ID of an storage account. Used with `source_uri` to allow authoriz
 
 </div>
 <h3 class="pdoc-member-header" id="Snapshot-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L86">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L86">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -2614,7 +2614,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="Snapshot-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2625,7 +2625,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VirtualMachine">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L81">class <b>VirtualMachine</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L81">class <b>VirtualMachine</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2704,7 +2704,7 @@ const mainVirtualMachine = new azure.compute.VirtualMachine("main", {
 ```
 
 <h3 class="pdoc-member-header" id="VirtualMachine-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L181"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L181"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2719,7 +2719,7 @@ Create a VirtualMachine resource with the given unique name, arguments, and opti
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L90">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L90">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2731,7 +2731,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2739,7 +2739,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L101">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2751,7 +2751,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-availabilitySetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L97">property <b>availabilitySetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L97">property <b>availabilitySetId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>availabilitySetId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2760,7 +2760,7 @@ The ID of the Availability Set in which the Virtual Machine should exist. Changi
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-bootDiagnostics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L101">property <b>bootDiagnostics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L101">property <b>bootDiagnostics</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>bootDiagnostics: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -2772,7 +2772,7 @@ A `boot_diagnostics` block.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-deleteDataDisksOnTermination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L105">property <b>deleteDataDisksOnTermination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L105">property <b>deleteDataDisksOnTermination</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>deleteDataDisksOnTermination: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2781,7 +2781,7 @@ Should the Data Disks (either the Managed Disks / VHD Blobs) be deleted when the
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-deleteOsDiskOnTermination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L109">property <b>deleteOsDiskOnTermination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L109">property <b>deleteOsDiskOnTermination</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>deleteOsDiskOnTermination: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2790,7 +2790,7 @@ Should the OS Disk (either the Managed Disk / VHD Blob) be deleted when the Virt
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L96">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2800,7 +2800,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L113">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L113">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>identity: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -2813,7 +2813,7 @@ A `identity` block.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-licenseType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L117">property <b>licenseType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L117">property <b>licenseType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>licenseType: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2822,7 +2822,7 @@ Specifies the BYOL Type for this Virtual Machine. This is only applicable to Win
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L121">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L121">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2831,7 +2831,7 @@ Specifies the Azure Region where the Virtual Machine exists. Changing this force
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L125">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L125">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2840,7 +2840,7 @@ Specifies the name of the Virtual Machine. Changing this forces a new resource t
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-networkInterfaceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L129">property <b>networkInterfaceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L129">property <b>networkInterfaceIds</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>networkInterfaceIds: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -2849,11 +2849,11 @@ A list of Network Interface ID's which should be associated with the Virtual Mac
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-osProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L133">property <b>osProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L133">property <b>osProfile</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>osProfile: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    adminPassword: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    adminPassword: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     adminUsername: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     computerName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     customData: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
@@ -2863,7 +2863,7 @@ An `os_profile` block. Required when `create_option` in the `storage_os_disk` bl
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-osProfileLinuxConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L137">property <b>osProfileLinuxConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L137">property <b>osProfileLinuxConfig</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>osProfileLinuxConfig: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -2878,13 +2878,13 @@ A `os_profile_linux_config` block.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-osProfileSecrets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L141">property <b>osProfileSecrets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L141">property <b>osProfileSecrets</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>osProfileSecrets: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
     sourceVaultId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     vaultCertificates: {
-        certificateStore: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+        certificateStore: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
         certificateUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     }[];
 }[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2893,7 +2893,7 @@ One or more `os_profile_secrets` blocks.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-osProfileWindowsConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L145">property <b>osProfileWindowsConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L145">property <b>osProfileWindowsConfig</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>osProfileWindowsConfig: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -2903,11 +2903,11 @@ One or more `os_profile_secrets` blocks.
         pass: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
         settingName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     }[];
-    enableAutomaticUpgrades: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    provisionVmAgent: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    timezone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    enableAutomaticUpgrades: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
+    provisionVmAgent: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
+    timezone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     winrms: {
-        certificateUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+        certificateUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
         protocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     }[];
 } | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2916,7 +2916,7 @@ A `os_profile_windows_config` block.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L149">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L149">property <b>plan</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>plan: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -2929,7 +2929,7 @@ A `plan` block.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-primaryNetworkInterfaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L153">property <b>primaryNetworkInterfaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L153">property <b>primaryNetworkInterfaceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>primaryNetworkInterfaceId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2938,7 +2938,7 @@ The ID of the Network Interface (which must be attached to the Virtual Machine) 
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L157">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L157">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2947,7 +2947,7 @@ Specifies the name of the Resource Group in which the Virtual Machine should exi
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-storageDataDisks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L161">property <b>storageDataDisks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L161">property <b>storageDataDisks</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>storageDataDisks: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -2958,22 +2958,22 @@ Specifies the name of the Resource Group in which the Virtual Machine should exi
     managedDiskId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     managedDiskType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    vhdUri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    writeAcceleratorEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
+    vhdUri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    writeAcceleratorEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
 }[]&gt;;</pre>
 
 One or more `storage_data_disk` blocks.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-storageImageReference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L165">property <b>storageImageReference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L165">property <b>storageImageReference</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>storageImageReference: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    offer: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    publisher: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    sku: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    offer: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    publisher: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    sku: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 }&gt;;</pre>
 
@@ -2981,27 +2981,27 @@ A `storage_image_reference` block.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-storageOsDisk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L169">property <b>storageOsDisk</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L169">property <b>storageOsDisk</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>storageOsDisk: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
     caching: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     createOption: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     diskSizeGb: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    imageUri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    imageUri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     managedDiskId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     managedDiskType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     osType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    vhdUri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    writeAcceleratorEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
+    vhdUri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    writeAcceleratorEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
 }&gt;;</pre>
 
 A `storage_os_disk` block.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L173">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L173">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3010,7 +3010,7 @@ A mapping of tags to assign to the Virtual Machine.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3020,7 +3020,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-vmSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L177">property <b>vmSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L177">property <b>vmSize</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>vmSize: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3029,7 +3029,7 @@ Specifies the [size of the Virtual Machine](https://azure.microsoft.com/en-us/do
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L181">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L181">property <b>zones</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>zones: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3039,7 +3039,7 @@ A list of a single item of the Availability Zone which the Virtual Machine shoul
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getAvailabilitySet">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getAvailabilitySet.ts#L24">function <b>getAvailabilitySet</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getAvailabilitySet.ts#L24">function <b>getAvailabilitySet</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -3064,7 +3064,7 @@ export const availabilitySetId = test.apply(test => test.id);
 
 </div>
 <h2 class="pdoc-module-header" id="getImage">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getImage.ts#L24">function <b>getImage</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getImage.ts#L24">function <b>getImage</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -3089,7 +3089,7 @@ export const imageId = search.apply(search => search.id);
 
 </div>
 <h2 class="pdoc-module-header" id="getManagedDisk">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getManagedDisk.ts#L90">function <b>getManagedDisk</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getManagedDisk.ts#L90">function <b>getManagedDisk</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -3180,7 +3180,7 @@ const testVirtualMachine = new azure.compute.VirtualMachine("test", {
 
 </div>
 <h2 class="pdoc-module-header" id="getPlatformImage">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getPlatformImage.ts#L26">function <b>getPlatformImage</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getPlatformImage.ts#L26">function <b>getPlatformImage</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -3207,7 +3207,7 @@ export const version = test.apply(test => test.version);
 
 </div>
 <h2 class="pdoc-module-header" id="getSharedImage">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImage.ts#L25">function <b>getSharedImage</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImage.ts#L25">function <b>getSharedImage</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -3233,7 +3233,7 @@ const test = pulumi.output(azure.compute.getSharedImage({
 
 </div>
 <h2 class="pdoc-module-header" id="getSharedImageGallery">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImageGallery.ts#L24">function <b>getSharedImageGallery</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImageGallery.ts#L24">function <b>getSharedImageGallery</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -3258,7 +3258,7 @@ const test = pulumi.output(azure.compute.getSharedImageGallery({
 
 </div>
 <h2 class="pdoc-module-header" id="getSharedImageVersion">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImageVersion.ts#L26">function <b>getSharedImageVersion</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImageVersion.ts#L26">function <b>getSharedImageVersion</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -3285,7 +3285,7 @@ const test = pulumi.output(azure.compute.getSharedImageVersion({
 
 </div>
 <h2 class="pdoc-module-header" id="getSnapshot">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSnapshot.ts#L22">function <b>getSnapshot</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSnapshot.ts#L22">function <b>getSnapshot</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -3308,7 +3308,7 @@ const test = pulumi.output(azure.compute.getSnapshot({
 
 </div>
 <h2 class="pdoc-module-header" id="getVirtualMachine">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getVirtualMachine.ts#L24">function <b>getVirtualMachine</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getVirtualMachine.ts#L24">function <b>getVirtualMachine</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -3333,14 +3333,14 @@ export const virtualMachineId = test.apply(test => test.id);
 
 </div>
 <h2 class="pdoc-module-header" id="AvailabilitySetArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/availabilitySet.ts#L145">interface <b>AvailabilitySetArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/availabilitySet.ts#L145">interface <b>AvailabilitySetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a AvailabilitySet resource.
 
 <h3 class="pdoc-member-header" id="AvailabilitySetArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/availabilitySet.ts#L149">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/availabilitySet.ts#L149">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3349,7 +3349,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="AvailabilitySetArgs-managed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/availabilitySet.ts#L153">property <b>managed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/availabilitySet.ts#L153">property <b>managed</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>managed?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3358,7 +3358,7 @@ Specifies whether the availability set is managed or not. Possible values are `t
 
 </div>
 <h3 class="pdoc-member-header" id="AvailabilitySetArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/availabilitySet.ts#L157">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/availabilitySet.ts#L157">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3367,7 +3367,7 @@ Specifies the name of the availability set. Changing this forces a new resource 
 
 </div>
 <h3 class="pdoc-member-header" id="AvailabilitySetArgs-platformFaultDomainCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/availabilitySet.ts#L161">property <b>platformFaultDomainCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/availabilitySet.ts#L161">property <b>platformFaultDomainCount</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>platformFaultDomainCount?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3376,7 +3376,7 @@ Specifies the number of fault domains that are used. Defaults to 3.
 
 </div>
 <h3 class="pdoc-member-header" id="AvailabilitySetArgs-platformUpdateDomainCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/availabilitySet.ts#L165">property <b>platformUpdateDomainCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/availabilitySet.ts#L165">property <b>platformUpdateDomainCount</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>platformUpdateDomainCount?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3385,7 +3385,7 @@ Specifies the number of update domains that are used. Defaults to 5.
 
 </div>
 <h3 class="pdoc-member-header" id="AvailabilitySetArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/availabilitySet.ts#L169">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/availabilitySet.ts#L169">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3394,7 +3394,7 @@ The name of the resource group in which to create the availability set. Changing
 
 </div>
 <h3 class="pdoc-member-header" id="AvailabilitySetArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/availabilitySet.ts#L173">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/availabilitySet.ts#L173">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3404,14 +3404,14 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AvailabilitySetState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/availabilitySet.ts#L111">interface <b>AvailabilitySetState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/availabilitySet.ts#L111">interface <b>AvailabilitySetState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering AvailabilitySet resources.
 
 <h3 class="pdoc-member-header" id="AvailabilitySetState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/availabilitySet.ts#L115">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/availabilitySet.ts#L115">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3420,7 +3420,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="AvailabilitySetState-managed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/availabilitySet.ts#L119">property <b>managed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/availabilitySet.ts#L119">property <b>managed</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>managed?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3429,7 +3429,7 @@ Specifies whether the availability set is managed or not. Possible values are `t
 
 </div>
 <h3 class="pdoc-member-header" id="AvailabilitySetState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/availabilitySet.ts#L123">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/availabilitySet.ts#L123">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3438,7 +3438,7 @@ Specifies the name of the availability set. Changing this forces a new resource 
 
 </div>
 <h3 class="pdoc-member-header" id="AvailabilitySetState-platformFaultDomainCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/availabilitySet.ts#L127">property <b>platformFaultDomainCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/availabilitySet.ts#L127">property <b>platformFaultDomainCount</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>platformFaultDomainCount?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3447,7 +3447,7 @@ Specifies the number of fault domains that are used. Defaults to 3.
 
 </div>
 <h3 class="pdoc-member-header" id="AvailabilitySetState-platformUpdateDomainCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/availabilitySet.ts#L131">property <b>platformUpdateDomainCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/availabilitySet.ts#L131">property <b>platformUpdateDomainCount</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>platformUpdateDomainCount?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3456,7 +3456,7 @@ Specifies the number of update domains that are used. Defaults to 5.
 
 </div>
 <h3 class="pdoc-member-header" id="AvailabilitySetState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/availabilitySet.ts#L135">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/availabilitySet.ts#L135">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3465,7 +3465,7 @@ The name of the resource group in which to create the availability set. Changing
 
 </div>
 <h3 class="pdoc-member-header" id="AvailabilitySetState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/availabilitySet.ts#L139">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/availabilitySet.ts#L139">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3475,14 +3475,14 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DataDiskAttachmentArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/dataDiskAttachment.ts#L207">interface <b>DataDiskAttachmentArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/dataDiskAttachment.ts#L207">interface <b>DataDiskAttachmentArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a DataDiskAttachment resource.
 
 <h3 class="pdoc-member-header" id="DataDiskAttachmentArgs-caching">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/dataDiskAttachment.ts#L211">property <b>caching</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/dataDiskAttachment.ts#L211">property <b>caching</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>caching: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3491,7 +3491,7 @@ Specifies the caching requirements for this Data Disk. Possible values include `
 
 </div>
 <h3 class="pdoc-member-header" id="DataDiskAttachmentArgs-createOption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/dataDiskAttachment.ts#L215">property <b>createOption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/dataDiskAttachment.ts#L215">property <b>createOption</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>createOption?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3500,7 +3500,7 @@ The Create Option of the Data Disk, such as `Empty` or `Attach`. Defaults to `At
 
 </div>
 <h3 class="pdoc-member-header" id="DataDiskAttachmentArgs-lun">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/dataDiskAttachment.ts#L219">property <b>lun</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/dataDiskAttachment.ts#L219">property <b>lun</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>lun: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3509,7 +3509,7 @@ The Logical Unit Number of the Data Disk, which needs to be unique within the Vi
 
 </div>
 <h3 class="pdoc-member-header" id="DataDiskAttachmentArgs-managedDiskId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/dataDiskAttachment.ts#L223">property <b>managedDiskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/dataDiskAttachment.ts#L223">property <b>managedDiskId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>managedDiskId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3518,7 +3518,7 @@ The ID of an existing Managed Disk which should be attached. Changing this force
 
 </div>
 <h3 class="pdoc-member-header" id="DataDiskAttachmentArgs-virtualMachineId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/dataDiskAttachment.ts#L227">property <b>virtualMachineId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/dataDiskAttachment.ts#L227">property <b>virtualMachineId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>virtualMachineId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3527,7 +3527,7 @@ The ID of the Virtual Machine to which the Data Disk should be attached. Changin
 
 </div>
 <h3 class="pdoc-member-header" id="DataDiskAttachmentArgs-writeAcceleratorEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/dataDiskAttachment.ts#L231">property <b>writeAcceleratorEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/dataDiskAttachment.ts#L231">property <b>writeAcceleratorEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>writeAcceleratorEnabled?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3537,14 +3537,14 @@ Specifies if Write Accelerator is enabled on the disk. This can only be enabled 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DataDiskAttachmentState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/dataDiskAttachment.ts#L177">interface <b>DataDiskAttachmentState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/dataDiskAttachment.ts#L177">interface <b>DataDiskAttachmentState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering DataDiskAttachment resources.
 
 <h3 class="pdoc-member-header" id="DataDiskAttachmentState-caching">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/dataDiskAttachment.ts#L181">property <b>caching</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/dataDiskAttachment.ts#L181">property <b>caching</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>caching?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3553,7 +3553,7 @@ Specifies the caching requirements for this Data Disk. Possible values include `
 
 </div>
 <h3 class="pdoc-member-header" id="DataDiskAttachmentState-createOption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/dataDiskAttachment.ts#L185">property <b>createOption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/dataDiskAttachment.ts#L185">property <b>createOption</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>createOption?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3562,7 +3562,7 @@ The Create Option of the Data Disk, such as `Empty` or `Attach`. Defaults to `At
 
 </div>
 <h3 class="pdoc-member-header" id="DataDiskAttachmentState-lun">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/dataDiskAttachment.ts#L189">property <b>lun</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/dataDiskAttachment.ts#L189">property <b>lun</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>lun?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3571,7 +3571,7 @@ The Logical Unit Number of the Data Disk, which needs to be unique within the Vi
 
 </div>
 <h3 class="pdoc-member-header" id="DataDiskAttachmentState-managedDiskId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/dataDiskAttachment.ts#L193">property <b>managedDiskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/dataDiskAttachment.ts#L193">property <b>managedDiskId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>managedDiskId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3580,7 +3580,7 @@ The ID of an existing Managed Disk which should be attached. Changing this force
 
 </div>
 <h3 class="pdoc-member-header" id="DataDiskAttachmentState-virtualMachineId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/dataDiskAttachment.ts#L197">property <b>virtualMachineId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/dataDiskAttachment.ts#L197">property <b>virtualMachineId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>virtualMachineId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3589,7 +3589,7 @@ The ID of the Virtual Machine to which the Data Disk should be attached. Changin
 
 </div>
 <h3 class="pdoc-member-header" id="DataDiskAttachmentState-writeAcceleratorEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/dataDiskAttachment.ts#L201">property <b>writeAcceleratorEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/dataDiskAttachment.ts#L201">property <b>writeAcceleratorEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>writeAcceleratorEnabled?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3599,14 +3599,14 @@ Specifies if Write Accelerator is enabled on the disk. This can only be enabled 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ExtensionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L300">interface <b>ExtensionArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L300">interface <b>ExtensionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a Extension resource.
 
 <h3 class="pdoc-member-header" id="ExtensionArgs-autoUpgradeMinorVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L305">property <b>autoUpgradeMinorVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L305">property <b>autoUpgradeMinorVersion</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>autoUpgradeMinorVersion?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3616,7 +3616,7 @@ the latest minor version update to the `type_handler_version` specified.
 
 </div>
 <h3 class="pdoc-member-header" id="ExtensionArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L310">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L310">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3626,7 +3626,7 @@ this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="ExtensionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L315">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L315">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3636,7 +3636,7 @@ this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="ExtensionArgs-protectedSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L320">property <b>protectedSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L320">property <b>protectedSettings</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>protectedSettings?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3646,7 +3646,7 @@ extension, like settings, these are specified as a JSON object in a string.
 
 </div>
 <h3 class="pdoc-member-header" id="ExtensionArgs-publisher">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L325">property <b>publisher</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L325">property <b>publisher</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>publisher: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3656,7 +3656,7 @@ can be found by using the Azure CLI.
 
 </div>
 <h3 class="pdoc-member-header" id="ExtensionArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L331">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L331">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3667,7 +3667,7 @@ created.
 
 </div>
 <h3 class="pdoc-member-header" id="ExtensionArgs-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L336">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L336">property <b>settings</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>settings?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3677,7 +3677,7 @@ specified as a JSON object in a string.
 
 </div>
 <h3 class="pdoc-member-header" id="ExtensionArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L340">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L340">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3686,7 +3686,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="ExtensionArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L345">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L345">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>type: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3696,7 +3696,7 @@ be found using the Azure CLI.
 
 </div>
 <h3 class="pdoc-member-header" id="ExtensionArgs-typeHandlerVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L350">property <b>typeHandlerVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L350">property <b>typeHandlerVersion</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>typeHandlerVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3706,7 +3706,7 @@ use, available versions can be found using the Azure CLI.
 
 </div>
 <h3 class="pdoc-member-header" id="ExtensionArgs-virtualMachineName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L355">property <b>virtualMachineName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L355">property <b>virtualMachineName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>virtualMachineName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3717,14 +3717,14 @@ this forces a new resource to be created.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ExtensionState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L239">interface <b>ExtensionState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L239">interface <b>ExtensionState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering Extension resources.
 
 <h3 class="pdoc-member-header" id="ExtensionState-autoUpgradeMinorVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L244">property <b>autoUpgradeMinorVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L244">property <b>autoUpgradeMinorVersion</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>autoUpgradeMinorVersion?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3734,7 +3734,7 @@ the latest minor version update to the `type_handler_version` specified.
 
 </div>
 <h3 class="pdoc-member-header" id="ExtensionState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L249">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L249">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3744,7 +3744,7 @@ this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="ExtensionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L254">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L254">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3754,7 +3754,7 @@ this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="ExtensionState-protectedSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L259">property <b>protectedSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L259">property <b>protectedSettings</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>protectedSettings?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3764,7 +3764,7 @@ extension, like settings, these are specified as a JSON object in a string.
 
 </div>
 <h3 class="pdoc-member-header" id="ExtensionState-publisher">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L264">property <b>publisher</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L264">property <b>publisher</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>publisher?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3774,7 +3774,7 @@ can be found by using the Azure CLI.
 
 </div>
 <h3 class="pdoc-member-header" id="ExtensionState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L270">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L270">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3785,7 +3785,7 @@ created.
 
 </div>
 <h3 class="pdoc-member-header" id="ExtensionState-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L275">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L275">property <b>settings</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>settings?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3795,7 +3795,7 @@ specified as a JSON object in a string.
 
 </div>
 <h3 class="pdoc-member-header" id="ExtensionState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L279">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L279">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3804,7 +3804,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="ExtensionState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L284">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L284">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>type?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3814,7 +3814,7 @@ be found using the Azure CLI.
 
 </div>
 <h3 class="pdoc-member-header" id="ExtensionState-typeHandlerVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L289">property <b>typeHandlerVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L289">property <b>typeHandlerVersion</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>typeHandlerVersion?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3824,7 +3824,7 @@ use, available versions can be found using the Azure CLI.
 
 </div>
 <h3 class="pdoc-member-header" id="ExtensionState-virtualMachineName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/extension.ts#L294">property <b>virtualMachineName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/extension.ts#L294">property <b>virtualMachineName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>virtualMachineName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3835,14 +3835,14 @@ this forces a new resource to be created.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetAvailabilitySetArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getAvailabilitySet.ts#L34">interface <b>GetAvailabilitySetArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getAvailabilitySet.ts#L34">interface <b>GetAvailabilitySetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of arguments for invoking getAvailabilitySet.
 
 <h3 class="pdoc-member-header" id="GetAvailabilitySetArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getAvailabilitySet.ts#L38">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getAvailabilitySet.ts#L38">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3851,7 +3851,7 @@ The name of the Availability Set.
 
 </div>
 <h3 class="pdoc-member-header" id="GetAvailabilitySetArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getAvailabilitySet.ts#L42">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getAvailabilitySet.ts#L42">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3861,14 +3861,14 @@ The name of the resource group in which the Availability Set exists.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetAvailabilitySetResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getAvailabilitySet.ts#L48">interface <b>GetAvailabilitySetResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getAvailabilitySet.ts#L48">interface <b>GetAvailabilitySetResult</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of values returned by getAvailabilitySet.
 
 <h3 class="pdoc-member-header" id="GetAvailabilitySetResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getAvailabilitySet.ts#L74">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getAvailabilitySet.ts#L74">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3877,7 +3877,7 @@ id is the provider-assigned unique ID for this managed resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetAvailabilitySetResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getAvailabilitySet.ts#L52">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getAvailabilitySet.ts#L52">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3886,7 +3886,7 @@ The supported Azure location where the Availability Set exists.
 
 </div>
 <h3 class="pdoc-member-header" id="GetAvailabilitySetResult-managed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getAvailabilitySet.ts#L56">property <b>managed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getAvailabilitySet.ts#L56">property <b>managed</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>managed: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -3895,13 +3895,13 @@ Whether the availability set is managed or not.
 
 </div>
 <h3 class="pdoc-member-header" id="GetAvailabilitySetResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getAvailabilitySet.ts#L57">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getAvailabilitySet.ts#L57">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetAvailabilitySetResult-platformFaultDomainCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getAvailabilitySet.ts#L61">property <b>platformFaultDomainCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getAvailabilitySet.ts#L61">property <b>platformFaultDomainCount</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>platformFaultDomainCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3910,7 +3910,7 @@ The number of fault domains that are used.
 
 </div>
 <h3 class="pdoc-member-header" id="GetAvailabilitySetResult-platformUpdateDomainCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getAvailabilitySet.ts#L65">property <b>platformUpdateDomainCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getAvailabilitySet.ts#L65">property <b>platformUpdateDomainCount</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>platformUpdateDomainCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3919,13 +3919,13 @@ The number of update domains that are used.
 
 </div>
 <h3 class="pdoc-member-header" id="GetAvailabilitySetResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getAvailabilitySet.ts#L66">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getAvailabilitySet.ts#L66">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetAvailabilitySetResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getAvailabilitySet.ts#L70">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getAvailabilitySet.ts#L70">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -3935,32 +3935,32 @@ A mapping of tags assigned to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetImageArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getImage.ts#L36">interface <b>GetImageArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getImage.ts#L36">interface <b>GetImageArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of arguments for invoking getImage.
 
 <h3 class="pdoc-member-header" id="GetImageArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getImage.ts#L40">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getImage.ts#L40">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 
 The name of the Image.
 
 </div>
 <h3 class="pdoc-member-header" id="GetImageArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getImage.ts#L44">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getImage.ts#L44">property <b>nameRegex</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 
 Regex pattern of the image to match.
 
 </div>
 <h3 class="pdoc-member-header" id="GetImageArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getImage.ts#L48">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getImage.ts#L48">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -3969,24 +3969,24 @@ The Name of the Resource Group where this Image exists.
 
 </div>
 <h3 class="pdoc-member-header" id="GetImageArgs-sortDescending">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getImage.ts#L52">property <b>sortDescending</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getImage.ts#L52">property <b>sortDescending</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>sortDescending?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>sortDescending?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
 
 By default when matching by regex, images are sorted by name in ascending order and the first match is chosen, to sort descending, set this flag.
 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetImageResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getImage.ts#L58">interface <b>GetImageResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getImage.ts#L58">interface <b>GetImageResult</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of values returned by getImage.
 
 <h3 class="pdoc-member-header" id="GetImageResult-dataDisks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getImage.ts#L62">property <b>dataDisks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getImage.ts#L62">property <b>dataDisks</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>dataDisks: {
@@ -4001,7 +4001,7 @@ a collection of `data_disk` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="GetImageResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getImage.ts#L89">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getImage.ts#L89">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4010,7 +4010,7 @@ id is the provider-assigned unique ID for this managed resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetImageResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getImage.ts#L66">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getImage.ts#L66">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4019,22 +4019,22 @@ the Azure Location where this Image exists.
 
 </div>
 <h3 class="pdoc-member-header" id="GetImageResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getImage.ts#L70">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getImage.ts#L70">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 
 the name of the Image.
 
 </div>
 <h3 class="pdoc-member-header" id="GetImageResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getImage.ts#L71">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getImage.ts#L71">property <b>nameRegex</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetImageResult-osDisks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getImage.ts#L75">property <b>osDisks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getImage.ts#L75">property <b>osDisks</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>osDisks: {
@@ -4050,19 +4050,19 @@ a `os_disk` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="GetImageResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getImage.ts#L76">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getImage.ts#L76">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetImageResult-sortDescending">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getImage.ts#L77">property <b>sortDescending</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getImage.ts#L77">property <b>sortDescending</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>sortDescending?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+<pre class="highlight"><span class='kd'></span>sortDescending?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetImageResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getImage.ts#L81">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getImage.ts#L81">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -4071,7 +4071,7 @@ a mapping of tags to assigned to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetImageResult-zoneResilient">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getImage.ts#L85">property <b>zoneResilient</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getImage.ts#L85">property <b>zoneResilient</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>zoneResilient: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -4081,14 +4081,14 @@ is zone resiliency enabled?
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetManagedDiskArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getManagedDisk.ts#L102">interface <b>GetManagedDiskArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getManagedDisk.ts#L102">interface <b>GetManagedDiskArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of arguments for invoking getManagedDisk.
 
 <h3 class="pdoc-member-header" id="GetManagedDiskArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getManagedDisk.ts#L106">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getManagedDisk.ts#L106">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4097,7 +4097,7 @@ Specifies the name of the Managed Disk.
 
 </div>
 <h3 class="pdoc-member-header" id="GetManagedDiskArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getManagedDisk.ts#L110">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getManagedDisk.ts#L110">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4106,33 +4106,33 @@ Specifies the name of the resource group.
 
 </div>
 <h3 class="pdoc-member-header" id="GetManagedDiskArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getManagedDisk.ts#L111">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getManagedDisk.ts#L111">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>tags?: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
+<pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetManagedDiskArgs-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getManagedDisk.ts#L112">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getManagedDisk.ts#L112">property <b>zones</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>zones?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetManagedDiskResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getManagedDisk.ts#L118">interface <b>GetManagedDiskResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getManagedDisk.ts#L118">interface <b>GetManagedDiskResult</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of values returned by getManagedDisk.
 
 <h3 class="pdoc-member-header" id="GetManagedDiskResult-createOption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getManagedDisk.ts#L119">property <b>createOption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getManagedDisk.ts#L119">property <b>createOption</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>createOption: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetManagedDiskResult-diskSizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getManagedDisk.ts#L123">property <b>diskSizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getManagedDisk.ts#L123">property <b>diskSizeGb</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>diskSizeGb: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -4141,7 +4141,7 @@ The size of the managed disk in gigabytes.
 
 </div>
 <h3 class="pdoc-member-header" id="GetManagedDiskResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getManagedDisk.ts#L153">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getManagedDisk.ts#L153">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4150,13 +4150,13 @@ id is the provider-assigned unique ID for this managed resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetManagedDiskResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getManagedDisk.ts#L124">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getManagedDisk.ts#L124">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetManagedDiskResult-osType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getManagedDisk.ts#L128">property <b>osType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getManagedDisk.ts#L128">property <b>osType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>osType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4165,13 +4165,13 @@ The operating system for managed disk. Valid values are `Linux` or `Windows`
 
 </div>
 <h3 class="pdoc-member-header" id="GetManagedDiskResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getManagedDisk.ts#L129">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getManagedDisk.ts#L129">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetManagedDiskResult-sourceResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getManagedDisk.ts#L133">property <b>sourceResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getManagedDisk.ts#L133">property <b>sourceResourceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sourceResourceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4180,7 +4180,7 @@ ID of an existing managed disk that the current resource was created from.
 
 </div>
 <h3 class="pdoc-member-header" id="GetManagedDiskResult-sourceUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getManagedDisk.ts#L137">property <b>sourceUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getManagedDisk.ts#L137">property <b>sourceUri</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sourceUri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4189,7 +4189,7 @@ The source URI for the managed disk
 
 </div>
 <h3 class="pdoc-member-header" id="GetManagedDiskResult-storageAccountType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getManagedDisk.ts#L141">property <b>storageAccountType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getManagedDisk.ts#L141">property <b>storageAccountType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>storageAccountType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4198,7 +4198,7 @@ The storage account type for the managed disk.
 
 </div>
 <h3 class="pdoc-member-header" id="GetManagedDiskResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getManagedDisk.ts#L145">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getManagedDisk.ts#L145">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -4207,7 +4207,7 @@ A mapping of tags assigned to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetManagedDiskResult-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getManagedDisk.ts#L149">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getManagedDisk.ts#L149">property <b>zones</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>zones: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -4217,14 +4217,14 @@ A collection containing the availability zone the managed disk is allocated in.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetPlatformImageArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getPlatformImage.ts#L38">interface <b>GetPlatformImageArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getPlatformImage.ts#L38">interface <b>GetPlatformImageArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of arguments for invoking getPlatformImage.
 
 <h3 class="pdoc-member-header" id="GetPlatformImageArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getPlatformImage.ts#L42">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getPlatformImage.ts#L42">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4233,7 +4233,7 @@ Specifies the Location to pull information about this Platform Image from.
 
 </div>
 <h3 class="pdoc-member-header" id="GetPlatformImageArgs-offer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getPlatformImage.ts#L46">property <b>offer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getPlatformImage.ts#L46">property <b>offer</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>offer: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4242,7 +4242,7 @@ Specifies the Offer associated with the Platform Image.
 
 </div>
 <h3 class="pdoc-member-header" id="GetPlatformImageArgs-publisher">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getPlatformImage.ts#L50">property <b>publisher</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getPlatformImage.ts#L50">property <b>publisher</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>publisher: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4251,7 +4251,7 @@ Specifies the Publisher associated with the Platform Image.
 
 </div>
 <h3 class="pdoc-member-header" id="GetPlatformImageArgs-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getPlatformImage.ts#L54">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getPlatformImage.ts#L54">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sku: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4261,14 +4261,14 @@ Specifies the SKU of the Platform Image.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetPlatformImageResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getPlatformImage.ts#L60">interface <b>GetPlatformImageResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getPlatformImage.ts#L60">interface <b>GetPlatformImageResult</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of values returned by getPlatformImage.
 
 <h3 class="pdoc-member-header" id="GetPlatformImageResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getPlatformImage.ts#L72">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getPlatformImage.ts#L72">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4277,31 +4277,31 @@ id is the provider-assigned unique ID for this managed resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetPlatformImageResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getPlatformImage.ts#L61">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getPlatformImage.ts#L61">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetPlatformImageResult-offer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getPlatformImage.ts#L62">property <b>offer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getPlatformImage.ts#L62">property <b>offer</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>offer: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetPlatformImageResult-publisher">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getPlatformImage.ts#L63">property <b>publisher</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getPlatformImage.ts#L63">property <b>publisher</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>publisher: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetPlatformImageResult-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getPlatformImage.ts#L64">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getPlatformImage.ts#L64">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sku: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetPlatformImageResult-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getPlatformImage.ts#L68">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getPlatformImage.ts#L68">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4311,14 +4311,14 @@ The latest version of the Platform Image.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetSharedImageArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImage.ts#L36">interface <b>GetSharedImageArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImage.ts#L36">interface <b>GetSharedImageArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of arguments for invoking getSharedImage.
 
 <h3 class="pdoc-member-header" id="GetSharedImageArgs-galleryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImage.ts#L40">property <b>galleryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImage.ts#L40">property <b>galleryName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>galleryName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4327,7 +4327,7 @@ The name of the Shared Image Gallery in which the Shared Image exists.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSharedImageArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImage.ts#L44">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImage.ts#L44">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4336,7 +4336,7 @@ The name of the Shared Image.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSharedImageArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImage.ts#L48">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImage.ts#L48">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4346,14 +4346,14 @@ The name of the Resource Group in which the Shared Image Gallery exists.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetSharedImageGalleryArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImageGallery.ts#L34">interface <b>GetSharedImageGalleryArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImageGallery.ts#L34">interface <b>GetSharedImageGalleryArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of arguments for invoking getSharedImageGallery.
 
 <h3 class="pdoc-member-header" id="GetSharedImageGalleryArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImageGallery.ts#L38">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImageGallery.ts#L38">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4362,7 +4362,7 @@ The name of the Shared Image Gallery.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSharedImageGalleryArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImageGallery.ts#L42">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImageGallery.ts#L42">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4372,14 +4372,14 @@ The name of the Resource Group in which the Shared Image Gallery exists.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetSharedImageGalleryResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImageGallery.ts#L48">interface <b>GetSharedImageGalleryResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImageGallery.ts#L48">interface <b>GetSharedImageGalleryResult</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of values returned by getSharedImageGallery.
 
 <h3 class="pdoc-member-header" id="GetSharedImageGalleryResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImageGallery.ts#L52">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImageGallery.ts#L52">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4388,7 +4388,7 @@ A description for the Shared Image Gallery.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSharedImageGalleryResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImageGallery.ts#L67">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImageGallery.ts#L67">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4397,25 +4397,25 @@ id is the provider-assigned unique ID for this managed resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSharedImageGalleryResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImageGallery.ts#L53">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImageGallery.ts#L53">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetSharedImageGalleryResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImageGallery.ts#L54">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImageGallery.ts#L54">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetSharedImageGalleryResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImageGallery.ts#L55">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImageGallery.ts#L55">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetSharedImageGalleryResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImageGallery.ts#L59">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImageGallery.ts#L59">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -4424,7 +4424,7 @@ A mapping of tags which are assigned to the Shared Image Gallery.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSharedImageGalleryResult-uniqueName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImageGallery.ts#L63">property <b>uniqueName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImageGallery.ts#L63">property <b>uniqueName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>uniqueName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4434,14 +4434,14 @@ The unique name assigned to the Shared Image Gallery.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetSharedImageResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImage.ts#L54">interface <b>GetSharedImageResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImage.ts#L54">interface <b>GetSharedImageResult</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of values returned by getSharedImage.
 
 <h3 class="pdoc-member-header" id="GetSharedImageResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImage.ts#L58">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImage.ts#L58">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4450,7 +4450,7 @@ The description of this Shared Image.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSharedImageResult-eula">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImage.ts#L62">property <b>eula</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImage.ts#L62">property <b>eula</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>eula: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4459,13 +4459,13 @@ The End User Licence Agreement for the Shared Image.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSharedImageResult-galleryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImage.ts#L63">property <b>galleryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImage.ts#L63">property <b>galleryName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>galleryName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetSharedImageResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImage.ts#L93">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImage.ts#L93">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4474,7 +4474,7 @@ id is the provider-assigned unique ID for this managed resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSharedImageResult-identifiers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImage.ts#L67">property <b>identifiers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImage.ts#L67">property <b>identifiers</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>identifiers: {
@@ -4487,7 +4487,7 @@ An `identifier` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSharedImageResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImage.ts#L71">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImage.ts#L71">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4496,13 +4496,13 @@ The supported Azure location where the Shared Image Gallery exists.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSharedImageResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImage.ts#L72">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImage.ts#L72">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetSharedImageResult-osType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImage.ts#L76">property <b>osType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImage.ts#L76">property <b>osType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>osType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4511,7 +4511,7 @@ The type of Operating System present in this Shared Image.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSharedImageResult-privacyStatementUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImage.ts#L80">property <b>privacyStatementUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImage.ts#L80">property <b>privacyStatementUri</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>privacyStatementUri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4520,7 +4520,7 @@ The URI containing the Privacy Statement for this Shared Image.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSharedImageResult-releaseNoteUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImage.ts#L84">property <b>releaseNoteUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImage.ts#L84">property <b>releaseNoteUri</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>releaseNoteUri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4529,13 +4529,13 @@ The URI containing the Release Notes for this Shared Image.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSharedImageResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImage.ts#L85">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImage.ts#L85">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetSharedImageResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImage.ts#L89">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImage.ts#L89">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -4545,14 +4545,14 @@ A mapping of tags assigned to the Shared Image.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetSharedImageVersionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImageVersion.ts#L38">interface <b>GetSharedImageVersionArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImageVersion.ts#L38">interface <b>GetSharedImageVersionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of arguments for invoking getSharedImageVersion.
 
 <h3 class="pdoc-member-header" id="GetSharedImageVersionArgs-galleryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImageVersion.ts#L42">property <b>galleryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImageVersion.ts#L42">property <b>galleryName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>galleryName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4561,7 +4561,7 @@ The name of the Shared Image in which the Shared Image exists.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSharedImageVersionArgs-imageName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImageVersion.ts#L46">property <b>imageName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImageVersion.ts#L46">property <b>imageName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>imageName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4570,7 +4570,7 @@ The name of the Shared Image in which this Version exists.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSharedImageVersionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImageVersion.ts#L50">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImageVersion.ts#L50">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4579,7 +4579,7 @@ The name of the Image Version.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSharedImageVersionArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImageVersion.ts#L54">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImageVersion.ts#L54">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4589,14 +4589,14 @@ The name of the Resource Group in which the Shared Image Gallery exists.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetSharedImageVersionResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImageVersion.ts#L60">interface <b>GetSharedImageVersionResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImageVersion.ts#L60">interface <b>GetSharedImageVersionResult</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of values returned by getSharedImageVersion.
 
 <h3 class="pdoc-member-header" id="GetSharedImageVersionResult-excludeFromLatest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImageVersion.ts#L64">property <b>excludeFromLatest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImageVersion.ts#L64">property <b>excludeFromLatest</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>excludeFromLatest: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -4605,13 +4605,13 @@ Is this Image Version excluded from the `latest` filter?
 
 </div>
 <h3 class="pdoc-member-header" id="GetSharedImageVersionResult-galleryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImageVersion.ts#L65">property <b>galleryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImageVersion.ts#L65">property <b>galleryName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>galleryName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetSharedImageVersionResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImageVersion.ts#L91">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImageVersion.ts#L91">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4620,13 +4620,13 @@ id is the provider-assigned unique ID for this managed resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSharedImageVersionResult-imageName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImageVersion.ts#L66">property <b>imageName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImageVersion.ts#L66">property <b>imageName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>imageName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetSharedImageVersionResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImageVersion.ts#L70">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImageVersion.ts#L70">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4635,7 +4635,7 @@ The supported Azure location where the Shared Image Gallery exists.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSharedImageVersionResult-managedImageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImageVersion.ts#L74">property <b>managedImageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImageVersion.ts#L74">property <b>managedImageId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>managedImageId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4644,7 +4644,7 @@ The ID of the Managed Image which was the source of this Shared Image Version.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSharedImageVersionResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImageVersion.ts#L78">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImageVersion.ts#L78">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4653,13 +4653,13 @@ The Azure Region in which this Image Version exists.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSharedImageVersionResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImageVersion.ts#L79">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImageVersion.ts#L79">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetSharedImageVersionResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImageVersion.ts#L83">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImageVersion.ts#L83">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -4668,7 +4668,7 @@ A mapping of tags assigned to the Shared Image.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSharedImageVersionResult-targetRegions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSharedImageVersion.ts#L87">property <b>targetRegions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSharedImageVersion.ts#L87">property <b>targetRegions</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>targetRegions: {
@@ -4681,14 +4681,14 @@ One or more `target_region` blocks as documented below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetSnapshotArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSnapshot.ts#L32">interface <b>GetSnapshotArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSnapshot.ts#L32">interface <b>GetSnapshotArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of arguments for invoking getSnapshot.
 
 <h3 class="pdoc-member-header" id="GetSnapshotArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSnapshot.ts#L36">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSnapshot.ts#L36">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4697,7 +4697,7 @@ Specifies the name of the Snapshot.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSnapshot.ts#L40">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSnapshot.ts#L40">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4707,20 +4707,20 @@ Specifies the name of the resource group the Snapshot is located in.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetSnapshotResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSnapshot.ts#L46">interface <b>GetSnapshotResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSnapshot.ts#L46">interface <b>GetSnapshotResult</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of values returned by getSnapshot.
 
 <h3 class="pdoc-member-header" id="GetSnapshotResult-creationOption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSnapshot.ts#L47">property <b>creationOption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSnapshot.ts#L47">property <b>creationOption</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>creationOption: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotResult-diskSizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSnapshot.ts#L51">property <b>diskSizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSnapshot.ts#L51">property <b>diskSizeGb</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>diskSizeGb: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -4729,7 +4729,7 @@ The size of the Snapshotted Disk in GB.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotResult-encryptionSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSnapshot.ts#L52">property <b>encryptionSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSnapshot.ts#L52">property <b>encryptionSettings</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>encryptionSettings: {
@@ -4745,7 +4745,7 @@ The size of the Snapshotted Disk in GB.
 }[];</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSnapshot.ts#L72">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSnapshot.ts#L72">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4754,25 +4754,25 @@ id is the provider-assigned unique ID for this managed resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSnapshot.ts#L53">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSnapshot.ts#L53">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotResult-osType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSnapshot.ts#L54">property <b>osType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSnapshot.ts#L54">property <b>osType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>osType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSnapshot.ts#L55">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSnapshot.ts#L55">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotResult-sourceResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSnapshot.ts#L59">property <b>sourceResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSnapshot.ts#L59">property <b>sourceResourceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sourceResourceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4781,7 +4781,7 @@ The reference to an existing snapshot.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotResult-sourceUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSnapshot.ts#L63">property <b>sourceUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSnapshot.ts#L63">property <b>sourceUri</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sourceUri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4790,7 +4790,7 @@ The URI to a Managed or Unmanaged Disk.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotResult-storageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSnapshot.ts#L67">property <b>storageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSnapshot.ts#L67">property <b>storageAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>storageAccountId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4799,21 +4799,21 @@ The ID of an storage account.
 
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotResult-timeCreated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getSnapshot.ts#L68">property <b>timeCreated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getSnapshot.ts#L68">property <b>timeCreated</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>timeCreated: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetVirtualMachineArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getVirtualMachine.ts#L34">interface <b>GetVirtualMachineArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getVirtualMachine.ts#L34">interface <b>GetVirtualMachineArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of arguments for invoking getVirtualMachine.
 
 <h3 class="pdoc-member-header" id="GetVirtualMachineArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getVirtualMachine.ts#L38">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getVirtualMachine.ts#L38">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4822,7 +4822,7 @@ Specifies the name of the Virtual Machine.
 
 </div>
 <h3 class="pdoc-member-header" id="GetVirtualMachineArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getVirtualMachine.ts#L42">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getVirtualMachine.ts#L42">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4832,14 +4832,14 @@ Specifies the name of the resource group the Virtual Machine is located in.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetVirtualMachineResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getVirtualMachine.ts#L48">interface <b>GetVirtualMachineResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getVirtualMachine.ts#L48">interface <b>GetVirtualMachineResult</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of values returned by getVirtualMachine.
 
 <h3 class="pdoc-member-header" id="GetVirtualMachineResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getVirtualMachine.ts#L54">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getVirtualMachine.ts#L54">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -4848,27 +4848,27 @@ id is the provider-assigned unique ID for this managed resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetVirtualMachineResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getVirtualMachine.ts#L49">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getVirtualMachine.ts#L49">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetVirtualMachineResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/getVirtualMachine.ts#L50">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/getVirtualMachine.ts#L50">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ImageArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/image.ts#L182">interface <b>ImageArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/image.ts#L182">interface <b>ImageArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a Image resource.
 
 <h3 class="pdoc-member-header" id="ImageArgs-dataDisks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/image.ts#L186">property <b>dataDisks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/image.ts#L186">property <b>dataDisks</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>dataDisks?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -4883,7 +4883,7 @@ One or more `data_disk` elements as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ImageArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/image.ts#L191">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/image.ts#L191">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4893,7 +4893,7 @@ Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="ImageArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/image.ts#L196">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/image.ts#L196">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4903,7 +4903,7 @@ new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="ImageArgs-osDisk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/image.ts#L200">property <b>osDisk</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/image.ts#L200">property <b>osDisk</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>osDisk?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -4919,7 +4919,7 @@ One or more `os_disk` elements as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ImageArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/image.ts#L205">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/image.ts#L205">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4929,7 +4929,7 @@ the image. Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="ImageArgs-sourceVirtualMachineId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/image.ts#L209">property <b>sourceVirtualMachineId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/image.ts#L209">property <b>sourceVirtualMachineId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sourceVirtualMachineId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4938,7 +4938,7 @@ The Virtual Machine ID from which to create the image.
 
 </div>
 <h3 class="pdoc-member-header" id="ImageArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/image.ts#L213">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/image.ts#L213">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -4947,7 +4947,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="ImageArgs-zoneResilient">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/image.ts#L217">property <b>zoneResilient</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/image.ts#L217">property <b>zoneResilient</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>zoneResilient?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -4957,14 +4957,14 @@ Is zone resiliency enabled?  Defaults to `false`.  Changing this forces a new re
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ImageState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/image.ts#L141">interface <b>ImageState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/image.ts#L141">interface <b>ImageState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering Image resources.
 
 <h3 class="pdoc-member-header" id="ImageState-dataDisks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/image.ts#L145">property <b>dataDisks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/image.ts#L145">property <b>dataDisks</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>dataDisks?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -4979,7 +4979,7 @@ One or more `data_disk` elements as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ImageState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/image.ts#L150">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/image.ts#L150">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4989,7 +4989,7 @@ Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="ImageState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/image.ts#L155">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/image.ts#L155">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4999,7 +4999,7 @@ new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="ImageState-osDisk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/image.ts#L159">property <b>osDisk</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/image.ts#L159">property <b>osDisk</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>osDisk?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5015,7 +5015,7 @@ One or more `os_disk` elements as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ImageState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/image.ts#L164">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/image.ts#L164">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5025,7 +5025,7 @@ the image. Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="ImageState-sourceVirtualMachineId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/image.ts#L168">property <b>sourceVirtualMachineId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/image.ts#L168">property <b>sourceVirtualMachineId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sourceVirtualMachineId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5034,7 +5034,7 @@ The Virtual Machine ID from which to create the image.
 
 </div>
 <h3 class="pdoc-member-header" id="ImageState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/image.ts#L172">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/image.ts#L172">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -5043,7 +5043,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="ImageState-zoneResilient">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/image.ts#L176">property <b>zoneResilient</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/image.ts#L176">property <b>zoneResilient</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>zoneResilient?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5053,14 +5053,14 @@ Is zone resiliency enabled?  Defaults to `false`.  Changing this forces a new re
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ManagedDiskArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L261">interface <b>ManagedDiskArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L261">interface <b>ManagedDiskArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a ManagedDisk resource.
 
 <h3 class="pdoc-member-header" id="ManagedDiskArgs-createOption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L265">property <b>createOption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L265">property <b>createOption</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>createOption: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5069,7 +5069,7 @@ The method to use when creating the managed disk. Possible values include:
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDiskArgs-diskSizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L270">property <b>diskSizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L270">property <b>diskSizeGb</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>diskSizeGb?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -5079,7 +5079,7 @@ If `create_option` is `Copy` or `FromImage`, then the value must be equal to or 
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDiskArgs-encryptionSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L274">property <b>encryptionSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L274">property <b>encryptionSettings</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>encryptionSettings?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5098,7 +5098,7 @@ an `encryption_settings` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDiskArgs-imageReferenceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L278">property <b>imageReferenceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L278">property <b>imageReferenceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>imageReferenceId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5107,7 +5107,7 @@ ID of an existing platform/marketplace disk image to copy when `create_option` i
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDiskArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L283">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L283">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5117,7 +5117,7 @@ Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDiskArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L288">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L288">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5127,7 +5127,7 @@ new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDiskArgs-osType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L293">property <b>osType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L293">property <b>osType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>osType?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5137,7 +5137,7 @@ operation targets a source that contains an operating system. Valid values are `
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDiskArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L298">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L298">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5147,7 +5147,7 @@ the managed disk.
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDiskArgs-sourceResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L302">property <b>sourceResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L302">property <b>sourceResourceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sourceResourceId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5156,7 +5156,7 @@ ID of an existing managed disk to copy when `create_option` is `Copy`.
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDiskArgs-sourceUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L306">property <b>sourceUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L306">property <b>sourceUri</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sourceUri?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5165,7 +5165,7 @@ URI to a valid VHD file to be used when `create_option` is `Import`.
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDiskArgs-storageAccountType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L311">property <b>storageAccountType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L311">property <b>storageAccountType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>storageAccountType: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5175,7 +5175,7 @@ Allowable values are `Standard_LRS`, `Premium_LRS`, `StandardSSD_LRS` or `UltraS
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDiskArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L315">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L315">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -5184,7 +5184,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDiskArgs-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L319">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L319">property <b>zones</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>zones?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5194,14 +5194,14 @@ A collection containing the availability zone to allocate the Managed Disk in.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ManagedDiskState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L197">interface <b>ManagedDiskState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L197">interface <b>ManagedDiskState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering ManagedDisk resources.
 
 <h3 class="pdoc-member-header" id="ManagedDiskState-createOption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L201">property <b>createOption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L201">property <b>createOption</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>createOption?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5210,7 +5210,7 @@ The method to use when creating the managed disk. Possible values include:
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDiskState-diskSizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L206">property <b>diskSizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L206">property <b>diskSizeGb</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>diskSizeGb?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -5220,7 +5220,7 @@ If `create_option` is `Copy` or `FromImage`, then the value must be equal to or 
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDiskState-encryptionSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L210">property <b>encryptionSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L210">property <b>encryptionSettings</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>encryptionSettings?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5239,7 +5239,7 @@ an `encryption_settings` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDiskState-imageReferenceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L214">property <b>imageReferenceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L214">property <b>imageReferenceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>imageReferenceId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5248,7 +5248,7 @@ ID of an existing platform/marketplace disk image to copy when `create_option` i
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDiskState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L219">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L219">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5258,7 +5258,7 @@ Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDiskState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L224">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L224">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5268,7 +5268,7 @@ new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDiskState-osType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L229">property <b>osType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L229">property <b>osType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>osType?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5278,7 +5278,7 @@ operation targets a source that contains an operating system. Valid values are `
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDiskState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L234">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L234">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5288,7 +5288,7 @@ the managed disk.
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDiskState-sourceResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L238">property <b>sourceResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L238">property <b>sourceResourceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sourceResourceId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5297,7 +5297,7 @@ ID of an existing managed disk to copy when `create_option` is `Copy`.
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDiskState-sourceUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L242">property <b>sourceUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L242">property <b>sourceUri</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sourceUri?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5306,7 +5306,7 @@ URI to a valid VHD file to be used when `create_option` is `Import`.
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDiskState-storageAccountType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L247">property <b>storageAccountType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L247">property <b>storageAccountType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>storageAccountType?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5316,7 +5316,7 @@ Allowable values are `Standard_LRS`, `Premium_LRS`, `StandardSSD_LRS` or `UltraS
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDiskState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L251">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L251">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -5325,7 +5325,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="ManagedDiskState-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/managedDisk.ts#L255">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/managedDisk.ts#L255">property <b>zones</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>zones?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5335,14 +5335,14 @@ A collection containing the availability zone to allocate the Managed Disk in.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ScaleSetArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L569">interface <b>ScaleSetArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L569">interface <b>ScaleSetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a ScaleSet resource.
 
 <h3 class="pdoc-member-header" id="ScaleSetArgs-automaticOsUpgrade">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L573">property <b>automaticOsUpgrade</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L573">property <b>automaticOsUpgrade</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>automaticOsUpgrade?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5351,7 +5351,7 @@ Automatic OS patches can be applied by Azure to your scaleset. This is particula
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetArgs-bootDiagnostics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L577">property <b>bootDiagnostics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L577">property <b>bootDiagnostics</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>bootDiagnostics?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5363,7 +5363,7 @@ A boot diagnostics profile block as referenced below.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetArgs-evictionPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L581">property <b>evictionPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L581">property <b>evictionPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>evictionPolicy?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5372,7 +5372,7 @@ Specifies the eviction policy for Virtual Machines in this Scale Set. Possible v
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetArgs-extensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L585">property <b>extensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L585">property <b>extensions</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>extensions?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5389,7 +5389,7 @@ Can be specified multiple times to add extension profiles to the scale set. Each
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetArgs-healthProbeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L589">property <b>healthProbeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L589">property <b>healthProbeId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>healthProbeId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5398,7 +5398,7 @@ Specifies the identifier for the load balancer health probe. Required when using
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetArgs-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L590">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L590">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>identity?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5408,7 +5408,7 @@ Specifies the identifier for the load balancer health probe. Required when using
 }&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetArgs-licenseType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L594">property <b>licenseType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L594">property <b>licenseType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>licenseType?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5417,7 +5417,7 @@ Specifies the Windows OS license type. If supplied, the only allowed values are 
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L598">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L598">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5426,7 +5426,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L602">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L602">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5435,7 +5435,7 @@ Specifies the name of the image from the marketplace.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetArgs-networkProfiles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L606">property <b>networkProfiles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L606">property <b>networkProfiles</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>networkProfiles: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5467,7 +5467,7 @@ A collection of network profile block as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetArgs-osProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L610">property <b>osProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L610">property <b>osProfile</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>osProfile: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5481,7 +5481,7 @@ A Virtual Machine OS Profile block as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetArgs-osProfileLinuxConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L614">property <b>osProfileLinuxConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L614">property <b>osProfileLinuxConfig</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>osProfileLinuxConfig?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5496,7 +5496,7 @@ A Linux config block as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetArgs-osProfileSecrets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L618">property <b>osProfileSecrets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L618">property <b>osProfileSecrets</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>osProfileSecrets?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5511,7 +5511,7 @@ A collection of Secret blocks as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetArgs-osProfileWindowsConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L622">property <b>osProfileWindowsConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L622">property <b>osProfileWindowsConfig</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>osProfileWindowsConfig?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5533,7 +5533,7 @@ A Windows config block as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetArgs-overprovision">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L626">property <b>overprovision</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L626">property <b>overprovision</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>overprovision?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5542,7 +5542,7 @@ Specifies whether the virtual machine scale set should be overprovisioned.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetArgs-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L630">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L630">property <b>plan</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>plan?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5555,7 +5555,7 @@ A plan block as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L634">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L634">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>priority?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5564,7 +5564,7 @@ Specifies the priority for the Virtual Machines in the Scale Set. Defaults to `R
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L638">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L638">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5573,7 +5573,7 @@ The name of the resource group in which to create the virtual machine scale set.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetArgs-rollingUpgradePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L642">property <b>rollingUpgradePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L642">property <b>rollingUpgradePolicy</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>rollingUpgradePolicy?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5587,7 +5587,7 @@ A `rolling_upgrade_policy` block as defined below. This is only applicable when 
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetArgs-singlePlacementGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L646">property <b>singlePlacementGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L646">property <b>singlePlacementGroup</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>singlePlacementGroup?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5596,7 +5596,7 @@ Specifies whether the scale set is limited to a single placement group with a ma
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetArgs-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L650">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L650">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sku: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5609,7 +5609,7 @@ Specifies the SKU of the image used to create the virtual machines.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetArgs-storageProfileDataDisks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L654">property <b>storageProfileDataDisks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L654">property <b>storageProfileDataDisks</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>storageProfileDataDisks?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5624,7 +5624,7 @@ A storage profile data disk block as documented below
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetArgs-storageProfileImageReference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L658">property <b>storageProfileImageReference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L658">property <b>storageProfileImageReference</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>storageProfileImageReference?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5639,7 +5639,7 @@ A storage profile image reference block as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetArgs-storageProfileOsDisk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L662">property <b>storageProfileOsDisk</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L662">property <b>storageProfileOsDisk</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>storageProfileOsDisk: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5656,7 +5656,7 @@ A storage profile os disk block as documented below
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L666">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L666">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -5665,7 +5665,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetArgs-upgradePolicyMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L670">property <b>upgradePolicyMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L670">property <b>upgradePolicyMode</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>upgradePolicyMode: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5674,7 +5674,7 @@ Specifies the mode of an upgrade to virtual machines in the scale set. Possible 
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetArgs-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L674">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L674">property <b>zones</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>zones?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -5684,14 +5684,14 @@ A collection of availability zones to spread the Virtual Machines over.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ScaleSetState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L458">interface <b>ScaleSetState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L458">interface <b>ScaleSetState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering ScaleSet resources.
 
 <h3 class="pdoc-member-header" id="ScaleSetState-automaticOsUpgrade">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L462">property <b>automaticOsUpgrade</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L462">property <b>automaticOsUpgrade</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>automaticOsUpgrade?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5700,7 +5700,7 @@ Automatic OS patches can be applied by Azure to your scaleset. This is particula
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetState-bootDiagnostics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L466">property <b>bootDiagnostics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L466">property <b>bootDiagnostics</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>bootDiagnostics?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5712,7 +5712,7 @@ A boot diagnostics profile block as referenced below.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetState-evictionPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L470">property <b>evictionPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L470">property <b>evictionPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>evictionPolicy?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5721,7 +5721,7 @@ Specifies the eviction policy for Virtual Machines in this Scale Set. Possible v
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetState-extensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L474">property <b>extensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L474">property <b>extensions</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>extensions?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5738,7 +5738,7 @@ Can be specified multiple times to add extension profiles to the scale set. Each
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetState-healthProbeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L478">property <b>healthProbeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L478">property <b>healthProbeId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>healthProbeId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5747,7 +5747,7 @@ Specifies the identifier for the load balancer health probe. Required when using
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetState-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L479">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L479">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>identity?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5757,7 +5757,7 @@ Specifies the identifier for the load balancer health probe. Required when using
 }&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetState-licenseType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L483">property <b>licenseType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L483">property <b>licenseType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>licenseType?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5766,7 +5766,7 @@ Specifies the Windows OS license type. If supplied, the only allowed values are 
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L487">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L487">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5775,7 +5775,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L491">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L491">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5784,7 +5784,7 @@ Specifies the name of the image from the marketplace.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetState-networkProfiles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L495">property <b>networkProfiles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L495">property <b>networkProfiles</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>networkProfiles?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5816,7 +5816,7 @@ A collection of network profile block as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetState-osProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L499">property <b>osProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L499">property <b>osProfile</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>osProfile?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5830,7 +5830,7 @@ A Virtual Machine OS Profile block as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetState-osProfileLinuxConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L503">property <b>osProfileLinuxConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L503">property <b>osProfileLinuxConfig</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>osProfileLinuxConfig?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5845,7 +5845,7 @@ A Linux config block as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetState-osProfileSecrets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L507">property <b>osProfileSecrets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L507">property <b>osProfileSecrets</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>osProfileSecrets?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5860,7 +5860,7 @@ A collection of Secret blocks as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetState-osProfileWindowsConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L511">property <b>osProfileWindowsConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L511">property <b>osProfileWindowsConfig</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>osProfileWindowsConfig?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5882,7 +5882,7 @@ A Windows config block as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetState-overprovision">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L515">property <b>overprovision</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L515">property <b>overprovision</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>overprovision?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5891,7 +5891,7 @@ Specifies whether the virtual machine scale set should be overprovisioned.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetState-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L519">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L519">property <b>plan</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>plan?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5904,7 +5904,7 @@ A plan block as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L523">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L523">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>priority?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5913,7 +5913,7 @@ Specifies the priority for the Virtual Machines in the Scale Set. Defaults to `R
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L527">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L527">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5922,7 +5922,7 @@ The name of the resource group in which to create the virtual machine scale set.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetState-rollingUpgradePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L531">property <b>rollingUpgradePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L531">property <b>rollingUpgradePolicy</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>rollingUpgradePolicy?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5936,7 +5936,7 @@ A `rolling_upgrade_policy` block as defined below. This is only applicable when 
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetState-singlePlacementGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L535">property <b>singlePlacementGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L535">property <b>singlePlacementGroup</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>singlePlacementGroup?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5945,7 +5945,7 @@ Specifies whether the scale set is limited to a single placement group with a ma
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetState-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L539">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L539">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sku?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5958,7 +5958,7 @@ Specifies the SKU of the image used to create the virtual machines.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetState-storageProfileDataDisks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L543">property <b>storageProfileDataDisks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L543">property <b>storageProfileDataDisks</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>storageProfileDataDisks?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5973,7 +5973,7 @@ A storage profile data disk block as documented below
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetState-storageProfileImageReference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L547">property <b>storageProfileImageReference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L547">property <b>storageProfileImageReference</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>storageProfileImageReference?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5988,7 +5988,7 @@ A storage profile image reference block as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetState-storageProfileOsDisk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L551">property <b>storageProfileOsDisk</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L551">property <b>storageProfileOsDisk</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>storageProfileOsDisk?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6005,7 +6005,7 @@ A storage profile os disk block as documented below
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L555">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L555">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -6014,7 +6014,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetState-upgradePolicyMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L559">property <b>upgradePolicyMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L559">property <b>upgradePolicyMode</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>upgradePolicyMode?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6023,7 +6023,7 @@ Specifies the mode of an upgrade to virtual machines in the scale set. Possible 
 
 </div>
 <h3 class="pdoc-member-header" id="ScaleSetState-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/scaleSet.ts#L563">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/scaleSet.ts#L563">property <b>zones</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>zones?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -6033,14 +6033,14 @@ A collection of availability zones to spread the Virtual Machines over.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SharedImageArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L210">interface <b>SharedImageArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L210">interface <b>SharedImageArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a SharedImage resource.
 
 <h3 class="pdoc-member-header" id="SharedImageArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L214">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L214">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>description?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6049,7 +6049,7 @@ A description of this Shared Image.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageArgs-eula">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L218">property <b>eula</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L218">property <b>eula</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>eula?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6058,7 +6058,7 @@ The End User Licence Agreement for the Shared Image.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageArgs-galleryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L222">property <b>galleryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L222">property <b>galleryName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>galleryName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6067,7 +6067,7 @@ Specifies the name of the Shared Image Gallery in which this Shared Image should
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageArgs-identifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L226">property <b>identifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L226">property <b>identifier</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>identifier: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6080,7 +6080,7 @@ An `identifier` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L230">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L230">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6089,7 +6089,7 @@ Specifies the supported Azure location where the Shared Image Gallery exists. Ch
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L234">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L234">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6098,7 +6098,7 @@ Specifies the name of the Shared Image. Changing this forces a new resource to b
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageArgs-osType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L238">property <b>osType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L238">property <b>osType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>osType: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6107,7 +6107,7 @@ The type of Operating System present in this Shared Image. Possible values are `
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageArgs-privacyStatementUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L242">property <b>privacyStatementUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L242">property <b>privacyStatementUri</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>privacyStatementUri?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6116,7 +6116,7 @@ The URI containing the Privacy Statement associated with this Shared Image.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageArgs-releaseNoteUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L246">property <b>releaseNoteUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L246">property <b>releaseNoteUri</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>releaseNoteUri?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6125,7 +6125,7 @@ The URI containing the Release Notes associated with this Shared Image.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L250">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L250">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6134,7 +6134,7 @@ The name of the resource group in which the Shared Image Gallery exists. Changin
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L254">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L254">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -6144,14 +6144,14 @@ A mapping of tags to assign to the Shared Image.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SharedImageGalleryArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageGallery.ts#L139">interface <b>SharedImageGalleryArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageGallery.ts#L139">interface <b>SharedImageGalleryArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a SharedImageGallery resource.
 
 <h3 class="pdoc-member-header" id="SharedImageGalleryArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageGallery.ts#L143">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageGallery.ts#L143">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>description?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6160,7 +6160,7 @@ A description for this Shared Image Gallery.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageGalleryArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageGallery.ts#L147">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageGallery.ts#L147">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6169,7 +6169,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageGalleryArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageGallery.ts#L151">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageGallery.ts#L151">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6178,7 +6178,7 @@ Specifies the name of the Shared Image Gallery. Changing this forces a new resou
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageGalleryArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageGallery.ts#L155">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageGallery.ts#L155">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6187,7 +6187,7 @@ The name of the resource group in which to create the Shared Image Gallery. Chan
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageGalleryArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageGallery.ts#L159">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageGallery.ts#L159">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -6197,14 +6197,14 @@ A mapping of tags to assign to the Shared Image Gallery.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SharedImageGalleryState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageGallery.ts#L109">interface <b>SharedImageGalleryState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageGallery.ts#L109">interface <b>SharedImageGalleryState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering SharedImageGallery resources.
 
 <h3 class="pdoc-member-header" id="SharedImageGalleryState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageGallery.ts#L113">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageGallery.ts#L113">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>description?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6213,7 +6213,7 @@ A description for this Shared Image Gallery.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageGalleryState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageGallery.ts#L117">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageGallery.ts#L117">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6222,7 +6222,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageGalleryState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageGallery.ts#L121">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageGallery.ts#L121">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6231,7 +6231,7 @@ Specifies the name of the Shared Image Gallery. Changing this forces a new resou
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageGalleryState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageGallery.ts#L125">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageGallery.ts#L125">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6240,7 +6240,7 @@ The name of the resource group in which to create the Shared Image Gallery. Chan
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageGalleryState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageGallery.ts#L129">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageGallery.ts#L129">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -6249,7 +6249,7 @@ A mapping of tags to assign to the Shared Image Gallery.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageGalleryState-uniqueName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageGallery.ts#L133">property <b>uniqueName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageGallery.ts#L133">property <b>uniqueName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>uniqueName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6259,14 +6259,14 @@ The Unique Name for this Shared Image Gallery.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SharedImageState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L160">interface <b>SharedImageState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L160">interface <b>SharedImageState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering SharedImage resources.
 
 <h3 class="pdoc-member-header" id="SharedImageState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L164">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L164">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>description?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6275,7 +6275,7 @@ A description of this Shared Image.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageState-eula">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L168">property <b>eula</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L168">property <b>eula</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>eula?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6284,7 +6284,7 @@ The End User Licence Agreement for the Shared Image.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageState-galleryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L172">property <b>galleryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L172">property <b>galleryName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>galleryName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6293,7 +6293,7 @@ Specifies the name of the Shared Image Gallery in which this Shared Image should
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageState-identifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L176">property <b>identifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L176">property <b>identifier</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>identifier?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6306,7 +6306,7 @@ An `identifier` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L180">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L180">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6315,7 +6315,7 @@ Specifies the supported Azure location where the Shared Image Gallery exists. Ch
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L184">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L184">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6324,7 +6324,7 @@ Specifies the name of the Shared Image. Changing this forces a new resource to b
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageState-osType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L188">property <b>osType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L188">property <b>osType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>osType?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6333,7 +6333,7 @@ The type of Operating System present in this Shared Image. Possible values are `
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageState-privacyStatementUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L192">property <b>privacyStatementUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L192">property <b>privacyStatementUri</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>privacyStatementUri?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6342,7 +6342,7 @@ The URI containing the Privacy Statement associated with this Shared Image.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageState-releaseNoteUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L196">property <b>releaseNoteUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L196">property <b>releaseNoteUri</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>releaseNoteUri?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6351,7 +6351,7 @@ The URI containing the Release Notes associated with this Shared Image.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L200">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L200">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6360,7 +6360,7 @@ The name of the resource group in which the Shared Image Gallery exists. Changin
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImage.ts#L204">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImage.ts#L204">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -6370,14 +6370,14 @@ A mapping of tags to assign to the Shared Image.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SharedImageVersionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageVersion.ts#L188">interface <b>SharedImageVersionArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageVersion.ts#L188">interface <b>SharedImageVersionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a SharedImageVersion resource.
 
 <h3 class="pdoc-member-header" id="SharedImageVersionArgs-excludeFromLatest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageVersion.ts#L192">property <b>excludeFromLatest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageVersion.ts#L192">property <b>excludeFromLatest</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>excludeFromLatest?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6386,7 +6386,7 @@ Should this Image Version be excluded from the `latest` filter? If set to `true`
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageVersionArgs-galleryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageVersion.ts#L196">property <b>galleryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageVersion.ts#L196">property <b>galleryName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>galleryName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6395,7 +6395,7 @@ The name of the Shared Image Gallery in which the Shared Image exists. Changing 
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageVersionArgs-imageName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageVersion.ts#L200">property <b>imageName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageVersion.ts#L200">property <b>imageName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>imageName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6404,7 +6404,7 @@ The name of the Shared Image within the Shared Image Gallery in which this Versi
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageVersionArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageVersion.ts#L204">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageVersion.ts#L204">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6413,7 +6413,7 @@ The Azure Region in which the Shared Image Gallery exists. Changing this forces 
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageVersionArgs-managedImageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageVersion.ts#L208">property <b>managedImageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageVersion.ts#L208">property <b>managedImageId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>managedImageId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6422,7 +6422,7 @@ The ID of the Managed Image which should be used for this Shared Image Version. 
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageVersionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageVersion.ts#L212">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageVersion.ts#L212">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6431,7 +6431,7 @@ The version number for this Image Version, such as `1.0.0`. Changing this forces
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageVersionArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageVersion.ts#L216">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageVersion.ts#L216">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6440,7 +6440,7 @@ The name of the Resource Group in which the Shared Image Gallery exists. Changin
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageVersionArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageVersion.ts#L220">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageVersion.ts#L220">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -6449,7 +6449,7 @@ A collection of tags which should be applied to this resource.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageVersionArgs-targetRegions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageVersion.ts#L224">property <b>targetRegions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageVersion.ts#L224">property <b>targetRegions</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>targetRegions: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6462,14 +6462,14 @@ One or more `target_region` blocks as documented below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SharedImageVersionState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageVersion.ts#L146">interface <b>SharedImageVersionState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageVersion.ts#L146">interface <b>SharedImageVersionState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering SharedImageVersion resources.
 
 <h3 class="pdoc-member-header" id="SharedImageVersionState-excludeFromLatest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageVersion.ts#L150">property <b>excludeFromLatest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageVersion.ts#L150">property <b>excludeFromLatest</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>excludeFromLatest?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6478,7 +6478,7 @@ Should this Image Version be excluded from the `latest` filter? If set to `true`
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageVersionState-galleryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageVersion.ts#L154">property <b>galleryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageVersion.ts#L154">property <b>galleryName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>galleryName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6487,7 +6487,7 @@ The name of the Shared Image Gallery in which the Shared Image exists. Changing 
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageVersionState-imageName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageVersion.ts#L158">property <b>imageName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageVersion.ts#L158">property <b>imageName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>imageName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6496,7 +6496,7 @@ The name of the Shared Image within the Shared Image Gallery in which this Versi
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageVersionState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageVersion.ts#L162">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageVersion.ts#L162">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6505,7 +6505,7 @@ The Azure Region in which the Shared Image Gallery exists. Changing this forces 
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageVersionState-managedImageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageVersion.ts#L166">property <b>managedImageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageVersion.ts#L166">property <b>managedImageId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>managedImageId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6514,7 +6514,7 @@ The ID of the Managed Image which should be used for this Shared Image Version. 
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageVersionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageVersion.ts#L170">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageVersion.ts#L170">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6523,7 +6523,7 @@ The version number for this Image Version, such as `1.0.0`. Changing this forces
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageVersionState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageVersion.ts#L174">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageVersion.ts#L174">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6532,7 +6532,7 @@ The name of the Resource Group in which the Shared Image Gallery exists. Changin
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageVersionState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageVersion.ts#L178">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageVersion.ts#L178">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -6541,7 +6541,7 @@ A collection of tags which should be applied to this resource.
 
 </div>
 <h3 class="pdoc-member-header" id="SharedImageVersionState-targetRegions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/sharedImageVersion.ts#L182">property <b>targetRegions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/sharedImageVersion.ts#L182">property <b>targetRegions</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>targetRegions?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6554,14 +6554,14 @@ One or more `target_region` blocks as documented below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SnapshotArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L179">interface <b>SnapshotArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L179">interface <b>SnapshotArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a Snapshot resource.
 
 <h3 class="pdoc-member-header" id="SnapshotArgs-createOption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L183">property <b>createOption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L183">property <b>createOption</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>createOption: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6570,7 +6570,7 @@ Indicates how the snapshot is to be created. Possible values are `Copy` or `Impo
 
 </div>
 <h3 class="pdoc-member-header" id="SnapshotArgs-diskSizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L187">property <b>diskSizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L187">property <b>diskSizeGb</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>diskSizeGb?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -6579,7 +6579,7 @@ The size of the Snapshotted Disk in GB.
 
 </div>
 <h3 class="pdoc-member-header" id="SnapshotArgs-encryptionSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L188">property <b>encryptionSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L188">property <b>encryptionSettings</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>encryptionSettings?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6595,7 +6595,7 @@ The size of the Snapshotted Disk in GB.
 }&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="SnapshotArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L192">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L192">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6604,7 +6604,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="SnapshotArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L196">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L196">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6613,7 +6613,7 @@ Specifies the name of the Snapshot resource. Changing this forces a new resource
 
 </div>
 <h3 class="pdoc-member-header" id="SnapshotArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L200">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L200">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6622,7 +6622,7 @@ The name of the resource group in which to create the Snapshot. Changing this fo
 
 </div>
 <h3 class="pdoc-member-header" id="SnapshotArgs-sourceResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L204">property <b>sourceResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L204">property <b>sourceResourceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sourceResourceId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6631,7 +6631,7 @@ Specifies a reference to an existing snapshot, when `create_option` is `Copy`. C
 
 </div>
 <h3 class="pdoc-member-header" id="SnapshotArgs-sourceUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L208">property <b>sourceUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L208">property <b>sourceUri</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sourceUri?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6640,7 +6640,7 @@ Specifies the URI to a Managed or Unmanaged Disk. Changing this forces a new res
 
 </div>
 <h3 class="pdoc-member-header" id="SnapshotArgs-storageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L212">property <b>storageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L212">property <b>storageAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>storageAccountId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6649,7 +6649,7 @@ Specifies the ID of an storage account. Used with `source_uri` to allow authoriz
 
 </div>
 <h3 class="pdoc-member-header" id="SnapshotArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L216">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L216">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -6659,14 +6659,14 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SnapshotState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L136">interface <b>SnapshotState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L136">interface <b>SnapshotState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering Snapshot resources.
 
 <h3 class="pdoc-member-header" id="SnapshotState-createOption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L140">property <b>createOption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L140">property <b>createOption</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>createOption?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6675,7 +6675,7 @@ Indicates how the snapshot is to be created. Possible values are `Copy` or `Impo
 
 </div>
 <h3 class="pdoc-member-header" id="SnapshotState-diskSizeGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L144">property <b>diskSizeGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L144">property <b>diskSizeGb</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>diskSizeGb?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -6684,7 +6684,7 @@ The size of the Snapshotted Disk in GB.
 
 </div>
 <h3 class="pdoc-member-header" id="SnapshotState-encryptionSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L145">property <b>encryptionSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L145">property <b>encryptionSettings</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>encryptionSettings?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6700,7 +6700,7 @@ The size of the Snapshotted Disk in GB.
 }&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="SnapshotState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L149">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L149">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6709,7 +6709,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 
 </div>
 <h3 class="pdoc-member-header" id="SnapshotState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L153">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L153">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6718,7 +6718,7 @@ Specifies the name of the Snapshot resource. Changing this forces a new resource
 
 </div>
 <h3 class="pdoc-member-header" id="SnapshotState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L157">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L157">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6727,7 +6727,7 @@ The name of the resource group in which to create the Snapshot. Changing this fo
 
 </div>
 <h3 class="pdoc-member-header" id="SnapshotState-sourceResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L161">property <b>sourceResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L161">property <b>sourceResourceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sourceResourceId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6736,7 +6736,7 @@ Specifies a reference to an existing snapshot, when `create_option` is `Copy`. C
 
 </div>
 <h3 class="pdoc-member-header" id="SnapshotState-sourceUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L165">property <b>sourceUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L165">property <b>sourceUri</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sourceUri?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6745,7 +6745,7 @@ Specifies the URI to a Managed or Unmanaged Disk. Changing this forces a new res
 
 </div>
 <h3 class="pdoc-member-header" id="SnapshotState-storageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L169">property <b>storageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L169">property <b>storageAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>storageAccountId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6754,7 +6754,7 @@ Specifies the ID of an storage account. Used with `source_uri` to allow authoriz
 
 </div>
 <h3 class="pdoc-member-header" id="SnapshotState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/snapshot.ts#L173">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/snapshot.ts#L173">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -6764,14 +6764,14 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VirtualMachineArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L355">interface <b>VirtualMachineArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L355">interface <b>VirtualMachineArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a VirtualMachine resource.
 
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-availabilitySetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L359">property <b>availabilitySetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L359">property <b>availabilitySetId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>availabilitySetId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6780,7 +6780,7 @@ The ID of the Availability Set in which the Virtual Machine should exist. Changi
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-bootDiagnostics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L363">property <b>bootDiagnostics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L363">property <b>bootDiagnostics</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>bootDiagnostics?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6792,7 +6792,7 @@ A `boot_diagnostics` block.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-deleteDataDisksOnTermination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L367">property <b>deleteDataDisksOnTermination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L367">property <b>deleteDataDisksOnTermination</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>deleteDataDisksOnTermination?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6801,7 +6801,7 @@ Should the Data Disks (either the Managed Disks / VHD Blobs) be deleted when the
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-deleteOsDiskOnTermination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L371">property <b>deleteOsDiskOnTermination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L371">property <b>deleteOsDiskOnTermination</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>deleteOsDiskOnTermination?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6810,7 +6810,7 @@ Should the OS Disk (either the Managed Disk / VHD Blob) be deleted when the Virt
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L375">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L375">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>identity?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6823,7 +6823,7 @@ A `identity` block.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-licenseType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L379">property <b>licenseType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L379">property <b>licenseType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>licenseType?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6832,7 +6832,7 @@ Specifies the BYOL Type for this Virtual Machine. This is only applicable to Win
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L383">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L383">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6841,7 +6841,7 @@ Specifies the Azure Region where the Virtual Machine exists. Changing this force
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L387">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L387">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6850,7 +6850,7 @@ Specifies the name of the Virtual Machine. Changing this forces a new resource t
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-networkInterfaceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L391">property <b>networkInterfaceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L391">property <b>networkInterfaceIds</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>networkInterfaceIds: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -6859,7 +6859,7 @@ A list of Network Interface ID's which should be associated with the Virtual Mac
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-osProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L395">property <b>osProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L395">property <b>osProfile</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>osProfile?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6873,7 +6873,7 @@ An `os_profile` block. Required when `create_option` in the `storage_os_disk` bl
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-osProfileLinuxConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L399">property <b>osProfileLinuxConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L399">property <b>osProfileLinuxConfig</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>osProfileLinuxConfig?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6888,7 +6888,7 @@ A `os_profile_linux_config` block.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-osProfileSecrets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L403">property <b>osProfileSecrets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L403">property <b>osProfileSecrets</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>osProfileSecrets?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6903,7 +6903,7 @@ One or more `os_profile_secrets` blocks.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-osProfileWindowsConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L407">property <b>osProfileWindowsConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L407">property <b>osProfileWindowsConfig</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>osProfileWindowsConfig?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6926,7 +6926,7 @@ A `os_profile_windows_config` block.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L411">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L411">property <b>plan</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>plan?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6939,7 +6939,7 @@ A `plan` block.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-primaryNetworkInterfaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L415">property <b>primaryNetworkInterfaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L415">property <b>primaryNetworkInterfaceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>primaryNetworkInterfaceId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6948,7 +6948,7 @@ The ID of the Network Interface (which must be attached to the Virtual Machine) 
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L419">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L419">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6957,7 +6957,7 @@ Specifies the name of the Resource Group in which the Virtual Machine should exi
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-storageDataDisks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L423">property <b>storageDataDisks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L423">property <b>storageDataDisks</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>storageDataDisks?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6976,7 +6976,7 @@ One or more `storage_data_disk` blocks.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-storageImageReference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L427">property <b>storageImageReference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L427">property <b>storageImageReference</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>storageImageReference?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6991,7 +6991,7 @@ A `storage_image_reference` block.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-storageOsDisk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L431">property <b>storageOsDisk</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L431">property <b>storageOsDisk</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>storageOsDisk: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7011,7 +7011,7 @@ A `storage_os_disk` block.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L435">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L435">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -7020,7 +7020,7 @@ A mapping of tags to assign to the Virtual Machine.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-vmSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L439">property <b>vmSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L439">property <b>vmSize</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>vmSize: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7029,7 +7029,7 @@ Specifies the [size of the Virtual Machine](https://azure.microsoft.com/en-us/do
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L443">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L443">property <b>zones</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>zones?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7039,14 +7039,14 @@ A list of a single item of the Availability Zone which the Virtual Machine shoul
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VirtualMachineState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L261">interface <b>VirtualMachineState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L261">interface <b>VirtualMachineState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering VirtualMachine resources.
 
 <h3 class="pdoc-member-header" id="VirtualMachineState-availabilitySetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L265">property <b>availabilitySetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L265">property <b>availabilitySetId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>availabilitySetId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7055,7 +7055,7 @@ The ID of the Availability Set in which the Virtual Machine should exist. Changi
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-bootDiagnostics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L269">property <b>bootDiagnostics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L269">property <b>bootDiagnostics</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>bootDiagnostics?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7067,7 +7067,7 @@ A `boot_diagnostics` block.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-deleteDataDisksOnTermination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L273">property <b>deleteDataDisksOnTermination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L273">property <b>deleteDataDisksOnTermination</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>deleteDataDisksOnTermination?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7076,7 +7076,7 @@ Should the Data Disks (either the Managed Disks / VHD Blobs) be deleted when the
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-deleteOsDiskOnTermination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L277">property <b>deleteOsDiskOnTermination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L277">property <b>deleteOsDiskOnTermination</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>deleteOsDiskOnTermination?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7085,7 +7085,7 @@ Should the OS Disk (either the Managed Disk / VHD Blob) be deleted when the Virt
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L281">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L281">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>identity?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7098,7 +7098,7 @@ A `identity` block.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-licenseType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L285">property <b>licenseType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L285">property <b>licenseType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>licenseType?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7107,7 +7107,7 @@ Specifies the BYOL Type for this Virtual Machine. This is only applicable to Win
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L289">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L289">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7116,7 +7116,7 @@ Specifies the Azure Region where the Virtual Machine exists. Changing this force
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L293">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L293">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7125,7 +7125,7 @@ Specifies the name of the Virtual Machine. Changing this forces a new resource t
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-networkInterfaceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L297">property <b>networkInterfaceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L297">property <b>networkInterfaceIds</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>networkInterfaceIds?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -7134,7 +7134,7 @@ A list of Network Interface ID's which should be associated with the Virtual Mac
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-osProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L301">property <b>osProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L301">property <b>osProfile</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>osProfile?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7148,7 +7148,7 @@ An `os_profile` block. Required when `create_option` in the `storage_os_disk` bl
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-osProfileLinuxConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L305">property <b>osProfileLinuxConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L305">property <b>osProfileLinuxConfig</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>osProfileLinuxConfig?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7163,7 +7163,7 @@ A `os_profile_linux_config` block.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-osProfileSecrets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L309">property <b>osProfileSecrets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L309">property <b>osProfileSecrets</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>osProfileSecrets?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7178,7 +7178,7 @@ One or more `os_profile_secrets` blocks.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-osProfileWindowsConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L313">property <b>osProfileWindowsConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L313">property <b>osProfileWindowsConfig</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>osProfileWindowsConfig?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7201,7 +7201,7 @@ A `os_profile_windows_config` block.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L317">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L317">property <b>plan</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>plan?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7214,7 +7214,7 @@ A `plan` block.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-primaryNetworkInterfaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L321">property <b>primaryNetworkInterfaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L321">property <b>primaryNetworkInterfaceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>primaryNetworkInterfaceId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7223,7 +7223,7 @@ The ID of the Network Interface (which must be attached to the Virtual Machine) 
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L325">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L325">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7232,7 +7232,7 @@ Specifies the name of the Resource Group in which the Virtual Machine should exi
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-storageDataDisks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L329">property <b>storageDataDisks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L329">property <b>storageDataDisks</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>storageDataDisks?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7251,7 +7251,7 @@ One or more `storage_data_disk` blocks.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-storageImageReference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L333">property <b>storageImageReference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L333">property <b>storageImageReference</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>storageImageReference?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7266,7 +7266,7 @@ A `storage_image_reference` block.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-storageOsDisk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L337">property <b>storageOsDisk</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L337">property <b>storageOsDisk</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>storageOsDisk?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7286,7 +7286,7 @@ A `storage_os_disk` block.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L341">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L341">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -7295,7 +7295,7 @@ A mapping of tags to assign to the Virtual Machine.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-vmSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L345">property <b>vmSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L345">property <b>vmSize</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>vmSize?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7304,7 +7304,7 @@ Specifies the [size of the Virtual Machine](https://azure.microsoft.com/en-us/do
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineState-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a7b0f3e0274de5b97cbf36eecf8fe7699d4adcb7/sdk/nodejs/compute/virtualMachine.ts#L349">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/5cb7c30ae0d736e81ca429641e551ad6faeba99a/sdk/nodejs/compute/virtualMachine.ts#L349">property <b>zones</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>zones?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
