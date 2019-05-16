@@ -102,6 +102,8 @@ $ pulumi login file:///app/data
 Logged into my-machine as myuser (file:///app/data)
 ```
 
+> If you use a relative path (e.g. `file://./einstein`), Pulumi will always make it relative to **the current working directory!**
+
 Notice that `pulumi login --local` is simply syntactic sugar for `pulumi login file://~`.
 
 The precise JSON format these checkpoint files use is not documented, but is defined [in source code here](
