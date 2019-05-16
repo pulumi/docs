@@ -3,9 +3,8 @@
 $increase-header-size-on-larger-screens: false;
 
 body {
-	@include font-smoothing();
     @include base-type();
-	color: #000000;
+    color: #000000;
 }
 
 h1, .h1,
@@ -14,292 +13,292 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6,{
-	margin: 0;
-	
-	& > a {
-		color: inherit;
-		text-decoration: none;
-		
-		&:hover {
-			color: inherit;
-			text-decoration: none;
-		}
-	}
+    margin: 0;
+
+    & > a {
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
 }
 
 h1, .h1 {
-	@include ubuntu(400);
-	font-size: 40px;
-	line-height: 1.15;
-	letter-spacing: -0.01em;
-	text-transform: none;
-	margin-bottom: 17px;
-	
-	@if $increase-header-size-on-larger-screens {
-		@media(min-width: $screen-md) {
-			font-size: 60px;
-		}
-	}
+    @include ubuntu(400);
+    font-size: 40px;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    text-transform: none;
+    margin-bottom: 17px;
+
+    @if $increase-header-size-on-larger-screens {
+        @media(min-width: $screen-md) {
+            font-size: 60px;
+        }
+    }
 }
 
 h2, .h2 {
-	@include ubuntu(400);
-	font-size: 35px;
-	line-height: 1.17;
-	letter-spacing: -0.01em;
-	text-transform: none;
-	margin-bottom: 14px;
-	
-	@if $increase-header-size-on-larger-screens {
-		@media(min-width: $screen-md) {
-			font-size: 50px;
-			line-height: 1.14;
-			margin-bottom: 19px;
-		}
-	}
+    @include ubuntu(400);
+    font-size: 35px;
+    line-height: 1.17;
+    letter-spacing: -0.01em;
+    text-transform: none;
+    margin-bottom: 14px;
+
+    @if $increase-header-size-on-larger-screens {
+        @media(min-width: $screen-md) {
+            font-size: 50px;
+            line-height: 1.14;
+            margin-bottom: 19px;
+        }
+    }
 }
 
 h3, .h3 {
-	@include ubuntu(400);
-	font-size: 30px;
-	line-height: 1.16;
-	letter-spacing: -0.01em;
-	text-transform: normal;
-	margin-bottom: 16px;
-	
-	@if $increase-header-size-on-larger-screens {
-		@media(min-width: $screen-md){
-			font-size: 40px;
-			line-height: 1.14;
-			margin-bottom: 20px;
-		}
-	}
+    @include ubuntu(400);
+    font-size: 30px;
+    line-height: 1.16;
+    letter-spacing: -0.01em;
+    text-transform: normal;
+    margin-bottom: 16px;
+
+    @if $increase-header-size-on-larger-screens {
+        @media(min-width: $screen-md){
+            font-size: 40px;
+            line-height: 1.14;
+            margin-bottom: 20px;
+        }
+    }
 }
 
 h4, .h4 {
-	@include ubuntu(400);
-	font-size: 25px;
-	line-height: 1.16;
-	letter-spacing: normal;
-	text-transform: none;
-	margin-bottom: 18px;
-	
-	@if $increase-header-size-on-larger-screens {
-		@media(min-width: $screen-md){
-			font-size: 30px;
-			margin-bottom: 20px;
-		}
-	}
+    @include ubuntu(400);
+    font-size: 25px;
+    line-height: 1.16;
+    letter-spacing: normal;
+    text-transform: none;
+    margin-bottom: 18px;
+
+    @if $increase-header-size-on-larger-screens {
+        @media(min-width: $screen-md){
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+    }
 }
 
 h5, .h5 {
-	@include ubuntu(400);
-	font-size: 20px;
-	line-height: 1.2;
-	letter-spacing: normal;
-	text-transform: none;
-	margin-bottom: 18px;
-	
-	@if $increase-header-size-on-larger-screens {
-		@media(min-width: $screen-md){
-			font-size: 25px;
-			line-height: 1.16;
-			margin-bottom: 15px;
-		}
-	}
+    @include ubuntu(400);
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-transform: none;
+    margin-bottom: 18px;
+
+    @if $increase-header-size-on-larger-screens {
+        @media(min-width: $screen-md){
+            font-size: 25px;
+            line-height: 1.16;
+            margin-bottom: 15px;
+        }
+    }
 }
 
 h6, .h6, {
-	@include ubuntu(400);
-	font-size: 16px;
-	line-height: 1.2;
-	letter-spacing: -0.02em;
-	text-transform: none;
-	margin-bottom: 21px;
-	
-	@if $increase-header-size-on-larger-screens {
-		@media(min-width: $screen-md){
-			font-size: 20px;
-			margin-bottom: 16px;
-		}
-	}
+    @include ubuntu(400);
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    text-transform: none;
+    margin-bottom: 21px;
+
+    @if $increase-header-size-on-larger-screens {
+        @media(min-width: $screen-md){
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+    }
 }
 
 p, .p {
     @include base-type();
-	margin-bottom: 10px;
-	
-	&.intro {
-		font-size: 18px;
-		line-height: 1.5;
-		margin-bottom: 40px;
-	}
+    margin-bottom: 10px;
+
+    &.intro {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 40px;
+    }
 }
 
 ul, ol {
-	padding-left: 16px;
-	margin-bottom: 28px;
-	
-	li {
-		@extend .p;
-	}
+    padding-left: 16px;
+    margin-bottom: 28px;
 
-	&.list-indent {
-		padding-left: 50px;
-	}
+    li {
+        @extend .p;
+    }
+
+    &.list-indent {
+        padding-left: 50px;
+    }
 }
 
 ul {
-	padding-left: 0;
-	list-style: none;
-	
-	li {
-		padding-left: 21px;
-		position: relative;
-		
-		&:before {
-			@include fa-icon;
-			@include fas();
-			content: fa-content($fa-var-circle);
-			left: 0;
-			vertical-align: middle;
-			font-size: 6px;
-			color: $blue;
-			position: absolute;
-			top: 10px;
-		}
-	}
-	
-	&.check {
-		li {
-			padding-left: 35px;
-			margin-bottom: 30px;
-			
-			&:before {
-				@include far();
-				content: fa-content($fa-var-check-circle);
-				font-size: 22px;
-				color: $green;
-				top: 2px; 
-			}
-		}
-	}
-	
+    padding-left: 0;
+    list-style: none;
+
+    li {
+        padding-left: 21px;
+        position: relative;
+
+        &:before {
+            @include fa-icon;
+            @include fas();
+            content: fa-content($fa-var-circle);
+            left: 0;
+            vertical-align: middle;
+            font-size: 6px;
+            color: $blue;
+            position: absolute;
+            top: 10px;
+        }
+    }
+
+    &.check {
+        li {
+            padding-left: 35px;
+            margin-bottom: 30px;
+
+            &:before {
+                @include far();
+                content: fa-content($fa-var-check-circle);
+                font-size: 22px;
+                color: $green;
+                top: 2px;
+            }
+        }
+    }
+
 }
 
 a {
-	color: #0079AB;
-	text-decoration: underline;
-	
-	&:hover {
-		color: $blue;
-		text-decoration: none;
-	}
-	
-	&:focus, &:active {
-		outline: none;
-	}
+    color: #0079AB;
+    text-decoration: underline;
+
+    &:hover {
+        color: $blue;
+        text-decoration: none;
+    }
+
+    &:focus, &:active {
+        outline: none;
+    }
 }
 
 img {
-	max-width: 100%;
-	height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 blockquote {
-	clear: both;
-	padding: 0;
+    clear: both;
+    padding: 0;
     border-left: 5px solid $orange;
     padding-left: 17px;
-	margin: 17px 0;
-	font-size: 22px;
-	line-height: 1.59;
-	
-	p {
-		font-size: 22px;
-		line-height: 1.59;
-	}
+    margin: 17px 0;
+    font-size: 22px;
+    line-height: 1.59;
+
+    p {
+        font-size: 22px;
+        line-height: 1.59;
+    }
 }
 
 sup {
-	@include ubuntu(bold);
-	font-size: 12px;
-	line-height: 1.3;
-	text-transform: uppercase;
-	color: $purple;
-	margin-bottom: 10px;
-	display: block;
-	top: auto;
+    @include ubuntu(bold);
+    font-size: 12px;
+    line-height: 1.3;
+    text-transform: uppercase;
+    color: $purple;
+    margin-bottom: 10px;
+    display: block;
+    top: auto;
 }
 
 hr {
-	border-color: #E3E3E3;
-	margin-top: 45px;
-	margin-bottom: 45px;
+    border-color: #E3E3E3;
+    margin-top: 45px;
+    margin-bottom: 45px;
 }
 
 figure {
-	border-bottom: 1px solid $purple;
+    border-bottom: 1px solid $purple;
 }
 figcaption {
-	font-size: 14px;
-	font-style: italic;
-	font-weight: normal;
-	line-height: 1.357;
-	color: #9B9B9B;
-	margin: 6px 0;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: normal;
+    line-height: 1.357;
+    color: #9B9B9B;
+    margin: 6px 0;
 }
 
 .white-text {
-	* {
-		color: white;
-	}
+    * {
+        color: white;
+    }
 }
 
 .text-center-xs {
-	@media(max-width: $screen-xs-max){
-		text-align: center;
-	}
+    @media(max-width: $screen-xs-max){
+        text-align: center;
+    }
 }
 
 .text-center-sm {
-	@media(min-width: $screen-sm) and (max-width: $screen-sm-max){
-		text-align: center; 
-	}
+    @media(min-width: $screen-sm) and (max-width: $screen-sm-max){
+        text-align: center;
+    }
 }
 
 .text-uppercase {
-	text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 .text-lowercase {
-	text-transform: lowercase;
+    text-transform: lowercase;
 }
 
 .text-capitalize {
-	text-transform: capitalize;
+    text-transform: capitalize;
 }
 
 .text-normalcase {
-	text-transform: normal;
+    text-transform: normal;
 }
 
 .text-purple {
-	color: $purple;
+    color: $purple;
 }
 .text-green {
-	color: $green;
+    color: $green;
 }
 .text-red {
-	color: $red;
+    color: $red;
 }
 .text-blue {
-	color: $blue;
+    color: $blue;
 }
 .text-orange {
-	color: $orange;
+    color: $orange;
 }
 
 .cursor-pointer {
-	cursor: pointer;
+    cursor: pointer;
 }
