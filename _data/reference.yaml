@@ -91,7 +91,7 @@ toc:
     path: /reference/javascript.html
   - title: Python
     path: /reference/python.html
-- title: Crosswalk for AWS
+- title: Pulumi Crosswalk for AWS
   path: /reference/crosswalk-aws/index
   section:
   - title: Virtual Private Cloud (VPC)
