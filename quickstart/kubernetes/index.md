@@ -5,25 +5,65 @@ redirect_from: /reference/kubernetes.html
 
 <img src="/images/quickstart/k8s-purple.png" align="right">
 
-[Kubernetes][k8s] is an open source platform for running containerized applications on a cluster of
-machines. Applications are managed through a RESTful API that exposes mechanisms to deploy, scale,
-and introspect on resources in the cluster.
+[Kubernetes][k8s] is an open source project for running and managing containerized applications
+on a cluster of machines.
 
-Pulumi is an infrastructure-as-code tool that exposes a Kubernetes SDK that allows users to write
-Kubernetes applications in the language of their choice, such as JavaScript and Python. It is
-designed to fit in anywhere you already use Kubernetes:
+Pulumi is an infrastructure-as-code tool that exposes the Kubernetes resource API as an
+SDK alongside other SDKs which span common cloud native utilities, cloud
+provider IaaS offerings, and their catalog of services - managed Kubernetes included.
 
--   **API-compatible with Kubernetes** -- users do not have to learn a new API to write Kubernetes
-    applications with Pulumi. (See the [Kubernetes][api-reference] and
+The various SDK's allow Kubernetes users to leverage Pulumi for novel forms of cluster
+management, and deployment of app workloads to clusters. Users of
+Kubernetes and Pulumi can:
+
+-  Instantiate IaaS resources and services needed for self-managed (open source), or managed Kubernetes clusters.
+-  Provision managed Kubernetes clusters from the major cloud providers.
+-  Create and orchestrate Kubernetes API resources in the programming language of their choice.
+-  Compose and standardize common Kubernetes abstractions through typical OOP encapsulation and inheritance.
+-  Employ the advantageous use of dev tools such as IDE auto-completion, type &
+   error checking, linting, and testing frameworks to validate Kubernetes clusters, app workloads, or both.
+
+<img src="file:///Users/metral/docs/images/quickstart/logo-aws.png" width="37">
+<img src="file:///Users/metral/docs/images/quickstart/logo-azure.png" width="37">
+<img src="file:///Users/metral/docs/images/quickstart/logo-gd.png" width="37">
+
+<img src="file:///Users/metral/docs/images/quickstart/logo-kubernetes.png" width="37" align="right">
+<img src="file:///Users/metral/docs/images/quickstart/logo-kubernetes.png" width="37" align="right">
+<img src="file:///Users/metral/docs/images/quickstart/logo-kubernetes.png" width="37" align="right">
+
+## FAQ
+
+-   **Does Pulumi create & manage Kubernetes clusters, or deploy workloads to running clusters?**
+	Pulumi can handle both cases, and we highly encourage you to try them together!
+	Pulumi's SDKs handle the various layers of infrastucture needed
+	to define, provision, and operate Kubernetes clusters, their underlying
+	dependencies, and the app workloads intended to run in-cluster.
+-   **Is the Pulumi Kubernetes API compatible with Kubernetes resource API?** The SDK API
+	is 100% compatible with Kubernetes resource API, and is schematically
+	identical to what Kubernetes users expect. In fact, Pulumi's Kubernetes
+	SDK are manufactured by automatically wrapping our library functionality around
+	the Kubernetes resource [OpenAPI spec][openapi] as soon as a new version is released!
+	Ultimately, this means that Pulumi users do not have to learn a new
+	Kubernetes API model, nor wait long to work with the latest versions available. See the [Kubernetes][api-reference] and
     [Pulumi](/reference/pkg/nodejs/@pulumi/kubernetes/index.html) API documentation for more
-    details.)
--   **Compatible with Kubernetes YAML and Helm Charts.** For example:
+    details.
+-   **How does Pulumi compare to `kubectl`?** Pulumi
+	is intended to be a drop-in replacement for `kubectl`. Though `kubectl` and
+	Pulumi differ, functionally speaking, Pulumi works with
+	the Kubernetes API Server to accomplish the same deployment goals as
+	`kubectl`. Pulumi, like `kubectl`, can be used with any cluster as long as you have a [kubeconfig
+	file][kubeconfig].
+-   **Can I use my existing YAML manifests and Helm Charts?** Pulumi has
+	integration support for Kubernetes YAML manifests and Helm Charts. This
+	support affords users with facilities to jumpstart their Pulumi experience by
+	bridging the gap between existing Kubernetes workloads, and net new Pulumi
+	code. This integration support eases the transition to Pulumi by making
+	getting started straight-forward e.g.
     ```typescript
     import * as k8s as "@pulumi/kubernetes";
+
     new k8s.yaml.ConfigFile("app.yaml");
     ```
--   **Drop-in replacement for `kubectl apply`.** Anywhere you have a [kubeconfig file][kubeconfig],
-    you can use Pulumi.
 
 The remainder of this document will demonstrate how to use Pulumi for Kubernetes development, as
 illustrated through a series of use cases and tutorials.
@@ -156,3 +196,4 @@ You can find a list of frequently-asked questions [here](./faq.html).
 [yarn]: https://yarnpkg.com/en/docs/install
 [aurora]: https://aws.amazon.com/rds/aurora/
 [guestbook]: https://github.com/pulumi/examples/tree/master/kubernetes-ts-guestbook
+[openapi]: https://github.com/kubernetes/kubernetes/tree/master/api/openapi-spec
