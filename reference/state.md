@@ -106,6 +106,12 @@ Logged into my-machine as myuser (file:///app/data)
 
 Notice that `pulumi login --local` is simply syntactic sugar for `pulumi login file://~`.
 
+Windows users should always provide paths (relative and absolute) using forward slashes (`/`).  For example:
+1. `pulumi login --local`
+2. `pulumi login file://~/additional/homedir/paths`
+3. `pulumi login file://relative/path/from/current/dir`
+4. `pulumi login file://C:/absolute/path/from/drive/root`
+
 The precise JSON format these checkpoint files use is not documented, but is defined [in source code here](
 https://github.com/pulumi/pulumi/blob/master/pkg/apitype/) if you'd like to understand their contents. Note that
 this is the same JSON format used by the `pulumi stack export` and `pulumi stack import` commands.
