@@ -1,0 +1,5 @@
+{{/*
+    This shortcode is used to render markdown inside HTML tags, which Blackfriday,
+    the markdown processor that Hugo uses, doesn't currently support.
+*/}}
+{{ markdownify .Inner }}
