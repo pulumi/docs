@@ -1,29 +1,33 @@
 ---
 title: AWS
-redirect_from: /reference/aws.html
+aliases: ["/reference/aws.html"]
+menu:
+  quickstart:
+    identifier: aws
+    weight: 3
 ---
 
 <img src="/images/quickstart/aws-purple.png" align="right">
 
 The Amazon Web Services (AWS) provider for Pulumi can be used to provision any of the cloud resources available in [AWS](https://aws.amazon.com/).  The AWS provider must be configured with credentials to deploy and update resources in AWS.
 
-See the [full API documentation](/reference/pkg/nodejs/@pulumi/aws/index.html) for complete details of the available AWS provider APIs.
+See the [full API documentation]({{< relref "/reference/pkg/nodejs/pulumi/aws" >}}) for complete details of the available AWS provider APIs.
 
-Additionally, higher-level libraries offering simpler interfaces and higher-productivity APIs for many areas of AWS are available in the [awsx](/reference/pkg/nodejs/@pulumi/awsx/index.html) and [eks](/reference/pkg/nodejs/@pulumi/eks/index.html) packages.
+Additionally, higher-level libraries offering simpler interfaces and higher-productivity APIs for many areas of AWS are available in the [awsx]({{< relref "/reference/pkg/nodejs/pulumi/awsx" >}}) and [eks]({{< relref "/reference/pkg/nodejs/pulumi/eks" >}}) packages.
 
 ## Setup
 
-The AWS provider supports several options for providing access to AWS credentials.  See [AWS setup page](./setup.html) for details.
+The AWS provider supports several options for providing access to AWS credentials.  See [AWS setup page]({{< relref "setup.md" >}}) for details.
 
 ## Getting Started
 
 The easiest way to start with AWS is to follow one of the tutorials:
 
-* [Serverless REST APIs using Lambda](./tutorial-rest-api.html): Create simple RESTful web server using AWS Lambdas
-* [EC2 Linux WebServer VM](./tutorial-ec2-webserver.html): Create an EC2 Linux Web Server virtual machine
-* [A simple containerized app](./tutorial-service.html): Deploy EC2 or Fargate ECS Services
-* [Serve a Static Website from S3](./tutorial-s3-website.html): Serve a static website out of content in an S3 bucket
-* [Serverless + Containers + Infrastructure](./tutorial-thumbnailer.html): Deploy a complete  application using a combination of buckets, serverless functions and containers.
+* [Serverless REST APIs using Lambda]({{< relref "tutorial-rest-api.md" >}}): Create simple RESTful web server using AWS Lambdas
+* [EC2 Linux WebServer VM]({{< relref "tutorial-ec2-webserver.md" >}}): Create an EC2 Linux Web Server virtual machine
+* [A simple containerized app]({{< relref "tutorial-service.md" >}}): Deploy EC2 or Fargate ECS Services
+* [Serve a Static Website from S3]({{< relref "tutorial-s3-website.md" >}}): Serve a static website out of content in an S3 bucket
+* [Serverless + Containers + Infrastructure]({{< relref "tutorial-thumbnailer.md" >}}): Deploy a complete  application using a combination of buckets, serverless functions and containers.
 
 In addition to the tutorials, several interesting examples are available complete with instructions:
 

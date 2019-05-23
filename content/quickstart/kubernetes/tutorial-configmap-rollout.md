@@ -1,5 +1,9 @@
 ---
 title: "Tutorial: Graceful App Rollout"
+aliases: ["tutorial-configmap-rollout.html"]
+menu:
+  quickstart:
+    parent: kubernetes
 ---
 
 This tutorial shows you how to use Pulumi to write and manage a Kubernetes application through it's
@@ -25,7 +29,7 @@ For example, in the gif below, we can see how updating one resource (in this cas
 ## Prerequisites
 
 > **IMPORTANT:** This tutorial expects that you have provisioned a Kubernetes cluster and have an
-> active kubeconfig file. If you don't, please follow instructions [here](index.html).
+> active kubeconfig file. If you don't, please follow instructions [here]({{< relref "./" >}}).
 
 1.  Install [Node.js][nodejs] version 6 or later.
 1.  Install a package manager for Node.js, such as [npm] or [Yarn].
@@ -38,7 +42,7 @@ code when we modify it later.
 
 This application will:
 
--   Create a container running [nginx] (an open source web server).
+-   Create a container running [nginx](https://nginx.org/) (an open source web server).
 -   Create a `ConfigMap` with an configuration file that configures nginx to proxy traffic to
     `pulumi.github.io`.
 -   Mount that configuration data into the nginx container.
@@ -204,7 +208,7 @@ Once we're confident this is what we want, we can run the update:
 
     The output should look something like this.
 
-    ![configmapRollout](/images/quickstart/kubernetes/cm-rollout.gif "ConfigMap-induced Rollout")
+    ![configmapRollout](/images/quickstart/kubernetes/cm-rollout.gif)
 
 2. **Verify the rollout worked.** You can do this by pasting the URL into the browser (be sure to
    disable the cache), or by running the following:
@@ -222,10 +226,9 @@ pulumi destroy
 ```
 
 [ts]: https://www.typescriptlang.org/
-[nginx]: https://nginx.org/
 [nodejs]: https://nodejs.org/en/
 [npm]: https://www.npmjs.com/get-npm
 [yarn]: https://yarnpkg.com/en/docs/install
-[install]: https://pulumi.io/quickstart/install.html
+[install]: {{< relref "/quickstart/install.md" >}}
 [pulumi-test]: https://github.com/pulumi/examples/tree/master/kubernetes-ts-configmap-rollout
 [index.ts]: https://github.com/pulumi/examples/blob/master/kubernetes-ts-configmap-rollout/index.ts

@@ -1,5 +1,6 @@
 ---
 title: Bootstrapping Identity
+aliases: ["identity.html"]
 ---
 
 Begin by cloning the [Kubernetes the Prod Way repository][ktpw]. The `identity` stack is implemented
@@ -120,8 +121,8 @@ In the next lab, we will see how to consume these stack outputs to provision app
 [azure]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/azure/identity
 [gcp]: https://github.com/pulumi/kubernetes-the-prod-way/tree/master/gcp/identity
 
-[aws-cli]: https://pulumi.io/quickstart/aws/setup.html
-[az-cli]: https://pulumi.io/quickstart/azure/setup.html
-[gcp-cli]: https://pulumi.io/quickstart/gcp/setup.html
+[aws-cli]: {{< relref "/quickstart/aws/setup.md" >}}
+[az-cli]: {{< relref "/quickstart/azure/setup.md" >}}
+[gcp-cli]: {{< relref "/quickstart/gcp/setup.md" >}}
 
 [identity]: https://github.com/pulumi/kubernetes-the-prod-way/blob/master/gcp/identity/index.ts

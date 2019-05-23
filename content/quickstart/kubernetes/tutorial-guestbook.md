@@ -1,6 +1,11 @@
 ---
 title: "Tutorial: Guestbook App with Redis and Nginx"
-redirect_from: /quickstart/kubernetes-guestbook.html
+aliases:
+    - tutorial-guestbook.html
+    - /quickstart/kubernetes-guestbook.html
+menu:
+  quickstart:
+    parent: kubernetes
 ---
 
 In this tutorial, we'll build and deploy
@@ -27,8 +32,8 @@ The code for this tutorial is
 You need to have the Pulumi CLI and a working Kubernetes cluster.
 [Minikube](https://kubernetes.io/docs/getting-started-guides/minikube) is an easy way to get started.
 
-1. [Install Pulumi](../install.html)
-2. [Connect Pulumi to a Kubernetes Cluster](./setup.html)
+1. [Install Pulumi]({{< relref "../install.md" >}})
+2. [Connect Pulumi to a Kubernetes Cluster]({{< relref "setup.md" >}})
 
 ## Running the Guestbook
 
@@ -53,7 +58,7 @@ To start, we'll need to create a project and stack (a deployment target) for our
 
 2.  Next, replace the minimal contents of the template's `index.ts` file with the full guestbook:
 
-    ```js
+    ```javascript
     import * as k8s from "@pulumi/kubernetes";
     import * as pulumi from "@pulumi/pulumi";
 
@@ -204,7 +209,7 @@ To start, we'll need to create a project and stack (a deployment target) for our
     production Kubernetes clusters, we will want it to be of type `LoadBalancer`, ensuring that a load balancer in your
     target cloud environment is allocated.
 
-    The above code uses [configuration](https://pulumi.io/tour/programs-configuring.html) to make this parameterizable.
+    The above code uses [configuration]({{< relref "/reference/config.md" >}}) to make this parameterizable.
     If you'd like our program to use a load balancer, simply run:
 
     ```shell
@@ -224,62 +229,62 @@ To start, we'll need to create a project and stack (a deployment target) for our
     The command will first show us a complete preview of what will take place, with a confirmation prompt. No changes
     will have been made yet. It should look something like this:
 
-    ```
-    Previewing update of stack 'k8s-guestbook-dev'
-    Previewing changes:
 
-         Type                           Name                             Plan       Info
-     +   pulumi:pulumi:Stack            k8s-guestbook-k8s-guestbook-dev  create
-     +   ├─ kubernetes:core:Service     redis-master                     create
-     +   ├─ kubernetes:core:Service     redis-slave                      create
-     +   ├─ kubernetes:core:Service     frontend                         create
-     +   ├─ kubernetes:apps:Deployment  redis-master                     create
-     +   ├─ kubernetes:apps:Deployment  redis-slave                      create
-     +   └─ kubernetes:apps:Deployment  frontend                         create
+        Previewing update of stack 'k8s-guestbook-dev'
+        Previewing changes:
 
-    info: 7 changes previewed:
-        + 7 resources to create
+            Type                           Name                             Plan       Info
+        +   pulumi:pulumi:Stack            k8s-guestbook-k8s-guestbook-dev  create
+        +   ├─ kubernetes:core:Service     redis-master                     create
+        +   ├─ kubernetes:core:Service     redis-slave                      create
+        +   ├─ kubernetes:core:Service     frontend                         create
+        +   ├─ kubernetes:apps:Deployment  redis-master                     create
+        +   ├─ kubernetes:apps:Deployment  redis-slave                      create
+        +   └─ kubernetes:apps:Deployment  frontend                         create
 
-    Do you want to perform this update?
-    > yes
-      no
-      details
-    ```
+        info: 7 changes previewed:
+            + 7 resources to create
+
+        Do you want to perform this update?
+        > yes
+        no
+        details
+
 
     Let's select "yes" and hit enter. The deployment will proceed, and the output will look like this:
 
-    ```
-    Updating stack 'k8s-guestbook-dev'
-    Performing changes:
 
-         Type                           Name                             Status      Info
-     +   pulumi:pulumi:Stack            k8s-guestbook-k8s-guestbook-dev  created
-     +   ├─ kubernetes:core:Service     redis-slave                      created     1 info message
-     +   ├─ kubernetes:core:Service     frontend                         created     1 info message
-     +   ├─ kubernetes:core:Service     redis-master                     created     1 info message
-     +   ├─ kubernetes:apps:Deployment  redis-master                     created
-     +   ├─ kubernetes:apps:Deployment  redis-slave                      created
-     +   └─ kubernetes:apps:Deployment  frontend                         created
+        Updating stack 'k8s-guestbook-dev'
+        Performing changes:
 
-    Diagnostics:
-      kubernetes:core:Service: redis-slave
-        info: ✅ Service 'redis-slave' successfully created endpoint objects
+            Type                           Name                             Status      Info
+        +   pulumi:pulumi:Stack            k8s-guestbook-k8s-guestbook-dev  created
+        +   ├─ kubernetes:core:Service     redis-slave                      created     1 info message
+        +   ├─ kubernetes:core:Service     frontend                         created     1 info message
+        +   ├─ kubernetes:core:Service     redis-master                     created     1 info message
+        +   ├─ kubernetes:apps:Deployment  redis-master                     created
+        +   ├─ kubernetes:apps:Deployment  redis-slave                      created
+        +   └─ kubernetes:apps:Deployment  frontend                         created
 
-      kubernetes:core:Service: frontend
-        info: ✅ Service 'frontend' successfully created endpoint objects
+        Diagnostics:
+        kubernetes:core:Service: redis-slave
+            info: ✅ Service 'redis-slave' successfully created endpoint objects
 
-      kubernetes:core:Service: redis-master
-        info: ✅ Service 'redis-master' successfully created endpoint objects
+        kubernetes:core:Service: frontend
+            info: ✅ Service 'frontend' successfully created endpoint objects
 
-    ---outputs:---
-    frontendIP: "10.102.193.86"
+        kubernetes:core:Service: redis-master
+            info: ✅ Service 'redis-master' successfully created endpoint objects
 
-    info: 7 changes performed:
-        + 7 resources created
-    Update duration: 16.226520447s
+        ---outputs:---
+        frontendIP: "10.102.193.86"
 
-    Permalink: https://app.pulumi.com/joeduffy/k8s-guestbook-dev/updates/1
-    ```
+        info: 7 changes performed:
+            + 7 resources created
+        Update duration: 16.226520447s
+
+        Permalink: https://app.pulumi.com/joeduffy/k8s-guestbook-dev/updates/1
+
 
 ### Viewing the Guestbook
 

@@ -1,6 +1,10 @@
 ---
 title: Pulumi Cloud Framework
-redirect_from: /reference/cloud.html
+aliases: ["/reference/cloud.html"]
+menu:
+  quickstart:
+    identifier: cloud
+    weight: 7
 ---
 
 <img src="/images/quickstart/cloudfx-purple.png" align="right">
@@ -9,17 +13,17 @@ The Cloud framework for Pulumi lets you program infrastructure and application l
 
 The Cloud framework must be configured with credentials to deploy and update resources in the target cloud platform.
 
-See the [full API documentation](/reference/pkg/nodejs/@pulumi/cloud/index.html) for complete details of the available Cloud framework APIs.
+See the [full API documentation]({{< relref "/reference/pkg/nodejs/pulumi/cloud" >}}) for complete details of the available Cloud framework APIs.
 
-For AWS-specific use cases, see also the [awsx](/reference/pkg/nodejs/@pulumi/awsx/index.html) library which provides higher-level libraries for working with many AWS services.
+For AWS-specific use cases, see also the [awsx]({{< relref "/reference/pkg/nodejs/pulumi/awsx" >}}) library which provides higher-level libraries for working with many AWS services.
 
 ## Getting Started
 
 The easiest way to start with the Cloud Framework is to follow one of the tutorials:
 
-* [A simple serverless REST API](./tutorial-rest-api.html): Deploy cloud-agnostic managed REST API
-* [A simple containerized app](./tutorial-service.html): Deploy cloud-agnostic containerized services
-* [Serverless + Containers + Infrastructure](./tutorial-thumbnailer.html): Deploy a complete cloud-agnostic application using a combination of buckets, serverless functions and containers.
+* [A simple serverless REST API]({{< relref "tutorial-rest-api.md" >}}): Deploy cloud-agnostic managed REST API
+* [A simple containerized app]({{< relref "tutorial-service.md" >}}): Deploy cloud-agnostic containerized services
+* [Serverless + Containers + Infrastructure]({{< relref "tutorial-thumbnailer.md" >}}): Deploy a complete cloud-agnostic application using a combination of buckets, serverless functions and containers.
 
 In addition to the tutorials, several interesting examples are available complete with instructions:
 
@@ -54,7 +58,7 @@ The Cloud framework is open source and available in the [pulumi/pulumi-cloud](ht
 
 ## Authentication
 
-Authentication options must be set for the target cloud provider. See the [AWS setup page](/quickstart/aws/setup.html) for details (more providers for the Cloud framework coming soon).
+Authentication options must be set for the target cloud provider. See the [AWS setup page]({{< relref "/quickstart/aws/setup.md" >}}) for details (more providers for the Cloud framework coming soon).
 
 ## Configuration
 
@@ -62,11 +66,11 @@ The Cloud framework accepts the following configuration settings.  These can be 
 
 * `provider`: (Required) The provider to deploy cloud resources into. Currently only `aws` is supported.
 
-The AWS implementation of the Cloud framework accepts the following configuration settings.  These can be provded via `pulumi config set cloud-aws:<option>`.
+The AWS implementation of the Cloud framework accepts the following configuration settings.  These can be provided via `pulumi config set cloud-aws:<option>`.
 
 * `functionMemorySize`: (Optional) Override the Lambda function memory size for all functions.
-* `functionIncludePaths`: (Optional) Comma-seperated list of additional paths (relative to the project root) to include in Lambda zip uploads for JavaScript callbacks.  E.g `./img.png,app/`.
-* `functionIncludePackages`: (Optional) Comma-seperated list of additional packages (relative to the project root) to include in Lambda zip uploads for JavaScript callbacks.  E.g `body-parser,typescript`.
+* `functionIncludePaths`: (Optional) Comma-separated list of additional paths (relative to the project root) to include in Lambda zip uploads for JavaScript callbacks.  E.g `./img.png,app/`.
+* `functionIncludePackages`: (Optional) Comma-separated list of additional packages (relative to the project root) to include in Lambda zip uploads for JavaScript callbacks.  E.g `body-parser,typescript`.
 * `computeIAMRolePolicyARNs`: (Optional) Set the IAM role policies to apply to compute (both Lambda and ECS) within this Pulumi program. The default is: `arn:aws:iam::aws:policy/AWSLambdaFullAccess,arn:aws:iam::aws:policy/AmazonEC2ContainerServiceFullAccess`.
 * `acmCertificateARN`: (Optional) ACM certificate ARN to support services HTTPS traffic.
 * `ecsClusterARN`: (Optional) ECS cluster ARN. One of `useFargate`, `ecsClusterARN`, or `ecsAutoCluster` must be provided to use container-based resources like `cloud.Service` and `cloud.Task`.
@@ -74,9 +78,9 @@ The AWS implementation of the Cloud framework accepts the following configuratio
 * `ecsClusterEfsMountPath`: (Optional) EFS mount path on the cluster hosts.  If not provided, `Volumes` cannot be used in `cloud.Service` and `cloud.Task`.
 * `usePrivateNetwork`: (Optional) Put all compute in a private network.
 * `externalVpcId`: (Optional) Use an existing VPC.  If both `usePrivateNetwork` and `externalVpcId` are provided, the VPC must be configured to run all compute in private subnets with Internet egress enabled via NAT Gateways.
-* `externalSubnets`: (Optional) Provide subnets ids for the VPC as a comma-seperated string.  Required if using an existing VPC.
-* `externalPublicSubnets`: (Optional) Provide public subnets ids for the VPC as a comma-seperated string.  Required if using an existing VPC.
-* `externalSecurityGroups`: (Optional) Provide securityGroup ids for the VPC as a comma-seperated string.  Required if using an existing VPC.
+* `externalSubnets`: (Optional) Provide subnets ids for the VPC as a comma-separated string.  Required if using an existing VPC.
+* `externalPublicSubnets`: (Optional) Provide public subnets ids for the VPC as a comma-separated string.  Required if using an existing VPC.
+* `externalSecurityGroups`: (Optional) Provide securityGroup ids for the VPC as a comma-separated string.  Required if using an existing VPC.
 * `useFargate`: (Optional) Wse Fargate-based container compute. All tasks must be Fargate-compatible. One of `useFargate`, `ecsClusterARN`, or `ecsAutoCluster` must be provided to use container-based resources like `cloud.Service` and `cloud.Task.
 * `ecsAutoCluster`: (Optional) Auto-provision an ECS Cluster.  If set to true, parameters for the cluster can be provided via the other "ecsAutoCluster*" configuration variables. One of `useFargate`, `ecsClusterARN`, or `ecsAutoCluster` must be provided to use container-based resources like `cloud.Service` and `cloud.Task.
 * `ecsAutoClusterNumberOfAZs`: (Optional) The number of AZs to create subnets in as part of the cluster.  Defaults to `2`.

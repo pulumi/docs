@@ -1,7 +1,12 @@
 ---
 title: "Download and Install"
 installer_version: "0.17.13"
-redirect_from: "/install/index.html"
+aliases:
+    - install.html
+    - /install/
+menu:
+  quickstart:
+    weight: 2
 ---
 
 <!--
@@ -81,7 +86,8 @@ First things first, let's install the Pulumi CLI on your machine.
     <p>Please select your operating system.</p>
 </div>
 
-<div id="macos_installation" markdown="1">
+<div id="macos_installation">
+{{% md %}}
 ## macOS
 
 You can install Pulumi through the [Homebrew package manager](https://brew.sh/):
@@ -109,9 +115,11 @@ $ curl -fsSL https://get.pulumi.com | sh
 This will install the `pulumi` CLI to `~/.pulumi/bin` and add it to your path.
 
 The installer script can be rerun to subsequently install new updates.
+{{% /md %}}
 </div>
 
-<div id="linux_installation" markdown="1">
+<div id="linux_installation">
+{{% md %}}
 ## Linux
 
 To install on Linux, run our installation script:
@@ -123,9 +131,11 @@ $ curl -fsSL https://get.pulumi.com | sh
 This will install the `pulumi` CLI to `~/.pulumi/bin` and add it to your path.
 
 If you prefer to download and manually install the tarball, please select "Manual Install" in the above dropdown.
+{{% /md %}}
 </div>
 
-<div id="windows_installation" markdown="1">
+<div id="windows_installation">
+{{% md %}}
 ## Windows
 
 To install on Windows, run our installation script from a `cmd.exe` window:
@@ -135,9 +145,11 @@ To install on Windows, run our installation script from a `cmd.exe` window:
 ```
 
 This will install the `pulumi.exe` CLI to `%USERPROFILE%\.pulumi\bin` and add it to your path.
+{{% /md %}}
 </div>
 
-<div id="other_installation" markdown="1">
+<div id="other_installation">
+{{% md %}}
 ## Manual Installation
 
 Raw binaries are available for all major operating systems if you prefer to install them manually.
@@ -146,7 +158,7 @@ Raw binaries are available for all major operating systems if you prefer to inst
 
 macOS Sierra (10.12) or later is required.
 
-1. Download [Pulumi {{page.installer_version}} for macOS](https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-darwin-x64.tar.gz).
+1. Download [Pulumi {{< param installer_version >}} for macOS](https://get.pulumi.com/releases/sdk/pulumi-v{{< param installer_version >}}-darwin-x64.tar.gz).
 
 2. Unzip the tarball and either copy the binaries in the `pulumi` directory on your `$PATH`.
 
@@ -154,7 +166,7 @@ macOS Sierra (10.12) or later is required.
 
 We provide a pre-built binary for Linux.
 
-1. Download [Pulumi {{page.installer_version}} for Linux x64](https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-linux-x64.tar.gz).
+1. Download [Pulumi {{< param installer_version >}} for Linux x64](https://get.pulumi.com/releases/sdk/pulumi-v{{< param installer_version >}}-linux-x64.tar.gz).
 
 2. Unzip the tarball and either copy the binaries in the `pulumi` directory on your `$PATH`.
 
@@ -162,7 +174,7 @@ We provide a pre-built binary for Linux.
 
 Windows 8 and 10 are supported.
 
-1. Download [Pulumi {{page.installer_version}} for Windows x64](https://get.pulumi.com/releases/sdk/pulumi-v{{page.installer_version}}-windows-x64.zip).
+1. Download [Pulumi {{< param installer_version >}} for Windows x64](https://get.pulumi.com/releases/sdk/pulumi-v{{< param installer_version >}}-windows-x64.zip).
 
 2. Copy the extracted zipfile contents to a folder such as `C:\pulumi`.
 
@@ -173,9 +185,10 @@ Windows 8 and 10 are supported.
 To uninstall Pulumi, delete the `.pulumi` folder in your home directory. If you used the manual installer, you should
 also delete the `pulumi` folder that was created.
 
-The current stable version is **{{ page.installer_version }}**. For a full history of prior versions, including
-release notes, please visit <a href="/reference/changelog.html">the Change Log</a>.
+The current stable version is **{{< param installer_version >}}**. For a full history of prior versions, including
+release notes, please visit <a href="{{< relref "/reference/changelog.md" >}}">the Change Log</a>.
 
+{{% /md %}}
 </div>
 
 <script>
@@ -190,13 +203,14 @@ release notes, please visit <a href="/reference/changelog.html">the Change Log</
     }
 </script>
 
-<div id="installation_post" markdown="1">
+<div id="installation_post">
+{{% md %}}
 ## Ensuring It Worked
 After installing, verify everything is in working order by running the `pulumi` CLI:
 
 ```bash
 $ pulumi version
-v{{page.installer_version}}
+v{{< param installer_version >}}
 ```
 
 If you get an error that `pulumi` could not be found, it means your path has not been configured correctly. Please go
@@ -206,6 +220,7 @@ back and ensure your path contains the directory containing the `pulumi` CLI ins
 
 After installation, choose a cloud to get started:
 
-{% include quickstart-clouds.md %}
+{{< quickstart-clouds >}}
 
+{{% /md %}}
 </div>

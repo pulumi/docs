@@ -1,23 +1,27 @@
 ---
 title: Microsoft Azure
-redirect_from: /reference/azure.html
+aliases: ["/reference/azure.html"]
+menu:
+  quickstart:
+    identifier: azure
+    weight: 4
 ---
 
 <img src="/images/quickstart/azure-purple.png" align="right">
 
 The Azure provider for Pulumi can be used to provision any of the cloud resources available in [Azure](https://azure.microsoft.com/en-us/) via Azure Resource Manager (ARM).  The Azure provider must be configured with credentials to deploy and update resources in Azure. 
 
-See the [full API documentation](/reference/pkg/nodejs/@pulumi/azure/index.html) for complete details of the available Azure provider APIs.
+See the [full API documentation]({{< relref "/reference/pkg/nodejs/pulumi/azure" >}}) for complete details of the available Azure provider APIs.
 
 ## Setup
 
-The Azure provider supports several options for providing access to Azure credentials.  See [Azure installation page](/install/azure.html) for details.
+The Azure provider supports several options for providing access to Azure credentials.  See [Azure installation page]({{< relref "/quickstart/azure/setup.md" >}}) for details.
 
 ## Getting Started
 
 The easiest way to start with Pulumi for Azure is to follow the tutorial:
 
-* [Azure Container Instances Web Server](./tutorial-container-webserver.html): Create an NGINX web server Azure Container Instance
+* [Azure Container Instances Web Server]({{< relref "tutorial-container-webserver.md" >}}): Create an NGINX web server Azure Container Instance
 
 In addition to the tutorial, several interesting examples are available complete with instructions:
 

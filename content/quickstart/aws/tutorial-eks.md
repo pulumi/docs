@@ -1,11 +1,16 @@
 ---
 title: "Tutorial: EKS - Hello World!"
-redirect_from: /quickstart/eks-hello-world.html
+aliases:
+    - tutorial-eks.html
+    - /quickstart/eks-hello-world.html
+menu:
+  quickstart:
+    parent: aws
 ---
 
 In this tutorial, we'll launch a new Managed Kubernetes cluster in Elastic Container Service for Kubernetes (EKS) on AWS. The [code for this tutorial](https://github.com/pulumi/examples/tree/master/aws-ts-eks-hello-world) is available on GitHub.
 
-{% include aws-eks-prereqs.md %}
+{{< aws-eks-prereqs >}}
 
 ## Create a new EKS cluster {#new-eks-cluster}
 
@@ -21,11 +26,11 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Elastic Conta
 
     * Enter in a Pulumi project name, and description to detail what this
       Pulumi program does
-    * Enter in a name for the [Pulumi stack](https://pulumi.io/reference/stack.html), which is an instance of our Pulumi program, and is used to distinguish amongst different development phases and environments of your work streams.
+    * Enter in a name for the [Pulumi stack]({{< relref "/reference/stack.md" >}}), which is an instance of our Pulumi program, and is used to distinguish amongst different development phases and environments of your work streams.
 
 1. Add the required dependencies:
 
-    This installs the dependent packages [needed](https://pulumi.io/reference/how.html) for our Pulumi program.
+    This installs the dependent packages [needed]({{< relref "/reference/how.md" >}}) for our Pulumi program.
 
 	```bash
 	$ npm install --save @pulumi/pulumi @pulumi/aws-infra @pulumi/eks @pulumi/kubernetes
@@ -79,154 +84,152 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Elastic Conta
     Running `pulumi up` will deploy the EKS cluster. Note, provisioning a
     new EKS cluster takes between 10-15 minutes.
 
-    ```bash
-    $ pulumi up
-    Previewing update (eks-demo):
+        $ pulumi up
+        Previewing update (eks-demo):
 
-        Type                                          Name                              	Plan
-    +   pulumi:pulumi:Stack                           eks-hello-world-eks-demo     			create
-    +   ├─ eks:index:Cluster                          helloworld                          	create
-    +   │  ├─ eks:index:ServiceRole                   helloworld-eksRole                  	create
-    +   │  │  ├─ aws:iam:Role                         helloworld-eksRole-role             	create
-    +   │  │  ├─ aws:iam:RolePolicyAttachment         helloworld-eksRole-90eb1c99         	create
-    +   │  │  └─ aws:iam:RolePolicyAttachment         helloworld-eksRole-4b490823         	create
-    +   │  ├─ eks:index:ServiceRole                   helloworld-instanceRole             	create
-    +   │  │  ├─ aws:iam:Role                         helloworld-instanceRole-role        	create
-    +   │  │  ├─ aws:iam:RolePolicyAttachment         helloworld-instanceRole-03516f97    	create
-    +   │  │  ├─ aws:iam:RolePolicyAttachment         helloworld-instanceRole-e1b295bd    	create
-    +   │  │  └─ aws:iam:RolePolicyAttachment         helloworld-instanceRole-3eb088f2    	create
-    +   │  ├─ pulumi-nodejs:dynamic:Resource          helloworld-cfnStackName             	create
-    +   │  ├─ aws:ec2:SecurityGroup                   helloworld-eksClusterSecurityGroup  	create
-    +   │  ├─ aws:iam:InstanceProfile                 helloworld-instanceProfile          	create
-    +   │  ├─ aws:eks:Cluster                         helloworld-eksCluster               	create
-    +   │  ├─ pulumi-nodejs:dynamic:Resource          helloworld-vpc-cni                  	create
-    +   │  ├─ pulumi:providers:kubernetes             helloworld-eks-k8s                  	create
-    +   │  ├─ aws:ec2:SecurityGroup                   helloworld-nodeSecurityGroup        	create
-    +   │  ├─ kubernetes:core:ConfigMap               helloworld-nodeAccess               	create
-    +   │  ├─ kubernetes:storage.k8s.io:StorageClass  helloworld-gp2                      	create
-    +   │  ├─ aws:ec2:SecurityGroupRule               helloworld-eksClusterIngressRule    	create
-    +   │  ├─ aws:ec2:LaunchConfiguration             helloworld-nodeLaunchConfiguration  	create
-    +   │  ├─ aws:cloudformation:Stack                helloworld-nodes                    	create
-    +   │  └─ pulumi:providers:kubernetes             helloworld-provider                 	create
-    +   └─ aws-infra:network:Network                  vpc                               	create
-    +      ├─ aws:ec2:Vpc                             vpc                               	create
-    +      ├─ aws:ec2:Eip                             vpc-nat-0                         	create
-    +      ├─ aws:ec2:Eip                             vpc-nat-1                         	create
-    +      ├─ aws:ec2:InternetGateway                 vpc                               	create
-    +      ├─ aws:ec2:Subnet                          vpc-nat-1                         	create
-    +      ├─ aws:ec2:Subnet                          vpc-0                             	create
-    +      ├─ aws:ec2:Subnet                          vpc-nat-0                         	create
-    +      ├─ aws:ec2:Subnet                          vpc-1                             	create
-    +      ├─ aws:ec2:RouteTable                      vpc                               	create
-    +      ├─ aws:ec2:NatGateway                      vpc-nat-1                         	create
-    +      ├─ aws:ec2:RouteTableAssociation           vpc-nat-1                         	create
-    +      ├─ aws:ec2:NatGateway                      vpc-nat-0                         	create
-    +      ├─ aws:ec2:RouteTableAssociation           vpc-nat-0                         	create
-    +      ├─ aws:ec2:RouteTable                      vpc-nat-1                         	create
-    +      ├─ aws:ec2:RouteTable                      vpc-nat-0                         	create
-    +      ├─ aws:ec2:RouteTableAssociation           vpc-1                             	create
-    +      └─ aws:ec2:RouteTableAssociation           vpc-0                             	create
+            Type                                          Name                              	Plan
+        +   pulumi:pulumi:Stack                           eks-hello-world-eks-demo     			create
+        +   ├─ eks:index:Cluster                          helloworld                          	create
+        +   │  ├─ eks:index:ServiceRole                   helloworld-eksRole                  	create
+        +   │  │  ├─ aws:iam:Role                         helloworld-eksRole-role             	create
+        +   │  │  ├─ aws:iam:RolePolicyAttachment         helloworld-eksRole-90eb1c99         	create
+        +   │  │  └─ aws:iam:RolePolicyAttachment         helloworld-eksRole-4b490823         	create
+        +   │  ├─ eks:index:ServiceRole                   helloworld-instanceRole             	create
+        +   │  │  ├─ aws:iam:Role                         helloworld-instanceRole-role        	create
+        +   │  │  ├─ aws:iam:RolePolicyAttachment         helloworld-instanceRole-03516f97    	create
+        +   │  │  ├─ aws:iam:RolePolicyAttachment         helloworld-instanceRole-e1b295bd    	create
+        +   │  │  └─ aws:iam:RolePolicyAttachment         helloworld-instanceRole-3eb088f2    	create
+        +   │  ├─ pulumi-nodejs:dynamic:Resource          helloworld-cfnStackName             	create
+        +   │  ├─ aws:ec2:SecurityGroup                   helloworld-eksClusterSecurityGroup  	create
+        +   │  ├─ aws:iam:InstanceProfile                 helloworld-instanceProfile          	create
+        +   │  ├─ aws:eks:Cluster                         helloworld-eksCluster               	create
+        +   │  ├─ pulumi-nodejs:dynamic:Resource          helloworld-vpc-cni                  	create
+        +   │  ├─ pulumi:providers:kubernetes             helloworld-eks-k8s                  	create
+        +   │  ├─ aws:ec2:SecurityGroup                   helloworld-nodeSecurityGroup        	create
+        +   │  ├─ kubernetes:core:ConfigMap               helloworld-nodeAccess               	create
+        +   │  ├─ kubernetes:storage.k8s.io:StorageClass  helloworld-gp2                      	create
+        +   │  ├─ aws:ec2:SecurityGroupRule               helloworld-eksClusterIngressRule    	create
+        +   │  ├─ aws:ec2:LaunchConfiguration             helloworld-nodeLaunchConfiguration  	create
+        +   │  ├─ aws:cloudformation:Stack                helloworld-nodes                    	create
+        +   │  └─ pulumi:providers:kubernetes             helloworld-provider                 	create
+        +   └─ aws-infra:network:Network                  vpc                               	create
+        +      ├─ aws:ec2:Vpc                             vpc                               	create
+        +      ├─ aws:ec2:Eip                             vpc-nat-0                         	create
+        +      ├─ aws:ec2:Eip                             vpc-nat-1                         	create
+        +      ├─ aws:ec2:InternetGateway                 vpc                               	create
+        +      ├─ aws:ec2:Subnet                          vpc-nat-1                         	create
+        +      ├─ aws:ec2:Subnet                          vpc-0                             	create
+        +      ├─ aws:ec2:Subnet                          vpc-nat-0                         	create
+        +      ├─ aws:ec2:Subnet                          vpc-1                             	create
+        +      ├─ aws:ec2:RouteTable                      vpc                               	create
+        +      ├─ aws:ec2:NatGateway                      vpc-nat-1                         	create
+        +      ├─ aws:ec2:RouteTableAssociation           vpc-nat-1                         	create
+        +      ├─ aws:ec2:NatGateway                      vpc-nat-0                         	create
+        +      ├─ aws:ec2:RouteTableAssociation           vpc-nat-0                         	create
+        +      ├─ aws:ec2:RouteTable                      vpc-nat-1                         	create
+        +      ├─ aws:ec2:RouteTable                      vpc-nat-0                         	create
+        +      ├─ aws:ec2:RouteTableAssociation           vpc-1                             	create
+        +      └─ aws:ec2:RouteTableAssociation           vpc-0                             	create
 
-    Resources:
-        + 42 to create
+        Resources:
+            + 42 to create
 
-    clusterng (eks-demo):
+        clusterng (eks-demo):
 
-        Type                                          Name                              	Status      Info
-    +   pulumi:pulumi:Stack                           eks-hello-world-eks-demo     			created
-    +   ├─ eks:index:Cluster                          helloworld                          	created
-    +   │  ├─ eks:index:ServiceRole                   helloworld-eksRole                  	created
-    +   │  │  ├─ aws:iam:Role                         helloworld-eksRole-role             	created
-    +   │  │  ├─ aws:iam:RolePolicyAttachment         helloworld-eksRole-90eb1c99         	created
-    +   │  │  └─ aws:iam:RolePolicyAttachment         helloworld-eksRole-4b490823         	created
-    +   │  ├─ eks:index:ServiceRole                   helloworld-instanceRole             	created
-    +   │  │  ├─ aws:iam:Role                         helloworld-instanceRole-role        	created
-    +   │  │  ├─ aws:iam:RolePolicyAttachment         helloworld-instanceRole-3eb088f2    	created
-    +   │  │  ├─ aws:iam:RolePolicyAttachment         helloworld-instanceRole-03516f97    	created
-    +   │  │  └─ aws:iam:RolePolicyAttachment         helloworld-instanceRole-e1b295bd    	created
-    +   │  ├─ pulumi-nodejs:dynamic:Resource          helloworld-cfnStackName             	created
-    +   │  ├─ aws:iam:InstanceProfile                 helloworld-instanceProfile          	created
-    +   │  ├─ aws:ec2:SecurityGroup                   helloworld-eksClusterSecurityGroup  	created
-    +   │  ├─ aws:eks:Cluster                         helloworld-eksCluster               	created
-    +   │  ├─ pulumi:providers:kubernetes             helloworld-eks-k8s                  	created
-    +   │  ├─ pulumi-nodejs:dynamic:Resource          helloworld-vpc-cni                  	created
-    +   │  ├─ aws:ec2:SecurityGroup                   helloworld-nodeSecurityGroup        	created
-    +   │  ├─ kubernetes:core:ConfigMap               helloworld-nodeAccess               	created
-    +   │  ├─ kubernetes:storage.k8s.io:StorageClass  helloworld-gp2                      	created
-    +   │  ├─ aws:ec2:SecurityGroupRule               helloworld-eksClusterIngressRule    	created
-    +   │  ├─ aws:ec2:LaunchConfiguration             helloworld-nodeLaunchConfiguration  	created
-    +   │  ├─ aws:cloudformation:Stack                helloworld-nodes                    	created
-    +   │  └─ pulumi:providers:kubernetes             helloworld-provider                 	created
-    +   └─ aws-infra:network:Network                  vpc                               	created
-    +      ├─ aws:ec2:Vpc                             vpc                               	created
-    +      ├─ aws:ec2:Eip                             vpc-nat-0                         	created
-    +      ├─ aws:ec2:Eip                             vpc-nat-1                         	created
-    +      ├─ aws:ec2:InternetGateway                 vpc                               	created
-    +      ├─ aws:ec2:Subnet                          vpc-nat-1                         	created
-    +      ├─ aws:ec2:Subnet                          vpc-0                             	created
-    +      ├─ aws:ec2:Subnet                          vpc-nat-0                         	created
-    +      ├─ aws:ec2:Subnet                          vpc-1                             	created
-    +      ├─ aws:ec2:RouteTable                      vpc                               	created
-    +      ├─ aws:ec2:NatGateway                      vpc-nat-1                         	created
-    +      ├─ aws:ec2:NatGateway                      vpc-nat-0                         	created
-    +      ├─ aws:ec2:RouteTableAssociation           vpc-nat-0                         	created
-    +      ├─ aws:ec2:RouteTableAssociation           vpc-nat-1                         	created
-    +      ├─ aws:ec2:RouteTable                      vpc-nat-1                         	created
-    +      ├─ aws:ec2:RouteTableAssociation           vpc-1                             	created
-    +      ├─ aws:ec2:RouteTable                      vpc-nat-0                         	created
-    +      └─ aws:ec2:RouteTableAssociation           vpc-0                             	created
+            Type                                          Name                              	Status      Info
+        +   pulumi:pulumi:Stack                           eks-hello-world-eks-demo     			created
+        +   ├─ eks:index:Cluster                          helloworld                          	created
+        +   │  ├─ eks:index:ServiceRole                   helloworld-eksRole                  	created
+        +   │  │  ├─ aws:iam:Role                         helloworld-eksRole-role             	created
+        +   │  │  ├─ aws:iam:RolePolicyAttachment         helloworld-eksRole-90eb1c99         	created
+        +   │  │  └─ aws:iam:RolePolicyAttachment         helloworld-eksRole-4b490823         	created
+        +   │  ├─ eks:index:ServiceRole                   helloworld-instanceRole             	created
+        +   │  │  ├─ aws:iam:Role                         helloworld-instanceRole-role        	created
+        +   │  │  ├─ aws:iam:RolePolicyAttachment         helloworld-instanceRole-3eb088f2    	created
+        +   │  │  ├─ aws:iam:RolePolicyAttachment         helloworld-instanceRole-03516f97    	created
+        +   │  │  └─ aws:iam:RolePolicyAttachment         helloworld-instanceRole-e1b295bd    	created
+        +   │  ├─ pulumi-nodejs:dynamic:Resource          helloworld-cfnStackName             	created
+        +   │  ├─ aws:iam:InstanceProfile                 helloworld-instanceProfile          	created
+        +   │  ├─ aws:ec2:SecurityGroup                   helloworld-eksClusterSecurityGroup  	created
+        +   │  ├─ aws:eks:Cluster                         helloworld-eksCluster               	created
+        +   │  ├─ pulumi:providers:kubernetes             helloworld-eks-k8s                  	created
+        +   │  ├─ pulumi-nodejs:dynamic:Resource          helloworld-vpc-cni                  	created
+        +   │  ├─ aws:ec2:SecurityGroup                   helloworld-nodeSecurityGroup        	created
+        +   │  ├─ kubernetes:core:ConfigMap               helloworld-nodeAccess               	created
+        +   │  ├─ kubernetes:storage.k8s.io:StorageClass  helloworld-gp2                      	created
+        +   │  ├─ aws:ec2:SecurityGroupRule               helloworld-eksClusterIngressRule    	created
+        +   │  ├─ aws:ec2:LaunchConfiguration             helloworld-nodeLaunchConfiguration  	created
+        +   │  ├─ aws:cloudformation:Stack                helloworld-nodes                    	created
+        +   │  └─ pulumi:providers:kubernetes             helloworld-provider                 	created
+        +   └─ aws-infra:network:Network                  vpc                               	created
+        +      ├─ aws:ec2:Vpc                             vpc                               	created
+        +      ├─ aws:ec2:Eip                             vpc-nat-0                         	created
+        +      ├─ aws:ec2:Eip                             vpc-nat-1                         	created
+        +      ├─ aws:ec2:InternetGateway                 vpc                               	created
+        +      ├─ aws:ec2:Subnet                          vpc-nat-1                         	created
+        +      ├─ aws:ec2:Subnet                          vpc-0                             	created
+        +      ├─ aws:ec2:Subnet                          vpc-nat-0                         	created
+        +      ├─ aws:ec2:Subnet                          vpc-1                             	created
+        +      ├─ aws:ec2:RouteTable                      vpc                               	created
+        +      ├─ aws:ec2:NatGateway                      vpc-nat-1                         	created
+        +      ├─ aws:ec2:NatGateway                      vpc-nat-0                         	created
+        +      ├─ aws:ec2:RouteTableAssociation           vpc-nat-0                         	created
+        +      ├─ aws:ec2:RouteTableAssociation           vpc-nat-1                         	created
+        +      ├─ aws:ec2:RouteTable                      vpc-nat-1                         	created
+        +      ├─ aws:ec2:RouteTableAssociation           vpc-1                             	created
+        +      ├─ aws:ec2:RouteTable                      vpc-nat-0                         	created
+        +      └─ aws:ec2:RouteTableAssociation           vpc-0                             	created
 
-    Diagnostics:
-    pulumi:pulumi:Stack (eks-hello-world-eks-demo):
+        Diagnostics:
+        pulumi:pulumi:Stack (eks-hello-world-eks-demo):
 
-    Outputs:
-        kubeconfig: {
-            apiVersion     : "v1"
-            clusters       : [
-                [0]: {
-                    cluster: {
-                        certificate-authority-data: "<CERT_DATA>"
-                        server                    : "https://<SERVER_ADDR>.us-west-2.eks.amazonaws.com"
+        Outputs:
+            kubeconfig: {
+                apiVersion     : "v1"
+                clusters       : [
+                    [0]: {
+                        cluster: {
+                            certificate-authority-data: "<CERT_DATA>"
+                            server                    : "https://<SERVER_ADDR>.us-west-2.eks.amazonaws.com"
+                        }
+                        name   : "kubernetes"
                     }
-                    name   : "kubernetes"
-                }
-            ]
-            contexts       : [
-                [0]: {
-                    context: {
-                        cluster: "kubernetes"
-                        user   : "aws"
+                ]
+                contexts       : [
+                    [0]: {
+                        context: {
+                            cluster: "kubernetes"
+                            user   : "aws"
+                        }
+                        name   : "aws"
                     }
-                    name   : "aws"
-                }
-            ]
-            current-context: "aws"
-            kind           : "Config"
-            users          : [
-                [0]: {
-                    name: "aws"
-                    user: {
-                        exec: {
-                            apiVersion: "client.authentication.k8s.io/v1alpha1"
-                            args      : [
-                                [0]: "token"
-                                [1]: "-i"
-                                [2]: "helloworld-eksCluster-e9e1711"
-                            ]
-                            command   : "aws-iam-authenticator"
+                ]
+                current-context: "aws"
+                kind           : "Config"
+                users          : [
+                    [0]: {
+                        name: "aws"
+                        user: {
+                            exec: {
+                                apiVersion: "client.authentication.k8s.io/v1alpha1"
+                                args      : [
+                                    [0]: "token"
+                                    [1]: "-i"
+                                    [2]: "helloworld-eksCluster-e9e1711"
+                                ]
+                                command   : "aws-iam-authenticator"
+                            }
                         }
                     }
-                }
-            ]
-        }
+                ]
+            }
 
-    Resources:
-        + 42 created
+        Resources:
+            + 42 created
 
-    Duration: 13m7s
+        Duration: 13m7s
 
-    Permalink: https://app.pulumi.com/metral/eks-hello-world/eks-demo/updates/1
-    ```
+        Permalink: https://app.pulumi.com/metral/eks-hello-world/eks-demo/updates/1
 
 ## Access the Kubernetes Cluster using Pulumi Providers
 
@@ -318,7 +321,7 @@ We can do this by configuring a Pulumi provider for our newly created cluster, a
     will also output incremental status updates, as the Kubernetes changes progress.
 
 	> **Note:** Pulumi auto-generates a suffix for all objects.
-    > See the [Pulumi Programming Model](../../reference/programming-model.md#autonaming) for more info.
+    > See the [Pulumi Programming Model]({{< relref "/reference/programming-model.md#autonaming" >}}) for more info.
 	>
 	> ```
 	> ...
@@ -434,7 +437,7 @@ In this tutorial, we saw how to use Pulumi programs to create and launch a
 Managed Kubernetes cluster on AWS EKS.
 
 For a follow-up example on how to use Pulumi programs to create a Kubernetes
-apps on your new cluster, see [Kubernetes Tutorial: Getting Started With Pulumi](../kubernetes/tutorial-configmap-rollout.html).
+apps on your new cluster, see [Kubernetes Tutorial: Getting Started With Pulumi]({{< relref "../kubernetes/tutorial-configmap-rollout.md" >}}).
 
 We also encourage you to watch Joe Beda, co-founder of Kubernetes and Heptio,
 take Pulumi for a spin in an episode of [TGIK8s](https://github.com/heptio/tgik).

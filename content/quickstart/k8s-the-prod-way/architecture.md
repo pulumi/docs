@@ -1,5 +1,6 @@
 ---
 title: A Prod-First Architecture for Teams
+aliases: ["architecture.html"]
 ---
 
 Infrastructure mis-configuration probably accounts for the most significant subset of serious
@@ -51,7 +52,7 @@ And so on.
 
 We advocate splitting infrastructure up into (roughly) 3 sets of resources. As we will see, this is
 particularly easy with Pulumi, as the notion of a [Pulumi
-stack](https://pulumi.io/reference/organizing-stacks-projects.html) was specifically designed for
+stack]({{< relref "/reference/organizing-stacks-projects.md" >}}) was specifically designed for
 this use case.
 
 An explanation of the 3 stacks follows the diagram. In the next section, we begin to provision and

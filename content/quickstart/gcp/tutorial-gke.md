@@ -1,13 +1,18 @@
 ---
 title: "Tutorial: GKE - Hello World!"
-redirect_from: /quickstart/gke-hello-world.html
+aliases:
+    - tutorial-gke.html
+    - /quickstart/gke-hello-world.html
+menu:
+  quickstart:
+    parent: gcp
 ---
 
 In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubernetes Engine (GKE) on GCP. The [code for this tutorial](https://github.com/pulumi/examples/tree/master/gcp-ts-gke-hello-world) is available on GitHub.
 
 ## Prerequisites
 
-1. [Install Pulumi](https://pulumi.io/install)
+1. [Install Pulumi]({{< relref "../install.md" >}})
 1. [Install Node.js version 6 or later](https://nodejs.org/en/download/)
 1. Install a package manager for Node.js, such as [npm](https://www.npmjs.com/get-npm) or [Yarn](https://yarnpkg.com/en/docs/install).
 1. [Install Google Cloud SDK (`gcloud`)](https://cloud.google.com/sdk/docs/downloads-interactive)
@@ -23,7 +28,7 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
     > Note: This auth mechanism is meant for inner loop developer
     > workflows. If you want to run this example in an unattended service
     > account setting, such as in CI/CD, please [follow instructions to
-    > configure your service account](./service-account.html). The
+    > configure your service account]({{< relref "service-account.md" >}}). The
     > service account must have the role `Kubernetes Engine Admin` / `container.admin`.
 
 
@@ -39,11 +44,11 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
 
     * Enter in a Pulumi project name, and description to detail what this
       Pulumi program does
-    * Enter in a name for the [Pulumi stack](https://pulumi.io/reference/stack.html), which is an instance of our Pulumi program, and is used to distinguish amongst different development phases and environments of your work streams.
+    * Enter in a name for the [Pulumi stack]({{< relref "/reference/stack.md" >}}), which is an instance of our Pulumi program, and is used to distinguish amongst different development phases and environments of your work streams.
 
 1. Add the required dependencies:
 
-    This installs the dependent packages [needed](https://pulumi.io/reference/how.html) for our Pulumi program.
+    This installs the dependent packages [needed]({{< relref "/reference/how.md" >}}) for our Pulumi program.
 
 	```bash
 	npm install --save @pulumi/pulumi @pulumi/gcp @pulumi/kubernetes
@@ -151,34 +156,32 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
     Running `pulumi up` will deploy the GKE cluster. Note, provisioning a
     new GKE cluster takes between 3-5 minutes.
 
-	```bash
-	$ pulumi up
-	Previewing update (gke-demo):
+        $ pulumi up
+        Previewing update (gke-demo):
 
-		Type                            Name                 Plan
-	+   pulumi:pulumi:Stack             gke-hello-world-dev  create
-	+   ├─ gcp:container:Cluster        helloworld           create
-	+   └─ pulumi:providers:kubernetes  helloworld           create
+            Type                            Name                 Plan
+        +   pulumi:pulumi:Stack             gke-hello-world-dev  create
+        +   ├─ gcp:container:Cluster        helloworld           create
+        +   └─ pulumi:providers:kubernetes  helloworld           create
 
-	Resources:
-		+ 3 to create
+        Resources:
+            + 3 to create
 
-	Updating (gke-demo):
+        Updating (gke-demo):
 
-		Type                            Name                 Status
-	+   pulumi:pulumi:Stack             gke-hello-world-dev  created
-	+   ├─ gcp:container:Cluster        helloworld           created
-	+   └─ pulumi:providers:kubernetes  helloworld           created
+            Type                            Name                 Status
+        +   pulumi:pulumi:Stack             gke-hello-world-dev  created
+        +   ├─ gcp:container:Cluster        helloworld           created
+        +   └─ pulumi:providers:kubernetes  helloworld           created
 
-	Outputs:
-		clusterName: "helloworld-2a6de9a"
-		kubeconfig : "<KUBECONFIG_CONTENTS>"
+        Outputs:
+            clusterName: "helloworld-2a6de9a"
+            kubeconfig : "<KUBECONFIG_CONTENTS>"
 
-	Resources:
-		+ 3 created
+        Resources:
+            + 3 created
 
-	Duration: 4m37s
-	```
+        Duration: 4m37s
 
 ## Access the Kubernetes Cluster using Pulumi Providers
 
@@ -270,7 +273,7 @@ We can do this by configuring a Pulumi provider for our newly created cluster, a
     also output incremental status updates, as the Kubernetes changes progress.
 
 	> **Note:** Pulumi auto-generates a suffix for all objects.
-    > See the [Pulumi Programming Model](../../reference/programming-model.md#autonaming) for more info.
+    > See the [Pulumi Programming Model]({{< relref "/reference/programming-model.md#autonaming" >}}) for more info.
     >
     > ```
     > ...
@@ -391,7 +394,7 @@ In this tutorial, we saw how to use Pulumi programs to create and launch a
 Managed Kubernetes cluster on GCP GKE.
 
 For a follow-up example on how to use Pulumi programs to create a Kubernetes
-apps on your new cluster, see [Kubernetes Tutorial: Getting Started With Pulumi](../kubernetes/tutorial-configmap-rollout.html).
+apps on your new cluster, see [Kubernetes Tutorial: Getting Started With Pulumi]({{< relref "../kubernetes/tutorial-configmap-rollout.md" >}}).
 
 We also encourage you to watch Joe Beda, co-founder of Kubernetes and Heptio,
 take Pulumi for a spin in an episode of [TGIK8s](https://github.com/heptio/tgik).

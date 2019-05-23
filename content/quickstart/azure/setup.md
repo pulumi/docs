@@ -1,9 +1,16 @@
 ---
 title: Setup
-redirect_from: /install/azure.html
+aliases:
+  - setup.html
+  - /install/azure.html
+menu:
+  quickstart:
+    identifier: azure-setup
+    parent: azure
+    weight: 1
 ---
 
-The [Pulumi Azure provider](./index.html) uses the Azure SDK to manage and provision resources.
+The [Pulumi Azure provider]({{< relref "./" >}}) uses the Azure SDK to manage and provision resources.
 
 > Pulumi relies on the Azure SDK to authenticate requests from your computer to Azure. Your credentials are never sent
 > to pulumi.com.

@@ -1,6 +1,11 @@
 ---
 title: "Tutorial: Deploying the WordPress Helm Chart"
-redirect_from: /quickstart/kubernetes-guestbook.html
+aliases:
+  - tutorial-wordpress-chart.html
+  - /quickstart/kubernetes-guestbook.html
+menu:
+  quickstart:
+    parent: kubernetes
 ---
 
 In this tutorial, we'll use the Helm API of `@pulumi/kubernetes` to deploy `v2.1.3` of the Wordpress
@@ -35,8 +40,8 @@ helm init --client-only
 ```
 
 If you haven't already, follow the steps in [Pulumi Installation and
-Setup](https://docs.pulumi.com/install/) and [Configuring Pulumi
-Kubernetes](https://docs.pulumi.com/reference/kubernetes.html#configuration) to get setup with
+Setup]({{< relref "/quickstart/install.md" >}}) and [Configuring Pulumi
+Kubernetes]({{< relref "/quickstart/kubernetes/setup.md" >}}) to get setup with
 Pulumi and Kubernetes.
 
 Now, install dependencies:

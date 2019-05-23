@@ -1,17 +1,24 @@
 ---
 title: Setup
-redirect_from: /install/aws.html
+aliases:
+    - setup.html
+    - /install/aws.html
+menu:
+  quickstart:
+    identifier: aws-setup
+    parent: aws
+    weight: 1
 ---
 
 <!-- LINKS -->
-[Pulumi AWS provider]: ./index.html
+[Pulumi AWS provider]: {{< relref "./" >}}
 [iam-user-console]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html#id_users_create_console
 [iam-manage-keys]: https://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html
 [configure-aws-cli]: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
 
 The [Pulumi AWS provider] uses the AWS SDK to manage and provision resources.
 
-{% include aws-resource-note.md %}
+{{< aws-resource-note >}}
 
 There are multiple ways to connect Pulumi to your AWS credentials.  The
 [SDK instructions](https://docs.aws.amazon.com/sdk-for-go/v1/developer-guide/configuring-sdk.html) cover this in

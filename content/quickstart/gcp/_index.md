@@ -1,23 +1,27 @@
 ---
 title: Google Cloud Platform
-redirect_from: /reference/gcp.html
+aliases: ["/reference/gcp.html"]
+menu:
+  quickstart:
+    identifier: gcp
+    weight: 5
 ---
 
 <img src="/images/quickstart/gcp-purple.png" align="right">
 
 The Google Cloud Platform (GCP) provider for Pulumi can be used to provision any of the cloud resources available in [GCP](https://cloud.google.com/).  The GCP provider must be configured with credentials to deploy and update resources in Google Cloud.
 
-See the [full API documentation](/reference/pkg/nodejs/@pulumi/gcp/index.html) for complete details of the available GCP provider APIs.
+See the [full API documentation]({{< relref "/reference/pkg/nodejs/pulumi/gcp" >}}) for complete details of the available GCP provider APIs.
 
 ## Setup
 
-The GCP provider supports several options for providing access to Google Cloud credentials.  See [GCP setup page](./setup.html) for details.
+The GCP provider supports several options for providing access to Google Cloud credentials.  See [GCP setup page]({{< relref "setup.md" >}}) for details.
 
 ## Getting Started
 
 The easiest way to start with Pulumi for GCP is to follow the tutorial:
 
-* [Virtual Machine](./tutorial-gce-webserver.html): Create a Debian virtual machine web server instance
+* [Virtual Machine]({{< relref "tutorial-gce-webserver.md" >}}): Create a Debian virtual machine web server instance
 
 In addition to the tutorial, several interesting examples are available complete with instructions:
 

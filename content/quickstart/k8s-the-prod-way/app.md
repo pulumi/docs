@@ -1,9 +1,10 @@
 ---
 title: Provisioning a Kubernetes Application
+aliases: ["app.html"]
 ---
 
-This lab assumes you have successfully completed [lab 1](./identity.html), and [lab
-2](./infrastructure.html) the results of which are to have (1) successfully bootstrapped the
+This lab assumes you have successfully completed [lab 1]({{< relref "identity.md" >}}), and [lab
+2]({{< relref "./infrastructure.md" >}}) the results of which are to have (1) successfully bootstrapped the
 identity platform for CI/CD and teams, and (2) successfully created the Kubernetes cluster on which
 we will deploy.
 
@@ -117,3 +118,4 @@ In the next lab, we will see how to use the identities defined in lab 1 to set u
 these stacks.
 
 [app]: https://github.com/pulumi/kubernetes-the-prod-way/blob/master/services/wordpress/index.ts
+[ktpw]: {{< relref "/quickstart/k8s-the-prod-way" >}}

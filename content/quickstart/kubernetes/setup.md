@@ -1,10 +1,17 @@
 ---
 title: Setup
-redirect_from: /install/kubernetes.html
+aliases:
+    - setup.html
+    - /install/kubernetes.html
+menu:
+  quickstart:
+    identifier: kubernetes-setup
+    parent: kubernetes
+    weight: 1
 ---
 
 <!-- LINKS -->
-[Pulumi Kubernetes provider]: ./index.html
+[Pulumi Kubernetes provider]: {{< relref "./" >}}
 [Kubernetes Go client library]: https://github.com/kubernetes/client-go
 [kubeconfig file]: https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/
 [GKE]: https://cloud.google.com/kubernetes-engine/docs/tutorials/

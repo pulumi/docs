@@ -1,5 +1,6 @@
 ---
 title: Prerequisites
+aliases: ["prerequisites.html"]
 ---
 
 This tutorial leverages [Pulumi][pulumi] and [Node.js][nodejs] to provision and configure
@@ -43,13 +44,13 @@ instructions [here][kubectl].
 
 [pulumi]: https://www.pulumi.com/
 [nodejs]: https://nodejs.org/en/
-[pulumi-cli]: https://pulumi.io/quickstart/install.html
-[local-backend]: https://pulumi.io/reference/state.html
+[pulumi-cli]: {{< relref "/quickstart/install.md" >}}
+[local-backend]: {{< relref "/reference/state.md" >}}
 [ts]: https://www.typescriptlang.org/
 [yarn]: https://yarnpkg.com/en/docs/install
 
-[aws-setup]: https://pulumi.io/quickstart/aws/setup.html
-[azure-setup]: https://pulumi.io/quickstart/azure/setup.html
-[gcp-setup]: https://pulumi.io/quickstart/gcp/setup.html
+[aws-setup]: {{< relref "/quickstart/aws/setup.md" >}}
+[azure-setup]: {{< relref "/quickstart/azure/setup.md" >}}
+[gcp-setup]: {{< relref "/quickstart/gcp/setup.md" >}}
 
 [kubectl]: https://kubernetes.io/docs/tasks/tools/install-kubectl/
