@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.ec2">
 <span id="ec2"></span><h1>ec2<a class="headerlink" href="#module-pulumi_aws.ec2" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
@@ -7318,7 +7321,7 @@ Doing so will cause a conflict of associations and will overwrite the associatio
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>auto_accept</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Accept the VPC endpoint (the VPC endpoint and service need to be in the same AWS account).</li>
-<li><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A policy to attach to the endpoint that controls access to the service. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Gateway</span></code>. Defaults to full access. For more information about building AWS IAM policy documents with Terraform, see the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">AWS IAM Policy Document Guide</a>.</li>
+<li><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A policy to attach to the endpoint that controls access to the service. Defaults to full access. All <code class="docutils literal notranslate"><span class="pre">Gateway</span></code> and some <code class="docutils literal notranslate"><span class="pre">Interface</span></code> endpoints support policies - see the <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-access.html">relevant AWS documentation</a> for more details. For more information about building AWS IAM policy documents with Terraform, see the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">AWS IAM Policy Document Guide</a>.</li>
 <li><strong>private_dns_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not to associate a private hosted zone with the specified VPC. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.
 Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>route_table_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more route table IDs. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Gateway</span></code>.</li>
@@ -7359,7 +7362,7 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">false</
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcEndpoint.policy">
 <code class="descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpoint.policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>A policy to attach to the endpoint that controls access to the service. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Gateway</span></code>. Defaults to full access. For more information about building AWS IAM policy documents with Terraform, see the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">AWS IAM Policy Document Guide</a>.</p>
+<dd><p>A policy to attach to the endpoint that controls access to the service. Defaults to full access. All <code class="docutils literal notranslate"><span class="pre">Gateway</span></code> and some <code class="docutils literal notranslate"><span class="pre">Interface</span></code> endpoints support policies - see the <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-access.html">relevant AWS documentation</a> for more details. For more information about building AWS IAM policy documents with Terraform, see the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">AWS IAM Policy Document Guide</a>.</p>
 </dd></dl>
 
 <dl class="attribute">

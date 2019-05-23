@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_linode">
 <span id="pulumi-linode"></span><h1>Pulumi Linode<a class="headerlink" href="#module-pulumi_linode" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

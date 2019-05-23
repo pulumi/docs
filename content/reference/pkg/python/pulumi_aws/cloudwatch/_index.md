@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.cloudwatch">
 <span id="cloudwatch"></span><h1>cloudwatch<a class="headerlink" href="#module-pulumi_aws.cloudwatch" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

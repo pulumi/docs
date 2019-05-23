@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="pulumi-openstack">
 <h1>Pulumi OpenStack<a class="headerlink" href="#pulumi-openstack" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">

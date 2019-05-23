@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="events">
 <h1>events<a class="headerlink" href="#events" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">

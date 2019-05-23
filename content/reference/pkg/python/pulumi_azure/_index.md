@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="pulumi-azure">
 <h1>Pulumi Azure<a class="headerlink" href="#pulumi-azure" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">

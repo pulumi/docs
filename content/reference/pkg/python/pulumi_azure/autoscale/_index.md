@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.autoscale">
 <span id="autoscale"></span><h1>autoscale<a class="headerlink" href="#module-pulumi_azure.autoscale" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

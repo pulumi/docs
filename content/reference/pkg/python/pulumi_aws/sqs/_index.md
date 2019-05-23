@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.sqs">
 <span id="sqs"></span><h1>sqs<a class="headerlink" href="#module-pulumi_aws.sqs" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

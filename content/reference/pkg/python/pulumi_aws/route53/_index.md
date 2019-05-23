@@ -1,9 +1,12 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.route53">
 <span id="route53"></span><h1>route53<a class="headerlink" href="#module-pulumi_aws.route53" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.route53.DelegationSet">
 <em class="property">class </em><code class="descclassname">pulumi_aws.route53.</code><code class="descname">DelegationSet</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>reference_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.DelegationSet" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a <a class="reference external" href="https://docs.aws.amazon.com/Route53/latest/APIReference/actions-on-reusable-delegation-sets.html">Route53 Delegation Set</a> resource.</p>
+<dd><p>Provides a <a class="reference external" href="https://docs.aws.amazon.com/Route53/latest/APIReference/API-actions-by-function.html#actions-by-function-reusable-delegation-sets">Route53 Delegation Set</a> resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />

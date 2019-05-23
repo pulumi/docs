@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.secretsmanager">
 <span id="secretsmanager"></span><h1>secretsmanager<a class="headerlink" href="#module-pulumi_aws.secretsmanager" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

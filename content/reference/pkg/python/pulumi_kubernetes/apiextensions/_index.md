@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="apiextensions">
 <h1>apiextensions<a class="headerlink" href="#apiextensions" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">

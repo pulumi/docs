@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_random">
 <span id="pulumi-random"></span><h1>Pulumi Random<a class="headerlink" href="#module-pulumi_random" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

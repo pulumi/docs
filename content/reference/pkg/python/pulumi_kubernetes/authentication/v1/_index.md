@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_kubernetes.authentication.v1">
 <span id="v1"></span><h1>v1<a class="headerlink" href="#module-pulumi_kubernetes.authentication.v1" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

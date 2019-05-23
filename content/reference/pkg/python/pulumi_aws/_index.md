@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="pulumi-aws">
 <h1>Pulumi AWS<a class="headerlink" href="#pulumi-aws" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
@@ -86,6 +89,7 @@
 <li class="toctree-l1"><a class="reference internal" href="servicediscovery/">servicediscovery</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ses/">ses</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sfn/">sfn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shield/">shield</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simpledb/">simpledb</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sns/">sns</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sqs/">sqs</a></li>
@@ -97,6 +101,7 @@
 <li class="toctree-l1"><a class="reference internal" href="wafregional/">wafregional</a></li>
 <li class="toctree-l1"><a class="reference internal" href="worklink/">worklink</a></li>
 <li class="toctree-l1"><a class="reference internal" href="workspaces/">workspaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="xray/">xray</a></li>
 </ul>
 </div>
 </div>

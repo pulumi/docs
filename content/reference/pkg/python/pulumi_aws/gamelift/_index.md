@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.gamelift">
 <span id="gamelift"></span><h1>gamelift<a class="headerlink" href="#module-pulumi_aws.gamelift" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

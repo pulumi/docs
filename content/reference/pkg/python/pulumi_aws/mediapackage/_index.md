@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.mediapackage">
 <span id="mediapackage"></span><h1>mediapackage<a class="headerlink" href="#module-pulumi_aws.mediapackage" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

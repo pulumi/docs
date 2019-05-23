@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.directconnect">
 <span id="directconnect"></span><h1>directconnect<a class="headerlink" href="#module-pulumi_aws.directconnect" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

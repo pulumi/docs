@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_gcp.filestore">
 <span id="filestore"></span><h1>filestore<a class="headerlink" href="#module-pulumi_gcp.filestore" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

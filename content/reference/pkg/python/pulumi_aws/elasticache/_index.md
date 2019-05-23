@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.elasticache">
 <span id="elasticache"></span><h1>elasticache<a class="headerlink" href="#module-pulumi_aws.elasticache" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

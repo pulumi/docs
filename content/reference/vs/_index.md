@@ -1,4 +1,11 @@
-# Pulumi vs. Other Solutions
+---
+title: Pulumi vs. Other Solutions
+menu:
+  reference:
+    identifier: vs
+    name: Compared to Others
+    weight: 8
+---
 
 Pulumi is a cloud native infrastructure as code project. It lets you provision and manage resources, across many clouds
 (AWS, Azure, Google Cloud, Kubernetes, OpenStack), using your favorite language. It works great for a wide range of
@@ -9,10 +16,10 @@ of these are complementary and can be used together, whereas some are "either or
 
 Here are several useful comparisons that will help you understand Pulumi's place in the cloud tooling ecosystem:
 
-* [Hashicorp Terraform](./terraform.html)
-* [Cloud Templates (AWS CloudFormation, Azure RM, etc)](./cloud_templates.html)
-* [Cloud SDKs (AWS Boto, etc)](./cloud_sdks.html)
-* [Serverless Framework](./serverless.html)
-* [Kubernetes YAML and DSLs](./k8s_yaml_dsls.html)
-* [Chef, Puppet, Ansible, Salt, etc.](./chef_puppet_etc.html)
-* [Custom Solutions](./custom.html)
+* [Hashicorp Terraform]({{< relref "terraform.md" >}})
+* [Cloud Templates (AWS CloudFormation, Azure RM, etc.)]({{< relref "cloud_templates.md" >}})
+* [Cloud SDKs (AWS Boto, etc.)]({{< relref "cloud_sdks.md" >}})
+* [Serverless Framework]({{< relref "serverless.md" >}})
+* [Kubernetes YAML and DSLs]({{< relref "k8s_yaml_dsls.md" >}})
+* [Chef, Puppet, Ansible, Salt, etc.]({{< relref "chef_puppet_etc.md" >}})
+* [Custom Solutions]({{< relref "custom.md" >}})

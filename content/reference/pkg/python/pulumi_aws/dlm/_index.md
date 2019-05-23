@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.dlm">
 <span id="dlm"></span><h1>dlm<a class="headerlink" href="#module-pulumi_aws.dlm" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

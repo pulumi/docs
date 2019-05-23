@@ -1,8 +1,11 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.kinesis">
 <span id="kinesis"></span><h1>kinesis<a class="headerlink" href="#module-pulumi_aws.kinesis" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.kinesis.AnalyticsApplication">
-<em class="property">class </em><code class="descclassname">pulumi_aws.kinesis.</code><code class="descname">AnalyticsApplication</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cloudwatch_logging_options=None</em>, <em>code=None</em>, <em>description=None</em>, <em>inputs=None</em>, <em>name=None</em>, <em>outputs=None</em>, <em>reference_data_sources=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.kinesis.</code><code class="descname">AnalyticsApplication</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cloudwatch_logging_options=None</em>, <em>code=None</em>, <em>description=None</em>, <em>inputs=None</em>, <em>name=None</em>, <em>outputs=None</em>, <em>reference_data_sources=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Kinesis Analytics Application resource. Kinesis Analytics is a managed service that
 allows processing and analyzing streaming data using standard SQL.</p>
 <p>For more details, see the [Amazon Kinesis Analytics Documentation][1].</p>
@@ -22,6 +25,7 @@ See CloudWatch Logging Options below for more details.</li>
 <li><strong>outputs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Output destination configuration of the application. See Outputs below for more details.</li>
 <li><strong>reference_data_sources</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of tags for the Kinesis Analytics Application.</li>
 </ul>
 </td>
 </tr>
@@ -93,6 +97,12 @@ See Reference Data Sources below for more details.</p>
 <dt id="pulumi_aws.kinesis.AnalyticsApplication.status">
 <code class="descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.status" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Status of the application.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.kinesis.AnalyticsApplication.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value mapping of tags for the Kinesis Analytics Application.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -350,7 +360,7 @@ scales elastically for real-time processing of streaming big data.</p>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) specifying the Stream (same as <code class="docutils literal notranslate"><span class="pre">id</span></code>)</li>
 <li><strong>encryption_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The encryption type to use. The only acceptable values are <code class="docutils literal notranslate"><span class="pre">NONE</span></code> or <code class="docutils literal notranslate"><span class="pre">KMS</span></code>. The default value is <code class="docutils literal notranslate"><span class="pre">NONE</span></code>.</li>
-<li><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GUID for the customer-managed KMS key to use for encryption. You can also use a Kinesis-owned master key by specifying the alias aws/kinesis.</li>
+<li><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GUID for the customer-managed KMS key to use for encryption. You can also use a Kinesis-owned master key by specifying the alias <code class="docutils literal notranslate"><span class="pre">alias/aws/kinesis</span></code>.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name to identify the stream. This is unique to the
 AWS account and region the Stream is created in.</li>
 <li><strong>retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Length of time data records are accessible after they are added to the stream. The maximum value of a stream’s retention period is 168 hours. Minimum value is 24. Default is 24.</li>
@@ -379,7 +389,7 @@ when creating a Kinesis stream. See [Amazon Kinesis Streams][2] for more.</li>
 <dl class="attribute">
 <dt id="pulumi_aws.kinesis.Stream.kms_key_id">
 <code class="descname">kms_key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.Stream.kms_key_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The GUID for the customer-managed KMS key to use for encryption. You can also use a Kinesis-owned master key by specifying the alias aws/kinesis.</p>
+<dd><p>The GUID for the customer-managed KMS key to use for encryption. You can also use a Kinesis-owned master key by specifying the alias <code class="docutils literal notranslate"><span class="pre">alias/aws/kinesis</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">

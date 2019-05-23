@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.scheduler">
 <span id="scheduler"></span><h1>scheduler<a class="headerlink" href="#module-pulumi_azure.scheduler" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

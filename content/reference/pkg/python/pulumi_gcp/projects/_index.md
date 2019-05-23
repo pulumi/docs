@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_gcp.projects">
 <span id="projects"></span><h1>projects<a class="headerlink" href="#module-pulumi_gcp.projects" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

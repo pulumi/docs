@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_openstack.containerinfra">
 <span id="containerinfra"></span><h1>containerinfra<a class="headerlink" href="#module-pulumi_openstack.containerinfra" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

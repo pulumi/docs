@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.elastictranscoder">
 <span id="elastictranscoder"></span><h1>elastictranscoder<a class="headerlink" href="#module-pulumi_aws.elastictranscoder" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.glacier">
 <span id="glacier"></span><h1>glacier<a class="headerlink" href="#module-pulumi_aws.glacier" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

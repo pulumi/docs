@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.managementresource">
 <span id="managementresource"></span><h1>managementresource<a class="headerlink" href="#module-pulumi_azure.managementresource" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

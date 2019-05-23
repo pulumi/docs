@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.core">
 <span id="core"></span><h1>core<a class="headerlink" href="#module-pulumi_azure.core" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
@@ -71,6 +74,12 @@
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.core.GetSubscriptionResult.subscription_id">
+<code class="descname">subscription_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.core.GetSubscriptionResult.subscription_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The subscription GUID.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.core.GetSubscriptionResult.id">
 <code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.core.GetSubscriptionResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -91,6 +100,42 @@
 <dl class="attribute">
 <dt id="pulumi_azure.core.GetSubscriptionsResult.id">
 <code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.core.GetSubscriptionsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.core.GetUserAssignedIdentityResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.core.</code><code class="descname">GetUserAssignedIdentityResult</code><span class="sig-paren">(</span><em>client_id=None</em>, <em>location=None</em>, <em>name=None</em>, <em>principal_id=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.GetUserAssignedIdentityResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getUserAssignedIdentity.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.core.GetUserAssignedIdentityResult.client_id">
+<code class="descname">client_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.core.GetUserAssignedIdentityResult.client_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Client ID of the User Assigned Identity.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.core.GetUserAssignedIdentityResult.location">
+<code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.core.GetUserAssignedIdentityResult.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Azure location where the User Assigned Identity exists.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.core.GetUserAssignedIdentityResult.principal_id">
+<code class="descname">principal_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.core.GetUserAssignedIdentityResult.principal_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Service Principal ID of the User Assigned Identity.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.core.GetUserAssignedIdentityResult.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.core.GetUserAssignedIdentityResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags assigned to the User Assigned Identity.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.core.GetUserAssignedIdentityResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.core.GetUserAssignedIdentityResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -316,6 +361,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.core.get_subscriptions">
 <code class="descclassname">pulumi_azure.core.</code><code class="descname">get_subscriptions</code><span class="sig-paren">(</span><em>display_name_contains=None</em>, <em>display_name_prefix=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.get_subscriptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about all the Subscriptions currently available.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.core.get_user_assigned_identity">
+<code class="descclassname">pulumi_azure.core.</code><code class="descname">get_user_assigned_identity</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.get_user_assigned_identity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing User Assigned Identity.</p>
 </dd></dl>
 
 </div>

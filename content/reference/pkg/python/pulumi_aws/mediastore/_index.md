@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.mediastore">
 <span id="mediastore"></span><h1>mediastore<a class="headerlink" href="#module-pulumi_aws.mediastore" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

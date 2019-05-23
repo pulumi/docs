@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="pulumi-python-sdk">
 <h1>Pulumi Python SDK<a class="headerlink" href="#pulumi-python-sdk" title="Permalink to this headline">¶</a></h1>
 <p>The Pulumi Python SDK (<cite>pulumi</cite>) is the core package used when writing Pulumi programs in Python. It contains everything

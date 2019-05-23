@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.simpledb">
 <span id="simpledb"></span><h1>simpledb<a class="headerlink" href="#module-pulumi_aws.simpledb" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="admissionregistration">
 <h1>admissionregistration<a class="headerlink" href="#admissionregistration" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">

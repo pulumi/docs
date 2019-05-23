@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.waf">
 <span id="waf"></span><h1>waf<a class="headerlink" href="#module-pulumi_aws.waf" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

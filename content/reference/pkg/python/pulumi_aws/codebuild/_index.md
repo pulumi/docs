@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.codebuild">
 <span id="codebuild"></span><h1>codebuild<a class="headerlink" href="#module-pulumi_aws.codebuild" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

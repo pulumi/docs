@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_gcp.servicenetworking">
 <span id="servicenetworking"></span><h1>servicenetworking<a class="headerlink" href="#module-pulumi_gcp.servicenetworking" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

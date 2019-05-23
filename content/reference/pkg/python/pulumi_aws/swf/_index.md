@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.swf">
 <span id="swf"></span><h1>swf<a class="headerlink" href="#module-pulumi_aws.swf" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

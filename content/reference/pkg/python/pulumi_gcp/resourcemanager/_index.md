@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_gcp.resourcemanager">
 <span id="resourcemanager"></span><h1>resourcemanager<a class="headerlink" href="#module-pulumi_gcp.resourcemanager" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

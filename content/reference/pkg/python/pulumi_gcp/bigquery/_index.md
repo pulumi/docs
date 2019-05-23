@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_gcp.bigquery">
 <span id="bigquery"></span><h1>bigquery<a class="headerlink" href="#module-pulumi_gcp.bigquery" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

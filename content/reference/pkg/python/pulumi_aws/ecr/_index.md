@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.ecr">
 <span id="ecr"></span><h1>ecr<a class="headerlink" href="#module-pulumi_aws.ecr" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
@@ -7,6 +10,36 @@
 <dl class="attribute">
 <dt id="pulumi_aws.ecr.GetCredentialsResult.id">
 <code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecr.GetCredentialsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.ecr.GetImageResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.ecr.</code><code class="descname">GetImageResult</code><span class="sig-paren">(</span><em>image_digest=None</em>, <em>image_pushed_at=None</em>, <em>image_size_in_bytes=None</em>, <em>image_tag=None</em>, <em>image_tags=None</em>, <em>registry_id=None</em>, <em>repository_name=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.GetImageResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getImage.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.ecr.GetImageResult.image_pushed_at">
+<code class="descname">image_pushed_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecr.GetImageResult.image_pushed_at" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date and time, expressed as a unix timestamp, at which the current image was pushed to the repository.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ecr.GetImageResult.image_size_in_bytes">
+<code class="descname">image_size_in_bytes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecr.GetImageResult.image_size_in_bytes" title="Permalink to this definition">¶</a></dt>
+<dd><p>The size, in bytes, of the image in the repository.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ecr.GetImageResult.image_tags">
+<code class="descname">image_tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecr.GetImageResult.image_tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>The list of tags associated with this image.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ecr.GetImageResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecr.GetImageResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -300,6 +333,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </table>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.ecr.get_image">
+<code class="descclassname">pulumi_aws.ecr.</code><code class="descname">get_image</code><span class="sig-paren">(</span><em>image_digest=None</em>, <em>image_tag=None</em>, <em>registry_id=None</em>, <em>repository_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.get_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ECR Image data source allows the details of an image with a particular tag or digest to be retrieved.</p>
 </dd></dl>
 
 <dl class="function">

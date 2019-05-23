@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.cloudformation">
 <span id="cloudformation"></span><h1>cloudformation<a class="headerlink" href="#module-pulumi_aws.cloudformation" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

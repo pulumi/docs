@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.postgresql">
 <span id="postgresql"></span><h1>postgresql<a class="headerlink" href="#module-pulumi_azure.postgresql" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

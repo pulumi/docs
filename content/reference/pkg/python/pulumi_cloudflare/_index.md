@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_cloudflare">
 <span id="pulumi-cloudflare"></span><h1>Pulumi Cloudflare<a class="headerlink" href="#module-pulumi_cloudflare" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
@@ -390,6 +393,83 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_cloudflare.Argo">
+<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">Argo</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>smart_routing=None</em>, <em>tiered_caching=None</em>, <em>zone_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Argo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cloudflare Argo controls the routing to your origin and tiered caching options to speed up your website browsing experience.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>smart_routing</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether smart routing is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">on</span></code> or <code class="docutils literal notranslate"><span class="pre">off</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">off</span></code>.</li>
+<li><strong>tiered_caching</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether tiered caching is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">on</span></code> or <code class="docutils literal notranslate"><span class="pre">off</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">off</span></code>.</li>
+<li><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone ID that you wish to manage Argo on.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_cloudflare.Argo.smart_routing">
+<code class="descname">smart_routing</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Argo.smart_routing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether smart routing is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">on</span></code> or <code class="docutils literal notranslate"><span class="pre">off</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_cloudflare.Argo.tiered_caching">
+<code class="descname">tiered_caching</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Argo.tiered_caching" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether tiered caching is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">on</span></code> or <code class="docutils literal notranslate"><span class="pre">off</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_cloudflare.Argo.zone_id">
+<code class="descname">zone_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Argo.zone_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The DNS zone ID that you wish to manage Argo on.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_cloudflare.Argo.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Argo.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_cloudflare.Argo.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Argo.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_cloudflare.CustomPages">
 <em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">CustomPages</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_id=None</em>, <em>state=None</em>, <em>type=None</em>, <em>url=None</em>, <em>zone_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.CustomPages" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource which manages Cloudflare custom error pages.</p>
@@ -738,7 +818,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>proxied</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the hostname gets Cloudflare’s origin protection. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>region_pools</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set containing mappings of region/country codes to a list of pool IDs (ordered by their failover priority) for the given region. Fields documented below.</li>
 <li><strong>session_affinity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Associates all requests coming from an end-user with a single origin. Cloudflare will set a cookie on the initial response to the client, such that consequent requests with the cookie in the request will go to the same origin, so long as it is available.</li>
-<li><strong>steering_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Determine which method the load balancer uses to determine the fastest route to your origin. Valid values  are: “off”, “geo”, “dynamic_latency” or “”. Default is “”.</li>
+<li><strong>steering_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Determine which method the load balancer uses to determine the fastest route to your origin. Valid values  are: <code class="docutils literal notranslate"><span class="pre">&quot;off&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;geo&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;dynamic_latency&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;random&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>.</li>
 <li><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Time to live (TTL) of this load balancer’s DNS <code class="docutils literal notranslate"><span class="pre">name</span></code>. Conflicts with <code class="docutils literal notranslate"><span class="pre">proxied</span></code> - this cannot be set for proxied load balancers. Default is <code class="docutils literal notranslate"><span class="pre">30</span></code>.</li>
 <li><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone to add the load balancer to.</li>
 </ul>
@@ -815,7 +895,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_cloudflare.LoadBalancer.steering_policy">
 <code class="descname">steering_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.LoadBalancer.steering_policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Determine which method the load balancer uses to determine the fastest route to your origin. Valid values  are: “off”, “geo”, “dynamic_latency” or “”. Default is “”.</p>
+<dd><p>Determine which method the load balancer uses to determine the fastest route to your origin. Valid values  are: <code class="docutils literal notranslate"><span class="pre">&quot;off&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;geo&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;dynamic_latency&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;random&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2018,7 +2098,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudflare.Zone">
-<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">Zone</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>jump_start=None</em>, <em>paused=None</em>, <em>plan=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Zone" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_cloudflare.</code><code class="descname">Zone</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>jump_start=None</em>, <em>paused=None</em>, <em>plan=None</em>, <em>type=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare Zone resource. Zone is the basic resource for working with Cloudflare and is roughly equivalent to a domain name that the user purchases.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2030,6 +2110,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>jump_start</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean of whether to scan for DNS records on creation. Ignored after zone is created. Default: false.</li>
 <li><strong>paused</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean of whether this zone is paused (traffic bypasses Cloudflare). Default: false.</li>
 <li><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the commercial plan to apply to the zone, can be updated once the one is created; one of <code class="docutils literal notranslate"><span class="pre">free</span></code>, <code class="docutils literal notranslate"><span class="pre">pro</span></code>, <code class="docutils literal notranslate"><span class="pre">business</span></code>, <code class="docutils literal notranslate"><span class="pre">enterprise</span></code>.</li>
+<li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A full zone implies that DNS is hosted with Cloudflare. A partial zone is typically a partner-hosted zone or a CNAME setup. Valid values: <code class="docutils literal notranslate"><span class="pre">full</span></code>, <code class="docutils literal notranslate"><span class="pre">partial</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">full</span></code>.</li>
 <li><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone name which will be added.</li>
 </ul>
 </td>
@@ -2063,13 +2144,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_cloudflare.Zone.status">
 <code class="descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Zone.status" title="Permalink to this definition">¶</a></dt>
-<dd><p>Status of the zone. Valid values: <code class="docutils literal notranslate"><span class="pre">active</span></code>, <code class="docutils literal notranslate"><span class="pre">pending</span></code>, <code class="docutils literal notranslate"><span class="pre">initializing</span></code>, <code class="docutils literal notranslate"><span class="pre">moved</span></code>, <code class="docutils literal notranslate"><span class="pre">deleted</span></code>, <code class="docutils literal notranslate"><span class="pre">deactivated</span></code></p>
+<dd><p>Status of the zone. Valid values: <code class="docutils literal notranslate"><span class="pre">active</span></code>, <code class="docutils literal notranslate"><span class="pre">pending</span></code>, <code class="docutils literal notranslate"><span class="pre">initializing</span></code>, <code class="docutils literal notranslate"><span class="pre">moved</span></code>, <code class="docutils literal notranslate"><span class="pre">deleted</span></code>, <code class="docutils literal notranslate"><span class="pre">deactivated</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_cloudflare.Zone.type">
 <code class="descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Zone.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>A full zone implies that DNS is hosted with Cloudflare. A partial zone is typically a partner-hosted zone or a CNAME setup. Valid values: <code class="docutils literal notranslate"><span class="pre">full</span></code>, <code class="docutils literal notranslate"><span class="pre">partial</span></code></p>
+<dd><p>A full zone implies that DNS is hosted with Cloudflare. A partial zone is typically a partner-hosted zone or a CNAME setup. Valid values: <code class="docutils literal notranslate"><span class="pre">full</span></code>, <code class="docutils literal notranslate"><span class="pre">partial</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">full</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">

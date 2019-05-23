@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_openstack.networking">
 <span id="networking"></span><h1>networking<a class="headerlink" href="#module-pulumi_openstack.networking" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

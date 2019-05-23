@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.datalake">
 <span id="datalake"></span><h1>datalake<a class="headerlink" href="#module-pulumi_azure.datalake" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

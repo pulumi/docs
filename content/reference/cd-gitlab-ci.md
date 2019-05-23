@@ -1,5 +1,11 @@
 ---
 title: GitLab CI
+aliases: ["cd-gitlab-ci.html"]
+expanded_url: /reference/cd/
+menu:
+  reference:
+    parent: cd
+    weight: 5
 ---
 
 This page details how to use [GitLab CI](https://about.gitlab.com/features/gitlab-ci-cd/) to manage deploying
@@ -14,7 +20,7 @@ altered to fit into any existing type of deployment setup.
 - An account on https://app.pulumi.com and that you have created a new project.
   - This just means you will sign-in using your GitLab credentials.
   - However, pulumi can be run from anywhere and your infrastrucutre code itself can be hosted anywhere.
-- The latest CLI. Installation instructions are [here](https://pulumi.io/quickstart/install.html).
+- The latest CLI. Installation instructions are [here]({{< relref "/quickstart/install.md" >}}).
 - A bare repo and set the remote URL to be your GitLab project.
 
 ## Stack and Branch Mappings
@@ -26,7 +32,7 @@ The source code for the stack is in a repository in GitLab and uses `TypeScript`
 You may choose a naming convention that best suits your organization.
 
 Alternatively, you can also run `pulumi new [template]` to create a template project.
-Learn more [here](https://pulumi.io/reference/cli/pulumi_new.html).
+Learn more [here]({{< relref "cli/pulumi_new.md" >}}).
 
 ## GitLab CI Runners
 
@@ -179,7 +185,7 @@ yarn install
 pulumi stack select product-catalog-service
 # The following is just a sample config setting that the hypothetical pulumi
 # program needs.
-# Learn more about pulumi configuration at: https://pulumi.io/reference/config.html
+# Learn more about pulumi configuration at: {{< absurl "/reference/config/" >}}
 pulumi config set mysetting:myvalue
 pulumi up
 ```

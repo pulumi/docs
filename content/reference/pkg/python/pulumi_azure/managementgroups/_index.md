@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.managementgroups">
 <span id="managementgroups"></span><h1>managementgroups<a class="headerlink" href="#module-pulumi_azure.managementgroups" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
@@ -44,7 +47,7 @@
 <li><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A friendly name for this Management Group. If not specified, this’ll be the same as the <code class="docutils literal notranslate"><span class="pre">group_id</span></code>.</li>
 <li><strong>group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The UUID for this Management Group, which needs to be unique across your tenant - which will be generated if not provided. Changing this forces a new resource to be created.</li>
 <li><strong>parent_management_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Parent Management Group. Changing this forces a new resource to be created.</li>
-<li><strong>subscription_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Subscription ID’s which should be assigned to the Management Group.</li>
+<li><strong>subscription_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Subscription GUIDs which should be assigned to the Management Group.</li>
 </ul>
 </td>
 </tr>
@@ -71,7 +74,7 @@
 <dl class="attribute">
 <dt id="pulumi_azure.managementgroups.ManagementGroup.subscription_ids">
 <code class="descname">subscription_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.managementgroups.ManagementGroup.subscription_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of Subscription ID’s which should be assigned to the Management Group.</p>
+<dd><p>A list of Subscription GUIDs which should be assigned to the Management Group.</p>
 </dd></dl>
 
 <dl class="method">

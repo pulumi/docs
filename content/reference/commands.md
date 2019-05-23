@@ -1,37 +1,41 @@
 ---
 title: "Command Line"
+aliases: ["commands.html"]
+menu:
+  reference:
+    identifier: cli
+    weight: 3
 ---
 
-{% include mini-toc.html %}
+{{< mini-toc >}}
 
 Pulumi is controlled primarily using the command line interface (CLI). It works in conjunction with the Pulumi service
 to deploy changes to your cloud apps and infrastructure.  It keeps a history of who updated what in your team and when.
 This CLI has been designed for great inner loop productivity, in addition to
-[continuous integration and deployment](cd.html) scenarios.
+[continuous integration and deployment]({{< relref "cd.md" >}}) scenarios.
 
 ## Installation
 
 The Pulumi CLI is free to download and install:
 
-<a href="/quickstart/install.html"><button class="button primary small">INSTALL PULUMI</button></a>
+<a href="{{< relref "/quickstart/install.md" >}}"><button class="button primary small">INSTALL PULUMI</button></a>
 
 ## Common Commands
 
 The most common commands in the CLI that you'll be using are as follows:
 
-* [`pulumi new`](./cli/pulumi_new.html): creates a new project using a template
-* [`pulumi stack`](./cli/pulumi_stack.html): manage your stacks (at least one is required to perform an update)
-* [`pulumi config`](./cli/pulumi_config.html): configure variables such as keys, regions, and so on
-* [`pulumi up`](./cli/pulumi_up.html): preview and deploy changes to your program and/or infrastructure
-* [`pulumi preview`](./cli/pulumi_preview.html): preview your changes explicitly before deploying
-* [`pulumi destroy`](./cli/pulumi_destroy.html): destroy your program and its infrastructure when you're done
+* [`pulumi new`]({{< relref "cli/pulumi_new.md" >}}): creates a new project using a template
+* [`pulumi stack`]({{< relref "cli/pulumi_stack.md" >}}): manage your stacks (at least one is required to perform an update)
+* [`pulumi config`]({{< relref "cli/pulumi_config.md" >}}): configure variables such as keys, regions, and so on
+* [`pulumi up`]({{< relref "cli/pulumi_up.md" >}}): preview and deploy changes to your program and/or infrastructure
+* [`pulumi preview`]({{< relref "cli/pulumi_preview.md" >}}): preview your changes explicitly before deploying
+* [`pulumi destroy`]({{< relref "cli/pulumi_destroy.md" >}}): destroy your program and its infrastructure when you're done
 
 ## Complete Reference
 
 Below is the complete documentation for all available commands:
 
-{% capture pulumi_cli %}{% include_relative cli/pulumi.md %}{% endcapture %}
-{{ pulumi_cli | markdownify | replace_regex: 'pulumi_(.*)\.md', './cli/pulumi_\1.html' | replace_regex: 'h2', 'h3' }}
+{{< pulumi-command >}}
 
 ## Command-line Completion
 

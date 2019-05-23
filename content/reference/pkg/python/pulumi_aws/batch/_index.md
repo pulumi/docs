@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.batch">
 <span id="batch"></span><h1>batch<a class="headerlink" href="#module-pulumi_aws.batch" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

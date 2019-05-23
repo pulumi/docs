@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.lightsail">
 <span id="lightsail"></span><h1>lightsail<a class="headerlink" href="#module-pulumi_aws.lightsail" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

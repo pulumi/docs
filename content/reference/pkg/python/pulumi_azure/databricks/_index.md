@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.databricks">
 <span id="databricks"></span><h1>databricks<a class="headerlink" href="#module-pulumi_azure.databricks" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

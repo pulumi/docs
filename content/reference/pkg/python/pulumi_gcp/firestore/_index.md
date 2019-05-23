@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_gcp.firestore">
 <span id="firestore"></span><h1>firestore<a class="headerlink" href="#module-pulumi_gcp.firestore" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

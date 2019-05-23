@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.elasticsearch">
 <span id="elasticsearch"></span><h1>elasticsearch<a class="headerlink" href="#module-pulumi_aws.elasticsearch" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_gcp.binaryauthorization">
 <span id="binaryauthorization"></span><h1>binaryauthorization<a class="headerlink" href="#module-pulumi_gcp.binaryauthorization" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

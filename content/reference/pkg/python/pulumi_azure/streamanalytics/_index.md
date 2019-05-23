@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.streamanalytics">
 <span id="streamanalytics"></span><h1>streamanalytics<a class="headerlink" href="#module-pulumi_azure.streamanalytics" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
@@ -172,7 +175,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.streamanalytics.Job">
-<em class="property">class </em><code class="descclassname">pulumi_azure.streamanalytics.</code><code class="descname">Job</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>compatibility_level=None</em>, <em>data_locale=None</em>, <em>events_late_arrival_max_delay_in_seconds=None</em>, <em>events_out_of_order_max_delay_in_seconds=None</em>, <em>events_out_of_order_policy=None</em>, <em>location=None</em>, <em>name=None</em>, <em>output_error_policy=None</em>, <em>resource_group_name=None</em>, <em>streaming_units=None</em>, <em>transformation_query=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.Job" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.streamanalytics.</code><code class="descname">Job</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>compatibility_level=None</em>, <em>data_locale=None</em>, <em>events_late_arrival_max_delay_in_seconds=None</em>, <em>events_out_of_order_max_delay_in_seconds=None</em>, <em>events_out_of_order_policy=None</em>, <em>location=None</em>, <em>name=None</em>, <em>output_error_policy=None</em>, <em>resource_group_name=None</em>, <em>streaming_units=None</em>, <em>tags=None</em>, <em>transformation_query=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.Job" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Stream Analytics Job.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -191,6 +194,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>output_error_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the policy which should be applied to events which arrive at the output and cannot be written to the external storage due to being malformed (such as missing column values, column values of wrong type or size). Possible values are``Drop<code class="docutils literal notranslate"><span class="pre">and</span></code>Stop<a href="#id9"><span class="problematic" id="id10">``</span></a>.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group where the Stream Analytics Job should exist. Changing this forces a new resource to be created.</li>
 <li><strong>streaming_units</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the number of streaming units that the streaming job uses. Supported values are``1<code class="docutils literal notranslate"><span class="pre">,</span></code>3<code class="docutils literal notranslate"><span class="pre">,</span></code>6<code class="docutils literal notranslate"><span class="pre">and</span> <span class="pre">multiples</span> <span class="pre">of</span></code>6<code class="docutils literal notranslate"><span class="pre">up</span> <span class="pre">to</span></code>120`.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags assigned to the resource.</li>
 <li><strong>transformation_query</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies the query that will be run in the streaming job, <a class="reference external" href="https://msdn.microsoft.com/library/azure/dn834998">written in Stream Analytics Query Language (SAQL)</a>.</p>
 </li>
 </ul>
@@ -262,6 +266,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.streamanalytics.Job.streaming_units">
 <code class="descname">streaming_units</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.streamanalytics.Job.streaming_units" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the number of streaming units that the streaming job uses. Supported values are <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">3</span></code>, <code class="docutils literal notranslate"><span class="pre">6</span></code> and multiples of <code class="docutils literal notranslate"><span class="pre">6</span></code> up to <code class="docutils literal notranslate"><span class="pre">120</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.streamanalytics.Job.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.streamanalytics.Job.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags assigned to the resource.</p>
 </dd></dl>
 
 <dl class="attribute">

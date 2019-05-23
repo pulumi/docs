@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_gcp.bigtable">
 <span id="bigtable"></span><h1>bigtable<a class="headerlink" href="#module-pulumi_gcp.bigtable" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

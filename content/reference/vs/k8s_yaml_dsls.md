@@ -1,5 +1,11 @@
 ---
 title: Pulumi vs. Kubernetes YAML and DSLs
+aliases: ["k8s_yaml_dsls.html"]
+menu:
+  reference:
+    parent: vs
+    name: Kubernetes YAML
+    weight: 5
 ---
 
 Kubernetes offers YAML configuration out of the box. This is great as an "assembly language" for configuring

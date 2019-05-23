@@ -1,5 +1,11 @@
 ---
 title: Pulumi vs. Chef, Puppet, etc.
+aliases: ["chef_puppet_etc.html"]
+menu:
+  reference:
+    parent: vs
+    name: Chef, Puppet, etc.
+    weight: 6
 ---
 
 Chef, Puppet, Ansible, and Salt are all popular _configuration management tools_. These tools help you install and

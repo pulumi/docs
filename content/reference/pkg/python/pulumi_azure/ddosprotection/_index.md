@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.ddosprotection">
 <span id="ddosprotection"></span><h1>ddosprotection<a class="headerlink" href="#module-pulumi_azure.ddosprotection" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

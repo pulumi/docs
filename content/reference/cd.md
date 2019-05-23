@@ -1,5 +1,10 @@
 ---
 title: Continuous Delivery
+aliases: ["cd.html"]
+menu:
+  reference:
+    identifier: cd
+    weight: 5
 ---
 
 Pulumi is great for continuous deployment and supports a range of workflows.  In fact, our team uses Pulumi
@@ -13,21 +18,21 @@ a subset of these code changes after specific gates have been passed (certain te
 
 ### Provider-specific examples
 
-* [AWS Code Services](./cd-aws-code-services.html)
-* [Azure DevOps](./cd-azure-devops.html)
-* [CircleCI](./cd-circleci.html)
-* [GitHub Actions](./cd-github-actions.html)
-* [GitLab CI](./cd-gitlab-ci.html)
-* [Google Cloud Build](./cd-google-cloud-build.html)
-* [Travis](./cd-travis.html)
+* [AWS Code Services]({{< relref "cd-aws-code-services.md" >}})
+* [Azure DevOps]({{< relref "cd-azure-devops" >}})
+* [CircleCI]({{< relref "cd-circleci.md" >}})
+* [GitHub Actions]({{< relref "cd-github-actions.md" >}})
+* [GitLab CI]({{< relref "cd-gitlab-ci.md" >}})
+* [Google Cloud Build]({{< relref "cd-google-cloud-build.md" >}})
+* [Travis]({{< relref "cd-travis.md" >}})
 
 
 Pulumi can also bridge results from your CI/CD system with GitHub, for example surfacing the results of stack
-updates on GitHub pull requests. See [Pulumi GitHub App](./cd-github.html) for more information.
+updates on GitHub pull requests. See [Pulumi GitHub App]({{< relref "cd-github.md" >}}) for more information.
 
 ## Branching strategy for deployments
 
-Pulumi is also agnostic to what sort of branching strategy you take.  Most customers use Git-based flows; the most common is to use one branch-per-[stack](./stack.html).  This allows you to control deployments to environments using your usual commit, code review, and approval process, such as GitHub pull requests.
+Pulumi is also agnostic to what sort of branching strategy you take.  Most customers use Git-based flows; the most common is to use one branch-per-[stack]({{< relref "stack.md" >}}).  This allows you to control deployments to environments using your usual commit, code review, and approval process, such as GitHub pull requests.
 
 ## Stacks and configuration
 

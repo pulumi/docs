@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_gcp.cloudscheduler">
 <span id="cloudscheduler"></span><h1>cloudscheduler<a class="headerlink" href="#module-pulumi_gcp.cloudscheduler" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

@@ -1,5 +1,10 @@
 ---
 title: Python Packages
+menu:
+  reference:
+    parent: api
+    identifier: python
+    name: Python
 ---
 
 ### General Purpose Packages

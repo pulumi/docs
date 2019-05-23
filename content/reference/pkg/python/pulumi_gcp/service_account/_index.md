@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_gcp.service_account">
 <span id="service-account"></span><h1>service_account<a class="headerlink" href="#module-pulumi_gcp.service_account" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

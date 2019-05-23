@@ -1,5 +1,11 @@
 ---
 title: Pulumi GitHub App
+aliases: ["cd-github.html"]
+expanded_url: /reference/service/
+menu:
+  reference:
+    parent: teams
+    weight: 4
 ---
 
 <style>
@@ -27,12 +33,12 @@ This allows you to quickly see the changes caused by your Pulumi program without
 GitHub's Pull Request view, with a link to the richer details available on the
 [Pulumi Cloud Console](https://app.pulumi.com).
 
-![Comment on Pull Request](/images/github-app/pr-comment.png){:class="img-bordered"}{:class="move-right"}
+<img src="/images/github-app/pr-comment.png" alt="Comment on Pull Request" class="img-bordered move-right">
 
 Beyond Pull Request comments, the GitHub application also integrates with GitHub's [Checks API](https://blog.github.com/2018-05-07-introducing-checks-api/).
 This provides even more detail about any resource changes, including the full update log.
 
-![Results on GitHub Check](/images/github-app/checks-detail.png){:width="600px"}{:class="img-bordered"}{:class="move-right"}
+<img src="/images/github-app/checks-detail.png" alt="Results on GitHub Check" width="600" class="img-bordered move-right">
 
 ## Installation and Configuration
 
@@ -46,8 +52,8 @@ Pulumi's GitHub workflow integration is a GitHub application you can install by 
 The Pulumi GitHub application is installed into a specific GitHub organization, and you can
 configure it to only be used by certain repositories.
 
-![Installation Page](/images/github-app/installation.png){:width="450px"}{:class="img-bordered"}{:class="move-right"}
-![Configuration Page](/images/github-app/org-configuration.png){:width="450px"}{:class="img-bordered"}{:class="move-right-small"}
+<img src="/images/github-app/installation.png" alt="Installation Page" width="450" class="img-bordered move-right">
+<img src="/images/github-app/org-configuration.png" alt="Configuration Page" width="450" class="img-bordered move-right">
 
 The Pulumi GitHub application does not have access to your source code. It will only report
 status on pushes / pull requests that happen for repositories it is configured to access. You can
@@ -62,12 +68,12 @@ system will have its results reported back to GitHub.
 Pulumi supports a wide array of CI/CD systems, and the Pulumi GitHub App should pick up your changes
 automatically. For instructions for specific CI services, see one of our existing guides:
 
-* [AWS Code Services](./cd-aws-code-services.html)
-* [Azure DevOps](./cd-azure-devops.html)
-* [CircleCI](./cd-circleci.html)
-* [GitHub Actions](./cd-github-actions.html)
-* [GitLab CI](./cd-gitlab-ci.html)
-* [Travis](./cd-travis.html)
+* [AWS Code Services]({{< relref "cd-aws-code-services.md" >}})
+* [Azure DevOps]({{< relref "cd-azure-devops.md" >}})
+* [CircleCI]({{< relref "cd-circleci.md" >}})
+* [GitHub Actions]({{< relref "cd-github-actions.md" >}})
+* [GitLab CI]({{< relref "cd-gitlab-ci.md" >}})
+* [Travis]({{< relref "cd-travis.md" >}})
 
 If you are using a system we don't support yet, please [file an issue](https://github.com/pulumi/pulumi/issues/new)
 so we can add it.
@@ -89,13 +95,13 @@ commit check by "Code" tab's "Commits" page, and then clicking the ✅ or ❌ ic
 
 For Pull Requests, you can see the checks on the "Checks" tab as well.
 
-![GitHub Checks Tab](/images/github-app/checks.png){:width="600px"}{:class="img-bordered"}{:class="move-right"}
+<img src="/images/github-app/checks.png" alt="GitHub Checks Tab" width="600" class="img-bordered move-right">
 
 Every stack that was impacted by the CI job is then listed in the left.
 
-![GitHub Check Result](/images/github-app/checks-detail.png){:width="600px"}{:class="img-bordered"}{:class="move-right"}
+<img src="/images/github-app/checks-detail.png" alt="GitHub Check Result" width="600" class="img-bordered move-right">
 
 If the CI build originated from a pull request, e.g. the Travis CI job had type `pull_request`,
 then the results will be placed as a comment on the Pull Request as well.
 
-![Comment on Pull Request](/images/github-app/pr-comment.png){:width="600px"}{:class="img-bordered"}{:class="move-right"}
+<img src="/images/github-app/pr-comment.png" alt="Comment on Pull Request" width="600" class="img-bordered move-right">

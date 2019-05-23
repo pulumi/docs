@@ -1,5 +1,11 @@
 ---
 title: State and Backends
+aliases: ["state.html"]
+expanded_url: /reference/concepts/
+menu:
+  reference:
+    parent: concepts
+    weight: 7
 ---
 
 Pulumi stores its own copy of the current state of your infrastructure. This is often simply called _state_, and is
@@ -33,12 +39,12 @@ corrupt your infrastructure state when using Pulumi in a team environment. It al
 
 The app.pulumi.com architecture can be visualized as follows:
 
-![Pulumi SaaS Architecture](/images/reference/state_saas.png){:class="img-bordered"}
+<img src="/images/reference/state_saas.png" alt="Pulumi SaaS Architecture" class="img-bordered">
 
 The Pulumi Enterprise product offers self-hosting options for the web backend, if you wish to use these features
 without depending on app.pulumi.com. The Enterprise web architecture looks like the following:
 
-![Pulumi Enterprise Architecture](/images/reference/state_enterprise.png){:class="img-bordered"}
+<img src="/images/reference/state_enterprise.png" alt="Pulumi Enterprise Architecture" class="img-bordered">
 
 For more information on Pulumi Enterprise, please [contact us](https://www.pulumi.com/pricing/#contact).
 
@@ -65,7 +71,7 @@ access token. If this is your first time using the service, you will need to aut
 If you wish to get a token manually, or view your generated tokens, you may go to https://app.pulumi.com/account/tokens.
 This page will show you all past tokens, when they were last used, and allow you to revoke them:
 
-![Pulumi.com Tokens Page](/images/reference/state_tokens.png){:class="img-bordered"}
+<img src="/images/reference/state_tokens.png" alt="Pulumi.com Tokens Page" class="img-bordered">
 
 After logging in, state will automatically get persisted with the service, and from time to time, you will see
 a helpful URL to your update or stack pages. You can always go there to see a full history of updates.

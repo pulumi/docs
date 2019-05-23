@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="settings">
 <h1>settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">

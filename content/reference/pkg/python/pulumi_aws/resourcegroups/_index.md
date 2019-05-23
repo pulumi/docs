@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.resourcegroups">
 <span id="resourcegroups"></span><h1>resourcegroups<a class="headerlink" href="#module-pulumi_aws.resourcegroups" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

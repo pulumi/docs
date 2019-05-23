@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.servicefabric">
 <span id="servicefabric"></span><h1>servicefabric<a class="headerlink" href="#module-pulumi_azure.servicefabric" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

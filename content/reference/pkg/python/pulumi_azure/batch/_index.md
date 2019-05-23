@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.batch">
 <span id="batch"></span><h1>batch<a class="headerlink" href="#module-pulumi_azure.batch" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
@@ -324,7 +327,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.batch.GetPoolResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.batch.</code><code class="descname">GetPoolResult</code><span class="sig-paren">(</span><em>account_name=None</em>, <em>auto_scales=None</em>, <em>certificates=None</em>, <em>display_name=None</em>, <em>fixed_scales=None</em>, <em>max_tasks_per_node=None</em>, <em>name=None</em>, <em>node_agent_sku_id=None</em>, <em>resource_group_name=None</em>, <em>start_task=None</em>, <em>storage_image_references=None</em>, <em>vm_size=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.batch.GetPoolResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.batch.</code><code class="descname">GetPoolResult</code><span class="sig-paren">(</span><em>account_name=None</em>, <em>auto_scales=None</em>, <em>certificates=None</em>, <em>container_configurations=None</em>, <em>display_name=None</em>, <em>fixed_scales=None</em>, <em>max_tasks_per_node=None</em>, <em>name=None</em>, <em>node_agent_sku_id=None</em>, <em>resource_group_name=None</em>, <em>start_task=None</em>, <em>storage_image_references=None</em>, <em>vm_size=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.batch.GetPoolResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getPool.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.batch.GetPoolResult.account_name">
@@ -342,6 +345,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.batch.GetPoolResult.certificates">
 <code class="descname">certificates</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.batch.GetPoolResult.certificates" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">certificate</span></code> blocks that describe the certificates installed on each compute node in the pool.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.batch.GetPoolResult.container_configurations">
+<code class="descname">container_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.batch.GetPoolResult.container_configurations" title="Permalink to this definition">¶</a></dt>
+<dd><p>The container configuration used in the pool’s VMs.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -396,7 +405,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.batch.Pool">
-<em class="property">class </em><code class="descclassname">pulumi_azure.batch.</code><code class="descname">Pool</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_name=None</em>, <em>auto_scale=None</em>, <em>certificates=None</em>, <em>display_name=None</em>, <em>fixed_scale=None</em>, <em>max_tasks_per_node=None</em>, <em>name=None</em>, <em>node_agent_sku_id=None</em>, <em>resource_group_name=None</em>, <em>start_task=None</em>, <em>stop_pending_resize_operation=None</em>, <em>storage_image_reference=None</em>, <em>vm_size=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.batch.Pool" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.batch.</code><code class="descname">Pool</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_name=None</em>, <em>auto_scale=None</em>, <em>certificates=None</em>, <em>container_configuration=None</em>, <em>display_name=None</em>, <em>fixed_scale=None</em>, <em>max_tasks_per_node=None</em>, <em>name=None</em>, <em>node_agent_sku_id=None</em>, <em>resource_group_name=None</em>, <em>start_task=None</em>, <em>stop_pending_resize_operation=None</em>, <em>storage_image_reference=None</em>, <em>vm_size=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.batch.Pool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure Batch pool.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -408,6 +417,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Batch account in which the pool will be created. Changing this forces a new resource to be created.</li>
 <li><strong>auto_scale</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">auto_scale</span></code> block that describes the scale settings when using auto scale.</li>
 <li><strong>certificates</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">certificate</span></code> blocks that describe the certificates to be installed on each compute node in the pool.</li>
+<li><strong>container_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The container configuration used in the pool’s VMs.</li>
 <li><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the display name of the Batch pool.</li>
 <li><strong>fixed_scale</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">fixed_scale</span></code> block that describes the scale settings when using fixed scale.</li>
 <li><strong>max_tasks_per_node</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the maximum number of tasks that can run concurrently on a single compute node in the pool. Defaults to <code class="docutils literal notranslate"><span class="pre">1</span></code>. Changing this forces a new resource to be created.</li>
@@ -438,6 +448,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.batch.Pool.certificates">
 <code class="descname">certificates</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.batch.Pool.certificates" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">certificate</span></code> blocks that describe the certificates to be installed on each compute node in the pool.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.batch.Pool.container_configuration">
+<code class="descname">container_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.batch.Pool.container_configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>The container configuration used in the pool’s VMs.</p>
 </dd></dl>
 
 <dl class="attribute">

@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.relay">
 <span id="relay"></span><h1>relay<a class="headerlink" href="#module-pulumi_azure.relay" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.docdb">
 <span id="docdb"></span><h1>docdb<a class="headerlink" href="#module-pulumi_aws.docdb" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
@@ -288,7 +291,7 @@ Cluster, or you may specify different Cluster Instance resources with various
 <li><strong>apply_immediately</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is<code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>auto_minor_version_upgrade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default <code class="docutils literal notranslate"><span class="pre">true</span></code>.</li>
-<li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The EC2 Availability Zone that the DB instance is created in. See <a class="reference external" href="https://docs.aws.amazon.com/AmazonDocDB/latest/APIReference/API_CreateDBInstance.html">docs</a> about the details.</li>
+<li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The EC2 Availability Zone that the DB instance is created in. See <a class="reference external" href="https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBInstance.html">docs</a> about the details.</li>
 <li><strong>cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the <cite>``aws_docdb_cluster`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html">https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html</a>&gt;`_ in which to launch this instance.</li>
 <li><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database engine to be used for the DocDB instance. Defaults to <code class="docutils literal notranslate"><span class="pre">docdb</span></code>. Valid Values: <code class="docutils literal notranslate"><span class="pre">docdb</span></code>.</li>
 <li><strong>identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The indentifier for the DocDB instance, if omitted, Terraform will assign a random, unique identifier.</li>
@@ -336,7 +339,7 @@ are applied immediately, or during the next maintenance window. Default is<code 
 <dl class="attribute">
 <dt id="pulumi_aws.docdb.ClusterInstance.availability_zone">
 <code class="descname">availability_zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.docdb.ClusterInstance.availability_zone" title="Permalink to this definition">¶</a></dt>
-<dd><p>The EC2 Availability Zone that the DB instance is created in. See <a class="reference external" href="https://docs.aws.amazon.com/AmazonDocDB/latest/APIReference/API_CreateDBInstance.html">docs</a> about the details.</p>
+<dd><p>The EC2 Availability Zone that the DB instance is created in. See <a class="reference external" href="https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBInstance.html">docs</a> about the details.</p>
 </dd></dl>
 
 <dl class="attribute">

@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_kubernetes.scheduling.v1beta1">
 <span id="v1beta1"></span><h1>v1beta1<a class="headerlink" href="#module-pulumi_kubernetes.scheduling.v1beta1" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

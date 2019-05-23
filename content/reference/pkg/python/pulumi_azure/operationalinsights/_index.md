@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.operationalinsights">
 <span id="operationalinsights"></span><h1>operationalinsights<a class="headerlink" href="#module-pulumi_azure.operationalinsights" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
