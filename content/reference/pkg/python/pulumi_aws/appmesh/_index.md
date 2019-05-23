@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.appmesh">
 <span id="appmesh"></span><h1>appmesh<a class="headerlink" href="#module-pulumi_aws.appmesh" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

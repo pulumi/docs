@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.pinpoint">
 <span id="pinpoint"></span><h1>pinpoint<a class="headerlink" href="#module-pulumi_aws.pinpoint" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

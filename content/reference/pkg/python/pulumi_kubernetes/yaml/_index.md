@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_kubernetes.yaml">
 <span id="yaml"></span><h1>yaml<a class="headerlink" href="#module-pulumi_kubernetes.yaml" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
@@ -13,7 +16,7 @@ is not specified, <code class="docutils literal notranslate"><span class="pre">C
 <li><strong>name</strong> (<em>str</em>) – A name for a resource.</li>
 <li><strong>file_id</strong> (<em>str</em>) – Path or a URL that uniquely identifies a file.</li>
 <li><strong>opts</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>ResourceOptions</em></a><em>]</em>) – A bag of optional settings that control a resource’s behavior.</li>
-<li><strong>transformations</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../helm/v2/#pulumi_kubernetes.helm.v2.List" title="pulumi_kubernetes.helm.v2.List"><em>List</em></a><em>[</em><a class="reference internal" href="../helm/v2/#pulumi_kubernetes.helm.v2.Callable" title="pulumi_kubernetes.helm.v2.Callable"><em>Callable</em></a><em>]</em><em>]</em>) – A set of transformations to apply to Kubernetes
+<li><strong>transformations</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>Callable</em><em>]</em><em>]</em>) – A set of transformations to apply to Kubernetes
 resource definitions before registering with engine.</li>
 </ul>
 </td>
@@ -467,17 +470,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </table>
 </dd></dl>
 
-</dd></dl>
-
-<dl class="class">
-<dt id="pulumi_kubernetes.yaml.Callable">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.yaml.</code><code class="descname">Callable</code><a class="headerlink" href="#pulumi_kubernetes.yaml.Callable" title="Permalink to this definition">¶</a></dt>
-<dd><p>Callable type; Callable[[int], str] is a function of (int) -&gt; str.</p>
-<p>The subscription syntax must always be used with exactly two
-values: the argument list and the return type.  The argument list
-must be a list of types or ellipsis; the return type must be a single type.</p>
-<p>There is no syntax to indicate optional or keyword arguments,
-such function types are rarely used as callback types.</p>
 </dd></dl>
 
 <dl class="class">
@@ -1422,11 +1414,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
-<dt id="pulumi_kubernetes.yaml.Dict">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.yaml.</code><code class="descname">Dict</code><a class="headerlink" href="#pulumi_kubernetes.yaml.Dict" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="class">
 <dt id="pulumi_kubernetes.yaml.Endpoints">
 <em class="property">class </em><code class="descclassname">pulumi_kubernetes.yaml.</code><code class="descname">Endpoints</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>metadata=None</em>, <em>subsets=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.yaml.Endpoints" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="docutils">
@@ -2067,11 +2054,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 </dd></dl>
-
-<dl class="class">
-<dt id="pulumi_kubernetes.yaml.List">
-<em class="property">class </em><code class="descclassname">pulumi_kubernetes.yaml.</code><code class="descname">List</code><a class="headerlink" href="#pulumi_kubernetes.yaml.List" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_kubernetes.yaml.LocalSubjectAccessReview">

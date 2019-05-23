@@ -1,12 +1,18 @@
 ---
 title: "How Pulumi Works"
+aliases: ["how.html"]
+expanded_url: /reference/concepts/
+menu:
+  reference:
+    parent: concepts
+    weight: 6
 ---
 
-When a Pulumi program is deployed via `pulumi up`, there are a few processes involved. The _language host_ launches Node or Python and observes the running program. The host interacts with the Pulumi _engine_, which is the part of the CLI that determines which resource changes to make (if any). Any resource changes are then executed via an underlying _provider_, such as [AWS](./aws.html), [Azure](./azure.html), [Kubernetes](./kubernetes.html), and so on. The engine connects to pulumi.com to retrieve the stack's _checkpoint_, which stores the last known state of provisioned resources. 
+When a Pulumi program is deployed via `pulumi up`, there are a few processes involved. The _language host_ launches Node or Python and observes the running program. The host interacts with the Pulumi _engine_, which is the part of the CLI that determines which resource changes to make (if any). Any resource changes are then executed via an underlying _provider_, such as [AWS]({{< relref "/quickstart/aws" >}}), [Azure]({{< relref "/quickstart/azure" >}}), [Kubernetes]({{< relref "/quickstart/kubernetes" >}}), and so on. The engine connects to pulumi.com to retrieve the stack's _checkpoint_, which stores the last known state of provisioned resources. 
 
 During program execution, whenever there is a resource creation statement (via `new Resource()` in JavaScript or `Resource(...)` in Python), the resource is registered with the engine. This does not necessarily mean that a new resource should be created, it simply means that the program intends for the resource to exist. Using the last state in the checkpoint stored on pulumi.com, the engine determines which requests it should make to the underlying _provider_ in order to create, delete, or replace the resource. At the end the program execution, if a particular resource _R_ is never registered, the engine will make a delete request to the resource provider. The following diagram illustrates the interaction between these parts of the system.
 
-![Pulumi engine and providers](../images/reference/engine-block-diagram.png){:width="600px"}
+<img src="/images/reference/engine-block-diagram.png" alt="Pulumi engine and providers" width="600">
 
 For instance, suppose we have the following Pulumi program, which creates two S3 buckets:
 

@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.codepipeline">
 <span id="codepipeline"></span><h1>codepipeline<a class="headerlink" href="#module-pulumi_aws.codepipeline" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

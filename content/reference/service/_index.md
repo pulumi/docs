@@ -1,5 +1,9 @@
 ---
 title: Teams & Collaboration
+menu:
+  reference:
+    identifier: teams
+    weight: 4
 ---
 
 [The Pulumi Cloud Console](https://app.pulumi.com) allows you to manage your stacks online. It enables
@@ -22,14 +26,14 @@ the organization associated with your account. e.g. `octocruise/my-devstack`.
 To create or select a stack in a different organization, prefix it with the organization's name
 followed by a slash. For example, `pulumi stack init acmecorp/new-service`.
 
-For more information on adding new organizations to Pulumi, see [Organizations](./orgs.html).
+For more information on adding new organizations to Pulumi, see [Organizations]({{< relref "orgs.md" >}}).
 
 ## Teams
 
 The Pulumi Cloud Console allows people to collaborate on stacks within
 an organization, including role-based access control (RBAC).
 
-For more information on the types of collaboration supported, see [Teams](./teams.html).
+For more information on the types of collaboration supported, see [Teams]({{< relref "teams.md" >}}).
 
 ## Roles and Access Controls
 
@@ -38,9 +42,9 @@ enforcing policy on who can create new stacks within an organization, or who
 can update existing stacks.
 
 For more information about organization roles, stack permissions, and how they
-are managed in the Pulumi Cloud Console, see [Roles and Access Controls](./roles-and-access-controls.html).
+are managed in the Pulumi Cloud Console, see [Roles and Access Controls]({{< relref "roles-and-access-controls.md" >}}).
 
 ## APIs and Integration
 
 The Pulumi Cloud Console exposes REST APIs so you can build custom integrations
-on top of Pulumi. See [Webhooks](./webhooks.html) for more information.
+on top of Pulumi. See [Webhooks]({{< relref "webhooks.md" >}}) for more information.

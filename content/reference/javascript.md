@@ -1,8 +1,15 @@
 ---
 title: "Node.js"
-redirect_from: "npm-packages.html"
-redirect_from: "install/configure-npm.html"
+aliases:
+    - javascript.html
+    - npm-packages.html
+    - /install/configure-npm.html
 
+expanded_url: /reference/languages/
+menu:
+  reference:
+    parent: languages
+    weight: 1
 ---
 
 Pulumi supports JavaScript programs running on Node.js.
@@ -24,13 +31,13 @@ $ mkdir myproject && cd myproject
 $ pulumi new javascript
 ```
 
-This will create a `Pulumi.yaml` [project file](./project.html), a `package.json` file for dependencies, and an `index.js` file, containing your program. The name of the directory is used as the project name in `Pulumi.yaml`.
+This will create a `Pulumi.yaml` [project file]({{< relref "project.md" >}}), a `package.json` file for dependencies, and an `index.js` file, containing your program. The name of the directory is used as the project name in `Pulumi.yaml`.
 
 ## TypeScript
 
 You can elect to write Pulumi programs in TypeScript to get additional verification and tooling benefits. As of version 0.15.0, Pulumi supports TypeScript natively so you don't need to explicitly run `tsc` on your program before running `pulumi`
 
-If you would like full control of the TypeScript build process, you can compile ahead of time, and point your package.json main entry point at the compiled JavaScript instead. If you do this, you can disable the [automatic compilation of TypeScript files](#disabiling-built-in-typescript-support).
+If you would like full control of the TypeScript build process, you can compile ahead of time, and point your package.json main entry point at the compiled JavaScript instead. If you do this, you can disable the [automatic compilation of TypeScript files](#disabling-built-in-typescript-support).
 
 The fastest way to get started with Pulumi in TypeScript, is to use a template:
 
@@ -101,9 +108,9 @@ information on additional settings, see the [TypeScript documentation for `tscon
 
 Tools like VS Code will give you completion lists, live error reporting and inline documentation help.
 
-![Pulumi TypeScript in VS Code](../images/reference/vscode.png){:width="700px"}
+<img src="/images/reference/vscode.png" alt="Pulumi TypeScript in VS Code" width="700">
 
-## Disabiling built in TypeScript support
+## Disabling built in TypeScript support
 
 When using the built in TypeScript support, Pulumi sets the following compiler settings, which may not be overridden:
 
@@ -122,6 +129,6 @@ runtime:
 ```
 
 <!-- LINKS -->
-[`pulumi.Config`]: pkg/nodejs/@pulumi/pulumi/index.html#Config
-[Using configuration values in JavaScript]: ./config.html#javascript
+[`pulumi.Config`]: {{< relref "/reference/pkg/nodejs/pulumi/pulumi#Config" >}}
+[Using configuration values in JavaScript]: {{< relref "config.md#javascript" >}}
 <!-- END LINKS -->

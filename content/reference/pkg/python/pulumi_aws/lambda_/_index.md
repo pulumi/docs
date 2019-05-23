@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.lambda_">
 <span id="lambda"></span><h1><a class="reference internal" href="#lambda">lambda</a><a class="headerlink" href="#module-pulumi_aws.lambda_" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
@@ -109,8 +112,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.lambda_.EventSourceMapping">
 <em class="property">class </em><code class="descclassname">pulumi_aws.lambda_.</code><code class="descname">EventSourceMapping</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>batch_size=None</em>, <em>enabled=None</em>, <em>event_source_arn=None</em>, <em>function_name=None</em>, <em>starting_position=None</em>, <em>starting_position_timestamp=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.EventSourceMapping" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Lambda event source mapping. This allows Lambda functions to get events from Kinesis, DynamoDB and SQS</p>
-<p>For information about Lambda and how to use it, see [What is AWS Lambda?][1]
+<dd><p>Provides a Lambda event source mapping. This allows Lambda functions to get events from Kinesis, DynamoDB and SQS.</p>
+<p>For information about Lambda and how to use it, see [What is AWS Lambda?][1].
 For information about event source mappings, see [CreateEventSourceMapping][2] in the API docs.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -642,6 +645,72 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_aws.lambda_.GetLayerVersionResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.lambda_.</code><code class="descname">GetLayerVersionResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>compatible_runtime=None</em>, <em>compatible_runtimes=None</em>, <em>created_date=None</em>, <em>description=None</em>, <em>layer_arn=None</em>, <em>layer_name=None</em>, <em>license_info=None</em>, <em>source_code_hash=None</em>, <em>source_code_size=None</em>, <em>version=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.GetLayerVersionResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getLayerVersion.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.lambda_.GetLayerVersionResult.arn">
+<code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.GetLayerVersionResult.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Amazon Resource Name (ARN) of the Lambda Layer with version.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.lambda_.GetLayerVersionResult.compatible_runtimes">
+<code class="descname">compatible_runtimes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.GetLayerVersionResult.compatible_runtimes" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of [Runtimes][1] the specific Lambda Layer version is compatible with.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.lambda_.GetLayerVersionResult.created_date">
+<code class="descname">created_date</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.GetLayerVersionResult.created_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date this resource was created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.lambda_.GetLayerVersionResult.description">
+<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.GetLayerVersionResult.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Description of the specific Lambda Layer version.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.lambda_.GetLayerVersionResult.layer_arn">
+<code class="descname">layer_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.GetLayerVersionResult.layer_arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Amazon Resource Name (ARN) of the Lambda Layer without version.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.lambda_.GetLayerVersionResult.license_info">
+<code class="descname">license_info</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.GetLayerVersionResult.license_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>License info associated with the specific Lambda Layer version.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.lambda_.GetLayerVersionResult.source_code_hash">
+<code class="descname">source_code_hash</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.GetLayerVersionResult.source_code_hash" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base64-encoded representation of raw SHA-256 sum of the zip file.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.lambda_.GetLayerVersionResult.source_code_size">
+<code class="descname">source_code_size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.GetLayerVersionResult.source_code_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>The size in bytes of the function .zip file.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.lambda_.GetLayerVersionResult.version">
+<code class="descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.GetLayerVersionResult.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>This Lamba Layer version.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.lambda_.GetLayerVersionResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.GetLayerVersionResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.lambda_.LayerVersion">
 <em class="property">class </em><code class="descclassname">pulumi_aws.lambda_.</code><code class="descname">LayerVersion</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>compatible_runtimes=None</em>, <em>description=None</em>, <em>filename=None</em>, <em>layer_name=None</em>, <em>license_info=None</em>, <em>s3_bucket=None</em>, <em>s3_key=None</em>, <em>s3_object_version=None</em>, <em>source_code_hash=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.LayerVersion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Lambda Layer Version resource. Lambda Layers allow you to reuse shared bits of code across multiple lambda functions.</p>
@@ -949,6 +1018,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Use this data source to invoke custom lambda functions as data source.
 The lambda function is invoked with <a class="reference external" href="https://docs.aws.amazon.com/lambda/latest/dg/API_Invoke.html#API_Invoke_RequestSyntax">RequestResponse</a>
 invocation type.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.lambda_.get_layer_version">
+<code class="descclassname">pulumi_aws.lambda_.</code><code class="descname">get_layer_version</code><span class="sig-paren">(</span><em>compatible_runtime=None</em>, <em>layer_name=None</em>, <em>version=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.get_layer_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides information about a Lambda Layer Version.</p>
 </dd></dl>
 
 </div>

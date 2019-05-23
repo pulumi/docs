@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_kubernetes.provider">
 <span id="provider"></span><h1>provider<a class="headerlink" href="#module-pulumi_kubernetes.provider" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.sagemaker">
 <span id="sagemaker"></span><h1>sagemaker<a class="headerlink" href="#module-pulumi_aws.sagemaker" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_gcp.compute">
 <span id="compute"></span><h1>compute<a class="headerlink" href="#module-pulumi_gcp.compute" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

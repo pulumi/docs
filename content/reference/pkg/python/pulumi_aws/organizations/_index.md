@@ -1,8 +1,11 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.organizations">
 <span id="organizations"></span><h1>organizations<a class="headerlink" href="#module-pulumi_aws.organizations" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.organizations.Account">
-<em class="property">class </em><code class="descclassname">pulumi_aws.organizations.</code><code class="descname">Account</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>email=None</em>, <em>iam_user_access_to_billing=None</em>, <em>name=None</em>, <em>role_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.organizations.Account" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.organizations.</code><code class="descname">Account</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>email=None</em>, <em>iam_user_access_to_billing=None</em>, <em>name=None</em>, <em>parent_id=None</em>, <em>role_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.organizations.Account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to create a member account in the current organization.</p>
 <blockquote>
 <div><strong>Note:</strong> Account management must be done from the organization’s master account.</div></blockquote>
@@ -17,6 +20,7 @@
 <li><strong>email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The email address of the owner to assign to the new member account. This email address must not already be associated with another AWS account.</li>
 <li><strong>iam_user_access_to_billing</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">ALLOW</span></code>, the new account enables IAM users to access account billing information if they have the required permissions. If set to <code class="docutils literal notranslate"><span class="pre">DENY</span></code>, then only the root user of the new account can access account billing information.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A friendly name for the member account.</li>
+<li><strong>parent_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Parent Organizational Unit ID or Root ID for the account. Defaults to the Organization default Root ID. A configuration must be present for this argument to perform drift detection.</li>
 <li><strong>role_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of an IAM role that Organizations automatically preconfigures in the new member account. This role trusts the master account, allowing users in the master account to assume the role, as permitted by the master account administrator. The role has administrator permissions in the new member account.</li>
 </ul>
 </td>
@@ -45,6 +49,12 @@
 <dt id="pulumi_aws.organizations.Account.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.organizations.Account.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>A friendly name for the member account.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.organizations.Account.parent_id">
+<code class="descname">parent_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.organizations.Account.parent_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parent Organizational Unit ID or Root ID for the account. Defaults to the Organization default Root ID. A configuration must be present for this argument to perform drift detection.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -95,7 +105,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.organizations.Organization">
-<em class="property">class </em><code class="descclassname">pulumi_aws.organizations.</code><code class="descname">Organization</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>aws_service_access_principals=None</em>, <em>feature_set=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.organizations.Organization" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.organizations.</code><code class="descname">Organization</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>aws_service_access_principals=None</em>, <em>enabled_policy_types=None</em>, <em>feature_set=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.organizations.Organization" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to create an organization.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -105,6 +115,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>aws_service_access_principals</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of AWS service principal names for which you want to enable integration with your organization. This is typically in the form of a URL, such as service-abbreviation.amazonaws.com. Organization must have <code class="docutils literal notranslate"><span class="pre">feature_set</span></code> set to <code class="docutils literal notranslate"><span class="pre">ALL</span></code>. For additional information, see the <a class="reference external" href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html">AWS Organizations User Guide</a>.</li>
+<li><strong>enabled_policy_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of Organizations policy types to enable in the Organization Root. Organization must have <code class="docutils literal notranslate"><span class="pre">feature_set</span></code> set to <code class="docutils literal notranslate"><span class="pre">ALL</span></code>. For additional information about valid policy types (e.g. <code class="docutils literal notranslate"><span class="pre">SERVICE_CONTROL_POLICY</span></code>), see the <a class="reference external" href="https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html">AWS Organizations API Reference</a>.</li>
 <li><strong>feature_set</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify “ALL” (default) or “CONSOLIDATED_BILLING”.</li>
 </ul>
 </td>
@@ -112,15 +123,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tbody>
 </table>
 <dl class="attribute">
+<dt id="pulumi_aws.organizations.Organization.accounts">
+<code class="descname">accounts</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.organizations.Organization.accounts" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of organization accounts (including the master account). All elements have these attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.organizations.Organization.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.organizations.Organization.arn" title="Permalink to this definition">¶</a></dt>
-<dd><p>ARN of the organization</p>
+<dd><p>ARN of the root</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.organizations.Organization.aws_service_access_principals">
 <code class="descname">aws_service_access_principals</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.organizations.Organization.aws_service_access_principals" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of AWS service principal names for which you want to enable integration with your organization. This is typically in the form of a URL, such as service-abbreviation.amazonaws.com. Organization must have <code class="docutils literal notranslate"><span class="pre">feature_set</span></code> set to <code class="docutils literal notranslate"><span class="pre">ALL</span></code>. For additional information, see the <a class="reference external" href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html">AWS Organizations User Guide</a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.organizations.Organization.enabled_policy_types">
+<code class="descname">enabled_policy_types</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.organizations.Organization.enabled_policy_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of Organizations policy types to enable in the Organization Root. Organization must have <code class="docutils literal notranslate"><span class="pre">feature_set</span></code> set to <code class="docutils literal notranslate"><span class="pre">ALL</span></code>. For additional information about valid policy types (e.g. <code class="docutils literal notranslate"><span class="pre">SERVICE_CONTROL_POLICY</span></code>), see the <a class="reference external" href="https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html">AWS Organizations API Reference</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -147,6 +170,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Identifier of the master account</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_aws.organizations.Organization.roots">
+<code class="descname">roots</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.organizations.Organization.roots" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of organization roots. All elements have these attributes:</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.organizations.Organization.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.organizations.Organization.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -169,6 +198,88 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_aws.organizations.Organization.translate_input_property">
 <code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.organizations.Organization.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.organizations.OrganizationalUnit">
+<em class="property">class </em><code class="descclassname">pulumi_aws.organizations.</code><code class="descname">OrganizationalUnit</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>parent_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.organizations.OrganizationalUnit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a resource to create an organizational unit.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the organizational unit</li>
+<li><strong>parent_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the parent organizational unit, which may be the root</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_aws.organizations.OrganizationalUnit.accounts">
+<code class="descname">accounts</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.organizations.OrganizationalUnit.accounts" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of child accounts for this Organizational Unit. Does not return account information for child Organizational Units. All elements have these attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.organizations.OrganizationalUnit.arn">
+<code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.organizations.OrganizationalUnit.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>ARN of the organizational unit</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.organizations.OrganizationalUnit.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.organizations.OrganizationalUnit.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name for the organizational unit</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.organizations.OrganizationalUnit.parent_id">
+<code class="descname">parent_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.organizations.OrganizationalUnit.parent_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>ID of the parent organizational unit, which may be the root</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.organizations.OrganizationalUnit.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.organizations.OrganizationalUnit.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.organizations.OrganizationalUnit.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.organizations.OrganizationalUnit.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <table class="docutils field-list" frame="void" rules="none">

@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.globalaccelerator">
 <span id="globalaccelerator"></span><h1>globalaccelerator<a class="headerlink" href="#module-pulumi_aws.globalaccelerator" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

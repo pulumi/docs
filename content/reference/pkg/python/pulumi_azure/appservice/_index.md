@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.appservice">
 <span id="appservice"></span><h1>appservice<a class="headerlink" href="#module-pulumi_azure.appservice" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
@@ -676,7 +679,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>app_service_environment_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the App Service Environment where the App Service Plan should be located. Changing forces a new resource to be created.</li>
-<li><strong>kind</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The kind of the App Service Plan to create. Possible values are <code class="docutils literal notranslate"><span class="pre">Windows</span></code> (also available as <code class="docutils literal notranslate"><span class="pre">App</span></code>), <code class="docutils literal notranslate"><span class="pre">Linux</span></code> and <code class="docutils literal notranslate"><span class="pre">FunctionApp</span></code> (for a Consumption Plan). Defaults to <code class="docutils literal notranslate"><span class="pre">Windows</span></code>. Changing this forces a new resource to be created.</li>
+<li><strong>kind</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The kind of the App Service Plan to create. Possible values are <code class="docutils literal notranslate"><span class="pre">Windows</span></code> (also available as <code class="docutils literal notranslate"><span class="pre">App</span></code>), <code class="docutils literal notranslate"><span class="pre">Linux</span></code>, <code class="docutils literal notranslate"><span class="pre">elastic</span></code> (for Premium Consumption) and <code class="docutils literal notranslate"><span class="pre">FunctionApp</span></code> (for a Consumption Plan). Defaults to <code class="docutils literal notranslate"><span class="pre">Windows</span></code>. Changing this forces a new resource to be created.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the App Service Plan component. Changing this forces a new resource to be created.</li>
 <li><strong>per_site_scaling</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Can Apps assigned to this App Service Plan be scaled independently? If set to <code class="docutils literal notranslate"><span class="pre">false</span></code> apps assigned to this plan will scale to all instances of the plan.  Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
@@ -698,7 +701,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.appservice.Plan.kind">
 <code class="descname">kind</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.Plan.kind" title="Permalink to this definition">¶</a></dt>
-<dd><p>The kind of the App Service Plan to create. Possible values are <code class="docutils literal notranslate"><span class="pre">Windows</span></code> (also available as <code class="docutils literal notranslate"><span class="pre">App</span></code>), <code class="docutils literal notranslate"><span class="pre">Linux</span></code> and <code class="docutils literal notranslate"><span class="pre">FunctionApp</span></code> (for a Consumption Plan). Defaults to <code class="docutils literal notranslate"><span class="pre">Windows</span></code>. Changing this forces a new resource to be created.</p>
+<dd><p>The kind of the App Service Plan to create. Possible values are <code class="docutils literal notranslate"><span class="pre">Windows</span></code> (also available as <code class="docutils literal notranslate"><span class="pre">App</span></code>), <code class="docutils literal notranslate"><span class="pre">Linux</span></code>, <code class="docutils literal notranslate"><span class="pre">elastic</span></code> (for Premium Consumption) and <code class="docutils literal notranslate"><span class="pre">FunctionApp</span></code> (for a Consumption Plan). Defaults to <code class="docutils literal notranslate"><span class="pre">Windows</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -896,6 +899,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.appservice.Slot.site_config">
 <code class="descname">site_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.Slot.site_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">site_config</span></code> object as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.Slot.site_credential">
+<code class="descname">site_credential</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.Slot.site_credential" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">site_credential</span></code> block as defined below, which contains the site-level credentials used to publish to this App Service.</p>
 </dd></dl>
 
 <dl class="attribute">

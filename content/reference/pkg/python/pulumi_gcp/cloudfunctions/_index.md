@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_gcp.cloudfunctions">
 <span id="cloudfunctions"></span><h1>cloudfunctions<a class="headerlink" href="#module-pulumi_gcp.cloudfunctions" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

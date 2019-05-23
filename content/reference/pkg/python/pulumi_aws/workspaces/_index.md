@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.workspaces">
 <span id="workspaces"></span><h1>workspaces<a class="headerlink" href="#module-pulumi_aws.workspaces" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

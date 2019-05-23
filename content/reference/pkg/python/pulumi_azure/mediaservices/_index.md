@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.mediaservices">
 <span id="mediaservices"></span><h1>mediaservices<a class="headerlink" href="#module-pulumi_azure.mediaservices" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

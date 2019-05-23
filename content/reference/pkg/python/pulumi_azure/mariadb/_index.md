@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.mariadb">
 <span id="mariadb"></span><h1>mariadb<a class="headerlink" href="#module-pulumi_azure.mariadb" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_gcp.tpu">
 <span id="tpu"></span><h1>tpu<a class="headerlink" href="#module-pulumi_gcp.tpu" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

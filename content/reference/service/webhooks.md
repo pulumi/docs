@@ -1,5 +1,10 @@
 ---
 title: Pulumi Webhooks
+aliases: ["webhooks.html"]
+menu:
+  reference:
+    parent: teams
+    weight: 5
 ---
 
 Webhooks allow you to build applications that will be notified when events
@@ -51,14 +56,14 @@ changes.
 
 The webhooks management page is on the stack or organization SETTINGS tab.
 
-![Organization webhooks](../../images/reference/service/webhooks/org-webhooks.png)
+![Organization webhooks](/images/reference/service/webhooks/org-webhooks.png)
 
 ### Creation
 
 Creating a new webhook is simply a matter of providing a _display name_, _webhook
 URL_, and an optional _shared secret_.
 
-![Stack webhooks](../../images/reference/service/webhooks/stack-webhooks.png)
+![Stack webhooks](/images/reference/service/webhooks/stack-webhooks.png)
 
 If a shared secret is provided, then webhook deliveries will contain a signature
 in the request header that can be used to authenticate messages as coming from
@@ -106,7 +111,7 @@ Payloads also contain several headers.
 The following snippets show how to compute and verify the webhook signature.
 For examples in other languages, see [danharper/hmac-examples](https://github.com/danharper/hmac-examples).
 
-{% include langchoose.html %}
+{{< langchoose >}}
 
 ```javascript
 var crypto = require('crypto');

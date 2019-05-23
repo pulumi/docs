@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_packet">
 <span id="pulumi-packet"></span><h1>Pulumi Packet<a class="headerlink" href="#module-pulumi_packet" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

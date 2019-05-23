@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_openstack.images">
 <span id="images"></span><h1>images<a class="headerlink" href="#module-pulumi_openstack.images" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

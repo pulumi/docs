@@ -1,5 +1,11 @@
 ---
 title: "Projects"
+aliases: ["project.html"]
+expanded_url: /reference/concepts/
+menu:
+  reference:
+    parent: concepts
+    weight: 2
 ---
 
 A Pulumi project is any folder which contains a `Pulumi.yaml` file.  When in a subfolder, the closest enclosing folder with a `Pulumi.yaml` file determines the current project.  A new project can be created with `pulumi new`.  A project specifies which runtime to use, which determines where to look for the program that should be executed during deployments.  Currently, `nodejs` and `python` are supported runtimes.
@@ -39,7 +45,7 @@ When using JavaScript, the working directory for the project should contain a `p
 
 When your Pulumi program references resources in the local filesystem, they are always relative to the working directory. For example, the following code references a subfolder `app` of the working directory, that contains a `Dockerfile`:
 
-```js
+```javascript
 const myTask = new cloud.Task("myTask", {
     build: "./app", // subfolder of working directory
     ...
@@ -48,4 +54,4 @@ const myTask = new cloud.Task("myTask", {
 
 ## Stack settings files {#stack-settings-file}
 
-Each stack that is created in a project will have a file named `Pulumi.<stackname>.yaml` which contains the configuration specific to this stack. To learn more, see [Adding and configuring stack settings](config.html#config-stack).
+Each stack that is created in a project will have a file named `Pulumi.<stackname>.yaml` which contains the configuration specific to this stack. To learn more, see [Adding and configuring stack settings]({{< relref "config.md#config-stack" >}}).

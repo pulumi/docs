@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.logicapps">
 <span id="logicapps"></span><h1>logicapps<a class="headerlink" href="#module-pulumi_azure.logicapps" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

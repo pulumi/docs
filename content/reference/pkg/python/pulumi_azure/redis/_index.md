@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.redis">
 <span id="redis"></span><h1>redis<a class="headerlink" href="#module-pulumi_azure.redis" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
@@ -19,31 +22,37 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>maxmemory_reserved</td>
+<tr class="row-even"><td>enable_authentication</td>
+<td>true</td>
+<td>true</td>
+<td>true</td>
+</tr>
+<tr class="row-odd"><td>maxmemory_reserved</td>
 <td>2</td>
 <td>50</td>
 <td>200</td>
 </tr>
-<tr class="row-odd"><td>maxfragmentationmemory_reserved</td>
+<tr class="row-even"><td>maxfragmentationmemory_reserved</td>
 <td>2</td>
 <td>50</td>
 <td>200</td>
 </tr>
-<tr class="row-even"><td>maxmemory_delta</td>
+<tr class="row-odd"><td>maxmemory_delta</td>
 <td>2</td>
 <td>50</td>
 <td>200</td>
 </tr>
-<tr class="row-odd"><td>maxmemory_policy</td>
+<tr class="row-even"><td>maxmemory_policy</td>
 <td>volatile-lru</td>
 <td>volatile-lru</td>
 <td>volatile-lru</td>
 </tr>
 </tbody>
 </table>
-<p>_<em>Important</em>: The <code class="docutils literal notranslate"><span class="pre">maxmemory_reserved</span></code>, <code class="docutils literal notranslate"><span class="pre">maxmemory_delta</span></code> and <code class="docutils literal notranslate"><span class="pre">maxfragmentationmemory-reserved</span></code> settings are only available for Standard and Premium caches. More details are available in the Relevant Links section below._</p>
+<blockquote>
+<div><strong>NOTE:</strong> The <code class="docutils literal notranslate"><span class="pre">maxmemory_reserved</span></code>, <code class="docutils literal notranslate"><span class="pre">maxmemory_delta</span></code> and <code class="docutils literal notranslate"><span class="pre">maxfragmentationmemory-reserved</span></code> settings are only available for Standard and Premium caches. More details are available in the Relevant Links section below._</div></blockquote>
+<p>A <code class="docutils literal notranslate"><span class="pre">patch_schedule</span></code> block supports the following:</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">patch_schedule</span></code> supports the following:</li>
 <li><code class="docutils literal notranslate"><span class="pre">day_of_week</span></code> (Required) the Weekday name - possible values include <code class="docutils literal notranslate"><span class="pre">Monday</span></code>, <code class="docutils literal notranslate"><span class="pre">Tuesday</span></code>, <code class="docutils literal notranslate"><span class="pre">Wednesday</span></code> etc.</li>
 <li><code class="docutils literal notranslate"><span class="pre">start_hour_utc</span></code> - (Optional) the Start Hour for maintenance in UTC - possible values range from <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">-</span> <span class="pre">23</span></code>.</li>
 </ul>
@@ -62,7 +71,7 @@
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The size of the Redis cache to deploy. Valid values for a SKU <code class="docutils literal notranslate"><span class="pre">family</span></code> of C (Basic/Standard) are <code class="docutils literal notranslate"><span class="pre">0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6</span></code>, and for P (Premium) <code class="docutils literal notranslate"><span class="pre">family</span></code> are <code class="docutils literal notranslate"><span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4</span></code>.</li>
 <li><strong>enable_non_ssl_port</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable the non-SSL port (6789) - disabled by default.</li>
-<li><strong>family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SKU family to use. Valid values are <code class="docutils literal notranslate"><span class="pre">C</span></code> and <code class="docutils literal notranslate"><span class="pre">P</span></code>, where C = Basic/Standard, P = Premium.</li>
+<li><strong>family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SKU family/pricing group to use. Valid values are <code class="docutils literal notranslate"><span class="pre">C</span></code> (for Basic/Standard SKU family) and <code class="docutils literal notranslate"><span class="pre">P</span></code> (for <code class="docutils literal notranslate"><span class="pre">Premium</span></code>)</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location of the resource group.</li>
 <li><strong>minimum_tls_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The minimum TLS version.  Defaults to <code class="docutils literal notranslate"><span class="pre">1.0</span></code>.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Redis instance. Changing this forces a
@@ -73,7 +82,7 @@ new resource to be created.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
 create the Redis instance.</li>
 <li><strong>shard_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <em>Only available when using the Premium SKU</em> The number of Shards to create on the Redis Cluster.</li>
-<li><strong>sku_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SKU of Redis to use - can be either Basic, Standard or Premium.</li>
+<li><strong>sku_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SKU of Redis to use. Possible values are <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium</span></code>.</li>
 <li><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Subnet within which the Redis Cache should be deployed. Changing this forces a new resource to be created.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 <li><strong>zones</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A list of a single item of the Availability Zone which the Redis Cache should be allocated in.</li>
@@ -97,7 +106,7 @@ create the Redis instance.</li>
 <dl class="attribute">
 <dt id="pulumi_azure.redis.Cache.family">
 <code class="descname">family</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.redis.Cache.family" title="Permalink to this definition">¶</a></dt>
-<dd><p>The SKU family to use. Valid values are <code class="docutils literal notranslate"><span class="pre">C</span></code> and <code class="docutils literal notranslate"><span class="pre">P</span></code>, where C = Basic/Standard, P = Premium.</p>
+<dd><p>The SKU family/pricing group to use. Valid values are <code class="docutils literal notranslate"><span class="pre">C</span></code> (for Basic/Standard SKU family) and <code class="docutils literal notranslate"><span class="pre">P</span></code> (for <code class="docutils literal notranslate"><span class="pre">Premium</span></code>)</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -177,7 +186,7 @@ create the Redis instance.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.redis.Cache.sku_name">
 <code class="descname">sku_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.redis.Cache.sku_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The SKU of Redis to use - can be either Basic, Standard or Premium.</p>
+<dd><p>The SKU of Redis to use. Possible values are <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">

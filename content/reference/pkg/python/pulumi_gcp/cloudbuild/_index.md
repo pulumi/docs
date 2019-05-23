@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_gcp.cloudbuild">
 <span id="cloudbuild"></span><h1>cloudbuild<a class="headerlink" href="#module-pulumi_gcp.cloudbuild" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

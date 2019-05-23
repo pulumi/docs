@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.mssql">
 <span id="mssql"></span><h1>mssql<a class="headerlink" href="#module-pulumi_azure.mssql" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

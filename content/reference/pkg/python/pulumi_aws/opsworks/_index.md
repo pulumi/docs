@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.opsworks">
 <span id="opsworks"></span><h1>opsworks<a class="headerlink" href="#module-pulumi_aws.opsworks" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

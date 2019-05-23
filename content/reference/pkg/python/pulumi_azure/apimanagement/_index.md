@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.apimanagement">
 <span id="apimanagement"></span><h1>apimanagement<a class="headerlink" href="#module-pulumi_azure.apimanagement" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
@@ -280,6 +283,286 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_azure.apimanagement.ApiOperation.translate_input_property">
 <code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiOperation.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.apimanagement.ApiOperationPolicy">
+<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">ApiOperationPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>api_name=None</em>, <em>operation_id=None</em>, <em>resource_group_name=None</em>, <em>xml_content=None</em>, <em>xml_link=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiOperationPolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an API Management API Operation Policy</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>api_management_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the API Management Service. Changing this forces a new resource to be created.</li>
+<li><strong>api_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the API Management API Operation within the API Management Service. Changing this forces a new resource to be created.</li>
+<li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.</li>
+<li><strong>xml_content</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The XML Content for this Policy.</li>
+<li><strong>xml_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A link to a Policy XML Document, which must be publicly available.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_azure.apimanagement.ApiOperationPolicy.api_management_name">
+<code class="descname">api_management_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.ApiOperationPolicy.api_management_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the API Management Service. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.apimanagement.ApiOperationPolicy.api_name">
+<code class="descname">api_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.ApiOperationPolicy.api_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the API Management API Operation within the API Management Service. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.apimanagement.ApiOperationPolicy.resource_group_name">
+<code class="descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.ApiOperationPolicy.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.apimanagement.ApiOperationPolicy.xml_content">
+<code class="descname">xml_content</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.ApiOperationPolicy.xml_content" title="Permalink to this definition">¶</a></dt>
+<dd><p>The XML Content for this Policy.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.apimanagement.ApiOperationPolicy.xml_link">
+<code class="descname">xml_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.ApiOperationPolicy.xml_link" title="Permalink to this definition">¶</a></dt>
+<dd><p>A link to a Policy XML Document, which must be publicly available.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.apimanagement.ApiOperationPolicy.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiOperationPolicy.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.apimanagement.ApiOperationPolicy.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiOperationPolicy.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.apimanagement.ApiPolicy">
+<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">ApiPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>api_name=None</em>, <em>resource_group_name=None</em>, <em>xml_content=None</em>, <em>xml_link=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiPolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an API Management API Policy</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>api_management_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the API Management Service. Changing this forces a new resource to be created.</li>
+<li><strong>api_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the API Management API within the API Management Service. Changing this forces a new resource to be created.</li>
+<li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.</li>
+<li><strong>xml_content</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The XML Content for this Policy.</li>
+<li><strong>xml_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A link to a Policy XML Document, which must be publicly available.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_azure.apimanagement.ApiPolicy.api_management_name">
+<code class="descname">api_management_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.ApiPolicy.api_management_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the API Management Service. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.apimanagement.ApiPolicy.api_name">
+<code class="descname">api_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.ApiPolicy.api_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the API Management API within the API Management Service. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.apimanagement.ApiPolicy.resource_group_name">
+<code class="descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.ApiPolicy.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.apimanagement.ApiPolicy.xml_content">
+<code class="descname">xml_content</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.ApiPolicy.xml_content" title="Permalink to this definition">¶</a></dt>
+<dd><p>The XML Content for this Policy.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.apimanagement.ApiPolicy.xml_link">
+<code class="descname">xml_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.ApiPolicy.xml_link" title="Permalink to this definition">¶</a></dt>
+<dd><p>A link to a Policy XML Document, which must be publicly available.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.apimanagement.ApiPolicy.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiPolicy.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.apimanagement.ApiPolicy.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiPolicy.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.apimanagement.ApiSchema">
+<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">ApiSchema</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>api_name=None</em>, <em>content_type=None</em>, <em>resource_group_name=None</em>, <em>schema_id=None</em>, <em>value=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiSchema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an API Schema within an API Management Service.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>api_management_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Name of the API Management Service where the API exists. Changing this forces a new resource to be created.</li>
+<li><strong>api_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the API within the API Management Service where this API Schema should be created. Changing this forces a new resource to be created.</li>
+<li><strong>content_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The content type of the API Schema.</li>
+<li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.</li>
+<li><strong>schema_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique identifier for this API Schema. Changing this forces a new resource to be created.</li>
+<li><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The JSON escaped string defining the document representing the Schema.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_azure.apimanagement.ApiSchema.api_management_name">
+<code class="descname">api_management_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.ApiSchema.api_management_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Name of the API Management Service where the API exists. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.apimanagement.ApiSchema.api_name">
+<code class="descname">api_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.ApiSchema.api_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the API within the API Management Service where this API Schema should be created. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.apimanagement.ApiSchema.content_type">
+<code class="descname">content_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.ApiSchema.content_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The content type of the API Schema.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.apimanagement.ApiSchema.resource_group_name">
+<code class="descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.ApiSchema.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.apimanagement.ApiSchema.schema_id">
+<code class="descname">schema_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.ApiSchema.schema_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A unique identifier for this API Schema. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.apimanagement.ApiSchema.value">
+<code class="descname">value</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.ApiSchema.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>The JSON escaped string defining the document representing the Schema.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.apimanagement.ApiSchema.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiSchema.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.apimanagement.ApiSchema.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ApiSchema.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1695,6 +1978,97 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_azure.apimanagement.ProductGroup.translate_input_property">
 <code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ProductGroup.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.apimanagement.ProductPolicy">
+<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">ProductPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>api_management_name=None</em>, <em>product_id=None</em>, <em>resource_group_name=None</em>, <em>xml_content=None</em>, <em>xml_link=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ProductPolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an API Management Product Policy</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>api_management_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the API Management Service. Changing this forces a new resource to be created.</li>
+<li><strong>product_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the API Management Product within the API Management Service. Changing this forces a new resource to be created.</li>
+<li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.</li>
+<li><strong>xml_content</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The XML Content for this Policy.</li>
+<li><strong>xml_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A link to a Policy XML Document, which must be publicly available.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_azure.apimanagement.ProductPolicy.api_management_name">
+<code class="descname">api_management_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.ProductPolicy.api_management_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the API Management Service. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.apimanagement.ProductPolicy.product_id">
+<code class="descname">product_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.ProductPolicy.product_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the API Management Product within the API Management Service. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.apimanagement.ProductPolicy.resource_group_name">
+<code class="descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.ProductPolicy.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.apimanagement.ProductPolicy.xml_content">
+<code class="descname">xml_content</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.ProductPolicy.xml_content" title="Permalink to this definition">¶</a></dt>
+<dd><p>The XML Content for this Policy.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.apimanagement.ProductPolicy.xml_link">
+<code class="descname">xml_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.ProductPolicy.xml_link" title="Permalink to this definition">¶</a></dt>
+<dd><p>A link to a Policy XML Document, which must be publicly available.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.apimanagement.ProductPolicy.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ProductPolicy.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.apimanagement.ProductPolicy.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.ProductPolicy.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <table class="docutils field-list" frame="void" rules="none">

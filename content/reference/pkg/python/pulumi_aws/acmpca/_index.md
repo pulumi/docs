@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.acmpca">
 <span id="acmpca"></span><h1>acmpca<a class="headerlink" href="#module-pulumi_aws.acmpca" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

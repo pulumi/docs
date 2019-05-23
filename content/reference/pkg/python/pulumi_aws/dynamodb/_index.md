@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.dynamodb">
 <span id="dynamodb"></span><h1>dynamodb<a class="headerlink" href="#module-pulumi_aws.dynamodb" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

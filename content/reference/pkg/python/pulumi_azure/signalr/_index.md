@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.signalr">
 <span id="signalr"></span><h1>signalr<a class="headerlink" href="#module-pulumi_azure.signalr" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

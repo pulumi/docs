@@ -1,15 +1,20 @@
 ---
 title: "Changelog"
-redirect_from: /install/changelog.html
+aliases:
+    - changelog.html
+    - /install/changelog.html
+menu:
+  reference:
+    weight: 11
 ---
 
 <!-- Common links -->
-[`Output`]: /reference/pkg/nodejs/@pulumi/pulumi/index.html#Output
-[Python documentation]: ./python.html
-[Defining and setting stack settings]: ./config.html#config-stack
-[Configuration]: ./config.html
-[Pulumi npm packages]: ./javascript.html#npm-packages
-[Programming Model]: ./programming-model.html
+[`Output`]: {{< relref "/reference/pkg/nodejs/pulumi/pulumi/_index.md#Output" >}}
+[Python documentation]: {{< relref "python.md" >}}
+[Defining and setting stack settings]: {{< relref "config.md#config-stack" >}}
+[Configuration]: {{< relref "config.md" >}}
+[Pulumi npm packages]: {{< relref "javascript.md#npm-packages" >}}
+[Programming Model]: {{< relref "programming-model.md" >}}
 <!-- End common links -->
 
 ## Available versions {#all-versions}
@@ -26,202 +31,202 @@ redirect_from: /install/changelog.html
         <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01713-released-may-21-2019">0.17.13</a></th>
             <td>2019/05/21</td>
-            <td>{% include sdk-links.html version='0.17.13' %}</td>
+            <td>{{< sdk-links version="0.17.13" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01712-released-may-15-2019">0.17.12</a></th>
             <td>2019/05/15</td>
-            <td>{% include sdk-links.html version='0.17.12' %}</td>
+            <td>{{< sdk-links version="0.17.12" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01711-released-may-13-2019">0.17.11</a></th>
             <td>2019/05/13</td>
-            <td>{% include sdk-links.html version='0.17.11' %}</td>
+            <td>{{< sdk-links version="0.17.11" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01710-released-may-2-2019">0.17.10</a></th>
             <td>2019/05/02</td>
-            <td>{% include sdk-links.html version='0.17.10' %}</td>
+            <td>{{< sdk-links version="0.17.10" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0179-released-april-30-2019">0.17.9</a></th>
             <td>2019/04/30</td>
-            <td>{% include sdk-links.html version='0.17.9' %}</td>
+            <td>{{< sdk-links version="0.17.9" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0178-released-april-23-2019">0.17.8</a></th>
             <td>2019/04/23</td>
-            <td>{% include sdk-links.html version='0.17.8' %}</td>
+            <td>{{< sdk-links version="0.17.8" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0175-released-april-8-2019">0.17.5</a></th>
             <td>2019/04/08</td>
-            <td>{% include sdk-links.html version='0.17.5' %}</td>
+            <td>{{< sdk-links version="0.17.5" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0174-released-march-26-2019">0.17.4</a></th>
             <td>2019/03/26</td>
-            <td>{% include sdk-links.html version='0.17.4' %}</td>
+            <td>{{< sdk-links version="0.17.4" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0173-released-march-26-2019">0.17.3</a></th>
             <td>2019/03/26</td>
-            <td>{% include sdk-links.html version='0.17.3' %}</td>
+            <td>{{< sdk-links version="0.17.3" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0172-released-march-15-2019">0.17.2</a></th>
             <td>2019/03/15</td>
-            <td>{% include sdk-links.html version='0.17.2' %}</td>
+            <td>{{< sdk-links version="0.17.2" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0171-released-march-6-2019">0.17.1</a></th>
             <td>2019/03/06</td>
-            <td>{% include sdk-links.html version='0.17.1' %}</td>
+            <td>{{< sdk-links version="0.17.1" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0170-released-march-5-2019">0.17.0</a></th>
             <td>2019/03/05</td>
-            <td>{% include sdk-links.html version='0.17.0' %}</td>
+            <td>{{< sdk-links version="0.17.0" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01618-released-march-1-2019">0.16.18</a></th>
             <td>2019/03/01</td>
-            <td>{% include sdk-links.html version='0.16.18' %}</td>
+            <td>{{< sdk-links version="0.16.18" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01617-released-february-27th-2019">0.16.17</a></th>
             <td>2019/02/27</td>
-            <td>{% include sdk-links.html version='0.16.17' %}</td>
+            <td>{{< sdk-links version="0.16.17" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01616-released-february-24th-2019">0.16.16</a></th>
             <td>2019/02/24</td>
-            <td>{% include sdk-links.html version='0.16.16' %}</td>
+            <td>{{< sdk-links version="0.16.16" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01615-released-february-22nd-2019">0.16.15</a></th>
             <td>2019/02/22</td>
-            <td>{% include sdk-links.html version='0.16.15' %}</td>
+            <td>{{< sdk-links version="0.16.15" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/v0.16.14/CHANGELOG.md#01614-released-january-31th-2019">0.16.14</a></th>
             <td>2019/01/31</td>
-            <td>{% include sdk-links.html version='0.16.14' %}</td>
+            <td>{{< sdk-links version="0.16.14" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/v0.16.13/CHANGELOG.md#01613-released-january-31th-2019">0.16.13</a></th>
             <td>2019/01/31</td>
-            <td>{% include sdk-links.html version='0.16.13' %}</td>
+            <td>{{< sdk-links version="0.16.13" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/v0.16.12/CHANGELOG.md#01612-released-january-25th-2019">0.16.12</a></th>
             <td>2019/01/25</td>
-            <td>{% include sdk-links.html version='0.16.12' %}</td>
+            <td>{{< sdk-links version="0.16.12" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/v0.16.11/CHANGELOG.md#01611-released-january-16th-2019">0.16.11</a></th>
             <td>2019/01/16</td>
-            <td>{% include sdk-links.html version='0.16.11' %}</td>
+            <td>{{< sdk-links version="0.16.11" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/v0.16.10/CHANGELOG.md#01610-released-january-11th-2019">0.16.10</a></th>
             <td>2019/01/11</td>
-            <td>{% include sdk-links.html version='0.16.10' %}</td>
+            <td>{{< sdk-links version="0.16.10" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0169-released-december-24th-2018">0.16.9</a></th>
             <td>2018/12/24</td>
-            <td>{% include sdk-links.html version='0.16.9' %}</td>
+            <td>{{< sdk-links version="0.16.9" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/v0.16.8/CHANGELOG.md#0168-released-december-14th-2018">0.16.8</a></th>
             <td>2018/12/14</td>
-            <td>{% include sdk-links.html version='0.16.8' %}</td>
+            <td>{{< sdk-links version="0.16.8" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/v0.16.7/CHANGELOG.md#0167-released-december-5th-2018">0.16.7</a></th>
-            <td>2018/12/5</td>
-            <td>{% include sdk-links.html version='0.16.7' %}</td>
+            <td>2018/12/05</td>
+            <td>{{< sdk-links version="0.16.7" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/v0.16.6/CHANGELOG.md#0166-released-november-28th-2018">0.16.6</a></th>
             <td>2018/11/28</td>
-            <td>{% include sdk-links.html version='0.16.6' %}</td>
+            <td>{{< sdk-links version="0.16.6" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/v0.16.5/CHANGELOG.md#0165-released-november-16th-2018">0.16.5</a></th>
             <td>2018/11/16</td>
-            <td>{% include sdk-links.html version='0.16.5' %}</td>
+            <td>{{< sdk-links version="0.16.5" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="#v164">0.16.4</a></th>
             <td>2018/11/14</td>
-            <td>{% include sdk-links.html version='0.16.4' %}</td>
+            <td>{{< sdk-links version="0.16.4" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="#v163">0.16.3</a></th>
             <td>2018/10/29</td>
-            <td>{% include sdk-links.html version='0.16.3' %}</td>
+            <td>{{< sdk-links version="0.16.3" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="#v162">0.16.2</a></th>
             <td>2018/10/29</td>
-            <td>{% include sdk-links.html version='0.16.2' %}</td>
+            <td>{{< sdk-links version="0.16.2" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="#v161">0.16.1</a></th>
             <td>2018/10/23</td>
-            <td>{% include sdk-links.html version='0.16.1' %}</td>
+            <td>{{< sdk-links version="0.16.1" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="#v160">0.16.0</a></th>
             <td>2018/10/15</td>
-            <td>{% include sdk-links.html version='0.16.0' %}</td>
+            <td>{{< sdk-links version="0.16.0" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="#v154">0.15.4</a></th>
             <td>2018/09/28</td>
-            <td>{% include sdk-links.html version='0.15.3' %}</td>
+            <td>{{< sdk-links version="0.15.3" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="#v153">0.15.3</a></th>
             <td>2018/09/18</td>
-            <td>{% include sdk-links.html version='0.15.3' %}</td>
+            <td>{{< sdk-links version="0.15.3" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="#v152">0.15.2</a></th>
             <td>2018/09/11</td>
-            <td>{% include sdk-links.html version='0.15.2' %}</td>
+            <td>{{< sdk-links version="0.15.2" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="#v150">0.15.0</a></th>
             <td>2018/08/13</td>
-            <td>{% include sdk-links.html version='0.15.0' %}</td>
+            <td>{{< sdk-links version="0.15.0" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="#v143">0.14.3</a></th>
             <td>2018/07/20</td>
-            <td>{% include sdk-links.html version='0.14.3' %}</td>
+            <td>{{< sdk-links version="0.14.3" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="#v142">0.14.2</a></th>
             <td>2018/07/03</td>
-            <td>{% include sdk-links.html version='0.14.2' %}</td>
+            <td>{{< sdk-links version="0.14.2" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="#v141">0.14.1</a></th>
             <td>2018/06/29</td>
-            <td>{% include sdk-links.html version='0.14.1' %}</td>
+            <td>{{< sdk-links version="0.14.1" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="#v140">0.14.0</a></th>
             <td>2018/06/15</td>
-            <td>{% include sdk-links.html version='0.14.0' %}</td>
+            <td>{{< sdk-links version="0.14.0" >}}</td>
         </tr>
         <tr>
             <th scope="row"><a href="#v122">0.12.2</a></th>
             <td>2018/05/19</td>
-            <td>{% include sdk-links.html version='0.12.2' %}</td>
+            <td>{{< sdk-links version="0.12.2" >}}</td>
         </tr>
     </tbody>
 </table>
@@ -240,7 +245,7 @@ The full changelog is linked below.
 
 Released on November 14, 2018
 
-This release includes significant improvements to Python support in Pulumi.  Python 3.6 or greater is [now required](https://pulumi.io/reference/python.html), and Python users now get support for outputs, parallelism, improved error reporting, and Kubernetes - plus many more new and updated features.
+This release includes significant improvements to Python support in Pulumi.  Python 3.6 or greater is [now required]({{< relref "/reference/python.md" >}}), and Python users now get support for outputs, parallelism, improved error reporting, and Kubernetes - plus many more new and updated features.
 
 As part of this release, we've also started to use `CHANGELOG.md`'s in each repository to track changes between releases. You can read the individual changelogs in GitHub:
 
@@ -448,7 +453,7 @@ Providers are now able to register "ephmeral" update messages which are shown in
 
 #### Local backend
 
-The local backend (which stores your deployment's state file locally, instead of on pulumi.com) has been improved. You can now use `pulumi login --local` or `pulumi login file://<path-to-storage-root>` to select the local backend and control where state files are stored. In addition, older versions of the CLI would behave slightly differently when using the local backend vs pulumi.com, for example, some operations would not show previews before running.  This has been fixed.  When using the local backend, updates print the on disk location of the checkpoint file that was written. The local backend is covered in more detail in (here)[https://pulumi.io/reference/state.html].
+The local backend (which stores your deployment's state file locally, instead of on pulumi.com) has been improved. You can now use `pulumi login --local` or `pulumi login file://<path-to-storage-root>` to select the local backend and control where state files are stored. In addition, older versions of the CLI would behave slightly differently when using the local backend vs pulumi.com, for example, some operations would not show previews before running.  This has been fixed.  When using the local backend, updates print the on disk location of the checkpoint file that was written. The local backend is covered in more detail in (here)[{{< relref "/reference/state.md" >}}].
 
 #### `pulumi refresh`
 
@@ -593,7 +598,7 @@ stack updates and previews as part of pull requests. This allows you to see the 
 merging the code.
 
 The Pulumi GitHub application is still in preview as we work to support more CI systems and provide richer output. For information on how to install the
-GitHub application and configure it with your CI system, please [visit our documentation](https://pulumi.io/reference/cd-github.html) page.
+GitHub application and configure it with your CI system, please [visit our documentation]({{< relref "/reference/cd-github.md" >}}) page.
 
 ### @pulumi/pulumi 0.15.0
 
@@ -626,7 +631,7 @@ Kubernetes support has been brought to production-ready level of quality. Many f
 * Support for provisioning and deploying to clusters in a single program
 * Deploying Helm Charts using the `helm.v2.Chart` type
 
-To use Pulumi with Kubernetes, please [visit our Getting Started page on Kubernetes](/reference/kubernetes.html).
+To use Pulumi with Kubernetes, please [visit our Getting Started page on Kubernetes]({{< relref "/quickstart/kubernetes" >}}).
 
 ### @pulumi/openstack 0.15.0
 
@@ -905,7 +910,7 @@ With the v0.14.0 CLI release, the following packages are now available:
 
 ### @pulumi/aws-serverless v0.14.0
 
-This package is new in this release! Use it to directly manage API Gateway and Lambda resources. See the reference documentation for [@pulumi/aws-serverless](../reference/pkg/nodejs/@pulumi/aws-serverless/index.html).
+This package is new in this release! Use it to directly manage API Gateway and Lambda resources.
 
 ### @pulumi/cloud v0.14.0
 
@@ -917,7 +922,7 @@ This package is new in this release! Use it to directly manage API Gateway and L
 
 ### @pulumi/gcp v0.14.0
 
-This package is new in this release! Use it to deploy and manage resources for Google Cloud Platform. See the reference documentation for  [@pulumi/gcp](../reference/pkg/nodejs/@pulumi/gcp/index.html).
+This package is new in this release! Use it to deploy and manage resources for Google Cloud Platform. See the reference documentation for  [@pulumi/gcp]({{< relref "/reference/pkg/nodejs/pulumi/gcp" >}}).
 
 ## v0.12.2 {#v122}
 
@@ -941,10 +946,10 @@ With the v0.12.2 CLI release, we have also released the following packages:
 
 #### Added
 
--  Allow passing an existing `Role` to `serverless.Function` ([pulumi/pulumi-aws#210](https://github.com/pulumi/pulumi-aws/pull/210)). [FunctionOptions](../reference/pkg/nodejs/@pulumi/aws/serverless/index.html#FunctionOptions) now includes a `Role` property, for scenarios where you wish to use an existing `Role` or share one across multiple Lambda functions.
+-  Allow passing an existing `Role` to `serverless.Function` ([pulumi/pulumi-aws#210](https://github.com/pulumi/pulumi-aws/pull/210)). FunctionOptions now includes a `Role` property, for scenarios where you wish to use an existing `Role` or share one across multiple Lambda functions.
 
 #### Changed
--  (**Breaking**) Support configuring the paths to include in `serverless.Function` ([pulumi/pulumi-aws#210](https://github.com/pulumi/pulumi-aws/pull/210)). Previously, all files in the directory would be included in the Lambda deployment package. With this change, only the generated `__index.js` and `./node_modules` are included by default. To add other files, use the new `includePaths` property in [FunctionOptions](../reference/pkg/nodejs/@pulumi/aws/serverless/index.html#FunctionOptions).
+-  (**Breaking**) Support configuring the paths to include in `serverless.Function` ([pulumi/pulumi-aws#210](https://github.com/pulumi/pulumi-aws/pull/210)). Previously, all files in the directory would be included in the Lambda deployment package. With this change, only the generated `__index.js` and `./node_modules` are included by default. To add other files, use the new `includePaths` property in FunctionOptions.
 
 -  (**Breaking**) Rename `aws.s3.Bucket#websites` to the singular `aws.s3.Bucket#website`. ([pulumi/pulumi-aws#207](https://github.com/pulumi/pulumi-aws/pull/207)). Since this property contains only one element, it has been renamed to `website` (singular) and is no longer an array property.
 
@@ -954,7 +959,7 @@ Released on May 9, 2018
 
 ### Added
 
--  A new all-in-one installer script is now available at [https://get.pulumi.com](../).
+-  A new all-in-one installer script is now available at [https://get.pulumi.com](https://get.pulumi.com).
 
 -  Many enhancements to `pulumi new` ([pulumi/pulumi#1307](https://github.com/pulumi/pulumi/pull/1307)).  The command now interactively walks through creating everything needed to deploy a new stack, including selecting a template, providing a name, creating a stack, setting default configuration, and installing dependencies.
 
@@ -987,7 +992,7 @@ Released on April 26, 2018
 -  Add a `pulumi cancel` command ([pulumi/pulumi#1230](https://github.com/pulumi/pulumi/pull/1230)). This command cancels any in-progress operation for the current stack.
 
 ### Changed
--  (**Breaking**) Eliminate `pulumi init` requirement ([pulumi/pulumi#1226](https://github.com/pulumi/pulumi/pull/1226)). The `pulumi init` command is no longer required and should not be used for new stacks. For stacks created prior to the v0.12.0 SDK, `pulumi init` should still be run in the project directory if you are connecting to an existing stack. For new projects, stacks will be created under the currently logged in account. After upgrading the CLI, it is necessary to run `pulumi stack select`, as the location of bookkeeping files has been changed. For more information, see [Creating Stacks](../reference/stack.html#create-stack).
+-  (**Breaking**) Eliminate `pulumi init` requirement ([pulumi/pulumi#1226](https://github.com/pulumi/pulumi/pull/1226)). The `pulumi init` command is no longer required and should not be used for new stacks. For stacks created prior to the v0.12.0 SDK, `pulumi init` should still be run in the project directory if you are connecting to an existing stack. For new projects, stacks will be created under the currently logged in account. After upgrading the CLI, it is necessary to run `pulumi stack select`, as the location of bookkeeping files has been changed. For more information, see [Creating Stacks]({{< relref "/reference/stack.md#create-stack" >}}).
 
 -  (**Breaking**) Remove the explicit 'pulumi preview' command ([pulumi/pulumi#1170](https://github.com/pulumi/pulumi/pull/1170)). The `pulumi preview` output has now been merged in to the `pulumi up` command. Before an update is run, the preview is shown and you can choose whether to proceed or see more update details. To see just the preview operation, run `pulumi up --preview`.
 

@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.sns">
 <span id="sns"></span><h1>sns<a class="headerlink" href="#module-pulumi_aws.sns" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
@@ -257,7 +260,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.sns.Topic">
-<em class="property">class </em><code class="descclassname">pulumi_aws.sns.</code><code class="descname">Topic</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>application_failure_feedback_role_arn=None</em>, <em>application_success_feedback_role_arn=None</em>, <em>application_success_feedback_sample_rate=None</em>, <em>delivery_policy=None</em>, <em>display_name=None</em>, <em>http_failure_feedback_role_arn=None</em>, <em>http_success_feedback_role_arn=None</em>, <em>http_success_feedback_sample_rate=None</em>, <em>kms_master_key_id=None</em>, <em>lambda_failure_feedback_role_arn=None</em>, <em>lambda_success_feedback_role_arn=None</em>, <em>lambda_success_feedback_sample_rate=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>policy=None</em>, <em>sqs_failure_feedback_role_arn=None</em>, <em>sqs_success_feedback_role_arn=None</em>, <em>sqs_success_feedback_sample_rate=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sns.Topic" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.sns.</code><code class="descname">Topic</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>application_failure_feedback_role_arn=None</em>, <em>application_success_feedback_role_arn=None</em>, <em>application_success_feedback_sample_rate=None</em>, <em>delivery_policy=None</em>, <em>display_name=None</em>, <em>http_failure_feedback_role_arn=None</em>, <em>http_success_feedback_role_arn=None</em>, <em>http_success_feedback_sample_rate=None</em>, <em>kms_master_key_id=None</em>, <em>lambda_failure_feedback_role_arn=None</em>, <em>lambda_success_feedback_role_arn=None</em>, <em>lambda_success_feedback_sample_rate=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>policy=None</em>, <em>sqs_failure_feedback_role_arn=None</em>, <em>sqs_success_feedback_role_arn=None</em>, <em>sqs_success_feedback_sample_rate=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sns.Topic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SNS topic resource</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">&lt;endpoint&gt;_success_feedback_role_arn</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;endpoint&gt;_failure_feedback_role_arn</span></code> arguments are used to give Amazon SNS write access to use CloudWatch Logs on your behalf. The <code class="docutils literal notranslate"><span class="pre">&lt;endpoint&gt;_success_feedback_sample_rate</span></code> argument is for specifying the sample rate percentage (0-100) of successfully delivered messages. After you configure the  <code class="docutils literal notranslate"><span class="pre">&lt;endpoint&gt;_failure_feedback_role_arn</span></code> argument, then all failed message deliveries generate CloudWatch Logs.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -285,6 +288,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>sqs_failure_feedback_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IAM role for failure feedback</li>
 <li><strong>sqs_success_feedback_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM role permitted to receive success feedback for this topic</li>
 <li><strong>sqs_success_feedback_sample_rate</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Percentage of success to sample</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</li>
 </ul>
 </td>
 </tr>
@@ -402,6 +406,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.sns.Topic.sqs_success_feedback_sample_rate">
 <code class="descname">sqs_success_feedback_sample_rate</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sns.Topic.sqs_success_feedback_sample_rate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Percentage of success to sample</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.sns.Topic.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sns.Topic.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value mapping of resource tags</p>
 </dd></dl>
 
 <dl class="method">

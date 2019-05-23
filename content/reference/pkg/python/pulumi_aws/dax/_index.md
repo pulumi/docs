@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.dax">
 <span id="dax"></span><h1>dax<a class="headerlink" href="#module-pulumi_aws.dax" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

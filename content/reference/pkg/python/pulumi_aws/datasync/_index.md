@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.datasync">
 <span id="datasync"></span><h1>datasync<a class="headerlink" href="#module-pulumi_aws.datasync" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

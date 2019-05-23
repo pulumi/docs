@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.mq">
 <span id="mq"></span><h1>mq<a class="headerlink" href="#module-pulumi_aws.mq" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

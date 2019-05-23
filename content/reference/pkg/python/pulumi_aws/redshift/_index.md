@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.redshift">
 <span id="redshift"></span><h1>redshift<a class="headerlink" href="#module-pulumi_aws.redshift" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

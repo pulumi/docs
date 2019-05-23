@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.cdn">
 <span id="cdn"></span><h1>cdn<a class="headerlink" href="#module-pulumi_azure.cdn" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

@@ -1,8 +1,14 @@
 ---
 title: Organizing Projects and Stacks
+aliases: ["organizing-stacks-projects.html"]
+expanded_url: /reference/concepts/
+menu:
+  reference:
+    parent: concepts
+    weight: 5
 ---
 
-[Projects](./project.html) and [stacks](./stack.html) are intentionally flexible so that they can accommodate
+[Projects]({{< relref "project.md" >}}) and [stacks]({{< relref "stack.md" >}}) are intentionally flexible so that they can accommodate
 diverse needs across a spectrum of team, application, and infrastructure scenarios. This is very much like how Git
 repos work and, much like Git repos, there are varying approaches to organizing your code within them. That said,
 there are some clear best practices that, when followed, will ensure Pulumi works seamless for your situation. This
@@ -129,14 +135,14 @@ Pulumi project. However, most users find that a close alignment between Git repo
 structure enables seamless continuous deployment.
 
 In this model, there is a rough correspondence between a Git repo and a Pulumi project, and a Git branch and
-its associated Pulumi stack. Please read more about [how these mapping are maintained here](./cd.html).
+its associated Pulumi stack. Please read more about [how these mapping are maintained here]({{< relref "cd.md" >}}).
 
 ## Tagging Stacks
 
-Stacks have associated metadata in the form of name/value tags. You can assign custom tags to stacks (when logged into the [web backend](https://pulumi.io/reference/state.html)) to customize how stacks are listed in the [Pulumi Cloud Console](https://app.pulumi.com). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom `environment` tag to each stack, assigning a value of `production` to each production stack, `staging` to each staging stack, etc. Then in the Pulumi Cloud Console, you'll be able to group stacks by `Tag: environment`. Please read more about [how to manage stack tags here](stack.md#stack-tags).
+Stacks have associated metadata in the form of name/value tags. You can assign custom tags to stacks (when logged into the [web backend]({{< relref "state.md" >}})) to customize how stacks are listed in the [Pulumi Cloud Console](https://app.pulumi.com). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom `environment` tag to each stack, assigning a value of `production` to each production stack, `staging` to each staging stack, etc. Then in the Pulumi Cloud Console, you'll be able to group stacks by `Tag: environment`. Please read more about [how to manage stack tags here]({{< relref "stack.md#stack-tags" >}}).
 
 ## Examples
 
-See also the use of multiple projects and stacks in [Kubernetes the Prod Way](https://pulumi.io/quickstart/k8s-the-prod-way/index.html), which contains a tutorial, reference architecture, and collection of prod-first code
+See also the use of multiple projects and stacks in [Kubernetes the Prod Way]({{< relref "/quickstart/k8s-the-prod-way" >}}), which contains a tutorial, reference architecture, and collection of prod-first code
 examples that demonstrate industry best-practices for **using Kubernetes** in contexts where an
 **organization of people** must ship **production applications.** 

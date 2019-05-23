@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_f5bigip.net">
 <span id="net"></span><h1>net<a class="headerlink" href="#module-pulumi_f5bigip.net" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

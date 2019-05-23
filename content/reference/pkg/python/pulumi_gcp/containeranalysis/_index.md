@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_gcp.containeranalysis">
 <span id="containeranalysis"></span><h1>containeranalysis<a class="headerlink" href="#module-pulumi_gcp.containeranalysis" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

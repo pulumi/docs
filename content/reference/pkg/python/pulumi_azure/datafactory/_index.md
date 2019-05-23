@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.datafactory">
 <span id="datafactory"></span><h1>datafactory<a class="headerlink" href="#module-pulumi_azure.datafactory" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
@@ -489,6 +492,149 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_azure.datafactory.Factory.translate_input_property">
 <code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datafactory.Factory.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.datafactory.LinkedServiceDataLakeStorageGen2">
+<em class="property">class </em><code class="descclassname">pulumi_azure.datafactory.</code><code class="descname">LinkedServiceDataLakeStorageGen2</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>additional_properties=None</em>, <em>annotations=None</em>, <em>data_factory_name=None</em>, <em>description=None</em>, <em>integration_runtime_name=None</em>, <em>name=None</em>, <em>parameters=None</em>, <em>resource_group_name=None</em>, <em>service_principal_id=None</em>, <em>service_principal_key=None</em>, <em>tenant=None</em>, <em>url=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datafactory.LinkedServiceDataLakeStorageGen2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manage a Linked Service (connection) between Data Lake Storage Gen2 and Azure Data Factory.</p>
+<blockquote>
+<div><strong>Note:</strong> All arguments including the <code class="docutils literal notranslate"><span class="pre">service_principal_key</span></code> will be stored in the raw state as plain-text. <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>additional_properties</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of additional properties to associate with the Data Factory Linked Service MySQL.</li>
+<li><strong>annotations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of tags that can be used for describing the Data Factory Linked Service MySQL.</li>
+<li><strong>data_factory_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Data Factory name in which to associate the Linked Service with. Changing this forces a new resource.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description for the Data Factory Linked Service MySQL.</li>
+<li><strong>integration_runtime_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The integration runtime reference to associate with the Data Factory Linked Service MySQL.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies the name of the Data Factory Linked Service MySQL. Changing this forces a new resource to be created. Must be globally unique. See the <a class="reference external" href="https://docs.microsoft.com/en-us/azure/data-factory/naming-rules">Microsoft documentation</a> for all restrictions.</p>
+</li>
+<li><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of parameters to associate with the Data Factory Linked Service MySQL.</li>
+<li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Data Factory Linked Service MySQL. Changing this forces a new resource</li>
+<li><strong>service_principal_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account.</li>
+<li><strong>service_principal_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.</li>
+<li><strong>tenant</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.</li>
+<li><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoint for the Azure Data Lake Storage Gen2 service.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.LinkedServiceDataLakeStorageGen2.additional_properties">
+<code class="descname">additional_properties</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.LinkedServiceDataLakeStorageGen2.additional_properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>A map of additional properties to associate with the Data Factory Linked Service MySQL.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.LinkedServiceDataLakeStorageGen2.annotations">
+<code class="descname">annotations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.LinkedServiceDataLakeStorageGen2.annotations" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of tags that can be used for describing the Data Factory Linked Service MySQL.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.LinkedServiceDataLakeStorageGen2.data_factory_name">
+<code class="descname">data_factory_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.LinkedServiceDataLakeStorageGen2.data_factory_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Data Factory name in which to associate the Linked Service with. Changing this forces a new resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.LinkedServiceDataLakeStorageGen2.description">
+<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.LinkedServiceDataLakeStorageGen2.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description for the Data Factory Linked Service MySQL.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.LinkedServiceDataLakeStorageGen2.integration_runtime_name">
+<code class="descname">integration_runtime_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.LinkedServiceDataLakeStorageGen2.integration_runtime_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The integration runtime reference to associate with the Data Factory Linked Service MySQL.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.LinkedServiceDataLakeStorageGen2.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.LinkedServiceDataLakeStorageGen2.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of the Data Factory Linked Service MySQL. Changing this forces a new resource to be created. Must be globally unique. See the <a class="reference external" href="https://docs.microsoft.com/en-us/azure/data-factory/naming-rules">Microsoft documentation</a> for all restrictions.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.LinkedServiceDataLakeStorageGen2.parameters">
+<code class="descname">parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.LinkedServiceDataLakeStorageGen2.parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>A map of parameters to associate with the Data Factory Linked Service MySQL.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.LinkedServiceDataLakeStorageGen2.resource_group_name">
+<code class="descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.LinkedServiceDataLakeStorageGen2.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the resource group in which to create the Data Factory Linked Service MySQL. Changing this forces a new resource</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.LinkedServiceDataLakeStorageGen2.service_principal_id">
+<code class="descname">service_principal_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.LinkedServiceDataLakeStorageGen2.service_principal_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The service principal id in which to authenticate against the Azure Data Lake Storage Gen2 account.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.LinkedServiceDataLakeStorageGen2.service_principal_key">
+<code class="descname">service_principal_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.LinkedServiceDataLakeStorageGen2.service_principal_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The service principal key in which to authenticate against the Azure Data Lake Storage Gen2 account.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.LinkedServiceDataLakeStorageGen2.tenant">
+<code class="descname">tenant</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.LinkedServiceDataLakeStorageGen2.tenant" title="Permalink to this definition">¶</a></dt>
+<dd><p>The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.datafactory.LinkedServiceDataLakeStorageGen2.url">
+<code class="descname">url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datafactory.LinkedServiceDataLakeStorageGen2.url" title="Permalink to this definition">¶</a></dt>
+<dd><p>The endpoint for the Azure Data Lake Storage Gen2 service.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.datafactory.LinkedServiceDataLakeStorageGen2.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datafactory.LinkedServiceDataLakeStorageGen2.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.datafactory.LinkedServiceDataLakeStorageGen2.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datafactory.LinkedServiceDataLakeStorageGen2.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <table class="docutils field-list" frame="void" rules="none">

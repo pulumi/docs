@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_openstack.loadbalancer">
 <span id="loadbalancer"></span><h1>loadbalancer<a class="headerlink" href="#module-pulumi_openstack.loadbalancer" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

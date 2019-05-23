@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.s3">
 <span id="s3"></span><h1>s3<a class="headerlink" href="#module-pulumi_aws.s3" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

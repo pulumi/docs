@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="core">
 <h1>core<a class="headerlink" href="#core" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">

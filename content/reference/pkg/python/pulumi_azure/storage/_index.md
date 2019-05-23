@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.storage">
 <span id="storage"></span><h1>storage<a class="headerlink" href="#module-pulumi_azure.storage" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

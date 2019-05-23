@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_gcp.pubsub">
 <span id="pubsub"></span><h1>pubsub<a class="headerlink" href="#module-pulumi_gcp.pubsub" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

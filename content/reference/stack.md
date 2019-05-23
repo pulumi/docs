@@ -1,5 +1,11 @@
 ---
 title: "Stacks"
+aliases: ["stack.html"]
+expanded_url: /reference/concepts/
+menu:
+  reference:
+    parent: concepts
+    weight: 3
 ---
 
 Every Pulumi program is deployed to a **stack**.  A stack is an isolated, independently configurable
@@ -50,9 +56,9 @@ test                                      2 weeks ago              121
 
 ## Deploy a project
 
-To deploy your project to the currently selected stack, run `pulumi up`. The operation uses the latest [configuration values](config.html) for the active stack.
+To deploy your project to the currently selected stack, run `pulumi up`. The operation uses the latest [configuration values]({{< relref "config.md" >}}) for the active stack.
 
-> **Note:** Your stack can distinguish between execution for preview versus for update by using [pulumi.runtime.isDryRun()](/reference/pkg/nodejs/@pulumi/pulumi/runtime/#isDryRun).
+> **Note:** Your stack can distinguish between execution for preview versus for update by using [pulumi.runtime.isDryRun()]({{< relref "/reference/pkg/nodejs/pulumi/pulumi/runtime#isDryRun" >}}).
 
 ## View stack resources
 
@@ -82,10 +88,10 @@ Use `pulumi stack select` to change stack; `pulumi stack ls` lists known ones
 
 ## View stack outputs {#outputs}
 
-When you use top-level exports in your Pulumi [program](/reference/programming-model.html#programs), they become [stack outputs](/reference/programming-model.html#stack-outputs). Stack outputs can be viewed via `pulumi stack output` and are shown on the stack information page on pulumi.com.
+When you use top-level exports in your Pulumi [program]({{< relref "programming-model.md#programs" >}}), they become [stack outputs]({{< relref "programming-model.md#stack-outputs" >}}). Stack outputs can be viewed via `pulumi stack output` and are shown on the stack information page on pulumi.com.
 
 **JavaScript code**
-```js
+```javascript
 exports.publicDns = ...
 exports.publicIp  = ...
 ```
@@ -107,7 +113,7 @@ $ pulumi stack output publicIp
 18.218.85.197
 ```
 
-See also [Inter-Stack Dependencies](organizing-stacks-projects.html#inter-stack-dependencies), which allow one stack to reference the outputs of another stack.
+See also [Inter-Stack Dependencies]({{< relref "organizing-stacks-projects.md#inter-stack-dependencies" >}}), which allow one stack to reference the outputs of another stack.
 
 ## Import and export a stack deployment
 
@@ -131,12 +137,12 @@ To force the deletion of a stack that still contains resources --- potentially o
 
 ## Stack tags
 
-Stacks have associated metadata in the form of tags, with each tag consisting of a name and value. A set of built-in tags are automatically assigned and updated each time a stack is updated (such as `pulumi:project`, `pulumi:runtime`, `pulumi:description`, `gitHub:owner`, `gitHub:repo`, `vcs:owner`, `vcs:repo`, and `vcs:kind`). To view a stack's tags, run [`pulumi stack tag ls`](/reference/cli/pulumi_stack_tag_ls.html).
+Stacks have associated metadata in the form of tags, with each tag consisting of a name and value. A set of built-in tags are automatically assigned and updated each time a stack is updated (such as `pulumi:project`, `pulumi:runtime`, `pulumi:description`, `gitHub:owner`, `gitHub:repo`, `vcs:owner`, `vcs:repo`, and `vcs:kind`). To view a stack's tags, run [`pulumi stack tag ls`]({{< relref "/reference/cli/pulumi_stack_tag_ls.md" >}}).
 
-> **Note:** Stack tags are only supported when logged into the [web backend](https://pulumi.io/reference/state.html).
+> **Note:** Stack tags are only supported when logged into the [web backend]({{< relref "state.md" >}}).
 
-Custom tags can be assigned to a stack by running [`pulumi stack tag set <name> <value>`](/reference/cli/pulumi_stack_tag_set.html) and can be used to customize the grouping of stacks in the [Pulumi Cloud Console](https://app.pulumi.com). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom tag named `environment` to each stack. For example, running `pulumi stack tag set environment production` assigns a custom `environment` tag with a value of `production` to the active stack. Once you've assigned an `environment` tag to each stack, you'll be able to group by `Tag: environment` in the Pulumi Cloud Console.
+Custom tags can be assigned to a stack by running [`pulumi stack tag set <name> <value>`]({{< relref "/reference/cli/pulumi_stack_tag_set.md" >}}) and can be used to customize the grouping of stacks in the [Pulumi Cloud Console](https://app.pulumi.com). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom tag named `environment` to each stack. For example, running `pulumi stack tag set environment production` assigns a custom `environment` tag with a value of `production` to the active stack. Once you've assigned an `environment` tag to each stack, you'll be able to group by `Tag: environment` in the Pulumi Cloud Console.
 
 > **Note:** As a best practice, custom tags should not be prefixed with `pulumi:`, `gitHub:`, or `vcs:` to avoid conflicting with built-in tags that are assigned and updated with fresh values each time a stack is updated.
 
-Tags can be deleted by running [`pulumi stack tag rm <name>`](/reference/cli/pulumi_stack_tag_rm.html).
+Tags can be deleted by running [`pulumi stack tag rm <name>`]({{< relref "/reference/cli/pulumi_stack_tag_rm.md" >}}).

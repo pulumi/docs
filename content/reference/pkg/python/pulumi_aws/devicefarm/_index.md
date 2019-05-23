@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.devicefarm">
 <span id="devicefarm"></span><h1>devicefarm<a class="headerlink" href="#module-pulumi_aws.devicefarm" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

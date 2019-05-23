@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_gcp.endpoints">
 <span id="endpoints"></span><h1>endpoints<a class="headerlink" href="#module-pulumi_gcp.endpoints" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

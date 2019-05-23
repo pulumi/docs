@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.transfer">
 <span id="transfer"></span><h1>transfer<a class="headerlink" href="#module-pulumi_aws.transfer" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

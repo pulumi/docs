@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.msi">
 <span id="msi"></span><h1>msi<a class="headerlink" href="#module-pulumi_azure.msi" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

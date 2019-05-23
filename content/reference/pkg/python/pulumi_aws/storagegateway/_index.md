@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.storagegateway">
 <span id="storagegateway"></span><h1>storagegateway<a class="headerlink" href="#module-pulumi_aws.storagegateway" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.role">
 <span id="role"></span><h1>role<a class="headerlink" href="#module-pulumi_azure.role" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
@@ -12,7 +15,7 @@
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique UUID/GUID for this Role Assignment - one will be generated if not specified. Changing this forces a new resource to be created.</li>
-<li><strong>principal_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Principal (User or Application) to assign the Role Definition to. Changing this forces a new resource to be created.</li>
+<li><strong>principal_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Principal (User or Application) to assign the Role Definition to. Changing this forces a new resource to be created. For an application, make sure to use the “object ID” (and not the “Application ID”).</li>
 <li><strong>role_definition_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Scoped-ID of the Role Definition. Changing this forces a new resource to be created. Conflicts with <code class="docutils literal notranslate"><span class="pre">role_definition_name</span></code>.</li>
 <li><strong>role_definition_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a built-in Role. Changing this forces a new resource to be created. Conflicts with <code class="docutils literal notranslate"><span class="pre">role_definition_id</span></code>.</li>
 <li><strong>scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scope at which the Role Assignment applies too, such as <code class="docutils literal notranslate"><span class="pre">/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333</span></code>, <code class="docutils literal notranslate"><span class="pre">/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup</span></code>, or <code class="docutils literal notranslate"><span class="pre">/subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM</span></code>. Changing this forces a new resource to be created.</li>
@@ -30,7 +33,7 @@
 <dl class="attribute">
 <dt id="pulumi_azure.role.Assignment.principal_id">
 <code class="descname">principal_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.role.Assignment.principal_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of the Principal (User or Application) to assign the Role Definition to. Changing this forces a new resource to be created.</p>
+<dd><p>The ID of the Principal (User or Application) to assign the Role Definition to. Changing this forces a new resource to be created. For an application, make sure to use the “object ID” (and not the “Application ID”).</p>
 </dd></dl>
 
 <dl class="attribute">

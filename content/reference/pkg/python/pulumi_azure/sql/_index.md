@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.sql">
 <span id="sql"></span><h1>sql<a class="headerlink" href="#module-pulumi_azure.sql" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
@@ -93,7 +96,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.sql.Database">
-<em class="property">class </em><code class="descclassname">pulumi_azure.sql.</code><code class="descname">Database</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>collation=None</em>, <em>create_mode=None</em>, <em>edition=None</em>, <em>elastic_pool_name=None</em>, <em>import_=None</em>, <em>location=None</em>, <em>max_size_bytes=None</em>, <em>name=None</em>, <em>requested_service_objective_id=None</em>, <em>requested_service_objective_name=None</em>, <em>resource_group_name=None</em>, <em>restore_point_in_time=None</em>, <em>server_name=None</em>, <em>source_database_deletion_date=None</em>, <em>source_database_id=None</em>, <em>tags=None</em>, <em>threat_detection_policy=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.Database" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.sql.</code><code class="descname">Database</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>collation=None</em>, <em>create_mode=None</em>, <em>edition=None</em>, <em>elastic_pool_name=None</em>, <em>import_=None</em>, <em>location=None</em>, <em>max_size_bytes=None</em>, <em>name=None</em>, <em>read_scale=None</em>, <em>requested_service_objective_id=None</em>, <em>requested_service_objective_name=None</em>, <em>resource_group_name=None</em>, <em>restore_point_in_time=None</em>, <em>server_name=None</em>, <em>source_database_deletion_date=None</em>, <em>source_database_id=None</em>, <em>tags=None</em>, <em>threat_detection_policy=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.Database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows you to manage an Azure SQL Database</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -116,6 +119,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 :param pulumi.Input[str] location: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 :param pulumi.Input[str] max_size_bytes: The maximum size that the database can grow to. Applies only if <code class="docutils literal notranslate"><span class="pre">create_mode</span></code> is <code class="docutils literal notranslate"><span class="pre">Default</span></code>.  Please see <a class="reference external" href="https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/">Azure SQL Database Service Tiers</a>.
 :param pulumi.Input[str] name: The name of the database.
+:param pulumi.Input[bool] read_scale: Read-only connections will be redirected to a high-available replica. Please see <a class="reference external" href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-read-scale-out">Use read-only replicas to load-balance read-only query workloads</a>.
 :param pulumi.Input[str] requested_service_objective_id: Use <code class="docutils literal notranslate"><span class="pre">requested_service_objective_id</span></code> or <code class="docutils literal notranslate"><span class="pre">requested_service_objective_name</span></code> to set the performance level for the database.</p>
 <blockquote>
 <div>Please see <a class="reference external" href="https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/">Azure SQL Database Service Tiers</a>.</div></blockquote>
@@ -196,6 +200,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.sql.Database.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.Database.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the database.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.sql.Database.read_scale">
+<code class="descname">read_scale</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.Database.read_scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read-only connections will be redirected to a high-available replica. Please see <a class="reference external" href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-read-scale-out">Use read-only replicas to load-balance read-only query workloads</a>.</p>
 </dd></dl>
 
 <dl class="attribute">

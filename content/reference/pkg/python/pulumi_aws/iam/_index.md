@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.iam">
 <span id="iam"></span><h1>iam<a class="headerlink" href="#module-pulumi_aws.iam" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

@@ -1,5 +1,6 @@
 ---
 title: "Tutorial: Pulumi Components"
+aliases: ["component-tutorial.html"]
 ---
 
 It's easy to turn the [S3 website example] into a reusable [Component] that you share with your team or the community. A component is a logical container for physical cloud resources and controls how resources are grouped in the CLI and pulumi.com Console. To create a component in JavaScript, simply subclass [pulumi.ComponentResource]. 
@@ -71,9 +72,9 @@ In this tutorial, we'll create a simplified version of the example above, that j
     ```  
 
 <!-- LINKS -->
-[pulumi.ComponentResource]: pkg/nodejs/@pulumi/pulumi/index.html#ComponentResource
-[Component]: ./programming-model.html#components
+[pulumi.ComponentResource]: {{< relref "pkg/nodejs/pulumi/pulumi#ComponentResource" >}}
+[Component]: {{< relref "programming-model.md#components" >}}
 [s3-folder]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder
 [s3-folder-component]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder-component
-[S3 website example]: ../quickstart/aws-s3-website.html#pulumi-aws
+[S3 website example]: {{< relref "/quickstart/aws/tutorial-s3-website.md" >}}
 <!-- END LINKS -->

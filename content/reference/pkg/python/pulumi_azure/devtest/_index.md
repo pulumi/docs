@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.devtest">
 <span id="devtest"></span><h1>devtest<a class="headerlink" href="#module-pulumi_azure.devtest" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

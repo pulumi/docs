@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_openstack.dns">
 <span id="dns"></span><h1>dns<a class="headerlink" href="#module-pulumi_openstack.dns" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

@@ -1,5 +1,11 @@
 ---
-title: Pulumi vs. Cloud Templates (AWS CloudFormation, etc)
+title: Pulumi vs. Cloud Templates (AWS CloudFormation, etc.)
+aliases: ["cloud_templates.html"]
+menu:
+  reference:
+    parent: vs
+    name: Cloud Templates
+    weight: 2
 ---
 
 All major cloud providers offer their own form of infrastructure-as-"code" solution, typically by way of JSON or

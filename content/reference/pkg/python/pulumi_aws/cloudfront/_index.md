@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.cloudfront">
 <span id="cloudfront"></span><h1>cloudfront<a class="headerlink" href="#module-pulumi_aws.cloudfront" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

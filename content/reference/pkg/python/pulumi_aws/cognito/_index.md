@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.cognito">
 <span id="cognito"></span><h1>cognito<a class="headerlink" href="#module-pulumi_aws.cognito" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.automation">
 <span id="automation"></span><h1>automation<a class="headerlink" href="#module-pulumi_azure.automation" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
@@ -110,6 +113,104 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.automation.BoolVariable">
+<em class="property">class </em><code class="descclassname">pulumi_azure.automation.</code><code class="descname">BoolVariable</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>automation_account_name=None</em>, <em>description=None</em>, <em>encrypted=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>value=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.BoolVariable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a boolean variable in Azure Automation</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>automation_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the automation account in which the Variable is created. Changing this forces a new resource to be created.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the Automation Variable.</li>
+<li><strong>encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if the Automation Variable is encrypted. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Automation Variable. Changing this forces a new resource to be created.</li>
+<li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Automation Variable. Changing this forces a new resource to be created.</li>
+<li><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The value of the Automation Variable as a <code class="docutils literal notranslate"><span class="pre">boolean</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_azure.automation.BoolVariable.automation_account_name">
+<code class="descname">automation_account_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.BoolVariable.automation_account_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the automation account in which the Variable is created. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.automation.BoolVariable.description">
+<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.BoolVariable.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description of the Automation Variable.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.automation.BoolVariable.encrypted">
+<code class="descname">encrypted</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.BoolVariable.encrypted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies if the Automation Variable is encrypted. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.automation.BoolVariable.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.BoolVariable.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Automation Variable. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.automation.BoolVariable.resource_group_name">
+<code class="descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.BoolVariable.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the resource group in which to create the Automation Variable. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.automation.BoolVariable.value">
+<code class="descname">value</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.BoolVariable.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value of the Automation Variable as a <code class="docutils literal notranslate"><span class="pre">boolean</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.automation.BoolVariable.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.BoolVariable.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.automation.BoolVariable.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.BoolVariable.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.automation.Credential">
 <em class="property">class </em><code class="descclassname">pulumi_azure.automation.</code><code class="descname">Credential</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_name=None</em>, <em>description=None</em>, <em>name=None</em>, <em>password=None</em>, <em>resource_group_name=None</em>, <em>username=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.Credential" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Automation Credential.</p>
@@ -189,6 +290,104 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_azure.automation.Credential.translate_input_property">
 <code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.Credential.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.automation.DateTimeVariable">
+<em class="property">class </em><code class="descclassname">pulumi_azure.automation.</code><code class="descname">DateTimeVariable</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>automation_account_name=None</em>, <em>description=None</em>, <em>encrypted=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>value=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.DateTimeVariable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a date/time variable in Azure Automation</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>automation_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the automation account in which the Variable is created. Changing this forces a new resource to be created.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the Automation Variable.</li>
+<li><strong>encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if the Automation Variable is encrypted. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Automation Variable. Changing this forces a new resource to be created.</li>
+<li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Automation Variable. Changing this forces a new resource to be created.</li>
+<li><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value of the Automation Variable in the <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC3339 Section 5.6 Internet Date/Time Format</a>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_azure.automation.DateTimeVariable.automation_account_name">
+<code class="descname">automation_account_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.DateTimeVariable.automation_account_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the automation account in which the Variable is created. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.automation.DateTimeVariable.description">
+<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.DateTimeVariable.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description of the Automation Variable.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.automation.DateTimeVariable.encrypted">
+<code class="descname">encrypted</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.DateTimeVariable.encrypted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies if the Automation Variable is encrypted. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.automation.DateTimeVariable.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.DateTimeVariable.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Automation Variable. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.automation.DateTimeVariable.resource_group_name">
+<code class="descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.DateTimeVariable.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the resource group in which to create the Automation Variable. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.automation.DateTimeVariable.value">
+<code class="descname">value</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.DateTimeVariable.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value of the Automation Variable in the <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC3339 Section 5.6 Internet Date/Time Format</a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.automation.DateTimeVariable.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.DateTimeVariable.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.automation.DateTimeVariable.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.DateTimeVariable.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -378,6 +577,224 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_azure.automation.DscNodeConfiguration.translate_input_property">
 <code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.DscNodeConfiguration.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.automation.GetBoolVariableResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.automation.</code><code class="descname">GetBoolVariableResult</code><span class="sig-paren">(</span><em>automation_account_name=None</em>, <em>description=None</em>, <em>encrypted=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>value=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.GetBoolVariableResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getBoolVariable.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.automation.GetBoolVariableResult.description">
+<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.GetBoolVariableResult.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description of the Automation Variable.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.automation.GetBoolVariableResult.encrypted">
+<code class="descname">encrypted</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.GetBoolVariableResult.encrypted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies if the Automation Variable is encrypted. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.automation.GetBoolVariableResult.value">
+<code class="descname">value</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.GetBoolVariableResult.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value of the Automation Variable as a <code class="docutils literal notranslate"><span class="pre">boolean</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.automation.GetBoolVariableResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.GetBoolVariableResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.automation.GetDateTimeVariableResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.automation.</code><code class="descname">GetDateTimeVariableResult</code><span class="sig-paren">(</span><em>automation_account_name=None</em>, <em>description=None</em>, <em>encrypted=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>value=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.GetDateTimeVariableResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getDateTimeVariable.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.automation.GetDateTimeVariableResult.description">
+<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.GetDateTimeVariableResult.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description of the Automation Variable.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.automation.GetDateTimeVariableResult.encrypted">
+<code class="descname">encrypted</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.GetDateTimeVariableResult.encrypted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies if the Automation Variable is encrypted. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.automation.GetDateTimeVariableResult.value">
+<code class="descname">value</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.GetDateTimeVariableResult.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value of the Automation Variable in the <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC3339 Section 5.6 Internet Date/Time Format</a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.automation.GetDateTimeVariableResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.GetDateTimeVariableResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.automation.GetIntVariableResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.automation.</code><code class="descname">GetIntVariableResult</code><span class="sig-paren">(</span><em>automation_account_name=None</em>, <em>description=None</em>, <em>encrypted=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>value=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.GetIntVariableResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getIntVariable.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.automation.GetIntVariableResult.description">
+<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.GetIntVariableResult.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description of the Automation Variable.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.automation.GetIntVariableResult.encrypted">
+<code class="descname">encrypted</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.GetIntVariableResult.encrypted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies if the Automation Variable is encrypted. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.automation.GetIntVariableResult.value">
+<code class="descname">value</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.GetIntVariableResult.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value of the Automation Variable as a <code class="docutils literal notranslate"><span class="pre">integer</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.automation.GetIntVariableResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.GetIntVariableResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.automation.GetStringVariableResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.automation.</code><code class="descname">GetStringVariableResult</code><span class="sig-paren">(</span><em>automation_account_name=None</em>, <em>description=None</em>, <em>encrypted=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>value=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.GetStringVariableResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getStringVariable.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.automation.GetStringVariableResult.description">
+<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.GetStringVariableResult.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description of the Automation Variable.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.automation.GetStringVariableResult.encrypted">
+<code class="descname">encrypted</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.GetStringVariableResult.encrypted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies if the Automation Variable is encrypted. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.automation.GetStringVariableResult.value">
+<code class="descname">value</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.GetStringVariableResult.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value of the Automation Variable as a <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.automation.GetStringVariableResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.GetStringVariableResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.automation.IntVariable">
+<em class="property">class </em><code class="descclassname">pulumi_azure.automation.</code><code class="descname">IntVariable</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>automation_account_name=None</em>, <em>description=None</em>, <em>encrypted=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>value=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.IntVariable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a integer variable in Azure Automation</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>automation_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the automation account in which the Variable is created. Changing this forces a new resource to be created.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the Automation Variable.</li>
+<li><strong>encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if the Automation Variable is encrypted. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Automation Variable. Changing this forces a new resource to be created.</li>
+<li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Automation Variable. Changing this forces a new resource to be created.</li>
+<li><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The value of the Automation Variable as a <code class="docutils literal notranslate"><span class="pre">integer</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_azure.automation.IntVariable.automation_account_name">
+<code class="descname">automation_account_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.IntVariable.automation_account_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the automation account in which the Variable is created. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.automation.IntVariable.description">
+<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.IntVariable.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description of the Automation Variable.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.automation.IntVariable.encrypted">
+<code class="descname">encrypted</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.IntVariable.encrypted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies if the Automation Variable is encrypted. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.automation.IntVariable.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.IntVariable.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Automation Variable. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.automation.IntVariable.resource_group_name">
+<code class="descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.IntVariable.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the resource group in which to create the Automation Variable. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.automation.IntVariable.value">
+<code class="descname">value</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.IntVariable.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value of the Automation Variable as a <code class="docutils literal notranslate"><span class="pre">integer</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.automation.IntVariable.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.IntVariable.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.automation.IntVariable.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.IntVariable.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -751,6 +1168,128 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </table>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.automation.StringVariable">
+<em class="property">class </em><code class="descclassname">pulumi_azure.automation.</code><code class="descname">StringVariable</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>automation_account_name=None</em>, <em>description=None</em>, <em>encrypted=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>value=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.StringVariable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a string variable in Azure Automation</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>automation_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the automation account in which the Variable is created. Changing this forces a new resource to be created.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the Automation Variable.</li>
+<li><strong>encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if the Automation Variable is encrypted. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Automation Variable. Changing this forces a new resource to be created.</li>
+<li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Automation Variable. Changing this forces a new resource to be created.</li>
+<li><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value of the Automation Variable as a <code class="docutils literal notranslate"><span class="pre">string</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_azure.automation.StringVariable.automation_account_name">
+<code class="descname">automation_account_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.StringVariable.automation_account_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the automation account in which the Variable is created. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.automation.StringVariable.description">
+<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.StringVariable.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description of the Automation Variable.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.automation.StringVariable.encrypted">
+<code class="descname">encrypted</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.StringVariable.encrypted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies if the Automation Variable is encrypted. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.automation.StringVariable.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.StringVariable.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Automation Variable. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.automation.StringVariable.resource_group_name">
+<code class="descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.StringVariable.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the resource group in which to create the Automation Variable. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.automation.StringVariable.value">
+<code class="descname">value</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.StringVariable.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value of the Automation Variable as a <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.automation.StringVariable.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.StringVariable.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.automation.StringVariable.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.StringVariable.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.automation.get_bool_variable">
+<code class="descclassname">pulumi_azure.automation.</code><code class="descname">get_bool_variable</code><span class="sig-paren">(</span><em>automation_account_name=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.get_bool_variable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing Automation Bool Variable.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.automation.get_date_time_variable">
+<code class="descclassname">pulumi_azure.automation.</code><code class="descname">get_date_time_variable</code><span class="sig-paren">(</span><em>automation_account_name=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.get_date_time_variable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing Automation Datetime Variable.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.automation.get_int_variable">
+<code class="descclassname">pulumi_azure.automation.</code><code class="descname">get_int_variable</code><span class="sig-paren">(</span><em>automation_account_name=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.get_int_variable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing Automation Int Variable.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.automation.get_string_variable">
+<code class="descclassname">pulumi_azure.automation.</code><code class="descname">get_string_variable</code><span class="sig-paren">(</span><em>automation_account_name=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.get_string_variable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing Automation String Variable.</p>
 </dd></dl>
 
 </div>

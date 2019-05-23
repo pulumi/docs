@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.inspector">
 <span id="inspector"></span><h1>inspector<a class="headerlink" href="#module-pulumi_aws.inspector" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

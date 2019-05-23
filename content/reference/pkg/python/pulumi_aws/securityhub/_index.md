@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.securityhub">
 <span id="securityhub"></span><h1>securityhub<a class="headerlink" href="#module-pulumi_aws.securityhub" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

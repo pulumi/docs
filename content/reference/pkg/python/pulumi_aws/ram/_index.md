@@ -1,5 +1,38 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.ram">
 <span id="ram"></span><h1>ram<a class="headerlink" href="#module-pulumi_aws.ram" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="pulumi_aws.ram.GetResourceShareResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.ram.</code><code class="descname">GetResourceShareResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>filters=None</em>, <em>id=None</em>, <em>name=None</em>, <em>resource_owner=None</em>, <em>status=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ram.GetResourceShareResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getResourceShare.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.ram.GetResourceShareResult.arn">
+<code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ram.GetResourceShareResult.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Amazon Resource Name (ARN) of the resource share.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ram.GetResourceShareResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ram.GetResourceShareResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Amazon Resource Name (ARN) of the resource share.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ram.GetResourceShareResult.status">
+<code class="descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ram.GetResourceShareResult.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Status of the RAM share.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ram.GetResourceShareResult.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ram.GetResourceShareResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Tags attached to the RAM share</p>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="class">
 <dt id="pulumi_aws.ram.PrincipalAssociation">
 <em class="property">class </em><code class="descclassname">pulumi_aws.ram.</code><code class="descname">PrincipalAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>principal=None</em>, <em>resource_share_arn=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ram.PrincipalAssociation" title="Permalink to this definition">¶</a></dt>
@@ -225,6 +258,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </table>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.ram.get_resource_share">
+<code class="descclassname">pulumi_aws.ram.</code><code class="descname">get_resource_share</code><span class="sig-paren">(</span><em>filters=None</em>, <em>name=None</em>, <em>resource_owner=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ram.get_resource_share" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">aws_ram_resource_share</span></code> Retrieve information about a RAM Resource Share.</p>
 </dd></dl>
 
 </div>

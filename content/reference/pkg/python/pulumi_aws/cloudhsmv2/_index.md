@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.cloudhsmv2">
 <span id="cloudhsmv2"></span><h1>cloudhsmv2<a class="headerlink" href="#module-pulumi_aws.cloudhsmv2" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

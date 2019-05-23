@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_kubernetes.autoscaling.v2beta1">
 <span id="v2beta1"></span><h1>v2beta1<a class="headerlink" href="#module-pulumi_kubernetes.autoscaling.v2beta1" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

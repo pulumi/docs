@@ -1,8 +1,14 @@
 ---
 title: "Configuration and Secrets"
+aliases: ["config.html"]
+expanded_url: /reference/concepts/
+menu:
+  reference:
+    parent: concepts
+    weight: 4
 ---
 
-{% include mini-toc.html %}
+{{< mini-toc >}}
 
 Often, your Pulumi program will need configuration values that change independently from the program itself. For example, you may want to use a different size of AWS EC2 instance depending on whether the program is deployed to a development or production stack. 
 
@@ -12,7 +18,7 @@ For these configuration values, you can use _stack settings_. Stack settings are
 
 To add a new configuration key/value pair, use `pulumi config set <key> [value]`. 
 
-Since [Pulumi components](./programming-model.html#components) can define configuration keys, you can use a namespace with the syntax  `namespace:key`. If a namespace is not specified, the [project name] defined in `Pulumi.yaml` is used. 
+Since [Pulumi components]({{< relref "./programming-model.md#components" >}}) can define configuration keys, you can use a namespace with the syntax  `namespace:key`. If a namespace is not specified, the [project name] defined in `Pulumi.yaml` is used. 
 
 For example, if a project is named `broome-proj` and the active stack is `dev`, the following command adds the key  `broome-proj:name` to `Pulumi.dev.yaml`:
 
@@ -20,7 +26,7 @@ For example, if a project is named `broome-proj` and the active stack is `dev`, 
 $ pulumi config set name BroomeLLC
 ```
 
-To specify a particular namespace, use `config set namespace:name`. For instance, the [AWS package](./aws.html) defines the required setting `region`, which is set via `aws:region`.
+To specify a particular namespace, use `config set namespace:name`. For instance, the [AWS package]({{< relref "/quickstart/aws" >}}) defines the required setting `region`, which is set via `aws:region`.
 
 By default, configuration values are saved in plaintext. To explicitly save a setting as plaintext, use the `--plaintext` flag.
 
@@ -90,7 +96,7 @@ $ pulumi config set --secret secretValue S3cr37 # set a secret value
 
 Use the following code to access these configuration values in your Pulumi program.
 
-{% include langchoose.html %}
+{{< langchoose >}}
 
 ```javascript
 var pulumi = require("@pulumi/pulumi");
@@ -128,6 +134,6 @@ fmt.Println(c.Require("secretValue")) // prints "S3cr37"
 
 <!-- MARKDOWN LINKS -->
 
-[`Pulumi.<stack-name>.yaml`]: ./project.html#stack-settings-file
-[project name]: ./project.html#project-name
-[AWS package]: ./aws.html
+[`Pulumi.<stack-name>.yaml`]: {{< relref "project.md#stack-settings-file" >}}
+[project name]: {{< relref "project.md#project-name" >}}
+[AWS package]: {{< relref "/quickstart/aws" >}}

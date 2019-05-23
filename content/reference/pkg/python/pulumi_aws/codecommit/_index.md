@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.codecommit">
 <span id="codecommit"></span><h1>codecommit<a class="headerlink" href="#module-pulumi_aws.codecommit" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

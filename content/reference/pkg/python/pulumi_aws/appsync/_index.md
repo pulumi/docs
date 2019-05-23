@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.appsync">
 <span id="appsync"></span><h1>appsync<a class="headerlink" href="#module-pulumi_aws.appsync" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
@@ -210,7 +213,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.appsync.GraphQLApi">
-<em class="property">class </em><code class="descclassname">pulumi_aws.appsync.</code><code class="descname">GraphQLApi</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>authentication_type=None</em>, <em>log_config=None</em>, <em>name=None</em>, <em>openid_connect_config=None</em>, <em>schema=None</em>, <em>user_pool_config=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.GraphQLApi" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.appsync.</code><code class="descname">GraphQLApi</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>authentication_type=None</em>, <em>log_config=None</em>, <em>name=None</em>, <em>openid_connect_config=None</em>, <em>schema=None</em>, <em>tags=None</em>, <em>user_pool_config=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.GraphQLApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AppSync GraphQL API.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -224,6 +227,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A user-supplied name for the GraphqlApi.</li>
 <li><strong>openid_connect_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument containing OpenID Connect configuration. Defined below.</li>
 <li><strong>schema</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The schema definition, in GraphQL schema language format. Terraform cannot perform drift detection of this configuration.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 <li><strong>user_pool_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The Amazon Cognito User Pool configuration. Defined below.</li>
 </ul>
 </td>
@@ -264,6 +268,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appsync.GraphQLApi.schema">
 <code class="descname">schema</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.GraphQLApi.schema" title="Permalink to this definition">¶</a></dt>
 <dd><p>The schema definition, in GraphQL schema language format. Terraform cannot perform drift detection of this configuration.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.appsync.GraphQLApi.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.GraphQLApi.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="attribute">

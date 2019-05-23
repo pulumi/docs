@@ -1,8 +1,11 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.elasticbeanstalk">
 <span id="elasticbeanstalk"></span><h1>elasticbeanstalk<a class="headerlink" href="#module-pulumi_aws.elasticbeanstalk" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.elasticbeanstalk.Application">
-<em class="property">class </em><code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">Application</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>appversion_lifecycle=None</em>, <em>description=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Application" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">Application</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>appversion_lifecycle=None</em>, <em>description=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Application" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic Beanstalk Application Resource. Elastic Beanstalk allows
 you to deploy and manage applications in the AWS cloud without worrying about
 the infrastructure that runs those applications.</p>
@@ -17,11 +20,18 @@ the infrastructure that runs those applications.</p>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Short description of the application</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the application, must be unique within your account</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of tags for the Elastic Beanstalk Application.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<dl class="attribute">
+<dt id="pulumi_aws.elasticbeanstalk.Application.arn">
+<code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Application.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN assigned by AWS for this Elastic Beanstalk Application.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_aws.elasticbeanstalk.Application.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Application.description" title="Permalink to this definition">¶</a></dt>
@@ -32,6 +42,12 @@ the infrastructure that runs those applications.</p>
 <dt id="pulumi_aws.elasticbeanstalk.Application.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Application.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the application, must be unique within your account</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticbeanstalk.Application.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Application.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value mapping of tags for the Elastic Beanstalk Application.</p>
 </dd></dl>
 
 <dl class="method">
@@ -76,7 +92,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.elasticbeanstalk.ApplicationVersion">
-<em class="property">class </em><code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">ApplicationVersion</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>application=None</em>, <em>bucket=None</em>, <em>description=None</em>, <em>force_delete=None</em>, <em>key=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.ApplicationVersion" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">ApplicationVersion</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>application=None</em>, <em>bucket=None</em>, <em>description=None</em>, <em>force_delete=None</em>, <em>key=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.ApplicationVersion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic Beanstalk Application Version Resource. Elastic Beanstalk allows
 you to deploy and manage applications in the AWS cloud without worrying about
 the infrastructure that runs those applications.</p>
@@ -106,6 +122,7 @@ Elastic Beanstalk Application. For example &lt;revision&gt;-&lt;environment&gt;.
 by multiple Elastic Beanstalk Environments.</li>
 <li><strong>key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – S3 object that is the Application Version source bundle.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the this Application Version.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of tags for the Elastic Beanstalk Application Version.</li>
 </ul>
 </td>
 </tr>
@@ -115,6 +132,12 @@ by multiple Elastic Beanstalk Environments.</li>
 <dt id="pulumi_aws.elasticbeanstalk.ApplicationVersion.application">
 <code class="descname">application</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.ApplicationVersion.application" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the Beanstalk Application the version is associated with.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticbeanstalk.ApplicationVersion.arn">
+<code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.ApplicationVersion.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN assigned by AWS for this Elastic Beanstalk Application.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -146,6 +169,12 @@ by multiple Elastic Beanstalk Environments.</p>
 <dt id="pulumi_aws.elasticbeanstalk.ApplicationVersion.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.ApplicationVersion.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>A unique name for the this Application Version.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticbeanstalk.ApplicationVersion.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.ApplicationVersion.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value mapping of tags for the Elastic Beanstalk Application Version.</p>
 </dd></dl>
 
 <dl class="method">

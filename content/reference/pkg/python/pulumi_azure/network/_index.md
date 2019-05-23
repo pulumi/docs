@@ -1,8 +1,11 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.network">
 <span id="network"></span><h1>network<a class="headerlink" href="#module-pulumi_azure.network" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.network.ApplicationGateway">
-<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">ApplicationGateway</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>authentication_certificates=None</em>, <em>backend_address_pools=None</em>, <em>backend_http_settings=None</em>, <em>custom_error_configurations=None</em>, <em>disabled_ssl_protocols=None</em>, <em>enable_http2=None</em>, <em>frontend_ip_configurations=None</em>, <em>frontend_ports=None</em>, <em>gateway_ip_configurations=None</em>, <em>http_listeners=None</em>, <em>location=None</em>, <em>name=None</em>, <em>probes=None</em>, <em>redirect_configurations=None</em>, <em>request_routing_rules=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>ssl_certificates=None</em>, <em>tags=None</em>, <em>url_path_maps=None</em>, <em>waf_configuration=None</em>, <em>zones=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">ApplicationGateway</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>authentication_certificates=None</em>, <em>autoscale_configuration=None</em>, <em>backend_address_pools=None</em>, <em>backend_http_settings=None</em>, <em>custom_error_configurations=None</em>, <em>disabled_ssl_protocols=None</em>, <em>enable_http2=None</em>, <em>frontend_ip_configurations=None</em>, <em>frontend_ports=None</em>, <em>gateway_ip_configurations=None</em>, <em>http_listeners=None</em>, <em>location=None</em>, <em>name=None</em>, <em>probes=None</em>, <em>redirect_configurations=None</em>, <em>request_routing_rules=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>ssl_certificates=None</em>, <em>tags=None</em>, <em>url_path_maps=None</em>, <em>waf_configuration=None</em>, <em>zones=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Application Gateway.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -12,6 +15,7 @@
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>authentication_certificates</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">authentication_certificate</span></code> blocks as defined below.</li>
+<li><strong>autoscale_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">autoscale_configuration</span></code> block as defined below.</li>
 <li><strong>backend_address_pools</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">backend_address_pool</span></code> blocks as defined below.</li>
 <li><strong>backend_http_settings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">backend_http_settings</span></code> blocks as defined below.</li>
 <li><strong>custom_error_configurations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">custom_error_configuration</span></code> blocks as defined below.</li>
@@ -42,6 +46,12 @@
 <dt id="pulumi_azure.network.ApplicationGateway.authentication_certificates">
 <code class="descname">authentication_certificates</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.authentication_certificates" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">authentication_certificate</span></code> blocks as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.ApplicationGateway.autoscale_configuration">
+<code class="descname">autoscale_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.autoscale_configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">autoscale_configuration</span></code> block as defined below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1041,6 +1051,104 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_azure.network.FirewallApplicationRuleCollection.translate_input_property">
 <code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.FirewallApplicationRuleCollection.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.network.FirewallNatRuleCollection">
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">FirewallNatRuleCollection</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>action=None</em>, <em>azure_firewall_name=None</em>, <em>name=None</em>, <em>priority=None</em>, <em>resource_group_name=None</em>, <em>rules=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.FirewallNatRuleCollection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a NAT Rule Collection within an Azure Firewall.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the action the rule will apply to matching traffic. Possible values are <code class="docutils literal notranslate"><span class="pre">Dnat</span></code> and <code class="docutils literal notranslate"><span class="pre">Snat</span></code>.</li>
+<li><strong>azure_firewall_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Firewall in which the NAT Rule Collection should be created. Changing this forces a new resource to be created.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the NAT Rule Collection which must be unique within the Firewall. Changing this forces a new resource to be created.</li>
+<li><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the priority of the rule collection. Possible values are between <code class="docutils literal notranslate"><span class="pre">100</span></code> - <code class="docutils literal notranslate"><span class="pre">65000</span></code>.</li>
+<li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Resource Group in which the Firewall exists. Changing this forces a new resource to be created.</li>
+<li><strong>rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">rule</span></code> blocks as defined below.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_azure.network.FirewallNatRuleCollection.action">
+<code class="descname">action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.FirewallNatRuleCollection.action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the action the rule will apply to matching traffic. Possible values are <code class="docutils literal notranslate"><span class="pre">Dnat</span></code> and <code class="docutils literal notranslate"><span class="pre">Snat</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.FirewallNatRuleCollection.azure_firewall_name">
+<code class="descname">azure_firewall_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.FirewallNatRuleCollection.azure_firewall_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of the Firewall in which the NAT Rule Collection should be created. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.FirewallNatRuleCollection.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.FirewallNatRuleCollection.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of the NAT Rule Collection which must be unique within the Firewall. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.FirewallNatRuleCollection.priority">
+<code class="descname">priority</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.FirewallNatRuleCollection.priority" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the priority of the rule collection. Possible values are between <code class="docutils literal notranslate"><span class="pre">100</span></code> - <code class="docutils literal notranslate"><span class="pre">65000</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.FirewallNatRuleCollection.resource_group_name">
+<code class="descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.FirewallNatRuleCollection.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of the Resource Group in which the Firewall exists. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.FirewallNatRuleCollection.rules">
+<code class="descname">rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.FirewallNatRuleCollection.rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">rule</span></code> blocks as defined below.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.network.FirewallNatRuleCollection.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.FirewallNatRuleCollection.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.network.FirewallNatRuleCollection.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.FirewallNatRuleCollection.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -2961,6 +3069,96 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_azure.network.PacketCapture.translate_input_property">
 <code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.PacketCapture.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.network.Profile">
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">Profile</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>container_network_interface=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.Profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an Azure Network Profile.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Network Profile. Changing this forces a new resource to be created.</li>
+<li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the resource. Changing this forces a new resource to be created.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_azure.network.Profile.container_network_interface_ids">
+<code class="descname">container_network_interface_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.Profile.container_network_interface_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more Resource IDs of Azure Container Network Interfaces.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.Profile.location">
+<code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.Profile.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.Profile.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.Profile.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of the Network Profile. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.Profile.resource_group_name">
+<code class="descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.Profile.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the resource group in which to create the resource. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.Profile.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.Profile.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.network.Profile.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.Profile.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.network.Profile.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.Profile.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <table class="docutils field-list" frame="void" rules="none">

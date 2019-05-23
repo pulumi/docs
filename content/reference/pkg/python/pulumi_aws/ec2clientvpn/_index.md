@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.ec2clientvpn">
 <span id="ec2clientvpn"></span><h1>ec2clientvpn<a class="headerlink" href="#module-pulumi_aws.ec2clientvpn" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

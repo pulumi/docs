@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.search">
 <span id="search"></span><h1>search<a class="headerlink" href="#module-pulumi_azure.search" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

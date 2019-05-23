@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.glue">
 <span id="glue"></span><h1>glue<a class="headerlink" href="#module-pulumi_aws.glue" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
@@ -602,7 +605,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.glue.Job">
-<em class="property">class </em><code class="descclassname">pulumi_aws.glue.</code><code class="descname">Job</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allocated_capacity=None</em>, <em>command=None</em>, <em>connections=None</em>, <em>default_arguments=None</em>, <em>description=None</em>, <em>execution_property=None</em>, <em>max_retries=None</em>, <em>name=None</em>, <em>role_arn=None</em>, <em>security_configuration=None</em>, <em>timeout=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Job" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.glue.</code><code class="descname">Job</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allocated_capacity=None</em>, <em>command=None</em>, <em>connections=None</em>, <em>default_arguments=None</em>, <em>description=None</em>, <em>execution_property=None</em>, <em>max_capacity=None</em>, <em>max_retries=None</em>, <em>name=None</em>, <em>role_arn=None</em>, <em>security_configuration=None</em>, <em>timeout=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Job" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Glue Job resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -611,12 +614,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>allocated_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.</li>
+<li><strong>allocated_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <strong>DEPRECATED</strong> (Optional) The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.</li>
 <li><strong>command</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The command of the job. Defined below.</li>
 <li><strong>connections</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of connections used for this job.</li>
 <li><strong>default_arguments</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The map of default arguments for this job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes. For information about how to specify and consume your own Job arguments, see the <a class="reference external" href="http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-calling.html">Calling AWS Glue APIs in Python</a> topic in the developer guide. For information about the key-value pairs that AWS Glue consumes to set up your job, see the <a class="reference external" href="http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-glue-arguments.html">Special Parameters Used by AWS Glue</a> topic in the developer guide.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the job.</li>
 <li><strong>execution_property</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Execution property of the job. Defined below.</li>
+<li><strong>max_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs.</li>
 <li><strong>max_retries</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of times to retry this job if it fails.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the job command. Defaults to <code class="docutils literal notranslate"><span class="pre">glueetl</span></code></li>
 <li><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the IAM role associated with this job.</li>
@@ -630,7 +634,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.glue.Job.allocated_capacity">
 <code class="descname">allocated_capacity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Job.allocated_capacity" title="Permalink to this definition">¶</a></dt>
-<dd><p>The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.</p>
+<dd><p><strong>DEPRECATED</strong> (Optional) The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -661,6 +665,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.Job.execution_property">
 <code class="descname">execution_property</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Job.execution_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Execution property of the job. Defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.glue.Job.max_capacity">
+<code class="descname">max_capacity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Job.max_capacity" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs.</p>
 </dd></dl>
 
 <dl class="attribute">

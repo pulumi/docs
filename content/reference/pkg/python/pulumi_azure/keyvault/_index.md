@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.keyvault">
 <span id="keyvault"></span><h1>keyvault<a class="headerlink" href="#module-pulumi_azure.keyvault" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

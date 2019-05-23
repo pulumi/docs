@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.cfg">
 <span id="cfg"></span><h1>cfg<a class="headerlink" href="#module-pulumi_aws.cfg" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

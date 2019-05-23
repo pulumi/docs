@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.ec2transitgateway">
 <span id="ec2transitgateway"></span><h1>ec2transitgateway<a class="headerlink" href="#module-pulumi_aws.ec2transitgateway" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

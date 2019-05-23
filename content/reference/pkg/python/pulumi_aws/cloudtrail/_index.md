@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.cloudtrail">
 <span id="cloudtrail"></span><h1>cloudtrail<a class="headerlink" href="#module-pulumi_aws.cloudtrail" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

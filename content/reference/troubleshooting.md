@@ -1,8 +1,12 @@
 ---
 title: Troubleshooting & Support
+aliases: ["troubleshooting.html"]
+menu:
+  reference:
+    weight: 12
 ---
 
-{% include mini-toc.html %}
+{{< mini-toc >}}
 
 Pulumi tries very hard to ensure that your infrastructure is always in a known and predictable state.
 However, sometimes things go wrong. If you can't update your stack, or there's some other problem that is
@@ -90,7 +94,7 @@ The version information for these providers is stored in the deployment for each
 This error can occur when the deployment state for a stack already contains a newer version of a specific provider, but you are trying
 to run a `pulumi up` (or `preview`) command after downgrading the provider dependency in your pulumi program.
 
-To be more specific, the error occurs because the `pulumi` [plugin cache](https://pulumi.io/reference/cli/pulumi_plugin_ls.html) does not have the required version installed.
+To be more specific, the error occurs because the `pulumi` [plugin cache]({{< relref "cli/pulumi_plugin_ls.md" >}}) does not have the required version installed.
 This is especially more likely to occur if you are running `pulumi` in a CI/CD environment, since your plugin cache is likely not saved across builds.
 
 Please note that, it is fine to have multiple versions of a provider installed and have stacks depend on different provider version. It is only a problem when you
@@ -190,7 +194,7 @@ to manually edit the stack's existing state to fix the corruption.
 
 Note that this is an advanced operation and should be an absolute last resort.
 
-If you intend to unprotect or delete a resource, consider using the [`pulumi state`](./cli/pulumi_state.html) command to
+If you intend to unprotect or delete a resource, consider using the [`pulumi state`]({{< relref "cli/pulumi_state.md" >}}) command to
 do so instead of editing your state directly. `pulumi state` also makes surgical fixes to your state but without
 requiring you to edit the JSON representation of your stack's current state.
 

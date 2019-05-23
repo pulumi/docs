@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.budgets">
 <span id="budgets"></span><h1>budgets<a class="headerlink" href="#module-pulumi_aws.budgets" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

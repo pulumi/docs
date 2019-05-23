@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.appautoscaling">
 <span id="appautoscaling"></span><h1>appautoscaling<a class="headerlink" href="#module-pulumi_aws.appautoscaling" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

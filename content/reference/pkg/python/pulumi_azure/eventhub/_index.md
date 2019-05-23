@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azure.eventhub">
 <span id="eventhub"></span><h1>eventhub<a class="headerlink" href="#module-pulumi_azure.eventhub" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

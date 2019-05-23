@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_azuread">
 <span id="pulumi-azure-active-directory"></span><h1>Pulumi Azure Active Directory<a class="headerlink" href="#module-pulumi_azuread" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

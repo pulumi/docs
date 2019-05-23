@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.cloud9">
 <span id="cloud9"></span><h1>cloud9<a class="headerlink" href="#module-pulumi_aws.cloud9" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

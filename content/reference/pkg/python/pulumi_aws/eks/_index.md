@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.eks">
 <span id="eks"></span><h1>eks<a class="headerlink" href="#module-pulumi_aws.eks" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

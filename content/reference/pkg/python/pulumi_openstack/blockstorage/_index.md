@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_openstack.blockstorage">
 <span id="blockstorage"></span><h1>blockstorage<a class="headerlink" href="#module-pulumi_openstack.blockstorage" title="Permalink to this headline">¶</a></h1>
 <dl class="class">

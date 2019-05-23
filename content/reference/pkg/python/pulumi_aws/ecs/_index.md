@@ -1,3 +1,6 @@
+---
+---
+
 <div class="section" id="module-pulumi_aws.ecs">
 <span id="ecs"></span><h1>ecs<a class="headerlink" href="#module-pulumi_aws.ecs" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
