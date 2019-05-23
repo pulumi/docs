@@ -1,51 +1,23 @@
 ---
-layout: default_collection
 title: "How to create an AWS Elastic Container Registry (ECR) service with Pulumi"
+meta_desc: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
+meta_image: "/images/service/aws-ecr.png"
 
-cloud: "AWS"
-description: "is a fully-managed Docker container registry that makes it easy for developers to store, manage, and deploy Docker container images"
-library: "@pulumi/aws"
+aliases: ["ecr.html"]
+
 service: "ECR"
+description: "is a fully-managed Docker container registry that makes it easy for developers to store, manage, and deploy Docker container images"
+aws_here: "https://aws.amazon.com/ecr/"
 
-brand: "aws"
-og:
-    description: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
-    image: "/images/service/aws-ecr.png"
+menu:
+  aws:
+    parent: aws
+    name: ECR
 ---
 
-[AWS here]: https://aws.amazon.com/ecr/
-[Reference docs]: /reference/aws.html
-[Github @pulumi/aws]: https://github.com/pulumi/pulumi-aws 
-[Configure AWS]: /install/aws.html
+## Create an AWS ECR resource using `@pulumi/aws`
 
-This reference shows how to use Pulumi to define an {{ page.cloud }} {{ page.service }} resource using pure code which can then be deployed to {{ page.cloud }} and managed as infrastructure as code.
-
-<div class="row">
-<div class="col-md-9" markdown="1">
-
-## What is {{ page.cloud }} {{ page.service }}?
-
-<img class="how-to-logo" src="/images/brand/{{ page.brand }}.png" alt="{{ page.brand }}" width="100">
-
-{{ page.cloud }} {{ page.service }} {{ page.description }}. Find out more at [AWS here].
-
-</div>
-<div class="col-md-3 find-out-more" markdown="1">
-
-### Find out more
-
-* [Reference docs]
-* [GitHub @pulumi/aws]
-* [Configure AWS]
-
-</div>
-</div>
-
-
-
-## Create an {{ page.cloud }} {{ page.service }} resource using `{{ page.library }}`
-
-The `{{ page.library }}` library enables fine-grained control over the {{ page.cloud }} {{ page.service }} resource meaning it can be coded, deployed, and managed entirely in code. 
+The `@pulumi/aws` library enables fine-grained control over the AWS ECR resource meaning it can be coded, deployed, and managed entirely in code.
 
 ```javascript
 const aws = require("@pulumi/aws");
