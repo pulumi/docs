@@ -1,5 +1,10 @@
 ---
 title: Programs
+aliases: ["basics-programs.html"]
+menu:
+  tour:
+    parent: tour
+    weight: 1
 ---
 
 To get code to the cloud, you write Pulumi programs in your language of choice.
@@ -15,11 +20,11 @@ Pulumi programs are just like normal programs, except for a few important detail
 
 The full power of your language is available, including loops, conditionals, classes, functions, and packages.
 
-Programs express their desired state by creating [resource objects](./programs-resources.html) in code.  This
+Programs express their desired state by creating [resource objects]({{< relref "programs-resources.md" >}}) in code.  This
 communicates to Pulumi what cloud resources will be required by the program.  Here is a simple example that uses an
 [AWS S3 bucket](https://aws.amazon.com/s3/):
 
-{% include langchoose.html %}
+{{< langchoose >}}
 
 ```javascript
 var aws = require("@pulumi/aws");
@@ -52,7 +57,7 @@ func main() {
 }
 ```
 
-The `Bucket` object allocated above is called a [resource](./programs-resources.html), and it describes your program's
+The `Bucket` object allocated above is called a [resource]({{< relref "programs-resources.md" >}}), and it describes your program's
 cloud requirements so that Pulumi can create and manage them.  This is immutable infrastructure as code.
 
 ***
@@ -60,7 +65,7 @@ cloud requirements so that Pulumi can create and manage them.  This is immutable
 Next up, let's create a project to house our program.  From there, we can start deploying it!
 
 <div class="tour-nav">
-    <a class="tour-button enabled" href="index.html" title="A Tour of Pulumi">◀</a>
+    <a class="tour-button enabled" href="{{< relref "./" >}}" title="A Tour of Pulumi">◀</a>
     <span class="tour-index"><strong>2</strong>/8</span>
-    <a class="tour-button enabled" href="basics-projects.html" title="Creating a project">▶</a>
+    <a class="tour-button enabled" href="{{< relref "basics-projects.md" >}}" title="Creating a project">▶</a>
 </div>

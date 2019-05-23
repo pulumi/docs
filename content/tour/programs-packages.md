@@ -1,5 +1,11 @@
 ---
 title: Packages
+aliases: ["programs-packages.html"]
+expanded_url: /tour/programs/
+menu:
+  tour:
+    parent: programs
+    weight: 2
 ---
 
 Pulumi programs use packages just like ordinary programs.
@@ -14,31 +20,35 @@ and Kubernetes, in addition to our frameworks that aggregate these resources int
 
 These packages are installed as any ordinary package would be:
 
-{% include langchoose.html %}
+{{< langchoose >}}
 
 <div class="language-prologue-javascript"></div>
+
 ```bash
 $ npm install @pulumi/aws --save
 ```
 
 <div class="language-prologue-typescript"></div>
+
 ```bash
 $ npm install @pulumi/aws --save
 ```
 
 <div class="language-prologue-python"></div>
+
 ```bash
 $ pip install pulumi_aws
 ```
 
 <div class="language-prologue-go"></div>
+
 ```bash
 $ go get -u github.com/pulumi/pulumi-aws/sdk/go/aws/...
 ```
 
 And are imported as usual in your code:
 
-{% include langchoose.html %}
+{{< langchoose >}}
 
 ```javascript
 var aws = require("@pulumi/aws");
@@ -66,7 +76,7 @@ using all the existing tools and ecosystems for packages in your favorite langua
 Many packages demand configuration to customize their behavior.  Let's see how to do that now.
 
 <div class="tour-nav">
-    <a class="tour-button enabled" href="programs-stacks.html" title="Stacks">◀</a>
+    <a class="tour-button enabled" href="{{< relref "programs-stacks.md" >}}" title="Stacks">◀</a>
     <span class="tour-index"><strong>3</strong>/8</span>
-    <a class="tour-button enabled" href="programs-configuring.html" title="Configuring your stack">▶</a>
+    <a class="tour-button enabled" href="{{< relref "programs-configuring.md" >}}" title="Configuring your stack">▶</a>
 </div>

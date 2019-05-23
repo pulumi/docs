@@ -1,5 +1,10 @@
 ---
 title: Spinning up
+aliases: ["basics-up.html"]
+menu:
+  tour:
+    parent: tour
+    weight: 5
 ---
 
 As soon as we're ready to deploy changes, we can run `pulumi up`.
@@ -54,7 +59,7 @@ At the end, we'll find a link to the Pulumi service that we can use to see detai
 Now that we've stood up our first program, let's see how to update it incrementally afterwards.
 
 <div class="tour-nav">
-    <a class="tour-button enabled" href="basics-previewing.html" title="Previewing">◀</a>
+    <a class="tour-button enabled" href="{{< relref "basics-previewing.md" >}}" title="Previewing">◀</a>
     <span class="tour-index"><strong>6</strong>/8</span>
-    <a class="tour-button enabled" href="basics-updating.html" title="Performing updates">▶</a>
+    <a class="tour-button enabled" href="{{< relref "basics-updating.md" >}}" title="Performing updates">▶</a>
 </div>

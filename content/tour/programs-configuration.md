@@ -1,5 +1,11 @@
 ---
 title: Custom configuration
+aliases: ["programs-configuration.html"]
+expanded_url: /tour/programs/
+menu:
+  tour:
+    parent: programs
+    weight: 6
 ---
 
 Pulumi programs can be configurable.
@@ -52,7 +58,7 @@ let replicaCount: number = config.getNumber("replicaCount") || 4;
 
 
 <div class="tour-nav">
-    <a class="tour-button enabled" href="programs-properties.html" title="Resource properties">◀</a>
+    <a class="tour-button enabled" href="{{< relref "programs-properties.md" >}}" title="Resource properties">◀</a>
     <span class="tour-index"><strong>7</strong>/8</span>
-    <a class="tour-button enabled" href="programs-exports.html" title="Stack exports">▶</a>
+    <a class="tour-button enabled" href="{{< relref "programs-exports.md" >}}" title="Stack exports">▶</a>
 </div>

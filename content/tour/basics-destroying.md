@@ -1,5 +1,10 @@
 ---
 title: Destroying
+aliases: ["basics-destroying.html"]
+menu:
+  tour:
+    parent: tour
+    weight: 7
 ---
 
 Finally, if we want to delete all of our resources from the cloud, we can run the appropriately-alarming named
@@ -60,10 +65,10 @@ Stack 'ahoy-pulumi-dev' has been removed!
 That concludes our first lesson.  Please proceed to learn a bit more about the concepts we've just encountered and
 how to extend this basic knowledge to build even more powerful cloud programs using Pulumi.
 
-If you're ready to start programming the cloud, check out the [tutorials](../quickstart/index.html#tutorials) next!
+If you're ready to start programming the cloud, check out the [getting started]({{< relref "/quickstart" >}}) guide next!
 
 <div class="tour-nav">
-    <a class="tour-button enabled" href="basics-previewing.html" title="Performing updates">◀</a>
+    <a class="tour-button enabled" href="{{< relref "basics-previewing.md" >}}" title="Performing updates">◀</a>
     <span class="tour-index"><strong>8</strong>/8</span>
-    <a class="tour-button enabled" href="programs.html" title="Beyond the Basics">▶</a>
+    <a class="tour-button enabled" href="{{< relref "programs.md" >}}" title="Beyond the Basics">▶</a>
 </div>
