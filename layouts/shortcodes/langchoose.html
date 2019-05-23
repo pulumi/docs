@@ -2,15 +2,15 @@
     <div class="mdl-tabs__tab-dir langtab-tabstrip">
         <a class="mdl-tabs__tab langtab is-active">JavaScript</a>
         <a class="mdl-tabs__tab langtab">TypeScript</a>
-        {% unless include.nodeonly %}
+        {{ if not (eq (.Get 0) "nodeonly") }}
         <a class="mdl-tabs__tab langtab">Python</a>
         <a class="mdl-tabs__tab langtab">Go</a>
-        {% endunless %}
+        {{ end }}
     </div>
 </div>
 
-{% comment %}
+{{/*
 .mdl-tabs__tab uses floats, so we need to use clearfix to avoid
 wrapping/indenting the subsequent element containing the code snippet.
-{% endcomment %}
+*/}}
 <div class="clearfix"></div>
