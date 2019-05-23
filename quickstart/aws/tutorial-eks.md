@@ -45,17 +45,17 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Elastic Conta
 
     ```typescript
     import * as pulumi from "@pulumi/pulumi";
-    import * as awsinfra from "@pulumi/aws-infra";
+    import * as awsx from "@pulumi/awsx";
     import * as eks from "@pulumi/eks";
     import * as k8s from "@pulumi/kubernetes";
 
     const name = "helloworld";
 
     // Create an EKS cluster with non-default configuration
-    const vpc = new awsinfra.Network("vpc", { usePrivateSubnets: false });
+    const vpc = new awsx.ec2.Vpc("vpc");
     const cluster = new eks.Cluster(name, {
-        vpcId: vpc.vpcId,
-        subnetIds: vpc.subnetIds,
+        vpcId: vpc.id,
+        subnetIds: vpc.publicSubnetIds,
         desiredCapacity: 2,
         minSize: 1,
         maxSize: 2,
@@ -108,24 +108,8 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Elastic Conta
     +   │  ├─ aws:ec2:LaunchConfiguration             helloworld-nodeLaunchConfiguration  	create
     +   │  ├─ aws:cloudformation:Stack                helloworld-nodes                    	create
     +   │  └─ pulumi:providers:kubernetes             helloworld-provider                 	create
-    +   └─ aws-infra:network:Network                  vpc                               	create
-    +      ├─ aws:ec2:Vpc                             vpc                               	create
-    +      ├─ aws:ec2:Eip                             vpc-nat-0                         	create
-    +      ├─ aws:ec2:Eip                             vpc-nat-1                         	create
-    +      ├─ aws:ec2:InternetGateway                 vpc                               	create
-    +      ├─ aws:ec2:Subnet                          vpc-nat-1                         	create
-    +      ├─ aws:ec2:Subnet                          vpc-0                             	create
-    +      ├─ aws:ec2:Subnet                          vpc-nat-0                         	create
-    +      ├─ aws:ec2:Subnet                          vpc-1                             	create
-    +      ├─ aws:ec2:RouteTable                      vpc                               	create
-    +      ├─ aws:ec2:NatGateway                      vpc-nat-1                         	create
-    +      ├─ aws:ec2:RouteTableAssociation           vpc-nat-1                         	create
-    +      ├─ aws:ec2:NatGateway                      vpc-nat-0                         	create
-    +      ├─ aws:ec2:RouteTableAssociation           vpc-nat-0                         	create
-    +      ├─ aws:ec2:RouteTable                      vpc-nat-1                         	create
-    +      ├─ aws:ec2:RouteTable                      vpc-nat-0                         	create
-    +      ├─ aws:ec2:RouteTableAssociation           vpc-1                             	create
-    +      └─ aws:ec2:RouteTableAssociation           vpc-0                             	create
+    ...
+
 
     Resources:
         + 42 to create
@@ -157,24 +141,7 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Elastic Conta
     +   │  ├─ aws:ec2:LaunchConfiguration             helloworld-nodeLaunchConfiguration  	created
     +   │  ├─ aws:cloudformation:Stack                helloworld-nodes                    	created
     +   │  └─ pulumi:providers:kubernetes             helloworld-provider                 	created
-    +   └─ aws-infra:network:Network                  vpc                               	created
-    +      ├─ aws:ec2:Vpc                             vpc                               	created
-    +      ├─ aws:ec2:Eip                             vpc-nat-0                         	created
-    +      ├─ aws:ec2:Eip                             vpc-nat-1                         	created
-    +      ├─ aws:ec2:InternetGateway                 vpc                               	created
-    +      ├─ aws:ec2:Subnet                          vpc-nat-1                         	created
-    +      ├─ aws:ec2:Subnet                          vpc-0                             	created
-    +      ├─ aws:ec2:Subnet                          vpc-nat-0                         	created
-    +      ├─ aws:ec2:Subnet                          vpc-1                             	created
-    +      ├─ aws:ec2:RouteTable                      vpc                               	created
-    +      ├─ aws:ec2:NatGateway                      vpc-nat-1                         	created
-    +      ├─ aws:ec2:NatGateway                      vpc-nat-0                         	created
-    +      ├─ aws:ec2:RouteTableAssociation           vpc-nat-0                         	created
-    +      ├─ aws:ec2:RouteTableAssociation           vpc-nat-1                         	created
-    +      ├─ aws:ec2:RouteTable                      vpc-nat-1                         	created
-    +      ├─ aws:ec2:RouteTableAssociation           vpc-1                             	created
-    +      ├─ aws:ec2:RouteTable                      vpc-nat-0                         	created
-    +      └─ aws:ec2:RouteTableAssociation           vpc-0                             	created
+    ...
 
     Diagnostics:
     pulumi:pulumi:Stack (eks-hello-world-eks-demo):
