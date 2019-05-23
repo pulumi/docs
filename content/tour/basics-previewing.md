@@ -1,5 +1,10 @@
 ---
 title: Previewing
+aliases: ["basics-previewing.html"]
+menu:
+  tour:
+    parent: tour
+    weight: 4
 ---
 
 Pulumi lets you preview changes before carrying them out.
@@ -38,7 +43,7 @@ Remember, no changes have been made to your cloud yet!
 Now that we've successfully previewed an update, let's do it for real.
 
 <div class="tour-nav">
-    <a class="tour-button enabled" href="basics-deploying.html" title="Deploying code">◀</a>
+    <a class="tour-button enabled" href="{{< relref "basics-deploying.md" >}}" title="Deploying code">◀</a>
     <span class="tour-index"><strong>5</strong>/8</span>
-    <a class="tour-button enabled" href="basics-up.html" title="Spinning up">▶</a>
+    <a class="tour-button enabled" href="{{< relref "basics-up.md" >}}" title="Spinning up">▶</a>
 </div>

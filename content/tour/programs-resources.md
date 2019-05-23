@@ -1,10 +1,16 @@
 ---
 title: Resources
+aliases: ["programs-resources.html"]
+expanded_url: /tour/programs/
+menu:
+  tour:
+    parent: programs
+    weight: 4
 ---
 
 Cloud resources are just objects you will allocate in your program:
 
-{% include langchoose.html %}
+{{< langchoose >}}
 
 ```javascript
 var aws = require("@pulumi/aws");
@@ -41,7 +47,7 @@ This program allocates a single AWS S3 Bucket resource, whose name is `my-bucket
 be unique amongst all other instances of those resources in a single program, to help Pulumi identify them.
 
 Each resource class derives from
-[a common `Resource` base class](/reference/pkg/nodejs/@pulumi/pulumi/index.html#Resource) defined by the Pulumi SDK,
+[a common `Resource` base class]({{< relref "/reference/pkg/nodejs/pulumi/pulumi#Resource" >}}) defined by the Pulumi SDK,
 whose shape differs in each language.
 
 More complex resource types require additional properties, as we'll soon see.  Resources often have two properties:
@@ -63,7 +69,7 @@ A resource may be created with one of the following three properties:
 Resource properties are unique enough, especially their outputs, that we will now look deeper into them.
 
 <div class="tour-nav">
-    <a class="tour-button enabled" href="programs-configuring.html" title="Configuring your stack">◀</a>
+    <a class="tour-button enabled" href="{{< relref "programs-configuring.md" >}}" title="Configuring your stack">◀</a>
     <span class="tour-index"><strong>5</strong>/8</span>
-    <a class="tour-button enabled" href="programs-properties.html" title="Resource properties">▶</a>
+    <a class="tour-button enabled" href="{{< relref "programs-properties.md" >}}" title="Resource properties">▶</a>
 </div>

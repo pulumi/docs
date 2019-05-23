@@ -1,5 +1,11 @@
 ---
 title: Stacks
+aliases: ["programs-stacks.html"]
+expanded_url: /tour/programs/
+menu:
+  tour:
+    parent: programs
+    weight: 1
 ---
 
 A stack is an instance of your Pulumi program.
@@ -16,7 +22,7 @@ There are many reasons we might want more than one stack for our program:
 
 Each stack is entirely isolated from all other stacks, enabling concurrent deployments and fine-grained access controls.
 
-The [`pulumi stack`](/reference/cli/pulumi_stack.html) command manages everything about stacks.
+The [`pulumi stack`]({{< relref "/reference/cli/pulumi_stack.md" >}}) command manages everything about stacks.
 
 The `stack ls` command shows us the current project's stacks and some basic information about each one:
 
@@ -57,7 +63,7 @@ the stack, Pulumi will refuse to remove it until we've run a `destroy`, although
 Now that we've seen how to manage our stacks, let's see how to use packages in our program.
 
 <div class="tour-nav">
-    <a class="tour-button enabled" href="programs.html" title="Beyond the Basics">◀</a>
+    <a class="tour-button enabled" href="{{< relref "programs.md" >}}" title="Beyond the Basics">◀</a>
     <span class="tour-index"><strong>2</strong>/8</span>
-    <a class="tour-button enabled" href="programs-packages.html" title="Packages">▶</a>
+    <a class="tour-button enabled" href="{{< relref "programs-packages.md" >}}" title="Packages">▶</a>
 </div>
