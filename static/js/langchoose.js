@@ -2,16 +2,6 @@ function getElemClasses(e) {
     return ($(e).attr("class") || "").split(/\s+/);
 }
 
-function elementHasLanguageClass(e) {
-    var classes = getElemClasses(e);
-    for (var i = 0; i < classes.length; i++) {
-        if (classes[i].startsWith("language-")) {
-            return true;
-        }
-    }
-    return false;
-}
-
 // selectLanguage will remember a given language as a preferred setting using a cookie and walk the DOM enabling
 // all code tabs and snippets for this language, and disabling those for unselected languages.
 function selectLanguage(lang) {
@@ -38,21 +28,22 @@ function selectLanguage(lang) {
         // If and only if we found tabs, hide divs for the relevant languages.
         if (langTabs > 0) {
             // Highlighted code blocks:
-            $("div").each(function (i, e) {
+            $("code").each(function (i, e) {
                 var classes = getElemClasses(e);
                 for (var i = 0; i < classes.length; i++) {
                     if (classes[i].startsWith("language-") && classes[i] !== "language-bash") {
+                        var parents = $(e).parents("div.highlight");
+
                         // Our Node reference docs contain examples written in TypeScript, and
                         // don't currently have JavaScript examples above.
                         // Ensure these TypeScript examples are always visible, even when
                         // JavaScript is the selected language.
                         if (lang === "javascript" &&
                             (classes[i] === "language-typescript" || classes[i] === "language-ts")) {
-                            // If the previous element doesn't have a class that starts with "language-",
-                            // show the element.
-                            var prev = $(e).prev();
-                            if (prev && !elementHasLanguageClass(prev)) {
-                                $(e).show();
+                            // If the previous element doesn't have a highlight, show it.
+                            var prev = parents.prev();
+                            if (prev && !prev.hasClass("highlight")) {
+                                parents.show();
                                 break;
                             }
                         }
@@ -60,9 +51,9 @@ function selectLanguage(lang) {
                         if (classes[i] === "language-"+lang ||
                             (lang === "typescript" && classes[i] === "language-ts") ||
                             (lang === "javascript" && classes[i] === "language-js")) {
-                            $(e).show();
+                            parents.show();
                         } else {
-                            $(e).hide();
+                            parents.hide();
                         }
                         break;
                     }
