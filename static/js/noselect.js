@@ -1,3 +1,8 @@
 $(function() {
-    $(".language-bash .nv:contains('$')").addClass("no-select");
+    // Make "$ " inside bash and shell code snippets unselectable.
+    var pattern = /([ |\t]*\$ )/mig;
+    var replaceWith = '<span class="no-select">$1</span>';
+    $(".highlight .chroma .language-bash, .highlight .chroma .language-shell").each(function() {
+        $(this).html($(this).html().replace(pattern, replaceWith));
+    });
 });

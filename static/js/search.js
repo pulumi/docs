@@ -82,7 +82,7 @@
         {
             name: "CLI",
             predicate: function (url) {
-                return url.startsWith("/reference/cli/") || url === "/reference/commands.html";
+                return url.startsWith("/reference/cli/") || url === "/reference/commands/";
             }
         },
         {
@@ -125,7 +125,7 @@
 
             case "CLI":
                 if (result.title.length === 0 && result.url.startsWith("/reference/cli/")) {
-                    var regex = /\/reference\/cli\/([a-z_]+).html/gm;
+                    var regex = /\/reference\/cli\/([a-z_]+)/gm;
                     var match = regex.exec(result.url)
                     if (match !== null) {
                         result.display = match[1].replace(/_/g, " ");
