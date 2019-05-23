@@ -1,6 +1,11 @@
 ---
 title: "Tutorial: AWS Containers and Serverless"
-redirect_from: /quickstart/aws-extract-thumbnail.html
+aliases:
+    - tutorial-thumbnailer.html
+    - /quickstart/aws-extract-thumbnail.html
+menu:
+  quickstart:
+    parent: aws
 ---
 
 In this tutorial, we'll use TypeScript to combine serverless, containers and cloud infrastructure together into a "Colada" application. We use serverless functions as event triggers and containers for longer-running tasks.
@@ -10,9 +15,9 @@ We'll build an application that extracts a thumbnail from a video using AWS Lamb
 code for this tutorial is [available on GitHub](https://github.com/pulumi/examples/tree/master/aws-ts-thumbnailer),
 and a video walkthrough of this example is [available on YouTube](https://www.youtube.com/watch?v=Bofmh1qnNSE).
 
-![Video thumbnail diagram](/images/quickstart/video-thumbnail-diagram.png){:width="600px"}
+<img src="/images/quickstart/video-thumbnail-diagram.png" alt="Video thumbnail diagram" width="600">
 
-{% include aws-js-prereqs.md %}
+{{< aws-js-prereqs >}}
 
 ## Create and deploy the project
 
@@ -27,7 +32,7 @@ and a video walkthrough of this example is [available on YouTube](https://www.yo
 
 1.  Replace the contents of `index.ts` with the following:
 
-    ```ts
+    ```typescript
     import * as aws from "@pulumi/aws";
     import * as awsx from "@pulumi/aws-infra";
 
@@ -104,7 +109,7 @@ and a video walkthrough of this example is [available on YouTube](https://www.yo
 
     This code declares the following resources:
 
-    - **Cloud infrastructure**. S3 bucket for videos and still frames. We define a [stack output property](/reference/stack.html#outputs) `bucketName`, to easily retrieve this value after the project has been deployed.
+    - **Cloud infrastructure**. S3 bucket for videos and still frames. We define a [stack output property]({{< relref "/reference/stack.md#outputs" >}}) `bucketName`, to easily retrieve this value after the project has been deployed.
     - **Containers**. Uses awsx.ecs.FargateTaskDefinition, which is a high-level, convenient component for working with containers. The component automatically provisions a container registry instance in ECR, runs a Docker build, and saves the Docker image to the provisioned ECR instance. It also defines an ECS task and configures it to use the built image.
     - **Serverless functions**
       - The Lambda function `onNewVideo` is triggered whenever a new `.mp4` video file is uploaded to the S3 bucket. The Lambda extracts the time index that is encoded in the video filename (in the form `file_mm-ss`) and launches the container task.
@@ -213,7 +218,7 @@ download: s3://bucket-0c91106/cat.jpg to ./cat.jpg
 
 ## Clean up
 
-{% include cleanup.md %}
+{{< cleanup >}}
 
 ## Next steps
 

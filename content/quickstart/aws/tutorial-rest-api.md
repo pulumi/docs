@@ -1,6 +1,11 @@
 ---
 title: "Tutorial: Serverless REST APIs using Lambda"
-redirect_from: /quickstart/aws-hello-world.html
+aliases:
+    - tutorial-rest-api.html
+    - /quickstart/aws-hello-world.html
+menu:
+  quickstart:
+    parent: aws
 ---
 
 In this tutorial, we'll use Pulumi to create a serverless app that serves static content, in addition to dynamic routes
@@ -16,7 +21,7 @@ concepts to explore additional containers, serverless, and infrastructure tutori
 - **Manage** our stack in the Pulumi dashboard
 - Tear it down
 
-{% include aws-js-prereqs.md %}
+{{< aws-js-prereqs >}}
 
 ## Initialize the project
 
@@ -29,16 +34,16 @@ pulumi new hello-aws-javascript
 
 You can accept the defaults for this command. For instance, you can change the AWS region to `us-west-2`.
 
-![Run Pulumi new](/images/quickstart/hello/Quickstart1.png){:width="700px"}
+<img src="/images/quickstart/hello/Quickstart1.png" alt="Run Pulumi new" width="700">
 
 After some dependency installations from NPM, you'll see a few files have been generated from this initialization process. 
 
-![View files](/images/quickstart/hello/Quickstart2.png){:width="700px"}
+<img src="/images/quickstart/hello/Quickstart2.png" alt="View files" width="700">
 
 Let's look at some of those.
 
-- `Pulumi.yaml` defines the [project](/reference/project.html).
-- `Pulumi.ahoy-pulumi-dev.yaml` is the [configuration file](/tour/programs-configuring.html) for the stack we initialized.
+- `Pulumi.yaml` defines the [project]({{< relref "/reference/project.md" >}}).
+- `Pulumi.ahoy-pulumi-dev.yaml` is the [configuration file]({{< relref "/reference/config.md" >}}) for the stack we initialized.
 - `www` contains our sample static content.
 - The key file for defining our stack resources `index.js` so let's examine that.
 
@@ -47,7 +52,6 @@ Let's look at some of those.
 Normally, we'd write some code to define resources for our cloud stack, but in the quickstart this work is done for us. This is the content of `index.js`:
 
 ```javascript
-// Import the [pulumi/aws](https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/index.html) package
 const pulumi = require("@pulumi/pulumi");
 const aws = require("@pulumi/aws");
 const awsx = require("@pulumi/awsx");
@@ -81,7 +85,7 @@ const endpoint = new awsx.apigateway.API("hello", {
 exports.url = endpoint.url;
 ```
 
-See the [reference documentation](/reference/index.html) for details on the APIs we're using.
+See the [reference documentation]({{< relref "/reference" >}}) for details on the APIs we're using.
 
 ## Deploy the stack
 
@@ -93,11 +97,11 @@ pulumi up
 
 This command instructs Pulumi to determine the resources needed to create the stack. First, a preview is shown of the changes that will be made:
 
-![Stack preview](https://user-images.githubusercontent.com/4564579/46554998-da6c9980-c896-11e8-8530-6ca4c8db8123.png){:width="700px"}
+<img src="https://user-images.githubusercontent.com/4564579/46554998-da6c9980-c896-11e8-8530-6ca4c8db8123.png" alt="Stack preview" width="700">
 
 Choosing `yes` will create resources in AWS. This may take a minute or two.
 
-![Stack update](https://user-images.githubusercontent.com/4564579/46555042-fcfeb280-c896-11e8-8731-51c9ee78af23.png){:width="700px"}
+<img src="https://user-images.githubusercontent.com/4564579/46555042-fcfeb280-c896-11e8-8731-51c9ee78af23.png" alt="Stack update" width="700">
 
 Since there was a stack export (via `exports.url` in the code), this is printed in the output of `pulumi up`. We can easily `curl` this URL via `pulumi stack output`:
 
@@ -107,13 +111,13 @@ curl $(pulumi stack output url)
 
 For a more interesting view that shows the result of calling a Lambda function, open the page in a browser:
 
-![Stack page in browser](/images/quickstart/hello/Quickstart5.png){:width="600px"}
+<img src="/images/quickstart/hello/Quickstart5.png" alt="Stack page in browser" width="600">
 
 ## Manage the stack
 
-Our output also contained a permalink to the Pulumi dashboard. We can review the stack in the UI, and examine logs and resource usage, along with inviting friends and co-workers to collaborate on stacks. 
+Our output also contained a permalink to the Pulumi dashboard. We can review the stack in the UI, and examine logs and resource usage, along with inviting friends and co-workers to collaborate on stacks.
 
-![](/images/quickstart/hello/Quickstart6.png){:width="600px"}
+<img src="/images/quickstart/hello/Quickstart6.png" width="600">
 
 ## Tear Down
 
@@ -138,11 +142,11 @@ In this example we've seen:
 From here, you can dive deeper:
 
 - Try out additional AWS tutorials:
-  - [Containers](./tutorial-containers-ecs-fargate.html): Create a load-balanced, hosted NGINX container service
-  - [Infrastructure](./tutorial-ec2-webserver.html): Create an EC2-based WebServer and associated infrastructure
+  - [Containers]({{< relref "tutorial-service.md" >}}): Create a load-balanced, hosted NGINX container service
+  - [Infrastructure]({{< relref "tutorial-ec2-webserver.md" >}}): Create an EC2-based WebServer and associated infrastructure
 - Try out some multi-cloud serverless and container tutorials (that also run on AWS):
-  - [Multi-cloud Serverless with Document Database](../cloudfx/tutorial-rest-api.html): Create multi-cloud serverless
+  - [Multi-cloud Serverless with Document Database]({{< relref "../cloudfx/tutorial-rest-api.md" >}}): Create multi-cloud serverless
         REST APIs that use a document database
-  - [Multi-cloud Serverless plus Containers](../cloudfx/tutorial-thumbnailer.html): Create a multi-cloud video
+  - [Multi-cloud Serverless plus Containers]({{< relref "../cloudfx/tutorial-thumbnailer.md" >}}): Create a multi-cloud video
         thumbnail app that uses containers, serverless, and infrastructure together
-- Take [a tour of Pulumi](/tour/index.html).
+- Take [a tour of Pulumi]({{< relref "/tour" >}}).

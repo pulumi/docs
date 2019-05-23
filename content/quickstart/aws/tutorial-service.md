@@ -1,16 +1,20 @@
 ---
 title: "Tutorial: Containers"
-redirect_from:
-  - /quickstart/aws-containers.html
-  - /quickstart/aws/tutorial-containers-ecs-fargate.html
+aliases:
+    - tutorial-service.html
+    - /quickstart/aws-containers.html
+    - /quickstart/aws/tutorial-containers-ecs-fargate.html
+menu:
+  quickstart:
+    parent: aws
 ---
 
-In this tutorial, we'll use TypeScript to build and deploy a simple container using the [`@pulumi/aws`]() and [`@pulumi/aws-infra`]() frameworks.  This example can be deployed to AWS on either Fargate, and can be simply updated to use ECS as well.  The [code for this tutorial](https://github.com/pulumi/examples/tree/master/aws-ts-containers) is available on GitHub.
+In this tutorial, we'll use TypeScript to build and deploy a simple container using the [`@pulumi/aws`]({{< relref "/reference/pkg/nodejs/pulumi/aws" >}}) and [`@pulumi/awsx`]({{< relref "/reference/pkg/nodejs/pulumi/awsx" >}}) frameworks.  This example can be deployed to AWS on either Fargate, and can be simply updated to use ECS as well.  The [code for this tutorial](https://github.com/pulumi/examples/tree/master/aws-ts-containers) is available on GitHub.
 
 ## Prerequisites
 
-1.  [Install Pulumi](../install.html)
-1.  Configure [AWS](../aws/setup.html) credentials
+1.  [Install Pulumi]({{< relref "/quickstart/install.md" >}})
+1.  Configure [AWS]({{< relref "/quickstart/aws/setup.md" >}}) credentials
 
 ## Serve an HTML file in an NGINX container
 
@@ -25,7 +29,7 @@ In this tutorial, we'll use TypeScript to build and deploy a simple container us
 
 1.  Replace the contents of `index.ts` with the following:
 
-    ```ts
+    ```typescript
     import * as pulumi from "@pulumi/pulumi";
     import * as aws from "@pulumi/aws";
     import * as awsx from "@pulumi/awsx";
@@ -145,10 +149,10 @@ In this tutorial, we'll use TypeScript to build and deploy a simple container us
 
 ## Clean up
 
-{% include cleanup.md %}
+{{< cleanup >}}
 
 ## Next steps
 
-For an end-to-end application also includes serverless functions, see the [Serverless and Container Thumbnailer](./tutorial-thumbnailer.html) tutorial.
+For an end-to-end application also includes serverless functions, see the [Serverless and Container Thumbnailer]({{< relref "tutorial-thumbnailer.md" >}}) tutorial.
 
 For an example application that connects two containers, see the [Voting App](https://github.com/pulumi/examples/tree/master/aws-ts-voting-app) TypeScript sample.

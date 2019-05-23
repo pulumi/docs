@@ -1,5 +1,9 @@
 ---
 title: "Tutorial: Gating rollout on Prometheus checks"
+aliases: ["tutorial-p8s-rollout.html"]
+menu:
+  quickstart:
+    parent: kubernetes
 ---
 
 In this tutorial, we see how to create a staged rollout (from 3-replica canary -> 10-replica
@@ -123,7 +127,7 @@ can see `canary-example-app` and `canary-staging-app` created.
    that was computed by the promise is `export`ed, which causes Pulumi to report its value just
    before it terminates.
 
-[install]: https://docs.pulumi.com/install/
-[configuration]: https://docs.pulumi.com/reference/kubernetes.html#configuration
+[install]: {{< relref "/quickstart/install.md" >}}
+[configuration]: {{< relref "/quickstart/kubernetes/setup.md" >}}
 [p8s]: https://prometheus.io/
 [helm]: https://www.helm.sh/

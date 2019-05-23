@@ -1,9 +1,16 @@
 ---
 title: Setup
-redirect_from: /install/gcp.html
+aliases:
+    - setup.html
+    - /install/gcp.html
+menu:
+  quickstart:
+    identifier: gcp-setup
+    parent: gcp
+    weight: 1
 ---
 
-[Pulumi Google Cloud Platform Provider]: ./index.html
+[Pulumi Google Cloud Platform Provider]: {{< relref "./" >}}
 
 The [Pulumi Google Cloud Platform Provider] needs to be configured with Google credentials
 before it can be used to create resources.
@@ -16,7 +23,7 @@ When developing locally, we recommend that you use `gcloud login` to configure y
     $ gcloud auth application-default login
     ```
 
-If you are using Pulumi in an non-interactive setting (such as a CI/CD system) you will need to [configure and use a service account](./service-account.html) instead.
+If you are using Pulumi in an non-interactive setting (such as a CI/CD system) you will need to [configure and use a service account]({{< relref "service-account.md" >}}) instead.
 
 ## Optional Settings
 

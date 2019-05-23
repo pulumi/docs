@@ -1,5 +1,9 @@
 ---
 title: "Tutorial: Run a Stateless App Deployment"
+aliases: ["tutorial-stateless-app.html"]
+menu:
+  quickstart:
+    parent: kubernetes
 ---
 
 In this tutorial, we'll run an application using a [Kubernetes
@@ -27,8 +31,8 @@ its full code is [available on GitHub](https://github.com/pulumi/examples/tree/m
 You need to have the Pulumi CLI and a working Kubernetes cluster.
 [Minikube](https://kubernetes.io/docs/getting-started-guides/minikube) is an easy way to get started.
 
-1. [Install Pulumi](../install.html)
-2. [Connect Pulumi to a Kubernetes Cluster](./setup.html)
+1. [Install Pulumi]({{< relref "../install.md" >}})
+2. [Connect Pulumi to a Kubernetes Cluster]({{< relref "setup.md" >}})
 
 ## Creating and Running the Application
 
@@ -91,42 +95,39 @@ To start, we'll need to create a project and stack (a deployment target) for our
     The command will first show us a complete preview of what will take place, with a confirmation prompt. No changes
     will have been made yet. It should look something like this:
 
-    ```
-    Previewing update of stack 'k8s-nginx-dev'
-    Previewing changes:
+        Previewing update of stack 'k8s-nginx-dev'
+        Previewing changes:
 
-         Type                           Name                     Plan       Info
-     +   pulumi:pulumi:Stack            k8s-nginx-k8s-nginx-dev  create
-     +   └─ kubernetes:apps:Deployment  nginx-deployment         create
+            Type                           Name                     Plan       Info
+        +   pulumi:pulumi:Stack            k8s-nginx-k8s-nginx-dev  create
+        +   └─ kubernetes:apps:Deployment  nginx-deployment         create
 
-    info: 2 changes previewed:
-        + 2 resources to create
+        info: 2 changes previewed:
+            + 2 resources to create
 
-    Do you want to perform this update?
-    > yes
-      no
-      details
-    ```
+        Do you want to perform this update?
+        > yes
+        no
+        details
 
     Let's select "yes" and hit enter. The deployment will proceed, and the output will look like this:
 
-    ```
-    Updating stack 'k8s-nginx-dev'
-    Performing changes:
+        Updating stack 'k8s-nginx-dev'
+        Performing changes:
 
-         Type                           Name                     Status      Info
-     +   pulumi:pulumi:Stack            k8s-nginx-k8s-nginx-dev  created
-     +   └─ kubernetes:apps:Deployment  nginx-deployment         created
+            Type                           Name                     Status      Info
+        +   pulumi:pulumi:Stack            k8s-nginx-k8s-nginx-dev  created
+        +   └─ kubernetes:apps:Deployment  nginx-deployment         created
 
-    ---outputs:---
-    nginx: "nginx-deployment-rlefbi4w"
+        ---outputs:---
+        nginx: "nginx-deployment-rlefbi4w"
 
-    info: 2 changes performed:
-        + 2 resources created
-    Update duration: 8.127334048s
+        info: 2 changes performed:
+            + 2 resources created
+        Update duration: 8.127334048s
 
-    Permalink: https://app.pulumi.com/joeduffy/k8s-nginx-dev/updates/1
-    ```
+        Permalink: https://app.pulumi.com/joeduffy/k8s-nginx-dev/updates/1
+
 
     Note that Pulumi will wait until the deployment has succeeded (or failed), and it will print detailed
     status outputs as the deployment happens. This is in contrast to `kubectl` which returns immediately. The
@@ -205,49 +206,46 @@ to see what this looks like. After that, we'll clean up and we're done!
 
     and re-run `pulumi up`. We will see a preview that indicates just the spec changed:
 
-    ```
-    Previewing update of stack 'k8s-nginx-dev'
-    Previewing changes:
+        Previewing update of stack 'k8s-nginx-dev'
+        Previewing changes:
 
-         Type                           Name                     Plan          Info
-     *   pulumi:pulumi:Stack            k8s-nginx-k8s-nginx-dev  no change
-     ~   └─ kubernetes:apps:Deployment  nginx-deployment         update        changes: ~ spec
+            Type                           Name                     Plan          Info
+        *   pulumi:pulumi:Stack            k8s-nginx-k8s-nginx-dev  no change
+        ~   └─ kubernetes:apps:Deployment  nginx-deployment         update        changes: ~ spec
 
-        ---outputs:---
-        nginx: "nginx-deployment-rlefbi4w"
+            ---outputs:---
+            nginx: "nginx-deployment-rlefbi4w"
 
-    info: 1 change previewed:
-        ~ 1 resource to update
-          1 resource unchanged
+        info: 1 change previewed:
+            ~ 1 resource to update
+            1 resource unchanged
 
-    Do you want to perform this update?
-      yes
-      no
-    > details
-    ```
+        Do you want to perform this update?
+        yes
+        no
+        > details
 
     If we choose `details` and hit enter we will see a full diff of the changes:
 
-    ```
-    * pulumi:pulumi:Stack: (same)
-        [urn=urn:pulumi:k8s-nginx-dev::k8s-nginx::pulumi:pulumi:Stack::k8s-nginx-k8s-nginx-dev]
-        ---outputs:---
-        nginx: "nginx-deployment-rlefbi4w"
-        ~ kubernetes:apps/v1:Deployment: (update)
-            [id=default/nginx-deployment-rlefbi4w]
-            [urn=urn:pulumi:k8s-nginx-dev::k8s-nginx::kubernetes:apps/v1:Deployment::nginx-deployment]
-          ~ spec      : {
-              ~ template: {
-                  ~ spec    : {
-                      ~ containers: [
-                          ~ [0]: {
-                                  ~ image: "nginx:1.7.9" => "nginx:1.8"
-                                }
-                        ]
+        * pulumi:pulumi:Stack: (same)
+            [urn=urn:pulumi:k8s-nginx-dev::k8s-nginx::pulumi:pulumi:Stack::k8s-nginx-k8s-nginx-dev]
+            ---outputs:---
+            nginx: "nginx-deployment-rlefbi4w"
+            ~ kubernetes:apps/v1:Deployment: (update)
+                [id=default/nginx-deployment-rlefbi4w]
+                [urn=urn:pulumi:k8s-nginx-dev::k8s-nginx::kubernetes:apps/v1:Deployment::nginx-deployment]
+            ~ spec      : {
+                ~ template: {
+                    ~ spec    : {
+                        ~ containers: [
+                            ~ [0]: {
+                                    ~ image: "nginx:1.7.9" => "nginx:1.8"
+                                    }
+                            ]
+                        }
                     }
                 }
-            }
-    ```
+
 
     If we select `yes` and hit enter to proceed with the update, the deployment will be updated in place.
 
@@ -294,4 +292,4 @@ Congratulations! You've created your first Pulumi Kubernetes application.
 The next tutorial entails creating a more full-fledged application that has three Kubernetes Service objects, in
 addition to Deployments, which gives us stable, load balanced IP addresses more suitable for a production application:
 
-* [Guestbook App with Redis and Nginx](./tutorial-guestbook.html)
+* [Guestbook App with Redis and Nginx]({{< relref "tutorial-guestbook.md" >}})

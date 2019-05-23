@@ -1,8 +1,9 @@
 ---
 title: Provisioning Shared, Managed Infrastructure
+aliases: ["infrastructure.html"]
 ---
 
-This lab assumes you have successfully completed [lab 1](./identity.html), the results of which are
+This lab assumes you have successfully completed [lab 1]({{< relref "identity.md" >}}), the results of which are
 to have successfully bootstrapped the identity platform for CI/CD and teams.
 
 In this tutorial, we will use this identity to:

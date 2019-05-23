@@ -1,13 +1,17 @@
 ---
 title: "Tutorial: Serve a Static Website from S3"
-redirect_from:
-  - /quickstart/part2.html
-  - /quickstart/aws-s3-website.html
+aliases:
+    - tutorial-s3-website.html
+    - /quickstart/part2.html
+    - /quickstart/aws-s3-website.html
+menu:
+  quickstart:
+    parent: aws
 ---
 
 In this tutorial, we'll show how you can use [@pulumi/aws] to provision raw resources. First, we'll create a Pulumi program that uploads files from the `www` directory to S3. Then, we'll configure the bucket to serve a website. The [code for this tutorial][s3-folder] is available on GitHub. 
 
-{% include aws-js-prereqs.md %}
+{{< aws-js-prereqs >}}
 
 ## Create a bucket and upload files 
 
@@ -67,7 +71,7 @@ In this tutorial, we'll show how you can use [@pulumi/aws] to provision raw reso
     $ npm install --save @pulumi/aws mime
     ```
 
-1.  Configure the AWS region to deploy to, such as `us-west-2`. After this step, a new file `Pulumi.website-testing.yaml` is created, next to your [Pulumi.yaml project file](/reference/project.html). See [Defining and setting stack settings](/reference/config.html#config-stack) for more information about this file.
+1.  Configure the AWS region to deploy to, such as `us-west-2`. After this step, a new file `Pulumi.website-testing.yaml` is created, next to your [Pulumi.yaml project file]({{< relref "/reference/project.md" >}}). See [Defining and setting stack settings]({{< relref "/reference/config.md#config-stack" >}}) for more information about this file.
 
     ```bash
     $ pulumi config set aws:region us-west-2
@@ -168,11 +172,11 @@ In this section, we configure the S3 bucket to serve the files to a browser. To 
     s3-website-bucket-8533d8b.s3-website-us-west-2.amazonaws.com
     ```
 
-    ![Hello S3 example](/images/quickstart/s3-website.png){:width="700px"}
+    <img src="/images/quickstart/s3-website.png" alt="Hello S3 example" width="700">
 
 ## Clean up
 
-{% include cleanup.md %}
+{{< cleanup >}}
 
 ## Summary
 
@@ -181,25 +185,26 @@ In this part, we saw that you can use the `@pulumi/aws` package for fine-grain c
 ## Next steps
 
 The full source of the example is available in the [Pulumi examples repo](https://github.com/pulumi/examples) on GitHub:
+
 - [S3 website][s3-folder]
 - [S3 website as component][s3-folder-component]
 
-To learn how to convert the raw AWS option to a high-level component, see the [Pulumi Components](/reference/component-tutorial.html) tutorial.
+To learn how to convert the raw AWS option to a high-level component, see the [Pulumi Components]({{< relref "/reference/component-tutorial.md" >}}) tutorial.
 
 <!-- Common links -->
-[@pulumi/aws]: /reference/pkg/nodejs/@pulumi/aws/index.html
-[aws.s3.Bucket]: /reference/pkg/nodejs/@pulumi/aws/s3/index.html#Bucket
-[aws.s3.Bucket.bucket]: /reference/pkg/nodejs/@pulumi/aws/s3/index.html#Bucket
-[aws.s3.BucketObject]: /reference/pkg/nodejs/@pulumi/aws/s3/index.html#BucketObject
-[pulumi.asset.FileAsset]: /reference/pkg/nodejs/@pulumi/pulumi/asset/index.html#FileAsset
-[aws.s3.BucketPolicy]: /reference/pkg/nodejs/@pulumi/aws/s3/index.html#BucketPolicy
-[aws.s3.Bucket.websites]: /reference/pkg/nodejs/@pulumi/aws/s3/index.html#Bucket
-[pulumi.Output]: /reference/pkg/nodejs/@pulumi/pulumi/index.html#Output
-[pulumi.Output.apply]: /reference/pkg/nodejs/@pulumi/pulumi/index.html#Output
-[pulumi.Input]: /reference/pkg/nodejs/@pulumi/pulumi/index.html#Input
-[pulumi.ComponentResource]: /reference/pkg/nodejs/@pulumi/pulumi/index.html#ComponentResource
-[Component]: /reference/programming-model.html#components
+[@pulumi/aws]: {{< relref "/reference/pkg/nodejs/pulumi/aws" >}}
+[aws.s3.Bucket]: {{< relref "/reference/pkg/nodejs/pulumi/aws/s3#Bucket" >}}
+[aws.s3.Bucket.bucket]: {{< relref "/reference/pkg/nodejs/pulumi/aws/s3#Bucket" >}}
+[aws.s3.BucketObject]: {{< relref "/reference/pkg/nodejs/pulumi/aws/s3#BucketObject" >}}
+[pulumi.asset.FileAsset]: {{< relref "/reference/pkg/nodejs/pulumi/pulumi/asset#FileAsset" >}}
+[aws.s3.BucketPolicy]: {{< relref "/reference/pkg/nodejs/pulumi/aws/s3#BucketPolicy" >}}
+[aws.s3.Bucket.websites]: {{< relref "/reference/pkg/nodejs/pulumi/aws/s3#Bucket" >}}
+[pulumi.Output]: {{< relref "/reference/pkg/nodejs/pulumi/pulumi#Output" >}}
+[pulumi.Output.apply]: {{< relref "/reference/pkg/nodejs/pulumi/pulumi#Output" >}}
+[pulumi.Input]: {{< relref "/reference/pkg/nodejs/pulumi/pulumi#Input" >}}
+[pulumi.ComponentResource]: {{< relref "/reference/pkg/nodejs/pulumi/pulumi#ComponentResource" >}}
+[Component]: {{< relref "/reference/programming-model#components" >}}
 [s3-folder]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder
 [s3-folder-component]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder-component
-[Pulumi Cloud]: /quickstart/cloudfx/index.html
+[Pulumi Cloud]: {{< relref "/quickstart/cloudfx" >}}
 <!-- End common links -->

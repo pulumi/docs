@@ -1,13 +1,17 @@
 ---
 title: "Tutorial: Web Server Virtual Machine Instance"
+aliases: ["tutorial-gce-webserver.html"]
+menu:
+  quickstart:
+    parent: gcp
 ---
 
 In this tutorial, we'll use JavaScript to deploy a simple webserver Virtual Machine instance to Google Compute Engine. The [code for this tutorial](https://github.com/pulumi/examples/tree/master/gcp-js-webserver) is available on GitHub. 
 
 ## Prerequisites
 
-1.  [Install Pulumi](../install.html)
-1.  [Configure GCP credentials](./setup.html)
+1.  [Install Pulumi]({{< relref "../install.md" >}})
+1.  [Configure GCP credentials]({{< relref "setup.md" >}})
 
 ## Create a Virtual Machine with SSH access {#webserver}
 
@@ -52,53 +56,49 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver Virtual Mach
     exports.instanceIP = computeInstance.networkInterfaces.apply(ni => ni[0].accessConfigs[0].natIp);
     ```
 
-    This example uses the [@pulumi/gcp](https://pulumi.io/reference/pkg/nodejs/@pulumi/gcp/) package to create and manage three Google Cloud resources: a [gcp.compute.Network](https://pulumi.io/reference/pkg/nodejs/@pulumi/gcp/compute/#Network) in which the virtual machine will run, a [gcp.compute.Firewall](https://pulumi.io/reference/pkg/nodejs/@pulumi/gcp/compute/#Firewall) which allows access for incoming SSH access, and a [gcp.compute.Instance](https://pulumi.io/reference/pkg/nodejs/@pulumi/gcp/compute/#Instance) which is created inside the network from the Debian 9 base image.
+    This example uses the [@pulumi/gcp]({{< relref "/reference/pkg/nodejs/pulumi/gcp" >}}) package to create and manage three Google Cloud resources: a [gcp.compute.Network]({{< relref "/reference/pkg/nodejs/pulumi/gcp/compute#Network" >}}) in which the virtual machine will run, a [gcp.compute.Firewall]({{< relref "/reference/pkg/nodejs/pulumi/gcp/compute#Firewall" >}}) which allows access for incoming SSH access, and a [gcp.compute.Instance]({{< relref "/reference/pkg/nodejs/pulumi/gcp/compute#Instance" >}}) which is created inside the network from the Debian 9 base image.
 
 1.  To preview and deploy changes, run `pulumi up`. The command shows a preview of the resources that will be created and prompts on whether to proceed with the deployment.  Note that the stack itself is counted as a resource, though it does not correspond to a physical cloud resource.
 
-    ```bash
-    $ pulumi up
-    Previewing update (webservergcp-dev):
+        $ pulumi up
+        Previewing update (webservergcp-dev):
 
-        Type                     Name                           Plan
-        pulumi:pulumi:Stack      webservergcp-webservergcp-dev
-    +   ├─ gcp:compute:Network   network                        create
-    +   ├─ gcp:compute:Firewall  firewall                       create
-    +   └─ gcp:compute:Instance  instance                       create
+            Type                     Name                           Plan
+            pulumi:pulumi:Stack      webservergcp-webservergcp-dev
+        +   ├─ gcp:compute:Network   network                        create
+        +   ├─ gcp:compute:Firewall  firewall                       create
+        +   └─ gcp:compute:Instance  instance                       create
 
-    Resources:
-        + 3 to create
-        1 unchanged
-    ```
+        Resources:
+            + 3 to create
+            1 unchanged
 
 1.  Now, proceed with the deployment, which will take around a minute to complete. 
 
-    ```bash
-    Do you want to perform this update? yes
-    Updating (webservergcp-dev):
+        Do you want to perform this update? yes
+        Updating (webservergcp-dev):
 
-        Type                     Name                           Status
-        pulumi:pulumi:Stack      webservergcp-webservergcp-dev
-    +   ├─ gcp:compute:Network   network                        created
-    +   ├─ gcp:compute:Instance  instance                       created
-    +   └─ gcp:compute:Firewall  firewall                       created
+            Type                     Name                           Status
+            pulumi:pulumi:Stack      webservergcp-webservergcp-dev
+        +   ├─ gcp:compute:Network   network                        created
+        +   ├─ gcp:compute:Instance  instance                       created
+        +   └─ gcp:compute:Firewall  firewall                       created
 
-    Outputs:
-    + instanceIP  : "173.255.117.131"
-    + instanceName: "instance-bf0ab1f"
+        Outputs:
+        + instanceIP  : "173.255.117.131"
+        + instanceName: "instance-bf0ab1f"
 
-    Resources:
-        + 3 created
-        1 unchanged
+        Resources:
+            + 3 created
+            1 unchanged
 
-    Duration: 1m20s
+        Duration: 1m20s
 
-    Permalink: https://app.pulumi.com/lukehoban/webservergcp-dev/updates/1
-    ```
+        Permalink: https://app.pulumi.com/lukehoban/webservergcp-dev/updates/1
 
     To see the full details of the deployment and the resources that are now part of the stack, open the update permalink in a browser.
 
-1.  To view the provisioned resources on the command line, run `pulumi stack`. You'll also see two [stack outputs](/reference/stack.html#output) corresponding to the IP and full-qualified host name of the virtual machine instance we've created.  
+1.  To view the provisioned resources on the command line, run `pulumi stack`. You'll also see two [stack outputs]({{< relref "/reference/stack.md#output" >}}) corresponding to the IP and full-qualified host name of the virtual machine instance we've created.  
 
     ```
     $ pulumi stack

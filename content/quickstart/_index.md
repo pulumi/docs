@@ -1,5 +1,8 @@
 ---
 title: Get Started
+menu:
+  quickstart:
+    weight: 1
 ---
 
 Pulumi is a platform for building and deploying cloud infrastructure and applications in your favorite language on any
@@ -15,12 +18,12 @@ Pulumi is [open source on GitHub](https://github.com/pulumi/pulumi) and is free 
 
 To get started, first download and install the CLI:
 
-<a href="install.html"><button class="button primary small">INSTALL PULUMI</button></a>
+<a href="{{< relref "install.md" >}}"><button class="button primary small">INSTALL PULUMI</button></a>
 
 ## Choose Your Cloud
 
 If you've already installed Pulumi, simply choose your cloud provider:
 
-{% include quickstart-clouds.md %}
+{{< quickstart-clouds >}}
 
 <!--TODO: use cases, competition -->

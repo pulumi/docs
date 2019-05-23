@@ -1,16 +1,20 @@
 ---
 title: "Tutorial: Containers"
-redirect_from:
-  - /quickstart/aws-containers.html
-  - /quickstart/aws/tutorial-containers-ecs-fargate.html
+aliases:
+    - tutorial-service.html
+    - /quickstart/aws-containers.html
+menu:
+  quickstart:
+    identifier: cloud-containers
+    parent: cloud
 ---
 
-In this tutorial, we'll use JavaScript to build and deploy a simple container using the [`@pulumi/cloud`]() framework.  This example can be deployed to AWS (on either Fargate or ECS) or to Azure (on ACI).  By authoring our infrastructure using the `@pulumi/cloud` framework, it can be deployed transparently to either cloud (with support for other clouds on the roadmap). The [code for this tutorial](https://github.com/pulumi/examples/tree/master/cloud-js-containers) is available on GitHub.
+In this tutorial, we'll use JavaScript to build and deploy a simple container using the [`@pulumi/cloud`]({{< relref "/reference/pkg/nodejs/pulumi/cloud" >}}) framework.  This example can be deployed to AWS (on either Fargate or ECS) or to Azure (on ACI).  By authoring our infrastructure using the `@pulumi/cloud` framework, it can be deployed transparently to either cloud (with support for other clouds on the roadmap). The [code for this tutorial](https://github.com/pulumi/examples/tree/master/cloud-js-containers) is available on GitHub.
 
 ## Prerequisites
 
-1.  [Install Pulumi](../install.html)
-1.  Configure [AWS](../aws/setup.html) and/or [Azure](../azure/setup.html) credentials
+1.  [Install Pulumi]({{< relref "../install.md" >}})
+1.  Configure [AWS]({{< relref "../aws/setup.md" >}}) and/or [Azure]({{< relref "../azure/setup.md" >}}) credentials
 
 ## Serve an HTML file in an NGINX container
 
@@ -25,7 +29,7 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container us
 
 1.  Replace the contents of `index.js` with the following:
 
-    ```js
+    ```javascript
     const cloud = require("@pulumi/cloud");
 
     let service = new cloud.Service("pulumi-nginx", {
@@ -43,7 +47,7 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container us
     exports.url = service.defaultEndpoint.apply(e => `http://${e.hostname}`);
     ```
 
-    This example uses [cloud.Service](/reference/pkg/nodejs/@pulumi/cloud/index.html#Service), which is a high-level, convenient interface for building containers and provisioning a container service on your target cloud.
+    This example uses [cloud.Service]({{< relref "/reference/pkg/nodejs/pulumi/cloud#Service" >}}), which is a high-level, convenient interface for building containers and provisioning a container service on your target cloud.
 
 1.  Create a subfolder `app` with the following files:
 
@@ -143,10 +147,10 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container us
 
 ## Clean up
 
-{% include cleanup.md %}
+{{< cleanup >}}
 
 ## Next steps
 
-For an end-to-end application also includes serverless functions, see the [Serverless and Container Thumbnailer](./tutorial-thumbnailer.html) tutorial.
+For an end-to-end application also includes serverless functions, see the [Serverless and Container Thumbnailer]({{< relref "tutorial-thumbnailer.md" >}}) tutorial.
 
 For an example application that connects two containers, see the [Voting App](https://github.com/pulumi/examples/tree/master/cloud-ts-voting-app) TypeScript sample.
