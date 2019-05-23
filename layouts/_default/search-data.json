@@ -1,26 +1,10 @@
----
-layout: null
-searchindex: false
----
 {
-{%- assign first = true -%}
-{%- for page in site.pages -%}
-{%- comment -%}
-Exclude some pages that we don't want to index.
-{%- endcomment -%}
-{%- if page.searchindex == false -%}
-    {%- continue -%}
-{%- endif -%}
-{%- if page.title == nil and page.content == '' -%}
-    {%- continue -%}
-{%- endif -%}
-
-{%- unless first -%},{%- endunless -%}
-{%- assign first = false -%}
-
-"{{ page.url | xml_escape }}": {
-  "title": "{{ page.title | xml_escape }}",
-  "content": {{ page.content | strip_html | strip_newlines | jsonify }}
-}
-{%- endfor -%}
+{{- $pages := (where .Site.Pages ".Params.noindex" "ne" true) -}}
+{{- $lastindex := (sub (len $pages) 1) -}}
+{{ range $index, $page := $pages }}
+    "{{ .RelPermalink }}": {
+        "title": {{ .Title | jsonify }},
+        "content": {{ .Plain | jsonify }}
+    }{{ if ne $lastindex $index }},{{ end }}
+{{ end }}
 }

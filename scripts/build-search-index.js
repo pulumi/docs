@@ -1,6 +1,6 @@
 // Adapted from https://lunrjs.com/guides/index_prebuilding.html
 
-const lunr = require("../js/lunr.min.js");
+const lunr = require("../static/js/lunr.min.js");
 const stdin = process.stdin;
 const stdout = process.stdout;
 
