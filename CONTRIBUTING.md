@@ -9,25 +9,46 @@
 
 - There is a folder for each heading in the top navigation, such as `Install`, `getting-started`, etc.
 
-- The mapping from documentation page to section and table-of-contents (TOC) is stored in yaml files in `_data`. 
-
-- To rename a section, rename both the value of `nav_section` in the toc yaml file (e.g., [`_data/install.yaml`](_data/install.yaml)) and update the layout in [`_includes/header.html`](_includes/header.html).
-
-- To add a new article and add it to the table-of-contents for that section, create a new file in the right section and add an entry in the corresponding file in `_data\top-level-section.yaml`.
+- The mapping from documentation page to section and table-of-contents (TOC) is stored largely in each page's front matter, leveraging [Hugo Menus](https://gohugo.io/content-management/menus/). Menus for the CLI commands and API reference are specified in `./config.toml`.
 
 ### Links to other files
 
-**NOTE:** The local Jekyll web server will resolve URLs without an extension, so `[topic](section/topic)` will resolve to `section/topic.html`. Unfortunately, the Go binary that serves content does **not** honor this behavior. If you're running the `make test` target against a Jekyll web server, you won't see the issue, but there will be 404s on the production docs site.
+We generally use Hugo's [`relref` shortcode](https://gohugo.io/content-management/shortcodes/#ref-and-relref) when linking to other pages. Examples:
 
-### Jekyll and Liquid tips
+```markdown
+[Install]({{< relref "/quickstart/install.md" >}})
+[Outputs]({{< relref "programming-model.md#stack-outputs" >}})
+```
 
-- **Redirects.** If you rename a file or directory, add a 301 redirect in the front-matter via `redirect_from: "/previous-dir/previousfile.html"`.
+Which, on a page inside the `./content/reference` directory, will generate:
 
-- **Includes.** To share common content across articles, use an "include" file. Place a file in the [`_includes`](_includes/) folder with the appropriate file extension. To include it in a page, use the syntax `{% include %}`.
+```html
+<a href="/quickstart/install/">Install</a>
+<a href="/reference/programming-model/#stack-outputs">Outputs</a>
+```
 
-- **Front-matter variables.** You can define a front-matter variable in the YAML section at the top of a file. For instance, the installer page defines `installer_version: "0.10.0"`. You  can then reference the variable in either markdown or HTML content with the syntax `{{ page.installer_version }}`.
 
-- **Anchor tags.** Define anchor tags with the syntax `{#anchor-name}`. Even though [Kramdown can automatically generate header IDs](https://kramdown.gettalong.org/converter/html.html), it is preferable to use an explicit anchor; otherwise, changing a section name will break anchor links.
+### Hugo tips
+
+- **Redirects.** If you rename a file or directory, add a 301 redirect in the front-matter via an [alias](https://gohugo.io/content-management/urls/#aliases) `aliases: ["/previous-dir/previousfile.html"]`.
+
+- **Includes.**
+
+  - **.md files.** To share common content across articles, use [Hugo Shortcodes](https://gohugo.io/content-management/shortcodes/). Place a .html file in the [layouts/shortcodes] folder. To include it in a page, use syntax `{{< my-shortcode >}}`
+
+    For example, our custom [`cleanup`](layouts/shortcodes/cleanup.html) shortcode can be included in .md files, to include common text about cleaning up stack resources:
+
+    ```md
+    {{< cleanup >}}
+    ```
+
+  - **.html layout files.** HTML layouts can include other layouts inside the [layouts/partials](layouts/partials) directory, e.g.:
+
+    ```html
+    {{ partial "head.html" . }}
+    ```
+
+- **Front-matter variables.** You can define a front-matter variable in the YAML section at the top of a file. For instance, the installer page defines `installer_version: "0.10.0"`. You  can then reference the variable in either markdown with the syntax `{{< param installer_version >}}`.
 
 ## Style guide
 
@@ -49,14 +70,6 @@
 - Use double-asterisks for bold `**`
 - Use underscore for italic `_`
 - Use triple-backtick and language for code formatting, e.g. ```typescript
-- Don't use hard linebreaks. They are discouraged by the the kramdown formatter, which calls it "lazy syntax". See [kramdown Syntax](https://kramdown.gettalong.org/syntax.html).
-- **In contrast to GitHub-flavored markdown, use two spaces after a list item**, so that the indentation of the next level aligns correctly. This is because kramdown parses lists differently than GitHub. See http://idratherbewriting.com/documentation-theme-jekyll/#markdown.
-
-  I.e., do 
-  ```1.  First item``` (two spaces)
-
-  Instead of 
-  ```1. First item``` (one space)
 
 ### Sections
 
