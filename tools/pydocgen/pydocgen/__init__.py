@@ -11,7 +11,7 @@ format that is amenable for inclusion in the Pulumi Docs repo. It accomplishes t
        documentation for them. We use the "json" builder for Sphinx, which is a target that splats a large amount of
        HTML into a JSON document for each input RST file that we gave it.
     3. The script processes the JSON output of Sphinx and produces a series of folders and Markdown documents that our
-       Jekyll front-end is aware of and can render in a reasonable fashion in the context of our docs website.
+       Hugo front-end is aware of and can render in a reasonable fashion in the context of our docs website.
 
 This is a little crazy. I will understand if you hate me. However, this script is very effective at what it does, mostly
 because Sphinx is an incredibly powerful tool that is well-suited for this purpose. The "correct" way to accomplish this
@@ -222,8 +222,8 @@ def transform_sphinx_output_to_markdown(ctx: Context):
         provider_sphinx_output = path.join(base_json, provider.package_name)
         # If this thing has submodules, provider_sphinx_output is a directory and it exists.
         if path.exists(provider_sphinx_output):
-            create_markdown_file(f"{provider_sphinx_output}.fjson", path.join(provider_path, "index.md"))
-            # Recurse through all submodules (all fjson files in this directory) and produce folders with an index.md
+            create_markdown_file(f"{provider_sphinx_output}.fjson", path.join(provider_path, "_index.md"))
+            # Recurse through all submodules (all fjson files in this directory) and produce folders with an _index.md
             # in them.
             for file in glob.iglob(path.join(provider_sphinx_output, "**/*.fjson"), recursive=True):
                 rel_file = path.relpath(file, start=provider_sphinx_output)
@@ -235,10 +235,10 @@ def transform_sphinx_output_to_markdown(ctx: Context):
                     module_path = create_dir(provider_path, directory, module_name)
                 else:
                     module_path = create_dir(provider_path, module_name)
-                create_markdown_file(file, path.join(module_path, "index.md"))
+                create_markdown_file(file, path.join(module_path, "_index.md"))
         else:
-            # Otherwise, just drop an index.md in the provider directory.
-            create_markdown_file(f"{provider_sphinx_output}.fjson", path.join(provider_path, "index.md"))
+            # Otherwise, just drop an _index.md in the provider directory.
+            create_markdown_file(f"{provider_sphinx_output}.fjson", path.join(provider_path, "_index.md"))
 
         
 def create_dir(*args):
@@ -260,6 +260,8 @@ def create_markdown_file(file: str, out_file: str):
         contents = json.load(f)
 
     with open(out_file, "w") as f:
+        # First, write some empty front-matter at the beginning of the file.
+        f.write("---\n---\n\n")
         # The "body" property of Sphinx's JSON is basically the rendered HTML of the documentation on this page. We're
         # going to slam it verbatim into a file and call it Markdown, because we're professionals.
         f.write(contents["body"])

@@ -16,7 +16,7 @@ TOOL_TYPEDOC="$SCRIPT_DIR/../node_modules/.bin/typedoc"
 TOOL_APIDOCGEN="go run ./tools/tscdocgen/*.go"
 
 PULUMI_DOC_TMP=`mktemp -d`
-PULUMI_DOC_BASE=./reference/pkg/nodejs/@pulumi
+PULUMI_DOC_BASE=./content/reference/pkg/nodejs/pulumi
 
 # Set this to 1 to run all generation in parallel.
 PARALLEL=0
