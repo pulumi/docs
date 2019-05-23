@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+    {% include head.html %}
+    <body>
+        {% include header.html %}
+
+        <main id="main-content">
+            <section class="content-block bg-white">
+                <div class="content-content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div>
+                                <div class="content">
+                                    {{ content }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        {% include footer.html %}
+
+        {% include scripts.html %}
+    </body>
+</html>
