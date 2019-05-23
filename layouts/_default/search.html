@@ -1,10 +1,7 @@
----
-layout: default
-searchindex: false
----
+{{ define "main" }}
+    <div id="spinner" class="loader"></div>
 
-<div id="spinner" class="loader"></div>
+    <div id="search-results-container"></div>
 
-<div id="search-results-container"></div>
-
-<script src="/js/search.js"></script>
+    <script src="/js/search.js"></script>
+{{ end }}
