@@ -1,13 +1,5 @@
-/_js/build/
-/_site/
 .DS_Store
-*.swp
-.jekyll-metadata
-vendor
-# We don't sync Sass-vendor dependencies
-# during `make ensure`, they are checked in.
-!_sass/vendor
-.bundle
+/resources/
+/public/
 node_modules
 *.map
-/.sass-cache/
