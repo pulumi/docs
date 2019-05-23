@@ -1,0 +1,79 @@
+{{ define "main" }}
+    <div class="col-md-3 hidden-xs hidden-sm">
+        {{ partial "toc.html" . }}
+    </div>
+    <div class="col-md-9">
+        {{ with .File }}
+        <div class="edit-this-page">
+            <a href="{{ $.Site.Params.repositoryURL }}/edit/{{ $.Site.Params.repositoryBranch }}/content/{{ .Path }}" target="_blank">
+                <i class="fab fa-github"></i>
+                Edit This Page
+            </a>
+        </div>
+        {{ end }}
+
+        <h1>{{ .Title }}</h1>
+
+        <p>
+            Pulumi helps you get your code to the AWS cloud faster than ever before:
+            from high-level multi-cloud libraries, to low-level fine grained control
+            of AWS-specific resources.
+        </p>
+
+        <div class="row">
+            <div class="col-md-9">
+                <h2 id="pulumi-and-aws">Pulumi and AWS</h2>
+
+                <img class="how-to-logo" src="/images/brand/aws-technology-partner.png" alt="AWS advanced technology partner" width="225">
+
+                <p>
+                    Pulumi is an AWS Advanced Technology Partner providing everything you need
+                    to get code to the AWS cloud. Pulumi provides a cloud development platform
+                    enabling Development and DevOps teams to code, deploy, any cloud app: from
+                    serverless functions, to container apps, to data services and
+                    infrastructure.
+                </p>
+            </div>
+            <div class="col-md-3 find-out-more">
+                {{ partial "aws/find-out-more.html" . }}
+            </div>
+        </div>
+
+        <h2>Coding and deploying apps for AWS with Pulumi</h2>
+
+        <p>
+            Pulumi supports all AWS services available for deployment. The
+            `@pulumi/aws` library enables fine-grained control over chosen resources
+            meaning so your app can be optimized for AWS.
+        </p>
+
+        <p>Example services include:</p>
+
+        <div class="row">
+            <div class="col-md-4">
+                <ul>
+                    <li><a href="/aws/athena/">Amazon Athena</a></li>
+                    <li><a href="/aws/cloudwatch/">Amazon Cloudwatch</a></li>
+                    <li><a href="/aws/dynamodb/">Amazon DynamoDB</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul>
+                    <li><a href="/aws/ec2/">Amazon EC2</a></li>
+                    <li><a href="/aws/ecr/">Amazon ECR</a></li>
+                    <li><a href="/aws/iam/">Amazon IAM</a></li>
+                    <li><a href="/aws/kinesis/">Amazon Kinesis</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul>
+                    <li><a href="/aws/s3/">Amazon S3</a></li>
+                    <li><a href="/aws/sns/">Amazon SNS</a></li>
+                    <li><a href="/aws/sqs/">Amazon SQS</a></li>
+                </ul>
+            </div>
+        </div>
+
+        {{ .Content }}
+    </div>
+{{ end }}
