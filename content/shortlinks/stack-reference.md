@@ -1,4 +1,4 @@
 ---
-redirect_to: reference/organizing-stacks-projects.html#inter-stack-dependencies
-permalink: help/stack-reference/
+redirect_to: reference/organizing-stacks-projects/#inter-stack-dependencies
+url: help/stack-reference/
 ---
