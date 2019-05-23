@@ -167,14 +167,62 @@ var gitHubBaseURLs = map[string]string{
 	"@pulumi/aws":        "https://github.com/pulumi/pulumi-aws/blob/{githash}/sdk/nodejs",
 	"@pulumi/awsx":       "https://github.com/pulumi/pulumi-awsx/blob/{githash}/nodejs/awsx",
 	"@pulumi/azure":      "https://github.com/pulumi/pulumi-azure/blob/{githash}/sdk/nodejs",
+	"@pulumi/azuread":    "https://github.com/pulumi/pulumi-azuread/blob/{githash}/sdk/nodejs",
 	"@pulumi/cloud":      "https://github.com/pulumi/pulumi-cloud/blob/{githash}/api",
+	"@pulumi/cloudflare": "https://github.com/pulumi/pulumi-cloudflare/blob/{githash}/sdk/nodejs",
 	"@pulumi/docker":     "https://github.com/pulumi/pulumi-docker/blob/{githash}/sdk/nodejs",
 	"@pulumi/eks":        "https://github.com/pulumi/pulumi-eks/blob/{githash}/nodejs/eks",
-	"@pulumi/kubernetes": "https://github.com/pulumi/pulumi-kubernetes/blob/{githash}/sdk/nodejs",
-	"@pulumi/mysql":      "https://github.com/pulumi/pulumi-mysql/blob/{githash}/sdk/nodejs",
+	"@pulumi/f5bigip":    "https://github.com/pulumi/pulumi-f5bigip/blob/{githash}/sdk/nodejs",
 	"@pulumi/gcp":        "https://github.com/pulumi/pulumi-gcp/blob/{githash}/sdk/nodejs",
+	"@pulumi/kubernetes": "https://github.com/pulumi/pulumi-kubernetes/blob/{githash}/sdk/nodejs",
+	"@pulumi/linode":     "https://github.com/pulumi/pulumi-linode/blob/{githash}/sdk/nodejs",
+	"@pulumi/mysql":      "https://github.com/pulumi/pulumi-mysql/blob/{githash}/sdk/nodejs",
+	"@pulumi/newrelic":   "https://github.com/pulumi/pulumi-newrelic/blob/{githash}/sdk/nodejs",
 	"@pulumi/openstack":  "https://github.com/pulumi/pulumi-openstack/blob/{githash}/sdk/nodejs",
+	"@pulumi/packet":     "https://github.com/pulumi/pulumi-packet/blob/{githash}/sdk/nodejs",
+	"@pulumi/random":     "https://github.com/pulumi/pulumi-random/blob/{githash}/sdk/nodejs",
 	"@pulumi/vsphere":    "https://github.com/pulumi/pulumi-vsphere/blob/{githash}/sdk/nodejs",
+}
+
+const atAliasPrefix = "/reference/pkg/nodejs/"
+
+// atAliases is a hard-coded list of packages that require aliases because we used to host the docs at
+// `/reference/pkg/nodejs/@pulumi/*` and Jekyll allowed the `@` in the path when it generated the site.
+// However, Hugo elides the `@` from the generated site, so we must provide aliases so that older links
+// to these packages continue to work.
+// Note: These were the only set of packages that existed at the time of the Hugo migration, so there's no
+// need to add new packages to this map.
+var atAliases = map[string]bool{
+	"@pulumi/pulumi":     true,
+	"@pulumi/aws":        true,
+	"@pulumi/awsx":       true,
+	"@pulumi/azure":      true,
+	"@pulumi/azuread":    true,
+	"@pulumi/cloud":      true,
+	"@pulumi/cloudflare": true,
+	"@pulumi/docker":     true,
+	"@pulumi/eks":        true,
+	"@pulumi/f5bigip":    true,
+	"@pulumi/gcp":        true,
+	"@pulumi/kubernetes": true,
+	"@pulumi/linode":     true,
+	"@pulumi/mysql":      true,
+	"@pulumi/newrelic":   true,
+	"@pulumi/openstack":  true,
+	"@pulumi/packet":     true,
+	"@pulumi/random":     true,
+	"@pulumi/vsphere":    true,
+}
+
+// rootAliases is a hard-coded list of packages that need an alias to an older URL.
+// Note: These were the only set of packages that were at these old URLs, so there's no need to add
+// additional packages to this map.
+var rootAliases = map[string]string{
+	"@pulumi/pulumi":     "/packages/pulumi",
+	"@pulumi/aws":        "/packages/pulumi-aws",
+	"@pulumi/azure":      "/packages/pulumi-azure",
+	"@pulumi/cloud":      "/packages/pulumi-cloud",
+	"@pulumi/kubernetes": "/packages/pulumi-kubernetes",
 }
 
 // emitMarkdownDocs takes as input a full Typedoc AST, transforms it into Markdown suitable for our documentation
@@ -305,12 +353,21 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 	var pkg string
 	var pkgvar string
 	var breadcrumbs []string
+	var aliases []string
 	if root {
 		title = fmt.Sprintf("Package %s", e.pkg)
 		pkg = e.pkg
 		pkgvar = camelCase(e.pkg[strings.IndexRune(e.pkg, '/')+1:])
+		if _, ok := atAliases[e.pkg]; ok {
+			aliases = append(aliases, fmt.Sprintf("%s%s/", atAliasPrefix, e.pkg))
+		}
+		if rootAlias, ok := rootAliases[e.pkg]; ok {
+			aliases = append(aliases, rootAlias)
+		}
 	} else {
 		title = fmt.Sprintf("Module %s", name)
+
+		aliases = append(aliases, fmt.Sprintf("%s%s/%s/", atAliasPrefix, e.pkg, name))
 
 		// Create the breadcrumb links (in LIFO order).  First, add the current module name.
 		var simplename string
@@ -332,7 +389,7 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 			}
 
 			breadcrumbs = append(
-				[]string{fmt.Sprintf("<a href=\"%s/index.html\">%s</a> &gt; ", crumbs, name)},
+				[]string{fmt.Sprintf("<a href=\"%s/\">%s</a> &gt; ", crumbs, name)},
 				breadcrumbs...)
 			if crumbs != "" {
 				crumbs += string(filepath.Separator)
@@ -342,7 +399,7 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 
 		// Finally, add the link to the root module.
 		breadcrumbs = append(
-			[]string{fmt.Sprintf("<a href=\"%s/index.html\">%s</a> &gt; ", crumbs, e.pkg)},
+			[]string{fmt.Sprintf("<a href=\"%s/\">%s</a> &gt; ", crumbs, e.pkg)},
 			breadcrumbs...)
 	}
 
@@ -404,6 +461,8 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 		"HasModules":  len(modules) > 0,
 		"Members":     members,
 		"HasMembers":  len(members) > 0,
+		"Aliases":     aliases,
+		"HasAliases":  len(aliases) > 0,
 	}); err != nil {
 		return err
 	}
@@ -627,11 +686,11 @@ func (m *module) Merge(other *module) error {
 const rootModule = "index"
 
 func getModuleFilename(m string) string {
-	// Each module gets its own subdirectory and index.md.  The package root gets a bit more metadata at the top.
+	// Each module gets its own subdirectory and _index.md.  The package root gets a bit more metadata at the top.
 	if m == rootModule {
-		return "index.md"
+		return "_index.md"
 	}
-	return filepath.Join(strings.Replace(m, "/", string(filepath.Separator), -1), "index.md")
+	return filepath.Join(strings.Replace(m, "/", string(filepath.Separator), -1), "_index.md")
 }
 
 func getModuleParentName(m string) string {
@@ -925,17 +984,17 @@ func typeHyperlink(t *typeDocType) string {
 			case "Archive", "Asset", "AssetMap", "AssetArchive",
 				"FileArchive", "FileAsset", "RemoteArchive", "RemoteAsset", "StringAsset":
 				return fmt.Sprintf(
-					"https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/asset/#%s", t.Name)
+					"/reference/pkg/nodejs/pulumi/pulumi/asset/#%s", t.Name)
 			case "ComponentResource", "ComponentResourceOptions", "CustomResource", "CustomResourceOptions",
 				"ID", "Input", "Inputs", "InvokeOptions", "Output", "Outputs", "Resource", "ResourceOptions", "URN":
 				return fmt.Sprintf(
-					"https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#%s", t.Name)
+					"/reference/pkg/nodejs/pulumi/pulumi/#%s", t.Name)
 			}
 
 			// If this is a qualified name, see if it refers to the Pulumi SDK. If so, generate a link.
 			elements := strings.Split(t.Name, ".")
 			if len(elements) > 1 && elements[0] == "pulumi" {
-				link := "https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/"
+				link := "/reference/pkg/nodejs/pulumi/pulumi/"
 				for i := 1; i < len(elements)-1; i++ {
 					link += fmt.Sprintf("%s/", elements[i])
 				}

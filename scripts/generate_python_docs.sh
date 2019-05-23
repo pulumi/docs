@@ -28,7 +28,7 @@ run_pydocgen() {
   for pkg in "${PACKAGES[@]}"; do
     pipenv run pip install --pre "${pkg}"
   done
-  pipenv run python -m pydocgen "../../reference/pkg"
+  pipenv run python -m pydocgen "../../content/reference/pkg"
   popd
 }
 
