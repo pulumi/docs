@@ -2,7 +2,7 @@
 #
 # Create shortened URL targets (shortlinks) for links on the doc site.
 #
-# Shortlink definitions are created as markdown files in the /shortlinks directory.
+# Shortlink definitions are created as markdown files in the /content/shortlinks directory.
 # Each of these files contains a reference to the target link, and the desired
 # shortlink that will redirect to the target. In the common case, the shortlink
 # is a randomly generated string, but a specific shortlink can also be specified.
@@ -15,12 +15,12 @@ if [[ $# -ne 2 && $# -ne 3 ]]; then
     cat << EOF
 Usage: $(basename $0) <target_link> <filename> [shortlink]
 
-Example: $(basename $0) /reference/troubleshooting.html#ingress-status-loadbalancer k8s-ingress-lbstatus
+Example: $(basename $0) /reference/troubleshooting#ingress-status-loadbalancer k8s-ingress-lbstatus
 
 /shortlinks/k8s-ingress-lbstatus.md
 ---
 redirect_to: /reference/troubleshooting.html#ingress-status-loadbalancer
-permalink: <random-6-char-string>/
+url: <random-6-char-string>/
 ---
 EOF
     exit 1
@@ -37,13 +37,13 @@ else
     PERMALINK="${SHORTLINK}"
 fi
 
-RELATIVEPATH="./shortlinks/${FILENAME}.md"
+RELATIVEPATH="./content/shortlinks/${FILENAME}.md"
 FILEPATH=$(echo "$(cd "$(dirname "${RELATIVEPATH}")"; pwd -P)/$(basename "${RELATIVEPATH}")")
 
 cat << EOF > "${FILEPATH}"
 ---
 redirect_to: ${TARGET_LINK}
-permalink: ${PERMALINK}/
+url: ${PERMALINK}/
 ---
 EOF
 
