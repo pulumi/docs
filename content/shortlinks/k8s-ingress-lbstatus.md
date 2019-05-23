@@ -1,4 +1,4 @@
 ---
-redirect_to: /reference/troubleshooting.html#ingress-status-loadbalancer
-permalink: xdv72s/
+redirect_to: /reference/troubleshooting/#ingress-status-loadbalancer
+url: xdv72s/
 ---

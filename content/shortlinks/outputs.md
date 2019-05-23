@@ -1,4 +1,4 @@
 ---
-redirect_to: /reference/programming-model.html#outputs
-permalink: help/outputs/
+redirect_to: /reference/programming-model/#outputs
+url: help/outputs/
 ---
