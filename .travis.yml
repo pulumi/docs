@@ -17,11 +17,9 @@ before_install:
 # yarn
 - npm i -g yarn
 # hugo
-# Note: We deliberately pin to version 0.55.4 as more recent versions include a newer version of the Blackfriday
+# Note: We deliberately pin to Hugo v0.55.4 as more recent versions include a newer version of the Blackfriday
 # markdown renderer which regresses rendering of fenced code in lists.
-# Until the following are addressed and included in an updated version of Hugo, we'll stick with v0.55.4:
-# - https://github.com/russross/blackfriday/issues/484
-# - https://github.com/russross/blackfriday/issues/526
+# Tracking issue: https://github.com/pulumi/docs/issues/1091
 - wget https://github.com/gohugoio/hugo/releases/download/v0.55.4/hugo_extended_0.55.4_Linux-64bit.deb
 - sudo dpkg -i hugo_extended_0.55.4_Linux-64bit.deb
 script:
