@@ -51,7 +51,8 @@ In all cases you use a [Codefresh freestyle step](https://codefresh.io/docs/docs
     title: Running Pulumi inside Codefresh
     image: pulumi/pulumi
     commands: 
-      - pulumi stack --non-interactive
+      - pulumi login
+      - pulumi stack 
 ```
 
 Pulumi will search for a login token named `PULUMI_ACCESS_TOKEN` so assuming that you have setup this variable in the pipeline, Pulumi will not ask for interactive login.
@@ -96,9 +97,10 @@ steps:
     stage: deploy
     image: pulumi/pulumi
     commands: 
-      - pulumi stack select dev --non-interactive
-      - pulumi stack --non-interactive
-      - pulumi up --non-interactive
+      - pulumi login
+      - pulumi stack select dev 
+      - pulumi stack 
+      - pulumi up 
 {% endraw %}
 {% endhighlight %}
 
