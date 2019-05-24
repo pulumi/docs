@@ -43,6 +43,7 @@ You can find additional examples of using Google Cloud in
 ## Libraries
 
 The following packages are available in packager managers:
+
 * JavaScript/TypeScript: [`@pulumi/gcp`](https://www.npmjs.com/package/@pulumi/gcp)
 * Python: [`pulumi-gcp`](https://pypi.org/project/pulumi-gcp/)
 * Go: [`github.com/pulumi/pulumi-gcp/sdk/go/gcp`](https://github.com/pulumi/pulumi-gcp)

@@ -73,6 +73,7 @@ steps:
 ### `pulumi.sh`
 
 A basic bash script that does the following:
+
 - Restore the Node dependencies for your Pulumi program.
 - Perform a `pulumi login`.
 - Select your stack.

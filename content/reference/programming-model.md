@@ -68,11 +68,12 @@ Pulumi programs are authored in general purpose programming languages such as [J
 
 When `pulumi up` is run, your Pulumi program is run and the Pulumi CLI determines the desired state of application resources. A Pulumi program can reference artifacts that have already been published (such as S3 objects or pre-built Docker images) or it can define application resources itself so that everything is versioned together. For example, if your program uses `cloud.Service` with a `build` step, or defines a Lambda for an S3 trigger, you're defining application code that is implicitly deployed during the `pulumi up`.
 
-A Pulumi program is contained within a [project]({{< relref "project.md" >}}). In JavaScript, the `main` property of `package.json` defines the entry point for the Pulumi program. 
+A Pulumi program is contained within a [project]({{< relref "project.md" >}}). In JavaScript, the `main` property of `package.json` defines the entry point for the Pulumi program.
 
 ## Pulumi SDK {#pulumipulumi}
 
 The [@pulumi/pulumi] package is the core library for working with the Pulumi engine. This package defines the following kinds of resources which can be deployed with Pulumi:
+
 - Resources ([pulumi.Resource])
 - External cloud platform resources ([pulumi.CustomResource])
 - Components defined entirely in JavaScript ([pulumi.ComponentResource])
@@ -80,7 +81,8 @@ The [@pulumi/pulumi] package is the core library for working with the Pulumi eng
 Dependencies between resources are encoded with [pulumi.Output](#outputs).
 
 This package also provides the following helpers:
-- [pulumi.getStack] to get information about the current stack 
+
+- [pulumi.getStack] to get information about the current stack
 - [pulumi.log] for logging deployment information
 - [pulumi.runtime.serializeFunction] for turning JavaScript callbacks into data which can be [used as application code](#runtime).
 
@@ -968,6 +970,7 @@ Create is invoked when the resource name (URN) of the resoruce created by the us
 
 ##### `diff(id, olds, news)`
 Diff is invoked when the resource name (URN) of the resoruce created by the user is found in the existing state of the deployment. This means the resource already exists, and will need to be either updated or replaced.  The `diff` method is passed the `id` of the resource (as returned by `create`) as well as the old outputs from the checkpoint file (values returned from a previous call to either `create` or `update`).  It is also passed the new checked inputs from the current deployment.  It returns four things (all optional):
+
 * `changes`: `true` if the provider believes there is a difference between the `olds` and `news` and wants to do an `update` or `replace` to affect this change.
 * `replaces`: An array of property names that have changed that should force a replacement.  Returning a non-zero length array here will tell the Pulumi engine to scheduled a replacement instead of an update, which might involve downtime, so this should only be used when a diff requested by the user cannot be implemented as an in-place update on the backing cloud provider.
 * `stables`: An array of property names that are known to not change between updates.  Pulumi will use this information to allow some `apply` calls on [Outputs]() to be processed during `previews` because it knows that the values of these will stay the same during an update.

@@ -20,6 +20,7 @@ This page shows you how to use the YAML method to configure your DevOps pipeline
 the steps outlined in the sample YAML file below to the Visual Designer as well.
 
 ## Prerequisites
+
 - An account on https://app.pulumi.com.
 - The latest CLI.
   - Installation instructions are [here]({{< relref "/quickstart/install.md" >}}).
@@ -27,11 +28,13 @@ the steps outlined in the sample YAML file below to the Visual Designer as well.
   - To learn more about how to create a git repo in your DevOps project, click [here](https://docs.microsoft.com/en-us/azure/devops/organizations/projects/create-project?view=vsts&tabs=new-nav).
 
 ## Stack and Branch Mappings
+
 > The names used above are purely for demonstration purposes only. You may choose a naming convention that best suits your organization.
 
 The scripts below act on a hypothetical stack: `acmeCorp/acmeProject/acme-ui`.
 `acme-ui` contains the infrastructure code or `pulumi` program. It also contains an Angular-based SPA.
 The git repo for this look like this:
+
 ```
 acme-ui
   src/
@@ -44,6 +47,7 @@ acme-ui
     Pulumi.acme-ui.yaml
   azure-pipelines.yml
 ```
+
 Once you login into the `pulumi` CLI on your machine, you can create a stack by running `pulumi stack init`.
 To create a `pulumi` program using one of the many available templates, you may run `pulumi new <template>`.
 You can find a suitable template to run, using the command `pulumi new --help`.
@@ -283,6 +287,7 @@ The `run-pulumi.sh` script runs `pulumi preview` for PR builds and the `pulumi u
 for master branches.
 
 The following environment variables are set in the build pipeline using the Azure DevOps portal.
+
 - `pulumi.access.token`
 - `arm.client.id`
 - `arm.client.secret`
