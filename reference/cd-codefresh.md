@@ -100,7 +100,7 @@ steps:
       - pulumi login
       - pulumi stack select dev 
       - pulumi stack 
-      - pulumi up 
+      - pulumi up --non-interactive
 {% endraw %}
 {% endhighlight %}
 
