@@ -34,7 +34,7 @@ and a video walkthrough of this example is [available on YouTube](https://www.yo
 
     ```typescript
     import * as aws from "@pulumi/aws";
-    import * as awsx from "@pulumi/aws-infra";
+    import * as awsx from "@pulumi/awsx";
 
     // A simple cluster to run our tasks in.
     const cluster = awsx.ecs.Cluster.getDefault();
@@ -135,12 +135,6 @@ and a video walkthrough of this example is [available on YouTube](https://www.yo
       ffmpeg -v error -i ./${INPUT_VIDEO} -ss ${TIME_OFFSET} -vframes 1 -f image2 -an -y ${OUTPUT_FILE} && \
       echo "Copying thumbnail to S3" && \
       aws s3 cp ./${OUTPUT_FILE} s3://${S3_BUCKET}/${OUTPUT_FILE}
-    ```
-
-1.  Install the necessary NPM package:
-
-    ```bash
-    $ npm install --save @pulumi/pulumi @pulumi/aws @pulumi/aws-infra
     ```
 
 1.  Configure Pulumi to use an AWS region that supports Fargate. (Note: Fargate is currently available only in `us-east-1`, `us-east-2`, `us-west-2`, and `eu-west-1`).
