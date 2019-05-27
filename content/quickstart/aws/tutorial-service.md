@@ -86,12 +86,6 @@ In this tutorial, we'll use TypeScript to build and deploy a simple container us
       index.html
     ```
 
-1.  Install the necessary NPM packages:
-
-    ```bash
-    $ npm install --save @pulumi/pulumi  @pulumi/aws @pulumi/aws-infra
-    ```
-
 1.  Configure the AWS region you would like to use:
 
     ```bash
