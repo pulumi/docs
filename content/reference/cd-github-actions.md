@@ -7,7 +7,6 @@ expanded_url: /reference/cd/
 menu:
   reference:
     parent: cd
-    weight: 4
 ---
 
 <style>

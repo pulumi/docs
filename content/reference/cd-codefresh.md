@@ -1,5 +1,10 @@
 ---
 title: Codefresh
+aliases: ["cd-codefresh.html"]
+expanded_url: /reference/cd/
+menu:
+  reference:
+    parent: cd
 ---
 
 [Codefresh](https://codefresh.io) is a CI/CD platform designed for containers and microservices. It has built-in support for Docker, Kubernetes and Helm.
@@ -14,7 +19,7 @@ First of all follow the instructions for creating a Pulumi stack. There are thre
 
 1. [Clone an Existing Example](https://github.com/pulumi/examples)
 2. [Use the New Project Wizard](https://app.pulumi.com/site/new-project)
-3. [Download the CLI](https://pulumi.io/quickstart/install.html) and run `pulumi new` to select a template.
+3. [Download the CLI]({{< relref "/quickstart/install.md" >}}) and run `pulumi new` to select a template.
 
 Then [signup for a Codefresh account](https://codefresh.io/docs/docs/getting-started/create-a-codefresh-account/) and [create a pipeline](https://codefresh.io/docs/docs/configure-ci-cd-pipeline/pipelines/). There is no special setup needed on the Codefresh side (i.e. you can use Pulumi on both free and paid Codefresh accounts).
 
@@ -51,6 +56,7 @@ In all cases you use a [Codefresh freestyle step](https://codefresh.io/docs/docs
     title: Running Pulumi inside Codefresh
     image: pulumi/pulumi
     commands: 
+      # run any pulumi command that you would run locally such as:
       - pulumi login
       - pulumi stack 
 ```
@@ -64,8 +70,7 @@ For other non-Kubernetes deployments, you need to add additional environment var
 Here is a full example:
 
  `codefresh.yml`
-{% highlight yaml %}
-{% raw %}
+```yaml
 version: '1.0'
 stages:
   - prepare
@@ -99,10 +104,10 @@ steps:
     commands: 
       - pulumi login
       - pulumi stack select dev 
+      # (Optional) Use pulumi stack to get more information in CI/CD logs about the current stack
       - pulumi stack 
       - pulumi up --non-interactive
-{% endraw %}
-{% endhighlight %}
+```
 
 
 

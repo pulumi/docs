@@ -5,7 +5,6 @@ expanded_url: /reference/service/
 menu:
   reference:
     parent: teams
-    weight: 4
 ---
 
 <style>

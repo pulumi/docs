@@ -5,7 +5,6 @@ expanded_url: /reference/cd/
 menu:
   reference:
     parent: cd
-    weight: 5
 ---
 
 This page details how to use [GitLab CI](https://about.gitlab.com/features/gitlab-ci-cd/) to manage deploying

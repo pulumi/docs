@@ -5,7 +5,6 @@ expanded_url: /reference/cd/
 menu:
   reference:
     parent: cd
-    weight: 3
 ---
 
 This page details how to use [CircleCI](https://circleci.com/) to deploy Pulumi stacks.
