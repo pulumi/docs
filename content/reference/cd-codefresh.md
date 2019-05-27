@@ -1,6 +1,5 @@
 ---
 title: Codefresh
-aliases: ["cd-codefresh.html"]
 expanded_url: /reference/cd/
 menu:
   reference:
