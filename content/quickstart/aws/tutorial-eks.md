@@ -57,9 +57,9 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Elastic Conta
     const name = "helloworld";
 
     // Create an EKS cluster with non-default configuration
-    const vpc = new awsx.Vpc("vpc", subnets: [{ type: "public" }]);
+    const vpc = new awsx.ec2.Vpc("vpc", { subnets: [{ type: "public" }] });
     const cluster = new eks.Cluster(name, {
-        vpcId: vpc.vpcId,
+    vpcId: vpc.id,
         subnetIds: vpc.publicSubnetIds,
         desiredCapacity: 2,
         minSize: 1,
