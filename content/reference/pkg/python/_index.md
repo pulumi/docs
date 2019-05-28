@@ -28,6 +28,7 @@ Each cloud vendor has a dedicated package for deploying resources to it:
 * [Packet (`pulumi_packet`)](pulumi_packet)
 * [F5 BigIP (`pulumi_f5bigip`)](pulumi_f5bigip)
 * [Cloudflare (`pulumi_cloudflare`)](pulumi_cloudflare)
+* [DigitalOcean (`pulumi_digitalocean`)](pulumi_digitalocean)
 
 ### Cloud-Agnostic Packages
 

@@ -28,6 +28,10 @@
       "package_name": "pulumi_cloudflare"
     },
     {
+      "name": "Pulumi DigitalOcean",
+      "package_name": "pulumi_digitalocean"
+    },
+    {
       "name": "Pulumi GCP",
       "package_name": "pulumi_gcp"
     },

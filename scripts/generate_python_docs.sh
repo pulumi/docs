@@ -9,6 +9,7 @@ PACKAGES=(
   "pulumi_azure"
   "pulumi_azuread"
   "pulumi_cloudflare"
+  "pulumi_digitalocean"
   "pulumi_f5bigip"
   "pulumi_gcp"
   "pulumi_kubernetes"
