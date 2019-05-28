@@ -106,7 +106,7 @@ import * as cloudflare from "@pulumi/cloudflare";
 <li><a href="#ZoneState">interface ZoneState</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessApplication.ts">accessApplication.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessPolicy.ts">accessPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessRule.ts">accessRule.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accountMember.ts">accountMember.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/argo.ts">argo.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/customPages.ts">customPages.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/filter.ts">filter.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/firewallRule.ts">firewallRule.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/getIpRanges.ts">getIpRanges.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/getZones.ts">getZones.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts">loadBalancer.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts">loadBalancerMonitor.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts">loadBalancerPool.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/logpushJob.ts">logpushJob.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/pageRule.ts">pageRule.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/provider.ts">provider.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts">rateLimit.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts">record.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/spectrumApplication.ts">spectrumApplication.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/utilities.ts">utilities.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/wafRule.ts">wafRule.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerRoute.ts">workerRoute.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerScript.ts">workerScript.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zone.ts">zone.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneLockdown.ts">zoneLockdown.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneSettingsOverride.ts">zoneSettingsOverride.ts</a> 
+<a href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessApplication.ts">accessApplication.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts">accessPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessRule.ts">accessRule.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accountMember.ts">accountMember.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/argo.ts">argo.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/customPages.ts">customPages.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/filter.ts">filter.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/firewallRule.ts">firewallRule.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/getIpRanges.ts">getIpRanges.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/getZones.ts">getZones.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts">loadBalancer.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts">loadBalancerMonitor.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts">loadBalancerPool.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/logpushJob.ts">logpushJob.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/pageRule.ts">pageRule.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/provider.ts">provider.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts">rateLimit.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts">record.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts">spectrumApplication.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/utilities.ts">utilities.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/wafRule.ts">wafRule.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerRoute.ts">workerRoute.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerScript.ts">workerScript.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts">zone.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneLockdown.ts">zoneLockdown.ts</a> <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneSettingsOverride.ts">zoneSettingsOverride.ts</a> 
 </div>
 </div>
 </div>
@@ -126,7 +126,7 @@ import * as cloudflare from "@pulumi/cloudflare";
 </div>
 
 <h2 class="pdoc-module-header" id="AccessApplication">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessApplication.ts#L26">class <b>AccessApplication</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessApplication.ts#L26">class <b>AccessApplication</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -150,7 +150,7 @@ const stagingApp = new cloudflare.AccessApplication("staging_app", {
 ```
 
 <h3 class="pdoc-member-header" id="AccessApplication-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessApplication.ts#L57"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessApplication.ts#L57"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -167,7 +167,7 @@ Create a AccessApplication resource with the given unique name, arguments, and o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessApplication-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessApplication.ts#L35">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessApplication.ts#L35">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -181,7 +181,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessApplication-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -191,7 +191,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessApplication-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -205,7 +205,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessApplication-aud">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessApplication.ts#L39">property <b>aud</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessApplication.ts#L39">property <b>aud</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>aud: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -213,7 +213,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessApplication-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessApplication.ts#L44">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessApplication.ts#L44">property <b>domain</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>domain: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -225,7 +225,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessApplication-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -237,7 +237,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessApplication-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessApplication.ts#L48">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessApplication.ts#L48">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -248,7 +248,7 @@ Friendly name of the Access Application.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessApplication-sessionDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessApplication.ts#L53">property <b>sessionDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessApplication.ts#L53">property <b>sessionDuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>sessionDuration: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -260,7 +260,7 @@ re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessApplication-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -272,7 +272,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessApplication-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessApplication.ts#L57">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessApplication.ts#L57">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zoneId: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -284,7 +284,7 @@ The DNS zone to which the access rule should be added.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AccessPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessPolicy.ts#L49">class <b>AccessPolicy</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L49">class <b>AccessPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -331,7 +331,7 @@ conditions which can be applied. The conditions are:
   requests. Example: `everyone = true`
 
 <h3 class="pdoc-member-header" id="AccessPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessPolicy.ts#L99"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L99"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -348,7 +348,7 @@ Create a AccessPolicy resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessPolicy.ts#L58">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L58">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -362,7 +362,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -372,7 +372,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -386,7 +386,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessPolicy-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessPolicy.ts#L66">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L66">property <b>applicationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>applicationId: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -398,7 +398,7 @@ associated with.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessPolicy-decision">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessPolicy.ts#L71">property <b>decision</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L71">property <b>decision</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>decision: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -410,7 +410,7 @@ Allowed values: `allow`, `deny`, `bypass`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessPolicy-excludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessPolicy.ts#L76">property <b>excludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L76">property <b>excludes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>excludes: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -427,7 +427,7 @@ full list.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -439,7 +439,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessPolicy-includes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessPolicy.ts#L81">property <b>includes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L81">property <b>includes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>includes: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -456,7 +456,7 @@ full list.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessPolicy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessPolicy.ts#L85">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L85">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -467,7 +467,7 @@ Friendly name of the Access Application.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessPolicy-precedence">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessPolicy.ts#L89">property <b>precedence</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L89">property <b>precedence</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>precedence: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -478,7 +478,7 @@ The unique precedence for policies on a single application. Integer.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessPolicy-requires">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessPolicy.ts#L94">property <b>requires</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L94">property <b>requires</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>requires: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -495,7 +495,7 @@ full list.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -507,7 +507,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessPolicy-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessPolicy.ts#L99">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L99">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zoneId: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -520,7 +520,7 @@ added.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AccessRule">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessRule.ts#L55">class <b>AccessRule</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessRule.ts#L55">class <b>AccessRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -573,7 +573,7 @@ for (let i = 0; i < myOffice.length; i++) {
 ```
 
 <h3 class="pdoc-member-header" id="AccessRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessRule.ts#L87"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessRule.ts#L87"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -590,7 +590,7 @@ Create a AccessRule resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessRule.ts#L64">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessRule.ts#L64">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -604,7 +604,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -614,7 +614,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -628,7 +628,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessRule-configuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessRule.ts#L71">property <b>configuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessRule.ts#L71">property <b>configuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>configuration: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -642,7 +642,7 @@ Rule configuration to apply to a matched request. It's a complex value. See desc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -654,7 +654,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessRule-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessRule.ts#L75">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessRule.ts#L75">property <b>mode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>mode: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -665,7 +665,7 @@ The action to apply to a matched request. Allowed values: "block", "challenge", 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessRule-notes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessRule.ts#L79">property <b>notes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessRule.ts#L79">property <b>notes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>notes: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -676,7 +676,7 @@ A personal note about the rule. Typically used as a reminder or explanation for 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -688,7 +688,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessRule-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessRule.ts#L83">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessRule.ts#L83">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zone: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -699,7 +699,7 @@ The DNS zone to which the access rule should be added. Will be resolved to `zone
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessRule-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessRule.ts#L87">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessRule.ts#L87">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zoneId: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -711,7 +711,7 @@ The DNS zone to which the access rule should be added.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AccountMember">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accountMember.ts#L25">class <b>AccountMember</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accountMember.ts#L25">class <b>AccountMember</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -734,7 +734,7 @@ const exampleUser = new cloudflare.AccountMember("example_user", {
 ```
 
 <h3 class="pdoc-member-header" id="AccountMember-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accountMember.ts#L45"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accountMember.ts#L45"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -751,7 +751,7 @@ Create a AccountMember resource with the given unique name, arguments, and optio
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountMember-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accountMember.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accountMember.ts#L34">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -765,7 +765,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountMember-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -775,7 +775,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountMember-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -789,7 +789,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountMember-emailAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accountMember.ts#L41">property <b>emailAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accountMember.ts#L41">property <b>emailAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>emailAddress: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -800,7 +800,7 @@ The email address of the user who you wish to manage. Note: Following creation, 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountMember-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -812,7 +812,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountMember-roleIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accountMember.ts#L45">property <b>roleIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accountMember.ts#L45">property <b>roleIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>roleIds: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -823,7 +823,7 @@ Array of account role IDs that you want to assign to a member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountMember-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -836,7 +836,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Argo">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/argo.ts#L23">class <b>Argo</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/argo.ts#L23">class <b>Argo</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -857,7 +857,7 @@ const example = new cloudflare.Argo("example", {
 ```
 
 <h3 class="pdoc-member-header" id="Argo-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/argo.ts#L47"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/argo.ts#L47"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -874,7 +874,7 @@ Create a Argo resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Argo-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/argo.ts#L32">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/argo.ts#L32">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -888,7 +888,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Argo-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -898,7 +898,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Argo-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -912,7 +912,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Argo-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -924,7 +924,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Argo-smartRouting">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/argo.ts#L39">property <b>smartRouting</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/argo.ts#L39">property <b>smartRouting</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>smartRouting: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -935,7 +935,7 @@ Whether smart routing is enabled. Valid values: `on` or `off`. Defaults to `off`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Argo-tieredCaching">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/argo.ts#L43">property <b>tieredCaching</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/argo.ts#L43">property <b>tieredCaching</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tieredCaching: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -946,7 +946,7 @@ Whether tiered caching is enabled. Valid values: `on` or `off`. Defaults to `off
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Argo-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -958,7 +958,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Argo-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/argo.ts#L47">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/argo.ts#L47">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zoneId: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -970,7 +970,7 @@ The DNS zone ID that you wish to manage Argo on.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CustomPages">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/customPages.ts#L24">class <b>CustomPages</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/customPages.ts#L24">class <b>CustomPages</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -992,7 +992,7 @@ const basicChallenge = new cloudflare.CustomPages("basic_challenge", {
 ```
 
 <h3 class="pdoc-member-header" id="CustomPages-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/customPages.ts#L64"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/customPages.ts#L64"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1009,7 +1009,7 @@ Create a CustomPages resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomPages-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/customPages.ts#L33">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/customPages.ts#L33">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1023,7 +1023,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomPages-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1033,7 +1033,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomPages-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1047,7 +1047,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomPages-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/customPages.ts#L42">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/customPages.ts#L42">property <b>accountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>accountId: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1060,7 +1060,7 @@ updated. Either `account_id` or `zone_id` must be provided. If
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomPages-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1072,7 +1072,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomPages-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/customPages.ts#L48">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/customPages.ts#L48">property <b>state</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>state: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1085,7 +1085,7 @@ from the Terraform state management.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomPages-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/customPages.ts#L55">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/customPages.ts#L55">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1099,7 +1099,7 @@ be one of `basic_challenge`, `waf_challenge`, `waf_block`,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomPages-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/customPages.ts#L59">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/customPages.ts#L59">property <b>url</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>url: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1110,7 +1110,7 @@ URL of where the custom page source is located.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomPages-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1122,7 +1122,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomPages-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/customPages.ts#L64">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/customPages.ts#L64">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zoneId: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1135,7 +1135,7 @@ updated. Either `zone_id` or `account_id` must be provided.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Filter">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/filter.ts#L23">class <b>Filter</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/filter.ts#L23">class <b>Filter</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1156,7 +1156,7 @@ const wordpress = new cloudflare.Filter("wordpress", {
 ```
 
 <h3 class="pdoc-member-header" id="Filter-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/filter.ts#L59"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/filter.ts#L59"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1173,7 +1173,7 @@ Create a Filter resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Filter-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/filter.ts#L32">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/filter.ts#L32">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1187,7 +1187,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Filter-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1197,7 +1197,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Filter-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1211,7 +1211,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Filter-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/filter.ts#L39">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/filter.ts#L39">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1222,7 +1222,7 @@ A note that you can use to describe the purpose of the filter.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Filter-expression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/filter.ts#L43">property <b>expression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/filter.ts#L43">property <b>expression</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>expression: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1233,7 +1233,7 @@ The filter expression to be used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Filter-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1245,7 +1245,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Filter-paused">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/filter.ts#L47">property <b>paused</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/filter.ts#L47">property <b>paused</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>paused: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1256,7 +1256,7 @@ Whether this filter is currently paused. Boolean value.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Filter-ref">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/filter.ts#L51">property <b>ref</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/filter.ts#L51">property <b>ref</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>ref: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1267,7 +1267,7 @@ Short reference tag to quickly select related rules.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Filter-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1279,7 +1279,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Filter-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/filter.ts#L55">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/filter.ts#L55">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zone: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1290,7 +1290,7 @@ The DNS zone to which the Filter should be added. Will be resolved to `zone_id` 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Filter-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/filter.ts#L59">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/filter.ts#L59">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zoneId: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1302,7 +1302,7 @@ The DNS zone to which the Filter should be added.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FirewallRule">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/firewallRule.ts#L32">class <b>FirewallRule</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/firewallRule.ts#L32">class <b>FirewallRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1332,7 +1332,7 @@ const wordpressFirewallRule = new cloudflare.FirewallRule("wordpress", {
 ```
 
 <h3 class="pdoc-member-header" id="FirewallRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/firewallRule.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/firewallRule.ts#L69"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1349,7 +1349,7 @@ Create a FirewallRule resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/firewallRule.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/firewallRule.ts#L41">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1363,7 +1363,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1373,7 +1373,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1387,7 +1387,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/firewallRule.ts#L48">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/firewallRule.ts#L48">property <b>action</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>action: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1398,7 +1398,7 @@ The action to apply to a matched request. Allowed values: "block", "challenge", 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/firewallRule.ts#L52">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/firewallRule.ts#L52">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1409,7 +1409,7 @@ A description of the rule to help identify it.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-filterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/firewallRule.ts#L53">property <b>filterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/firewallRule.ts#L53">property <b>filterId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>filterId: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1417,7 +1417,7 @@ A description of the rule to help identify it.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1429,7 +1429,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-paused">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/firewallRule.ts#L57">property <b>paused</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/firewallRule.ts#L57">property <b>paused</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>paused: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1440,7 +1440,7 @@ Whether this filter based firewall rule is currently paused. Boolean value.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/firewallRule.ts#L61">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/firewallRule.ts#L61">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>priority: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1451,7 +1451,7 @@ The priority of the rule to allow control of processing order. A lower number in
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1463,7 +1463,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/firewallRule.ts#L65">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/firewallRule.ts#L65">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zone: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1474,7 +1474,7 @@ The DNS zone to which the Firewall Rule should be added. Will be resolved to `zo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/firewallRule.ts#L69">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/firewallRule.ts#L69">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zoneId: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1486,7 +1486,7 @@ The DNS zone to which the Filter should be added.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LoadBalancer">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L46">class <b>LoadBalancer</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L46">class <b>LoadBalancer</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1530,7 +1530,7 @@ const bar = new cloudflare.LoadBalancer("bar", {
 ```
 
 <h3 class="pdoc-member-header" id="LoadBalancer-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L118"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L118"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1547,7 +1547,7 @@ Create a LoadBalancer resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L55">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L55">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1561,7 +1561,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1571,7 +1571,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1585,7 +1585,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-createdOn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L62">property <b>createdOn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L62">property <b>createdOn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>createdOn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1596,7 +1596,7 @@ The RFC3339 timestamp of when the load balancer was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-defaultPoolIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L66">property <b>defaultPoolIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L66">property <b>defaultPoolIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>defaultPoolIds: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -1607,7 +1607,7 @@ A list of pool IDs ordered by their failover priority. Used whenever region/pop 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L70">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L70">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1618,7 +1618,7 @@ Free text description.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L74">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L74">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enabled: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1629,7 +1629,7 @@ Enable or disable the load balancer. Defaults to `true` (enabled).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-fallbackPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L78">property <b>fallbackPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L78">property <b>fallbackPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>fallbackPoolId: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1640,7 +1640,7 @@ The pool ID to use when all other pools are detected as unhealthy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1652,7 +1652,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-modifiedOn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L82">property <b>modifiedOn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L82">property <b>modifiedOn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>modifiedOn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1663,7 +1663,7 @@ The RFC3339 timestamp of when the load balancer was last modified.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L86">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L86">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1674,7 +1674,7 @@ The DNS name (FQDN, including the zone) to associate with the load balancer.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-popPools">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L90">property <b>popPools</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L90">property <b>popPools</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>popPools: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1688,7 +1688,7 @@ A set containing mappings of Cloudflare Point-of-Presence (PoP) identifiers to a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-proxied">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L94">property <b>proxied</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L94">property <b>proxied</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>proxied: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1699,7 +1699,7 @@ Whether the hostname gets Cloudflare's origin protection. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-regionPools">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L98">property <b>regionPools</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L98">property <b>regionPools</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>regionPools: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1713,7 +1713,7 @@ A set containing mappings of region/country codes to a list of pool IDs (ordered
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-sessionAffinity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L102">property <b>sessionAffinity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L102">property <b>sessionAffinity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>sessionAffinity: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1724,7 +1724,7 @@ Associates all requests coming from an end-user with a single origin. Cloudflare
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-steeringPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L106">property <b>steeringPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L106">property <b>steeringPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>steeringPolicy: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1735,7 +1735,7 @@ Determine which method the load balancer uses to determine the fastest route to 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L110">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L110">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>ttl: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1746,7 +1746,7 @@ Time to live (TTL) of this load balancer's DNS `name`. Conflicts with `proxied` 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1758,7 +1758,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L114">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L114">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zone: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1769,7 +1769,7 @@ The zone to add the load balancer to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L118">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L118">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zoneId: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1781,7 +1781,7 @@ ID associated with the specified `zone`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LoadBalancerMonitor">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L34">class <b>LoadBalancerMonitor</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L34">class <b>LoadBalancerMonitor</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1813,7 +1813,7 @@ const test = new cloudflare.LoadBalancerMonitor("test", {
 ```
 
 <h3 class="pdoc-member-header" id="LoadBalancerMonitor-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L103"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L103"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1830,7 +1830,7 @@ Create a LoadBalancerMonitor resource with the given unique name, arguments, and
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitor-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L43">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L43">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1844,7 +1844,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitor-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1854,7 +1854,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitor-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1868,7 +1868,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitor-allowInsecure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L50">property <b>allowInsecure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L50">property <b>allowInsecure</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>allowInsecure: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1879,7 +1879,7 @@ Do not validate the certificate when monitor use HTTPS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitor-createdOn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L54">property <b>createdOn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L54">property <b>createdOn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>createdOn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1890,7 +1890,7 @@ The RFC3339 timestamp of when the load balancer monitor was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitor-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L58">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L58">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1901,7 +1901,7 @@ Free text description.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitor-expectedBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L62">property <b>expectedBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L62">property <b>expectedBody</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>expectedBody: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1912,7 +1912,7 @@ A case-insensitive sub-string to look for in the response body. If this string i
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitor-expectedCodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L66">property <b>expectedCodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L66">property <b>expectedCodes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>expectedCodes: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1923,7 +1923,7 @@ The expected HTTP response code or code range of the health check. Eg `2xx`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitor-followRedirects">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L70">property <b>followRedirects</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L70">property <b>followRedirects</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>followRedirects: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1934,7 +1934,7 @@ Follow redirects if returned by the origin.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitor-headers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L74">property <b>headers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L74">property <b>headers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>headers: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -1948,7 +1948,7 @@ The header name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitor-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1960,7 +1960,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitor-interval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L78">property <b>interval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L78">property <b>interval</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>interval: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1971,7 +1971,7 @@ The interval between each health check. Shorter intervals may improve failover t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitor-method">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L82">property <b>method</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L82">property <b>method</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>method: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1982,7 +1982,7 @@ The HTTP method to use for the health check. Default: "GET".
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitor-modifiedOn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L86">property <b>modifiedOn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L86">property <b>modifiedOn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>modifiedOn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1993,7 +1993,7 @@ The RFC3339 timestamp of when the load balancer monitor was last modified.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitor-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L90">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L90">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>path: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2004,7 +2004,7 @@ The endpoint path to health check against. Default: "/".
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitor-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L91">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L91">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>port: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2012,7 +2012,7 @@ The endpoint path to health check against. Default: "/".
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitor-retries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L95">property <b>retries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L95">property <b>retries</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>retries: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2023,7 +2023,7 @@ The number of retries to attempt in case of a timeout before marking the origin 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitor-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L99">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L99">property <b>timeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>timeout: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2034,7 +2034,7 @@ The timeout (in seconds) before marking the health check as failed. Default: 5.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitor-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L103">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L103">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2045,7 +2045,7 @@ The protocol to use for the healthcheck. Currently supported protocols are 'HTTP
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitor-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2058,7 +2058,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LoadBalancerPool">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts#L37">class <b>LoadBalancerPool</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L37">class <b>LoadBalancerPool</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2092,7 +2092,7 @@ const foo = new cloudflare.LoadBalancerPool("foo", {
 ```
 
 <h3 class="pdoc-member-header" id="LoadBalancerPool-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts#L89"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L89"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2109,7 +2109,7 @@ Create a LoadBalancerPool resource with the given unique name, arguments, and op
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPool-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L46">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2123,7 +2123,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPool-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2133,7 +2133,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPool-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2147,7 +2147,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPool-checkRegions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts#L53">property <b>checkRegions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L53">property <b>checkRegions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>checkRegions: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -2158,7 +2158,7 @@ A list of regions (specified by region code) from which to run health checks. Em
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPool-createdOn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts#L57">property <b>createdOn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L57">property <b>createdOn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>createdOn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2169,7 +2169,7 @@ The RFC3339 timestamp of when the load balancer was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPool-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts#L61">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L61">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2180,7 +2180,7 @@ Free text description.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPool-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts#L65">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L65">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enabled: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2191,7 +2191,7 @@ Whether to enable (the default) this origin within the Pool. Disabled origins wi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPool-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2203,7 +2203,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPool-minimumOrigins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts#L69">property <b>minimumOrigins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L69">property <b>minimumOrigins</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>minimumOrigins: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2214,7 +2214,7 @@ The minimum number of origins that must be healthy for this pool to serve traffi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPool-modifiedOn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts#L73">property <b>modifiedOn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L73">property <b>modifiedOn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>modifiedOn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2225,7 +2225,7 @@ The RFC3339 timestamp of when the load balancer was last modified.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPool-monitor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts#L77">property <b>monitor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L77">property <b>monitor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>monitor: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2236,7 +2236,7 @@ The ID of the Monitor to use for health checking origins within this pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPool-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts#L81">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L81">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2247,7 +2247,7 @@ A human-identifiable name for the origin.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPool-notificationEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts#L85">property <b>notificationEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L85">property <b>notificationEmail</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>notificationEmail: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2258,7 +2258,7 @@ The email address to send health status notifications to. This can be an individ
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPool-origins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts#L89">property <b>origins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L89">property <b>origins</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>origins: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -2274,7 +2274,7 @@ The list of origins within this pool. Traffic directed at this pool is balanced 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPool-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2287,7 +2287,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LogpushJob">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/logpushJob.ts#L25">class <b>LogpushJob</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/logpushJob.ts#L25">class <b>LogpushJob</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2310,7 +2310,7 @@ const exampleJob = new cloudflare.LogpushJob("example_job", {
 ```
 
 <h3 class="pdoc-member-header" id="LogpushJob-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/logpushJob.ts#L46"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/logpushJob.ts#L46"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2327,7 +2327,7 @@ Create a LogpushJob resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogpushJob-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/logpushJob.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/logpushJob.ts#L34">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2341,7 +2341,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogpushJob-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2351,7 +2351,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogpushJob-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2365,7 +2365,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogpushJob-destinationConf">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/logpushJob.ts#L38">property <b>destinationConf</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/logpushJob.ts#L38">property <b>destinationConf</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>destinationConf: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2373,7 +2373,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogpushJob-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/logpushJob.ts#L39">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/logpushJob.ts#L39">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enabled: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2381,7 +2381,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogpushJob-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2393,7 +2393,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogpushJob-logpullOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/logpushJob.ts#L40">property <b>logpullOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/logpushJob.ts#L40">property <b>logpullOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>logpullOptions: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2401,7 +2401,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogpushJob-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/logpushJob.ts#L41">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/logpushJob.ts#L41">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2409,7 +2409,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogpushJob-ownershipChallenge">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/logpushJob.ts#L45">property <b>ownershipChallenge</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/logpushJob.ts#L45">property <b>ownershipChallenge</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>ownershipChallenge: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2420,7 +2420,7 @@ Ownership challenge token to prove destination ownership. See [https://developer
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogpushJob-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2432,7 +2432,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogpushJob-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/logpushJob.ts#L46">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/logpushJob.ts#L46">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zoneId: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2441,7 +2441,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PageRule">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/pageRule.ts#L33">class <b>PageRule</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/pageRule.ts#L33">class <b>PageRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2472,7 +2472,7 @@ const foobar = new cloudflare.PageRule("foobar", {
 ```
 
 <h3 class="pdoc-member-header" id="PageRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/pageRule.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/pageRule.ts#L69"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2489,7 +2489,7 @@ Create a PageRule resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PageRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/pageRule.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/pageRule.ts#L42">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2503,7 +2503,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PageRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2513,7 +2513,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PageRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2527,7 +2527,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PageRule-actions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/pageRule.ts#L49">property <b>actions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/pageRule.ts#L49">property <b>actions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>actions: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -2581,7 +2581,7 @@ The actions taken by the page rule, options given below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PageRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2593,7 +2593,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PageRule-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/pageRule.ts#L53">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/pageRule.ts#L53">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>priority: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2604,7 +2604,7 @@ The priority of the page rule among others for this target, the higher the numbe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PageRule-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/pageRule.ts#L57">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/pageRule.ts#L57">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>status: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2615,7 +2615,7 @@ Whether the page rule is active or disabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PageRule-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/pageRule.ts#L61">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/pageRule.ts#L61">property <b>target</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>target: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2626,7 +2626,7 @@ The URL pattern to target with the page rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PageRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2638,7 +2638,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PageRule-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/pageRule.ts#L65">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/pageRule.ts#L65">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zone: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2649,7 +2649,7 @@ The DNS zone to which the page rule should be added.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PageRule-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/pageRule.ts#L69">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/pageRule.ts#L69">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zoneId: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2661,7 +2661,7 @@ The ID of the zone in which the page rule will be applied.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Provider">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/provider.ts#L13">class <b>Provider</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/provider.ts#L13">class <b>Provider</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> ProviderResource</pre>
@@ -2672,7 +2672,7 @@ construction to achieve fine-grained programmatic control over provider settings
 [documentation](https://pulumi.io/reference/programming-model.html#providers) for more information.
 
 <h3 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/provider.ts#L13"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/provider.ts#L13"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2689,7 +2689,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2699,7 +2699,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2713,7 +2713,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2725,7 +2725,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2738,7 +2738,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RateLimit">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L67">class <b>RateLimit</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L67">class <b>RateLimit</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -2803,7 +2803,7 @@ const example = new cloudflare.RateLimit("example", {
 ```
 
 <h3 class="pdoc-member-header" id="RateLimit-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L119"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L119"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2820,7 +2820,7 @@ Create a RateLimit resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimit-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L76">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L76">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2834,7 +2834,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimit-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2844,7 +2844,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimit-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2858,7 +2858,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimit-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L83">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L83">property <b>action</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>action: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -2876,7 +2876,7 @@ The action to be performed when the threshold of matched traffic within the peri
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimit-bypassUrlPatterns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L87">property <b>bypassUrlPatterns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L87">property <b>bypassUrlPatterns</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>bypassUrlPatterns: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2887,7 +2887,7 @@ URLs matching the patterns specified here will be excluded from rate limiting.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimit-correlate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L91">property <b>correlate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L91">property <b>correlate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>correlate: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -2900,7 +2900,7 @@ Determines how rate limiting is applied. By default if not specified, rate limit
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimit-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L95">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L95">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2911,7 +2911,7 @@ A note that you can use to describe the reason for a rate limit. This value is s
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimit-disabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L99">property <b>disabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L99">property <b>disabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>disabled: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -2922,7 +2922,7 @@ Whether this ratelimit is currently disabled. Default: `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimit-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2934,7 +2934,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimit-match">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L103">property <b>match</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L103">property <b>match</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>match: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -2955,7 +2955,7 @@ Determines which traffic the rate limit counts towards the threshold. By default
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimit-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L107">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L107">property <b>period</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>period: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2966,7 +2966,7 @@ The time in seconds to count matching traffic. If the count exceeds threshold wi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimit-threshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L111">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L111">property <b>threshold</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>threshold: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2977,7 +2977,7 @@ The threshold that triggers the rate limit mitigations, combine with period. i.e
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimit-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2989,7 +2989,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimit-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L115">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L115">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zone: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3000,7 +3000,7 @@ The DNS zone to apply rate limiting to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimit-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L119">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L119">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zoneId: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3012,7 +3012,7 @@ The DNS zone ID.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Record">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L41">class <b>Record</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L41">class <b>Record</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -3051,7 +3051,7 @@ const foobar = new cloudflare.Record("foobar", {
 ```
 
 <h3 class="pdoc-member-header" id="Record-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L109"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L109"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3068,7 +3068,7 @@ Create a Record resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L50">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3082,7 +3082,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3092,7 +3092,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3106,7 +3106,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-createdOn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L57">property <b>createdOn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L57">property <b>createdOn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>createdOn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3117,7 +3117,7 @@ The RFC3339 timestamp of when the record was created
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-data">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L61">property <b>data</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L61">property <b>data</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>data: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -3166,7 +3166,7 @@ Map of attributes that constitute the record value. Primarily used for LOC and S
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L65">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L65">property <b>domain</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>domain: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3177,7 +3177,7 @@ The DNS zone to add the record to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L69">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L69">property <b>hostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>hostname: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3188,7 +3188,7 @@ The FQDN of the record
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3200,7 +3200,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L73">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L73">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -3211,7 +3211,7 @@ A key-value map of string metadata cloudflare associates with the record
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-modifiedOn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L77">property <b>modifiedOn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L77">property <b>modifiedOn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>modifiedOn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3222,7 +3222,7 @@ The RFC3339 timestamp of when the record was last modified
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L81">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L81">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3233,7 +3233,7 @@ The name of the record
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L85">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L85">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>priority: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3244,7 +3244,7 @@ The priority of the record
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-proxiable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L89">property <b>proxiable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L89">property <b>proxiable</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>proxiable: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3255,7 +3255,7 @@ Shows whether this record can be proxied, must be true if setting `proxied=true`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-proxied">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L93">property <b>proxied</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L93">property <b>proxied</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>proxied: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3266,7 +3266,7 @@ Whether the record gets Cloudflare's origin protection; defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L97">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L97">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>ttl: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3277,7 +3277,7 @@ The TTL of the record ([automatic: '1'](https://api.cloudflare.com/#dns-records-
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L101">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L101">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3288,7 +3288,7 @@ The type of the record
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3300,7 +3300,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L105">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L105">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>value: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3311,7 +3311,7 @@ The (string) value of the record. Either this or `data` must be specified
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L109">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L109">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zoneId: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3323,7 +3323,7 @@ The zone id of the record
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SpectrumApplication">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/spectrumApplication.ts#L27">class <b>SpectrumApplication</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L27">class <b>SpectrumApplication</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -3348,7 +3348,7 @@ const sshProxy = new cloudflare.SpectrumApplication("ssh_proxy", {
 ```
 
 <h3 class="pdoc-member-header" id="SpectrumApplication-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/spectrumApplication.ts#L72"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L72"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3365,7 +3365,7 @@ Create a SpectrumApplication resource with the given unique name, arguments, and
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplication-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/spectrumApplication.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L36">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3379,7 +3379,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplication-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3389,7 +3389,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplication-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3403,7 +3403,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplication-dns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/spectrumApplication.ts#L43">property <b>dns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L43">property <b>dns</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>dns: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -3417,7 +3417,7 @@ The name and type of DNS record for the Spectrum application. Fields documented 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplication-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3429,7 +3429,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplication-ipFirewall">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/spectrumApplication.ts#L47">property <b>ipFirewall</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L47">property <b>ipFirewall</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>ipFirewall: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3440,7 +3440,7 @@ Enables the IP Firewall for this application. Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplication-originDirects">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/spectrumApplication.ts#L51">property <b>originDirects</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L51">property <b>originDirects</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>originDirects: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3451,7 +3451,7 @@ A list of destination addresses to the origin. e.g. `tcp://192.0.2.1:22`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplication-originDns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/spectrumApplication.ts#L55">property <b>originDns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L55">property <b>originDns</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>originDns: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -3464,7 +3464,7 @@ A destination DNS addresses to the origin. Fields documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplication-originPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/spectrumApplication.ts#L59">property <b>originPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L59">property <b>originPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>originPort: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3475,7 +3475,7 @@ If using `origin_dns` this is a required attribute. Origin port to proxy traffic
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplication-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/spectrumApplication.ts#L63">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L63">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>protocol: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3486,7 +3486,7 @@ The port configuration at Cloudflare’s edge. e.g. `tcp/22`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplication-proxyProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/spectrumApplication.ts#L67">property <b>proxyProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L67">property <b>proxyProtocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>proxyProtocol: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3497,7 +3497,7 @@ Enables Proxy Protocol v1 to the origin. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplication-tls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/spectrumApplication.ts#L71">property <b>tls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L71">property <b>tls</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tls: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3508,7 +3508,7 @@ TLS configuration option for Cloudflare to connect to your origin. Valid values 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplication-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3520,7 +3520,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplication-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/spectrumApplication.ts#L72">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L72">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zoneId: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3529,7 +3529,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="WafRule">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/wafRule.ts#L23">class <b>WafRule</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/wafRule.ts#L23">class <b>WafRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -3550,7 +3550,7 @@ const _100000 = new cloudflare.WafRule("100000", {
 ```
 
 <h3 class="pdoc-member-header" id="WafRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/wafRule.ts#L55"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/wafRule.ts#L55"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3567,7 +3567,7 @@ Create a WafRule resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WafRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/wafRule.ts#L32">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/wafRule.ts#L32">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3581,7 +3581,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WafRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3591,7 +3591,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WafRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3605,7 +3605,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WafRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3617,7 +3617,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WafRule-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/wafRule.ts#L39">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/wafRule.ts#L39">property <b>mode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>mode: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3628,7 +3628,7 @@ The mode of the rule, can be one of ["block", "challenge", "default", "disable",
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WafRule-packageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/wafRule.ts#L43">property <b>packageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/wafRule.ts#L43">property <b>packageId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>packageId: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3639,7 +3639,7 @@ The ID of the WAF Rule Package that contains the rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WafRule-ruleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/wafRule.ts#L47">property <b>ruleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/wafRule.ts#L47">property <b>ruleId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>ruleId: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3650,7 +3650,7 @@ The WAF Rule ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WafRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3662,7 +3662,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WafRule-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/wafRule.ts#L51">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/wafRule.ts#L51">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zone: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3673,7 +3673,7 @@ The DNS zone to apply to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WafRule-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/wafRule.ts#L55">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/wafRule.ts#L55">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zoneId: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3685,7 +3685,7 @@ The DNS zone ID.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="WorkerRoute">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerRoute.ts#L44">class <b>WorkerRoute</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerRoute.ts#L44">class <b>WorkerRoute</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -3727,7 +3727,7 @@ const myRoute = new cloudflare.WorkerRoute("my_route", {
 ```
 
 <h3 class="pdoc-member-header" id="WorkerRoute-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerRoute.ts#L73"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerRoute.ts#L73"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3744,7 +3744,7 @@ Create a WorkerRoute resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerRoute-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerRoute.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerRoute.ts#L53">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3758,7 +3758,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerRoute-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3768,7 +3768,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerRoute-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3782,7 +3782,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerRoute-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerRoute.ts#L57">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerRoute.ts#L57">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enabled: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3790,7 +3790,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerRoute-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3802,7 +3802,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerRoute-multiScript">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerRoute.ts#L58">property <b>multiScript</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerRoute.ts#L58">property <b>multiScript</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>multiScript: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3810,7 +3810,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerRoute-pattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerRoute.ts#L64">property <b>pattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerRoute.ts#L64">property <b>pattern</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>pattern: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3823,7 +3823,7 @@ The [route pattern](https://developers.cloudflare.com/workers/api/route-matching
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerRoute-scriptName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerRoute.ts#L65">property <b>scriptName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerRoute.ts#L65">property <b>scriptName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>scriptName: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3831,7 +3831,7 @@ The [route pattern](https://developers.cloudflare.com/workers/api/route-matching
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerRoute-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3843,7 +3843,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerRoute-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerRoute.ts#L69">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerRoute.ts#L69">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zone: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3854,7 +3854,7 @@ The zone to add the route to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerRoute-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerRoute.ts#L73">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerRoute.ts#L73">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zoneId: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3866,7 +3866,7 @@ The zone id of the route
 </div>
 </div>
 <h2 class="pdoc-module-header" id="WorkerScript">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerScript.ts#L42">class <b>WorkerScript</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerScript.ts#L42">class <b>WorkerScript</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -3906,7 +3906,7 @@ const myScript = new cloudflare.WorkerScript("my_script", {
 ```
 
 <h3 class="pdoc-member-header" id="WorkerScript-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerScript.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerScript.ts#L70"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3923,7 +3923,7 @@ Create a WorkerScript resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerScript-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerScript.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerScript.ts#L51">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3937,7 +3937,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerScript-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3947,7 +3947,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerScript-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3961,7 +3961,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerScript-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerScript.ts#L58">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerScript.ts#L58">property <b>content</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>content: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3972,7 +3972,7 @@ The script content.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerScript-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3984,7 +3984,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerScript-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerScript.ts#L62">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerScript.ts#L62">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -3995,7 +3995,7 @@ The name for the script.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerScript-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -4007,7 +4007,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerScript-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerScript.ts#L66">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerScript.ts#L66">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zone: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -4018,7 +4018,7 @@ The zone for the script.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerScript-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerScript.ts#L70">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerScript.ts#L70">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zoneId: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4030,7 +4030,7 @@ The zone id of the script (only for non-multi-script resources)
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Zone">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zone.ts#L21">class <b>Zone</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts#L21">class <b>Zone</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -4049,7 +4049,7 @@ const example = new cloudflare.Zone("example", {
 ```
 
 <h3 class="pdoc-member-header" id="Zone-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zone.ts#L68"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts#L68"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4066,7 +4066,7 @@ Create a Zone resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zone.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts#L30">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4080,7 +4080,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4090,7 +4090,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4104,7 +4104,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4116,7 +4116,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-jumpStart">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zone.ts#L37">property <b>jumpStart</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts#L37">property <b>jumpStart</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>jumpStart: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -4127,7 +4127,7 @@ Boolean of whether to scan for DNS records on creation. Ignored after zone is cr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-meta">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zone.ts#L38">property <b>meta</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts#L38">property <b>meta</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>meta: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -4138,7 +4138,7 @@ Boolean of whether to scan for DNS records on creation. Ignored after zone is cr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-nameServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zone.ts#L42">property <b>nameServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts#L42">property <b>nameServers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>nameServers: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -4149,7 +4149,7 @@ Cloudflare-assigned name servers. This is only populated for zones that use Clou
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-paused">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zone.ts#L46">property <b>paused</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts#L46">property <b>paused</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>paused: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -4160,7 +4160,7 @@ Boolean of whether this zone is paused (traffic bypasses Cloudflare). Default: f
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zone.ts#L50">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts#L50">property <b>plan</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>plan: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4171,7 +4171,7 @@ The name of the commercial plan to apply to the zone, can be updated once the on
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zone.ts#L54">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts#L54">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>status: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4182,7 +4182,7 @@ Status of the zone. Valid values: `active`, `pending`, `initializing`, `moved`, 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zone.ts#L58">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts#L58">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -4193,7 +4193,7 @@ A full zone implies that DNS is hosted with Cloudflare. A partial zone is typica
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -4205,7 +4205,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-vanityNameServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zone.ts#L64">property <b>vanityNameServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts#L64">property <b>vanityNameServers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>vanityNameServers: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -4218,7 +4218,7 @@ List of Vanity Nameservers (if set).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zone.ts#L68">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts#L68">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zone: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4230,7 +4230,7 @@ The DNS zone name which will be added.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ZoneLockdown">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneLockdown.ts#L29">class <b>ZoneLockdown</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneLockdown.ts#L29">class <b>ZoneLockdown</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -4257,7 +4257,7 @@ const endpointLockdown = new cloudflare.ZoneLockdown("endpoint_lockdown", {
 ```
 
 <h3 class="pdoc-member-header" id="ZoneLockdown-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneLockdown.ts#L65"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneLockdown.ts#L65"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4274,7 +4274,7 @@ Create a ZoneLockdown resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneLockdown-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneLockdown.ts#L38">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneLockdown.ts#L38">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4288,7 +4288,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneLockdown-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4298,7 +4298,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneLockdown-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4312,7 +4312,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneLockdown-configurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneLockdown.ts#L45">property <b>configurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneLockdown.ts#L45">property <b>configurations</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>configurations: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -4326,7 +4326,7 @@ A list of IP addresses or IP ranges to match the request against specified in ta
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneLockdown-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneLockdown.ts#L49">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneLockdown.ts#L49">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -4337,7 +4337,7 @@ A description about the lockdown entry. Typically used as a reminder or explanat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneLockdown-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4349,7 +4349,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneLockdown-paused">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneLockdown.ts#L53">property <b>paused</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneLockdown.ts#L53">property <b>paused</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>paused: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -4360,7 +4360,7 @@ Boolean of whether this zone lockdown is currently paused. Default: false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneLockdown-urls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneLockdown.ts#L57">property <b>urls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneLockdown.ts#L57">property <b>urls</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>urls: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -4371,7 +4371,7 @@ A list of simple wildcard patterns to match requests against. The order of the u
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneLockdown-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -4383,7 +4383,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneLockdown-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneLockdown.ts#L61">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneLockdown.ts#L61">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zone: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -4394,7 +4394,7 @@ The DNS zone to which the lockdown will be added. Will be resolved to `zone_id` 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneLockdown-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneLockdown.ts#L65">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneLockdown.ts#L65">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zoneId: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4406,7 +4406,7 @@ The DNS zone to which the access rule should be added.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ZoneSettingsOverride">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneSettingsOverride.ts#L38">class <b>ZoneSettingsOverride</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneSettingsOverride.ts#L38">class <b>ZoneSettingsOverride</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -4442,7 +4442,7 @@ const test = new cloudflare.ZoneSettingsOverride("test", {
 ```
 
 <h3 class="pdoc-member-header" id="ZoneSettingsOverride-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneSettingsOverride.ts#L71"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneSettingsOverride.ts#L71"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4459,7 +4459,7 @@ Create a ZoneSettingsOverride resource with the given unique name, arguments, an
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneSettingsOverride-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneSettingsOverride.ts#L47">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneSettingsOverride.ts#L47">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4473,7 +4473,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneSettingsOverride-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4483,7 +4483,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneSettingsOverride-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4497,7 +4497,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneSettingsOverride-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4509,7 +4509,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneSettingsOverride-initialSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneSettingsOverride.ts#L54">property <b>initialSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneSettingsOverride.ts#L54">property <b>initialSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>initialSettings: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -4578,7 +4578,7 @@ Settings present in the zone at the time the resource is created. This will be u
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneSettingsOverride-initialSettingsReadAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneSettingsOverride.ts#L55">property <b>initialSettingsReadAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneSettingsOverride.ts#L55">property <b>initialSettingsReadAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>initialSettingsReadAt: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4586,7 +4586,7 @@ Settings present in the zone at the time the resource is created. This will be u
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneSettingsOverride-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneSettingsOverride.ts#L59">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneSettingsOverride.ts#L59">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4597,7 +4597,7 @@ The DNS zone to which apply settings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneSettingsOverride-readonlySettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneSettingsOverride.ts#L65">property <b>readonlySettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneSettingsOverride.ts#L65">property <b>readonlySettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>readonlySettings: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -4610,7 +4610,7 @@ Which of the current `settings` are not able to be set by the user. Which settin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneSettingsOverride-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneSettingsOverride.ts#L69">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneSettingsOverride.ts#L69">property <b>settings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>settings: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -4679,7 +4679,7 @@ Settings overrides that will be applied to the zone. If a setting is not specifi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneSettingsOverride-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -4691,7 +4691,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneSettingsOverride-zoneStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneSettingsOverride.ts#L70">property <b>zoneStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneSettingsOverride.ts#L70">property <b>zoneStatus</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zoneStatus: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4699,7 +4699,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneSettingsOverride-zoneType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneSettingsOverride.ts#L71">property <b>zoneType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneSettingsOverride.ts#L71">property <b>zoneType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>zoneType: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4708,7 +4708,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getEnv">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/utilities.ts#L5">function <b>getEnv</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/utilities.ts#L5">function <b>getEnv</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4718,7 +4718,7 @@ deployments.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getEnvBoolean">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/utilities.ts#L15">function <b>getEnvBoolean</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/utilities.ts#L15">function <b>getEnvBoolean</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4728,7 +4728,7 @@ deployments.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getEnvNumber">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/utilities.ts#L30">function <b>getEnvNumber</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/utilities.ts#L30">function <b>getEnvNumber</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4738,7 +4738,7 @@ deployments.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getIpRanges">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/getIpRanges.ts#L28">function <b>getIpRanges</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/getIpRanges.ts#L28">function <b>getIpRanges</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4769,7 +4769,7 @@ const allowCloudflareIngress = new gcp.compute.Firewall("allow_cloudflare_ingres
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getVersion">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/utilities.ts#L41">function <b>getVersion</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/utilities.ts#L41">function <b>getVersion</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4779,7 +4779,7 @@ const allowCloudflareIngress = new gcp.compute.Firewall("allow_cloudflare_ingres
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getZones">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/getZones.ts#L38">function <b>getZones</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/getZones.ts#L38">function <b>getZones</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4820,14 +4820,14 @@ const endpointLockdown = new cloudflare.ZoneLockdown("endpoint_lockdown", {
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="AccessApplicationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessApplication.ts#L132">interface <b>AccessApplicationArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessApplication.ts#L125">interface <b>AccessApplicationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 The set of arguments for constructing a AccessApplication resource.
 
 <h3 class="pdoc-member-header" id="AccessApplicationArgs-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessApplication.ts#L137">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessApplication.ts#L130">property <b>domain</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>domain: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4839,7 +4839,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessApplicationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessApplication.ts#L141">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessApplication.ts#L134">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4850,7 +4850,7 @@ Friendly name of the Access Application.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessApplicationArgs-sessionDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessApplication.ts#L146">property <b>sessionDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessApplication.ts#L139">property <b>sessionDuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sessionDuration?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4862,7 +4862,7 @@ re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessApplicationArgs-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessApplication.ts#L150">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessApplication.ts#L143">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4874,14 +4874,14 @@ The DNS zone to which the access rule should be added.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AccessApplicationState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessApplication.ts#L107">interface <b>AccessApplicationState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessApplication.ts#L100">interface <b>AccessApplicationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 Input properties used for looking up and filtering AccessApplication resources.
 
 <h3 class="pdoc-member-header" id="AccessApplicationState-aud">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessApplication.ts#L108">property <b>aud</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessApplication.ts#L101">property <b>aud</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>aud?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4889,7 +4889,7 @@ Input properties used for looking up and filtering AccessApplication resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessApplicationState-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessApplication.ts#L113">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessApplication.ts#L106">property <b>domain</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>domain?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4901,7 +4901,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessApplicationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessApplication.ts#L117">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessApplication.ts#L110">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4912,7 +4912,7 @@ Friendly name of the Access Application.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessApplicationState-sessionDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessApplication.ts#L122">property <b>sessionDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessApplication.ts#L115">property <b>sessionDuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sessionDuration?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4924,7 +4924,7 @@ re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessApplicationState-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessApplication.ts#L126">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessApplication.ts#L119">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4936,14 +4936,14 @@ The DNS zone to which the access rule should be added.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AccessPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessPolicy.ts#L205">interface <b>AccessPolicyArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L198">interface <b>AccessPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 The set of arguments for constructing a AccessPolicy resource.
 
 <h3 class="pdoc-member-header" id="AccessPolicyArgs-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessPolicy.ts#L210">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L203">property <b>applicationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>applicationId: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4955,7 +4955,7 @@ associated with.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessPolicyArgs-decision">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessPolicy.ts#L215">property <b>decision</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L208">property <b>decision</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>decision: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -4967,7 +4967,7 @@ Allowed values: `allow`, `deny`, `bypass`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessPolicyArgs-excludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessPolicy.ts#L220">property <b>excludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L213">property <b>excludes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>excludes?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -4984,7 +4984,7 @@ full list.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessPolicyArgs-includes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessPolicy.ts#L225">property <b>includes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L218">property <b>includes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>includes: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5001,7 +5001,7 @@ full list.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessPolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessPolicy.ts#L229">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L222">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5012,7 +5012,7 @@ Friendly name of the Access Application.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessPolicyArgs-precedence">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessPolicy.ts#L233">property <b>precedence</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L226">property <b>precedence</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>precedence?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -5023,7 +5023,7 @@ The unique precedence for policies on a single application. Integer.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessPolicyArgs-requires">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessPolicy.ts#L238">property <b>requires</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L231">property <b>requires</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>requires?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5040,7 +5040,7 @@ full list.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessPolicyArgs-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessPolicy.ts#L243">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L236">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5053,14 +5053,14 @@ added.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AccessPolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessPolicy.ts#L161">interface <b>AccessPolicyState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L154">interface <b>AccessPolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 Input properties used for looking up and filtering AccessPolicy resources.
 
 <h3 class="pdoc-member-header" id="AccessPolicyState-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessPolicy.ts#L166">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L159">property <b>applicationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>applicationId?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5072,7 +5072,7 @@ associated with.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessPolicyState-decision">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessPolicy.ts#L171">property <b>decision</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L164">property <b>decision</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>decision?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5084,7 +5084,7 @@ Allowed values: `allow`, `deny`, `bypass`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessPolicyState-excludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessPolicy.ts#L176">property <b>excludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L169">property <b>excludes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>excludes?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5101,7 +5101,7 @@ full list.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessPolicyState-includes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessPolicy.ts#L181">property <b>includes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L174">property <b>includes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>includes?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5118,7 +5118,7 @@ full list.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessPolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessPolicy.ts#L185">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L178">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5129,7 +5129,7 @@ Friendly name of the Access Application.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessPolicyState-precedence">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessPolicy.ts#L189">property <b>precedence</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L182">property <b>precedence</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>precedence?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -5140,7 +5140,7 @@ The unique precedence for policies on a single application. Integer.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessPolicyState-requires">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessPolicy.ts#L194">property <b>requires</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L187">property <b>requires</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>requires?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5157,7 +5157,7 @@ full list.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessPolicyState-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessPolicy.ts#L199">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L192">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5170,14 +5170,14 @@ added.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AccessRuleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessRule.ts#L160">interface <b>AccessRuleArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessRule.ts#L153">interface <b>AccessRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 The set of arguments for constructing a AccessRule resource.
 
 <h3 class="pdoc-member-header" id="AccessRuleArgs-configuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessRule.ts#L164">property <b>configuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessRule.ts#L157">property <b>configuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>configuration: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5191,7 +5191,7 @@ Rule configuration to apply to a matched request. It's a complex value. See desc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessRuleArgs-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessRule.ts#L168">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessRule.ts#L161">property <b>mode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mode: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5202,7 +5202,7 @@ The action to apply to a matched request. Allowed values: "block", "challenge", 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessRuleArgs-notes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessRule.ts#L172">property <b>notes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessRule.ts#L165">property <b>notes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>notes?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5213,7 +5213,7 @@ A personal note about the rule. Typically used as a reminder or explanation for 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessRuleArgs-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessRule.ts#L176">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessRule.ts#L169">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zone?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5224,7 +5224,7 @@ The DNS zone to which the access rule should be added. Will be resolved to `zone
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessRuleArgs-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessRule.ts#L180">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessRule.ts#L173">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5236,14 +5236,14 @@ The DNS zone to which the access rule should be added.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AccessRuleState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessRule.ts#L134">interface <b>AccessRuleState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessRule.ts#L127">interface <b>AccessRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 Input properties used for looking up and filtering AccessRule resources.
 
 <h3 class="pdoc-member-header" id="AccessRuleState-configuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessRule.ts#L138">property <b>configuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessRule.ts#L131">property <b>configuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>configuration?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5257,7 +5257,7 @@ Rule configuration to apply to a matched request. It's a complex value. See desc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessRuleState-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessRule.ts#L142">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessRule.ts#L135">property <b>mode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mode?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5268,7 +5268,7 @@ The action to apply to a matched request. Allowed values: "block", "challenge", 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessRuleState-notes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessRule.ts#L146">property <b>notes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessRule.ts#L139">property <b>notes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>notes?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5279,7 +5279,7 @@ A personal note about the rule. Typically used as a reminder or explanation for 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessRuleState-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessRule.ts#L150">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessRule.ts#L143">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zone?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5290,7 +5290,7 @@ The DNS zone to which the access rule should be added. Will be resolved to `zone
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessRuleState-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accessRule.ts#L154">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessRule.ts#L147">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5302,14 +5302,14 @@ The DNS zone to which the access rule should be added.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AccountMemberArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accountMember.ts#L100">interface <b>AccountMemberArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accountMember.ts#L93">interface <b>AccountMemberArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 The set of arguments for constructing a AccountMember resource.
 
 <h3 class="pdoc-member-header" id="AccountMemberArgs-emailAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accountMember.ts#L104">property <b>emailAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accountMember.ts#L97">property <b>emailAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>emailAddress: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5320,7 +5320,7 @@ The email address of the user who you wish to manage. Note: Following creation, 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountMemberArgs-roleIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accountMember.ts#L108">property <b>roleIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accountMember.ts#L101">property <b>roleIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roleIds: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -5332,14 +5332,14 @@ Array of account role IDs that you want to assign to a member.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AccountMemberState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accountMember.ts#L86">interface <b>AccountMemberState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accountMember.ts#L79">interface <b>AccountMemberState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 Input properties used for looking up and filtering AccountMember resources.
 
 <h3 class="pdoc-member-header" id="AccountMemberState-emailAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accountMember.ts#L90">property <b>emailAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accountMember.ts#L83">property <b>emailAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>emailAddress?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5350,7 +5350,7 @@ The email address of the user who you wish to manage. Note: Following creation, 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountMemberState-roleIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/accountMember.ts#L94">property <b>roleIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accountMember.ts#L87">property <b>roleIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>roleIds?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -5362,14 +5362,14 @@ Array of account role IDs that you want to assign to a member.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ArgoArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/argo.ts#L105">interface <b>ArgoArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/argo.ts#L98">interface <b>ArgoArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 The set of arguments for constructing a Argo resource.
 
 <h3 class="pdoc-member-header" id="ArgoArgs-smartRouting">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/argo.ts#L109">property <b>smartRouting</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/argo.ts#L102">property <b>smartRouting</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>smartRouting?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5380,7 +5380,7 @@ Whether smart routing is enabled. Valid values: `on` or `off`. Defaults to `off`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArgoArgs-tieredCaching">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/argo.ts#L113">property <b>tieredCaching</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/argo.ts#L106">property <b>tieredCaching</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tieredCaching?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5391,7 +5391,7 @@ Whether tiered caching is enabled. Valid values: `on` or `off`. Defaults to `off
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArgoArgs-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/argo.ts#L117">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/argo.ts#L110">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5403,14 +5403,14 @@ The DNS zone ID that you wish to manage Argo on.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ArgoState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/argo.ts#L87">interface <b>ArgoState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/argo.ts#L80">interface <b>ArgoState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 Input properties used for looking up and filtering Argo resources.
 
 <h3 class="pdoc-member-header" id="ArgoState-smartRouting">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/argo.ts#L91">property <b>smartRouting</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/argo.ts#L84">property <b>smartRouting</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>smartRouting?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5421,7 +5421,7 @@ Whether smart routing is enabled. Valid values: `on` or `off`. Defaults to `off`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArgoState-tieredCaching">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/argo.ts#L95">property <b>tieredCaching</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/argo.ts#L88">property <b>tieredCaching</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tieredCaching?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5432,7 +5432,7 @@ Whether tiered caching is enabled. Valid values: `on` or `off`. Defaults to `off
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ArgoState-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/argo.ts#L99">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/argo.ts#L92">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5444,14 +5444,14 @@ The DNS zone ID that you wish to manage Argo on.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CustomPagesArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/customPages.ts#L145">interface <b>CustomPagesArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/customPages.ts#L138">interface <b>CustomPagesArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 The set of arguments for constructing a CustomPages resource.
 
 <h3 class="pdoc-member-header" id="CustomPagesArgs-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/customPages.ts#L151">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/customPages.ts#L144">property <b>accountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accountId?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5464,7 +5464,7 @@ updated. Either `account_id` or `zone_id` must be provided. If
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomPagesArgs-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/customPages.ts#L157">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/customPages.ts#L150">property <b>state</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>state?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5477,7 +5477,7 @@ from the Terraform state management.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomPagesArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/customPages.ts#L164">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/customPages.ts#L157">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5491,7 +5491,7 @@ be one of `basic_challenge`, `waf_challenge`, `waf_block`,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomPagesArgs-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/customPages.ts#L168">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/customPages.ts#L161">property <b>url</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>url: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5502,7 +5502,7 @@ URL of where the custom page source is located.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomPagesArgs-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/customPages.ts#L173">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/customPages.ts#L166">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5515,14 +5515,14 @@ updated. Either `zone_id` or `account_id` must be provided.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CustomPagesState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/customPages.ts#L111">interface <b>CustomPagesState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/customPages.ts#L104">interface <b>CustomPagesState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 Input properties used for looking up and filtering CustomPages resources.
 
 <h3 class="pdoc-member-header" id="CustomPagesState-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/customPages.ts#L117">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/customPages.ts#L110">property <b>accountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accountId?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5535,7 +5535,7 @@ updated. Either `account_id` or `zone_id` must be provided. If
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomPagesState-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/customPages.ts#L123">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/customPages.ts#L116">property <b>state</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>state?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5548,7 +5548,7 @@ from the Terraform state management.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomPagesState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/customPages.ts#L130">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/customPages.ts#L123">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5562,7 +5562,7 @@ be one of `basic_challenge`, `waf_challenge`, `waf_block`,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomPagesState-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/customPages.ts#L134">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/customPages.ts#L127">property <b>url</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>url?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5573,7 +5573,7 @@ URL of where the custom page source is located.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomPagesState-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/customPages.ts#L139">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/customPages.ts#L132">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5586,14 +5586,14 @@ updated. Either `zone_id` or `account_id` must be provided.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FilterArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/filter.ts#L135">interface <b>FilterArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/filter.ts#L128">interface <b>FilterArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 The set of arguments for constructing a Filter resource.
 
 <h3 class="pdoc-member-header" id="FilterArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/filter.ts#L139">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/filter.ts#L132">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5604,7 +5604,7 @@ A note that you can use to describe the purpose of the filter.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FilterArgs-expression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/filter.ts#L143">property <b>expression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/filter.ts#L136">property <b>expression</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>expression: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5615,7 +5615,7 @@ The filter expression to be used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FilterArgs-paused">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/filter.ts#L147">property <b>paused</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/filter.ts#L140">property <b>paused</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>paused?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5626,7 +5626,7 @@ Whether this filter is currently paused. Boolean value.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FilterArgs-ref">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/filter.ts#L151">property <b>ref</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/filter.ts#L144">property <b>ref</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ref?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5637,7 +5637,7 @@ Short reference tag to quickly select related rules.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FilterArgs-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/filter.ts#L155">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/filter.ts#L148">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zone?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5648,7 +5648,7 @@ The DNS zone to which the Filter should be added. Will be resolved to `zone_id` 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FilterArgs-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/filter.ts#L159">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/filter.ts#L152">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5660,14 +5660,14 @@ The DNS zone to which the Filter should be added.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FilterState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/filter.ts#L105">interface <b>FilterState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/filter.ts#L98">interface <b>FilterState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 Input properties used for looking up and filtering Filter resources.
 
 <h3 class="pdoc-member-header" id="FilterState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/filter.ts#L109">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/filter.ts#L102">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5678,7 +5678,7 @@ A note that you can use to describe the purpose of the filter.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FilterState-expression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/filter.ts#L113">property <b>expression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/filter.ts#L106">property <b>expression</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>expression?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5689,7 +5689,7 @@ The filter expression to be used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FilterState-paused">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/filter.ts#L117">property <b>paused</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/filter.ts#L110">property <b>paused</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>paused?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5700,7 +5700,7 @@ Whether this filter is currently paused. Boolean value.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FilterState-ref">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/filter.ts#L121">property <b>ref</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/filter.ts#L114">property <b>ref</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ref?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5711,7 +5711,7 @@ Short reference tag to quickly select related rules.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FilterState-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/filter.ts#L125">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/filter.ts#L118">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zone?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5722,7 +5722,7 @@ The DNS zone to which the Filter should be added. Will be resolved to `zone_id` 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FilterState-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/filter.ts#L129">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/filter.ts#L122">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5734,14 +5734,14 @@ The DNS zone to which the Filter should be added.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FirewallRuleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/firewallRule.ts#L151">interface <b>FirewallRuleArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/firewallRule.ts#L144">interface <b>FirewallRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 The set of arguments for constructing a FirewallRule resource.
 
 <h3 class="pdoc-member-header" id="FirewallRuleArgs-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/firewallRule.ts#L155">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/firewallRule.ts#L148">property <b>action</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>action: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5752,7 +5752,7 @@ The action to apply to a matched request. Allowed values: "block", "challenge", 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/firewallRule.ts#L159">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/firewallRule.ts#L152">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5763,7 +5763,7 @@ A description of the rule to help identify it.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleArgs-filterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/firewallRule.ts#L160">property <b>filterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/firewallRule.ts#L153">property <b>filterId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>filterId: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5771,7 +5771,7 @@ A description of the rule to help identify it.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleArgs-paused">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/firewallRule.ts#L164">property <b>paused</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/firewallRule.ts#L157">property <b>paused</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>paused?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5782,7 +5782,7 @@ Whether this filter based firewall rule is currently paused. Boolean value.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/firewallRule.ts#L168">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/firewallRule.ts#L161">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>priority?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -5793,7 +5793,7 @@ The priority of the rule to allow control of processing order. A lower number in
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleArgs-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/firewallRule.ts#L172">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/firewallRule.ts#L165">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zone?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5804,7 +5804,7 @@ The DNS zone to which the Firewall Rule should be added. Will be resolved to `zo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleArgs-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/firewallRule.ts#L176">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/firewallRule.ts#L169">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5816,14 +5816,14 @@ The DNS zone to which the Filter should be added.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FirewallRuleState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/firewallRule.ts#L120">interface <b>FirewallRuleState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/firewallRule.ts#L113">interface <b>FirewallRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 Input properties used for looking up and filtering FirewallRule resources.
 
 <h3 class="pdoc-member-header" id="FirewallRuleState-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/firewallRule.ts#L124">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/firewallRule.ts#L117">property <b>action</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>action?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5834,7 +5834,7 @@ The action to apply to a matched request. Allowed values: "block", "challenge", 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/firewallRule.ts#L128">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/firewallRule.ts#L121">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5845,7 +5845,7 @@ A description of the rule to help identify it.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleState-filterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/firewallRule.ts#L129">property <b>filterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/firewallRule.ts#L122">property <b>filterId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>filterId?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5853,7 +5853,7 @@ A description of the rule to help identify it.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleState-paused">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/firewallRule.ts#L133">property <b>paused</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/firewallRule.ts#L126">property <b>paused</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>paused?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -5864,7 +5864,7 @@ Whether this filter based firewall rule is currently paused. Boolean value.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/firewallRule.ts#L137">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/firewallRule.ts#L130">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>priority?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -5875,7 +5875,7 @@ The priority of the rule to allow control of processing order. A lower number in
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleState-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/firewallRule.ts#L141">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/firewallRule.ts#L134">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zone?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5886,7 +5886,7 @@ The DNS zone to which the Firewall Rule should be added. Will be resolved to `zo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleState-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/firewallRule.ts#L145">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/firewallRule.ts#L138">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -5898,14 +5898,14 @@ The DNS zone to which the Filter should be added.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetIpRangesResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/getIpRanges.ts#L43">interface <b>GetIpRangesResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/getIpRanges.ts#L36">interface <b>GetIpRangesResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 A collection of values returned by getIpRanges.
 
 <h3 class="pdoc-member-header" id="GetIpRangesResult-cidrBlocks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/getIpRanges.ts#L44">property <b>cidrBlocks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/getIpRanges.ts#L37">property <b>cidrBlocks</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>cidrBlocks: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -5913,7 +5913,7 @@ A collection of values returned by getIpRanges.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetIpRangesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/getIpRanges.ts#L50">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/getIpRanges.ts#L43">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5924,7 +5924,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetIpRangesResult-ipv4CidrBlocks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/getIpRanges.ts#L45">property <b>ipv4CidrBlocks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/getIpRanges.ts#L38">property <b>ipv4CidrBlocks</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ipv4CidrBlocks: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -5932,7 +5932,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetIpRangesResult-ipv6CidrBlocks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/getIpRanges.ts#L46">property <b>ipv6CidrBlocks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/getIpRanges.ts#L39">property <b>ipv6CidrBlocks</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ipv6CidrBlocks: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -5941,14 +5941,14 @@ id is the provider-assigned unique ID for this managed resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetZonesArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/getZones.ts#L54">interface <b>GetZonesArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/getZones.ts#L47">interface <b>GetZonesArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 A collection of arguments for invoking getZones.
 
 <h3 class="pdoc-member-header" id="GetZonesArgs-filter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/getZones.ts#L55">property <b>filter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/getZones.ts#L48">property <b>filter</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>filter: {
@@ -5961,14 +5961,14 @@ A collection of arguments for invoking getZones.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetZonesResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/getZones.ts#L61">interface <b>GetZonesResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/getZones.ts#L54">interface <b>GetZonesResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 A collection of values returned by getZones.
 
 <h3 class="pdoc-member-header" id="GetZonesResult-filter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/getZones.ts#L62">property <b>filter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/getZones.ts#L55">property <b>filter</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>filter: {
@@ -5980,7 +5980,7 @@ A collection of values returned by getZones.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZonesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/getZones.ts#L67">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/getZones.ts#L60">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -5991,7 +5991,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZonesResult-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/getZones.ts#L63">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/getZones.ts#L56">property <b>zones</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zones: {
@@ -6003,14 +6003,14 @@ id is the provider-assigned unique ID for this managed resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LoadBalancerArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L257">interface <b>LoadBalancerArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L250">interface <b>LoadBalancerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 The set of arguments for constructing a LoadBalancer resource.
 
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-defaultPoolIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L261">property <b>defaultPoolIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L254">property <b>defaultPoolIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultPoolIds: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -6021,7 +6021,7 @@ A list of pool IDs ordered by their failover priority. Used whenever region/pop 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L265">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L258">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6032,7 +6032,7 @@ Free text description.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L269">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L262">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6043,7 +6043,7 @@ Enable or disable the load balancer. Defaults to `true` (enabled).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-fallbackPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L273">property <b>fallbackPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L266">property <b>fallbackPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fallbackPoolId: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6054,7 +6054,7 @@ The pool ID to use when all other pools are detected as unhealthy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L277">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L270">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6065,7 +6065,7 @@ The DNS name (FQDN, including the zone) to associate with the load balancer.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-popPools">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L281">property <b>popPools</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L274">property <b>popPools</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>popPools?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6079,7 +6079,7 @@ A set containing mappings of Cloudflare Point-of-Presence (PoP) identifiers to a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-proxied">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L285">property <b>proxied</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L278">property <b>proxied</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>proxied?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6090,7 +6090,7 @@ Whether the hostname gets Cloudflare's origin protection. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-regionPools">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L289">property <b>regionPools</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L282">property <b>regionPools</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>regionPools?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6104,7 +6104,7 @@ A set containing mappings of region/country codes to a list of pool IDs (ordered
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-sessionAffinity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L293">property <b>sessionAffinity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L286">property <b>sessionAffinity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sessionAffinity?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6115,7 +6115,7 @@ Associates all requests coming from an end-user with a single origin. Cloudflare
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-steeringPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L297">property <b>steeringPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L290">property <b>steeringPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>steeringPolicy?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6126,7 +6126,7 @@ Determine which method the load balancer uses to determine the fastest route to 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L301">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L294">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ttl?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -6137,7 +6137,7 @@ Time to live (TTL) of this load balancer's DNS `name`. Conflicts with `proxied` 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L305">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L298">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zone: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6149,14 +6149,14 @@ The zone to add the load balancer to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LoadBalancerMonitorArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L233">interface <b>LoadBalancerMonitorArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L226">interface <b>LoadBalancerMonitorArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 The set of arguments for constructing a LoadBalancerMonitor resource.
 
 <h3 class="pdoc-member-header" id="LoadBalancerMonitorArgs-allowInsecure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L237">property <b>allowInsecure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L230">property <b>allowInsecure</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowInsecure?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6167,7 +6167,7 @@ Do not validate the certificate when monitor use HTTPS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitorArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L241">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L234">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6178,7 +6178,7 @@ Free text description.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitorArgs-expectedBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L245">property <b>expectedBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L238">property <b>expectedBody</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>expectedBody: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6189,7 +6189,7 @@ A case-insensitive sub-string to look for in the response body. If this string i
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitorArgs-expectedCodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L249">property <b>expectedCodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L242">property <b>expectedCodes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>expectedCodes: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6200,7 +6200,7 @@ The expected HTTP response code or code range of the health check. Eg `2xx`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitorArgs-followRedirects">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L253">property <b>followRedirects</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L246">property <b>followRedirects</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>followRedirects?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6211,7 +6211,7 @@ Follow redirects if returned by the origin.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitorArgs-headers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L257">property <b>headers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L250">property <b>headers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>headers?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6225,7 +6225,7 @@ The header name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitorArgs-interval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L261">property <b>interval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L254">property <b>interval</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>interval?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -6236,7 +6236,7 @@ The interval between each health check. Shorter intervals may improve failover t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitorArgs-method">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L265">property <b>method</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L258">property <b>method</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>method?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6247,7 +6247,7 @@ The HTTP method to use for the health check. Default: "GET".
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitorArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L269">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L262">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6258,7 +6258,7 @@ The endpoint path to health check against. Default: "/".
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitorArgs-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L270">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L263">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>port?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -6266,7 +6266,7 @@ The endpoint path to health check against. Default: "/".
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitorArgs-retries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L274">property <b>retries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L267">property <b>retries</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>retries?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -6277,7 +6277,7 @@ The number of retries to attempt in case of a timeout before marking the origin 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitorArgs-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L278">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L271">property <b>timeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>timeout?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -6288,7 +6288,7 @@ The timeout (in seconds) before marking the health check as failed. Default: 5.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitorArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L282">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L275">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6300,14 +6300,14 @@ The protocol to use for the healthcheck. Currently supported protocols are 'HTTP
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LoadBalancerMonitorState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L170">interface <b>LoadBalancerMonitorState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L163">interface <b>LoadBalancerMonitorState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 Input properties used for looking up and filtering LoadBalancerMonitor resources.
 
 <h3 class="pdoc-member-header" id="LoadBalancerMonitorState-allowInsecure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L174">property <b>allowInsecure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L167">property <b>allowInsecure</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowInsecure?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6318,7 +6318,7 @@ Do not validate the certificate when monitor use HTTPS.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitorState-createdOn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L178">property <b>createdOn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L171">property <b>createdOn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>createdOn?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6329,7 +6329,7 @@ The RFC3339 timestamp of when the load balancer monitor was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitorState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L182">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L175">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6340,7 +6340,7 @@ Free text description.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitorState-expectedBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L186">property <b>expectedBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L179">property <b>expectedBody</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>expectedBody?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6351,7 +6351,7 @@ A case-insensitive sub-string to look for in the response body. If this string i
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitorState-expectedCodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L190">property <b>expectedCodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L183">property <b>expectedCodes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>expectedCodes?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6362,7 +6362,7 @@ The expected HTTP response code or code range of the health check. Eg `2xx`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitorState-followRedirects">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L194">property <b>followRedirects</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L187">property <b>followRedirects</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>followRedirects?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6373,7 +6373,7 @@ Follow redirects if returned by the origin.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitorState-headers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L198">property <b>headers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L191">property <b>headers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>headers?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6387,7 +6387,7 @@ The header name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitorState-interval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L202">property <b>interval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L195">property <b>interval</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>interval?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -6398,7 +6398,7 @@ The interval between each health check. Shorter intervals may improve failover t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitorState-method">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L206">property <b>method</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L199">property <b>method</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>method?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6409,7 +6409,7 @@ The HTTP method to use for the health check. Default: "GET".
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitorState-modifiedOn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L210">property <b>modifiedOn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L203">property <b>modifiedOn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>modifiedOn?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6420,7 +6420,7 @@ The RFC3339 timestamp of when the load balancer monitor was last modified.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitorState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L214">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L207">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>path?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6431,7 +6431,7 @@ The endpoint path to health check against. Default: "/".
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitorState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L215">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L208">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>port?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -6439,7 +6439,7 @@ The endpoint path to health check against. Default: "/".
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitorState-retries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L219">property <b>retries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L212">property <b>retries</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>retries?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -6450,7 +6450,7 @@ The number of retries to attempt in case of a timeout before marking the origin 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitorState-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L223">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L216">property <b>timeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>timeout?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -6461,7 +6461,7 @@ The timeout (in seconds) before marking the health check as failed. Default: 5.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitorState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerMonitor.ts#L227">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L220">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6473,14 +6473,14 @@ The protocol to use for the healthcheck. Currently supported protocols are 'HTTP
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LoadBalancerPoolArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts#L192">interface <b>LoadBalancerPoolArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L185">interface <b>LoadBalancerPoolArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 The set of arguments for constructing a LoadBalancerPool resource.
 
 <h3 class="pdoc-member-header" id="LoadBalancerPoolArgs-checkRegions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts#L196">property <b>checkRegions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L189">property <b>checkRegions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>checkRegions?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -6491,7 +6491,7 @@ A list of regions (specified by region code) from which to run health checks. Em
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPoolArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts#L200">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L193">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6502,7 +6502,7 @@ Free text description.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPoolArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts#L204">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L197">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6513,7 +6513,7 @@ Whether to enable (the default) this origin within the Pool. Disabled origins wi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPoolArgs-minimumOrigins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts#L208">property <b>minimumOrigins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L201">property <b>minimumOrigins</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>minimumOrigins?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -6524,7 +6524,7 @@ The minimum number of origins that must be healthy for this pool to serve traffi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPoolArgs-monitor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts#L212">property <b>monitor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L205">property <b>monitor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>monitor?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6535,7 +6535,7 @@ The ID of the Monitor to use for health checking origins within this pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPoolArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts#L216">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L209">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6546,7 +6546,7 @@ A human-identifiable name for the origin.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPoolArgs-notificationEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts#L220">property <b>notificationEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L213">property <b>notificationEmail</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>notificationEmail?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6557,7 +6557,7 @@ The email address to send health status notifications to. This can be an individ
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPoolArgs-origins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts#L224">property <b>origins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L217">property <b>origins</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>origins: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6574,14 +6574,14 @@ The list of origins within this pool. Traffic directed at this pool is balanced 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LoadBalancerPoolState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts#L146">interface <b>LoadBalancerPoolState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L139">interface <b>LoadBalancerPoolState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 Input properties used for looking up and filtering LoadBalancerPool resources.
 
 <h3 class="pdoc-member-header" id="LoadBalancerPoolState-checkRegions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts#L150">property <b>checkRegions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L143">property <b>checkRegions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>checkRegions?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -6592,7 +6592,7 @@ A list of regions (specified by region code) from which to run health checks. Em
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPoolState-createdOn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts#L154">property <b>createdOn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L147">property <b>createdOn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>createdOn?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6603,7 +6603,7 @@ The RFC3339 timestamp of when the load balancer was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPoolState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts#L158">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L151">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6614,7 +6614,7 @@ Free text description.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPoolState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts#L162">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L155">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6625,7 +6625,7 @@ Whether to enable (the default) this origin within the Pool. Disabled origins wi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPoolState-minimumOrigins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts#L166">property <b>minimumOrigins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L159">property <b>minimumOrigins</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>minimumOrigins?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -6636,7 +6636,7 @@ The minimum number of origins that must be healthy for this pool to serve traffi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPoolState-modifiedOn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts#L170">property <b>modifiedOn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L163">property <b>modifiedOn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>modifiedOn?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6647,7 +6647,7 @@ The RFC3339 timestamp of when the load balancer was last modified.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPoolState-monitor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts#L174">property <b>monitor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L167">property <b>monitor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>monitor?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6658,7 +6658,7 @@ The ID of the Monitor to use for health checking origins within this pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPoolState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts#L178">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L171">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6669,7 +6669,7 @@ A human-identifiable name for the origin.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPoolState-notificationEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts#L182">property <b>notificationEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L175">property <b>notificationEmail</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>notificationEmail?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6680,7 +6680,7 @@ The email address to send health status notifications to. This can be an individ
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPoolState-origins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancerPool.ts#L186">property <b>origins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L179">property <b>origins</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>origins?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6697,14 +6697,14 @@ The list of origins within this pool. Traffic directed at this pool is balanced 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LoadBalancerState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L191">interface <b>LoadBalancerState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L184">interface <b>LoadBalancerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 Input properties used for looking up and filtering LoadBalancer resources.
 
 <h3 class="pdoc-member-header" id="LoadBalancerState-createdOn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L195">property <b>createdOn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L188">property <b>createdOn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>createdOn?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6715,7 +6715,7 @@ The RFC3339 timestamp of when the load balancer was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-defaultPoolIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L199">property <b>defaultPoolIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L192">property <b>defaultPoolIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultPoolIds?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -6726,7 +6726,7 @@ A list of pool IDs ordered by their failover priority. Used whenever region/pop 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L203">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L196">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6737,7 +6737,7 @@ Free text description.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L207">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L200">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6748,7 +6748,7 @@ Enable or disable the load balancer. Defaults to `true` (enabled).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-fallbackPoolId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L211">property <b>fallbackPoolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L204">property <b>fallbackPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>fallbackPoolId?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6759,7 +6759,7 @@ The pool ID to use when all other pools are detected as unhealthy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-modifiedOn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L215">property <b>modifiedOn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L208">property <b>modifiedOn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>modifiedOn?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6770,7 +6770,7 @@ The RFC3339 timestamp of when the load balancer was last modified.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L219">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L212">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6781,7 +6781,7 @@ The DNS name (FQDN, including the zone) to associate with the load balancer.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-popPools">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L223">property <b>popPools</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L216">property <b>popPools</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>popPools?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6795,7 +6795,7 @@ A set containing mappings of Cloudflare Point-of-Presence (PoP) identifiers to a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-proxied">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L227">property <b>proxied</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L220">property <b>proxied</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>proxied?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6806,7 +6806,7 @@ Whether the hostname gets Cloudflare's origin protection. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-regionPools">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L231">property <b>regionPools</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L224">property <b>regionPools</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>regionPools?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -6820,7 +6820,7 @@ A set containing mappings of region/country codes to a list of pool IDs (ordered
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-sessionAffinity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L235">property <b>sessionAffinity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L228">property <b>sessionAffinity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>sessionAffinity?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6831,7 +6831,7 @@ Associates all requests coming from an end-user with a single origin. Cloudflare
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-steeringPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L239">property <b>steeringPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L232">property <b>steeringPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>steeringPolicy?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6842,7 +6842,7 @@ Determine which method the load balancer uses to determine the fastest route to 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L243">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L236">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ttl?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -6853,7 +6853,7 @@ Time to live (TTL) of this load balancer's DNS `name`. Conflicts with `proxied` 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L247">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L240">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zone?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6864,7 +6864,7 @@ The zone to add the load balancer to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/loadBalancer.ts#L251">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L244">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6876,14 +6876,14 @@ ID associated with the specified `zone`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LogpushJobArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/logpushJob.ts#L113">interface <b>LogpushJobArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/logpushJob.ts#L106">interface <b>LogpushJobArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 The set of arguments for constructing a LogpushJob resource.
 
 <h3 class="pdoc-member-header" id="LogpushJobArgs-destinationConf">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/logpushJob.ts#L114">property <b>destinationConf</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/logpushJob.ts#L107">property <b>destinationConf</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>destinationConf: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6891,7 +6891,7 @@ The set of arguments for constructing a LogpushJob resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogpushJobArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/logpushJob.ts#L115">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/logpushJob.ts#L108">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6899,7 +6899,7 @@ The set of arguments for constructing a LogpushJob resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogpushJobArgs-logpullOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/logpushJob.ts#L116">property <b>logpullOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/logpushJob.ts#L109">property <b>logpullOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>logpullOptions?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6907,7 +6907,7 @@ The set of arguments for constructing a LogpushJob resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogpushJobArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/logpushJob.ts#L117">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/logpushJob.ts#L110">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6915,7 +6915,7 @@ The set of arguments for constructing a LogpushJob resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogpushJobArgs-ownershipChallenge">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/logpushJob.ts#L121">property <b>ownershipChallenge</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/logpushJob.ts#L114">property <b>ownershipChallenge</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ownershipChallenge: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6926,7 +6926,7 @@ Ownership challenge token to prove destination ownership. See [https://developer
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogpushJobArgs-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/logpushJob.ts#L122">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/logpushJob.ts#L115">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6935,14 +6935,14 @@ Ownership challenge token to prove destination ownership. See [https://developer
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LogpushJobState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/logpushJob.ts#L98">interface <b>LogpushJobState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/logpushJob.ts#L91">interface <b>LogpushJobState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 Input properties used for looking up and filtering LogpushJob resources.
 
 <h3 class="pdoc-member-header" id="LogpushJobState-destinationConf">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/logpushJob.ts#L99">property <b>destinationConf</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/logpushJob.ts#L92">property <b>destinationConf</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>destinationConf?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6950,7 +6950,7 @@ Input properties used for looking up and filtering LogpushJob resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogpushJobState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/logpushJob.ts#L100">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/logpushJob.ts#L93">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -6958,7 +6958,7 @@ Input properties used for looking up and filtering LogpushJob resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogpushJobState-logpullOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/logpushJob.ts#L101">property <b>logpullOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/logpushJob.ts#L94">property <b>logpullOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>logpullOptions?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6966,7 +6966,7 @@ Input properties used for looking up and filtering LogpushJob resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogpushJobState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/logpushJob.ts#L102">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/logpushJob.ts#L95">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6974,7 +6974,7 @@ Input properties used for looking up and filtering LogpushJob resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogpushJobState-ownershipChallenge">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/logpushJob.ts#L106">property <b>ownershipChallenge</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/logpushJob.ts#L99">property <b>ownershipChallenge</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ownershipChallenge?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6985,7 +6985,7 @@ Ownership challenge token to prove destination ownership. See [https://developer
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogpushJobState-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/logpushJob.ts#L107">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/logpushJob.ts#L100">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -6994,14 +6994,14 @@ Ownership challenge token to prove destination ownership. See [https://developer
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PageRuleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/pageRule.ts#L151">interface <b>PageRuleArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/pageRule.ts#L144">interface <b>PageRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 The set of arguments for constructing a PageRule resource.
 
 <h3 class="pdoc-member-header" id="PageRuleArgs-actions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/pageRule.ts#L155">property <b>actions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/pageRule.ts#L148">property <b>actions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>actions: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7055,7 +7055,7 @@ The actions taken by the page rule, options given below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PageRuleArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/pageRule.ts#L159">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/pageRule.ts#L152">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>priority?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -7066,7 +7066,7 @@ The priority of the page rule among others for this target, the higher the numbe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PageRuleArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/pageRule.ts#L163">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/pageRule.ts#L156">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7077,7 +7077,7 @@ Whether the page rule is active or disabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PageRuleArgs-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/pageRule.ts#L167">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/pageRule.ts#L160">property <b>target</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>target: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7088,7 +7088,7 @@ The URL pattern to target with the page rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PageRuleArgs-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/pageRule.ts#L171">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/pageRule.ts#L164">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zone: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7100,14 +7100,14 @@ The DNS zone to which the page rule should be added.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PageRuleState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/pageRule.ts#L121">interface <b>PageRuleState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/pageRule.ts#L114">interface <b>PageRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 Input properties used for looking up and filtering PageRule resources.
 
 <h3 class="pdoc-member-header" id="PageRuleState-actions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/pageRule.ts#L125">property <b>actions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/pageRule.ts#L118">property <b>actions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>actions?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7161,7 +7161,7 @@ The actions taken by the page rule, options given below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PageRuleState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/pageRule.ts#L129">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/pageRule.ts#L122">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>priority?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -7172,7 +7172,7 @@ The priority of the page rule among others for this target, the higher the numbe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PageRuleState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/pageRule.ts#L133">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/pageRule.ts#L126">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7183,7 +7183,7 @@ Whether the page rule is active or disabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PageRuleState-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/pageRule.ts#L137">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/pageRule.ts#L130">property <b>target</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>target?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7194,7 +7194,7 @@ The URL pattern to target with the page rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PageRuleState-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/pageRule.ts#L141">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/pageRule.ts#L134">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zone?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7205,7 +7205,7 @@ The DNS zone to which the page rule should be added.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PageRuleState-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/pageRule.ts#L145">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/pageRule.ts#L138">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7217,14 +7217,14 @@ The ID of the zone in which the page rule will be applied.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProviderArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/provider.ts#L49">interface <b>ProviderArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/provider.ts#L42">interface <b>ProviderArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 The set of arguments for constructing a Provider resource.
 
 <h3 class="pdoc-member-header" id="ProviderArgs-apiClientLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/provider.ts#L53">property <b>apiClientLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/provider.ts#L46">property <b>apiClientLogging</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>apiClientLogging?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7235,7 +7235,7 @@ Whether to print logs from the API client (using the default log library logger)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/provider.ts#L57">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/provider.ts#L50">property <b>email</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>email?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7246,7 +7246,7 @@ A registered Cloudflare email address.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-maxBackoff">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/provider.ts#L61">property <b>maxBackoff</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/provider.ts#L54">property <b>maxBackoff</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxBackoff?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -7257,7 +7257,7 @@ Maximum backoff period in seconds after failed API calls
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-minBackoff">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/provider.ts#L65">property <b>minBackoff</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/provider.ts#L58">property <b>minBackoff</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>minBackoff?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -7268,7 +7268,7 @@ Minimum backoff period in seconds after failed API calls
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-orgId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/provider.ts#L69">property <b>orgId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/provider.ts#L62">property <b>orgId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>orgId?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7279,7 +7279,7 @@ Configure API client to always use that organization. If set this will override 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-retries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/provider.ts#L73">property <b>retries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/provider.ts#L66">property <b>retries</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>retries?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -7290,7 +7290,7 @@ Maximum number of retries to perform when an API request fails
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-rps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/provider.ts#L77">property <b>rps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/provider.ts#L70">property <b>rps</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rps?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -7301,7 +7301,7 @@ RPS limit to apply when making calls to the API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/provider.ts#L81">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/provider.ts#L74">property <b>token</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>token?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7312,7 +7312,7 @@ The token key for API operations.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-useOrgFromZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/provider.ts#L85">property <b>useOrgFromZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/provider.ts#L78">property <b>useOrgFromZone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>useOrgFromZone?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7324,14 +7324,14 @@ If specified zone is owned by an organization, configure API client to always us
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RateLimitArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L228">interface <b>RateLimitArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L221">interface <b>RateLimitArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 The set of arguments for constructing a RateLimit resource.
 
 <h3 class="pdoc-member-header" id="RateLimitArgs-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L232">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L225">property <b>action</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>action: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7349,7 +7349,7 @@ The action to be performed when the threshold of matched traffic within the peri
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimitArgs-bypassUrlPatterns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L236">property <b>bypassUrlPatterns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L229">property <b>bypassUrlPatterns</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>bypassUrlPatterns?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -7360,7 +7360,7 @@ URLs matching the patterns specified here will be excluded from rate limiting.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimitArgs-correlate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L240">property <b>correlate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L233">property <b>correlate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>correlate?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7373,7 +7373,7 @@ Determines how rate limiting is applied. By default if not specified, rate limit
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimitArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L244">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L237">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7384,7 +7384,7 @@ A note that you can use to describe the reason for a rate limit. This value is s
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimitArgs-disabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L248">property <b>disabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L241">property <b>disabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>disabled?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7395,7 +7395,7 @@ Whether this ratelimit is currently disabled. Default: `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimitArgs-match">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L252">property <b>match</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L245">property <b>match</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>match?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7416,7 +7416,7 @@ Determines which traffic the rate limit counts towards the threshold. By default
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimitArgs-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L256">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L249">property <b>period</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>period: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -7427,7 +7427,7 @@ The time in seconds to count matching traffic. If the count exceeds threshold wi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimitArgs-threshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L260">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L253">property <b>threshold</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>threshold: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -7438,7 +7438,7 @@ The threshold that triggers the rate limit mitigations, combine with period. i.e
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimitArgs-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L264">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L257">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zone: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7450,14 +7450,14 @@ The DNS zone to apply rate limiting to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RateLimitState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L182">interface <b>RateLimitState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L175">interface <b>RateLimitState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 Input properties used for looking up and filtering RateLimit resources.
 
 <h3 class="pdoc-member-header" id="RateLimitState-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L186">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L179">property <b>action</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>action?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7475,7 +7475,7 @@ The action to be performed when the threshold of matched traffic within the peri
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimitState-bypassUrlPatterns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L190">property <b>bypassUrlPatterns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L183">property <b>bypassUrlPatterns</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>bypassUrlPatterns?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -7486,7 +7486,7 @@ URLs matching the patterns specified here will be excluded from rate limiting.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimitState-correlate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L194">property <b>correlate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L187">property <b>correlate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>correlate?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7499,7 +7499,7 @@ Determines how rate limiting is applied. By default if not specified, rate limit
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimitState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L198">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L191">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7510,7 +7510,7 @@ A note that you can use to describe the reason for a rate limit. This value is s
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimitState-disabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L202">property <b>disabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L195">property <b>disabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>disabled?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7521,7 +7521,7 @@ Whether this ratelimit is currently disabled. Default: `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimitState-match">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L206">property <b>match</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L199">property <b>match</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>match?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7542,7 +7542,7 @@ Determines which traffic the rate limit counts towards the threshold. By default
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimitState-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L210">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L203">property <b>period</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>period?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -7553,7 +7553,7 @@ The time in seconds to count matching traffic. If the count exceeds threshold wi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimitState-threshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L214">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L207">property <b>threshold</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>threshold?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -7564,7 +7564,7 @@ The threshold that triggers the rate limit mitigations, combine with period. i.e
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimitState-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L218">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L211">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zone?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7575,7 +7575,7 @@ The DNS zone to apply rate limiting to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimitState-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/rateLimit.ts#L222">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L215">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7587,14 +7587,14 @@ The DNS zone ID.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RecordArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L239">interface <b>RecordArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L232">interface <b>RecordArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 The set of arguments for constructing a Record resource.
 
 <h3 class="pdoc-member-header" id="RecordArgs-data">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L243">property <b>data</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L236">property <b>data</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>data?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7643,7 +7643,7 @@ Map of attributes that constitute the record value. Primarily used for LOC and S
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordArgs-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L247">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L240">property <b>domain</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>domain: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7654,7 +7654,7 @@ The DNS zone to add the record to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L251">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L244">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7665,7 +7665,7 @@ The name of the record
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L255">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L248">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>priority?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -7676,7 +7676,7 @@ The priority of the record
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordArgs-proxied">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L259">property <b>proxied</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L252">property <b>proxied</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>proxied?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7687,7 +7687,7 @@ Whether the record gets Cloudflare's origin protection; defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L263">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L256">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ttl?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -7698,7 +7698,7 @@ The TTL of the record ([automatic: '1'](https://api.cloudflare.com/#dns-records-
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L267">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L260">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7709,7 +7709,7 @@ The type of the record
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordArgs-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L271">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L264">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>value?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7721,14 +7721,14 @@ The (string) value of the record. Either this or `data` must be specified
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RecordState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L177">interface <b>RecordState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L170">interface <b>RecordState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 Input properties used for looking up and filtering Record resources.
 
 <h3 class="pdoc-member-header" id="RecordState-createdOn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L181">property <b>createdOn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L174">property <b>createdOn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>createdOn?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7739,7 +7739,7 @@ The RFC3339 timestamp of when the record was created
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-data">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L185">property <b>data</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L178">property <b>data</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>data?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7788,7 +7788,7 @@ Map of attributes that constitute the record value. Primarily used for LOC and S
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L189">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L182">property <b>domain</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>domain?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7799,7 +7799,7 @@ The DNS zone to add the record to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L193">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L186">property <b>hostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostname?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7810,7 +7810,7 @@ The FQDN of the record
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L197">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L190">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -7821,7 +7821,7 @@ A key-value map of string metadata cloudflare associates with the record
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-modifiedOn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L201">property <b>modifiedOn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L194">property <b>modifiedOn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>modifiedOn?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7832,7 +7832,7 @@ The RFC3339 timestamp of when the record was last modified
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L205">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L198">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7843,7 +7843,7 @@ The name of the record
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L209">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L202">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>priority?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -7854,7 +7854,7 @@ The priority of the record
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-proxiable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L213">property <b>proxiable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L206">property <b>proxiable</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>proxiable?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7865,7 +7865,7 @@ Shows whether this record can be proxied, must be true if setting `proxied=true`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-proxied">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L217">property <b>proxied</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L210">property <b>proxied</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>proxied?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7876,7 +7876,7 @@ Whether the record gets Cloudflare's origin protection; defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L221">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L214">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ttl?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -7887,7 +7887,7 @@ The TTL of the record ([automatic: '1'](https://api.cloudflare.com/#dns-records-
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L225">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L218">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7898,7 +7898,7 @@ The type of the record
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L229">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L222">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>value?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7909,7 +7909,7 @@ The (string) value of the record. Either this or `data` must be specified
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordState-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/record.ts#L233">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L226">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7921,14 +7921,14 @@ The zone id of the record
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SpectrumApplicationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/spectrumApplication.ts#L172">interface <b>SpectrumApplicationArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L165">interface <b>SpectrumApplicationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 The set of arguments for constructing a SpectrumApplication resource.
 
 <h3 class="pdoc-member-header" id="SpectrumApplicationArgs-dns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/spectrumApplication.ts#L176">property <b>dns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L169">property <b>dns</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dns: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7942,7 +7942,7 @@ The name and type of DNS record for the Spectrum application. Fields documented 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplicationArgs-ipFirewall">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/spectrumApplication.ts#L180">property <b>ipFirewall</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L173">property <b>ipFirewall</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ipFirewall?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -7953,7 +7953,7 @@ Enables the IP Firewall for this application. Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplicationArgs-originDirects">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/spectrumApplication.ts#L184">property <b>originDirects</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L177">property <b>originDirects</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>originDirects?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -7964,7 +7964,7 @@ A list of destination addresses to the origin. e.g. `tcp://192.0.2.1:22`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplicationArgs-originDns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/spectrumApplication.ts#L188">property <b>originDns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L181">property <b>originDns</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>originDns?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -7977,7 +7977,7 @@ A destination DNS addresses to the origin. Fields documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplicationArgs-originPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/spectrumApplication.ts#L192">property <b>originPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L185">property <b>originPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>originPort: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -7988,7 +7988,7 @@ If using `origin_dns` this is a required attribute. Origin port to proxy traffic
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplicationArgs-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/spectrumApplication.ts#L196">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L189">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocol: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -7999,7 +7999,7 @@ The port configuration at Cloudflare’s edge. e.g. `tcp/22`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplicationArgs-proxyProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/spectrumApplication.ts#L200">property <b>proxyProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L193">property <b>proxyProtocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>proxyProtocol?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -8010,7 +8010,7 @@ Enables Proxy Protocol v1 to the origin. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplicationArgs-tls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/spectrumApplication.ts#L204">property <b>tls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L197">property <b>tls</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tls?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8021,7 +8021,7 @@ TLS configuration option for Cloudflare to connect to your origin. Valid values 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplicationArgs-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/spectrumApplication.ts#L205">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L198">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8030,14 +8030,14 @@ TLS configuration option for Cloudflare to connect to your origin. Valid values 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SpectrumApplicationState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/spectrumApplication.ts#L133">interface <b>SpectrumApplicationState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L126">interface <b>SpectrumApplicationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 Input properties used for looking up and filtering SpectrumApplication resources.
 
 <h3 class="pdoc-member-header" id="SpectrumApplicationState-dns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/spectrumApplication.ts#L137">property <b>dns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L130">property <b>dns</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dns?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -8051,7 +8051,7 @@ The name and type of DNS record for the Spectrum application. Fields documented 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplicationState-ipFirewall">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/spectrumApplication.ts#L141">property <b>ipFirewall</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L134">property <b>ipFirewall</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ipFirewall?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -8062,7 +8062,7 @@ Enables the IP Firewall for this application. Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplicationState-originDirects">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/spectrumApplication.ts#L145">property <b>originDirects</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L138">property <b>originDirects</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>originDirects?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -8073,7 +8073,7 @@ A list of destination addresses to the origin. e.g. `tcp://192.0.2.1:22`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplicationState-originDns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/spectrumApplication.ts#L149">property <b>originDns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L142">property <b>originDns</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>originDns?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -8086,7 +8086,7 @@ A destination DNS addresses to the origin. Fields documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplicationState-originPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/spectrumApplication.ts#L153">property <b>originPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L146">property <b>originPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>originPort?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -8097,7 +8097,7 @@ If using `origin_dns` this is a required attribute. Origin port to proxy traffic
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplicationState-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/spectrumApplication.ts#L157">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L150">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocol?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8108,7 +8108,7 @@ The port configuration at Cloudflare’s edge. e.g. `tcp/22`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplicationState-proxyProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/spectrumApplication.ts#L161">property <b>proxyProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L154">property <b>proxyProtocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>proxyProtocol?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -8119,7 +8119,7 @@ Enables Proxy Protocol v1 to the origin. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplicationState-tls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/spectrumApplication.ts#L165">property <b>tls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L158">property <b>tls</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tls?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8130,7 +8130,7 @@ TLS configuration option for Cloudflare to connect to your origin. Valid values 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplicationState-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/spectrumApplication.ts#L166">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L159">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8139,14 +8139,14 @@ TLS configuration option for Cloudflare to connect to your origin. Valid values 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="WafRuleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/wafRule.ts#L131">interface <b>WafRuleArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/wafRule.ts#L124">interface <b>WafRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 The set of arguments for constructing a WafRule resource.
 
 <h3 class="pdoc-member-header" id="WafRuleArgs-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/wafRule.ts#L135">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/wafRule.ts#L128">property <b>mode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mode: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8157,7 +8157,7 @@ The mode of the rule, can be one of ["block", "challenge", "default", "disable",
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WafRuleArgs-ruleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/wafRule.ts#L139">property <b>ruleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/wafRule.ts#L132">property <b>ruleId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ruleId: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8168,7 +8168,7 @@ The WAF Rule ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WafRuleArgs-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/wafRule.ts#L143">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/wafRule.ts#L136">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zone: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8180,14 +8180,14 @@ The DNS zone to apply to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="WafRuleState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/wafRule.ts#L105">interface <b>WafRuleState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/wafRule.ts#L98">interface <b>WafRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 Input properties used for looking up and filtering WafRule resources.
 
 <h3 class="pdoc-member-header" id="WafRuleState-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/wafRule.ts#L109">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/wafRule.ts#L102">property <b>mode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mode?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8198,7 +8198,7 @@ The mode of the rule, can be one of ["block", "challenge", "default", "disable",
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WafRuleState-packageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/wafRule.ts#L113">property <b>packageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/wafRule.ts#L106">property <b>packageId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>packageId?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8209,7 +8209,7 @@ The ID of the WAF Rule Package that contains the rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WafRuleState-ruleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/wafRule.ts#L117">property <b>ruleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/wafRule.ts#L110">property <b>ruleId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ruleId?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8220,7 +8220,7 @@ The WAF Rule ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WafRuleState-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/wafRule.ts#L121">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/wafRule.ts#L114">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zone?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8231,7 +8231,7 @@ The DNS zone to apply to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WafRuleState-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/wafRule.ts#L125">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/wafRule.ts#L118">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8243,14 +8243,14 @@ The DNS zone ID.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="WorkerRouteArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerRoute.ts#L145">interface <b>WorkerRouteArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerRoute.ts#L138">interface <b>WorkerRouteArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 The set of arguments for constructing a WorkerRoute resource.
 
 <h3 class="pdoc-member-header" id="WorkerRouteArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerRoute.ts#L146">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerRoute.ts#L139">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -8258,7 +8258,7 @@ The set of arguments for constructing a WorkerRoute resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerRouteArgs-pattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerRoute.ts#L152">property <b>pattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerRoute.ts#L145">property <b>pattern</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pattern: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8271,7 +8271,7 @@ The [route pattern](https://developers.cloudflare.com/workers/api/route-matching
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerRouteArgs-scriptName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerRoute.ts#L153">property <b>scriptName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerRoute.ts#L146">property <b>scriptName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>scriptName?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8279,7 +8279,7 @@ The [route pattern](https://developers.cloudflare.com/workers/api/route-matching
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerRouteArgs-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerRoute.ts#L157">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerRoute.ts#L150">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zone: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8291,14 +8291,14 @@ The zone to add the route to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="WorkerRouteState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerRoute.ts#L122">interface <b>WorkerRouteState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerRoute.ts#L115">interface <b>WorkerRouteState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 Input properties used for looking up and filtering WorkerRoute resources.
 
 <h3 class="pdoc-member-header" id="WorkerRouteState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerRoute.ts#L123">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerRoute.ts#L116">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -8306,7 +8306,7 @@ Input properties used for looking up and filtering WorkerRoute resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerRouteState-multiScript">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerRoute.ts#L124">property <b>multiScript</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerRoute.ts#L117">property <b>multiScript</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>multiScript?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -8314,7 +8314,7 @@ Input properties used for looking up and filtering WorkerRoute resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerRouteState-pattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerRoute.ts#L130">property <b>pattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerRoute.ts#L123">property <b>pattern</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>pattern?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8327,7 +8327,7 @@ The [route pattern](https://developers.cloudflare.com/workers/api/route-matching
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerRouteState-scriptName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerRoute.ts#L131">property <b>scriptName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerRoute.ts#L124">property <b>scriptName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>scriptName?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8335,7 +8335,7 @@ The [route pattern](https://developers.cloudflare.com/workers/api/route-matching
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerRouteState-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerRoute.ts#L135">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerRoute.ts#L128">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zone?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8346,7 +8346,7 @@ The zone to add the route to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerRouteState-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerRoute.ts#L139">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerRoute.ts#L132">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8358,14 +8358,14 @@ The zone id of the route
 </div>
 </div>
 <h2 class="pdoc-module-header" id="WorkerScriptArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerScript.ts#L134">interface <b>WorkerScriptArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerScript.ts#L127">interface <b>WorkerScriptArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 The set of arguments for constructing a WorkerScript resource.
 
 <h3 class="pdoc-member-header" id="WorkerScriptArgs-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerScript.ts#L138">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerScript.ts#L131">property <b>content</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>content: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8376,7 +8376,7 @@ The script content.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerScriptArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerScript.ts#L142">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerScript.ts#L135">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8387,7 +8387,7 @@ The name for the script.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerScriptArgs-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerScript.ts#L146">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerScript.ts#L139">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zone?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8398,7 +8398,7 @@ The zone for the script.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerScriptArgs-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerScript.ts#L150">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerScript.ts#L143">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8410,14 +8410,14 @@ The zone id of the script (only for non-multi-script resources)
 </div>
 </div>
 <h2 class="pdoc-module-header" id="WorkerScriptState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerScript.ts#L112">interface <b>WorkerScriptState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerScript.ts#L105">interface <b>WorkerScriptState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 Input properties used for looking up and filtering WorkerScript resources.
 
 <h3 class="pdoc-member-header" id="WorkerScriptState-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerScript.ts#L116">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerScript.ts#L109">property <b>content</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>content?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8428,7 +8428,7 @@ The script content.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerScriptState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerScript.ts#L120">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerScript.ts#L113">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8439,7 +8439,7 @@ The name for the script.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerScriptState-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerScript.ts#L124">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerScript.ts#L117">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zone?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8450,7 +8450,7 @@ The zone for the script.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerScriptState-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/workerScript.ts#L128">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerScript.ts#L121">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8462,14 +8462,14 @@ The zone id of the script (only for non-multi-script resources)
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ZoneArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zone.ts#L161">interface <b>ZoneArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts#L154">interface <b>ZoneArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 The set of arguments for constructing a Zone resource.
 
 <h3 class="pdoc-member-header" id="ZoneArgs-jumpStart">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zone.ts#L165">property <b>jumpStart</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts#L158">property <b>jumpStart</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>jumpStart?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -8480,7 +8480,7 @@ Boolean of whether to scan for DNS records on creation. Ignored after zone is cr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneArgs-paused">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zone.ts#L169">property <b>paused</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts#L162">property <b>paused</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>paused?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -8491,7 +8491,7 @@ Boolean of whether this zone is paused (traffic bypasses Cloudflare). Default: f
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneArgs-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zone.ts#L173">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts#L166">property <b>plan</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>plan?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8502,7 +8502,7 @@ The name of the commercial plan to apply to the zone, can be updated once the on
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zone.ts#L177">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts#L170">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8513,7 +8513,7 @@ A full zone implies that DNS is hosted with Cloudflare. A partial zone is typica
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneArgs-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zone.ts#L181">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts#L174">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zone: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8525,14 +8525,14 @@ The DNS zone name which will be added.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ZoneLockdownArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneLockdown.ts#L144">interface <b>ZoneLockdownArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneLockdown.ts#L137">interface <b>ZoneLockdownArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 The set of arguments for constructing a ZoneLockdown resource.
 
 <h3 class="pdoc-member-header" id="ZoneLockdownArgs-configurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneLockdown.ts#L148">property <b>configurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneLockdown.ts#L141">property <b>configurations</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>configurations: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -8546,7 +8546,7 @@ A list of IP addresses or IP ranges to match the request against specified in ta
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneLockdownArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneLockdown.ts#L152">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneLockdown.ts#L145">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8557,7 +8557,7 @@ A description about the lockdown entry. Typically used as a reminder or explanat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneLockdownArgs-paused">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneLockdown.ts#L156">property <b>paused</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneLockdown.ts#L149">property <b>paused</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>paused?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -8568,7 +8568,7 @@ Boolean of whether this zone lockdown is currently paused. Default: false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneLockdownArgs-urls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneLockdown.ts#L160">property <b>urls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneLockdown.ts#L153">property <b>urls</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urls: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -8579,7 +8579,7 @@ A list of simple wildcard patterns to match requests against. The order of the u
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneLockdownArgs-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneLockdown.ts#L164">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneLockdown.ts#L157">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zone?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8590,7 +8590,7 @@ The DNS zone to which the lockdown will be added. Will be resolved to `zone_id` 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneLockdownArgs-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneLockdown.ts#L168">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneLockdown.ts#L161">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8602,14 +8602,14 @@ The DNS zone to which the access rule should be added.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ZoneLockdownState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneLockdown.ts#L114">interface <b>ZoneLockdownState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneLockdown.ts#L107">interface <b>ZoneLockdownState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 Input properties used for looking up and filtering ZoneLockdown resources.
 
 <h3 class="pdoc-member-header" id="ZoneLockdownState-configurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneLockdown.ts#L118">property <b>configurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneLockdown.ts#L111">property <b>configurations</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>configurations?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -8623,7 +8623,7 @@ A list of IP addresses or IP ranges to match the request against specified in ta
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneLockdownState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneLockdown.ts#L122">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneLockdown.ts#L115">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8634,7 +8634,7 @@ A description about the lockdown entry. Typically used as a reminder or explanat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneLockdownState-paused">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneLockdown.ts#L126">property <b>paused</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneLockdown.ts#L119">property <b>paused</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>paused?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -8645,7 +8645,7 @@ Boolean of whether this zone lockdown is currently paused. Default: false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneLockdownState-urls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneLockdown.ts#L130">property <b>urls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneLockdown.ts#L123">property <b>urls</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urls?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -8656,7 +8656,7 @@ A list of simple wildcard patterns to match requests against. The order of the u
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneLockdownState-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneLockdown.ts#L134">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneLockdown.ts#L127">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zone?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8667,7 +8667,7 @@ The DNS zone to which the lockdown will be added. Will be resolved to `zone_id` 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneLockdownState-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneLockdown.ts#L138">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneLockdown.ts#L131">property <b>zoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneId?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8679,14 +8679,14 @@ The DNS zone to which the access rule should be added.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ZoneSettingsOverrideArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneSettingsOverride.ts#L146">interface <b>ZoneSettingsOverrideArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneSettingsOverride.ts#L139">interface <b>ZoneSettingsOverrideArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 The set of arguments for constructing a ZoneSettingsOverride resource.
 
 <h3 class="pdoc-member-header" id="ZoneSettingsOverrideArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneSettingsOverride.ts#L150">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneSettingsOverride.ts#L143">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8697,7 +8697,7 @@ The DNS zone to which apply settings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneSettingsOverrideArgs-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneSettingsOverride.ts#L154">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneSettingsOverride.ts#L147">property <b>settings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>settings?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -8767,14 +8767,14 @@ Settings overrides that will be applied to the zone. If a setting is not specifi
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ZoneSettingsOverrideState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneSettingsOverride.ts#L119">interface <b>ZoneSettingsOverrideState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneSettingsOverride.ts#L112">interface <b>ZoneSettingsOverrideState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 Input properties used for looking up and filtering ZoneSettingsOverride resources.
 
 <h3 class="pdoc-member-header" id="ZoneSettingsOverrideState-initialSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneSettingsOverride.ts#L123">property <b>initialSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneSettingsOverride.ts#L116">property <b>initialSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>initialSettings?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -8843,7 +8843,7 @@ Settings present in the zone at the time the resource is created. This will be u
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneSettingsOverrideState-initialSettingsReadAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneSettingsOverride.ts#L124">property <b>initialSettingsReadAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneSettingsOverride.ts#L117">property <b>initialSettingsReadAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>initialSettingsReadAt?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8851,7 +8851,7 @@ Settings present in the zone at the time the resource is created. This will be u
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneSettingsOverrideState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneSettingsOverride.ts#L128">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneSettingsOverride.ts#L121">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8862,7 +8862,7 @@ The DNS zone to which apply settings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneSettingsOverrideState-readonlySettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneSettingsOverride.ts#L134">property <b>readonlySettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneSettingsOverride.ts#L127">property <b>readonlySettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>readonlySettings?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -8875,7 +8875,7 @@ Which of the current `settings` are not able to be set by the user. Which settin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneSettingsOverrideState-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneSettingsOverride.ts#L138">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneSettingsOverride.ts#L131">property <b>settings</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>settings?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -8944,7 +8944,7 @@ Settings overrides that will be applied to the zone. If a setting is not specifi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneSettingsOverrideState-zoneStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneSettingsOverride.ts#L139">property <b>zoneStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneSettingsOverride.ts#L132">property <b>zoneStatus</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneStatus?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8952,7 +8952,7 @@ Settings overrides that will be applied to the zone. If a setting is not specifi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneSettingsOverrideState-zoneType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zoneSettingsOverride.ts#L140">property <b>zoneType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneSettingsOverride.ts#L133">property <b>zoneType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zoneType?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -8961,14 +8961,14 @@ Settings overrides that will be applied to the zone. If a setting is not specifi
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ZoneState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zone.ts#L120">interface <b>ZoneState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts#L113">interface <b>ZoneState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 Input properties used for looking up and filtering Zone resources.
 
 <h3 class="pdoc-member-header" id="ZoneState-jumpStart">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zone.ts#L124">property <b>jumpStart</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts#L117">property <b>jumpStart</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>jumpStart?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -8979,7 +8979,7 @@ Boolean of whether to scan for DNS records on creation. Ignored after zone is cr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneState-meta">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zone.ts#L125">property <b>meta</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts#L118">property <b>meta</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>meta?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -8990,7 +8990,7 @@ Boolean of whether to scan for DNS records on creation. Ignored after zone is cr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneState-nameServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zone.ts#L129">property <b>nameServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts#L122">property <b>nameServers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>nameServers?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -9001,7 +9001,7 @@ Cloudflare-assigned name servers. This is only populated for zones that use Clou
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneState-paused">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zone.ts#L133">property <b>paused</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts#L126">property <b>paused</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>paused?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -9012,7 +9012,7 @@ Boolean of whether this zone is paused (traffic bypasses Cloudflare). Default: f
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneState-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zone.ts#L137">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts#L130">property <b>plan</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>plan?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -9023,7 +9023,7 @@ The name of the commercial plan to apply to the zone, can be updated once the on
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zone.ts#L141">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts#L134">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -9034,7 +9034,7 @@ Status of the zone. Valid values: `active`, `pending`, `initializing`, `moved`, 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zone.ts#L145">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts#L138">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -9045,7 +9045,7 @@ A full zone implies that DNS is hosted with Cloudflare. A partial zone is typica
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneState-vanityNameServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zone.ts#L151">property <b>vanityNameServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts#L144">property <b>vanityNameServers</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vanityNameServers?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -9058,7 +9058,7 @@ List of Vanity Nameservers (if set).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneState-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/zone.ts#L155">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts#L148">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>zone?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
