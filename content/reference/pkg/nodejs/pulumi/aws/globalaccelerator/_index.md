@@ -25,14 +25,14 @@ aliases:
 <li><a href="#ListenerState">interface ListenerState</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/accelerator.ts">globalaccelerator/accelerator.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/listener.ts">globalaccelerator/listener.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/accelerator.ts">globalaccelerator/accelerator.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/listener.ts">globalaccelerator/listener.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Accelerator">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/accelerator.ts#L27">class <b>Accelerator</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/accelerator.ts#L27">class <b>Accelerator</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -57,7 +57,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
 ```
 
 <h3 class="pdoc-member-header" id="Accelerator-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/accelerator.ts#L59"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/accelerator.ts#L59"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -74,7 +74,7 @@ Create a Accelerator resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Accelerator-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/accelerator.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/accelerator.ts#L36">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -88,7 +88,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Accelerator-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -98,7 +98,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Accelerator-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -112,7 +112,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Accelerator-attributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/accelerator.ts#L43">property <b>attributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/accelerator.ts#L43">property <b>attributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>attributes: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -127,7 +127,7 @@ The attributes of the accelerator. Fields documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Accelerator-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/accelerator.ts#L47">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/accelerator.ts#L47">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>enabled: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -138,7 +138,7 @@ Indicates whether the accelerator is enabled. The value is true or false. The de
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Accelerator-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -150,7 +150,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Accelerator-ipAddressType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/accelerator.ts#L51">property <b>ipAddressType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/accelerator.ts#L51">property <b>ipAddressType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>ipAddressType: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -161,7 +161,7 @@ The value for the address type must be `IPV4`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Accelerator-ipSets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/accelerator.ts#L55">property <b>ipSets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/accelerator.ts#L55">property <b>ipSets</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>ipSets: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -175,7 +175,7 @@ IP address set associated with the accelerator.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Accelerator-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/accelerator.ts#L59">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/accelerator.ts#L59">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -186,7 +186,7 @@ The name of the accelerator.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Accelerator-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -199,7 +199,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Listener">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/listener.ts#L36">class <b>Listener</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/listener.ts#L36">class <b>Listener</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -233,7 +233,7 @@ const exampleListener = new aws.globalaccelerator.Listener("example", {
 ```
 
 <h3 class="pdoc-member-header" id="Listener-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/listener.ts#L64"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/listener.ts#L64"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -250,7 +250,7 @@ Create a Listener resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/listener.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/listener.ts#L45">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -264,7 +264,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -274,7 +274,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -288,7 +288,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-acceleratorArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/listener.ts#L52">property <b>acceleratorArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/listener.ts#L52">property <b>acceleratorArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>acceleratorArn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -299,7 +299,7 @@ The Amazon Resource Name (ARN) of your accelerator.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-clientAffinity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/listener.ts#L56">property <b>clientAffinity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/listener.ts#L56">property <b>clientAffinity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>clientAffinity: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -310,7 +310,7 @@ Direct all requests from a user to the same endpoint. Valid values are `NONE`, `
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -322,7 +322,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-portRanges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/listener.ts#L60">property <b>portRanges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/listener.ts#L60">property <b>portRanges</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>portRanges: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -336,7 +336,7 @@ The list of port ranges for the connections from clients to the accelerator. Fie
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/listener.ts#L64">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/listener.ts#L64">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>protocol: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -347,7 +347,7 @@ The protocol for the connections from clients to the accelerator. Valid values a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -360,14 +360,14 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AcceleratorArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/accelerator.ts#L126">interface <b>AcceleratorArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/accelerator.ts#L119">interface <b>AcceleratorArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 The set of arguments for constructing a Accelerator resource.
 
 <h3 class="pdoc-member-header" id="AcceleratorArgs-attributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/accelerator.ts#L130">property <b>attributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/accelerator.ts#L123">property <b>attributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>attributes?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -382,7 +382,7 @@ The attributes of the accelerator. Fields documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AcceleratorArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/accelerator.ts#L134">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/accelerator.ts#L127">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -393,7 +393,7 @@ Indicates whether the accelerator is enabled. The value is true or false. The de
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AcceleratorArgs-ipAddressType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/accelerator.ts#L138">property <b>ipAddressType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/accelerator.ts#L131">property <b>ipAddressType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ipAddressType?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -404,7 +404,7 @@ The value for the address type must be `IPV4`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AcceleratorArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/accelerator.ts#L142">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/accelerator.ts#L135">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -416,14 +416,14 @@ The name of the accelerator.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AcceleratorState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/accelerator.ts#L100">interface <b>AcceleratorState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/accelerator.ts#L93">interface <b>AcceleratorState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 Input properties used for looking up and filtering Accelerator resources.
 
 <h3 class="pdoc-member-header" id="AcceleratorState-attributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/accelerator.ts#L104">property <b>attributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/accelerator.ts#L97">property <b>attributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>attributes?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -438,7 +438,7 @@ The attributes of the accelerator. Fields documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AcceleratorState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/accelerator.ts#L108">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/accelerator.ts#L101">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -449,7 +449,7 @@ Indicates whether the accelerator is enabled. The value is true or false. The de
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AcceleratorState-ipAddressType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/accelerator.ts#L112">property <b>ipAddressType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/accelerator.ts#L105">property <b>ipAddressType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ipAddressType?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -460,7 +460,7 @@ The value for the address type must be `IPV4`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AcceleratorState-ipSets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/accelerator.ts#L116">property <b>ipSets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/accelerator.ts#L109">property <b>ipSets</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ipSets?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -474,7 +474,7 @@ IP address set associated with the accelerator.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AcceleratorState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/accelerator.ts#L120">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/accelerator.ts#L113">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -486,14 +486,14 @@ The name of the accelerator.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ListenerArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/listener.ts#L134">interface <b>ListenerArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/listener.ts#L127">interface <b>ListenerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 The set of arguments for constructing a Listener resource.
 
 <h3 class="pdoc-member-header" id="ListenerArgs-acceleratorArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/listener.ts#L138">property <b>acceleratorArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/listener.ts#L131">property <b>acceleratorArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>acceleratorArn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -504,7 +504,7 @@ The Amazon Resource Name (ARN) of your accelerator.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerArgs-clientAffinity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/listener.ts#L142">property <b>clientAffinity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/listener.ts#L135">property <b>clientAffinity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientAffinity?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -515,7 +515,7 @@ Direct all requests from a user to the same endpoint. Valid values are `NONE`, `
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerArgs-portRanges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/listener.ts#L146">property <b>portRanges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/listener.ts#L139">property <b>portRanges</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>portRanges: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -529,7 +529,7 @@ The list of port ranges for the connections from clients to the accelerator. Fie
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerArgs-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/listener.ts#L150">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/listener.ts#L143">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocol: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -541,14 +541,14 @@ The protocol for the connections from clients to the accelerator. Valid values a
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ListenerState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/listener.ts#L112">interface <b>ListenerState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/listener.ts#L105">interface <b>ListenerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 Input properties used for looking up and filtering Listener resources.
 
 <h3 class="pdoc-member-header" id="ListenerState-acceleratorArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/listener.ts#L116">property <b>acceleratorArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/listener.ts#L109">property <b>acceleratorArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>acceleratorArn?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -559,7 +559,7 @@ The Amazon Resource Name (ARN) of your accelerator.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerState-clientAffinity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/listener.ts#L120">property <b>clientAffinity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/listener.ts#L113">property <b>clientAffinity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientAffinity?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -570,7 +570,7 @@ Direct all requests from a user to the same endpoint. Valid values are `NONE`, `
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerState-portRanges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/listener.ts#L124">property <b>portRanges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/listener.ts#L117">property <b>portRanges</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>portRanges?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -584,7 +584,7 @@ The list of port ranges for the connections from clients to the accelerator. Fie
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerState-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/globalaccelerator/listener.ts#L128">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/globalaccelerator/listener.ts#L121">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>protocol?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

@@ -25,14 +25,14 @@ aliases:
 <li><a href="#WebhookState">interface WebhookState</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts">codebuild/project.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/webhook.ts">codebuild/webhook.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts">codebuild/project.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/webhook.ts">codebuild/webhook.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Project">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L127">class <b>Project</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L160">class <b>Project</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -111,6 +111,39 @@ const exampleProject = new aws.codebuild.Project("example", {
         vpcId: "vpc-725fca",
     },
 });
+const project_with_cache = new aws.codebuild.Project("project-with-cache", {
+    artifacts: {
+        type: "NO_ARTIFACTS",
+    },
+    buildTimeout: 5,
+    cache: {
+        modes: [
+            "LOCAL_DOCKER_LAYER_CACHE",
+            "LOCAL_SOURCE_CACHE",
+        ],
+        type: "LOCAL",
+    },
+    description: "test_codebuild_project_cache",
+    environment: {
+        computeType: "BUILD_GENERAL1_SMALL",
+        environmentVariables: [{
+            name: "SOME_KEY1",
+            value: "SOME_VALUE1",
+        }],
+        image: "aws/codebuild/standard:1.0",
+        imagePullCredentialsType: "CODEBUILD",
+        type: "LINUX_CONTAINER",
+    },
+    serviceRole: exampleRole.arn,
+    source: {
+        gitCloneDepth: 1,
+        location: "https://github.com/mitchellh/packer.git",
+        type: "GITHUB",
+    },
+    tags: {
+        Environment: "Test",
+    },
+});
 const exampleRolePolicy = new aws.iam.RolePolicy("example", {
     policy: pulumi.interpolate`{
   "Version": "2012-10-17",
@@ -157,7 +190,7 @@ const exampleRolePolicy = new aws.iam.RolePolicy("example", {
 ```
 
 <h3 class="pdoc-member-header" id="Project-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L203"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L236"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -174,7 +207,7 @@ Create a Project resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L136">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L169">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -188,7 +221,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -198,7 +231,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -212,7 +245,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L143">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L176">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -223,7 +256,7 @@ The ARN of the CodeBuild project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-artifacts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L147">property <b>artifacts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L180">property <b>artifacts</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>artifacts: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -242,7 +275,7 @@ Information about the project's build output artifacts. Artifact blocks are docu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-badgeEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L151">property <b>badgeEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L184">property <b>badgeEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>badgeEnabled: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -253,7 +286,7 @@ Generates a publicly-accessible URL for the projects build badge. Available as `
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-badgeUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L155">property <b>badgeUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L188">property <b>badgeUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>badgeUrl: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -264,7 +297,7 @@ The URL of the build badge when `badge_enabled` is enabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-buildTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L159">property <b>buildTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L192">property <b>buildTimeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>buildTimeout: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -275,11 +308,12 @@ How long in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until ti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-cache">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L163">property <b>cache</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L196">property <b>cache</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>cache: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
     location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    modes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
     type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 } | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
@@ -289,7 +323,7 @@ Information about the cache storage for the project. Cache blocks are documented
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L167">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L200">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -300,7 +334,7 @@ A short description of the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-encryptionKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L171">property <b>encryptionKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L204">property <b>encryptionKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>encryptionKey: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -311,7 +345,7 @@ The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used fo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L175">property <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L208">property <b>environment</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>environment: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -334,7 +368,7 @@ Information about the project's build environment. Environment blocks are docume
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -346,7 +380,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L179">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L212">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -357,7 +391,7 @@ The name of the project. If `type` is set to `S3`, this is the name of the outpu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-secondaryArtifacts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L183">property <b>secondaryArtifacts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L216">property <b>secondaryArtifacts</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>secondaryArtifacts: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -377,7 +411,7 @@ A set of secondary artifacts to be used inside the build. Secondary artifacts bl
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-secondarySources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L187">property <b>secondarySources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L220">property <b>secondarySources</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>secondarySources: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -400,7 +434,7 @@ A set of secondary sources to be used inside the build. Secondary sources blocks
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-serviceRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L191">property <b>serviceRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L224">property <b>serviceRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>serviceRole: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -411,7 +445,7 @@ The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) r
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L195">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L228">property <b>source</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>source: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -433,7 +467,7 @@ Information about the project's input source code. Source blocks are documented 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L199">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L232">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -444,7 +478,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -456,7 +490,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-vpcConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L203">property <b>vpcConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L236">property <b>vpcConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>vpcConfig: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -472,7 +506,7 @@ Configuration for the builds to run inside a VPC. VPC config blocks are document
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Webhook">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/webhook.ts#L29">class <b>Webhook</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/webhook.ts#L29">class <b>Webhook</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -499,7 +533,7 @@ const example = new aws.codebuild.Webhook("example", {
 ```
 
 <h3 class="pdoc-member-header" id="Webhook-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/webhook.ts#L61"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/webhook.ts#L61"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -516,7 +550,7 @@ Create a Webhook resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Webhook-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/webhook.ts#L38">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/webhook.ts#L38">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -530,7 +564,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Webhook-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -540,7 +574,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Webhook-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -554,7 +588,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Webhook-branchFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/webhook.ts#L45">property <b>branchFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/webhook.ts#L45">property <b>branchFilter</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>branchFilter: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -565,7 +599,7 @@ A regular expression used to determine which branches get built. Default is all 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Webhook-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -577,7 +611,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Webhook-payloadUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/webhook.ts#L49">property <b>payloadUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/webhook.ts#L49">property <b>payloadUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>payloadUrl: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -588,7 +622,7 @@ The CodeBuild endpoint where webhook events are sent.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Webhook-projectName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/webhook.ts#L53">property <b>projectName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/webhook.ts#L53">property <b>projectName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>projectName: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -599,7 +633,7 @@ The name of the build project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Webhook-secret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/webhook.ts#L57">property <b>secret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/webhook.ts#L57">property <b>secret</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>secret: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -610,7 +644,7 @@ The secret token of the associated repository. Not returned by the CodeBuild API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Webhook-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/webhook.ts#L61">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/webhook.ts#L61">property <b>url</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>url: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -621,7 +655,7 @@ The URL to the webhook.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Webhook-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -634,14 +668,14 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProjectArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L348">interface <b>ProjectArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L374">interface <b>ProjectArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 The set of arguments for constructing a Project resource.
 
 <h3 class="pdoc-member-header" id="ProjectArgs-artifacts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L352">property <b>artifacts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L378">property <b>artifacts</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>artifacts: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -660,7 +694,7 @@ Information about the project's build output artifacts. Artifact blocks are docu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-badgeEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L356">property <b>badgeEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L382">property <b>badgeEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>badgeEnabled?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -671,7 +705,7 @@ Generates a publicly-accessible URL for the projects build badge. Available as `
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-buildTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L360">property <b>buildTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L386">property <b>buildTimeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>buildTimeout?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -682,11 +716,12 @@ How long in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until ti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-cache">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L364">property <b>cache</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L390">property <b>cache</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>cache?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     location: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
+    modes: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
     type: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 }&gt;;</pre>
 {{% md %}}
@@ -696,7 +731,7 @@ Information about the cache storage for the project. Cache blocks are documented
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L368">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L394">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -707,7 +742,7 @@ A short description of the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-encryptionKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L372">property <b>encryptionKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L398">property <b>encryptionKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>encryptionKey?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -718,7 +753,7 @@ The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used fo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L376">property <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L402">property <b>environment</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>environment: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -741,7 +776,7 @@ Information about the project's build environment. Environment blocks are docume
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L380">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L406">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -752,7 +787,7 @@ The name of the project. If `type` is set to `S3`, this is the name of the outpu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-secondaryArtifacts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L384">property <b>secondaryArtifacts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L410">property <b>secondaryArtifacts</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryArtifacts?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -772,7 +807,7 @@ A set of secondary artifacts to be used inside the build. Secondary artifacts bl
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-secondarySources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L388">property <b>secondarySources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L414">property <b>secondarySources</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondarySources?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -795,7 +830,7 @@ A set of secondary sources to be used inside the build. Secondary sources blocks
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-serviceRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L392">property <b>serviceRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L418">property <b>serviceRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serviceRole: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -806,7 +841,7 @@ The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) r
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L396">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L422">property <b>source</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>source: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -828,7 +863,7 @@ Information about the project's input source code. Source blocks are documented 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L400">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L426">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -839,7 +874,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-vpcConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L404">property <b>vpcConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L430">property <b>vpcConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vpcConfig?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -855,14 +890,14 @@ Configuration for the builds to run inside a VPC. VPC config blocks are document
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProjectState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L278">interface <b>ProjectState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L304">interface <b>ProjectState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 Input properties used for looking up and filtering Project resources.
 
 <h3 class="pdoc-member-header" id="ProjectState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L282">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L308">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -873,7 +908,7 @@ The ARN of the CodeBuild project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-artifacts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L286">property <b>artifacts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L312">property <b>artifacts</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>artifacts?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -892,7 +927,7 @@ Information about the project's build output artifacts. Artifact blocks are docu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-badgeEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L290">property <b>badgeEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L316">property <b>badgeEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>badgeEnabled?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -903,7 +938,7 @@ Generates a publicly-accessible URL for the projects build badge. Available as `
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-badgeUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L294">property <b>badgeUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L320">property <b>badgeUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>badgeUrl?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -914,7 +949,7 @@ The URL of the build badge when `badge_enabled` is enabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-buildTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L298">property <b>buildTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L324">property <b>buildTimeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>buildTimeout?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -925,11 +960,12 @@ How long in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until ti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-cache">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L302">property <b>cache</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L328">property <b>cache</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>cache?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     location: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
+    modes: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
     type: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 }&gt;;</pre>
 {{% md %}}
@@ -939,7 +975,7 @@ Information about the cache storage for the project. Cache blocks are documented
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L306">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L332">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -950,7 +986,7 @@ A short description of the project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-encryptionKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L310">property <b>encryptionKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L336">property <b>encryptionKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>encryptionKey?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -961,7 +997,7 @@ The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used fo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L314">property <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L340">property <b>environment</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>environment?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -984,7 +1020,7 @@ Information about the project's build environment. Environment blocks are docume
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L318">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L344">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -995,7 +1031,7 @@ The name of the project. If `type` is set to `S3`, this is the name of the outpu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-secondaryArtifacts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L322">property <b>secondaryArtifacts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L348">property <b>secondaryArtifacts</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondaryArtifacts?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1015,7 +1051,7 @@ A set of secondary artifacts to be used inside the build. Secondary artifacts bl
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-secondarySources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L326">property <b>secondarySources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L352">property <b>secondarySources</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secondarySources?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1038,7 +1074,7 @@ A set of secondary sources to be used inside the build. Secondary sources blocks
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-serviceRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L330">property <b>serviceRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L356">property <b>serviceRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serviceRole?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1049,7 +1085,7 @@ The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) r
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L334">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L360">property <b>source</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>source?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1071,7 +1107,7 @@ Information about the project's input source code. Source blocks are documented 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L338">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L364">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1082,7 +1118,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-vpcConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/project.ts#L342">property <b>vpcConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/project.ts#L368">property <b>vpcConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vpcConfig?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1098,14 +1134,14 @@ Configuration for the builds to run inside a VPC. VPC config blocks are document
 </div>
 </div>
 <h2 class="pdoc-module-header" id="WebhookArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/webhook.ts#L131">interface <b>WebhookArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/webhook.ts#L124">interface <b>WebhookArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 The set of arguments for constructing a Webhook resource.
 
 <h3 class="pdoc-member-header" id="WebhookArgs-branchFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/webhook.ts#L135">property <b>branchFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/webhook.ts#L128">property <b>branchFilter</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>branchFilter?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1116,7 +1152,7 @@ A regular expression used to determine which branches get built. Default is all 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebhookArgs-projectName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/webhook.ts#L139">property <b>projectName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/webhook.ts#L132">property <b>projectName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>projectName: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1128,14 +1164,14 @@ The name of the build project.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="WebhookState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/webhook.ts#L105">interface <b>WebhookState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/webhook.ts#L98">interface <b>WebhookState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
 Input properties used for looking up and filtering Webhook resources.
 
 <h3 class="pdoc-member-header" id="WebhookState-branchFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/webhook.ts#L109">property <b>branchFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/webhook.ts#L102">property <b>branchFilter</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>branchFilter?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1146,7 +1182,7 @@ A regular expression used to determine which branches get built. Default is all 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebhookState-payloadUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/webhook.ts#L113">property <b>payloadUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/webhook.ts#L106">property <b>payloadUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>payloadUrl?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1157,7 +1193,7 @@ The CodeBuild endpoint where webhook events are sent.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebhookState-projectName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/webhook.ts#L117">property <b>projectName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/webhook.ts#L110">property <b>projectName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>projectName?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1168,7 +1204,7 @@ The name of the build project.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebhookState-secret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/webhook.ts#L121">property <b>secret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/webhook.ts#L114">property <b>secret</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>secret?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1179,7 +1215,7 @@ The secret token of the associated repository. Not returned by the CodeBuild API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WebhookState-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4587f51e21d4082d41ef2a51683fba5eef224c5b/sdk/nodejs/codebuild/webhook.ts#L125">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/codebuild/webhook.ts#L118">property <b>url</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>url?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

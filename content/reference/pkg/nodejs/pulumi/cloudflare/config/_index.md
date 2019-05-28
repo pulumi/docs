@@ -28,14 +28,14 @@ aliases:
 <li><a href="#useOrgFromZone">let useOrgFromZone</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/config/vars.ts">config/vars.ts</a> 
+<a href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/config/vars.ts">config/vars.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="apiClientLogging">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/config/vars.ts#L12">let <b>apiClientLogging</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/config/vars.ts#L12">let <b>apiClientLogging</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> apiClientLogging: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;apiClientLogging&#34;) || (utilities.getEnvBoolean(&#34;CLOUDFLARE_API_CLIENT_LOGGING&#34;) || false)</span>;</pre>
@@ -44,7 +44,7 @@ Whether to print logs from the API client (using the default log library logger)
 
 </div>
 <h2 class="pdoc-module-header" id="email">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/config/vars.ts#L16">let <b>email</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/config/vars.ts#L16">let <b>email</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> email: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;email&#34;) || utilities.getEnv(&#34;CLOUDFLARE_EMAIL&#34;)</span>;</pre>
@@ -53,7 +53,7 @@ A registered Cloudflare email address.
 
 </div>
 <h2 class="pdoc-module-header" id="maxBackoff">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/config/vars.ts#L20">let <b>maxBackoff</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/config/vars.ts#L20">let <b>maxBackoff</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> maxBackoff: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;number&gt;(&#34;maxBackoff&#34;) || (utilities.getEnvNumber(&#34;CLOUDFLARE_MAX_BACKOFF&#34;) || 30)</span>;</pre>
@@ -62,7 +62,7 @@ Maximum backoff period in seconds after failed API calls
 
 </div>
 <h2 class="pdoc-module-header" id="minBackoff">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/config/vars.ts#L24">let <b>minBackoff</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/config/vars.ts#L24">let <b>minBackoff</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> minBackoff: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;number&gt;(&#34;minBackoff&#34;) || (utilities.getEnvNumber(&#34;CLOUDFLARE_MIN_BACKOFF&#34;) || 1)</span>;</pre>
@@ -71,7 +71,7 @@ Minimum backoff period in seconds after failed API calls
 
 </div>
 <h2 class="pdoc-module-header" id="orgId">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/config/vars.ts#L28">let <b>orgId</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/config/vars.ts#L28">let <b>orgId</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> orgId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;orgId&#34;) || utilities.getEnv(&#34;CLOUDFLARE_ORG_ID&#34;)</span>;</pre>
@@ -80,7 +80,7 @@ Configure API client to always use that organization. If set this will override 
 
 </div>
 <h2 class="pdoc-module-header" id="retries">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/config/vars.ts#L32">let <b>retries</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/config/vars.ts#L32">let <b>retries</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> retries: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;number&gt;(&#34;retries&#34;) || (utilities.getEnvNumber(&#34;CLOUDFLARE_RETRIES&#34;) || 3)</span>;</pre>
@@ -89,7 +89,7 @@ Maximum number of retries to perform when an API request fails
 
 </div>
 <h2 class="pdoc-module-header" id="rps">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/config/vars.ts#L36">let <b>rps</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/config/vars.ts#L36">let <b>rps</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> rps: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;number&gt;(&#34;rps&#34;) || (utilities.getEnvNumber(&#34;CLOUDFLARE_RPS&#34;) || 4)</span>;</pre>
@@ -98,7 +98,7 @@ RPS limit to apply when making calls to the API
 
 </div>
 <h2 class="pdoc-module-header" id="token">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/config/vars.ts#L40">let <b>token</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/config/vars.ts#L40">let <b>token</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> token: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;token&#34;) || utilities.getEnv(&#34;CLOUDFLARE_TOKEN&#34;)</span>;</pre>
@@ -107,7 +107,7 @@ The token key for API operations.
 
 </div>
 <h2 class="pdoc-module-header" id="useOrgFromZone">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/d95e53292d2e13c324fc819b6ca0dfedb47bd488/sdk/nodejs/config/vars.ts#L44">let <b>useOrgFromZone</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/config/vars.ts#L44">let <b>useOrgFromZone</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> useOrgFromZone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;useOrgFromZone&#34;) || utilities.getEnv(&#34;CLOUDFLARE_ORG_ZONE&#34;)</span>;</pre>

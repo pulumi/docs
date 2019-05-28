@@ -3846,8 +3846,8 @@ const foobarVolumeSnapshot = pulumi.output(digitalocean.getVolumeSnapshot({
 }));
 const foobarVolume = new digitalocean.Volume("foobar", {
     region: "lon1",
-    size: foobarVolumeSnapshot.apply(foobarVolumeSnapshot => foobarVolumeSnapshot.minDiskSize),
-    snapshotId: foobarVolumeSnapshot.apply(foobarVolumeSnapshot => foobarVolumeSnapshot.id),
+    size: foobarVolumeSnapshot.minDiskSize,
+    snapshotId: foobarVolumeSnapshot.id,
 });
 ```
 
@@ -4560,7 +4560,7 @@ const example1Image = pulumi.output(digitalocean.getImage({
     name: "example-1.0.0",
 }));
 const example1Droplet = new digitalocean.Droplet("example1", {
-    image: example1Image.apply(example1Image => example1Image.image),
+    image: example1Image.image,
     region: "nyc2",
     size: "s-1vcpu-1gb",
 });
@@ -4761,7 +4761,7 @@ const exampleDroplet = new digitalocean.Droplet("example", {
 });
 const foobar = new digitalocean.VolumeAttachment("foobar", {
     dropletId: exampleDroplet.id,
-    volumeId: exampleVolume.apply(exampleVolume => exampleVolume.id),
+    volumeId: exampleVolume.id,
 });
 ```
 
@@ -4809,7 +4809,7 @@ const snapshot = pulumi.output(digitalocean.getVolumeSnapshot({
 const foobar = new digitalocean.Volume("foobar", {
     region: "nyc3",
     size: 100,
-    snapshotId: snapshot.apply(snapshot => snapshot.id),
+    snapshotId: snapshot.id,
 });
 ```
 
