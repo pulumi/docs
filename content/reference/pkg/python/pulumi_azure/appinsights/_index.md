@@ -244,6 +244,141 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
+<dl class="class">
+<dt id="pulumi_azure.appinsights.WebTest">
+<em class="property">class </em><code class="descclassname">pulumi_azure.appinsights.</code><code class="descname">WebTest</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>application_insights_id=None</em>, <em>configuration=None</em>, <em>description=None</em>, <em>enabled=None</em>, <em>frequency=None</em>, <em>geo_locations=None</em>, <em>kind=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>retry_enabled=None</em>, <em>tags=None</em>, <em>timeout=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appinsights.WebTest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an Application Insights WebTest.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>application_insights_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Application Insights component on which the WebTest operates. Changing this forces a new resource to be created.</li>
+<li><strong>configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An XML configuration specification for a WebTest.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Purpose/user defined descriptive test for this WebTest.</li>
+<li><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is the test actively being monitored.</li>
+<li><strong>frequency</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Interval in seconds between test runs for this WebTest. Default is <code class="docutils literal notranslate"><span class="pre">300</span></code>.</li>
+<li><strong>geo_locations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of where to physically run the tests from to give global coverage for accessibility of your application.</li>
+<li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location of the resource group.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Application Insights WebTest. Changing this forces a
+new resource to be created.</li>
+<li><strong>retry_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow for retries should this WebTest fail.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Resource tags.</li>
+<li><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Seconds until this WebTest will timeout and fail. Default is <code class="docutils literal notranslate"><span class="pre">30</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_azure.appinsights.WebTest.application_insights_id">
+<code class="descname">application_insights_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appinsights.WebTest.application_insights_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the Application Insights component on which the WebTest operates. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appinsights.WebTest.configuration">
+<code class="descname">configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appinsights.WebTest.configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>An XML configuration specification for a WebTest.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appinsights.WebTest.description">
+<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appinsights.WebTest.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Purpose/user defined descriptive test for this WebTest.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appinsights.WebTest.enabled">
+<code class="descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appinsights.WebTest.enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is the test actively being monitored.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appinsights.WebTest.frequency">
+<code class="descname">frequency</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appinsights.WebTest.frequency" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interval in seconds between test runs for this WebTest. Default is <code class="docutils literal notranslate"><span class="pre">300</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appinsights.WebTest.geo_locations">
+<code class="descname">geo_locations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appinsights.WebTest.geo_locations" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of where to physically run the tests from to give global coverage for accessibility of your application.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appinsights.WebTest.location">
+<code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appinsights.WebTest.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The location of the resource group.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appinsights.WebTest.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appinsights.WebTest.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of the Application Insights WebTest. Changing this forces a
+new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appinsights.WebTest.retry_enabled">
+<code class="descname">retry_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appinsights.WebTest.retry_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allow for retries should this WebTest fail.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appinsights.WebTest.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appinsights.WebTest.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resource tags.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appinsights.WebTest.timeout">
+<code class="descname">timeout</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appinsights.WebTest.timeout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Seconds until this WebTest will timeout and fail. Default is <code class="docutils literal notranslate"><span class="pre">30</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.appinsights.WebTest.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appinsights.WebTest.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.appinsights.WebTest.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appinsights.WebTest.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="function">
 <dt id="pulumi_azure.appinsights.get_insights">
 <code class="descclassname">pulumi_azure.appinsights.</code><code class="descname">get_insights</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appinsights.get_insights" title="Permalink to this definition">¶</a></dt>

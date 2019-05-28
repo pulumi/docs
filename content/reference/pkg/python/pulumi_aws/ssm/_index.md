@@ -599,7 +599,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ssm.MaintenanceWindowTarget">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ssm.</code><code class="descname">MaintenanceWindowTarget</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>owner_information=None</em>, <em>resource_type=None</em>, <em>targets=None</em>, <em>window_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindowTarget" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ssm.</code><code class="descname">MaintenanceWindowTarget</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>owner_information=None</em>, <em>resource_type=None</em>, <em>targets=None</em>, <em>window_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindowTarget" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SSM Maintenance Window Target resource</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -608,6 +608,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the maintenance window target.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the maintenance window target.</li>
 <li><strong>owner_information</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User-provided value that will be included in any CloudWatch events raised while running tasks for these targets in this Maintenance Window.</li>
 <li><strong>resource_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of target being registered with the Maintenance Window. Possible values <code class="docutils literal notranslate"><span class="pre">INSTANCE</span></code>.</li>
 <li><strong>targets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The targets (either instances or tags). Instances are specified using Key=instanceids,Values=instanceid1,instanceid2. Tags are specified using Key=tag name,Values=tag value.</li>
@@ -617,6 +619,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
+<dl class="attribute">
+<dt id="pulumi_aws.ssm.MaintenanceWindowTarget.description">
+<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindowTarget.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description of the maintenance window target.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ssm.MaintenanceWindowTarget.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindowTarget.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the maintenance window target.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.MaintenanceWindowTarget.owner_information">
 <code class="descname">owner_information</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindowTarget.owner_information" title="Permalink to this definition">¶</a></dt>

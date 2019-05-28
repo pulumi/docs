@@ -355,7 +355,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.containerservice.KubernetesCluster">
-<em class="property">class </em><code class="descclassname">pulumi_azure.containerservice.</code><code class="descname">KubernetesCluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>addon_profile=None</em>, <em>agent_pool_profile=None</em>, <em>api_server_authorized_ip_ranges=None</em>, <em>dns_prefix=None</em>, <em>kubernetes_version=None</em>, <em>linux_profile=None</em>, <em>location=None</em>, <em>name=None</em>, <em>network_profile=None</em>, <em>resource_group_name=None</em>, <em>role_based_access_control=None</em>, <em>service_principal=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.containerservice.</code><code class="descname">KubernetesCluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>addon_profile=None</em>, <em>agent_pool_profiles=None</em>, <em>api_server_authorized_ip_ranges=None</em>, <em>dns_prefix=None</em>, <em>kubernetes_version=None</em>, <em>linux_profile=None</em>, <em>location=None</em>, <em>name=None</em>, <em>network_profile=None</em>, <em>resource_group_name=None</em>, <em>role_based_access_control=None</em>, <em>service_principal=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Managed Kubernetes Cluster (also known as AKS / Azure Kubernetes Service)</p>
 <blockquote>
 <div><strong>Note:</strong> All arguments including the client secret will be stored in the raw state as plain-text. <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</div></blockquote>
@@ -367,7 +367,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>addon_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">addon_profile</span></code> block.</li>
-<li><strong>agent_pool_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">agent_pool_profile</span></code> block.  Currently only one agent pool can exist.</li>
+<li><strong>agent_pool_profiles</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">agent_pool_profile</span></code> blocks as defined below.</li>
 <li><strong>api_server_authorized_ip_ranges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The IP ranges to whitelist for incoming traffic to the masters.</li>
 <li><strong>dns_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – DNS prefix specified when creating the managed cluster. Changing this forces a new resource to be created.</li>
 <li><strong>kubernetes_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Version of Kubernetes specified when creating the AKS managed cluster. If not specified, the latest recommended version will be used at provisioning time (but won’t auto-upgrade).</li>
@@ -391,9 +391,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_azure.containerservice.KubernetesCluster.agent_pool_profile">
-<code class="descname">agent_pool_profile</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.agent_pool_profile" title="Permalink to this definition">¶</a></dt>
-<dd><p>An <code class="docutils literal notranslate"><span class="pre">agent_pool_profile</span></code> block.  Currently only one agent pool can exist.</p>
+<dt id="pulumi_azure.containerservice.KubernetesCluster.agent_pool_profiles">
+<code class="descname">agent_pool_profiles</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.agent_pool_profiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">agent_pool_profile</span></code> blocks as defined below.</p>
 </dd></dl>
 
 <dl class="attribute">

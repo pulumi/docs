@@ -1676,7 +1676,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.rds.Instance">
-<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allocated_storage=None</em>, <em>allow_major_version_upgrade=None</em>, <em>apply_immediately=None</em>, <em>auto_minor_version_upgrade=None</em>, <em>availability_zone=None</em>, <em>backup_retention_period=None</em>, <em>backup_window=None</em>, <em>character_set_name=None</em>, <em>copy_tags_to_snapshot=None</em>, <em>db_subnet_group_name=None</em>, <em>deletion_protection=None</em>, <em>domain=None</em>, <em>domain_iam_role_name=None</em>, <em>enabled_cloudwatch_logs_exports=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>final_snapshot_identifier=None</em>, <em>iam_database_authentication_enabled=None</em>, <em>identifier=None</em>, <em>identifier_prefix=None</em>, <em>instance_class=None</em>, <em>iops=None</em>, <em>kms_key_id=None</em>, <em>license_model=None</em>, <em>maintenance_window=None</em>, <em>monitoring_interval=None</em>, <em>monitoring_role_arn=None</em>, <em>multi_az=None</em>, <em>name=None</em>, <em>option_group_name=None</em>, <em>parameter_group_name=None</em>, <em>password=None</em>, <em>port=None</em>, <em>publicly_accessible=None</em>, <em>replicate_source_db=None</em>, <em>s3_import=None</em>, <em>security_group_names=None</em>, <em>skip_final_snapshot=None</em>, <em>snapshot_identifier=None</em>, <em>storage_encrypted=None</em>, <em>storage_type=None</em>, <em>tags=None</em>, <em>timezone=None</em>, <em>username=None</em>, <em>vpc_security_group_ids=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.Instance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allocated_storage=None</em>, <em>allow_major_version_upgrade=None</em>, <em>apply_immediately=None</em>, <em>auto_minor_version_upgrade=None</em>, <em>availability_zone=None</em>, <em>backup_retention_period=None</em>, <em>backup_window=None</em>, <em>character_set_name=None</em>, <em>copy_tags_to_snapshot=None</em>, <em>db_subnet_group_name=None</em>, <em>deletion_protection=None</em>, <em>domain=None</em>, <em>domain_iam_role_name=None</em>, <em>enabled_cloudwatch_logs_exports=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>final_snapshot_identifier=None</em>, <em>iam_database_authentication_enabled=None</em>, <em>identifier=None</em>, <em>identifier_prefix=None</em>, <em>instance_class=None</em>, <em>iops=None</em>, <em>kms_key_id=None</em>, <em>license_model=None</em>, <em>maintenance_window=None</em>, <em>monitoring_interval=None</em>, <em>monitoring_role_arn=None</em>, <em>multi_az=None</em>, <em>name=None</em>, <em>option_group_name=None</em>, <em>parameter_group_name=None</em>, <em>password=None</em>, <em>performance_insights_enabled=None</em>, <em>performance_insights_kms_key_id=None</em>, <em>performance_insights_retention_period=None</em>, <em>port=None</em>, <em>publicly_accessible=None</em>, <em>replicate_source_db=None</em>, <em>s3_import=None</em>, <em>security_group_names=None</em>, <em>skip_final_snapshot=None</em>, <em>snapshot_identifier=None</em>, <em>storage_encrypted=None</em>, <em>storage_type=None</em>, <em>tags=None</em>, <em>timezone=None</em>, <em>username=None</em>, <em>vpc_security_group_ids=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an RDS instance resource.  A DB instance is an isolated database
 environment in the cloud.  A DB instance can contain multiple user-created
 databases.</p>
@@ -1794,6 +1794,9 @@ associate.</li>
 <li><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Required unless a <code class="docutils literal notranslate"><span class="pre">snapshot_identifier</span></code> or <code class="docutils literal notranslate"><span class="pre">replicate_source_db</span></code>
 is provided) Password for the master DB user. Note that this may show up in
 logs, and it will be stored in the state file.</li>
+<li><strong>performance_insights_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether Performance Insights are enabled. Defaults to false.</li>
+<li><strong>performance_insights_kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN for the KMS key to encrypt Performance Insights data. When specifying <code class="docutils literal notranslate"><span class="pre">performance_insights_kms_key_id</span></code>, <code class="docutils literal notranslate"><span class="pre">performance_insights_enabled</span></code> needs to be set to true. Once KMS key is set, it can never be changed.</li>
+<li><strong>performance_insights_retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of time in days to retain Performance Insights data. Either 7 (7 days) or 731 (2 years). When specifying <code class="docutils literal notranslate"><span class="pre">performance_insights_retention_period</span></code>, <code class="docutils literal notranslate"><span class="pre">performance_insights_enabled</span></code> needs to be set to true. Defaults to ‘7’.</li>
 <li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port on which the DB accepts connections.</li>
 <li><strong>publicly_accessible</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Bool to control if instance is publicly
 accessible. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
@@ -2112,6 +2115,24 @@ associate.</p>
 <dd><p>(Required unless a <code class="docutils literal notranslate"><span class="pre">snapshot_identifier</span></code> or <code class="docutils literal notranslate"><span class="pre">replicate_source_db</span></code>
 is provided) Password for the master DB user. Note that this may show up in
 logs, and it will be stored in the state file.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.rds.Instance.performance_insights_enabled">
+<code class="descname">performance_insights_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Instance.performance_insights_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether Performance Insights are enabled. Defaults to false.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.rds.Instance.performance_insights_kms_key_id">
+<code class="descname">performance_insights_kms_key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Instance.performance_insights_kms_key_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN for the KMS key to encrypt Performance Insights data. When specifying <code class="docutils literal notranslate"><span class="pre">performance_insights_kms_key_id</span></code>, <code class="docutils literal notranslate"><span class="pre">performance_insights_enabled</span></code> needs to be set to true. Once KMS key is set, it can never be changed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.rds.Instance.performance_insights_retention_period">
+<code class="descname">performance_insights_retention_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Instance.performance_insights_retention_period" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amount of time in days to retain Performance Insights data. Either 7 (7 days) or 731 (2 years). When specifying <code class="docutils literal notranslate"><span class="pre">performance_insights_retention_period</span></code>, <code class="docutils literal notranslate"><span class="pre">performance_insights_enabled</span></code> needs to be set to true. Defaults to ‘7’.</p>
 </dd></dl>
 
 <dl class="attribute">
