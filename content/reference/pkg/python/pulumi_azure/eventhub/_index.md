@@ -1345,7 +1345,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.eventhub.Queue">
 <em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">Queue</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auto_delete_on_idle=None</em>, <em>dead_lettering_on_message_expiration=None</em>, <em>default_message_ttl=None</em>, <em>duplicate_detection_history_time_window=None</em>, <em>enable_batched_operations=None</em>, <em>enable_express=None</em>, <em>enable_partitioning=None</em>, <em>location=None</em>, <em>lock_duration=None</em>, <em>max_delivery_count=None</em>, <em>max_size_in_megabytes=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>requires_duplicate_detection=None</em>, <em>requires_session=None</em>, <em>resource_group_name=None</em>, <em>support_ordering=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.Queue" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manage and manage a ServiceBus Queue.</p>
+<dd><p>Manage a ServiceBus Queue.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />

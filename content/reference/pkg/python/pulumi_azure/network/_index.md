@@ -5,7 +5,7 @@
 <span id="network"></span><h1>network<a class="headerlink" href="#module-pulumi_azure.network" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.network.ApplicationGateway">
-<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">ApplicationGateway</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>authentication_certificates=None</em>, <em>autoscale_configuration=None</em>, <em>backend_address_pools=None</em>, <em>backend_http_settings=None</em>, <em>custom_error_configurations=None</em>, <em>disabled_ssl_protocols=None</em>, <em>enable_http2=None</em>, <em>frontend_ip_configurations=None</em>, <em>frontend_ports=None</em>, <em>gateway_ip_configurations=None</em>, <em>http_listeners=None</em>, <em>location=None</em>, <em>name=None</em>, <em>probes=None</em>, <em>redirect_configurations=None</em>, <em>request_routing_rules=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>ssl_certificates=None</em>, <em>tags=None</em>, <em>url_path_maps=None</em>, <em>waf_configuration=None</em>, <em>zones=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">ApplicationGateway</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>authentication_certificates=None</em>, <em>autoscale_configuration=None</em>, <em>backend_address_pools=None</em>, <em>backend_http_settings=None</em>, <em>custom_error_configurations=None</em>, <em>disabled_ssl_protocols=None</em>, <em>enable_http2=None</em>, <em>frontend_ip_configurations=None</em>, <em>frontend_ports=None</em>, <em>gateway_ip_configurations=None</em>, <em>http_listeners=None</em>, <em>location=None</em>, <em>name=None</em>, <em>probes=None</em>, <em>redirect_configurations=None</em>, <em>request_routing_rules=None</em>, <em>resource_group_name=None</em>, <em>rewrite_rule_sets=None</em>, <em>sku=None</em>, <em>ssl_certificates=None</em>, <em>ssl_policies=None</em>, <em>tags=None</em>, <em>url_path_maps=None</em>, <em>waf_configuration=None</em>, <em>zones=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Application Gateway.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -20,6 +20,16 @@
 <li><strong>backend_http_settings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">backend_http_settings</span></code> blocks as defined below.</li>
 <li><strong>custom_error_configurations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">custom_error_configuration</span></code> blocks as defined below.</li>
 <li><strong>disabled_ssl_protocols</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of SSL Protocols which should be disabled on this Application Gateway. Possible values are <code class="docutils literal notranslate"><span class="pre">TLSv1_0</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1_1</span></code> and <code class="docutils literal notranslate"><span class="pre">TLSv1_2</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>enable_http2</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is HTTP2 enabled on the application gateway resource? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>frontend_ip_configurations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">frontend_ip_configuration</span></code> blocks as defined below.</li>
 <li><strong>frontend_ports</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">frontend_port</span></code> blocks as defined below.</li>
@@ -31,8 +41,10 @@
 <li><strong>redirect_configurations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">redirect_configuration</span></code> block as defined below.</li>
 <li><strong>request_routing_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">request_routing_rule</span></code> blocks as defined below.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to the Application Gateway should exist. Changing this forces a new resource to be created.</li>
+<li><strong>rewrite_rule_sets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">rewrite_rule_set</span></code> blocks as defined below. Only valid for v2 SKUs.</li>
 <li><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">sku</span></code> block as defined below.</li>
 <li><strong>ssl_certificates</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">ssl_certificate</span></code> blocks as defined below.</li>
+<li><strong>ssl_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – a <code class="docutils literal notranslate"><span class="pre">ssl</span> <span class="pre">policy</span></code> block as defined below.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 <li><strong>url_path_maps</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">url_path_map</span></code> blocks as defined below.</li>
 <li><strong>waf_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">waf_configuration</span></code> block as defined below.</li>
@@ -76,6 +88,8 @@
 <dt id="pulumi_azure.network.ApplicationGateway.disabled_ssl_protocols">
 <code class="descname">disabled_ssl_protocols</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.disabled_ssl_protocols" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of SSL Protocols which should be disabled on this Application Gateway. Possible values are <code class="docutils literal notranslate"><span class="pre">TLSv1_0</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1_1</span></code> and <code class="docutils literal notranslate"><span class="pre">TLSv1_2</span></code>.</p>
+<blockquote>
+<div><strong>NOTE:</strong> <code class="docutils literal notranslate"><span class="pre">disabled_ssl_protocols</span></code> has been deprecated in favour of <code class="docutils literal notranslate"><span class="pre">disabled_protocols</span></code> in the <code class="docutils literal notranslate"><span class="pre">ssl_policy</span></code> block.</div></blockquote>
 </dd></dl>
 
 <dl class="attribute">
@@ -145,6 +159,12 @@
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.network.ApplicationGateway.rewrite_rule_sets">
+<code class="descname">rewrite_rule_sets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.rewrite_rule_sets" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">rewrite_rule_set</span></code> blocks as defined below. Only valid for v2 SKUs.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.network.ApplicationGateway.sku">
 <code class="descname">sku</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.sku" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">sku</span></code> block as defined below.</p>
@@ -154,6 +174,12 @@
 <dt id="pulumi_azure.network.ApplicationGateway.ssl_certificates">
 <code class="descname">ssl_certificates</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.ssl_certificates" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">ssl_certificate</span></code> blocks as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.ApplicationGateway.ssl_policies">
+<code class="descname">ssl_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.ssl_policies" title="Permalink to this definition">¶</a></dt>
+<dd><p>a <code class="docutils literal notranslate"><span class="pre">ssl</span> <span class="pre">policy</span></code> block as defined below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1745,7 +1771,7 @@ for this Virtual Network Gateway.</p>
 
 <dl class="class">
 <dt id="pulumi_azure.network.GetVirtualNetworkResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">GetVirtualNetworkResult</code><span class="sig-paren">(</span><em>address_spaces=None</em>, <em>dns_servers=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>subnets=None</em>, <em>vnet_peerings=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.GetVirtualNetworkResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">GetVirtualNetworkResult</code><span class="sig-paren">(</span><em>address_spaces=None</em>, <em>address_spaces_collection=None</em>, <em>dns_servers=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>subnets=None</em>, <em>vnet_peerings=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.GetVirtualNetworkResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVirtualNetwork.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.network.GetVirtualNetworkResult.address_spaces">

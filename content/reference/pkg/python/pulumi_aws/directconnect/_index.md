@@ -379,8 +379,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.directconnect.GatewayAssociation">
-<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">GatewayAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allowed_prefixes=None</em>, <em>dx_gateway_id=None</em>, <em>vpn_gateway_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.GatewayAssociation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Associates a Direct Connect Gateway with a VGW. For creating cross-account association proposals, see the <cite>``aws_dx_gateway_association_proposal`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/dx_gateway_association_proposal.html">https://www.terraform.io/docs/providers/aws/r/dx_gateway_association_proposal.html</a>&gt;`_.</p>
+<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">GatewayAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allowed_prefixes=None</em>, <em>associated_gateway_id=None</em>, <em>associated_gateway_owner_account_id=None</em>, <em>dx_gateway_id=None</em>, <em>proposal_id=None</em>, <em>vpn_gateway_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.GatewayAssociation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Associates a Direct Connect Gateway with a VGW or transit gateway.</p>
+<p>To create a cross-account association, create an <cite>``aws_dx_gateway_association_proposal`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/dx_gateway_association_proposal.html">https://www.terraform.io/docs/providers/aws/r/dx_gateway_association_proposal.html</a>&gt;`_
+in the AWS account that owns the VGW or transit gateway and then accept the proposal in the AWS account that owns the Direct Connect Gateway
+by creating an <code class="docutils literal notranslate"><span class="pre">aws_dx_gateway_association</span></code> resource with the <code class="docutils literal notranslate"><span class="pre">proposal_id</span></code> and <code class="docutils literal notranslate"><span class="pre">associated_gateway_owner_account_id</span></code> attributes set.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -389,8 +392,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>allowed_prefixes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.</li>
+<li><strong>associated_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VGW or transit gateway with which to associate the Direct Connect gateway.
+Used for single account Direct Connect gateway associations.</li>
+<li><strong>associated_gateway_owner_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the AWS account that owns the VGW or transit gateway with which to associate the Direct Connect gateway.
+Used for cross-account Direct Connect gateway associations.</li>
 <li><strong>dx_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Direct Connect gateway.</li>
-<li><strong>vpn_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VGW with which to associate the gateway.</li>
+<li><strong>proposal_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Direct Connect gateway association proposal.
+Used for cross-account Direct Connect gateway associations.</li>
+<li><strong>vpn_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <em>Deprecated:</em> Use <code class="docutils literal notranslate"><span class="pre">associated_gateway_id</span></code> instead. The ID of the VGW with which to associate the gateway.
+Used for single account Direct Connect gateway associations.</li>
 </ul>
 </td>
 </tr>
@@ -400,6 +410,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.directconnect.GatewayAssociation.allowed_prefixes">
 <code class="descname">allowed_prefixes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.GatewayAssociation.allowed_prefixes" title="Permalink to this definition">¶</a></dt>
 <dd><p>VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.GatewayAssociation.associated_gateway_id">
+<code class="descname">associated_gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.GatewayAssociation.associated_gateway_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the VGW or transit gateway with which to associate the Direct Connect gateway.
+Used for single account Direct Connect gateway associations.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.GatewayAssociation.associated_gateway_owner_account_id">
+<code class="descname">associated_gateway_owner_account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.GatewayAssociation.associated_gateway_owner_account_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the AWS account that owns the VGW or transit gateway with which to associate the Direct Connect gateway.
+Used for cross-account Direct Connect gateway associations.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.GatewayAssociation.associated_gateway_type">
+<code class="descname">associated_gateway_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.GatewayAssociation.associated_gateway_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of the associated gateway, <code class="docutils literal notranslate"><span class="pre">transitGateway</span></code> or <code class="docutils literal notranslate"><span class="pre">virtualPrivateGateway</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -415,9 +445,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.directconnect.GatewayAssociation.dx_gateway_owner_account_id">
+<code class="descname">dx_gateway_owner_account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.GatewayAssociation.dx_gateway_owner_account_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the AWS account that owns the Direct Connect gateway.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.GatewayAssociation.proposal_id">
+<code class="descname">proposal_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.GatewayAssociation.proposal_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the Direct Connect gateway association proposal.
+Used for cross-account Direct Connect gateway associations.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.directconnect.GatewayAssociation.vpn_gateway_id">
 <code class="descname">vpn_gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.GatewayAssociation.vpn_gateway_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of the VGW with which to associate the gateway.</p>
+<dd><p><em>Deprecated:</em> Use <code class="docutils literal notranslate"><span class="pre">associated_gateway_id</span></code> instead. The ID of the VGW with which to associate the gateway.
+Used for single account Direct Connect gateway associations.</p>
 </dd></dl>
 
 <dl class="method">
@@ -462,7 +506,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.directconnect.GatewayAssociationProposal">
-<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">GatewayAssociationProposal</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allowed_prefixes=None</em>, <em>dx_gateway_id=None</em>, <em>dx_gateway_owner_account_id=None</em>, <em>vpn_gateway_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.GatewayAssociationProposal" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">GatewayAssociationProposal</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allowed_prefixes=None</em>, <em>associated_gateway_id=None</em>, <em>dx_gateway_id=None</em>, <em>dx_gateway_owner_account_id=None</em>, <em>vpn_gateway_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.GatewayAssociationProposal" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Direct Connect Gateway Association Proposal, typically for enabling cross-account associations. For single account associations, see the <cite>``aws_dx_gateway_association`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/dx_gateway_association.html">https://www.terraform.io/docs/providers/aws/r/dx_gateway_association.html</a>&gt;`_.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -472,9 +516,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>allowed_prefixes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.</li>
+<li><strong>associated_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VGW or transit gateway with which to associate the Direct Connect gateway.</li>
 <li><strong>dx_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Direct Connect Gateway identifier.</li>
-<li><strong>dx_gateway_owner_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS Account identifier of the Direct Connect Gateway.</li>
-<li><strong>vpn_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Virtual Gateway identifier to associate with the Direct Connect Gateway.</li>
+<li><strong>dx_gateway_owner_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS Account identifier of the Direct Connect Gateway’s owner.</li>
+<li><strong>vpn_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <em>Deprecated:</em> Use <code class="docutils literal notranslate"><span class="pre">associated_gateway_id</span></code> instead. Virtual Gateway identifier to associate with the Direct Connect Gateway.</li>
 </ul>
 </td>
 </tr>
@@ -487,6 +532,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.directconnect.GatewayAssociationProposal.associated_gateway_id">
+<code class="descname">associated_gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.GatewayAssociationProposal.associated_gateway_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the VGW or transit gateway with which to associate the Direct Connect gateway.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.GatewayAssociationProposal.associated_gateway_owner_account_id">
+<code class="descname">associated_gateway_owner_account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.GatewayAssociationProposal.associated_gateway_owner_account_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the AWS account that owns the VGW or transit gateway with which to associate the Direct Connect gateway.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.directconnect.GatewayAssociationProposal.associated_gateway_type">
+<code class="descname">associated_gateway_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.GatewayAssociationProposal.associated_gateway_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of the associated gateway, <code class="docutils literal notranslate"><span class="pre">transitGateway</span></code> or <code class="docutils literal notranslate"><span class="pre">virtualPrivateGateway</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.directconnect.GatewayAssociationProposal.dx_gateway_id">
 <code class="descname">dx_gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.GatewayAssociationProposal.dx_gateway_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Direct Connect Gateway identifier.</p>
@@ -495,13 +558,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.directconnect.GatewayAssociationProposal.dx_gateway_owner_account_id">
 <code class="descname">dx_gateway_owner_account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.GatewayAssociationProposal.dx_gateway_owner_account_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>AWS Account identifier of the Direct Connect Gateway.</p>
+<dd><p>AWS Account identifier of the Direct Connect Gateway’s owner.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.directconnect.GatewayAssociationProposal.vpn_gateway_id">
 <code class="descname">vpn_gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directconnect.GatewayAssociationProposal.vpn_gateway_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>Virtual Gateway identifier to associate with the Direct Connect Gateway.</p>
+<dd><p><em>Deprecated:</em> Use <code class="docutils literal notranslate"><span class="pre">associated_gateway_id</span></code> instead. Virtual Gateway identifier to associate with the Direct Connect Gateway.</p>
 </dd></dl>
 
 <dl class="method">

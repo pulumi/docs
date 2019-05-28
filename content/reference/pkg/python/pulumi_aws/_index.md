@@ -71,6 +71,7 @@
 <li class="toctree-l1"><a class="reference internal" href="mediapackage/">mediapackage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mediastore/">mediastore</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mq/">mq</a></li>
+<li class="toctree-l1"><a class="reference internal" href="msk/">msk</a></li>
 <li class="toctree-l1"><a class="reference internal" href="neptune/">neptune</a></li>
 <li class="toctree-l1"><a class="reference internal" href="opsworks/">opsworks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="organizations/">organizations</a></li>

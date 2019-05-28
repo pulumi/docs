@@ -347,7 +347,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.kinesis.Stream">
-<em class="property">class </em><code class="descclassname">pulumi_aws.kinesis.</code><code class="descname">Stream</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>arn=None</em>, <em>encryption_type=None</em>, <em>kms_key_id=None</em>, <em>name=None</em>, <em>retention_period=None</em>, <em>shard_count=None</em>, <em>shard_level_metrics=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.Stream" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.kinesis.</code><code class="descname">Stream</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>arn=None</em>, <em>encryption_type=None</em>, <em>enforce_consumer_deletion=None</em>, <em>kms_key_id=None</em>, <em>name=None</em>, <em>retention_period=None</em>, <em>shard_count=None</em>, <em>shard_level_metrics=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.Stream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Kinesis Stream resource. Amazon Kinesis is a managed service that
 scales elastically for real-time processing of streaming big data.</p>
 <p>For more details, see the [Amazon Kinesis Documentation][1].</p>
@@ -360,6 +360,7 @@ scales elastically for real-time processing of streaming big data.</p>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) specifying the Stream (same as <code class="docutils literal notranslate"><span class="pre">id</span></code>)</li>
 <li><strong>encryption_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The encryption type to use. The only acceptable values are <code class="docutils literal notranslate"><span class="pre">NONE</span></code> or <code class="docutils literal notranslate"><span class="pre">KMS</span></code>. The default value is <code class="docutils literal notranslate"><span class="pre">NONE</span></code>.</li>
+<li><strong>enforce_consumer_deletion</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean that indicates all registered consumers should be deregistered from the stream so that the stream can be destroyed without error. The default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GUID for the customer-managed KMS key to use for encryption. You can also use a Kinesis-owned master key by specifying the alias <code class="docutils literal notranslate"><span class="pre">alias/aws/kinesis</span></code>.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name to identify the stream. This is unique to the
 AWS account and region the Stream is created in.</li>
@@ -384,6 +385,12 @@ when creating a Kinesis stream. See [Amazon Kinesis Streams][2] for more.</li>
 <dt id="pulumi_aws.kinesis.Stream.encryption_type">
 <code class="descname">encryption_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.Stream.encryption_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The encryption type to use. The only acceptable values are <code class="docutils literal notranslate"><span class="pre">NONE</span></code> or <code class="docutils literal notranslate"><span class="pre">KMS</span></code>. The default value is <code class="docutils literal notranslate"><span class="pre">NONE</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.kinesis.Stream.enforce_consumer_deletion">
+<code class="descname">enforce_consumer_deletion</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.Stream.enforce_consumer_deletion" title="Permalink to this definition">¶</a></dt>
+<dd><p>A boolean that indicates all registered consumers should be deregistered from the stream so that the stream can be destroyed without error. The default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
