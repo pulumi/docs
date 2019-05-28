@@ -366,8 +366,9 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 		}
 	} else {
 		title = fmt.Sprintf("Module %s", name)
-
-		aliases = append(aliases, fmt.Sprintf("%s%s/%s/", atAliasPrefix, e.pkg, name))
+		if _, ok := atAliases[e.pkg]; ok {
+			aliases = append(aliases, fmt.Sprintf("%s%s/%s/", atAliasPrefix, e.pkg, name))
+		}
 
 		// Create the breadcrumb links (in LIFO order).  First, add the current module name.
 		var simplename string
