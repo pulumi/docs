@@ -21,14 +21,14 @@ aliases:
 <li><a href="#toObject">function toObject</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi/blob/2cd4409c0d733d330820a5a4810e99a388ecdac7/sdk/nodejs/iterable/index.ts">iterable/index.ts</a> 
+<a href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/iterable/index.ts">iterable/index.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="groupBy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/2cd4409c0d733d330820a5a4810e99a388ecdac7/sdk/nodejs/iterable/index.ts#L61">function <b>groupBy</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/iterable/index.ts#L61">function <b>groupBy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -52,7 +52,7 @@ and whose selector is roughly `(e) => [e.s, e.n]`, the resulting object will be
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="toObject">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/2cd4409c0d733d330820a5a4810e99a388ecdac7/sdk/nodejs/iterable/index.ts#L30">function <b>toObject</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/iterable/index.ts#L30">function <b>toObject</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}

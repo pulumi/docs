@@ -1,6 +1,6 @@
 ---
 title: "Download and Install"
-installer_version: "0.17.13"
+installer_version: "0.17.14"
 aliases:
     - install.html
     - /install/
