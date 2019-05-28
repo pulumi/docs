@@ -11,6 +11,7 @@ TOOLS_REPOS=(
     "pulumi-azuread"
     "pulumi-cloud"
     "pulumi-cloudflare"
+    "pulumi-digitalocean"
     "pulumi-docker"
     "pulumi-eks"
     "pulumi-f5bigip"

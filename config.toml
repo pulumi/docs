@@ -235,6 +235,11 @@ sectionPagesMenu = "main"
 
 [[menu.reference]]
     parent = "python"
+    name = "pulumi_digitalocean"
+    url = "/reference/pkg/python/pulumi_digitalocean/"
+
+[[menu.reference]]
+    parent = "python"
     name = "pulumi_f5bigip"
     url = "/reference/pkg/python/pulumi_f5bigip/"
 
