@@ -5,7 +5,6 @@ expanded_url: /reference/cd/
 menu:
   reference:
     parent: cd
-    weight: 1
 ---
 
 [Amazon Code Services](https://aws.amazon.com/products/developer-tools/) encompases a variety

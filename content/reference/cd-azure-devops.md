@@ -5,7 +5,6 @@ expanded_url: /reference/cd/
 menu:
   reference:
     parent: cd
-    weight: 2
 ---
 
 This page details how to use [Azure DevOps](https://azure.microsoft.com/en-us/services/devops/) to manage deploying
