@@ -64,9 +64,6 @@ The differences in resource management are:
  *  Explicit notions of creation, deletion, and replacement. If we must change an immutable field in
     an API object, `pulumi preview` alerts the user the object must be replaced. `kubectl` does not.
 
- *  Pulumi exposes `pulumi preview --diff`, allowing you to see how a resource has specifically
-    changed. (This was recently added to `kubectl`.)
-
  *  The primary interface to `kubectl` is YAML. Pulumi exposes a rich, multi-language SDK, and
     additionally supports raw Kubernetes YAML with the `yaml` namespace in the root of the Kubernetes
     package.
