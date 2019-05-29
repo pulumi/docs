@@ -51,28 +51,33 @@ examining cluster state (_e.g._, `describe`, `explain`, `get`, and so on).
 
 The differences in resource management are:
 
-* Pulumi and `kubectl` both use the official [Kubernetes Go client library][client-go] to talk to do
-  things like load the [kubeconfig file][kubeconfig], authenticate to the cluster, and talk to the
-  API server.
-* The Pulumi CLI presents information-rich status updates, giving a notion of progress as resources
-  come online. `kubectl` does not.
-* Pulumi has a strong notion of a "plan" -- running `pulumi preview` allows you to see what effect
-  a change will have on your resource configuration. `kubectl` does not.
-* Explicit notions of creation, deletion, and replacement. If we must change an immutable field in
-  an API object, `pulumi preview` alerts the user the object must be replaced. `kubectl` does not.
-* Pulumi exposes `pulumi preview --diff`, allowing you to see how a resource has specifically
-  changed. (This will be coming in future releases of `kubectl`.)
-* The primary interface to `kubectl` is YAML. Pulumi exposes a rich, multi-language SDK, and
-  additionally supports raw Kubernetes YAML with the `yaml` namespace in the root of the Kubernetes
-  package.
-* `kubectl` has a set of commands specifically meant to make it easy to understand what's happening
-  in the cluster. Pulumi _only_ does resource management.
-* Pulumi has a notion of resource initialization completion, allowing resources be configured using
-  values from the live object. For example, a deployment might boot a database, then parse the
-  connection string, then put that in a secret, then reference that secret in a `Pod`. As of
-  Kubernetes v1.12, `kubectl` can also wait for resource initialization, though it only supports
-  applying all resource configuration at one time.
-* The ability to deploy the same application multiple times due to autonaming.
+ *  Pulumi and `kubectl` both use the official [Kubernetes Go client library][client-go] to talk to do
+    things like load the [kubeconfig file][kubeconfig], authenticate to the cluster, and talk to the
+    API server.
+
+ *  The Pulumi CLI presents information-rich status updates, giving a notion of progress as resources
+    come online. `kubectl` does not.
+
+ *  Pulumi has a strong notion of a "plan" -- running `pulumi preview` allows you to see what effect
+    a change will have on your resource configuration. `kubectl` does not.
+
+ *  Explicit notions of creation, deletion, and replacement. If we must change an immutable field in
+    an API object, `pulumi preview` alerts the user the object must be replaced. `kubectl` does not.
+
+ *  The primary interface to `kubectl` is YAML. Pulumi exposes a rich, multi-language SDK, and
+    additionally supports raw Kubernetes YAML with the `yaml` namespace in the root of the Kubernetes
+    package.
+
+ *  `kubectl` has a set of commands specifically meant to make it easy to understand what's happening
+    in the cluster. Pulumi _only_ does resource management.
+
+ *  Pulumi has a notion of resource initialization completion, allowing resources be configured using
+    values from the live object. For example, a deployment might boot a database, then parse the
+    connection string, then put that in a secret, then reference that secret in a `Pod`. As of
+    Kubernetes v1.12, `kubectl` can also wait for resource initialization, though it only supports
+    applying all resource configuration at one time.
+
+ *  The ability to deploy the same application multiple times due to autonaming.
 
 ## How does Pulumi relate to `helm`?
 
@@ -80,27 +85,33 @@ Helm v2 allows users to easily install a pre-packaged application ("Chart") into
 cluster. Charts are parameterized by some number of values, which users can fill in to customize
 their application.
 
-* Helm 2 Charts are managed by an in-cluster API server, called Tiller, rather than the official
-  Kubernetes API server. This makes many things (_e.g._, RBAC) harder, because the API server is run
-  with a single `ServiceAccount`, which typically has global read/write access to the cluster.
+ *  Helm 2 Charts are managed by an in-cluster API server, called Tiller, rather than the official
+    Kubernetes API server. This makes many things (_e.g._, RBAC) harder, because the API server is run
+    with a single `ServiceAccount`, which typically has global read/write access to the cluster.
 
-  Pulumi requires no server-side component. Just like `kubectl`, it uses the official [Kubernetes go
-  client library][client-go] to talk directly to the API server. It's appropriate to drop Pulumi in
-  anywhere you already use `kubectl`.
-* The Pulumi CLI presents information-rich status updates, giving a notion of progress as resources
-  come online. Helm 2 does not.
-* Pulumi has a strong notion of a "plan" -- running `pulumi preview` allows you to see what effect
-  a change will have on your resource configuration. Helm 2 does not.
-* Explicit notions of creation, deletion, and replacement. If we must change an immutable field in
-  an API object, `pulumi preview` alerts the user the object must be replaced. Helm 2 does not.
-* Pulumi exposes `pulumi preview --diff`, allowing you to see how a resource has specifically
-  changed. Helm 2 does not.
-* Pulumi and Helm 2 both use the official [Kubernetes Go client library][client-go] to talk to the
-  Kubernetes API server.
-* Helm 2 parameterizes YAML templates using Go templates, a textual replacement engine. Go templates
-  are not guaranteed to generate syntactically-correct YAML. Pulumi exposes a rich, multi-language
-  SDK, with strong typing to catch errors, and a pre-deployment validation step to catch errors
-  before you run the program.
+    Pulumi requires no server-side component. Just like `kubectl`, it uses the official [Kubernetes go
+    client library][client-go] to talk directly to the API server. It's appropriate to drop Pulumi in
+    anywhere you already use `kubectl`.
+
+ *  The Pulumi CLI presents information-rich status updates, giving a notion of progress as resources
+    come online. Helm 2 does not.
+
+ *  Pulumi has a strong notion of a "plan" -- running `pulumi preview` allows you to see what effect
+    a change will have on your resource configuration. Helm 2 does not.
+
+ *  Explicit notions of creation, deletion, and replacement. If we must change an immutable field in
+    an API object, `pulumi preview` alerts the user the object must be replaced. Helm 2 does not.
+
+ *  Pulumi exposes `pulumi preview --diff`, allowing you to see how a resource has specifically
+    changed. Helm 2 does not.
+
+ *  Pulumi and Helm 2 both use the official [Kubernetes Go client library][client-go] to talk to the
+    Kubernetes API server.
+
+ *  Helm 2 parameterizes YAML templates using Go templates, a textual replacement engine. Go templates
+    are not guaranteed to generate syntactically-correct YAML. Pulumi exposes a rich, multi-language
+    SDK, with strong typing to catch errors, and a pre-deployment validation step to catch errors
+    before you run the program.
 
 
 [kubeconfig]: https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/
