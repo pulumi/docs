@@ -148,6 +148,11 @@ sectionPagesMenu = "main"
 
 [[menu.reference]]
     parent = "node"
+    name = "digitalocean"
+    url = "/reference/pkg/nodejs/pulumi/digitalocean/"
+
+[[menu.reference]]
+    parent = "node"
     name = "docker"
     url = "/reference/pkg/nodejs/pulumi/docker/"
 
