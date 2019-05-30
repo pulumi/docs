@@ -689,6 +689,7 @@ your web application or service is performing. By default, Amazon RDS metric dat
 automatically sent to CloudWatch in 1-minute periods.
 
 Amazon RDS metrics data can be filtered by using any of the following dimensions:
+
 1. "DBInstanceIdentifier": This dimension filters the data you request for a specific database
    instance.
 2. "DBClusterIdentifier": This dimension filters the data you request for a specific Amazon

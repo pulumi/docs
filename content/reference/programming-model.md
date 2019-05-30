@@ -137,6 +137,7 @@ Provides a list of properties which will be ignored as part of updates. The valu
 ### Resource names {#names}
 
 Every resource managed by Pulumi has a name.  This name is used to track the identity of a resource across multiple deployments of the same program.  The name that is specified when a resource is created is used in three ways:
+
 1. It is used as part of constructing the Universal Resource Name (URN) used by the Pulumi engine to track the resource across updates.
 2. Most resource providers will use it as a default prefix for constructing the cloud-provider name of the resource.
 3. Some CLI commands use the URN.
@@ -173,6 +174,7 @@ A `get` method is available on any resource, which reads in the current value of
 ## Outputs and Inputs {#outputs}
 
 Outputs are a key part of how Pulumi tracks dependencies between resources.  Because the values of Outputs are not available until resources are created, these are represented using the special [`Output`][pulumi.Output] type, which internally represents two things:
+
 1. An eventually available value of the output
 2. The dependency on the source(s) of the output value
 
@@ -889,12 +891,14 @@ my_resource = MyResource("myResource", pulumi.ResourceOptions(providers={
 ## Dynamic Providers {#dynamicproviders}
 
 Every `CustomResource` has a provider associated with it which knows how to create/read/update/delete instances of the custom resource in the backing cloud provider.  This provider can be defined by implementing the Pulumi Resource Provider gRPC interface.  There are generally two approaches to implementing this provider interface:
+
 1. Create a provider binary with the appropriate name and put it on the path, such that it will be loaded to handle CRUD operations from the Pulumi engine on resources from the package it is defined to handle.  For example the `pulumi-resource-aws` binary will handle resources from the `aws` package.  This binary can be authored in any language, but must be authored and distributed out of band of a Pulumi program.
 2. Define an implementation of the Provider interface directly within your Pulumi program, just for use within that program.  
 
 The former is used for most common Pulumi providers like AWS and Kubernetes.  The latter is a concept called Dynamic Providers, which provide a flexible approach to defining custom resource types directly within the source code of your Pulumi program.
 
 You should consider implementing a dynamic provider in a few cases:
+
 1. You need to manage a cloud resource for which there is not yet a published Pulumi Provider, but you expect to only use it from within one program.  (If you expect to use it from many programs, and in many languages, implementing a full provider is preferrable.)
 2. You need to integrate custom logic into the deployment workflow that runs exactly during one or more of the create, read, update or delete steps - instead of running "always" as part of a normal Pulumi program.
 

@@ -835,6 +835,7 @@ The tags to apply to the cluster security group.
 
 Whether or not to deploy the Kubernetes dashboard to the cluster. If the dashboard is deployed, it can be
 accessed as follows:
+
 1. Retrieve an authentication token for the dashboard by running the following and copying the value of `token`
   from the output of the last command:
 

@@ -275,6 +275,7 @@ for the metrics collected –using a shared prefix or object tag– allowing you
 filters to specific business applications, workflows, or internal organizations.
 
 The following dimensions are used to filter Amazon S3 metrics:
+
 1. "BucketName": This dimension filters the data you request for the identified bucket only.
 2. "StorageType": This dimension filters the data that you have stored in a bucket by the
    following types of storage:
