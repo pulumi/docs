@@ -98,6 +98,7 @@ The actual process of serialization is conceptually straightforward.  Because Ja
 Because of this, almost all JavaScript values can be serialized with very few exceptions.  Importantly, Pulumi Resources themselves are captured in this fashion, allowing 'run time' code to simply references the defined Resources of a Pulumi application and to use them when a Lambda is triggered.  
 
 Notes:
+
 1. One notable limitation of this system is that native-functions are not capturable.  This impacts capturing any value that is either itself a native function or which *transitively* references a native from being capturable.
 2. Each time the Cloud Lambda is triggered these values will be rehydrated.  This happens immediately before the code for the Lambda itself starts executing.
 3. Any mutations made to those values will be seen across a single  invocation of that Lambda.  However, it will not be seen by subsequent invocations.  They will always start with the original value that was captured.  This behavior is similar to how a web-page works, where each client that visits the pages will get their own fresh copy of variables, and will not see mutations made by other clients on other machines.
@@ -160,6 +161,7 @@ await fs.writeFile("example.txt", "data")
 This ensures that all modules can be referenced simply in application code, and then used simply in 'run time' code with expected semantics.
 
 Notes:
+
 1. this form of module capturing only applies to external modules that are referenced.  i.e. modules that are directly part of Node, or are in the node_modules directory.  The 'local' module (i.e. the module for the Pulumi application itself) is not captured in this fashion.  That's because this code will not actually be part of the uploaded node_modules, and so would not be found.  The 'local' module is captured as if it was a normal 'value'.  This means, all its relevant variable and functions are serialized over in a uniform fashion to the Lambda, regardless of which actual file/module they are contained in. 
 
 ### Pulumi Execution Order
@@ -195,6 +197,7 @@ const lambda: aws.lambda.Function = serverless.function.createLambdaFunction("my
 When `pulumi` starts executing `createLambdaFunction` it will analyze the JavaScript function code and will see that it uses the 'obj' value.  At that point in time it will use whatever the value is currently to serialize over.  So, in the first example, it will serialize the value `{ a: 1, b: 2 }`, even though right after executing createLambdaFunction the program code will update that value to `{ a: 3, b: 4}`.  In the second example, the code will see the `{ a: 3, b: 4 }` value and will serialize that into the 'run time' code.  
 
 Notes:
+
 1. there are subtleties here with Promise-like values.  When `pulumi` encounters a Promise value that it needs to serialize into the code for a Lambda, it will actually `await` that Promise.  During that `await`, 'node' can then execute more of the program application code.  This means that later code may execute which then changes a value which is captured by the JavaScript function.  If `pulumi` then serialized that value after serializing the Promise, then it may see the mutated value.
 
 So, in the following code:
@@ -249,7 +252,9 @@ In other words, the Lambda will first be created with appropriate values overrid
 Because a Pulumi application contains both 'deployment time' code and 'run time' code, it is necessary for the program's `package.json` definition to have a `dependencies` section which specifies all necessary packages needed for both execution times.  When `pulumi` and produces a Lambda from a user-provided function, it will transitively include all packages specified in that `dependencies` section in the final uploaded Lambda.
 
 Notes:
+
 1. `pulumi` will not include `@pulumi/...` packages with the Lambda.  These packages exist solely to provide 'deployment time' functionality, and do not contain any code that can work properly at 'run time'.  They are automatically stripped from a Lambda both to prevent accidently usage, as well as to help reduce the size of the uploaded Lambda.
 
 AWS-Specific Notes:
+
 1. It is optional to specify a reference to "aws-sdk" in your package.json.  AWS always includes this package with Lambdas, and so it is not necessary to explicitly include it yourself.
