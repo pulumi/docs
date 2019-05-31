@@ -923,7 +923,7 @@ const myprovider: pulumi.dynamic.ResourceProvider = {
 ```
 
 ```python
-# Dynamic Providers are not supported in Go currently.
+# Dynamic Providers are not supported in Python currently.
 ```
 
 ```go
@@ -951,7 +951,7 @@ class MyResource extends pulumi.dynamic.Resource {
 ```
 
 ```python
-# Dynamic Providers are not supported in Go currently.
+# Dynamic Providers are not supported in Python currently.
 ```
 
 ```go
@@ -1035,7 +1035,7 @@ export class Random extends pulumi.dynamic.Resource {
 ```
 
 ```python
-# Dynamic Providers are not supported in Go currently.
+# Dynamic Providers are not supported in Python currently.
 ```
 
 ```go
@@ -1124,7 +1124,7 @@ export class Label extends pulumi.dynamic.Resource {
 ```
 
 ```python
-# Dynamic Providers are not supported in Go currently.
+# Dynamic Providers are not supported in Python currently.
 ```
 
 ```go
