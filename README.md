@@ -1,7 +1,5 @@
 # Pulumi Documentation Site
 
-"Because knowing is half the battle."
-
 | Staging | Production |
 |---|---|
 | [![Build Status](https://travis-ci.com/pulumi/docs.svg?token=eHg7Zp5zdDDJfTjY8ejq&branch=master)](https://travis-ci.com/pulumi/docs) | [![Build Status](https://travis-ci.com/pulumi/docs.svg?token=eHg7Zp5zdDDJfTjY8ejq&branch=production)](https://travis-ci.com/pulumi/docs) |
