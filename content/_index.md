@@ -8,7 +8,7 @@ noindex: true
         Cloud Native Infrastructure as Code
     </h2>
     <h3 class="get-to-the-cloud-sub no-anchor">
-        Build software for any cloud using your favorite language.
+        Provision infrastructure on any cloud using your favorite language.
     </h3>
     <p style="text-align: center; margin-bottom: 0">
         <a href="{{< relref "/quickstart/install.md" >}}"><button class="button primary">INSTALL</button></a>
