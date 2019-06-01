@@ -2,8 +2,4 @@
 /resources/
 /public/
 node_modules
-_site/
-.sass-cache/
-
 *.map
-.jekyll-metadata
