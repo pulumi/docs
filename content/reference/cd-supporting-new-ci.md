@@ -1,6 +1,5 @@
 ---
 title: Supporting A New CI System
-aliases: ["cd-supporting-new-ci.html"]
 expanded_url: /reference/cd/
 menu:
   reference:
