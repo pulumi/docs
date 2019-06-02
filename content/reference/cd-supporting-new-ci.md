@@ -4,13 +4,14 @@ expanded_url: /reference/cd/
 menu:
   reference:
     parent: cd
+weight: 100
 ---
 
 ## Overview
 
 The Pulumi CLI already supports enhanced metadata for several popular CI/CD systems. We have tried to make it easy for contributors to add/update support for CI systems. This document walks-through how you can modify the Pulumi CLI to support your own CI system or perhaps even update an existing one.
 
-The detection of metadata in a CI environment depends on some key environment variables that a CI system injects into the build environment of their build agents. The Pulumi CLI uses those environment variables to set try and determine the values for the following properties:
+The detection of metadata in a CI environment depends on some key environment variables that a CI system injects into the build environment of their build agents. The Pulumi CLI uses those environment variables to try and determine the values for the following properties:
 
 - CI System Name
 - Build Type
@@ -19,7 +20,7 @@ The detection of metadata in a CI environment depends on some key environment va
 - PR Number
 - Commit Message
 
-The above metadata about your CI environment is then used to provide an enhanced experience in the Pulumi Console when you look at your stack activity log. The metadata from your CI environment combined with the information about your Git repository allows us to provide links to things such as the Pull Request on github.com or the commit that triggered a PR build.
+The above metadata about your CI environment is then used to provide an enhanced experience in the [Pulumi Console](https://app.pulumi.com) when you look at your stack activity log. The metadata from your CI environment combined with the information about your Git repository allows us to provide links to things such as the Pull Request on github.com or the commit that triggered a PR build.
 
 ![A Stack update entry in the Pulumi Console](/images/reference/supporting-new-ci/stack-update.png)
 
@@ -69,7 +70,7 @@ That's it! Send us a new [PR](https://github.com/pulumi/pulumi/pulls) in the [`p
 
 ## Using A Fallback
 
-If the CI system you are using is not current detected by Pulumi. You can set the following env vars, as a fallback, yourself. The CI detection code will assume a "Generic CI" system name.
+If the CI system you are using is not currently detected by Pulumi, you can set the following env vars, as a fallback manually in the environment in which the Pulumi CLI is running. The CI detection code will assume a "Generic CI" system name.
 
 * `PULUMI_CI_BUILD_ID`
 * `PULUMI_CI_BUILD_TYPE`
