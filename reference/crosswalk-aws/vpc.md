@@ -241,38 +241,28 @@ export const vpcPublicSubnetIds = vpc.publicSubnetIds;
 
 The VPC resource will internally adjust to fully consume 3 availability zones and split traffic accordingly.
 
-For information about how many availability zones a given region supports, refer to AWS's
+For information about regional support for availability zones, refer to AWS's
 [Global Infrastructures Regions and AZs](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/) help page.
 
 ## Using All of a Region's Availability Zones for a VPC
 
-To use all availability zones within a region, we can use `aws.getAvailabilityZones()` instead of hard-coding a number.
-This keeps your code flexibly deployable across different regions, where the number of zones may vary:
+To use all availability zones within a region, simply pass `"all"` for `numberOfAvailabilityZones`:
 
 ```typescript
-import * as aws from "@pulumi/aws";
 import * as awsx from "@pulumi/awsx";
 
-module.exports = (async () => {
-    // Fetch the availability zones (asynchronously):
-    const azs = await aws.getAvailabilityZones();
+// Allocate a new VPC that uses all of the current region's availability zones:
+const vpc = new awsx.ec2.Vpc("custom", {
+    numberOfAvailabilityZones: "all",
+});
 
-    // Allocate a new VPC that uses all of the availability zones:
-    const vpc = new awsx.ec2.Vpc("custom", {
-        numberOfAvailabilityZones: azs.names.length,
-    });
-
-    // Export a few resulting fields to make them easy to use:
-    return {
-        vpcId: vpc.id,
-        vpcPrivateSubnetIds: vpc.privateSubnetIds,
-        vpcPublicSubnetIds: vpc.publicSubnetIds,
-    };
-})();
+// Export a few resulting fields to make them easy to use:
+export const vpcId = vpc.id;
+export const vpcPrivateSubnetIds = vpc.privateSubnetIds;
+export const vpcPublicSubnetIds = vpc.publicSubnetIds;
 ```
 
-Note that because the `getAvailabilityZones` function is asynchronous, we needed to use an `async` function
-to create the object and return the exported metadata.
+This approach keeps your code flexibly deployable across different regions, where the number of zones may vary.
 
 ## Configuring Subnets for a VPC
 
