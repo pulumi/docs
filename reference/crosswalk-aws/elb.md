@@ -32,18 +32,18 @@ integrates with functionality for other services, including [API Gateway](./api-
 [Elastic Container Service (ECS)](./ecs.html), [Lambda](./lambda.html), and [VPC](./vpc.html), to provide
 configurable network accessibility to the different kinds of compute you will run inside of AWS.
 
-> Each kind of load balancer is represented by a class in the `awsx.elasticloadbalancingv2` module:
->
-> * `NetworkLoadBalancer` is used for NLBs
-> * `ApplicationLoadBalancer` is used for ALBs.
->
-> These types are similar and support many of the same scenarios. Examples below use ALBs and calls out any differences.
-
 ## Creating a Load Balancer
 
-To create a new load balancer, allocate an instance of its class (`NetworkLoadBalancer` for an NLB,
-`ApplicationLoadBalancer` for an ALB). In addition to creating the load balancer itself, we must create a
-_listener_ to let traffic reach it:
+Each kind of load balancer is represented by a class in the `awsx.elasticloadbalancingv2` module:
+
+* `NetworkLoadBalancer` is used for NLBs
+* `ApplicationLoadBalancer` is used for ALBs.
+
+> These types are similar and support many of the same scenarios. Most examples show using ALBs, however changing
+> to an NLB is usually as simple as swapping out this class. Any differences will be noted below.
+
+To create a new load balancer, allocate an instance of its class. In addition to creating the load balancer itself, we
+must also create a _listener_ to let traffic reach it:
 
 ```typescript
 import * as awsx from "@pulumi/awsx";
