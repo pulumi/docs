@@ -32,12 +32,14 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 VolumeAttachment captures the intent to attach or detach the specified volume to/from the
 specified node.
 
 VolumeAttachment objects are non-namespaced.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeAttachment-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/storage/v1alpha1/VolumeAttachment.ts#L66"> <b>constructor</b></a>
 </h3>
@@ -200,9 +202,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 VolumeAttachmentList is a collection of VolumeAttachment objects.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeAttachmentList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/storage/v1alpha1/VolumeAttachmentList.ts#L56"> <b>constructor</b></a>
 </h3>

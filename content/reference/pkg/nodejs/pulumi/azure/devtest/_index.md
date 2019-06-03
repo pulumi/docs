@@ -48,6 +48,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Dev Test Lab.
 
@@ -71,6 +72,7 @@ const testLab = new azure.devtest.Lab("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Lab-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devtest/lab.ts#L86"> <b>constructor</b></a>
 </h3>
@@ -277,6 +279,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Linux Virtual Machine within a Dev Test Lab.
 
@@ -329,6 +332,7 @@ const testLinuxVirtualMachine = new azure.devtest.LinuxVirtualMachine("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LinuxVirtualMachine-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devtest/linuxVirtualMachine.ts#L147"> <b>constructor</b></a>
 </h3>
@@ -632,6 +636,7 @@ The Username associated with the local administrator on this Virtual Machine. Ch
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Policy within a Dev Test Policy Set.
 
@@ -667,6 +672,7 @@ const testPolicy = new azure.devtest.Policy("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Policy-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devtest/policy.ts#L90"> <b>constructor</b></a>
 </h3>
@@ -851,6 +857,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Virtual Network within a Dev Test Lab.
 
@@ -883,6 +890,7 @@ const testVirtualNetwork = new azure.devtest.VirtualNetwork("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualNetwork-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devtest/virtualNetwork.ts#L79"> <b>constructor</b></a>
 </h3>
@@ -1049,6 +1057,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Windows Virtual Machine within a Dev Test Lab.
 
@@ -1100,6 +1109,7 @@ const testWindowsVirtualMachine = new azure.devtest.WindowsVirtualMachine("test"
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="WindowsVirtualMachine-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devtest/windowsVirtualMachine.ts#L142"> <b>constructor</b></a>
 </h3>
@@ -1418,9 +1428,11 @@ export const uniqueIdentifier = test.uniqueIdentifier;
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devtest/getLab.ts#L34">interface <b>GetLabArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getLab.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetLabArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devtest/getLab.ts#L38">property <b>name</b></a>
 </h3>
@@ -1448,9 +1460,11 @@ The Name of the Resource Group where the Dev Test Lab exists.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devtest/getLab.ts#L48">interface <b>GetLabResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getLab.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetLabResult-artifactsStorageAccountId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devtest/getLab.ts#L52">property <b>artifactsStorageAccountId</b></a>
 </h3>
@@ -1582,9 +1596,11 @@ The unique immutable identifier of the Dev Test Lab.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devtest/lab.ts#L185">interface <b>LabArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Lab resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LabArgs-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devtest/lab.ts#L189">property <b>location</b></a>
 </h3>
@@ -1645,9 +1661,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devtest/lab.ts#L135">interface <b>LabState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Lab resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LabState-artifactsStorageAccountId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devtest/lab.ts#L139">property <b>artifactsStorageAccountId</b></a>
 </h3>
@@ -1774,9 +1792,11 @@ The unique immutable identifier of the Dev Test Lab.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devtest/linuxVirtualMachine.ts#L315">interface <b>LinuxVirtualMachineArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a LinuxVirtualMachine resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LinuxVirtualMachineArgs-allowClaim">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devtest/linuxVirtualMachine.ts#L319">property <b>allowClaim</b></a>
 </h3>
@@ -1978,9 +1998,11 @@ The Username associated with the local administrator on this Virtual Machine. Ch
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devtest/linuxVirtualMachine.ts#L233">interface <b>LinuxVirtualMachineState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering LinuxVirtualMachine resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LinuxVirtualMachineState-allowClaim">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devtest/linuxVirtualMachine.ts#L237">property <b>allowClaim</b></a>
 </h3>
@@ -2204,9 +2226,11 @@ The Username associated with the local administrator on this Virtual Machine. Ch
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devtest/policy.ts#L189">interface <b>PolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Policy resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PolicyArgs-description">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devtest/policy.ts#L193">property <b>description</b></a>
 </h3>
@@ -2311,9 +2335,11 @@ The Threshold for this Policy.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devtest/policy.ts#L147">interface <b>PolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Policy resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PolicyState-description">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devtest/policy.ts#L151">property <b>description</b></a>
 </h3>
@@ -2418,9 +2444,11 @@ The Threshold for this Policy.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devtest/virtualNetwork.ts#L157">interface <b>VirtualNetworkArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a VirtualNetwork resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualNetworkArgs-description">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devtest/virtualNetwork.ts#L161">property <b>description</b></a>
 </h3>
@@ -2496,9 +2524,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devtest/virtualNetwork.ts#L123">interface <b>VirtualNetworkState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering VirtualNetwork resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualNetworkState-description">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devtest/virtualNetwork.ts#L127">property <b>description</b></a>
 </h3>
@@ -2585,9 +2615,11 @@ The unique immutable identifier of the Dev Test Virtual Network.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devtest/windowsVirtualMachine.ts#L307">interface <b>WindowsVirtualMachineArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a WindowsVirtualMachine resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="WindowsVirtualMachineArgs-allowClaim">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devtest/windowsVirtualMachine.ts#L311">property <b>allowClaim</b></a>
 </h3>
@@ -2778,9 +2810,11 @@ The Username associated with the local administrator on this Virtual Machine. Ch
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devtest/windowsVirtualMachine.ts#L229">interface <b>WindowsVirtualMachineState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering WindowsVirtualMachine resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="WindowsVirtualMachineState-allowClaim">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devtest/windowsVirtualMachine.ts#L233">property <b>allowClaim</b></a>
 </h3>

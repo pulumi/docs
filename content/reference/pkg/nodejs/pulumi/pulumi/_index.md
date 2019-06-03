@@ -97,11 +97,13 @@ import * as pulumi from "@pulumi/pulumi";
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Resource'>Resource</a></pre>
+{{% md %}}
 
 ComponentResource is a resource that aggregates one or more other child resources into a higher
 level abstraction. The component resource itself is a resource, but does not require custom CRUD
 operations for provisioning.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ComponentResource-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/resource.ts#L355"> <b>constructor</b></a>
 </h3>
@@ -175,6 +177,7 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/config.ts#L32">class <b>Config</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Config is a bag of related configuration state.  Each bag contains any number of configuration variables, indexed by
 simple keys, and each has a name that uniquely identifies it; two bags with different names do not share values for
@@ -182,6 +185,7 @@ variables that otherwise share the same key.  For example, a bag whose name is `
 and `c`, is entirely separate from a bag whose name is `pulumi:bar` with the same simple key names.  Each key has a
 fully qualified names, such as `pulumi:foo:a`, ..., and `pulumi:bar:a`, respectively.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Config-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/config.ts#L37"> <b>constructor</b></a>
 </h3>
@@ -436,12 +440,14 @@ project.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Resource'>Resource</a></pre>
+{{% md %}}
 
 CustomResource is a resource whose create, read, update, and delete (CRUD) operations are managed
 by performing external operations on some physical entity.  The engine understands how to diff
 and perform partial updates of them, and these CRUD operations are implemented in a dynamically
 loaded plugin for the defining package.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CustomResource-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/resource.ts#L291"> <b>constructor</b></a>
 </h3>
@@ -519,10 +525,12 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 ProviderResource is a resource that implements CRUD operations for other custom resources. These resources are
 managed similarly to other resources, including the usual diffing and update semantics.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ProviderResource-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/resource.ts#L322"> <b>constructor</b></a>
 </h3>
@@ -594,9 +602,11 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/resource.ts#L26">class <b>Resource</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Resource represents a class whose CRUD operations are implemented by a provider plugin.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Resource-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/resource.ts#L115"> <b>constructor</b></a>
 </h3>
@@ -657,12 +667,14 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error'>Error</a></pre>
+{{% md %}}
 
 ResourceError can be used for terminating a program abruptly, specifically associating the
 problem with a Resource.  Depending on the nature of the problem, clients can choose whether or
 not a call stack should be returned as well.  This should be very rare, and would only indicate
 no usefulness of presenting that stack to the user.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceError-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/errors.ts#L65"> <b>constructor</b></a>
 </h3>
@@ -741,12 +753,14 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error'>Error</a></pre>
+{{% md %}}
 
 RunError can be used for terminating a program abruptly, but resulting in a clean exit rather
 than the usual verbose unhandled error logic which emits the source program text and complete
 stack trace.  This type should be rarely used.  Ideally ResourceError should always be used so
 that as many errors as possible can be associated with a Resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RunError-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/errors.ts#L38"> <b>constructor</b></a>
 </h3>
@@ -809,10 +823,12 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a reference to a Pulumi stack. The referenced stack's outputs are available via the
 `outputs` property or the `output` method.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StackReference-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/stackReference.ts#L31"> <b>constructor</b></a>
 </h3>
@@ -1127,9 +1143,11 @@ The expected way to use this function is like so:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#ResourceOptions'>ResourceOptions</a></pre>
+{{% md %}}
 
 ComponentResourceOptions is a bag of optional settings that control a component resource's behavior.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ComponentResourceOptions-dependsOn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/resource.ts#L211">property <b>dependsOn</b></a>
 </h3>
@@ -1215,9 +1233,11 @@ rarely be used.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#ResourceOptions'>ResourceOptions</a></pre>
+{{% md %}}
 
 CustomResourceOptions is a bag of optional settings that control a custom resource's behavior.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CustomResourceOptions-additionalSecretOutputs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/resource.ts#L252">property <b>additionalSecretOutputs</b></a>
 </h3>
@@ -1329,10 +1349,12 @@ rarely be used.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/output.ts#L590">interface <b>OutputConstructor</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Static side of the [Output<T>] type.  Can be used to [create] Outputs as well as test
 arbitrary values to see if they are [Output]s.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="OutputConstructor-create">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/output.ts#L591">method <b>create</b></a>
 </h3>
@@ -1363,10 +1385,12 @@ arbitrary values to see if they are [Output]s.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/output.ts#L538">interface <b>OutputInstance</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Instance side of the [Output<T>] type.  Exposes the deployment-time and run-time mechanisms
 for working with the underlying value of an [Output<T>].
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="OutputInstance-apply">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/output.ts#L570">method <b>apply</b></a>
 </h3>
@@ -1451,9 +1475,11 @@ the dependency graph to be changed.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/resource.ts#L199">interface <b>ResourceOptions</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 ResourceOptions is a bag of optional settings that control a resource's behavior.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceOptions-dependsOn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/resource.ts#L211">property <b>dependsOn</b></a>
 </h3>
@@ -1527,9 +1553,11 @@ rarely be used.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/stackReference.ts#L64">interface <b>StackReferenceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a StackReference resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StackReferenceArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/stackReference.ts#L68">property <b>name</b></a>
 </h3>
@@ -2048,25 +2076,30 @@ Gets or sets the length of the array. This is a number one higher than the highe
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> Input = T | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;T&gt; | <a href='#OutputInstance'>OutputInstance</a>&lt;T&gt;;</pre>
+{{% md %}}
 
 [Input] is a property input for a resource.  It may be a promptly available T, a promise for one,
 or the output from a existing Resource.
 
+{{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="Inputs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/output.ts#L474">type <b>Inputs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> Inputs = Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='#Input'>Input</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>
+{{% md %}}
 
 [Inputs] is a map of property name to property input, one for each resource property value.
 
+{{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="Lifted">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/output.ts#L682">type <b>Lifted</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> Lifted = Lifted<T>;</pre>
+{{% md %}}
 
 The [Lifted] type allows us to express the operation of taking a type, with potentially deeply
 nested objects and arrays and to then get a type with the same properties, except whose property
@@ -2100,6 +2133,7 @@ Instead, you still need to write;
      const c: Output<number> = o.apply(v => v.charCodeAt(0));
 ```
 
+{{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="LiftedArray">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/output.ts#L700">type <b>LiftedArray</b></a>
@@ -2120,6 +2154,7 @@ Instead, you still need to write;
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> Output = <a href='#OutputInstance'>OutputInstance</a>&lt;T&gt; &amp; <a href='#Lifted'>Lifted</a>&lt;T&gt;;</pre>
+{{% md %}}
 
 [Output] helps encode the relationship between Resources in a Pulumi application. Specifically an
 [Output] holds onto a piece of Data and the Resource it was generated from. An [Output] value can
@@ -2162,6 +2197,7 @@ Instead of having to write:
      const first: Output<Order> = o.apply(v => v.orders[0]);
 ```
 
+{{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="URN">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/resource.ts#L21">type <b>URN</b></a>
@@ -2174,6 +2210,7 @@ Instead of having to write:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> Unwrap = Unwrap<T>;</pre>
+{{% md %}}
 
 The 'Unwrap' type allows us to express the operation of taking a type, with potentially deeply
 nested Promises and Outputs and to then get that same type with all the Promises and Outputs
@@ -2198,15 +2235,18 @@ produce an Output.
 In other words, this should not be used as the shape of an object: `{ a: Promise<Output<...>> }`.
 It should always either be `{ a: Promise<NonOutput> }` or just `{ a: Output<...> }`.
 
+{{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="UnwrapSimple">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/output.ts#L513">type <b>UnwrapSimple</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> UnwrapSimple = UnwrapSimple<T>;</pre>
+{{% md %}}
 
 Handles encountering basic types when unwrapping.
 
+{{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="UnwrappedObject">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/output.ts#L530">type <b>UnwrappedObject</b></a>

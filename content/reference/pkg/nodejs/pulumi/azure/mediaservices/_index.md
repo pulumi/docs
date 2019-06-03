@@ -33,6 +33,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Media Services Account.
 
@@ -64,6 +65,7 @@ const testAccount = new azure.mediaservices.Account("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Account-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mediaservices/account.ts#L66"> <b>constructor</b></a>
 </h3>
@@ -195,9 +197,11 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mediaservices/account.ts#L126">interface <b>AccountArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Account resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AccountArgs-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mediaservices/account.ts#L130">property <b>location</b></a>
 </h3>
@@ -250,9 +254,11 @@ One or more `storage_account` blocks as defined below.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mediaservices/account.ts#L104">interface <b>AccountState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Account resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AccountState-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mediaservices/account.ts#L108">property <b>location</b></a>
 </h3>

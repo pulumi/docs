@@ -36,6 +36,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 DEPRECATED - This group version of ControllerRevision is deprecated by
 apps/v1beta2/ControllerRevision. See the release notes for more information.
@@ -48,6 +49,7 @@ controllers for update and rollback, this object is beta. However, it may be sub
 and representation changes in future releases, and clients should not depend on its
 stability. It is primarily for internal use by controllers.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ControllerRevision-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/apps/v1beta1/ControllerRevision.ts#L70"> <b>constructor</b></a>
 </h3>
@@ -208,9 +210,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 ControllerRevisionList is a resource containing a list of ControllerRevision objects.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ControllerRevisionList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/apps/v1beta1/ControllerRevisionList.ts#L55"> <b>constructor</b></a>
 </h3>
@@ -359,11 +363,13 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 DEPRECATED - This group version of Deployment is deprecated by apps/v1beta2/Deployment. See
 the release notes for more information. Deployment enables declarative updates for Pods and
 ReplicaSets.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Deployment-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/apps/v1beta1/Deployment.ts#L62"> <b>constructor</b></a>
 </h3>
@@ -523,9 +529,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 DeploymentList is a list of Deployments.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DeploymentList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/apps/v1beta1/DeploymentList.ts#L55"> <b>constructor</b></a>
 </h3>
@@ -674,6 +682,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 DEPRECATED - This group version of StatefulSet is deprecated by apps/v1beta2/StatefulSet. See
 the release notes for more information. StatefulSet represents a set of pods with consistent
@@ -683,6 +692,7 @@ identities. Identities are defined as:
 The StatefulSet guarantees that a given network identity will always map to the same storage
 identity.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StatefulSet-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/apps/v1beta1/StatefulSet.ts#L65"> <b>constructor</b></a>
 </h3>
@@ -840,9 +850,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 StatefulSetList is a collection of StatefulSets.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StatefulSetList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/apps/v1beta1/StatefulSetList.ts#L51"> <b>constructor</b></a>
 </h3>

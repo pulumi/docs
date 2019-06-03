@@ -20,18 +20,18 @@ aliases:
 <li><a href="#metrics">module metrics</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/cognito/metrics.ts">cognito/metrics.ts</a> 
+<a href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/cognito/metrics.ts">cognito/metrics.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="metrics">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/cognito/metrics.ts#L20">module <b>metrics</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/cognito/metrics.ts#L20">module <b>metrics</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="accountTakeOverRisk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/cognito/metrics.ts#L66">function <b>accountTakeOverRisk</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/cognito/metrics.ts#L66">function <b>accountTakeOverRisk</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -44,7 +44,7 @@ Requests where Amazon Cognito detected account take-over risk.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="compromisedCredentialsRisk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/cognito/metrics.ts#L59">function <b>compromisedCredentialsRisk</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/cognito/metrics.ts#L59">function <b>compromisedCredentialsRisk</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -57,7 +57,7 @@ Requests where Amazon Cognito detected compromised credentials.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="metric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/cognito/metrics.ts#L43">function <b>metric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/cognito/metrics.ts#L43">function <b>metric</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -79,7 +79,7 @@ level.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="noRisk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/cognito/metrics.ts#L87">function <b>noRisk</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/cognito/metrics.ts#L87">function <b>noRisk</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -92,7 +92,7 @@ Requests where Amazon Cognito did not identify any risk.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="overrideBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/cognito/metrics.ts#L73">function <b>overrideBlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/cognito/metrics.ts#L73">function <b>overrideBlock</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -105,7 +105,7 @@ Requests that Amazon Cognito blocked because of the configuration provided by th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="risk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/cognito/metrics.ts#L80">function <b>risk</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/cognito/metrics.ts#L80">function <b>risk</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -118,14 +118,14 @@ Requests that Amazon Cognito marked as risky.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CognitoMetricChange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/cognito/metrics.ts#L24">interface <b>CognitoMetricChange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/cognito/metrics.ts#L24">interface <b>CognitoMetricChange</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CognitoMetricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/cognito/metrics.ts#L21">type <b>CognitoMetricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/cognito/metrics.ts#L21">type <b>CognitoMetricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>type</span> CognitoMetricName = <span class='s2'>"CompromisedCredentialsRisk"</span> | <span class='s2'>"AccountTakeOverRisk"</span> | <span class='s2'>"OverrideBlock"</span> | <span class='s2'>"Risk"</span> | <span class='s2'>"NoRisk"</span>;</pre>

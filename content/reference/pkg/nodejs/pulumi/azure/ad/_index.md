@@ -45,6 +45,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an Application within Azure Active Directory.
 
@@ -68,6 +69,7 @@ const test = new azure.ad.Application("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Application-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/ad/application.ts#L70"> <b>constructor</b></a>
 </h3>
@@ -230,6 +232,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Service Principal associated with an Application within Azure Active Directory.
 
@@ -256,6 +259,7 @@ const testServicePrincipal = new azure.ad.ServicePrincipal("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ServicePrincipal-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/ad/servicePrincipal.ts#L53"> <b>constructor</b></a>
 </h3>
@@ -363,6 +367,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Password associated with a Service Principal within Azure Active Directory.
 
@@ -394,6 +399,7 @@ const testServicePrincipalPassword = new azure.ad.ServicePrincipalPassword("test
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ServicePrincipalPassword-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/ad/servicePrincipalPassword.ts#L70"> <b>constructor</b></a>
 </h3>
@@ -613,9 +619,11 @@ const test = pulumi.output(azure.ad.getServicePrincipal({
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/ad/application.ts#L142">interface <b>ApplicationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Application resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ApplicationArgs-availableToOtherTenants">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/ad/application.ts#L146">property <b>availableToOtherTenants</b></a>
 </h3>
@@ -687,9 +695,11 @@ A list of URLs that user tokens are sent to for sign in, or the redirect URIs th
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/ad/application.ts#L108">interface <b>ApplicationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Application resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ApplicationState-applicationId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/ad/application.ts#L112">property <b>applicationId</b></a>
 </h3>
@@ -772,9 +782,11 @@ A list of URLs that user tokens are sent to for sign in, or the redirect URIs th
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/ad/getApplication.ts#L38">interface <b>GetApplicationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getApplication.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetApplicationArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/ad/getApplication.ts#L42">property <b>name</b></a>
 </h3>
@@ -802,9 +814,11 @@ Specifies the Object ID of the Application within Azure Active Directory.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/ad/getApplication.ts#L52">interface <b>GetApplicationResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getApplication.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetApplicationResult-applicationId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/ad/getApplication.ts#L56">property <b>applicationId</b></a>
 </h3>
@@ -903,9 +917,11 @@ A list of URLs that user tokens are sent to for sign in, or the redirect URIs th
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/ad/getServicePrincipal.ts#L59">interface <b>GetServicePrincipalArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getServicePrincipal.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetServicePrincipalArgs-applicationId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/ad/getServicePrincipal.ts#L63">property <b>applicationId</b></a>
 </h3>
@@ -944,9 +960,11 @@ The ID of the Azure AD Service Principal.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/ad/getServicePrincipal.ts#L77">interface <b>GetServicePrincipalResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getServicePrincipal.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetServicePrincipalResult-applicationId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/ad/getServicePrincipal.ts#L78">property <b>applicationId</b></a>
 </h3>
@@ -987,9 +1005,11 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/ad/servicePrincipal.ts#L98">interface <b>ServicePrincipalArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ServicePrincipal resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ServicePrincipalArgs-applicationId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/ad/servicePrincipal.ts#L102">property <b>applicationId</b></a>
 </h3>
@@ -1006,9 +1026,11 @@ The ID of the Azure AD Application for which to create a Service Principal.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/ad/servicePrincipalPassword.ts#L139">interface <b>ServicePrincipalPasswordArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ServicePrincipalPassword resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ServicePrincipalPasswordArgs-endDate">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/ad/servicePrincipalPassword.ts#L143">property <b>endDate</b></a>
 </h3>
@@ -1069,9 +1091,11 @@ The Password for this Service Principal.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/ad/servicePrincipalPassword.ts#L113">interface <b>ServicePrincipalPasswordState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ServicePrincipalPassword resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ServicePrincipalPasswordState-endDate">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/ad/servicePrincipalPassword.ts#L117">property <b>endDate</b></a>
 </h3>
@@ -1132,9 +1156,11 @@ The Password for this Service Principal.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/ad/servicePrincipal.ts#L84">interface <b>ServicePrincipalState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ServicePrincipal resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ServicePrincipalState-applicationId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/ad/servicePrincipal.ts#L88">property <b>applicationId</b></a>
 </h3>

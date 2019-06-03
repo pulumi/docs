@@ -31,9 +31,11 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Status is a return value for calls that don't return other objects.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Status-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/meta/v1/Status.ts#L81"> <b>constructor</b></a>
 </h3>

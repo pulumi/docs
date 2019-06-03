@@ -89,56 +89,68 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>const</span> rootPulumiStackTypeName: <span class='s2'>"pulumi:pulumi:Stack"</span> = <span class='s2'>&#34;pulumi:pulumi:Stack&#34;</span>;</pre>
+{{% md %}}
 
 rootPulumiStackTypeName is the type name that should be used to construct the root component in the tree of Pulumi
 resources allocated by a deployment.  This must be kept up to date with
 `github.com/pulumi/pulumi/pkg/resource/stack.RootPulumiStackTypeName`.
 
+{{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="specialArchiveSig">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/runtime/rpc.ts#L231">const <b>specialArchiveSig</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>const</span> specialArchiveSig: <span class='s2'>"0def7320c3a5731c473e5ecbe6d01bc7"</span> = <span class='s2'>&#34;0def7320c3a5731c473e5ecbe6d01bc7&#34;</span>;</pre>
+{{% md %}}
 
 specialArchiveSig is a randomly assigned hash used to identify archives in maps. See pkg/resource/asset.go.
 
+{{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="specialAssetSig">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/runtime/rpc.ts#L227">const <b>specialAssetSig</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>const</span> specialAssetSig: <span class='s2'>"c44067f5952c0a294b673a41bacd8c17"</span> = <span class='s2'>&#34;c44067f5952c0a294b673a41bacd8c17&#34;</span>;</pre>
+{{% md %}}
 
 specialAssetSig is a randomly assigned hash used to identify assets in maps. See pkg/resource/asset.go.
 
+{{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="specialSecretSig">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/runtime/rpc.ts#L235">const <b>specialSecretSig</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>const</span> specialSecretSig: <span class='s2'>"1b47061264138c4ac30d75fd1eb44270"</span> = <span class='s2'>&#34;1b47061264138c4ac30d75fd1eb44270&#34;</span>;</pre>
+{{% md %}}
 
 specialSecretSig is a randomly assigned hash used to identify secrets in maps. See pkg/resource/properties.go.
 
+{{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="specialSigKey">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/runtime/rpc.ts#L223">const <b>specialSigKey</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>const</span> specialSigKey: <span class='s2'>"4dabf18193072939515e22adb298388d"</span> = <span class='s2'>&#34;4dabf18193072939515e22adb298388d&#34;</span>;</pre>
+{{% md %}}
 
 specialSigKey is sometimes used to encode type identity inside of a map. See pkg/resource/properties.go.
 
+{{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="unknownValue">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/runtime/rpc.ts#L219">const <b>unknownValue</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>const</span> unknownValue: <span class='s2'>"04da6b54-80e4-46f7-96ec-b56ff0331ba9"</span> = <span class='s2'>&#34;04da6b54-80e4-46f7-96ec-b56ff0331ba9&#34;</span>;</pre>
+{{% md %}}
 
 Unknown values are encoded as a distinguished string value.
 
+{{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="_setIsDryRun">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/runtime/settings.ts#L51">function <b>_setIsDryRun</b></a>
@@ -621,9 +633,11 @@ that the engine actualy produced will be used to resolve all the unresolved prom
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/runtime/settings.ts#L34">interface <b>Options</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Options is a bag of settings that controls the behavior of previews and deployments
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Options-dryRun">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/runtime/settings.ts#L40">property <b>dryRun</b></a>
 </h3>
@@ -694,9 +708,11 @@ Options is a bag of settings that controls the behavior of previews and deployme
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> excessiveDebugOutput: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> = <span class='s2'>false</span>;</pre>
+{{% md %}}
 
 excessiveDebugOutput enables, well, pretty excessive debug output pertaining to resources and properties.
 
+{{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="OutputResolvers">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/runtime/rpc.ts#L24">type <b>OutputResolvers</b></a>

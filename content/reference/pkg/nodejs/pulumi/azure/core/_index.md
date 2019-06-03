@@ -50,6 +50,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a resource group on Azure.
 
@@ -68,6 +69,7 @@ const test = new azure.core.ResourceGroup("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceGroup-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/core/resourceGroup.ts#L51"> <b>constructor</b></a>
 </h3>
@@ -188,6 +190,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage a template deployment of resources
 
@@ -280,6 +283,7 @@ export const storageAccountName = testTemplateDeployment.outputs.apply(outputs =
 
 Terraform does not know about the individual resources created by Azure using a deployment template and therefore cannot delete these resources during a destroy. Destroying a template deployment removes the associated deployment operations, but will not delete the Azure resources created by the deployment. In order to delete these resources, the containing resource group must also be destroyed. [More information](https://docs.microsoft.com/en-us/rest/api/resources/deployments#Deployments_Delete).
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="TemplateDeployment-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/core/templateDeployment.ts#L143"> <b>constructor</b></a>
 </h3>
@@ -578,9 +582,11 @@ export const uaiPrincipalId = example.principalId;
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/core/getClientConfig.ts#L29">interface <b>GetClientConfigResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getClientConfig.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetClientConfigResult-clientId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/core/getClientConfig.ts#L30">property <b>clientId</b></a>
 </h3>
@@ -637,9 +643,11 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/core/getResourceGroup.ts#L38">interface <b>GetResourceGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getResourceGroup.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetResourceGroupArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/core/getResourceGroup.ts#L42">property <b>name</b></a>
 </h3>
@@ -656,9 +664,11 @@ Specifies the name of the resource group.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/core/getResourceGroup.ts#L48">interface <b>GetResourceGroupResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getResourceGroup.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetResourceGroupResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/core/getResourceGroup.ts#L61">property <b>id</b></a>
 </h3>
@@ -705,9 +715,11 @@ A mapping of tags assigned to the resource group.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/core/getSubscription.ts#L31">interface <b>GetSubscriptionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getSubscription.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetSubscriptionArgs-subscriptionId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/core/getSubscription.ts#L35">property <b>subscriptionId</b></a>
 </h3>
@@ -724,9 +736,11 @@ Specifies the ID of the subscription. If this argument is omitted, the subscript
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/core/getSubscription.ts#L41">interface <b>GetSubscriptionResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getSubscription.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetSubscriptionResult-displayName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/core/getSubscription.ts#L45">property <b>displayName</b></a>
 </h3>
@@ -809,9 +823,11 @@ The subscription GUID.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/core/getSubscriptions.ts#L33">interface <b>GetSubscriptionsArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getSubscriptions.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetSubscriptionsArgs-displayNameContains">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/core/getSubscriptions.ts#L37">property <b>displayNameContains</b></a>
 </h3>
@@ -839,9 +855,11 @@ A case-insensitive prefix which can be used to filter on the `display_name` fiel
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/core/getSubscriptions.ts#L47">interface <b>GetSubscriptionsResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getSubscriptions.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetSubscriptionsResult-displayNameContains">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/core/getSubscriptions.ts#L48">property <b>displayNameContains</b></a>
 </h3>
@@ -892,9 +910,11 @@ One or more `subscription` blocks as defined below.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/core/getUserAssignedIdentity.ts#L35">interface <b>GetUserAssignedIdentityArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getUserAssignedIdentity.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetUserAssignedIdentityArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/core/getUserAssignedIdentity.ts#L39">property <b>name</b></a>
 </h3>
@@ -922,9 +942,11 @@ The name of the Resource Group in which the User Assigned Identity exists.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/core/getUserAssignedIdentity.ts#L49">interface <b>GetUserAssignedIdentityResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getUserAssignedIdentity.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetUserAssignedIdentityResult-clientId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/core/getUserAssignedIdentity.ts#L53">property <b>clientId</b></a>
 </h3>
@@ -1001,9 +1023,11 @@ A mapping of tags assigned to the User Assigned Identity.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/core/resourceGroup.ts#L101">interface <b>ResourceGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ResourceGroup resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceGroupArgs-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/core/resourceGroup.ts#L106">property <b>location</b></a>
 </h3>
@@ -1044,9 +1068,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/core/resourceGroup.ts#L81">interface <b>ResourceGroupState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ResourceGroup resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceGroupState-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/core/resourceGroup.ts#L86">property <b>location</b></a>
 </h3>
@@ -1087,9 +1113,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/core/templateDeployment.ts#L225">interface <b>TemplateDeploymentArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a TemplateDeployment resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="TemplateDeploymentArgs-deploymentMode">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/core/templateDeployment.ts#L231">property <b>deploymentMode</b></a>
 </h3>
@@ -1165,9 +1193,11 @@ Specifies the JSON definition for the template.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/core/templateDeployment.ts#L187">interface <b>TemplateDeploymentState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering TemplateDeployment resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="TemplateDeploymentState-deploymentMode">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/core/templateDeployment.ts#L193">property <b>deploymentMode</b></a>
 </h3>

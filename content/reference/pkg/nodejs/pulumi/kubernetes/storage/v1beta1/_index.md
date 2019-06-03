@@ -38,6 +38,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 CSIDriver captures information about a Container Storage Interface (CSI) volume driver
 deployed on the cluster. CSI drivers do not need to create the CSIDriver object directly.
@@ -47,6 +48,7 @@ detach controller uses this object to determine whether attach is required. Kube
 object to determine whether pod information needs to be passed on mount. CSIDriver objects
 are non-namespaced.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CSIDriver-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/storage/v1beta1/CSIDriver.ts#L65"> <b>constructor</b></a>
 </h3>
@@ -199,9 +201,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 CSIDriverList is a collection of CSIDriver objects.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CSIDriverList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/storage/v1beta1/CSIDriverList.ts#L56"> <b>constructor</b></a>
 </h3>
@@ -351,6 +355,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 CSINode holds information about all CSI drivers installed on a node. CSI drivers do not need
 to create the CSINode object directly. As long as they use the node-driver-registrar sidecar
@@ -360,6 +365,7 @@ missing, it means either there are no CSI Drivers available on the node, or the 
 version is low enough that it doesn't create this object. CSINode has an OwnerReference that
 points to the corresponding node object.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CSINode-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/storage/v1beta1/CSINode.ts#L61"> <b>constructor</b></a>
 </h3>
@@ -508,9 +514,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 CSINodeList is a collection of CSINode objects.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CSINodeList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/storage/v1beta1/CSINodeList.ts#L56"> <b>constructor</b></a>
 </h3>
@@ -660,6 +668,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 StorageClass describes the parameters for a class of storage for which PersistentVolumes can
 be dynamically provisioned.
@@ -667,6 +676,7 @@ be dynamically provisioned.
 StorageClasses are non-namespaced; the name of the storage class according to etcd is in
 ObjectMeta.Name.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StorageClass-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/storage/v1beta1/StorageClass.ts#L99"> <b>constructor</b></a>
 </h3>
@@ -891,9 +901,11 @@ enable the VolumeScheduling feature.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 StorageClassList is a collection of storage classes.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StorageClassList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/storage/v1beta1/StorageClassList.ts#L56"> <b>constructor</b></a>
 </h3>
@@ -1043,12 +1055,14 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 VolumeAttachment captures the intent to attach or detach the specified volume to/from the
 specified node.
 
 VolumeAttachment objects are non-namespaced.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeAttachment-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/storage/v1beta1/VolumeAttachment.ts#L66"> <b>constructor</b></a>
 </h3>
@@ -1211,9 +1225,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 VolumeAttachmentList is a collection of VolumeAttachment objects.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeAttachmentList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/storage/v1beta1/VolumeAttachmentList.ts#L56"> <b>constructor</b></a>
 </h3>

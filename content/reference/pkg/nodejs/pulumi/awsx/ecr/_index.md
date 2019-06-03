@@ -27,19 +27,19 @@ aliases:
 <li><a href="#RepositoryArgs">interface RepositoryArgs</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ecr/lifecyclePolicy.ts">ecr/lifecyclePolicy.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ecr/repository.ts">ecr/repository.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ecr/repositoryImage.ts">ecr/repositoryImage.ts</a> 
+<a href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ecr/lifecyclePolicy.ts">ecr/lifecyclePolicy.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ecr/repository.ts">ecr/repository.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ecr/repositoryImage.ts">ecr/repositoryImage.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="LifecyclePolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ecr/lifecyclePolicy.ts#L18">class <b>LifecyclePolicy</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ecr/lifecyclePolicy.ts#L18">class <b>LifecyclePolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> LifecyclePolicy</pre>
 <h3 class="pdoc-member-header" id="LifecyclePolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ecr/lifecyclePolicy.ts#L18"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ecr/lifecyclePolicy.ts#L18"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -53,7 +53,7 @@ Creates a new [LifecyclePolicy] for the given [repository].  If [args] is not pr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecyclePolicy-defaultLifecyclePolicyArgs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ecr/lifecyclePolicy.ts#L34">method <b>defaultLifecyclePolicyArgs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ecr/lifecyclePolicy.ts#L34">method <b>defaultLifecyclePolicyArgs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -67,7 +67,7 @@ tagged layers and images will never expire.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecyclePolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/node_modules/@pulumi/aws/ecr/lifecyclePolicy.d.ts#L80">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/node_modules/@pulumi/aws/ecr/lifecyclePolicy.d.ts#L80">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -81,7 +81,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecyclePolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -91,7 +91,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecyclePolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -105,7 +105,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecyclePolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -117,7 +117,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecyclePolicy-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/node_modules/@pulumi/aws/ecr/lifecyclePolicy.d.ts#L84">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/node_modules/@pulumi/aws/ecr/lifecyclePolicy.d.ts#L84">property <b>policy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>policy: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -128,7 +128,7 @@ The policy document. This is a JSON formatted string. See more details about [Po
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecyclePolicy-registryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/node_modules/@pulumi/aws/ecr/lifecyclePolicy.d.ts#L88">property <b>registryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/node_modules/@pulumi/aws/ecr/lifecyclePolicy.d.ts#L88">property <b>registryId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>registryId: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -139,7 +139,7 @@ The registry ID where the repository was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecyclePolicy-repository">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/node_modules/@pulumi/aws/ecr/lifecyclePolicy.d.ts#L92">property <b>repository</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/node_modules/@pulumi/aws/ecr/lifecyclePolicy.d.ts#L92">property <b>repository</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>repository: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -150,7 +150,7 @@ Name of the repository to apply the policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecyclePolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -163,10 +163,11 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Repository">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ecr/repository.ts#L31">class <b>Repository</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ecr/repository.ts#L31">class <b>Repository</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
+{{% md %}}
 
 A [Repository] represents an [aws.ecr.Repository] along with an associated [LifecyclePolicy]
 controlling how images are retained in the repo.
@@ -175,8 +176,9 @@ Docker images can be built and pushed to the repo using the [buildAndPushImage] 
 will call into the `@pulumi/docker/buildAndPushImage` function using this repo as the appropriate
 destination registry.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Repository-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ecr/repository.ts#L33"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ecr/repository.ts#L33"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -186,7 +188,7 @@ destination registry.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Repository-buildAndPushImage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ecr/repository.ts#L53">method <b>buildAndPushImage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ecr/repository.ts#L53">method <b>buildAndPushImage</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -201,7 +203,7 @@ can be passed as the value to `image: repo.buildAndPushImage(...)` in an `ecs.Co
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Repository-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -211,7 +213,7 @@ can be passed as the value to `image: repo.buildAndPushImage(...)` in an `ecs.Co
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Repository-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L148">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L148">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -225,7 +227,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Repository-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L163">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L163">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -235,7 +237,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Repository-lifecyclePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ecr/repository.ts#L33">property <b>lifecyclePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ecr/repository.ts#L33">property <b>lifecyclePolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>lifecyclePolicy: aws.ecr.LifecyclePolicy | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</pre>
@@ -243,7 +245,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Repository-repository">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ecr/repository.ts#L32">property <b>repository</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ecr/repository.ts#L32">property <b>repository</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>repository: aws.ecr.Repository;</pre>
@@ -251,7 +253,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Repository-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -264,16 +266,18 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RepositoryImage">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ecr/repositoryImage.ts#L24">class <b>RepositoryImage</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ecr/repositoryImage.ts#L24">class <b>RepositoryImage</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>implements</span> <a href='#ContainerImageProvider'>ContainerImageProvider</a></pre>
+{{% md %}}
 
 A simple pair of a [Repository] and a built docker image that was pushed to it.  This can
 be passed in as the `image: repoImage` value to an `ecs.Container`.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RepositoryImage-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ecr/repositoryImage.ts#L26"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ecr/repositoryImage.ts#L26"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -283,7 +287,7 @@ be passed in as the `image: repoImage` value to an `ecs.Container`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RepositoryImage-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ecr/repositoryImage.ts#L34">method <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ecr/repositoryImage.ts#L34">method <b>environment</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -293,7 +297,7 @@ be passed in as the `image: repoImage` value to an `ecs.Container`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RepositoryImage-image">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ecr/repositoryImage.ts#L33">method <b>image</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ecr/repositoryImage.ts#L33">method <b>image</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -303,7 +307,7 @@ be passed in as the `image: repoImage` value to an `ecs.Container`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RepositoryImage-imageValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ecr/repositoryImage.ts#L26">property <b>imageValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ecr/repositoryImage.ts#L26">property <b>imageValue</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>imageValue: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -311,7 +315,7 @@ be passed in as the `image: repoImage` value to an `ecs.Container`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RepositoryImage-repository">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ecr/repositoryImage.ts#L25">property <b>repository</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ecr/repositoryImage.ts#L25">property <b>repository</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>repository: <a href='#Repository'>Repository</a>;</pre>
@@ -320,7 +324,7 @@ be passed in as the `image: repoImage` value to an `ecs.Container`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="buildAndPushImage">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ecr/repository.ts#L67">function <b>buildAndPushImage</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ecr/repository.ts#L67">function <b>buildAndPushImage</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -337,20 +341,22 @@ repo.  This result type can be passed in as `image: ecr.buildAndPushImage(...)` 
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="convertToJSON">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ecr/lifecyclePolicy.ts#L46">function <b>convertToJSON</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ecr/lifecyclePolicy.ts#L46">function <b>convertToJSON</b></a>
 </h2>
 <div class="pdoc-module-contents">
 </div>
 <h2 class="pdoc-module-header" id="LifecyclePolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ecr/lifecyclePolicy.ts#L132">interface <b>LifecyclePolicyArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ecr/lifecyclePolicy.ts#L132">interface <b>LifecyclePolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 See https://docs.aws.amazon.com/AmazonECR/latest/userguide/lifecycle_policy_examples.html for
 more details.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LifecyclePolicyArgs-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ecr/lifecyclePolicy.ts#L138">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ecr/lifecyclePolicy.ts#L138">property <b>rules</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rules: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LifecyclePolicyRule'>LifecyclePolicyRule</a>&gt;[]&gt;;</pre>
@@ -364,9 +370,10 @@ ordered from lowest priority to highest.  If there is a rule with a `selection` 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LifecyclePolicyRule">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ecr/lifecyclePolicy.ts#L168">interface <b>LifecyclePolicyRule</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ecr/lifecyclePolicy.ts#L168">interface <b>LifecyclePolicyRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The following behaviors hold for these rules:
 
@@ -394,8 +401,9 @@ The following behaviors hold for these rules:
  * With `maximumAgeLimit`, all images whose pushed_at_time is older than the specified number of
    days based on countNumber are expired.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LifecyclePolicyRule-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ecr/lifecyclePolicy.ts#L172">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ecr/lifecyclePolicy.ts#L172">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -406,7 +414,7 @@ Describes the purpose of a rule within a lifecycle policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecyclePolicyRule-maximumAgeLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ecr/lifecyclePolicy.ts#L200">property <b>maximumAgeLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ecr/lifecyclePolicy.ts#L200">property <b>maximumAgeLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maximumAgeLimit?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -418,7 +426,7 @@ The maximum age limit (in days) for your images.  Either [maximumNumberOfImages]
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecyclePolicyRule-maximumNumberOfImages">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ecr/lifecyclePolicy.ts#L194">property <b>maximumNumberOfImages</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ecr/lifecyclePolicy.ts#L194">property <b>maximumNumberOfImages</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maximumNumberOfImages?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -430,7 +438,7 @@ The maximum number of images that you want to retain in your repository.  Either
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecyclePolicyRule-selection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ecr/lifecyclePolicy.ts#L180">property <b>selection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ecr/lifecyclePolicy.ts#L180">property <b>selection</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>selection: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"untagged"</span> | <span class='s2'>"any"</span> | {
@@ -447,11 +455,11 @@ image. If you specify `any`, then all images have the rule applied to them. If y
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RepositoryArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ecr/repository.ts#L75">interface <b>RepositoryArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ecr/repository.ts#L75">interface <b>RepositoryArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="RepositoryArgs-lifeCyclePolicyArgs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ecr/repository.ts#L90">property <b>lifeCyclePolicyArgs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ecr/repository.ts#L90">property <b>lifeCyclePolicyArgs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lifeCyclePolicyArgs?: <a href='#LifecyclePolicyArgs'>LifecyclePolicyArgs</a>;</pre>
@@ -463,7 +471,7 @@ created using `LifecyclePolicy.getDefaultLifecyclePolicyArgs`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RepositoryArgs-repository">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ecr/repository.ts#L79">property <b>repository</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ecr/repository.ts#L79">property <b>repository</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>repository?: aws.ecr.Repository;</pre>
@@ -474,7 +482,7 @@ Underlying repository.  If not provided, a new one will be created on your behal
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RepositoryArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ecr/repository.ts#L84">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ecr/repository.ts#L84">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>

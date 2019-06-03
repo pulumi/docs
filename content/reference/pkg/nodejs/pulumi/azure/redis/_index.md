@@ -36,6 +36,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Redis Cache.
 
@@ -92,6 +93,7 @@ A `patch_schedule` block supports the following:
  - [Azure Redis Cache: SKU specific configuration limitations](https://azure.microsoft.com/en-us/documentation/articles/cache-configure/#advanced-settings)
  - [Redis: Available Configuration Settings](http://redis.io/topics/config)
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Cache-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/redis/cache.ts#L157"> <b>constructor</b></a>
 </h3>
@@ -417,6 +419,7 @@ A list of a single item of the Availability Zone which the Redis Cache should be
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Firewall Rule associated with a Redis Cache.
 
@@ -461,6 +464,7 @@ const testFirewallRule = new azure.redis.FirewallRule("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallRule-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/redis/firewallRule.ts#L83"> <b>constructor</b></a>
 </h3>
@@ -600,9 +604,11 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/redis/cache.ts#L321">interface <b>CacheArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Cache resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CacheArgs-capacity">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/redis/cache.ts#L325">property <b>capacity</b></a>
 </h3>
@@ -793,9 +799,11 @@ A list of a single item of the Availability Zone which the Redis Cache should be
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/redis/cache.ts#L233">interface <b>CacheState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Cache resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CacheState-capacity">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/redis/cache.ts#L237">property <b>capacity</b></a>
 </h3>
@@ -1041,9 +1049,11 @@ A list of a single item of the Availability Zone which the Redis Cache should be
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/redis/firewallRule.ts#L155">interface <b>FirewallRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a FirewallRule resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallRuleArgs-endIp">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/redis/firewallRule.ts#L159">property <b>endIp</b></a>
 </h3>
@@ -1104,9 +1114,11 @@ The lowest IP address included in the range
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/redis/firewallRule.ts#L129">interface <b>FirewallRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering FirewallRule resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallRuleState-endIp">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/redis/firewallRule.ts#L133">property <b>endIp</b></a>
 </h3>

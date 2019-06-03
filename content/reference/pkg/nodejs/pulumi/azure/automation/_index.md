@@ -75,6 +75,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Automation Account.
 
@@ -101,6 +102,7 @@ const exampleAccount = new azure.automation.Account("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Account-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/account.ts#L77"> <b>constructor</b></a>
 </h3>
@@ -276,6 +278,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a boolean variable in Azure Automation
 
@@ -305,6 +308,7 @@ const exampleBoolVariable = new azure.automation.BoolVariable("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="BoolVariable-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/boolVariable.ts#L73"> <b>constructor</b></a>
 </h3>
@@ -456,6 +460,7 @@ The value of the Automation Variable as a `boolean`.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Automation Credential.
 
@@ -487,6 +492,7 @@ const exampleCredential = new azure.automation.Credential("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Credential-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/credential.ts#L74"> <b>constructor</b></a>
 </h3>
@@ -638,6 +644,7 @@ The username associated with this Automation Credential.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a date/time variable in Azure Automation
 
@@ -667,6 +674,7 @@ const exampleDateTimeVariable = new azure.automation.DateTimeVariable("example",
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DateTimeVariable-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/dateTimeVariable.ts#L73"> <b>constructor</b></a>
 </h3>
@@ -818,6 +826,7 @@ The value of the Automation Variable in the [RFC3339 Section 5.6 Internet Date/T
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Automation DSC Configuration.
 
@@ -848,6 +857,7 @@ const exampleDscConfiguration = new azure.automation.DscConfiguration("example",
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DscConfiguration-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/dscConfiguration.ts#L78"> <b>constructor</b></a>
 </h3>
@@ -1018,6 +1028,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Automation DSC Node Configuration.
 
@@ -1075,6 +1086,7 @@ instance of OMI_ConfigurationDocument
 }, {dependsOn: [exampleDscConfiguration]});
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DscNodeConfiguration-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/dscNodeConfiguration.ts#L93"> <b>constructor</b></a>
 </h3>
@@ -1212,6 +1224,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a integer variable in Azure Automation
 
@@ -1241,6 +1254,7 @@ const exampleIntVariable = new azure.automation.IntVariable("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="IntVariable-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/intVariable.ts#L73"> <b>constructor</b></a>
 </h3>
@@ -1392,6 +1406,7 @@ The value of the Automation Variable as a `integer`.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Automation Module.
 
@@ -1423,6 +1438,7 @@ const exampleModule = new azure.automation.Module("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Module-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/module.ts#L66"> <b>constructor</b></a>
 </h3>
@@ -1558,6 +1574,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Automation Runbook.
 
@@ -1594,6 +1611,7 @@ const exampleRunBook = new azure.automation.RunBook("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RunBook-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/runBook.ts#L99"> <b>constructor</b></a>
 </h3>
@@ -1807,6 +1825,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Automation Schedule.
 
@@ -1841,6 +1860,7 @@ const exampleSchedule = new azure.automation.Schedule("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Schedule-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/schedule.ts#L102"> <b>constructor</b></a>
 </h3>
@@ -2069,6 +2089,7 @@ List of days of the week that the job should execute on. Only valid when frequen
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a string variable in Azure Automation
 
@@ -2098,6 +2119,7 @@ const exampleStringVariable = new azure.automation.StringVariable("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StringVariable-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/stringVariable.ts#L73"> <b>constructor</b></a>
 </h3>
@@ -2360,9 +2382,11 @@ export const variableId = example.id;
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/account.ts#L161">interface <b>AccountArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Account resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AccountArgs-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/account.ts#L165">property <b>location</b></a>
 </h3>
@@ -2425,9 +2449,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/account.ts#L123">interface <b>AccountState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Account resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AccountState-dscPrimaryAccessKey">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/account.ts#L127">property <b>dscPrimaryAccessKey</b></a>
 </h3>
@@ -2523,9 +2549,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/boolVariable.ts#L145">interface <b>BoolVariableArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a BoolVariable resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="BoolVariableArgs-automationAccountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/boolVariable.ts#L149">property <b>automationAccountName</b></a>
 </h3>
@@ -2597,9 +2625,11 @@ The value of the Automation Variable as a `boolean`.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/boolVariable.ts#L115">interface <b>BoolVariableState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering BoolVariable resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="BoolVariableState-automationAccountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/boolVariable.ts#L119">property <b>automationAccountName</b></a>
 </h3>
@@ -2671,9 +2701,11 @@ The value of the Automation Variable as a `boolean`.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/credential.ts#L152">interface <b>CredentialArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Credential resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CredentialArgs-accountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/credential.ts#L156">property <b>accountName</b></a>
 </h3>
@@ -2745,9 +2777,11 @@ The username associated with this Automation Credential.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/credential.ts#L122">interface <b>CredentialState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Credential resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CredentialState-accountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/credential.ts#L126">property <b>accountName</b></a>
 </h3>
@@ -2819,9 +2853,11 @@ The username associated with this Automation Credential.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/dateTimeVariable.ts#L145">interface <b>DateTimeVariableArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a DateTimeVariable resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DateTimeVariableArgs-automationAccountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/dateTimeVariable.ts#L149">property <b>automationAccountName</b></a>
 </h3>
@@ -2893,9 +2929,11 @@ The value of the Automation Variable in the [RFC3339 Section 5.6 Internet Date/T
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/dateTimeVariable.ts#L115">interface <b>DateTimeVariableState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering DateTimeVariable resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DateTimeVariableState-automationAccountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/dateTimeVariable.ts#L119">property <b>automationAccountName</b></a>
 </h3>
@@ -2967,9 +3005,11 @@ The value of the Automation Variable in the [RFC3339 Section 5.6 Internet Date/T
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/dscConfiguration.ts#L162">interface <b>DscConfigurationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a DscConfiguration resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DscConfigurationArgs-automationAccountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/dscConfiguration.ts#L166">property <b>automationAccountName</b></a>
 </h3>
@@ -3052,9 +3092,11 @@ The name of the resource group in which the DSC Configuration is created. Changi
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/dscConfiguration.ts#L127">interface <b>DscConfigurationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering DscConfiguration resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DscConfigurationState-automationAccountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/dscConfiguration.ts#L131">property <b>automationAccountName</b></a>
 </h3>
@@ -3145,9 +3187,11 @@ The name of the resource group in which the DSC Configuration is created. Changi
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/dscNodeConfiguration.ts#L159">interface <b>DscNodeConfigurationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a DscNodeConfiguration resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DscNodeConfigurationArgs-automationAccountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/dscNodeConfiguration.ts#L163">property <b>automationAccountName</b></a>
 </h3>
@@ -3197,9 +3241,11 @@ The name of the resource group in which the DSC Node Configuration is created. C
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/dscNodeConfiguration.ts#L136">interface <b>DscNodeConfigurationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering DscNodeConfiguration resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DscNodeConfigurationState-automationAccountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/dscNodeConfiguration.ts#L140">property <b>automationAccountName</b></a>
 </h3>
@@ -3257,9 +3303,11 @@ The name of the resource group in which the DSC Node Configuration is created. C
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/getBoolVariable.ts#L37">interface <b>GetBoolVariableArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getBoolVariable.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetBoolVariableArgs-automationAccountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/getBoolVariable.ts#L41">property <b>automationAccountName</b></a>
 </h3>
@@ -3298,9 +3346,11 @@ The Name of the Resource Group where the automation account exists.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/getBoolVariable.ts#L55">interface <b>GetBoolVariableResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getBoolVariable.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetBoolVariableResult-automationAccountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/getBoolVariable.ts#L56">property <b>automationAccountName</b></a>
 </h3>
@@ -3374,9 +3424,11 @@ The value of the Automation Variable as a `boolean`.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/getDateTimeVariable.ts#L37">interface <b>GetDateTimeVariableArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getDateTimeVariable.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetDateTimeVariableArgs-automationAccountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/getDateTimeVariable.ts#L41">property <b>automationAccountName</b></a>
 </h3>
@@ -3415,9 +3467,11 @@ The Name of the Resource Group where the automation account exists.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/getDateTimeVariable.ts#L55">interface <b>GetDateTimeVariableResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getDateTimeVariable.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetDateTimeVariableResult-automationAccountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/getDateTimeVariable.ts#L56">property <b>automationAccountName</b></a>
 </h3>
@@ -3491,9 +3545,11 @@ The value of the Automation Variable in the [RFC3339 Section 5.6 Internet Date/T
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/getIntVariable.ts#L37">interface <b>GetIntVariableArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getIntVariable.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetIntVariableArgs-automationAccountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/getIntVariable.ts#L41">property <b>automationAccountName</b></a>
 </h3>
@@ -3532,9 +3588,11 @@ The Name of the Resource Group where the automation account exists.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/getIntVariable.ts#L55">interface <b>GetIntVariableResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getIntVariable.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetIntVariableResult-automationAccountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/getIntVariable.ts#L56">property <b>automationAccountName</b></a>
 </h3>
@@ -3608,9 +3666,11 @@ The value of the Automation Variable as a `integer`.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/getStringVariable.ts#L37">interface <b>GetStringVariableArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getStringVariable.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetStringVariableArgs-automationAccountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/getStringVariable.ts#L41">property <b>automationAccountName</b></a>
 </h3>
@@ -3649,9 +3709,11 @@ The Name of the Resource Group where the automation account exists.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/getStringVariable.ts#L55">interface <b>GetStringVariableResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getStringVariable.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetStringVariableResult-automationAccountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/getStringVariable.ts#L56">property <b>automationAccountName</b></a>
 </h3>
@@ -3725,9 +3787,11 @@ The value of the Automation Variable as a `string`.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/intVariable.ts#L145">interface <b>IntVariableArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a IntVariable resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="IntVariableArgs-automationAccountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/intVariable.ts#L149">property <b>automationAccountName</b></a>
 </h3>
@@ -3799,9 +3863,11 @@ The value of the Automation Variable as a `integer`.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/intVariable.ts#L115">interface <b>IntVariableState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering IntVariable resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="IntVariableState-automationAccountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/intVariable.ts#L119">property <b>automationAccountName</b></a>
 </h3>
@@ -3873,9 +3939,11 @@ The value of the Automation Variable as a `integer`.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/module.ts#L129">interface <b>ModuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Module resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ModuleArgs-automationAccountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/module.ts#L133">property <b>automationAccountName</b></a>
 </h3>
@@ -3931,9 +3999,11 @@ The name of the resource group in which the Module is created. Changing this for
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/module.ts#L107">interface <b>ModuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Module resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ModuleState-automationAccountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/module.ts#L111">property <b>automationAccountName</b></a>
 </h3>
@@ -3989,9 +4059,11 @@ The name of the resource group in which the Module is created. Changing this for
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/runBook.ts#L213">interface <b>RunBookArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a RunBook resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RunBookArgs-accountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/runBook.ts#L217">property <b>accountName</b></a>
 </h3>
@@ -4125,9 +4197,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/runBook.ts#L163">interface <b>RunBookState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering RunBook resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RunBookState-accountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/runBook.ts#L167">property <b>accountName</b></a>
 </h3>
@@ -4261,9 +4335,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/schedule.ts#L213">interface <b>ScheduleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Schedule resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ScheduleArgs-accountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/schedule.ts#L214">property <b>accountName</b></a>
 </h3>
@@ -4412,9 +4488,11 @@ List of days of the week that the job should execute on. Only valid when frequen
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/schedule.ts#L158">interface <b>ScheduleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Schedule resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ScheduleState-accountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/schedule.ts#L159">property <b>accountName</b></a>
 </h3>
@@ -4563,9 +4641,11 @@ List of days of the week that the job should execute on. Only valid when frequen
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/stringVariable.ts#L145">interface <b>StringVariableArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a StringVariable resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StringVariableArgs-automationAccountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/stringVariable.ts#L149">property <b>automationAccountName</b></a>
 </h3>
@@ -4637,9 +4717,11 @@ The value of the Automation Variable as a `string`.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/stringVariable.ts#L115">interface <b>StringVariableState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering StringVariable resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StringVariableState-automationAccountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/automation/stringVariable.ts#L119">property <b>automationAccountName</b></a>
 </h3>

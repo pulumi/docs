@@ -20,18 +20,18 @@ aliases:
 <li><a href="#metrics">module metrics</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ebs/metrics.ts">ebs/metrics.ts</a> 
+<a href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ebs/metrics.ts">ebs/metrics.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="metrics">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ebs/metrics.ts#L20">module <b>metrics</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ebs/metrics.ts#L20">module <b>metrics</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="burstBalance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ebs/metrics.ts#L283">function <b>burstBalance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ebs/metrics.ts#L283">function <b>burstBalance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -58,7 +58,7 @@ Units: Percent
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="metric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ebs/metrics.ts#L81">function <b>metric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ebs/metrics.ts#L81">function <b>metric</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -114,7 +114,7 @@ available statistics are filtered by volume ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="volumeConsumedReadWriteOps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ebs/metrics.ts#L262">function <b>volumeConsumedReadWriteOps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ebs/metrics.ts#L262">function <b>volumeConsumedReadWriteOps</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -134,7 +134,7 @@ Units: Count
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="volumeIdleTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ebs/metrics.ts#L214">function <b>volumeIdleTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ebs/metrics.ts#L214">function <b>volumeIdleTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -156,7 +156,7 @@ Units: Seconds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="volumeQueueLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ebs/metrics.ts#L230">function <b>volumeQueueLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ebs/metrics.ts#L230">function <b>volumeQueueLength</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -178,7 +178,7 @@ Units: Count
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="volumeReadBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ebs/metrics.ts#L109">function <b>volumeReadBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ebs/metrics.ts#L109">function <b>volumeReadBytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -203,7 +203,7 @@ Units: Bytes
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="volumeReadOps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ebs/metrics.ts#L143">function <b>volumeReadOps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ebs/metrics.ts#L143">function <b>volumeReadOps</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -224,7 +224,7 @@ Units: Count
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="volumeThroughputPercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ebs/metrics.ts#L248">function <b>volumeThroughputPercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ebs/metrics.ts#L248">function <b>volumeThroughputPercentage</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -248,7 +248,7 @@ Units: Percent
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="volumeTotalReadTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ebs/metrics.ts#L178">function <b>volumeTotalReadTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ebs/metrics.ts#L178">function <b>volumeTotalReadTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -274,7 +274,7 @@ Units: Seconds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="volumeTotalWriteTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ebs/metrics.ts#L198">function <b>volumeTotalWriteTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ebs/metrics.ts#L198">function <b>volumeTotalWriteTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -300,7 +300,7 @@ Units: Seconds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="volumeWriteBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ebs/metrics.ts#L128">function <b>volumeWriteBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ebs/metrics.ts#L128">function <b>volumeWriteBytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -325,7 +325,7 @@ Units: Bytes
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="volumeWriteOps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ebs/metrics.ts#L158">function <b>volumeWriteOps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ebs/metrics.ts#L158">function <b>volumeWriteOps</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -346,14 +346,14 @@ Units: Count
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EbsMetricChange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ebs/metrics.ts#L27">interface <b>EbsMetricChange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ebs/metrics.ts#L27">interface <b>EbsMetricChange</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EbsMetricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/ebs/metrics.ts#L21">type <b>EbsMetricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/ebs/metrics.ts#L21">type <b>EbsMetricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>type</span> EbsMetricName = <span class='s2'>"VolumeReadBytes"</span> | <span class='s2'>"VolumeWriteBytes"</span> | <span class='s2'>"VolumeReadOps"</span> | <span class='s2'>"VolumeWriteOps"</span> | <span class='s2'>"VolumeTotalReadTime"</span> | <span class='s2'>"VolumeTotalWriteTime"</span> | <span class='s2'>"VolumeIdleTime"</span> | <span class='s2'>"VolumeQueueLength"</span> | <span class='s2'>"VolumeThroughputPercentage"</span> | <span class='s2'>"VolumeConsumedReadWriteOps"</span> | <span class='s2'>"BurstBalance"</span>;</pre>

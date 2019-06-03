@@ -105,6 +105,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an API within an API Management Service.
 
@@ -144,6 +145,7 @@ const testApi = new azure.apimanagement.Api("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Api-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/api.ts#L122"> <b>constructor</b></a>
 </h3>
@@ -415,6 +417,7 @@ The ID of the Version Set which this API is associated with.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an API Operation within an API Management Service.
 
@@ -445,6 +448,7 @@ const exampleApiOperation = new azure.apimanagement.ApiOperation("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ApiOperation-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/apiOperation.ts#L93"> <b>constructor</b></a>
 </h3>
@@ -715,9 +719,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an API Management API Operation Policy
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ApiOperationPolicy-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L43"> <b>constructor</b></a>
 </h3>
@@ -866,6 +872,7 @@ A link to a Policy XML Document, which must be publicly available.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an API Management API Policy
 
@@ -893,6 +900,7 @@ const exampleApiPolicy = new azure.apimanagement.ApiPolicy("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ApiPolicy-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/apiPolicy.ts#L67"> <b>constructor</b></a>
 </h3>
@@ -1033,6 +1041,7 @@ A link to a Policy XML Document, which must be publicly available.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an API Schema within an API Management Service.
 
@@ -1059,6 +1068,7 @@ const exampleApiSchema = new azure.apimanagement.ApiSchema("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ApiSchema-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/apiSchema.ts#L69"> <b>constructor</b></a>
 </h3>
@@ -1210,6 +1220,7 @@ The JSON escaped string defining the document representing the Schema.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an API Version Set within a API Management Service.
 
@@ -1243,6 +1254,7 @@ const exampleApiManagementVersionSet = new azure.ApiManagementVersionSet("exampl
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ApiVersionSet-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/apiVersionSet.ts#L84"> <b>constructor</b></a>
 </h3>
@@ -1416,6 +1428,7 @@ Specifies where in an Inbound HTTP Request that the API Version should be read f
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an Authorization Server within an API Management Service.
 
@@ -1443,6 +1456,7 @@ const exampleApi = pulumi.output(azure.apimanagement.getApi({
 }));
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AuthorizationServer-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/authorizationServer.ts#L120"> <b>constructor</b></a>
 </h3>
@@ -1737,6 +1751,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an Certificate within an API Management Service.
 
@@ -1772,6 +1787,7 @@ const testCertificate = new azure.apimanagement.Certificate("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Certificate-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/certificate.ts#L86"> <b>constructor</b></a>
 </h3>
@@ -1945,6 +1961,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an API Management Group.
 
@@ -1978,6 +1995,7 @@ const exampleGroup = new azure.apimanagement.Group("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Group-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/group.ts#L81"> <b>constructor</b></a>
 </h3>
@@ -2140,6 +2158,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an API Management User Assignment to a Group.
 
@@ -2162,6 +2181,7 @@ const exampleGroupUser = new azure.apimanagement.GroupUser("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GroupUser-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/groupUser.ts#L58"> <b>constructor</b></a>
 </h3>
@@ -2291,6 +2311,7 @@ The ID of the API Management User which should be assigned to this API Managemen
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Logger within an API Management Service.
 
@@ -2331,6 +2352,7 @@ const exampleLogger = new azure.apimanagement.Logger("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Logger-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/logger.ts#L88"> <b>constructor</b></a>
 </h3>
@@ -2498,6 +2520,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an OpenID Connect Provider within a API Management Service.
 
@@ -2532,6 +2555,7 @@ const testOpenIdConnectProvider = new azure.apimanagement.OpenIdConnectProvider(
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="OpenIdConnectProvider-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L85"> <b>constructor</b></a>
 </h3>
@@ -2705,6 +2729,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an API Management Product.
 
@@ -2740,6 +2765,7 @@ const testProduct = new azure.apimanagement.Product("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Product-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/product.ts#L94"> <b>constructor</b></a>
 </h3>
@@ -2935,6 +2961,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an API Management API Assignment to a Product.
 
@@ -2967,6 +2994,7 @@ const test = pulumi.all([exampleService, exampleService]).apply(([exampleService
 }));
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ProductApi-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/productApi.ts#L67"> <b>constructor</b></a>
 </h3>
@@ -3096,6 +3124,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an API Management Product Assignment to a Group.
 
@@ -3127,6 +3156,7 @@ const exampleProduct = pulumi.all([exampleService, exampleService]).apply(([exam
 }));
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ProductGroup-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/productGroup.ts#L66"> <b>constructor</b></a>
 </h3>
@@ -3256,6 +3286,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an API Management Product Policy
 
@@ -3283,6 +3314,7 @@ const exampleProductPolicy = new azure.apimanagement.ProductPolicy("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ProductPolicy-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/productPolicy.ts#L67"> <b>constructor</b></a>
 </h3>
@@ -3423,6 +3455,7 @@ A link to a Policy XML Document, which must be publicly available.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an API Management Property.
 
@@ -3456,6 +3489,7 @@ const exampleProperty = new azure.apimanagement.Property("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Property-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/property.ts#L81"> <b>constructor</b></a>
 </h3>
@@ -3618,6 +3652,7 @@ The value of this API Management Property.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an API Management Service.
 
@@ -3644,6 +3679,7 @@ const testService = new azure.apimanagement.Service("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Service-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/service.ts#L133"> <b>constructor</b></a>
 </h3>
@@ -4036,6 +4072,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Subscription within a API Management Service.
 
@@ -4068,6 +4105,7 @@ const testSubscription = new azure.apimanagement.Subscription("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Subscription-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/subscription.ts#L82"> <b>constructor</b></a>
 </h3>
@@ -4246,6 +4284,7 @@ The ID of the User which should be assigned to this Subscription. Changing this 
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an API Management User.
 
@@ -4281,6 +4320,7 @@ const testUser = new azure.apimanagement.User("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="User-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/user.ts#L94"> <b>constructor</b></a>
 </h3>
@@ -4615,9 +4655,11 @@ export const notes = test.notes;
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/api.ts#L266">interface <b>ApiArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Api resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ApiArgs-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/api.ts#L270">property <b>apiManagementName</b></a>
 </h3>
@@ -4765,9 +4807,11 @@ A `subscription_key_parameter_names` block as documented below.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/apiOperation.ts#L210">interface <b>ApiOperationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ApiOperation resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ApiOperationArgs-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/apiOperation.ts#L214">property <b>apiManagementName</b></a>
 </h3>
@@ -4958,9 +5002,11 @@ The relative URL Template identifying the target resource for this operation, wh
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L118">interface <b>ApiOperationPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ApiOperationPolicy resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ApiOperationPolicyArgs-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L122">property <b>apiManagementName</b></a>
 </h3>
@@ -5029,9 +5075,11 @@ A link to a Policy XML Document, which must be publicly available.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L91">interface <b>ApiOperationPolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ApiOperationPolicy resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ApiOperationPolicyState-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/apiOperationPolicy.ts#L95">property <b>apiManagementName</b></a>
 </h3>
@@ -5100,9 +5148,11 @@ A link to a Policy XML Document, which must be publicly available.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/apiOperation.ts#L160">interface <b>ApiOperationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ApiOperation resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ApiOperationState-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/apiOperation.ts#L164">property <b>apiManagementName</b></a>
 </h3>
@@ -5293,9 +5343,11 @@ The relative URL Template identifying the target resource for this operation, wh
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/apiPolicy.ts#L136">interface <b>ApiPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ApiPolicy resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ApiPolicyArgs-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/apiPolicy.ts#L140">property <b>apiManagementName</b></a>
 </h3>
@@ -5356,9 +5408,11 @@ A link to a Policy XML Document, which must be publicly available.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/apiPolicy.ts#L110">interface <b>ApiPolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ApiPolicy resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ApiPolicyState-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/apiPolicy.ts#L114">property <b>apiManagementName</b></a>
 </h3>
@@ -5419,9 +5473,11 @@ A link to a Policy XML Document, which must be publicly available.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/apiSchema.ts#L153">interface <b>ApiSchemaArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ApiSchema resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ApiSchemaArgs-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/apiSchema.ts#L157">property <b>apiManagementName</b></a>
 </h3>
@@ -5493,9 +5549,11 @@ The JSON escaped string defining the document representing the Schema.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/apiSchema.ts#L123">interface <b>ApiSchemaState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ApiSchema resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ApiSchemaState-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/apiSchema.ts#L127">property <b>apiManagementName</b></a>
 </h3>
@@ -5567,9 +5625,11 @@ The JSON escaped string defining the document representing the Schema.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/api.ts#L196">interface <b>ApiState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Api resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ApiState-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/api.ts#L200">property <b>apiManagementName</b></a>
 </h3>
@@ -5761,9 +5821,11 @@ The ID of the Version Set which this API is associated with.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/apiVersionSet.ts#L174">interface <b>ApiVersionSetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ApiVersionSet resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ApiVersionSetArgs-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/apiVersionSet.ts#L178">property <b>apiManagementName</b></a>
 </h3>
@@ -5857,9 +5919,11 @@ Specifies where in an Inbound HTTP Request that the API Version should be read f
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/apiVersionSet.ts#L136">interface <b>ApiVersionSetState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ApiVersionSet resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ApiVersionSetState-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/apiVersionSet.ts#L140">property <b>apiManagementName</b></a>
 </h3>
@@ -5953,9 +6017,11 @@ Specifies where in an Inbound HTTP Request that the API Version should be read f
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/authorizationServer.ts#L285">interface <b>AuthorizationServerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a AuthorizationServer resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AuthorizationServerArgs-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/authorizationServer.ts#L289">property <b>apiManagementName</b></a>
 </h3>
@@ -6170,9 +6236,11 @@ The OAUTH Token Endpoint.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/authorizationServer.ts#L206">interface <b>AuthorizationServerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering AuthorizationServer resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AuthorizationServerState-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/authorizationServer.ts#L210">property <b>apiManagementName</b></a>
 </h3>
@@ -6387,9 +6455,11 @@ The OAUTH Token Endpoint.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/certificate.ts#L173">interface <b>CertificateArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Certificate resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CertificateArgs-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/certificate.ts#L177">property <b>apiManagementName</b></a>
 </h3>
@@ -6450,9 +6520,11 @@ The Name of the Resource Group where the API Management Service exists. Changing
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/certificate.ts#L135">interface <b>CertificateState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Certificate resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CertificateState-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/certificate.ts#L139">property <b>apiManagementName</b></a>
 </h3>
@@ -6546,9 +6618,11 @@ The Thumbprint of this Certificate.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/getApi.ts#L38">interface <b>GetApiArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getApi.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetApiArgs-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/getApi.ts#L42">property <b>apiManagementName</b></a>
 </h3>
@@ -6598,9 +6672,11 @@ The Revision of the API Management API.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/getApi.ts#L60">interface <b>GetApiResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getApi.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetApiResult-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/getApi.ts#L61">property <b>apiManagementName</b></a>
 </h3>
@@ -6773,9 +6849,11 @@ The ID of the Version Set which this API is associated with.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/getGroup.ts#L36">interface <b>GetGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getGroup.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetGroupArgs-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/getGroup.ts#L40">property <b>apiManagementName</b></a>
 </h3>
@@ -6814,9 +6892,11 @@ The Name of the Resource Group in which the API Management Service exists.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/getGroup.ts#L54">interface <b>GetGroupResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getGroup.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetGroupResult-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/getGroup.ts#L55">property <b>apiManagementName</b></a>
 </h3>
@@ -6901,9 +6981,11 @@ The type of this API Management Group, such as `custom` or `external`.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/getProduct.ts#L36">interface <b>GetProductArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getProduct.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetProductArgs-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/getProduct.ts#L40">property <b>apiManagementName</b></a>
 </h3>
@@ -6942,9 +7024,11 @@ The Name of the Resource Group in which the API Management Service exists.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/getProduct.ts#L54">interface <b>GetProductResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getProduct.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetProductResult-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/getProduct.ts#L55">property <b>apiManagementName</b></a>
 </h3>
@@ -7062,9 +7146,11 @@ Any Terms and Conditions for this Product, which must be accepted by Developers 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/getService.ts#L34">interface <b>GetServiceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getService.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetServiceArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/getService.ts#L38">property <b>name</b></a>
 </h3>
@@ -7092,9 +7178,11 @@ The Name of the Resource Group in which the API Management Service exists.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/getService.ts#L48">interface <b>GetServiceResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getService.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetServiceResult-additionalLocations">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/getService.ts#L52">property <b>additionalLocations</b></a>
 </h3>
@@ -7313,9 +7401,11 @@ A mapping of tags assigned to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/getUser.ts#L36">interface <b>GetUserArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getUser.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetUserArgs-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/getUser.ts#L40">property <b>apiManagementName</b></a>
 </h3>
@@ -7354,9 +7444,11 @@ The Identifier for the User.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/getUser.ts#L54">interface <b>GetUserResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getUser.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetUserResult-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/getUser.ts#L55">property <b>apiManagementName</b></a>
 </h3>
@@ -7452,9 +7544,11 @@ The current state of this User, for example `active`, `blocked` or `pending`.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/group.ts#L162">interface <b>GroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Group resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GroupArgs-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/group.ts#L166">property <b>apiManagementName</b></a>
 </h3>
@@ -7537,9 +7631,11 @@ The type of this API Management Group. Possible values are `custom` and `externa
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/group.ts#L128">interface <b>GroupState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Group resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GroupState-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/group.ts#L132">property <b>apiManagementName</b></a>
 </h3>
@@ -7622,9 +7718,11 @@ The type of this API Management Group. Possible values are `custom` and `externa
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/groupUser.ts#L124">interface <b>GroupUserArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a GroupUser resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GroupUserArgs-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/groupUser.ts#L128">property <b>apiManagementName</b></a>
 </h3>
@@ -7674,9 +7772,11 @@ The ID of the API Management User which should be assigned to this API Managemen
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/groupUser.ts#L102">interface <b>GroupUserState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering GroupUser resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GroupUserState-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/groupUser.ts#L106">property <b>apiManagementName</b></a>
 </h3>
@@ -7726,9 +7826,11 @@ The ID of the API Management User which should be assigned to this API Managemen
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/logger.ts#L166">interface <b>LoggerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Logger resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LoggerArgs-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/logger.ts#L170">property <b>apiManagementName</b></a>
 </h3>
@@ -7816,9 +7918,11 @@ The name of the Resource Group in which the API Management Service exists. Chang
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/logger.ts#L132">interface <b>LoggerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Logger resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LoggerState-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/logger.ts#L136">property <b>apiManagementName</b></a>
 </h3>
@@ -7906,9 +8010,11 @@ The name of the Resource Group in which the API Management Service exists. Chang
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L181">interface <b>OpenIdConnectProviderArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a OpenIdConnectProvider resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="OpenIdConnectProviderArgs-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L185">property <b>apiManagementName</b></a>
 </h3>
@@ -8002,9 +8108,11 @@ The name of the Resource Group where the API Management Service exists. Changing
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L143">interface <b>OpenIdConnectProviderState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering OpenIdConnectProvider resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="OpenIdConnectProviderState-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/openIdConnectProvider.ts#L147">property <b>apiManagementName</b></a>
 </h3>
@@ -8098,9 +8206,11 @@ The name of the Resource Group where the API Management Service exists. Changing
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/productApi.ts#L133">interface <b>ProductApiArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ProductApi resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ProductApiArgs-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/productApi.ts#L137">property <b>apiManagementName</b></a>
 </h3>
@@ -8150,9 +8260,11 @@ The name of the Resource Group in which the API Management Service exists. Chang
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/productApi.ts#L111">interface <b>ProductApiState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ProductApi resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ProductApiState-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/productApi.ts#L115">property <b>apiManagementName</b></a>
 </h3>
@@ -8202,9 +8314,11 @@ The name of the Resource Group in which the API Management Service exists. Chang
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/product.ts#L202">interface <b>ProductArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Product resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ProductArgs-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/product.ts#L206">property <b>apiManagementName</b></a>
 </h3>
@@ -8320,9 +8434,11 @@ The Terms and Conditions for this Product, which must be accepted by Developers 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/productGroup.ts#L132">interface <b>ProductGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ProductGroup resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ProductGroupArgs-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/productGroup.ts#L136">property <b>apiManagementName</b></a>
 </h3>
@@ -8372,9 +8488,11 @@ The name of the Resource Group in which the API Management Service exists. Chang
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/productGroup.ts#L110">interface <b>ProductGroupState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ProductGroup resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ProductGroupState-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/productGroup.ts#L114">property <b>apiManagementName</b></a>
 </h3>
@@ -8424,9 +8542,11 @@ The name of the Resource Group in which the API Management Service exists. Chang
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/productPolicy.ts#L136">interface <b>ProductPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ProductPolicy resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ProductPolicyArgs-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/productPolicy.ts#L140">property <b>apiManagementName</b></a>
 </h3>
@@ -8487,9 +8607,11 @@ A link to a Policy XML Document, which must be publicly available.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/productPolicy.ts#L110">interface <b>ProductPolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ProductPolicy resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ProductPolicyState-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/productPolicy.ts#L114">property <b>apiManagementName</b></a>
 </h3>
@@ -8550,9 +8672,11 @@ A link to a Policy XML Document, which must be publicly available.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/product.ts#L156">interface <b>ProductState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Product resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ProductState-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/product.ts#L160">property <b>apiManagementName</b></a>
 </h3>
@@ -8668,9 +8792,11 @@ The Terms and Conditions for this Product, which must be accepted by Developers 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/property.ts#L165">interface <b>PropertyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Property resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PropertyArgs-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/property.ts#L169">property <b>apiManagementName</b></a>
 </h3>
@@ -8753,9 +8879,11 @@ The value of this API Management Property.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/property.ts#L131">interface <b>PropertyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Property resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PropertyState-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/property.ts#L135">property <b>apiManagementName</b></a>
 </h3>
@@ -8838,9 +8966,11 @@ The value of this API Management Property.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/service.ts#L307">interface <b>ServiceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Service resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceArgs-additionalLocation">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/service.ts#L311">property <b>additionalLocation</b></a>
 </h3>
@@ -9087,9 +9217,11 @@ A mapping of tags assigned to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/service.ts#L213">interface <b>ServiceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Service resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceState-additionalLocation">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/service.ts#L217">property <b>additionalLocation</b></a>
 </h3>
@@ -9402,9 +9534,11 @@ A mapping of tags assigned to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/subscription.ts#L175">interface <b>SubscriptionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Subscription resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SubscriptionArgs-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/subscription.ts#L179">property <b>apiManagementName</b></a>
 </h3>
@@ -9503,9 +9637,11 @@ The ID of the User which should be assigned to this Subscription. Changing this 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/subscription.ts#L139">interface <b>SubscriptionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Subscription resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SubscriptionState-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/subscription.ts#L143">property <b>apiManagementName</b></a>
 </h3>
@@ -9604,9 +9740,11 @@ The ID of the User which should be assigned to this Subscription. Changing this 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/user.ts#L202">interface <b>UserArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a User resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="UserArgs-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/user.ts#L206">property <b>apiManagementName</b></a>
 </h3>
@@ -9722,9 +9860,11 @@ The Identifier for this User, which must be unique within the API Management Ser
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/user.ts#L156">interface <b>UserState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering User resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="UserState-apiManagementName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/apimanagement/user.ts#L160">property <b>apiManagementName</b></a>
 </h3>

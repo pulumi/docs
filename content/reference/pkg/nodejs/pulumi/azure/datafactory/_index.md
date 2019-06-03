@@ -57,6 +57,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage a MySQL Dataset inside a Azure Data Factory.
 
@@ -89,6 +90,7 @@ const exampleLinkedServiceMysql = new azure.datafactory.LinkedServiceMysql("exam
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DatasetMysql-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/datasetMysql.ts#L95"> <b>constructor</b></a>
 </h3>
@@ -299,6 +301,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage a PostgreSQL Dataset inside a Azure Data Factory.
 
@@ -331,6 +334,7 @@ const exampleLinkedServicePostgresql = new azure.datafactory.LinkedServicePostgr
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DatasetPostgresql-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/datasetPostgresql.ts#L95"> <b>constructor</b></a>
 </h3>
@@ -541,6 +545,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage a SQL Server Table Dataset inside a Azure Data Factory.
 
@@ -573,6 +578,7 @@ const exampleLinkedServiceSqlServer = new azure.datafactory.LinkedServiceSqlServ
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DatasetSqlServerTable-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L95"> <b>constructor</b></a>
 </h3>
@@ -783,6 +789,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage an Azure Data Factory (Version 2).
 
@@ -803,6 +810,7 @@ const exampleFactory = new azure.datafactory.Factory("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Factory-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/factory.ts#L67"> <b>constructor</b></a>
 </h3>
@@ -982,6 +990,7 @@ A `vsts_configuration` block as defined below.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage a Linked Service (connection) between Data Lake Storage Gen2 and Azure Data Factory.
 
@@ -1014,6 +1023,7 @@ const exampleLinkedServiceDataLakeStorageGen2 = new azure.datafactory.LinkedServ
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L99"> <b>constructor</b></a>
 </h3>
@@ -1231,6 +1241,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage a Linked Service (connection) between MySQL and Azure Data Factory.
 
@@ -1259,6 +1270,7 @@ const exampleFactory = new azure.datafactory.Factory("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LinkedServiceMysql-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/linkedServiceMysql.ts#L83"> <b>constructor</b></a>
 </h3>
@@ -1443,6 +1455,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage a Linked Service (connection) between PostgreSQL and Azure Data Factory.
 
@@ -1471,6 +1484,7 @@ const exampleFactory = new azure.datafactory.Factory("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LinkedServicePostgresql-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L83"> <b>constructor</b></a>
 </h3>
@@ -1655,6 +1669,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage a Linked Service (connection) between a SQL Server and Azure Data Factory.
 
@@ -1683,6 +1698,7 @@ const exampleFactory = new azure.datafactory.Factory("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LinkedServiceSqlServer-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L83"> <b>constructor</b></a>
 </h3>
@@ -1867,6 +1883,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage a Pipeline inside a Azure Data Factory.
 
@@ -1892,6 +1909,7 @@ const examplePipeline = new azure.datafactory.Pipeline("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Pipeline-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/pipeline.ts#L72"> <b>constructor</b></a>
 </h3>
@@ -2053,9 +2071,11 @@ A map of variables to associate with the Data Factory Pipeline.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/datasetMysql.ts#L200">interface <b>DatasetMysqlArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a DatasetMysql resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DatasetMysqlArgs-additionalProperties">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/datasetMysql.ts#L204">property <b>additionalProperties</b></a>
 </h3>
@@ -2186,9 +2206,11 @@ The table name of the Data Factory Dataset MySQL.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/datasetMysql.ts#L150">interface <b>DatasetMysqlState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering DatasetMysql resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DatasetMysqlState-additionalProperties">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/datasetMysql.ts#L154">property <b>additionalProperties</b></a>
 </h3>
@@ -2319,9 +2341,11 @@ The table name of the Data Factory Dataset MySQL.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/datasetPostgresql.ts#L200">interface <b>DatasetPostgresqlArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a DatasetPostgresql resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DatasetPostgresqlArgs-additionalProperties">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/datasetPostgresql.ts#L204">property <b>additionalProperties</b></a>
 </h3>
@@ -2452,9 +2476,11 @@ The table name of the Data Factory Dataset PostgreSQL.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/datasetPostgresql.ts#L150">interface <b>DatasetPostgresqlState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering DatasetPostgresql resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DatasetPostgresqlState-additionalProperties">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/datasetPostgresql.ts#L154">property <b>additionalProperties</b></a>
 </h3>
@@ -2585,9 +2611,11 @@ The table name of the Data Factory Dataset PostgreSQL.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L200">interface <b>DatasetSqlServerTableArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a DatasetSqlServerTable resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DatasetSqlServerTableArgs-additionalProperties">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L204">property <b>additionalProperties</b></a>
 </h3>
@@ -2718,9 +2746,11 @@ The table name of the Data Factory Dataset SQL Server Table.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L150">interface <b>DatasetSqlServerTableState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering DatasetSqlServerTable resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DatasetSqlServerTableState-additionalProperties">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/datasetSqlServerTable.ts#L154">property <b>additionalProperties</b></a>
 </h3>
@@ -2851,9 +2881,11 @@ The table name of the Data Factory Dataset SQL Server Table.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/factory.ts#L142">interface <b>FactoryArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Factory resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FactoryArgs-githubConfiguration">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/factory.ts#L146">property <b>githubConfiguration</b></a>
 </h3>
@@ -2953,9 +2985,11 @@ A `vsts_configuration` block as defined below.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/factory.ts#L108">interface <b>FactoryState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Factory resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FactoryState-githubConfiguration">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/factory.ts#L112">property <b>githubConfiguration</b></a>
 </h3>
@@ -3055,9 +3089,11 @@ A `vsts_configuration` block as defined below.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L219">interface <b>LinkedServiceDataLakeStorageGen2Args</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a LinkedServiceDataLakeStorageGen2 resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2Args-additionalProperties">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L223">property <b>additionalProperties</b></a>
 </h3>
@@ -3195,9 +3231,11 @@ The endpoint for the Azure Data Lake Storage Gen2 service.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L165">interface <b>LinkedServiceDataLakeStorageGen2State</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering LinkedServiceDataLakeStorageGen2 resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LinkedServiceDataLakeStorageGen2State-additionalProperties">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/linkedServiceDataLakeStorageGen2.ts#L169">property <b>additionalProperties</b></a>
 </h3>
@@ -3335,9 +3373,11 @@ The endpoint for the Azure Data Lake Storage Gen2 service.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/linkedServiceMysql.ts#L176">interface <b>LinkedServiceMysqlArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a LinkedServiceMysql resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LinkedServiceMysqlArgs-additionalProperties">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/linkedServiceMysql.ts#L180">property <b>additionalProperties</b></a>
 </h3>
@@ -3442,9 +3482,11 @@ The name of the resource group in which to create the Data Factory Linked Servic
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/linkedServiceMysql.ts#L134">interface <b>LinkedServiceMysqlState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering LinkedServiceMysql resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LinkedServiceMysqlState-additionalProperties">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/linkedServiceMysql.ts#L138">property <b>additionalProperties</b></a>
 </h3>
@@ -3549,9 +3591,11 @@ The name of the resource group in which to create the Data Factory Linked Servic
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L176">interface <b>LinkedServicePostgresqlArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a LinkedServicePostgresql resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LinkedServicePostgresqlArgs-additionalProperties">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L180">property <b>additionalProperties</b></a>
 </h3>
@@ -3656,9 +3700,11 @@ The name of the resource group in which to create the Data Factory Linked Servic
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L134">interface <b>LinkedServicePostgresqlState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering LinkedServicePostgresql resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LinkedServicePostgresqlState-additionalProperties">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/linkedServicePostgresql.ts#L138">property <b>additionalProperties</b></a>
 </h3>
@@ -3763,9 +3809,11 @@ The name of the resource group in which to create the Data Factory Linked Servic
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L176">interface <b>LinkedServiceSqlServerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a LinkedServiceSqlServer resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LinkedServiceSqlServerArgs-additionalProperties">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L180">property <b>additionalProperties</b></a>
 </h3>
@@ -3870,9 +3918,11 @@ The name of the resource group in which to create the Data Factory Linked Servic
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L134">interface <b>LinkedServiceSqlServerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering LinkedServiceSqlServer resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LinkedServiceSqlServerState-additionalProperties">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/linkedServiceSqlServer.ts#L138">property <b>additionalProperties</b></a>
 </h3>
@@ -3977,9 +4027,11 @@ The name of the resource group in which to create the Data Factory Linked Servic
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/pipeline.ts#L150">interface <b>PipelineArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Pipeline resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PipelineArgs-annotations">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/pipeline.ts#L154">property <b>annotations</b></a>
 </h3>
@@ -4062,9 +4114,11 @@ A map of variables to associate with the Data Factory Pipeline.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/pipeline.ts#L116">interface <b>PipelineState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Pipeline resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PipelineState-annotations">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datafactory/pipeline.ts#L120">property <b>annotations</b></a>
 </h3>

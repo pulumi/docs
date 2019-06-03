@@ -32,10 +32,12 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Event is a report of an event somewhere in the cluster. It generally denotes some state
 change in the system.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Event-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/events/v1beta1/Event.ts#L123"> <b>constructor</b></a>
 </h3>
@@ -328,9 +330,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 EventList is a list of Event objects.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="EventList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/events/v1beta1/EventList.ts#L56"> <b>constructor</b></a>
 </h3>

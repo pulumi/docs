@@ -63,10 +63,12 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Binding ties one object to another; for example, a pod is bound to a node by a scheduler.
 Deprecated in 1.7, please use the bindings subresource of pods instead.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Binding-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/core/v1/Binding.ts#L57"> <b>constructor</b></a>
 </h3>
@@ -216,9 +218,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 ComponentStatus (and ComponentStatusList) holds the cluster validation info.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ComponentStatus-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/core/v1/ComponentStatus.ts#L56"> <b>constructor</b></a>
 </h3>
@@ -368,9 +372,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Status of all the conditions for the component as a list of ComponentStatus objects.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ComponentStatusList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/core/v1/ComponentStatusList.ts#L56"> <b>constructor</b></a>
 </h3>
@@ -520,9 +526,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 ConfigMap holds configuration data for pods to consume.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ConfigMap-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/core/v1/ConfigMap.ts#L67"> <b>constructor</b></a>
 </h3>
@@ -689,9 +697,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 ConfigMapList is a resource containing a list of ConfigMap objects.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ConfigMapList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/core/v1/ConfigMapList.ts#L55"> <b>constructor</b></a>
 </h3>
@@ -840,6 +850,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Endpoints is a collection of endpoints that implement the actual service. Example:
   Name: "mysvc",
@@ -854,6 +865,7 @@ Endpoints is a collection of endpoints that implement the actual service. Exampl
     },
  ]
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Endpoints-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/core/v1/Endpoints.ts#L72"> <b>constructor</b></a>
 </h3>
@@ -1008,9 +1020,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 EndpointsList is a list of endpoints.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="EndpointsList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/core/v1/EndpointsList.ts#L56"> <b>constructor</b></a>
 </h3>
@@ -1160,9 +1174,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Event is a report of an event somewhere in the cluster.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Event-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/core/v1/Event.ts#L122"> <b>constructor</b></a>
 </h3>
@@ -1456,9 +1472,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 EventList is a list of events.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="EventList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/core/v1/EventList.ts#L56"> <b>constructor</b></a>
 </h3>
@@ -1608,9 +1626,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 LimitRange sets resource usage limits for each kind of resource in a Namespace.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LimitRange-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/core/v1/LimitRange.ts#L57"> <b>constructor</b></a>
 </h3>
@@ -1761,9 +1781,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 LimitRangeList is a list of LimitRange items.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LimitRangeList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/core/v1/LimitRangeList.ts#L57"> <b>constructor</b></a>
 </h3>
@@ -1914,9 +1936,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Namespace provides a scope for Names. Use of multiple namespaces is optional.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Namespace-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/core/v1/Namespace.ts#L63"> <b>constructor</b></a>
 </h3>
@@ -2079,9 +2103,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 NamespaceList is a list of Namespaces.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NamespaceList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/core/v1/NamespaceList.ts#L57"> <b>constructor</b></a>
 </h3>
@@ -2232,10 +2258,12 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Node is a worker node in Kubernetes. Each node will have a unique identifier in the cache
 (i.e. in etcd).
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Node-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/core/v1/Node.ts#L64"> <b>constructor</b></a>
 </h3>
@@ -2398,9 +2426,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 NodeList is the whole list of all Nodes which have been registered with master.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NodeList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/core/v1/NodeList.ts#L56"> <b>constructor</b></a>
 </h3>
@@ -2550,10 +2580,12 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 PersistentVolume (PV) is a storage resource provisioned by an administrator. It is analogous
 to a node. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PersistentVolume-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/core/v1/PersistentVolume.ts#L66"> <b>constructor</b></a>
 </h3>
@@ -2718,9 +2750,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 PersistentVolumeClaim is a user's request for and claim to a persistent volume
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PersistentVolumeClaim-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/core/v1/PersistentVolumeClaim.ts#L64"> <b>constructor</b></a>
 </h3>
@@ -2884,9 +2918,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 PersistentVolumeClaimList is a list of PersistentVolumeClaim items.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PersistentVolumeClaimList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/core/v1/PersistentVolumeClaimList.ts#L57"> <b>constructor</b></a>
 </h3>
@@ -3037,9 +3073,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 PersistentVolumeList is a list of PersistentVolume items.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PersistentVolumeList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/core/v1/PersistentVolumeList.ts#L57"> <b>constructor</b></a>
 </h3>
@@ -3190,10 +3228,12 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Pod is a collection of containers that can run on a host. This resource is created by clients
 and scheduled onto hosts.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Pod-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/core/v1/Pod.ts#L65"> <b>constructor</b></a>
 </h3>
@@ -3357,9 +3397,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 PodList is a list of Pods.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PodList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/core/v1/PodList.ts#L56"> <b>constructor</b></a>
 </h3>
@@ -3509,9 +3551,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 PodTemplate describes a template for creating copies of a predefined pod.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PodTemplate-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/core/v1/PodTemplate.ts#L57"> <b>constructor</b></a>
 </h3>
@@ -3662,9 +3706,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 PodTemplateList is a list of PodTemplates.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PodTemplateList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/core/v1/PodTemplateList.ts#L56"> <b>constructor</b></a>
 </h3>
@@ -3814,9 +3860,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 ReplicationController represents the configuration of a replication controller.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ReplicationController-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/core/v1/ReplicationController.ts#L65"> <b>constructor</b></a>
 </h3>
@@ -3981,9 +4029,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 ReplicationControllerList is a collection of replication controllers.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ReplicationControllerList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/core/v1/ReplicationControllerList.ts#L57"> <b>constructor</b></a>
 </h3>
@@ -4134,9 +4184,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 ResourceQuota sets aggregate quota restrictions enforced per namespace
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceQuota-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/core/v1/ResourceQuota.ts#L63"> <b>constructor</b></a>
 </h3>
@@ -4299,9 +4351,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 ResourceQuotaList is a list of ResourceQuota items.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceQuotaList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/core/v1/ResourceQuotaList.ts#L57"> <b>constructor</b></a>
 </h3>
@@ -4452,10 +4506,12 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Secret holds secret data of a certain type. The total bytes of the values in the Data field
 must be less than MaxSecretSize bytes.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Secret-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/core/v1/Secret.ts#L72"> <b>constructor</b></a>
 </h3>
@@ -4632,9 +4688,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 SecretList is a list of Secret.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SecretList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/core/v1/SecretList.ts#L57"> <b>constructor</b></a>
 </h3>
@@ -4785,11 +4843,13 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Service is a named abstraction of software service (for example, mysql) consisting of local
 port (for example 3306) that the proxy listens on, and the selector that determines which
 pods will answer requests sent through the proxy.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Service-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/core/v1/Service.ts#L65"> <b>constructor</b></a>
 </h3>
@@ -4952,11 +5012,13 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 ServiceAccount binds together: * a name, understood by users, and perhaps by peripheral
 systems, for an identity * a principal that can be authenticated and authorized * a set of
 secrets
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceAccount-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/core/v1/ServiceAccount.ts#L74"> <b>constructor</b></a>
 </h3>
@@ -5134,9 +5196,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 ServiceAccountList is a list of ServiceAccount objects
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceAccountList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/core/v1/ServiceAccountList.ts#L57"> <b>constructor</b></a>
 </h3>
@@ -5287,9 +5351,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 ServiceList holds a list of services.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/core/v1/ServiceList.ts#L56"> <b>constructor</b></a>
 </h3>

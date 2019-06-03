@@ -33,6 +33,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Allows you to manage an Azure SQL Elastic Pool via the `2017-10-01-preview` API which allows for `vCore` and `DTU` based configurations.
 
@@ -73,6 +74,7 @@ const testElasticPool = new azure.mssql.ElasticPool("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ElasticPool-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mssql/elasticPool.ts#L100"> <b>constructor</b></a>
 </h3>
@@ -289,9 +291,11 @@ Whether or not this elastic pool is zone redundant. `tier` needs to be `Premium`
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mssql/elasticPool.ts#L205">interface <b>ElasticPoolArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ElasticPool resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ElasticPoolArgs-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mssql/elasticPool.ts#L209">property <b>location</b></a>
 </h3>
@@ -415,9 +419,11 @@ Whether or not this elastic pool is zone redundant. `tier` needs to be `Premium`
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mssql/elasticPool.ts#L158">interface <b>ElasticPoolState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ElasticPool resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ElasticPoolState-elasticPoolProperties">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mssql/elasticPool.ts#L159">property <b>elasticPoolProperties</b></a>
 </h3>

@@ -33,6 +33,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an Azure DDoS Protection Plan.
 
@@ -57,6 +58,7 @@ const testPlan = new azure.ddosprotection.Plan("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Plan-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/ddosprotection/plan.ts#L63"> <b>constructor</b></a>
 </h3>
@@ -196,9 +198,11 @@ The Resource ID list of the Virtual Networks associated with DDoS Protection Pla
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/ddosprotection/plan.ts#L126">interface <b>PlanArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Plan resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PlanArgs-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/ddosprotection/plan.ts#L130">property <b>location</b></a>
 </h3>
@@ -248,9 +252,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/ddosprotection/plan.ts#L100">interface <b>PlanState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Plan resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PlanState-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/ddosprotection/plan.ts#L104">property <b>location</b></a>
 </h3>

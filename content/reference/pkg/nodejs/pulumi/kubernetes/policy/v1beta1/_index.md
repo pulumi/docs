@@ -34,10 +34,12 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 PodDisruptionBudget is an object to define the max disruption that can be caused to a
 collection of pods
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PodDisruptionBudget-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/policy/v1beta1/PodDisruptionBudget.ts#L59"> <b>constructor</b></a>
 </h3>
@@ -194,9 +196,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 PodDisruptionBudgetList is a collection of PodDisruptionBudgets.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PodDisruptionBudgetList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/policy/v1beta1/PodDisruptionBudgetList.ts#L51"> <b>constructor</b></a>
 </h3>
@@ -339,10 +343,12 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 PodSecurityPolicy governs the ability to make requests that affect the Security Context that
 will be applied to a pod and container.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PodSecurityPolicy-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/policy/v1beta1/PodSecurityPolicy.ts#L57"> <b>constructor</b></a>
 </h3>
@@ -492,9 +498,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 PodSecurityPolicyList is a list of PodSecurityPolicy objects.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PodSecurityPolicyList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/policy/v1beta1/PodSecurityPolicyList.ts#L56"> <b>constructor</b></a>
 </h3>

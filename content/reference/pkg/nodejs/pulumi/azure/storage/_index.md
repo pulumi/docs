@@ -66,6 +66,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage an Azure Storage Account.
 
@@ -133,6 +134,7 @@ const testsa = new azure.storage.Account("testsa", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Account-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/account.ts#L284"> <b>constructor</b></a>
 </h3>
@@ -770,6 +772,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage an Azure Storage Blob.
 
@@ -806,6 +809,7 @@ const testsb = new azure.storage.Blob("testsb", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Blob-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/blob.ts#L111"> <b>constructor</b></a>
 </h3>
@@ -1108,6 +1112,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage an Azure Storage Container.
 
@@ -1139,6 +1144,7 @@ const testContainer = new azure.storage.Container("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Container-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/container.ts#L72"> <b>constructor</b></a>
 </h3>
@@ -1295,6 +1301,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage an Azure Storage Queue.
 
@@ -1322,6 +1329,7 @@ const testQueue = new azure.storage.Queue("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Queue-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/queue.ts#L60"> <b>constructor</b></a>
 </h3>
@@ -1526,6 +1534,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage an Azure Storage File Share.
 
@@ -1554,6 +1563,7 @@ const testshare = new azure.storage.Share("testshare", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Share-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/share.ts#L69"> <b>constructor</b></a>
 </h3>
@@ -1696,6 +1706,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage an Azure Storage Table.
 
@@ -1723,6 +1734,7 @@ const testTable = new azure.storage.Table("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Table-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/table.ts#L60"> <b>constructor</b></a>
 </h3>
@@ -2127,9 +2139,11 @@ export const sasUrlQueryString = test.sas;
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/account.ts#L619">interface <b>AccountArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Account resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AccountArgs-accessTier">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/account.ts#L623">property <b>accessTier</b></a>
 </h3>
@@ -2335,9 +2349,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/account.ts#L415">interface <b>AccountState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Account resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AccountState-accessTier">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/account.ts#L419">property <b>accessTier</b></a>
 </h3>
@@ -2895,9 +2911,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/blob.ts#L232">interface <b>BlobArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Blob resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="BlobArgs-attempts">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/blob.ts#L236">property <b>attempts</b></a>
 </h3>
@@ -3040,9 +3058,11 @@ this becomes required.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Context'>Context</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;</pre>
+{{% md %}}
 
 Data that will be passed along in the context object to the BlobCallback.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="BlobContext-done">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/appservice/zMixins.ts#L46">method <b>done</b></a>
 </h3>
@@ -3178,9 +3198,11 @@ HTTP response object. Provided to your function when using HTTP Bindings.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/blob.ts#L170">interface <b>BlobState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Blob resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="BlobState-attempts">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/blob.ts#L174">property <b>attempts</b></a>
 </h3>
@@ -3333,9 +3355,11 @@ The URL of the blob
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/container.ts#L140">interface <b>ContainerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Container resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ContainerArgs-containerAccessType">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/container.ts#L144">property <b>containerAccessType</b></a>
 </h3>
@@ -3387,9 +3411,11 @@ Changing this forces a new resource to be created.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/container.ts#L112">interface <b>ContainerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Container resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ContainerState-containerAccessType">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/container.ts#L116">property <b>containerAccessType</b></a>
 </h3>
@@ -3452,9 +3478,11 @@ Changing this forces a new resource to be created.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/getAccount.ts#L34">interface <b>GetAccountArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getAccount.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetAccountArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/getAccount.ts#L38">property <b>name</b></a>
 </h3>
@@ -3482,9 +3510,11 @@ Specifies the name of the resource group the Storage Account is located in.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/getAccount.ts#L48">interface <b>GetAccountResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getAccount.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetAccountResult-accessTier">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/getAccount.ts#L52">property <b>accessTier</b></a>
 </h3>
@@ -4009,9 +4039,11 @@ A mapping of tags to assigned to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/getAccountSAS.ts#L81">interface <b>GetAccountSASArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getAccountSAS.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetAccountSASArgs-connectionString">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/getAccountSAS.ts#L85">property <b>connectionString</b></a>
 </h3>
@@ -4112,9 +4144,11 @@ The starting time and date of validity of this SAS. Must be a valid ISO-8601 for
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/getAccountSAS.ts#L115">interface <b>GetAccountSASResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getAccountSAS.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetAccountSASResult-connectionString">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/getAccountSAS.ts#L116">property <b>connectionString</b></a>
 </h3>
@@ -4216,9 +4250,11 @@ The computed Account Shared Access Signature (SAS).
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/queue.ts#L116">interface <b>QueueArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Queue resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="QueueArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/queue.ts#L120">property <b>name</b></a>
 </h3>
@@ -4260,9 +4296,11 @@ Changing this forces a new resource to be created.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Context'>Context</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;</pre>
+{{% md %}}
 
 Data that will be passed along in the context object to the QueueContext.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="QueueContext-done">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/appservice/zMixins.ts#L46">method <b>done</b></a>
 </h3>
@@ -4385,11 +4423,13 @@ HTTP response object. Provided to your function when using HTTP Bindings.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#HostSettings'>HostSettings</a></pre>
+{{% md %}}
 
 Host settings specific to the Storage Queue plugin.
 
 For more details see https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-storage-queue#host-json
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="QueueHostSettings-aggregator">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/appservice/zMixins.ts#L170">property <b>aggregator</b></a>
 </h3>
@@ -4502,9 +4542,11 @@ support.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/queue.ts#L96">interface <b>QueueState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Queue resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="QueueState-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/queue.ts#L100">property <b>name</b></a>
 </h3>
@@ -4545,9 +4587,11 @@ Changing this forces a new resource to be created.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/share.ts#L137">interface <b>ShareArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Share resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ShareArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/share.ts#L141">property <b>name</b></a>
 </h3>
@@ -4599,9 +4643,11 @@ Changing this forces a new resource to be created.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/share.ts#L109">interface <b>ShareState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Share resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ShareState-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/share.ts#L113">property <b>name</b></a>
 </h3>
@@ -4664,9 +4710,11 @@ The URL of the share
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/table.ts#L116">interface <b>TableArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Table resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="TableArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/table.ts#L120">property <b>name</b></a>
 </h3>
@@ -4707,9 +4755,11 @@ Changing this forces a new resource to be created.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/table.ts#L96">interface <b>TableState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Table resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="TableState-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/table.ts#L100">property <b>name</b></a>
 </h3>
@@ -4750,9 +4800,11 @@ Changing this forces a new resource to be created.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/zipBlob.ts#L110">interface <b>ZipBlobArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ZipBlob resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ZipBlobArgs-attempts">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/zipBlob.ts#L111">property <b>attempts</b></a>
 </h3>
@@ -4854,9 +4906,11 @@ The set of arguments for constructing a ZipBlob resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/zipBlob.ts#L91">interface <b>ZipBlobState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ZipBlob resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ZipBlobState-attempts">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/zipBlob.ts#L92">property <b>attempts</b></a>
 </h3>
@@ -4967,9 +5021,11 @@ Input properties used for looking up and filtering ZipBlob resources.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> BlobCallback = appservice.Callback&lt;<a href='#BlobContext'>BlobContext</a>, Buffer, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;;</pre>
+{{% md %}}
 
 Signature of the callback that can receive blob notifications.
 
+{{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="BlobEventSubscriptionArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/zMixins.ts#L107">type <b>BlobEventSubscriptionArgs</b></a>
@@ -4988,9 +5044,11 @@ Signature of the callback that can receive blob notifications.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> QueueCallback = appservice.Callback&lt;<a href='#QueueContext'>QueueContext</a>, Buffer, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;;</pre>
+{{% md %}}
 
 Signature of the callback that can receive queue notifications.
 
+{{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="QueueEventSubscriptionArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/storage/zMixins.ts#L295">type <b>QueueEventSubscriptionArgs</b></a>

@@ -39,6 +39,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Scheduler Job.
 
@@ -197,6 +198,7 @@ const storage_once_now = new azure.scheduler.Job("storage-once-now", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Job-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/scheduler/job.ts#L221"> <b>constructor</b></a>
 </h3>
@@ -473,6 +475,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Scheduler Job Collection.
 
@@ -502,6 +505,7 @@ const jobs = new azure.scheduler.JobCollection("jobs", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="JobCollection-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/scheduler/jobCollection.ts#L76"> <b>constructor</b></a>
 </h3>
@@ -697,9 +701,11 @@ export const jobCollectionState = azurerm_scheduler_job_collection_jobs.state;
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/scheduler/getJobCollection.ts#L36">interface <b>GetJobCollectionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getJobCollection.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetJobCollectionArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/scheduler/getJobCollection.ts#L40">property <b>name</b></a>
 </h3>
@@ -727,9 +733,11 @@ Specifies the name of the resource group in which the Scheduler Job Collection r
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/scheduler/getJobCollection.ts#L50">interface <b>GetJobCollectionResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getJobCollection.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetJobCollectionResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/scheduler/getJobCollection.ts#L76">property <b>id</b></a>
 </h3>
@@ -822,9 +830,11 @@ A mapping of tags assigned to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/scheduler/job.ts#L323">interface <b>JobArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Job resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="JobArgs-actionStorageQueue">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/scheduler/job.ts#L327">property <b>actionStorageQueue</b></a>
 </h3>
@@ -1021,9 +1031,11 @@ The sets or gets the current state of the job. Can be set to either `Enabled` or
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/scheduler/jobCollection.ts#L154">interface <b>JobCollectionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a JobCollection resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="JobCollectionArgs-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/scheduler/jobCollection.ts#L158">property <b>location</b></a>
 </h3>
@@ -1111,9 +1123,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/scheduler/jobCollection.ts#L120">interface <b>JobCollectionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering JobCollection resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="JobCollectionState-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/scheduler/jobCollection.ts#L124">property <b>location</b></a>
 </h3>
@@ -1201,9 +1215,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/scheduler/job.ts#L273">interface <b>JobState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Job resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="JobState-actionStorageQueue">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/scheduler/job.ts#L277">property <b>actionStorageQueue</b></a>
 </h3>

@@ -63,6 +63,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an Action Group within Azure Monitor.
 
@@ -102,6 +103,7 @@ const testActionGroup = new azure.monitoring.ActionGroup("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ActionGroup-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/actionGroup.ts#L90"> <b>constructor</b></a>
 </h3>
@@ -285,6 +287,7 @@ One or more `webhook_receiver ` blocks as defined below.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an Activity Log Alert within Azure Monitor.
 
@@ -333,6 +336,7 @@ const mainActivityLogAlert = new azure.monitoring.ActivityLogAlert("main", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ActivityLogAlert-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/activityLogAlert.ts#L99"> <b>constructor</b></a>
 </h3>
@@ -520,6 +524,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a [metric-based alert rule](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitor-quick-resource-metric-alert-portal) in Azure Monitor.
 
@@ -589,6 +594,7 @@ const test = new azure.monitoring.AlertRule("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AlertRule-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/alertRule.ts#L144"> <b>constructor</b></a>
 </h3>
@@ -834,6 +840,7 @@ A `webhook_action` block as defined below.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a AutoScale Setting which can be applied to Virtual Machine Scale Sets, App Services and other scalable resources.
 
@@ -1069,6 +1076,7 @@ const testAutoscaleSetting = new azure.monitoring.AutoscaleSetting("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AutoscaleSetting-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/autoscaleSetting.ts#L286"> <b>constructor</b></a>
 </h3>
@@ -1288,6 +1296,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Diagnostic Setting for an existing Resource.
 
@@ -1329,6 +1338,7 @@ const testDiagnosticSetting = new azure.monitoring.DiagnosticSetting("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DiagnosticSetting-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/diagnosticSetting.ts#L92"> <b>constructor</b></a>
 </h3>
@@ -1516,6 +1526,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a [Log Profile](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-overview-activity-logs#export-the-activity-log-with-a-log-profile). A Log Profile configures how Activity Logs are exported.
 
@@ -1565,6 +1576,7 @@ const testLogProfile = new azure.monitoring.LogProfile("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LogProfile-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/logProfile.ts#L93"> <b>constructor</b></a>
 </h3>
@@ -1720,6 +1732,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Metric Alert within Azure Monitor.
 
@@ -1772,6 +1785,7 @@ const test = new azure.monitoring.MetricAlert("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="MetricAlert-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/metricAlert.ts#L119"> <b>constructor</b></a>
 </h3>
@@ -2003,6 +2017,7 @@ The period of time that is used to monitor alert activity, represented in ISO 86
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a [metric-based alert rule](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitor-quick-resource-metric-alert-portal) in Azure Monitor.
 
@@ -2070,6 +2085,7 @@ const test = new azure.monitoring.MetricAlertRule("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="MetricAlertRule-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/metricAlertRule.ts#L142"> <b>constructor</b></a>
 </h3>
@@ -2395,9 +2411,11 @@ export const logProfileStorageAccountId = test.storageAccountId;
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/actionGroup.ts#L174">interface <b>ActionGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ActionGroup resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ActionGroupArgs-emailReceivers">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/actionGroup.ts#L178">property <b>emailReceivers</b></a>
 </h3>
@@ -2501,9 +2519,11 @@ One or more `webhook_receiver ` blocks as defined below.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/actionGroup.ts#L136">interface <b>ActionGroupState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ActionGroup resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ActionGroupState-emailReceivers">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/actionGroup.ts#L140">property <b>emailReceivers</b></a>
 </h3>
@@ -2607,9 +2627,11 @@ One or more `webhook_receiver ` blocks as defined below.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/activityLogAlert.ts#L186">interface <b>ActivityLogAlertArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ActivityLogAlert resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ActivityLogAlertArgs-actions">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/activityLogAlert.ts#L190">property <b>actions</b></a>
 </h3>
@@ -2717,9 +2739,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/activityLogAlert.ts#L148">interface <b>ActivityLogAlertState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ActivityLogAlert resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ActivityLogAlertState-actions">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/activityLogAlert.ts#L152">property <b>actions</b></a>
 </h3>
@@ -2827,9 +2851,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/alertRule.ts#L279">interface <b>AlertRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a AlertRule resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AlertRuleArgs-aggregation">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/alertRule.ts#L283">property <b>aggregation</b></a>
 </h3>
@@ -2995,9 +3021,11 @@ A `webhook_action` block as defined below.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/alertRule.ts#L217">interface <b>AlertRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering AlertRule resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AlertRuleState-aggregation">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/alertRule.ts#L221">property <b>aggregation</b></a>
 </h3>
@@ -3163,9 +3191,11 @@ A `webhook_action` block as defined below.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/autoscaleSetting.ts#L373">interface <b>AutoscaleSettingArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a AutoscaleSetting resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AutoscaleSettingArgs-enabled">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/autoscaleSetting.ts#L377">property <b>enabled</b></a>
 </h3>
@@ -3305,9 +3335,11 @@ Specifies the resource ID of the resource that the autoscale setting should be a
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/autoscaleSetting.ts#L335">interface <b>AutoscaleSettingState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering AutoscaleSetting resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AutoscaleSettingState-enabled">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/autoscaleSetting.ts#L339">property <b>enabled</b></a>
 </h3>
@@ -3447,9 +3479,11 @@ Specifies the resource ID of the resource that the autoscale setting should be a
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/diagnosticSetting.ts#L173">interface <b>DiagnosticSettingArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a DiagnosticSetting resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DiagnosticSettingArgs-eventhubAuthorizationRuleId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/diagnosticSetting.ts#L177">property <b>eventhubAuthorizationRuleId</b></a>
 </h3>
@@ -3557,9 +3591,11 @@ The ID of an existing Resource on which to configure Diagnostic Settings. Changi
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/diagnosticSetting.ts#L135">interface <b>DiagnosticSettingState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering DiagnosticSetting resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DiagnosticSettingState-eventhubAuthorizationRuleId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/diagnosticSetting.ts#L139">property <b>eventhubAuthorizationRuleId</b></a>
 </h3>
@@ -3667,9 +3703,11 @@ The ID of an existing Resource on which to configure Diagnostic Settings. Changi
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/getActionGroup.ts#L34">interface <b>GetActionGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getActionGroup.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetActionGroupArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/getActionGroup.ts#L38">property <b>name</b></a>
 </h3>
@@ -3697,9 +3735,11 @@ Specifies the name of the resource group the Action Group is located in.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/getActionGroup.ts#L48">interface <b>GetActionGroupResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getActionGroup.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetActionGroupResult-emailReceivers">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/getActionGroup.ts#L52">property <b>emailReceivers</b></a>
 </h3>
@@ -3800,9 +3840,11 @@ One or more `webhook_receiver ` blocks as defined below.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/getDiagnosticCategories.ts#L34">interface <b>GetDiagnosticCategoriesArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getDiagnosticCategories.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetDiagnosticCategoriesArgs-resourceId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/getDiagnosticCategories.ts#L38">property <b>resourceId</b></a>
 </h3>
@@ -3819,9 +3861,11 @@ The ID of an existing Resource which Monitor Diagnostics Categories should be re
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/getDiagnosticCategories.ts#L44">interface <b>GetDiagnosticCategoriesResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getDiagnosticCategories.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetDiagnosticCategoriesResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/getDiagnosticCategories.ts#L57">property <b>id</b></a>
 </h3>
@@ -3868,9 +3912,11 @@ A list of the Metric Categories supported for this Resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/getLogProfile.ts#L32">interface <b>GetLogProfileArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getLogProfile.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetLogProfileArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/getLogProfile.ts#L36">property <b>name</b></a>
 </h3>
@@ -3887,9 +3933,11 @@ Specifies the Name of the Log Profile.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/getLogProfile.ts#L42">interface <b>GetLogProfileResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getLogProfile.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetLogProfileResult-categories">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/getLogProfile.ts#L46">property <b>categories</b></a>
 </h3>
@@ -3969,9 +4017,11 @@ The resource id of the storage account in which the Activity Log is stored.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/logProfile.ts#L169">interface <b>LogProfileArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a LogProfile resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LogProfileArgs-categories">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/logProfile.ts#L173">property <b>categories</b></a>
 </h3>
@@ -4047,9 +4097,11 @@ The resource ID of the storage account in which the Activity Log is stored. At l
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/logProfile.ts#L138">interface <b>LogProfileState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering LogProfile resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LogProfileState-categories">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/logProfile.ts#L142">property <b>categories</b></a>
 </h3>
@@ -4125,9 +4177,11 @@ The resource ID of the storage account in which the Activity Log is stored. At l
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/metricAlert.ts#L230">interface <b>MetricAlertArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a MetricAlert resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="MetricAlertArgs-actions">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/metricAlert.ts#L234">property <b>actions</b></a>
 </h3>
@@ -4279,9 +4333,11 @@ The period of time that is used to monitor alert activity, represented in ISO 86
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/metricAlertRule.ts#L277">interface <b>MetricAlertRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a MetricAlertRule resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="MetricAlertRuleArgs-aggregation">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/metricAlertRule.ts#L281">property <b>aggregation</b></a>
 </h3>
@@ -4447,9 +4503,11 @@ A `webhook_action` block as defined below.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/metricAlertRule.ts#L215">interface <b>MetricAlertRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering MetricAlertRule resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="MetricAlertRuleState-aggregation">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/metricAlertRule.ts#L219">property <b>aggregation</b></a>
 </h3>
@@ -4615,9 +4673,11 @@ A `webhook_action` block as defined below.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/metricAlert.ts#L176">interface <b>MetricAlertState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering MetricAlert resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="MetricAlertState-actions">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/monitoring/metricAlert.ts#L180">property <b>actions</b></a>
 </h3>

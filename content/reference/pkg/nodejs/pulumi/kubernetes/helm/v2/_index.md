@@ -35,6 +35,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#CollectionComponentResource'>CollectionComponentResource</a></pre>
+{{% md %}}
 
 Chart is a component representing a collection of resources described by an arbitrary Helm
 Chart. The Chart can be fetched from any source that is accessible to the `helm` command
@@ -55,6 +56,7 @@ that (e.g.) namespaces are created before things that are in them. But, because 
 engine delivers the these calls asynchronously, they could arrive "somewhat" out of order.
 This should not affect many Helm charts.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Chart-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/helm/v2/helm.ts#L98"> <b>constructor</b></a>
 </h3>
@@ -10233,9 +10235,11 @@ The version of the chart to deploy. If not provided, the latest version will be 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/helm/v2/helm.ts#L267">interface <b>FetchOpts</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Additional options to customize the fetching of the Helm chart.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FetchOpts-caFile">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/helm/v2/helm.ts#L272">property <b>caFile</b></a>
 </h3>

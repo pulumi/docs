@@ -57,6 +57,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Key Vault Access Policy.
 
@@ -64,6 +65,7 @@ Manages a Key Vault Access Policy.
 
 > **NOTE:** Azure permits a maximum of 1024 Access Policies per Key Vault - [more information can be found in this document](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-secure-your-key-vault#data-plane-access-control).
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AccessPolicy-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/accessPolicy.ts#L75"> <b>constructor</b></a>
 </h3>
@@ -268,6 +270,7 @@ forces a new resource to be created.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Key Vault Certificate.
 
@@ -487,6 +490,7 @@ const testCertifiate = new azure.keyvault.Certifiate("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Certifiate-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/certifiate.ts#L275"> <b>constructor</b></a>
 </h3>
@@ -715,6 +719,7 @@ The current version of the Key Vault Certificate.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Key Vault Key.
 
@@ -773,6 +778,7 @@ const generated = new azure.keyvault.Key("generated", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Key-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/key.ts#L114"> <b>constructor</b></a>
 </h3>
@@ -965,6 +971,7 @@ The current version of the Key Vault Key.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Key Vault.
 
@@ -1006,6 +1013,7 @@ const testKeyVault = new azure.keyvault.KeyVault("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="KeyVault-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/keyVault.ts#L108"> <b>constructor</b></a>
 </h3>
@@ -1238,6 +1246,7 @@ The URI of the Key Vault, used for performing operations on keys and secrets.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Key Vault Secret.
 
@@ -1298,6 +1307,7 @@ const testSecret = new azure.keyvault.Secret("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Secret-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/secret.ts#L104"> <b>constructor</b></a>
 </h3>
@@ -1556,9 +1566,11 @@ export const secretValue = test.value;
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/accessPolicy.ts#L180">interface <b>AccessPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a AccessPolicy resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AccessPolicyArgs-applicationId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/accessPolicy.ts#L184">property <b>applicationId</b></a>
 </h3>
@@ -1683,9 +1695,11 @@ forces a new resource to be created.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/accessPolicy.ts#L125">interface <b>AccessPolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering AccessPolicy resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AccessPolicyState-applicationId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/accessPolicy.ts#L129">property <b>applicationId</b></a>
 </h3>
@@ -1810,9 +1824,11 @@ forces a new resource to be created.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/certifiate.ts#L365">interface <b>CertifiateArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Certifiate resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CertifiateArgs-certificate">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/certifiate.ts#L369">property <b>certificate</b></a>
 </h3>
@@ -1917,9 +1933,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/certifiate.ts#L322">interface <b>CertifiateState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Certifiate resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CertifiateState-certificate">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/certifiate.ts#L326">property <b>certificate</b></a>
 </h3>
@@ -2068,9 +2086,11 @@ The current version of the Key Vault Certificate.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/getAccessPolicy.ts#L19">interface <b>GetAccessPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getAccessPolicy.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetAccessPolicyArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/getAccessPolicy.ts#L25">property <b>name</b></a>
 </h3>
@@ -2089,9 +2109,11 @@ Specifies the name of the Management Template. Possible values are: `Key Managem
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/getAccessPolicy.ts#L31">interface <b>GetAccessPolicyResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getAccessPolicy.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetAccessPolicyResult-certificatePermissions">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/getAccessPolicy.ts#L35">property <b>certificatePermissions</b></a>
 </h3>
@@ -2149,9 +2171,11 @@ the secret permissions for the access policy
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/getKey.ts#L38">interface <b>GetKeyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getKey.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetKeyArgs-keyVaultId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/getKey.ts#L39">property <b>keyVaultId</b></a>
 </h3>
@@ -2187,9 +2211,11 @@ Specifies the ID of the Key Vault Key Vault instance where the Key resides, avai
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/getKey.ts#L53">interface <b>GetKeyResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getKey.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetKeyResult-e">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/getKey.ts#L57">property <b>e</b></a>
 </h3>
@@ -2307,9 +2333,11 @@ The current version of the Key Vault Key.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/getKeyVault.ts#L34">interface <b>GetKeyVaultArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getKeyVault.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetKeyVaultArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/getKeyVault.ts#L38">property <b>name</b></a>
 </h3>
@@ -2337,9 +2365,11 @@ The name of the Resource Group in which the Key Vault exists.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/getKeyVault.ts#L48">interface <b>GetKeyVaultResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getKeyVault.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetKeyVaultResult-accessPolicies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/getKeyVault.ts#L52">property <b>accessPolicies</b></a>
 </h3>
@@ -2497,9 +2527,11 @@ The URI of the vault for performing operations on keys and secrets.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/getSecret.ts#L38">interface <b>GetSecretArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getSecret.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetSecretArgs-keyVaultId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/getSecret.ts#L42">property <b>keyVaultId</b></a>
 </h3>
@@ -2535,9 +2567,11 @@ Specifies the name of the Key Vault Secret.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/getSecret.ts#L53">interface <b>GetSecretResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getSecret.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetSecretResult-contentType">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/getSecret.ts#L57">property <b>contentType</b></a>
 </h3>
@@ -2622,9 +2656,11 @@ The current version of the Key Vault Secret.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/key.ts#L210">interface <b>KeyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Key resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="KeyArgs-keyOpts">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/key.ts#L214">property <b>keyOpts</b></a>
 </h3>
@@ -2704,9 +2740,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/key.ts#L167">interface <b>KeyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Key resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="KeyState-e">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/key.ts#L171">property <b>e</b></a>
 </h3>
@@ -2819,9 +2857,11 @@ The current version of the Key Vault Key.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/keyVault.ts#L219">interface <b>KeyVaultArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a KeyVault resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="KeyVaultArgs-accessPolicies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/keyVault.ts#L223">property <b>accessPolicies</b></a>
 </h3>
@@ -2963,9 +3003,11 @@ The Azure Active Directory tenant ID that should be used for authenticating requ
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/keyVault.ts#L165">interface <b>KeyVaultState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering KeyVault resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="KeyVaultState-accessPolicies">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/keyVault.ts#L169">property <b>accessPolicies</b></a>
 </h3>
@@ -3118,9 +3160,11 @@ The URI of the Key Vault, used for performing operations on keys and secrets.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/secret.ts#L176">interface <b>SecretArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Secret resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SecretArgs-contentType">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/secret.ts#L180">property <b>contentType</b></a>
 </h3>
@@ -3189,9 +3233,11 @@ Specifies the value of the Key Vault Secret.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/secret.ts#L145">interface <b>SecretState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Secret resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SecretState-contentType">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/keyvault/secret.ts#L149">property <b>contentType</b></a>
 </h3>

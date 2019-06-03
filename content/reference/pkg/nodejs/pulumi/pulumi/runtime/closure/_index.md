@@ -51,21 +51,25 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>const</span> getFunctionLocationAsync: getFunctionLocationAsync = <span class='s2'> versionSpecificV8Module.getFunctionLocationAsync</span>;</pre>
+{{% md %}}
 
 Given a function, returns the file, line and column number in the file where this function was
 defined. Returns { "", 0, 0 } if the location cannot be found or if the given function has no Script.
 
+{{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="lookupCapturedVariableValueAsync">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/runtime/closure/v8.ts#L45">const <b>lookupCapturedVariableValueAsync</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>const</span> lookupCapturedVariableValueAsync: lookupCapturedVariableValueAsync = <span class='s2'> versionSpecificV8Module.lookupCapturedVariableValueAsync</span>;</pre>
+{{% md %}}
 
 Given a function and a free variable name, lookupCapturedVariableValue looks up the value of that free variable
 in the scope chain of the provided function. If the free variable is not found, `throwOnFailure` indicates
 whether or not this function should throw or return `undefined.
 
+{{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="createFunctionInfoAsync">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/runtime/closure/createClosure.ts#L219">function <b>createFunctionInfoAsync</b></a>
@@ -196,9 +200,11 @@ There are several known limitations:
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/runtime/closure/createClosure.ts#L93">interface <b>Entry</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Entry is the environment slot for a named lexically captured variable.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Entry-array">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/runtime/closure/createClosure.ts#L108">property <b>array</b></a>
 </h3>
@@ -669,9 +675,11 @@ Returns an iterable of values in the map
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/runtime/closure/serializeClosure.ts#L22">interface <b>SerializeFunctionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 SerializeFunctionArgs are arguments used to serialize a JavaScript function
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SerializeFunctionArgs-exportName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/runtime/closure/serializeClosure.ts#L26">property <b>exportName</b></a>
 </h3>
@@ -729,9 +737,11 @@ prevent potential cycles.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/runtime/closure/serializeClosure.ts#L54">interface <b>SerializedFunction</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 SerializeFunction is a representation of a serialized JavaScript function.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SerializedFunction-exportName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/runtime/closure/serializeClosure.ts#L64">property <b>exportName</b></a>
 </h3>

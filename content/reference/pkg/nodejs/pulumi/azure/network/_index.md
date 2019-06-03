@@ -171,6 +171,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an Application Gateway.
 
@@ -263,6 +264,7 @@ const backend = new azure.network.Subnet("backend", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ApplicationGateway-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/applicationGateway.ts#L212"> <b>constructor</b></a>
 </h3>
@@ -813,6 +815,7 @@ A collection of availability zones to spread the Application Gateway over.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage an Application Security Group.
 
@@ -836,6 +839,7 @@ const testApplicationSecurityGroup = new azure.network.ApplicationSecurityGroup(
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ApplicationSecurityGroup-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/applicationSecurityGroup.ts#L58"> <b>constructor</b></a>
 </h3>
@@ -965,6 +969,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Configures a Connection Monitor to monitor communication between a Virtual Machine and an endpoint using a Network Watcher.
 
@@ -1061,6 +1066,7 @@ const testConnectionMonitor = new azure.network.ConnectionMonitor("test", {
 
 > **NOTE:** This Resource requires that [the Network Watcher Agent Virtual Machine Extension](https://docs.microsoft.com/en-us/azure/network-watcher/connection-monitor) is installed on the Virtual Machine before monitoring can be started. The extension can be installed via the `azurerm_virtual_machine_extension` resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ConnectionMonitor-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/connectionMonitor.ts#L151"> <b>constructor</b></a>
 </h3>
@@ -1252,6 +1258,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an AzureNetwork DDoS Protection Plan.
 
@@ -1274,6 +1281,7 @@ const testDdosProtectionPlan = new azure.network.DdosProtectionPlan("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DdosProtectionPlan-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/ddosProtectionPlan.ts#L61"> <b>constructor</b></a>
 </h3>
@@ -1414,6 +1422,7 @@ The Resource ID list of the Virtual Networks associated with DDoS Protection Pla
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an ExpressRoute circuit.
 
@@ -1444,6 +1453,7 @@ const testExpressRouteCircuit = new azure.network.ExpressRouteCircuit("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ExpressRouteCircuit-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/expressRouteCircuit.ts#L93"> <b>constructor</b></a>
 </h3>
@@ -1653,6 +1663,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an ExpressRoute Circuit Authorization.
 
@@ -1689,6 +1700,7 @@ const testExpressRouteCircuitAuthorization = new azure.network.ExpressRouteCircu
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitAuthorization-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L77"> <b>constructor</b></a>
 </h3>
@@ -1831,6 +1843,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an ExpressRoute Circuit Peering.
 
@@ -1874,6 +1887,7 @@ const testExpressRouteCircuitPeering = new azure.network.ExpressRouteCircuitPeer
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeering-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/expressRouteCircuitPeering.ts#L111"> <b>constructor</b></a>
 </h3>
@@ -2094,6 +2108,7 @@ A valid VLAN ID to establish this peering on.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an Azure Firewall.
 
@@ -2138,6 +2153,7 @@ const testFirewall = new azure.network.Firewall("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Firewall-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/firewall.ts#L83"> <b>constructor</b></a>
 </h3>
@@ -2284,6 +2300,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an Application Rule Collection within an Azure Firewall.
 
@@ -2344,6 +2361,7 @@ const testFirewallApplicationRuleCollection = new azure.network.FirewallApplicat
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallApplicationRuleCollection-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L103"> <b>constructor</b></a>
 </h3>
@@ -2505,6 +2523,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a NAT Rule Collection within an Azure Firewall.
 
@@ -2569,6 +2588,7 @@ const testFirewallNatRuleCollection = new azure.network.FirewallNatRuleCollectio
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallNatRuleCollection-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/firewallNatRuleCollection.ts#L107"> <b>constructor</b></a>
 </h3>
@@ -2729,6 +2749,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Network Rule Collection within an Azure Firewall.
 
@@ -2793,6 +2814,7 @@ const testFirewallNetworkRuleCollection = new azure.network.FirewallNetworkRuleC
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallNetworkRuleCollection-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L107"> <b>constructor</b></a>
 </h3>
@@ -2951,6 +2973,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a local network gateway connection over which specific connections can be configured.
 
@@ -2973,6 +2996,7 @@ const home = new azure.network.LocalNetworkGateway("home", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LocalNetworkGateway-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/localNetworkGateway.ts#L75"> <b>constructor</b></a>
 </h3>
@@ -3145,6 +3169,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Configures a Network Connection Monitor to monitor communication between a Virtual Machine and an endpoint using a Network Watcher.
 
@@ -3239,6 +3264,7 @@ const testNetworkConnectionMonitor = new azure.network.NetworkConnectionMonitor(
 
 > **NOTE:** This Resource requires that [the Network Watcher Agent Virtual Machine Extension](https://docs.microsoft.com/en-us/azure/network-watcher/connection-monitor) is installed on the Virtual Machine before monitoring can be started. The extension can be installed via the `azurerm_virtual_machine_extension` resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkConnectionMonitor-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkConnectionMonitor.ts#L149"> <b>constructor</b></a>
 </h3>
@@ -3430,6 +3456,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Network Interface located in a Virtual Network, usually attached to a Virtual Machine.
 
@@ -3470,6 +3497,7 @@ const testNetworkInterface = new azure.network.NetworkInterface("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkInterface-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkInterface.ts#L120"> <b>constructor</b></a>
 </h3>
@@ -3740,6 +3768,7 @@ Reference to a VM with which this NIC has been associated.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages the association between a Network Interface and a Application Gateway's Backend Address Pool.
 
@@ -3845,6 +3874,7 @@ const backend = new azure.network.Subnet("backend", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts#L136"> <b>constructor</b></a>
 </h3>
@@ -3963,6 +3993,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages the association between a Network Interface and a Application Security Group.
 
@@ -4011,6 +4042,7 @@ const testNetworkInterfaceApplicationSecurityGroupAssociation = new azure.networ
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationSecurityGroupAssociation-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts#L79"> <b>constructor</b></a>
 </h3>
@@ -4129,6 +4161,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages the association between a Network Interface and a Load Balancer's Backend Address Pool.
 
@@ -4191,6 +4224,7 @@ const testNetworkInterfaceBackendAddressPoolAssociation = new azure.network.Netw
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkInterfaceBackendAddressPoolAssociation-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts#L93"> <b>constructor</b></a>
 </h3>
@@ -4309,6 +4343,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages the association between a Network Interface and a Load Balancer's NAT Rule.
 
@@ -4375,6 +4410,7 @@ const testNetworkInterfaceNatRuleAssociation = new azure.network.NetworkInterfac
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkInterfaceNatRuleAssociation-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts#L97"> <b>constructor</b></a>
 </h3>
@@ -4493,6 +4529,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Configures Network Packet Capturing against a Virtual Machine using a Network Watcher.
 
@@ -4590,6 +4627,7 @@ const testNetworkPacketCapture = new azure.network.NetworkPacketCapture("test", 
 
 > **NOTE:** This Resource requires that [the Network Watcher Virtual Machine Extension](https://docs.microsoft.com/azure/network-watcher/network-watcher-packet-capture-manage-portal#before-you-begin) is installed on the Virtual Machine before capturing can be enabled which can be installed via the `azurerm_virtual_machine_extension` resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkPacketCapture-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkPacketCapture.ts#L152"> <b>constructor</b></a>
 </h3>
@@ -4784,6 +4822,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a network security group that contains a list of network security rules.  Network security groups enable inbound or outbound traffic to be enabled or denied.
 
@@ -4822,6 +4861,7 @@ const testNetworkSecurityGroup = new azure.network.NetworkSecurityGroup("test", 
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkSecurityGroup-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkSecurityGroup.ts#L77"> <b>constructor</b></a>
 </h3>
@@ -4979,6 +5019,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Network Security Rule.
 
@@ -5016,6 +5057,7 @@ const testNetworkSecurityRule = new azure.network.NetworkSecurityRule("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkSecurityRule-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkSecurityRule.ts#L128"> <b>constructor</b></a>
 </h3>
@@ -5299,6 +5341,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Network Watcher.
 
@@ -5319,6 +5362,7 @@ const testNetworkWatcher = new azure.network.NetworkWatcher("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkWatcher-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkWatcher.ts#L55"> <b>constructor</b></a>
 </h3>
@@ -5448,6 +5492,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Configures Packet Capturing against a Virtual Machine using a Network Watcher.
 
@@ -5547,6 +5592,7 @@ const testPacketCapture = new azure.network.PacketCapture("test", {
 
 > **NOTE:** This Resource requires that [the Network Watcher Virtual Machine Extension](https://docs.microsoft.com/azure/network-watcher/network-watcher-packet-capture-manage-portal#before-you-begin) is installed on the Virtual Machine before capturing can be enabled which can be installed via the `azurerm_virtual_machine_extension` resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PacketCapture-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/packetCapture.ts#L154"> <b>constructor</b></a>
 </h3>
@@ -5741,6 +5787,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an Azure Network Profile.
 
@@ -5787,6 +5834,7 @@ const exampleProfile = new azure.network.Profile("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Profile-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/profile.ts#L86"> <b>constructor</b></a>
 </h3>
@@ -5941,6 +5989,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage a Public IP Address.
 
@@ -5965,6 +6014,7 @@ const testPublicIp = new azure.network.PublicIp("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PublicIp-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/publicIp.ts#L102"> <b>constructor</b></a>
 </h3>
@@ -6214,6 +6264,7 @@ A collection containing the availability zone to allocate the Public IP in.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage a Public IP Prefix.
 
@@ -6240,6 +6291,7 @@ const testPublicIpPrefix = new azure.network.PublicIpPrefix("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PublicIpPrefix-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/publicIpPrefix.ts#L77"> <b>constructor</b></a>
 </h3>
@@ -6413,6 +6465,7 @@ A collection containing the availability zone to allocate the Public IP in.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Route within a Route Table.
 
@@ -6440,6 +6493,7 @@ const testRoute = new azure.network.Route("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Route-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/route.ts#L70"> <b>constructor</b></a>
 </h3>
@@ -6591,6 +6645,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Route Table
 
@@ -6620,6 +6675,7 @@ const testRouteTable = new azure.network.RouteTable("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RouteTable-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/routeTable.ts#L76"> <b>constructor</b></a>
 </h3>
@@ -6787,6 +6843,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a subnet. Subnets represent network segments within the IP space defined by the virtual network.
 
@@ -6825,6 +6882,7 @@ const testSubnet = new azure.network.Subnet("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Subnet-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/subnet.ts#L93"> <b>constructor</b></a>
 </h3>
@@ -7015,6 +7073,7 @@ The name of the virtual network to which to attach the subnet. Changing this for
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Associates a Network Security Group with a Subnet within a Virtual Network.
 
@@ -7065,6 +7124,7 @@ const testSubnetNetworkSecurityGroupAssociation = new azure.network.SubnetNetwor
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SubnetNetworkSecurityGroupAssociation-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/subnetNetworkSecurityGroupAssociation.ts#L77"> <b>constructor</b></a>
 </h3>
@@ -7172,6 +7232,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Associates a Route Table with a Subnet within a Virtual Network.
 
@@ -7217,6 +7278,7 @@ const testSubnetRouteTableAssociation = new azure.network.SubnetRouteTableAssoci
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SubnetRouteTableAssociation-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/subnetRouteTableAssociation.ts#L72"> <b>constructor</b></a>
 </h3>
@@ -7324,6 +7386,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a virtual network including any configured subnets. Each subnet can
 optionally be configured with a security group to be associated with the subnet.
@@ -7386,6 +7449,7 @@ const testVirtualNetwork = new azure.network.VirtualNetwork("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualNetwork-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/virtualNetwork.ts#L119"> <b>constructor</b></a>
 </h3>
@@ -7573,6 +7637,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Virtual Network Gateway to establish secure, cross-premises connectivity.
 
@@ -7655,6 +7720,7 @@ M/s/1JRtO3bDSzD9TazRVzn2oBqzSa8VgIo5C1nOnoAKJTlsClJKvIhnRlaLQqk=
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualNetworkGateway-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/virtualNetworkGateway.ts#L173"> <b>constructor</b></a>
 </h3>
@@ -7925,6 +7991,7 @@ options are `RouteBased` or `PolicyBased`. Defaults to `RouteBased`.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a connection in an existing Virtual Network Gateway.
 
@@ -8093,6 +8160,7 @@ const usToEurope = new azure.network.VirtualNetworkGatewayConnection("us_to_euro
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnection-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L275"> <b>constructor</b></a>
 </h3>
@@ -8387,6 +8455,7 @@ resource to be created.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a virtual network peering which allows resources to access other
 resources in the linked virtual network.
@@ -8491,6 +8560,7 @@ for (let i = 0; i < location.length; i++) {
 
 Virtual Network peerings cannot be created, updated or deleted concurrently.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualNetworkPeering-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/virtualNetworkPeering.ts#L169"> <b>constructor</b></a>
 </h3>
@@ -9058,9 +9128,11 @@ export const virtualNetworkGatewayId = test.id;
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/applicationGateway.ts#L420">interface <b>ApplicationGatewayArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ApplicationGateway resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ApplicationGatewayArgs-authenticationCertificates">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/applicationGateway.ts#L424">property <b>authenticationCertificates</b></a>
 </h3>
@@ -9531,9 +9603,11 @@ A collection of availability zones to spread the Application Gateway over.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/applicationGateway.ts#L313">interface <b>ApplicationGatewayState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ApplicationGateway resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ApplicationGatewayState-authenticationCertificates">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/applicationGateway.ts#L317">property <b>authenticationCertificates</b></a>
 </h3>
@@ -10004,9 +10078,11 @@ A collection of availability zones to spread the Application Gateway over.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/applicationSecurityGroup.ts#L115">interface <b>ApplicationSecurityGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ApplicationSecurityGroup resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ApplicationSecurityGroupArgs-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/applicationSecurityGroup.ts#L119">property <b>location</b></a>
 </h3>
@@ -10056,9 +10132,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/applicationSecurityGroup.ts#L93">interface <b>ApplicationSecurityGroupState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ApplicationSecurityGroup resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ApplicationSecurityGroupState-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/applicationSecurityGroup.ts#L97">property <b>location</b></a>
 </h3>
@@ -10108,9 +10186,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/connectionMonitor.ts#L247">interface <b>ConnectionMonitorArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ConnectionMonitor resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ConnectionMonitorArgs-autoStart">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/connectionMonitor.ts#L251">property <b>autoStart</b></a>
 </h3>
@@ -10222,9 +10302,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/connectionMonitor.ts#L205">interface <b>ConnectionMonitorState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ConnectionMonitor resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ConnectionMonitorState-autoStart">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/connectionMonitor.ts#L209">property <b>autoStart</b></a>
 </h3>
@@ -10336,9 +10418,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/ddosProtectionPlan.ts#L124">interface <b>DdosProtectionPlanArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a DdosProtectionPlan resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DdosProtectionPlanArgs-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/ddosProtectionPlan.ts#L128">property <b>location</b></a>
 </h3>
@@ -10388,9 +10472,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/ddosProtectionPlan.ts#L98">interface <b>DdosProtectionPlanState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering DdosProtectionPlan resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DdosProtectionPlanState-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/ddosProtectionPlan.ts#L102">property <b>location</b></a>
 </h3>
@@ -10451,9 +10537,11 @@ The Resource ID list of the Virtual Networks associated with DDoS Protection Pla
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/expressRouteCircuit.ts#L204">interface <b>ExpressRouteCircuitArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ExpressRouteCircuit resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitArgs-allowClassicOperations">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/expressRouteCircuit.ts#L208">property <b>allowClassicOperations</b></a>
 </h3>
@@ -10561,9 +10649,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L145">interface <b>ExpressRouteCircuitAuthorizationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ExpressRouteCircuitAuthorization resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitAuthorizationArgs-expressRouteCircuitName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L149">property <b>expressRouteCircuitName</b></a>
 </h3>
@@ -10604,9 +10694,11 @@ create the ExpressRoute circuit. Changing this forces a new resource to be creat
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L117">interface <b>ExpressRouteCircuitAuthorizationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ExpressRouteCircuitAuthorization resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitAuthorizationState-authorizationKey">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/expressRouteCircuitAuthorization.ts#L121">property <b>authorizationKey</b></a>
 </h3>
@@ -10669,9 +10761,11 @@ create the ExpressRoute circuit. Changing this forces a new resource to be creat
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/expressRouteCircuitPeering.ts#L232">interface <b>ExpressRouteCircuitPeeringArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ExpressRouteCircuitPeering resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeeringArgs-expressRouteCircuitName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/expressRouteCircuitPeering.ts#L236">property <b>expressRouteCircuitName</b></a>
 </h3>
@@ -10779,9 +10873,11 @@ A valid VLAN ID to establish this peering on.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/expressRouteCircuitPeering.ts#L177">interface <b>ExpressRouteCircuitPeeringState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ExpressRouteCircuitPeering resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitPeeringState-azureAsn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/expressRouteCircuitPeering.ts#L181">property <b>azureAsn</b></a>
 </h3>
@@ -10922,9 +11018,11 @@ A valid VLAN ID to establish this peering on.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/expressRouteCircuit.ts#L154">interface <b>ExpressRouteCircuitState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ExpressRouteCircuit resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ExpressRouteCircuitState-allowClassicOperations">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/expressRouteCircuit.ts#L158">property <b>allowClassicOperations</b></a>
 </h3>
@@ -11054,9 +11152,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L184">interface <b>FirewallApplicationRuleCollectionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a FirewallApplicationRuleCollection resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallApplicationRuleCollectionArgs-action">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L188">property <b>action</b></a>
 </h3>
@@ -11138,9 +11238,11 @@ One or more `rule` blocks as defined below.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L154">interface <b>FirewallApplicationRuleCollectionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering FirewallApplicationRuleCollection resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallApplicationRuleCollectionState-action">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/firewallApplicationRuleCollection.ts#L158">property <b>action</b></a>
 </h3>
@@ -11222,9 +11324,11 @@ One or more `rule` blocks as defined below.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/firewall.ts#L149">interface <b>FirewallArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Firewall resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallArgs-ipConfiguration">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/firewall.ts#L153">property <b>ipConfiguration</b></a>
 </h3>
@@ -11291,9 +11395,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/firewallNatRuleCollection.ts#L188">interface <b>FirewallNatRuleCollectionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a FirewallNatRuleCollection resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallNatRuleCollectionArgs-action">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/firewallNatRuleCollection.ts#L192">property <b>action</b></a>
 </h3>
@@ -11374,9 +11480,11 @@ One or more `rule` blocks as defined below.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/firewallNatRuleCollection.ts#L158">interface <b>FirewallNatRuleCollectionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering FirewallNatRuleCollection resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallNatRuleCollectionState-action">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/firewallNatRuleCollection.ts#L162">property <b>action</b></a>
 </h3>
@@ -11457,9 +11565,11 @@ One or more `rule` blocks as defined below.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L188">interface <b>FirewallNetworkRuleCollectionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a FirewallNetworkRuleCollection resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallNetworkRuleCollectionArgs-action">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L192">property <b>action</b></a>
 </h3>
@@ -11538,9 +11648,11 @@ One or more `rule` blocks as defined below.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L158">interface <b>FirewallNetworkRuleCollectionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering FirewallNetworkRuleCollection resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallNetworkRuleCollectionState-action">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/firewallNetworkRuleCollection.ts#L162">property <b>action</b></a>
 </h3>
@@ -11619,9 +11731,11 @@ One or more `rule` blocks as defined below.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/firewall.ts#L123">interface <b>FirewallState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Firewall resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallState-ipConfiguration">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/firewall.ts#L127">property <b>ipConfiguration</b></a>
 </h3>
@@ -11688,9 +11802,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getApplicationSecurityGroup.ts#L34">interface <b>GetApplicationSecurityGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getApplicationSecurityGroup.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetApplicationSecurityGroupArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getApplicationSecurityGroup.ts#L38">property <b>name</b></a>
 </h3>
@@ -11718,9 +11834,11 @@ The name of the resource group in which the Application Security Group exists.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getApplicationSecurityGroup.ts#L48">interface <b>GetApplicationSecurityGroupResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getApplicationSecurityGroup.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetApplicationSecurityGroupResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getApplicationSecurityGroup.ts#L62">property <b>id</b></a>
 </h3>
@@ -11775,9 +11893,11 @@ A mapping of tags assigned to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getExpressRouteCircuit.ts#L35">interface <b>GetExpressRouteCircuitArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getExpressRouteCircuit.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetExpressRouteCircuitArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getExpressRouteCircuit.ts#L39">property <b>name</b></a>
 </h3>
@@ -11805,9 +11925,11 @@ The Name of the Resource Group where the ExpressRoute circuit exists.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getExpressRouteCircuit.ts#L49">interface <b>GetExpressRouteCircuitResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getExpressRouteCircuit.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetExpressRouteCircuitResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getExpressRouteCircuit.ts#L79">property <b>id</b></a>
 </h3>
@@ -11921,9 +12043,11 @@ A `sku` block for the ExpressRoute circuit as documented below.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getFirewall.ts#L34">interface <b>GetFirewallArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getFirewall.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetFirewallArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getFirewall.ts#L38">property <b>name</b></a>
 </h3>
@@ -11951,9 +12075,11 @@ The name of the Resource Group in which the Azure Firewall exists.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getFirewall.ts#L48">interface <b>GetFirewallResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getFirewall.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetFirewallResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getFirewall.ts#L60">property <b>id</b></a>
 </h3>
@@ -12019,9 +12145,11 @@ A `ip_configuration` block as defined below.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getNetworkInterface.ts#L34">interface <b>GetNetworkInterfaceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getNetworkInterface.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetNetworkInterfaceArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getNetworkInterface.ts#L38">property <b>name</b></a>
 </h3>
@@ -12049,9 +12177,11 @@ Specifies the name of the resource group the Network Interface is located in.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getNetworkInterface.ts#L48">interface <b>GetNetworkInterfaceResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getNetworkInterface.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetNetworkInterfaceResult-appliedDnsServers">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getNetworkInterface.ts#L52">property <b>appliedDnsServers</b></a>
 </h3>
@@ -12250,9 +12380,11 @@ The ID of the virtual machine that the specified Network Interface is attached t
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getNetworkSecurityGroup.ts#L34">interface <b>GetNetworkSecurityGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getNetworkSecurityGroup.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetNetworkSecurityGroupArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getNetworkSecurityGroup.ts#L38">property <b>name</b></a>
 </h3>
@@ -12280,9 +12412,11 @@ Specifies the Name of the Resource Group within which the Network Security Group
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getNetworkSecurityGroup.ts#L48">interface <b>GetNetworkSecurityGroupResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getNetworkSecurityGroup.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetNetworkSecurityGroupResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getNetworkSecurityGroup.ts#L69">property <b>id</b></a>
 </h3>
@@ -12368,9 +12502,11 @@ A mapping of tags assigned to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getNetworkWatcher.ts#L34">interface <b>GetNetworkWatcherArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getNetworkWatcher.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetNetworkWatcherArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getNetworkWatcher.ts#L38">property <b>name</b></a>
 </h3>
@@ -12398,9 +12534,11 @@ Specifies the Name of the Resource Group within which the Network Watcher exists
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getNetworkWatcher.ts#L48">interface <b>GetNetworkWatcherResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getNetworkWatcher.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetNetworkWatcherResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getNetworkWatcher.ts#L62">property <b>id</b></a>
 </h3>
@@ -12455,9 +12593,11 @@ A mapping of tags assigned to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getPublicIP.ts#L95">interface <b>GetPublicIPArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getPublicIP.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetPublicIPArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getPublicIP.ts#L99">property <b>name</b></a>
 </h3>
@@ -12501,9 +12641,11 @@ Specifies the name of the resource group.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getPublicIP.ts#L111">interface <b>GetPublicIPResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getPublicIP.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetPublicIPResult-allocationMethod">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getPublicIP.ts#L112">property <b>allocationMethod</b></a>
 </h3>
@@ -12642,9 +12784,11 @@ A mapping of tags to assigned to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getPublicIPs.ts#L34">interface <b>GetPublicIPsArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getPublicIPs.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetPublicIPsArgs-allocationType">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getPublicIPs.ts#L38">property <b>allocationType</b></a>
 </h3>
@@ -12694,9 +12838,11 @@ Specifies the name of the resource group.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getPublicIPs.ts#L56">interface <b>GetPublicIPsResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getPublicIPs.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetPublicIPsResult-allocationType">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getPublicIPs.ts#L57">property <b>allocationType</b></a>
 </h3>
@@ -12762,9 +12908,11 @@ A List of `public_ips` blocks as defined below filtered by the criteria above.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getRouteTable.ts#L32">interface <b>GetRouteTableArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getRouteTable.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetRouteTableArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getRouteTable.ts#L36">property <b>name</b></a>
 </h3>
@@ -12792,9 +12940,11 @@ The name of the Resource Group in which the Route Table exists.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getRouteTable.ts#L46">interface <b>GetRouteTableResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getRouteTable.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetRouteTableResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getRouteTable.ts#L71">property <b>id</b></a>
 </h3>
@@ -12879,9 +13029,11 @@ A mapping of tags assigned to the Route Table.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getSubnet.ts#L36">interface <b>GetSubnetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getSubnet.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetSubnetArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getSubnet.ts#L40">property <b>name</b></a>
 </h3>
@@ -12920,9 +13072,11 @@ Specifies the name of the Virtual Network this Subnet is located within.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getSubnet.ts#L54">interface <b>GetSubnetResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getSubnet.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetSubnetResult-addressPrefix">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getSubnet.ts#L58">property <b>addressPrefix</b></a>
 </h3>
@@ -13018,9 +13172,11 @@ A list of Service Endpoints within this subnet.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getVirtualNetwork.ts#L34">interface <b>GetVirtualNetworkArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getVirtualNetwork.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetVirtualNetworkArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getVirtualNetwork.ts#L38">property <b>name</b></a>
 </h3>
@@ -13048,9 +13204,11 @@ Specifies the name of the resource group the Virtual Network is located in.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getVirtualNetworkGateway.ts#L34">interface <b>GetVirtualNetworkGatewayArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getVirtualNetworkGateway.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetVirtualNetworkGatewayArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getVirtualNetworkGateway.ts#L38">property <b>name</b></a>
 </h3>
@@ -13078,9 +13236,11 @@ Specifies the name of the resource group the Virtual Network Gateway is located 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getVirtualNetworkGateway.ts#L48">interface <b>GetVirtualNetworkGatewayResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getVirtualNetworkGateway.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetVirtualNetworkGatewayResult-activeActive">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getVirtualNetworkGateway.ts#L52">property <b>activeActive</b></a>
 </h3>
@@ -13260,9 +13420,11 @@ The routing type of the Virtual Network Gateway.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getVirtualNetwork.ts#L48">interface <b>GetVirtualNetworkResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getVirtualNetwork.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetVirtualNetworkResult-addressSpaces">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/getVirtualNetwork.ts#L52">property <b>addressSpaces</b></a>
 </h3>
@@ -13347,9 +13509,11 @@ A mapping of name - virtual network id of the virtual network peerings.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/localNetworkGateway.ts#L162">interface <b>LocalNetworkGatewayArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a LocalNetworkGateway resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LocalNetworkGatewayArgs-addressSpaces">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/localNetworkGateway.ts#L167">property <b>addressSpaces</b></a>
 </h3>
@@ -13442,9 +13606,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/localNetworkGateway.ts#L122">interface <b>LocalNetworkGatewayState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering LocalNetworkGateway resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LocalNetworkGatewayState-addressSpaces">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/localNetworkGateway.ts#L127">property <b>addressSpaces</b></a>
 </h3>
@@ -13537,9 +13703,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkConnectionMonitor.ts#L245">interface <b>NetworkConnectionMonitorArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a NetworkConnectionMonitor resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkConnectionMonitorArgs-autoStart">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkConnectionMonitor.ts#L249">property <b>autoStart</b></a>
 </h3>
@@ -13651,9 +13819,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkConnectionMonitor.ts#L203">interface <b>NetworkConnectionMonitorState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering NetworkConnectionMonitor resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkConnectionMonitorState-autoStart">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkConnectionMonitor.ts#L207">property <b>autoStart</b></a>
 </h3>
@@ -13765,9 +13935,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts#L193">interface <b>NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationArgs-backendAddressPoolId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts#L197">property <b>backendAddressPoolId</b></a>
 </h3>
@@ -13806,9 +13978,11 @@ The ID of the Network Interface. Changing this forces a new resource to be creat
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts#L175">interface <b>NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationState-backendAddressPoolId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation.ts#L179">property <b>backendAddressPoolId</b></a>
 </h3>
@@ -13847,9 +14021,11 @@ The ID of the Network Interface. Changing this forces a new resource to be creat
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts#L136">interface <b>NetworkInterfaceApplicationSecurityGroupAssociationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a NetworkInterfaceApplicationSecurityGroupAssociation resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationSecurityGroupAssociationArgs-applicationSecurityGroupId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts#L140">property <b>applicationSecurityGroupId</b></a>
 </h3>
@@ -13888,9 +14064,11 @@ The ID of the Network Interface. Changing this forces a new resource to be creat
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts#L118">interface <b>NetworkInterfaceApplicationSecurityGroupAssociationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering NetworkInterfaceApplicationSecurityGroupAssociation resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkInterfaceApplicationSecurityGroupAssociationState-applicationSecurityGroupId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkInterfaceApplicationSecurityGroupAssociation.ts#L122">property <b>applicationSecurityGroupId</b></a>
 </h3>
@@ -13929,9 +14107,11 @@ The ID of the Network Interface. Changing this forces a new resource to be creat
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkInterface.ts#L249">interface <b>NetworkInterfaceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a NetworkInterface resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkInterfaceArgs-appliedDnsServers">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkInterface.ts#L253">property <b>appliedDnsServers</b></a>
 </h3>
@@ -14100,9 +14280,11 @@ Reference to a VM with which this NIC has been associated.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts#L150">interface <b>NetworkInterfaceBackendAddressPoolAssociationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a NetworkInterfaceBackendAddressPoolAssociation resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkInterfaceBackendAddressPoolAssociationArgs-backendAddressPoolId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts#L154">property <b>backendAddressPoolId</b></a>
 </h3>
@@ -14141,9 +14323,11 @@ The ID of the Network Interface. Changing this forces a new resource to be creat
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts#L132">interface <b>NetworkInterfaceBackendAddressPoolAssociationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering NetworkInterfaceBackendAddressPoolAssociation resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkInterfaceBackendAddressPoolAssociationState-backendAddressPoolId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkInterfaceBackendAddressPoolAssociation.ts#L136">property <b>backendAddressPoolId</b></a>
 </h3>
@@ -14182,9 +14366,11 @@ The ID of the Network Interface. Changing this forces a new resource to be creat
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts#L154">interface <b>NetworkInterfaceNatRuleAssociationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a NetworkInterfaceNatRuleAssociation resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkInterfaceNatRuleAssociationArgs-ipConfigurationName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts#L158">property <b>ipConfigurationName</b></a>
 </h3>
@@ -14223,9 +14409,11 @@ The ID of the Network Interface. Changing this forces a new resource to be creat
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts#L136">interface <b>NetworkInterfaceNatRuleAssociationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering NetworkInterfaceNatRuleAssociation resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkInterfaceNatRuleAssociationState-ipConfigurationName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkInterfaceNatRuleAssociation.ts#L140">property <b>ipConfigurationName</b></a>
 </h3>
@@ -14264,9 +14452,11 @@ The ID of the Network Interface. Changing this forces a new resource to be creat
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkInterface.ts#L182">interface <b>NetworkInterfaceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering NetworkInterface resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkInterfaceState-appliedDnsServers">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkInterface.ts#L186">property <b>appliedDnsServers</b></a>
 </h3>
@@ -14457,9 +14647,11 @@ Reference to a VM with which this NIC has been associated.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkPacketCapture.ts#L248">interface <b>NetworkPacketCaptureArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a NetworkPacketCapture resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkPacketCaptureArgs-filters">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkPacketCapture.ts#L252">property <b>filters</b></a>
 </h3>
@@ -14574,9 +14766,11 @@ The ID of the Resource to capture packets from. Changing this forces a new resou
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkPacketCapture.ts#L206">interface <b>NetworkPacketCaptureState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering NetworkPacketCapture resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkPacketCaptureState-filters">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkPacketCapture.ts#L210">property <b>filters</b></a>
 </h3>
@@ -14691,9 +14885,11 @@ The ID of the Resource to capture packets from. Changing this forces a new resou
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkSecurityGroup.ts#L140">interface <b>NetworkSecurityGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a NetworkSecurityGroup resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkSecurityGroupArgs-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkSecurityGroup.ts#L144">property <b>location</b></a>
 </h3>
@@ -14771,9 +14967,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkSecurityGroup.ts#L114">interface <b>NetworkSecurityGroupState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering NetworkSecurityGroup resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkSecurityGroupState-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkSecurityGroup.ts#L118">property <b>location</b></a>
 </h3>
@@ -14851,9 +15049,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkSecurityRule.ts#L284">interface <b>NetworkSecurityRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a NetworkSecurityRule resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleArgs-access">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkSecurityRule.ts#L288">property <b>access</b></a>
 </h3>
@@ -15057,9 +15257,11 @@ List of source ports or port ranges. This is required if `source_port_range` is 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkSecurityRule.ts#L206">interface <b>NetworkSecurityRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering NetworkSecurityRule resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkSecurityRuleState-access">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkSecurityRule.ts#L210">property <b>access</b></a>
 </h3>
@@ -15263,9 +15465,11 @@ List of source ports or port ranges. This is required if `source_port_range` is 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkWatcher.ts#L112">interface <b>NetworkWatcherArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a NetworkWatcher resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkWatcherArgs-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkWatcher.ts#L116">property <b>location</b></a>
 </h3>
@@ -15315,9 +15519,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkWatcher.ts#L90">interface <b>NetworkWatcherState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering NetworkWatcher resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkWatcherState-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/networkWatcher.ts#L94">property <b>location</b></a>
 </h3>
@@ -15367,9 +15573,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/packetCapture.ts#L250">interface <b>PacketCaptureArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a PacketCapture resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PacketCaptureArgs-filters">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/packetCapture.ts#L254">property <b>filters</b></a>
 </h3>
@@ -15484,9 +15692,11 @@ The ID of the Resource to capture packets from. Changing this forces a new resou
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/packetCapture.ts#L208">interface <b>PacketCaptureState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering PacketCapture resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PacketCaptureState-filters">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/packetCapture.ts#L212">property <b>filters</b></a>
 </h3>
@@ -15601,9 +15811,11 @@ The ID of the Resource to capture packets from. Changing this forces a new resou
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/profile.ts#L155">interface <b>ProfileArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Profile resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ProfileArgs-containerNetworkInterface">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/profile.ts#L156">property <b>containerNetworkInterface</b></a>
 </h3>
@@ -15667,9 +15879,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/profile.ts#L128">interface <b>ProfileState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Profile resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ProfileState-containerNetworkInterface">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/profile.ts#L129">property <b>containerNetworkInterface</b></a>
 </h3>
@@ -15744,9 +15958,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/publicIp.ts#L224">interface <b>PublicIpArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a PublicIp resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PublicIpArgs-allocationMethod">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/publicIp.ts#L228">property <b>allocationMethod</b></a>
 </h3>
@@ -15894,9 +16110,11 @@ A collection containing the availability zone to allocate the Public IP in.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/publicIpPrefix.ts#L158">interface <b>PublicIpPrefixArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a PublicIpPrefix resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PublicIpPrefixArgs-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/publicIpPrefix.ts#L162">property <b>location</b></a>
 </h3>
@@ -15979,9 +16197,11 @@ A collection containing the availability zone to allocate the Public IP in.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/publicIpPrefix.ts#L120">interface <b>PublicIpPrefixState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering PublicIpPrefix resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PublicIpPrefixState-ipPrefix">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/publicIpPrefix.ts#L124">property <b>ipPrefix</b></a>
 </h3>
@@ -16075,9 +16295,11 @@ A collection containing the availability zone to allocate the Public IP in.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/publicIp.ts#L159">interface <b>PublicIpState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering PublicIp resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PublicIpState-allocationMethod">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/publicIp.ts#L163">property <b>allocationMethod</b></a>
 </h3>
@@ -16247,9 +16469,11 @@ A collection containing the availability zone to allocate the Public IP in.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/route.ts#L148">interface <b>RouteArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Route resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RouteArgs-addressPrefix">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/route.ts#L152">property <b>addressPrefix</b></a>
 </h3>
@@ -16321,9 +16545,11 @@ The name of the route table within which create the route. Changing this forces 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/route.ts#L118">interface <b>RouteState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Route resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RouteState-addressPrefix">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/route.ts#L122">property <b>addressPrefix</b></a>
 </h3>
@@ -16395,9 +16621,11 @@ The name of the route table within which create the route. Changing this forces 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/routeTable.ts#L151">interface <b>RouteTableArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a RouteTable resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RouteTableArgs-disableBgpRoutePropagation">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/routeTable.ts#L155">property <b>disableBgpRoutePropagation</b></a>
 </h3>
@@ -16474,9 +16702,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/routeTable.ts#L117">interface <b>RouteTableState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering RouteTable resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RouteTableState-disableBgpRoutePropagation">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/routeTable.ts#L121">property <b>disableBgpRoutePropagation</b></a>
 </h3>
@@ -16564,9 +16794,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/subnet.ts#L186">interface <b>SubnetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Subnet resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SubnetArgs-addressPrefix">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/subnet.ts#L190">property <b>addressPrefix</b></a>
 </h3>
@@ -16677,9 +16909,11 @@ The name of the virtual network to which to attach the subnet. Changing this for
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/subnetNetworkSecurityGroupAssociation.ts#L125">interface <b>SubnetNetworkSecurityGroupAssociationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a SubnetNetworkSecurityGroupAssociation resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SubnetNetworkSecurityGroupAssociationArgs-networkSecurityGroupId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/subnetNetworkSecurityGroupAssociation.ts#L129">property <b>networkSecurityGroupId</b></a>
 </h3>
@@ -16707,9 +16941,11 @@ The ID of the Subnet. Changing this forces a new resource to be created.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/subnetNetworkSecurityGroupAssociation.ts#L111">interface <b>SubnetNetworkSecurityGroupAssociationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering SubnetNetworkSecurityGroupAssociation resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SubnetNetworkSecurityGroupAssociationState-networkSecurityGroupId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/subnetNetworkSecurityGroupAssociation.ts#L115">property <b>networkSecurityGroupId</b></a>
 </h3>
@@ -16737,9 +16973,11 @@ The ID of the Subnet. Changing this forces a new resource to be created.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/subnetRouteTableAssociation.ts#L120">interface <b>SubnetRouteTableAssociationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a SubnetRouteTableAssociation resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SubnetRouteTableAssociationArgs-routeTableId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/subnetRouteTableAssociation.ts#L124">property <b>routeTableId</b></a>
 </h3>
@@ -16767,9 +17005,11 @@ The ID of the Subnet. Changing this forces a new resource to be created.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/subnetRouteTableAssociation.ts#L106">interface <b>SubnetRouteTableAssociationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering SubnetRouteTableAssociation resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SubnetRouteTableAssociationState-routeTableId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/subnetRouteTableAssociation.ts#L110">property <b>routeTableId</b></a>
 </h3>
@@ -16797,9 +17037,11 @@ The ID of the Subnet. Changing this forces a new resource to be created.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/subnet.ts#L144">interface <b>SubnetState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Subnet resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SubnetState-addressPrefix">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/subnet.ts#L148">property <b>addressPrefix</b></a>
 </h3>
@@ -16910,9 +17152,11 @@ The name of the virtual network to which to attach the subnet. Changing this for
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/virtualNetwork.ts#L209">interface <b>VirtualNetworkArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a VirtualNetwork resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualNetworkArgs-addressSpaces">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/virtualNetwork.ts#L215">property <b>addressSpaces</b></a>
 </h3>
@@ -17020,9 +17264,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/virtualNetworkGateway.ts#L313">interface <b>VirtualNetworkGatewayArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a VirtualNetworkGateway resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayArgs-activeActive">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/virtualNetworkGateway.ts#L320">property <b>activeActive</b></a>
 </h3>
@@ -17213,9 +17459,11 @@ options are `RouteBased` or `PolicyBased`. Defaults to `RouteBased`.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L434">interface <b>VirtualNetworkGatewayConnectionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a VirtualNetworkGatewayConnection resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionArgs-authorizationKey">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L440">property <b>authorizationKey</b></a>
 </h3>
@@ -17430,9 +17678,11 @@ resource to be created.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L340">interface <b>VirtualNetworkGatewayConnectionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering VirtualNetworkGatewayConnection resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayConnectionState-authorizationKey">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/virtualNetworkGatewayConnection.ts#L346">property <b>authorizationKey</b></a>
 </h3>
@@ -17647,9 +17897,11 @@ resource to be created.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/virtualNetworkGateway.ts#L235">interface <b>VirtualNetworkGatewayState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering VirtualNetworkGateway resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualNetworkGatewayState-activeActive">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/virtualNetworkGateway.ts#L242">property <b>activeActive</b></a>
 </h3>
@@ -17840,9 +18092,11 @@ options are `RouteBased` or `PolicyBased`. Defaults to `RouteBased`.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/virtualNetworkPeering.ts#L270">interface <b>VirtualNetworkPeeringArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a VirtualNetworkPeering resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualNetworkPeeringArgs-allowForwardedTraffic">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/virtualNetworkPeering.ts#L275">property <b>allowForwardedTraffic</b></a>
 </h3>
@@ -17950,9 +18204,11 @@ this forces a new resource to be created.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/virtualNetworkPeering.ts#L218">interface <b>VirtualNetworkPeeringState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering VirtualNetworkPeering resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualNetworkPeeringState-allowForwardedTraffic">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/virtualNetworkPeering.ts#L223">property <b>allowForwardedTraffic</b></a>
 </h3>
@@ -18060,9 +18316,11 @@ this forces a new resource to be created.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/virtualNetwork.ts#L165">interface <b>VirtualNetworkState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering VirtualNetwork resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualNetworkState-addressSpaces">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/network/virtualNetwork.ts#L171">property <b>addressSpaces</b></a>
 </h3>

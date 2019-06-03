@@ -32,9 +32,11 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 configuration of a horizontal pod autoscaler.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscaler.ts#L62"> <b>constructor</b></a>
 </h3>
@@ -196,9 +198,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 list of horizontal pod autoscaler objects.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/autoscaling/v1/HorizontalPodAutoscalerList.ts#L55"> <b>constructor</b></a>
 </h3>

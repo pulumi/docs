@@ -42,6 +42,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an Application Insights API key.
 
@@ -102,6 +103,7 @@ export const readTelemetryApiKey = readTelemetry.apiKey;
 export const writeAnnotationsApiKey = writeAnnotations.apiKey;
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ApiKey-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/appinsights/apiKey.ts#L100"> <b>constructor</b></a>
 </h3>
@@ -243,6 +245,7 @@ Specifies the list of write permissions granted to the API key. Valid values are
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage an Application Insights component.
 
@@ -267,6 +270,7 @@ export const appId = testInsights.appId;
 export const instrumentationKey = testInsights.instrumentationKey;
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Insights-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/appinsights/insights.ts#L73"> <b>constructor</b></a>
 </h3>
@@ -431,6 +435,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an Application Insights WebTest.
 
@@ -476,6 +481,7 @@ export const webtestProvisioningState = testApplicationInsightsWebtest.provision
 export const webtestsSyntheticId = testApplicationInsightsWebtest.syntheticMonitorId;
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="WebTest-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/appinsights/webTest.ts#L112"> <b>constructor</b></a>
 </h3>
@@ -733,9 +739,11 @@ export const applicationInsightsInstrumentationKey = test.instrumentationKey;
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/appinsights/apiKey.ts#L164">interface <b>ApiKeyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ApiKey resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ApiKeyArgs-applicationInsightsId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/appinsights/apiKey.ts#L168">property <b>applicationInsightsId</b></a>
 </h3>
@@ -786,9 +794,11 @@ Specifies the list of write permissions granted to the API key. Valid values are
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/appinsights/apiKey.ts#L137">interface <b>ApiKeyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ApiKey resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ApiKeyState-apiKey">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/appinsights/apiKey.ts#L141">property <b>apiKey</b></a>
 </h3>
@@ -850,9 +860,11 @@ Specifies the list of write permissions granted to the API key. Valid values are
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/appinsights/getInsights.ts#L34">interface <b>GetInsightsArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getInsights.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetInsightsArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/appinsights/getInsights.ts#L38">property <b>name</b></a>
 </h3>
@@ -880,9 +892,11 @@ Specifies the name of the resource group the Application Insights component is l
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/appinsights/getInsights.ts#L48">interface <b>GetInsightsResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getInsights.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetInsightsResult-appId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/appinsights/getInsights.ts#L52">property <b>appId</b></a>
 </h3>
@@ -970,9 +984,11 @@ Tags applied to the component.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/appinsights/insights.ts#L153">interface <b>InsightsArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Insights resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="InsightsArgs-applicationType">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/appinsights/insights.ts#L157">property <b>applicationType</b></a>
 </h3>
@@ -1035,9 +1051,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/appinsights/insights.ts#L117">interface <b>InsightsState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Insights resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="InsightsState-appId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/appinsights/insights.ts#L121">property <b>appId</b></a>
 </h3>
@@ -1122,9 +1140,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/appinsights/webTest.ts#L233">interface <b>WebTestArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a WebTest resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="WebTestArgs-applicationInsightsId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/appinsights/webTest.ts#L237">property <b>applicationInsightsId</b></a>
 </h3>
@@ -1268,9 +1288,11 @@ Seconds until this WebTest will timeout and fail. Default is `30`.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/appinsights/webTest.ts#L179">interface <b>WebTestState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering WebTest resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="WebTestState-applicationInsightsId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/appinsights/webTest.ts#L183">property <b>applicationInsightsId</b></a>
 </h3>

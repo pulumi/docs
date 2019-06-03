@@ -32,9 +32,11 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Describes a certificate signing request
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CertificateSigningRequest-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/certificates/v1beta1/CertificateSigningRequest.ts#L58"> <b>constructor</b></a>
 </h3>

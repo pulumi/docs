@@ -159,6 +159,7 @@ An interval timer, which fires on a regular time interval.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/api.ts#L160">interface <b>API</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 API publishes an internet-facing HTTP API, for serving web
 applications or REST APIs.
@@ -180,6 +181,7 @@ Paths and routing are defined statically, and cannot overlap. Code inside a
 route handler can be used to provide dynamic decisions about sub-routing
 within a static path.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="API-all">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/api.ts#L230">method <b>all</b></a>
 </h3>
@@ -355,6 +357,7 @@ static serves a file or directory from within the source folder at the requested
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/bucket.ts#L67">interface <b>Bucket</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Bucket is a simple blob store.
 
@@ -362,6 +365,7 @@ Gets are read-after-write consistent for puts of new blobs, and eventually consi
 
 Blobs in a bucket are encrypted at rest by default.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Bucket-delete">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/bucket.ts#L105">method <b>delete</b></a>
 </h3>
@@ -453,9 +457,11 @@ Creates a new Bucket.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/bucket.ts#L43">interface <b>BucketFilter</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 BucketFilter specifies filters to apply to an [onPut] or [onDelete] subscription.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="BucketFilter-keyPrefix">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/bucket.ts#L44">property <b>keyPrefix</b></a>
 </h3>
@@ -477,9 +483,11 @@ BucketFilter specifies filters to apply to an [onPut] or [onDelete] subscription
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/bucket.ts#L20">interface <b>BucketHandlerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 BucketHandlerArgs are the arguments passed to an [onPut] or [onDelete] handler.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="BucketHandlerArgs-eventTime">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/bucket.ts#L32">property <b>eventTime</b></a>
 </h3>
@@ -518,10 +526,12 @@ The size, in bytes, of the blob that was [put].
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/service.ts#L126">interface <b>CacheFrom</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 CacheFrom may be used to specify build stages to use for the Docker build cache. The final image is always
 implicitly included.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CacheFrom-stages">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/service.ts#L131">property <b>stages</b></a>
 </h3>
@@ -539,9 +549,11 @@ pushed to the target repository. A given stage's image will be tagged as "[stage
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/service.ts#L41">interface <b>Container</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Container specifies the metadata for a component of a Service.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Container-build">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/service.ts#L53">property <b>build</b></a>
 </h3>
@@ -701,9 +713,11 @@ https://docs.docker.com/engine/reference/commandline/run.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/service.ts#L137">interface <b>ContainerBuild</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 ContainerBuild may be used to specify detailed instructions about how to build a container.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ContainerBuild-args">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/service.ts#L154">property <b>args</b></a>
 </h3>
@@ -761,9 +775,11 @@ to be a file named Dockerfile in the root of the build context.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/service.ts#L166">interface <b>ContainerPort</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 ContainerPort represents the information about how to expose a container port on a [Service].
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ContainerPort-external">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/service.ts#L178">property <b>external</b></a>
 </h3>
@@ -838,17 +854,21 @@ The target port on the backing container.  Defaults to the value of [port].
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/service.ts#L20">interface <b>Containers</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of Containers
 
+{{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="DailySchedule">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/timer.ts#L46">interface <b>DailySchedule</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 DailySchedule describes a time of day ([[hourUTC]] and [[minuteUTC]]) at which a daily timer should fire.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DailySchedule-hourUTC">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/timer.ts#L50">property <b>hourUTC</b></a>
 </h3>
@@ -876,10 +896,12 @@ The minute, in UTC, that the timer should fire.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/api.ts#L277">interface <b>Domain</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Domain includes the domain name and certificate data to enable hosting an
 API on a custom domain.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Domain-certificateBody">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/api.ts#L285">property <b>certificateBody</b></a>
 </h3>
@@ -956,6 +978,7 @@ The domain name to associate with the API.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/service.ts#L230">interface <b>HostPathVolume</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A volume mounted from a path on the host machine.
 
@@ -963,6 +986,7 @@ _Note_: This is an emphemeral volume which will not persist across container res
 across different hosts.  This is not something that most containers will need, but it offers
 a powerful escape hatch for some applications.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="HostPathVolume-kind">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/service.ts#L231">property <b>kind</b></a>
 </h3>
@@ -1002,9 +1026,11 @@ Construct a new Volume with the given unique name.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/service.ts#L29">interface <b>HostProperties</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 HostProperties describes the kind of host where a service or task can run.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="HostProperties-os">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/service.ts#L35">property <b>os</b></a>
 </h3>
@@ -1023,9 +1049,11 @@ Default is "linux".
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/timer.ts#L60">interface <b>HourlySchedule</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 HourlySchedule describes a time of the hour ([[minuteUTC]]) at which an hourly timer should fire.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="HourlySchedule-minuteUTC">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/timer.ts#L64">property <b>minuteUTC</b></a>
 </h3>
@@ -1042,10 +1070,12 @@ The minute, in UTC, that the timer should fire.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/api.ts#L260">interface <b>HttpDeployment</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 HttpDeployment represents an API that has been deployed and is
 available at a URL.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="HttpDeployment-customDomainNames">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/api.ts#L270">property <b>customDomainNames</b></a>
 </h3>
@@ -1075,11 +1105,13 @@ The URL at which the HttpDeployment is available to the Internet.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/timer.ts#L28">interface <b>IntervalRate</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 IntervalRate describes the rate at which a timer will fire.
 
 At least one of [[minutes]], [[hours]] or [[days]] must be provided.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="IntervalRate-days">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/timer.ts#L40">property <b>days</b></a>
 </h3>
@@ -1118,9 +1150,11 @@ The number of minutes in the interval.  Must be a positive integer.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/api.ts#L21">interface <b>Request</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Request represents an API request.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Request-baseUrl">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/api.ts#L58">property <b>baseUrl</b></a>
 </h3>
@@ -1237,9 +1271,11 @@ The headers of the HTTP request.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/api.ts#L68">interface <b>Response</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Response represents the response to an API request.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Response-end">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/api.ts#L97">method <b>end</b></a>
 </h3>
@@ -1388,11 +1424,13 @@ directory. To disable this set false or to supply a new index pass a string.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/service.ts#L290">interface <b>Service</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A persistent service running as part of the Pulumi Cloud application. A
 collection of container specifications are provided to define the compute
 that will run inside this service.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Service-getEndpoint">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/service.ts#L316">method <b>getEndpoint</b></a>
 </h3>
@@ -1450,11 +1488,13 @@ on the given containerPort.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Container'>Container</a></pre>
+{{% md %}}
 
 The arguments to construct a Service object. These arguments may include container information, for simple
 single-container scenarios, or you may specify that information using the containers property. If a single container
 is specified in-line, it is implicitly given the name "default".
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceArguments-build">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/service.ts#L53">property <b>build</b></a>
 </h3>
@@ -1681,9 +1721,11 @@ Construct a new Service, which is one or more managed replicas of a group of one
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/service.ts#L203">interface <b>SharedVolume</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A shared volume that can be mounted into one or more containers.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SharedVolume-kind">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/service.ts#L204">property <b>kind</b></a>
 </h3>
@@ -1726,11 +1768,13 @@ Construct a new Volume with the given unique name.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/topic.ts#L62">interface <b>Stream</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A Stream<T> provides access to listen to an (infinite) stream of items coming
 from a data source.  Unlike [[Topic]], a Stream provides only access to read
 from the stream, not the ability to publish new items to the stream.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Stream-subscribe">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/topic.ts#L75">method <b>subscribe</b></a>
 </h3>
@@ -1755,6 +1799,7 @@ subscription handlers must ensure they can safely be retried.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/table.ts#L57">interface <b>Table</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Table is a simple document store for persistent application backend storage.
 
@@ -1772,6 +1817,7 @@ All queries provide a subset of properties to filter on, and only filters on
 value equality are supported.  The `get`, `update` and `delete` operations
 expect the query to contain only the value for the primary key.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Table-delete">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/table.ts#L101">method <b>delete</b></a>
 </h3>
@@ -1892,10 +1938,12 @@ Creates a new Table.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/service.ts#L350">interface <b>Task</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A Task represents a container which can be [run] dynamically whenever (and
 as many times as) needed.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Task-run">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/service.ts#L354">method <b>run</b></a>
 </h3>
@@ -1936,9 +1984,11 @@ Construct a new Task, which is a Container that can be run many times as individ
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/service.ts#L335">interface <b>TaskRunOptions</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Arguments to use for initializing a single run of the Task
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="TaskRunOptions-environment">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/service.ts#L339">property <b>environment</b></a>
 </h3>
@@ -1967,11 +2017,13 @@ The properties of the host where this task can run.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Stream'>Stream</a>&lt;T&gt;</pre>
+{{% md %}}
 
 A Topic<T> is used to distribute work which will be run concurrently by any
 susbcribed handlers.  Producers can [[publish]] to the topic, and consumers
 can [[subscribe]] to be notified when new items are published.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Topic-subscribe">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/topic.ts#L52">method <b>subscribe</b></a>
 </h3>
@@ -2025,18 +2077,22 @@ Allocate a new Topic with a given name.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> Action = () => <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;;</pre>
+{{% md %}}
 
 Action is a handler that performs an action in response to a timer firing.
 
+{{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="BucketHandler">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/bucket.ts#L38">type <b>BucketHandler</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> BucketHandler = (args: <a href='#BucketHandlerArgs'>BucketHandlerArgs</a>) => <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;;</pre>
+{{% md %}}
 
 BucketHandler is the callback that handles an [onPut] or [onDelete] event.
 
+{{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="ContainerProtocol">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/service.ts#L189">type <b>ContainerProtocol</b></a>
@@ -2061,16 +2117,19 @@ BucketHandler is the callback that handles an [onPut] or [onDelete] event.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> PrimaryKeyType = <span class='s2'>"string"</span> | <span class='s2'>"number"</span> | <span class='s2'>"boolean"</span>;</pre>
+{{% md %}}
 
 The available types for primary keys. The default primary key type is
 `string`.
 
+{{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="RouteHandler">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/api.ts#L118">type <b>RouteHandler</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> RouteHandler = (req: <a href='#Request'>Request</a>, res: <a href='#Response'>Response</a>, next: () => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>) => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>;</pre>
+{{% md %}}
 
 RouteHandler represents a handler for a route on an API.
 
@@ -2078,6 +2137,7 @@ Implementations should invoke methods on `res` to respond to the request, or
 invoke `next` to pass control to the next available handler on the route for
 further processing.
 
+{{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="Volume">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/c9b98bbc894434b92ef569c19fdc945769bdb945/api/service.ts#L198">type <b>Volume</b></a>

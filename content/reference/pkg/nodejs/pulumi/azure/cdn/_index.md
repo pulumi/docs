@@ -39,6 +39,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 A CDN Endpoint is the entity within a CDN Profile containing configuration information regarding caching behaviors and origins. The CDN Endpoint is exposed using the URL format <endpointname>.azureedge.net.
 
@@ -77,6 +78,7 @@ const testEndpoint = new azure.cdn.Endpoint("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Endpoint-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cdn/endpoint.ts#L122"> <b>constructor</b></a>
 </h3>
@@ -355,6 +357,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage a CDN Profile to create a collection of CDN Endpoints.
 
@@ -380,6 +383,7 @@ const testProfile = new azure.cdn.Profile("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Profile-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cdn/profile.ts#L66"> <b>constructor</b></a>
 </h3>
@@ -548,9 +552,11 @@ export const cdnProfileId = test.id;
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cdn/endpoint.ts#L260">interface <b>EndpointArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Endpoint resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="EndpointArgs-contentTypesToCompresses">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cdn/endpoint.ts#L264">property <b>contentTypesToCompresses</b></a>
 </h3>
@@ -741,9 +747,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cdn/endpoint.ts#L189">interface <b>EndpointState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Endpoint resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="EndpointState-contentTypesToCompresses">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cdn/endpoint.ts#L193">property <b>contentTypesToCompresses</b></a>
 </h3>
@@ -942,9 +950,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cdn/getProfile.ts#L34">interface <b>GetProfileArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getProfile.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetProfileArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cdn/getProfile.ts#L38">property <b>name</b></a>
 </h3>
@@ -972,9 +982,11 @@ The name of the resource group in which the CDN Profile exists.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cdn/getProfile.ts#L48">interface <b>GetProfileResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getProfile.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetProfileResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cdn/getProfile.ts#L66">property <b>id</b></a>
 </h3>
@@ -1040,9 +1052,11 @@ A mapping of tags assigned to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cdn/profile.ts#L134">interface <b>ProfileArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Profile resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ProfileArgs-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cdn/profile.ts#L138">property <b>location</b></a>
 </h3>
@@ -1105,9 +1119,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cdn/profile.ts#L106">interface <b>ProfileState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Profile resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ProfileState-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cdn/profile.ts#L110">property <b>location</b></a>
 </h3>

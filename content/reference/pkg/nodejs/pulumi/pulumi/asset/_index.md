@@ -38,9 +38,11 @@ aliases:
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/asset/archive.ts#L21">class <b>Archive</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 An Archive represents a collection of named assets.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Archive-isInstance">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/asset/archive.ts#L33">method <b>isInstance</b></a>
 </h3>
@@ -60,9 +62,11 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/asset/asset.ts#L20">class <b>Asset</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Asset represents a single blob of text or data that is managed as a first class entity.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Asset-isInstance">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/asset/asset.ts#L32">method <b>isInstance</b></a>
 </h3>
@@ -83,9 +87,11 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Archive'>Archive</a></pre>
+{{% md %}}
 
 An AssetArchive is an archive created from an in-memory collection of named assets or other archives.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AssetArchive-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/asset/archive.ts#L50"> <b>constructor</b></a>
 </h3>
@@ -127,10 +133,12 @@ A map of names to assets.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Archive'>Archive</a></pre>
+{{% md %}}
 
 A FileArchive is a file-based archive, or a collection of file-based assets.  This can be a raw directory or a
 single archive file in one of the supported formats (.tar, .tar.gz, or .zip).
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FileArchive-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/asset/archive.ts#L66"> <b>constructor</b></a>
 </h3>
@@ -172,9 +180,11 @@ The path to the asset file.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Asset'>Asset</a></pre>
+{{% md %}}
 
 FileAsset is a kind of asset produced from a given path to a file on the local filesystem.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FileAsset-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/asset/asset.ts#L55"> <b>constructor</b></a>
 </h3>
@@ -216,11 +226,13 @@ The path to the asset file.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Archive'>Archive</a></pre>
+{{% md %}}
 
 A RemoteArchive is a file-based archive fetched from a remote location.  The URI's scheme dictates the
 protocol for fetching the archive's contents: `file://` is a local file (just like a FileArchive), `http://` and
 `https://` specify HTTP and HTTPS, respectively, and specific providers may recognize custom schemes.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RemoteArchive-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/asset/archive.ts#L83"> <b>constructor</b></a>
 </h3>
@@ -262,11 +274,13 @@ The URI where the archive lives.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Asset'>Asset</a></pre>
+{{% md %}}
 
 RemoteAsset is a kind of asset produced from a given URI string.  The URI's scheme dictates the protocol for fetching
 contents: `file://` specifies a local file, `http://` and `https://` specify HTTP and HTTPS, respectively.  Note that
 specific providers may recognize alternative schemes; this is merely the base-most set that all providers support.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RemoteAsset-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/asset/asset.ts#L87"> <b>constructor</b></a>
 </h3>
@@ -308,9 +322,11 @@ The URI where the asset lives.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Asset'>Asset</a></pre>
+{{% md %}}
 
 StringAsset is a kind of asset produced from an in-memory UTF8-encoded string.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StringAsset-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/asset/asset.ts#L70"> <b>constructor</b></a>
 </h3>
@@ -352,7 +368,9 @@ The string contents.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> AssetMap = {[name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='#Asset'>Asset</a> | <a href='#Archive'>Archive</a>};</pre>
+{{% md %}}
 
 AssetMap is a map of assets.
 
+{{% /md %}}
 </div>

@@ -46,12 +46,14 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 CustomResource represents an instance of a CustomResourceDefinition (CRD). For example, the
 CoreOS Prometheus operator exposes a CRD `monitoring.coreos.com/ServiceMonitor`; to
 instantiate this as a Pulumi resource, one could call `new CustomResource`, passing the
 `ServiceMonitor` resource definition as an argument.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CustomResource-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/apiextensions/CustomResource.ts#L126"> <b>constructor</b></a>
 </h3>
@@ -189,6 +191,7 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/apiextensions/CustomResource.ts#L29">interface <b>CustomResourceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 CustomResourceArgs represents a resource definition we'd use to create an instance of a
 Kubernetes CustomResourceDefinition (CRD). For example, the CoreOS Prometheus operator
@@ -199,6 +202,7 @@ pass a `CustomResourceArgs` containing the `ServiceMonitor` definition to
 NOTE: This type is fairly loose, since other than `apiVersion` and `kind`, there are no
 fields required across all CRDs.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CustomResourceArgs-apiVersion">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/apiextensions/CustomResource.ts#L36">property <b>apiVersion</b></a>
 </h3>
@@ -245,10 +249,12 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a></pre>
+{{% md %}}
 
 CustomResourceGetOptions uniquely identifies a Kubernetes CustomResource, primarily for use
 in supplied to `apiextensions.CustomResource#get`.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CustomResourceGetOptions-additionalSecretOutputs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>additionalSecretOutputs</b></a>
 </h3>

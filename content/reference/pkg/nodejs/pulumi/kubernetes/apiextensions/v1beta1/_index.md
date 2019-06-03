@@ -32,10 +32,12 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 CustomResourceDefinition represents a resource that should be exposed on the API server.  Its
 name MUST be in the format <.spec.name>.<.spec.group>.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CustomResourceDefinition-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/apiextensions/v1beta1/CustomResourceDefinition.ts#L59"> <b>constructor</b></a>
 </h3>
@@ -192,9 +194,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CustomResourceDefinitionList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/apiextensions/v1beta1/CustomResourceDefinitionList.ts#L53"> <b>constructor</b></a>
 </h3>

@@ -45,6 +45,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an Authorization Rule associated with a Notification Hub within a Notification Hub Namespace.
 
@@ -84,6 +85,7 @@ const testAuthorizationRule = new azure.notificationhub.AuthorizationRule("test"
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AuthorizationRule-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/notificationhub/authorizationRule.ts#L94"> <b>constructor</b></a>
 </h3>
@@ -268,6 +270,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Notification Hub within a Notification Hub Namespace.
 
@@ -298,6 +301,7 @@ const testHub = new azure.notificationhub.Hub("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Hub-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/notificationhub/hub.ts#L73"> <b>constructor</b></a>
 </h3>
@@ -457,6 +461,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Notification Hub Namespace.
 
@@ -481,6 +486,7 @@ const testNamespace = new azure.notificationhub.Namespace("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Namespace-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/notificationhub/namespace.ts#L71"> <b>constructor</b></a>
 </h3>
@@ -699,9 +705,11 @@ export const servicebusEndpoint = test.servicebusEndpoint;
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/notificationhub/authorizationRule.ts#L187">interface <b>AuthorizationRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a AuthorizationRule resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AuthorizationRuleArgs-listen">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/notificationhub/authorizationRule.ts#L191">property <b>listen</b></a>
 </h3>
@@ -784,9 +792,11 @@ Does this Authorization Rule have Send access to the Notification Hub? Defaults 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/notificationhub/authorizationRule.ts#L145">interface <b>AuthorizationRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering AuthorizationRule resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AuthorizationRuleState-listen">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/notificationhub/authorizationRule.ts#L149">property <b>listen</b></a>
 </h3>
@@ -891,9 +901,11 @@ Does this Authorization Rule have Send access to the Notification Hub? Defaults 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/notificationhub/getHub.ts#L36">interface <b>GetHubArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getHub.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetHubArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/notificationhub/getHub.ts#L40">property <b>name</b></a>
 </h3>
@@ -932,9 +944,11 @@ Specifies the Name of the Resource Group within which the Notification Hub exist
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/notificationhub/getHub.ts#L54">interface <b>GetHubResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getHub.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetHubResult-apnsCredentials">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/notificationhub/getHub.ts#L58">property <b>apnsCredentials</b></a>
 </h3>
@@ -1016,9 +1030,11 @@ The Azure Region in which this Notification Hub exists.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/notificationhub/getNamespace.ts#L34">interface <b>GetNamespaceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getNamespace.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetNamespaceArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/notificationhub/getNamespace.ts#L38">property <b>name</b></a>
 </h3>
@@ -1046,9 +1062,11 @@ Specifies the Name of the Resource Group within which the Notification Hub exist
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/notificationhub/getNamespace.ts#L48">interface <b>GetNamespaceResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getNamespace.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetNamespaceResult-enabled">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/notificationhub/getNamespace.ts#L52">property <b>enabled</b></a>
 </h3>
@@ -1138,9 +1156,11 @@ A `sku` block as defined below.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/notificationhub/hub.ts#L145">interface <b>HubArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Hub resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="HubArgs-apnsCredential">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/notificationhub/hub.ts#L149">property <b>apnsCredential</b></a>
 </h3>
@@ -1220,9 +1240,11 @@ The name of the Resource Group in which the Notification Hub Namespace exists. C
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/notificationhub/hub.ts#L115">interface <b>HubState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Hub resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="HubState-apnsCredential">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/notificationhub/hub.ts#L119">property <b>apnsCredential</b></a>
 </h3>
@@ -1302,9 +1324,11 @@ The name of the Resource Group in which the Notification Hub Namespace exists. C
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/notificationhub/namespace.ts#L152">interface <b>NamespaceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Namespace resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NamespaceArgs-enabled">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/notificationhub/namespace.ts#L156">property <b>enabled</b></a>
 </h3>
@@ -1378,9 +1402,11 @@ A `sku` block as defined below.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/notificationhub/namespace.ts#L118">interface <b>NamespaceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Namespace resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NamespaceState-enabled">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/notificationhub/namespace.ts#L122">property <b>enabled</b></a>
 </h3>

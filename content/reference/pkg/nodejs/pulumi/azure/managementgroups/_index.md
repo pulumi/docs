@@ -36,6 +36,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Management Group.
 
@@ -57,6 +58,7 @@ const exampleChild = new azure.managementgroups.ManagementGroup("example_child",
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ManagementGroup-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/managementgroups/managementGroup.ts#L56"> <b>constructor</b></a>
 </h3>
@@ -211,9 +213,11 @@ export const displayName = test.displayName;
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/managementgroups/getManagementGroup.ts#L32">interface <b>GetManagementGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getManagementGroup.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetManagementGroupArgs-groupId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/managementgroups/getManagementGroup.ts#L36">property <b>groupId</b></a>
 </h3>
@@ -230,9 +234,11 @@ Specifies the UUID of this Management Group.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/managementgroups/getManagementGroup.ts#L42">interface <b>GetManagementGroupResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getManagementGroup.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetManagementGroupResult-displayName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/managementgroups/getManagementGroup.ts#L46">property <b>displayName</b></a>
 </h3>
@@ -290,9 +296,11 @@ A list of Subscription ID's which are assigned to the Management Group.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/managementgroups/managementGroup.ts#L110">interface <b>ManagementGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ManagementGroup resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ManagementGroupArgs-displayName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/managementgroups/managementGroup.ts#L114">property <b>displayName</b></a>
 </h3>
@@ -342,9 +350,11 @@ A list of Subscription GUIDs which should be assigned to the Management Group.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/managementgroups/managementGroup.ts#L88">interface <b>ManagementGroupState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ManagementGroup resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ManagementGroupState-displayName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/managementgroups/managementGroup.ts#L92">property <b>displayName</b></a>
 </h3>

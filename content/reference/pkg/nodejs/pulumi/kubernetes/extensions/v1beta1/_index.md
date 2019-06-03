@@ -42,10 +42,12 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 DEPRECATED - This group version of DaemonSet is deprecated by apps/v1beta2/DaemonSet. See the
 release notes for more information. DaemonSet represents the configuration of a daemon set.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DaemonSet-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/extensions/v1beta1/DaemonSet.ts#L65"> <b>constructor</b></a>
 </h3>
@@ -209,9 +211,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 DaemonSetList is a collection of daemon sets.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DaemonSetList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/extensions/v1beta1/DaemonSetList.ts#L56"> <b>constructor</b></a>
 </h3>
@@ -361,11 +365,13 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 DEPRECATED - This group version of Deployment is deprecated by apps/v1beta2/Deployment. See
 the release notes for more information. Deployment enables declarative updates for Pods and
 ReplicaSets.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Deployment-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/extensions/v1beta1/Deployment.ts#L62"> <b>constructor</b></a>
 </h3>
@@ -525,9 +531,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 DeploymentList is a list of Deployments.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DeploymentList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/extensions/v1beta1/DeploymentList.ts#L55"> <b>constructor</b></a>
 </h3>
@@ -676,6 +684,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Ingress is a collection of rules that allow inbound connections to reach the endpoints
 defined by a backend. An Ingress can be configured to give services externally-reachable
@@ -683,6 +692,7 @@ urls, load balance traffic, terminate SSL, offer name based virtual hosting etc.
 This group version of Ingress is deprecated by networking.k8s.io/v1beta1 Ingress. See the
 release notes for more information.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Ingress-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/extensions/v1beta1/Ingress.ts#L67"> <b>constructor</b></a>
 </h3>
@@ -845,9 +855,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 IngressList is a collection of Ingress.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="IngressList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/extensions/v1beta1/IngressList.ts#L56"> <b>constructor</b></a>
 </h3>
@@ -997,11 +1009,13 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 DEPRECATED 1.9 - This group version of NetworkPolicy is deprecated by
 networking/v1/NetworkPolicy. NetworkPolicy describes what network traffic is allowed for a
 set of Pods
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkPolicy-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/extensions/v1beta1/NetworkPolicy.ts#L58"> <b>constructor</b></a>
 </h3>
@@ -1151,10 +1165,12 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 DEPRECATED 1.9 - This group version of NetworkPolicyList is deprecated by
 networking/v1/NetworkPolicyList. Network Policy List is a list of NetworkPolicy objects.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkPolicyList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/extensions/v1beta1/NetworkPolicyList.ts#L57"> <b>constructor</b></a>
 </h3>
@@ -1304,11 +1320,13 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 PodSecurityPolicy governs the ability to make requests that affect the Security Context that
 will be applied to a pod and container. Deprecated: use PodSecurityPolicy from policy API
 Group instead.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PodSecurityPolicy-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/extensions/v1beta1/PodSecurityPolicy.ts#L58"> <b>constructor</b></a>
 </h3>
@@ -1458,10 +1476,12 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 PodSecurityPolicyList is a list of PodSecurityPolicy objects. Deprecated: use
 PodSecurityPolicyList from policy API Group instead.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PodSecurityPolicyList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/extensions/v1beta1/PodSecurityPolicyList.ts#L57"> <b>constructor</b></a>
 </h3>
@@ -1611,11 +1631,13 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 DEPRECATED - This group version of ReplicaSet is deprecated by apps/v1beta2/ReplicaSet. See
 the release notes for more information. ReplicaSet ensures that a specified number of pod
 replicas are running at any given time.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ReplicaSet-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/extensions/v1beta1/ReplicaSet.ts#L67"> <b>constructor</b></a>
 </h3>
@@ -1780,9 +1802,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 ReplicaSetList is a collection of ReplicaSets.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ReplicaSetList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/extensions/v1beta1/ReplicaSetList.ts#L57"> <b>constructor</b></a>
 </h3>

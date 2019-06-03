@@ -33,6 +33,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Databricks Workspace
 
@@ -57,6 +58,7 @@ const testWorkspace = new azure.databricks.Workspace("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Workspace-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/databricks/workspace.ts#L71"> <b>constructor</b></a>
 </h3>
@@ -218,9 +220,11 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/databricks/workspace.ts#L149">interface <b>WorkspaceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Workspace resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="WorkspaceArgs-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/databricks/workspace.ts#L153">property <b>location</b></a>
 </h3>
@@ -292,9 +296,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/databricks/workspace.ts#L115">interface <b>WorkspaceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Workspace resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="WorkspaceState-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/databricks/workspace.ts#L119">property <b>location</b></a>
 </h3>

@@ -55,6 +55,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a CosmosDB (formally DocumentDB) Account.
 
@@ -99,6 +100,7 @@ const db = new azure.cosmosdb.Account("db", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Account-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/account.ts#L152"> <b>constructor</b></a>
 </h3>
@@ -465,6 +467,7 @@ A list of write endpoints available for this CosmosDB account.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Cassandra KeySpace within a Cosmos DB Account.
 
@@ -485,6 +488,7 @@ const exampleCassandraKeyspace = new azure.cosmosdb.CassandraKeyspace("example",
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CassandraKeyspace-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/cassandraKeyspace.ts#L51"> <b>constructor</b></a>
 </h3>
@@ -681,6 +685,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Mongo Collection within a Cosmos DB Account.
 
@@ -719,6 +724,7 @@ const exampleMongoDatabase = new azure.cosmosdb.MongoDatabase("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="MongoCollection-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/mongoCollection.ts#L79"> <b>constructor</b></a>
 </h3>
@@ -878,6 +884,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Mongo Database within a Cosmos DB Account.
 
@@ -898,6 +905,7 @@ const exampleMongoDatabase = new azure.cosmosdb.MongoDatabase("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="MongoDatabase-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/mongoDatabase.ts#L51"> <b>constructor</b></a>
 </h3>
@@ -1016,6 +1024,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a SQL Database within a Cosmos DB Account.
 
@@ -1036,6 +1045,7 @@ const exampleSqlDatabase = new azure.cosmosdb.SqlDatabase("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SqlDatabase-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/sqlDatabase.ts#L51"> <b>constructor</b></a>
 </h3>
@@ -1154,6 +1164,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Table within a Cosmos DB Account.
 
@@ -1174,6 +1185,7 @@ const exampleTable = new azure.cosmosdb.Table("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Table-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/table.ts#L51"> <b>constructor</b></a>
 </h3>
@@ -1318,9 +1330,11 @@ export const cosmosdbAccountEndpoint = azurerm_cosmosdb_account_jobs.endpoint;
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/account.ts#L326">interface <b>AccountArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Account resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AccountArgs-capabilities">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/account.ts#L330">property <b>capabilities</b></a>
 </h3>
@@ -1505,9 +1519,11 @@ Specifies a `virtual_network_rules` resource, used to define which subnets are a
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/account.ts#L231">interface <b>AccountState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Account resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AccountState-capabilities">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/account.ts#L235">property <b>capabilities</b></a>
 </h3>
@@ -1780,9 +1796,11 @@ A list of write endpoints available for this CosmosDB account.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/cassandraKeyspace.ts#L105">interface <b>CassandraKeyspaceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a CassandraKeyspace resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CassandraKeyspaceArgs-accountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/cassandraKeyspace.ts#L109">property <b>accountName</b></a>
 </h3>
@@ -1821,9 +1839,11 @@ The name of the resource group in which the Cosmos DB Cassandra KeySpace is crea
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/cassandraKeyspace.ts#L87">interface <b>CassandraKeyspaceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering CassandraKeyspace resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CassandraKeyspaceState-accountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/cassandraKeyspace.ts#L91">property <b>accountName</b></a>
 </h3>
@@ -1863,9 +1883,11 @@ The name of the resource group in which the Cosmos DB Cassandra KeySpace is crea
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Context'>Context</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;</pre>
+{{% md %}}
 
 Data that will be passed along in the context object to the CosmosCallback.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CosmosChangeFeedContext-done">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/appservice/zMixins.ts#L46">method <b>done</b></a>
 </h3>
@@ -1975,9 +1997,11 @@ HTTP response object. Provided to your function when using HTTP Bindings.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/getAccount.ts#L34">interface <b>GetAccountArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getAccount.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetAccountArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/getAccount.ts#L38">property <b>name</b></a>
 </h3>
@@ -2005,9 +2029,11 @@ Specifies the name of the resource group in which the CosmosDB Account resides.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/getAccount.ts#L48">interface <b>GetAccountResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getAccount.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetAccountResult-capabilities">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/getAccount.ts#L52">property <b>capabilities</b></a>
 </h3>
@@ -2255,9 +2281,11 @@ A list of write endpoints available for this CosmosDB account.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/mongoCollection.ts#L154">interface <b>MongoCollectionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a MongoCollection resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="MongoCollectionArgs-accountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/mongoCollection.ts#L155">property <b>accountName</b></a>
 </h3>
@@ -2337,9 +2365,11 @@ The name of the key to partition on for sharding. There must not be any other un
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/mongoCollection.ts#L126">interface <b>MongoCollectionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering MongoCollection resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="MongoCollectionState-accountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/mongoCollection.ts#L127">property <b>accountName</b></a>
 </h3>
@@ -2419,9 +2449,11 @@ The name of the key to partition on for sharding. There must not be any other un
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/mongoDatabase.ts#L105">interface <b>MongoDatabaseArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a MongoDatabase resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="MongoDatabaseArgs-accountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/mongoDatabase.ts#L109">property <b>accountName</b></a>
 </h3>
@@ -2460,9 +2492,11 @@ The name of the resource group in which the Cosmos DB Mongo Database is created.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/mongoDatabase.ts#L87">interface <b>MongoDatabaseState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering MongoDatabase resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="MongoDatabaseState-accountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/mongoDatabase.ts#L91">property <b>accountName</b></a>
 </h3>
@@ -2501,9 +2535,11 @@ The name of the resource group in which the Cosmos DB Mongo Database is created.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/sqlDatabase.ts#L105">interface <b>SqlDatabaseArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a SqlDatabase resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SqlDatabaseArgs-accountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/sqlDatabase.ts#L109">property <b>accountName</b></a>
 </h3>
@@ -2542,9 +2578,11 @@ The name of the resource group in which the Cosmos DB SQL Database is created. C
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/sqlDatabase.ts#L87">interface <b>SqlDatabaseState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering SqlDatabase resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SqlDatabaseState-accountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/sqlDatabase.ts#L91">property <b>accountName</b></a>
 </h3>
@@ -2583,9 +2621,11 @@ The name of the resource group in which the Cosmos DB SQL Database is created. C
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/table.ts#L105">interface <b>TableArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Table resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="TableArgs-accountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/table.ts#L109">property <b>accountName</b></a>
 </h3>
@@ -2624,9 +2664,11 @@ The name of the resource group in which the Cosmos DB Table is created. Changing
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/table.ts#L87">interface <b>TableState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Table resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="TableState-accountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/table.ts#L91">property <b>accountName</b></a>
 </h3>
@@ -2666,9 +2708,11 @@ The name of the resource group in which the Cosmos DB Table is created. Changing
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> CosmosChangeFeedCallback = appservice.Callback&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;;</pre>
+{{% md %}}
 
 Signature of the callback that can receive Cosmos Change Feed notifications.
 
+{{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="CosmosChangeFeedSubscriptionArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/cosmosdb/zMixins.ts#L103">type <b>CosmosChangeFeedSubscriptionArgs</b></a>

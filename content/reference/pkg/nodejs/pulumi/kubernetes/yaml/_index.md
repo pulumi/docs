@@ -10089,10 +10089,12 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#CollectionComponentResource'>CollectionComponentResource</a></pre>
+{{% md %}}
 
 ConfigFile creates a set of Kubernetes resources from Kubernetes YAML file. If `config.name`
 is not specified, `ConfigFile` assumes the argument `name` is the filename.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ConfigFile-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/yaml/yaml.ts#L2165"> <b>constructor</b></a>
 </h3>
@@ -20146,6 +20148,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#CollectionComponentResource'>CollectionComponentResource</a></pre>
+{{% md %}}
 
 ConfigGroup creates a set of Kubernetes resources from Kubernetes YAML text. The YAML text
 may be supplied using any of the following `ConfigGroupOpts`:
@@ -20162,6 +20165,7 @@ may be supplied using any of the following `ConfigGroupOpts`:
   4. Any combination of files, patterns, or YAML strings:
        a. `{files: "foo.yaml", yaml: "(LITERAL YAML HERE)"}`
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ConfigGroup-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/yaml/yaml.ts#L2154"> <b>constructor</b></a>
 </h3>

@@ -57,6 +57,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a HDInsight HBase Cluster.
 
@@ -123,6 +124,7 @@ const exampleHBaseCluster = new azure.hdinsight.HBaseCluster("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="HBaseCluster-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/hBaseCluster.ts#L133"> <b>constructor</b></a>
 </h3>
@@ -377,6 +379,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a HDInsight Hadoop Cluster.
 
@@ -443,6 +446,7 @@ const exampleHadoopCluster = new azure.hdinsight.HadoopCluster("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="HadoopCluster-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/hadoopCluster.ts#L133"> <b>constructor</b></a>
 </h3>
@@ -697,6 +701,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a HDInsight Interactive Query Cluster.
 
@@ -763,6 +768,7 @@ const exampleInteractiveQueryCluster = new azure.hdinsight.InteractiveQueryClust
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="InteractiveQueryCluster-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/interactiveQueryCluster.ts#L133"> <b>constructor</b></a>
 </h3>
@@ -1017,6 +1023,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a HDInsight Kafka Cluster.
 
@@ -1084,6 +1091,7 @@ const exampleKafkaCluster = new azure.hdinsight.KafkaCluster("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="KafkaCluster-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/kafkaCluster.ts#L134"> <b>constructor</b></a>
 </h3>
@@ -1339,6 +1347,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a HDInsight ML Services Cluster.
 
@@ -1408,6 +1417,7 @@ const exampleMLServicesCluster = new azure.hdinsight.MLServicesCluster("example"
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="MLServicesCluster-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/mLServicesCluster.ts#L140"> <b>constructor</b></a>
 </h3>
@@ -1679,6 +1689,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a HDInsight RServer Cluster.
 
@@ -1748,6 +1759,7 @@ const exampleRServerCluster = new azure.hdinsight.RServerCluster("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RServerCluster-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/rServerCluster.ts#L140"> <b>constructor</b></a>
 </h3>
@@ -2019,6 +2031,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a HDInsight Spark Cluster.
 
@@ -2085,6 +2098,7 @@ const exampleSparkCluster = new azure.hdinsight.SparkCluster("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SparkCluster-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/sparkCluster.ts#L133"> <b>constructor</b></a>
 </h3>
@@ -2339,6 +2353,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a HDInsight Storm Cluster.
 
@@ -2405,6 +2420,7 @@ const exampleStormCluster = new azure.hdinsight.StormCluster("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StormCluster-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/stormCluster.ts#L133"> <b>constructor</b></a>
 </h3>
@@ -2685,9 +2701,11 @@ export const httpsEndpoint = example.httpsEndpoint;
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/getCluster.ts#L34">interface <b>GetClusterArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getCluster.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetClusterArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/getCluster.ts#L38">property <b>name</b></a>
 </h3>
@@ -2715,9 +2733,11 @@ Specifies the name of the Resource Group in which this HDInsight Cluster exists.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/getCluster.ts#L48">interface <b>GetClusterResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getCluster.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetClusterResult-clusterVersion">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/getCluster.ts#L52">property <b>clusterVersion</b></a>
 </h3>
@@ -2864,9 +2884,11 @@ The SKU / Tier of this HDInsight Cluster.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/hBaseCluster.ts#L256">interface <b>HBaseClusterArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a HBaseCluster resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="HBaseClusterArgs-clusterVersion">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/hBaseCluster.ts#L260">property <b>clusterVersion</b></a>
 </h3>
@@ -3019,9 +3041,11 @@ Specifies the Tier which should be used for this HDInsight HBase Cluster. Possib
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/hBaseCluster.ts#L202">interface <b>HBaseClusterState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering HBaseCluster resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="HBaseClusterState-clusterVersion">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/hBaseCluster.ts#L206">property <b>clusterVersion</b></a>
 </h3>
@@ -3196,9 +3220,11 @@ Specifies the Tier which should be used for this HDInsight HBase Cluster. Possib
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/hadoopCluster.ts#L256">interface <b>HadoopClusterArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a HadoopCluster resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="HadoopClusterArgs-clusterVersion">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/hadoopCluster.ts#L260">property <b>clusterVersion</b></a>
 </h3>
@@ -3351,9 +3377,11 @@ Specifies the Tier which should be used for this HDInsight Hadoop Cluster. Possi
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/hadoopCluster.ts#L202">interface <b>HadoopClusterState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering HadoopCluster resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="HadoopClusterState-clusterVersion">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/hadoopCluster.ts#L206">property <b>clusterVersion</b></a>
 </h3>
@@ -3528,9 +3556,11 @@ Specifies the Tier which should be used for this HDInsight Hadoop Cluster. Possi
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/interactiveQueryCluster.ts#L256">interface <b>InteractiveQueryClusterArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a InteractiveQueryCluster resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="InteractiveQueryClusterArgs-clusterVersion">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/interactiveQueryCluster.ts#L260">property <b>clusterVersion</b></a>
 </h3>
@@ -3683,9 +3713,11 @@ Specifies the Tier which should be used for this HDInsight Interactive Query Clu
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/interactiveQueryCluster.ts#L202">interface <b>InteractiveQueryClusterState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering InteractiveQueryCluster resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="InteractiveQueryClusterState-clusterVersion">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/interactiveQueryCluster.ts#L206">property <b>clusterVersion</b></a>
 </h3>
@@ -3860,9 +3892,11 @@ Specifies the Tier which should be used for this HDInsight Interactive Query Clu
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/kafkaCluster.ts#L257">interface <b>KafkaClusterArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a KafkaCluster resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="KafkaClusterArgs-clusterVersion">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/kafkaCluster.ts#L261">property <b>clusterVersion</b></a>
 </h3>
@@ -4016,9 +4050,11 @@ Specifies the Tier which should be used for this HDInsight Kafka Cluster. Possib
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/kafkaCluster.ts#L203">interface <b>KafkaClusterState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering KafkaCluster resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="KafkaClusterState-clusterVersion">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/kafkaCluster.ts#L207">property <b>clusterVersion</b></a>
 </h3>
@@ -4194,9 +4230,11 @@ Specifies the Tier which should be used for this HDInsight Kafka Cluster. Possib
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/mLServicesCluster.ts#L269">interface <b>MLServicesClusterArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a MLServicesCluster resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="MLServicesClusterArgs-clusterVersion">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/mLServicesCluster.ts#L273">property <b>clusterVersion</b></a>
 </h3>
@@ -4355,9 +4393,11 @@ Specifies the Tier which should be used for this HDInsight ML Services Cluster. 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/mLServicesCluster.ts#L211">interface <b>MLServicesClusterState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering MLServicesCluster resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="MLServicesClusterState-clusterVersion">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/mLServicesCluster.ts#L215">property <b>clusterVersion</b></a>
 </h3>
@@ -4549,9 +4589,11 @@ Specifies the Tier which should be used for this HDInsight ML Services Cluster. 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/rServerCluster.ts#L269">interface <b>RServerClusterArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a RServerCluster resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RServerClusterArgs-clusterVersion">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/rServerCluster.ts#L273">property <b>clusterVersion</b></a>
 </h3>
@@ -4710,9 +4752,11 @@ Specifies the Tier which should be used for this HDInsight RServer Cluster. Poss
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/rServerCluster.ts#L211">interface <b>RServerClusterState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering RServerCluster resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RServerClusterState-clusterVersion">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/rServerCluster.ts#L215">property <b>clusterVersion</b></a>
 </h3>
@@ -4904,9 +4948,11 @@ Specifies the Tier which should be used for this HDInsight RServer Cluster. Poss
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/sparkCluster.ts#L256">interface <b>SparkClusterArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a SparkCluster resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SparkClusterArgs-clusterVersion">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/sparkCluster.ts#L260">property <b>clusterVersion</b></a>
 </h3>
@@ -5059,9 +5105,11 @@ Specifies the Tier which should be used for this HDInsight Spark Cluster. Possib
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/sparkCluster.ts#L202">interface <b>SparkClusterState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering SparkCluster resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SparkClusterState-clusterVersion">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/sparkCluster.ts#L206">property <b>clusterVersion</b></a>
 </h3>
@@ -5236,9 +5284,11 @@ Specifies the Tier which should be used for this HDInsight Spark Cluster. Possib
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/stormCluster.ts#L256">interface <b>StormClusterArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a StormCluster resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StormClusterArgs-clusterVersion">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/stormCluster.ts#L260">property <b>clusterVersion</b></a>
 </h3>
@@ -5391,9 +5441,11 @@ Specifies the Tier which should be used for this HDInsight Storm Cluster. Possib
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/stormCluster.ts#L202">interface <b>StormClusterState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering StormCluster resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StormClusterState-clusterVersion">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/hdinsight/stormCluster.ts#L206">property <b>clusterVersion</b></a>
 </h3>

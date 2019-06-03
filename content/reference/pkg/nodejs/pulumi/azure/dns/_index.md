@@ -63,6 +63,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Enables you to manage DNS A Records within Azure DNS.
 
@@ -89,6 +90,7 @@ const testARecord = new azure.dns.ARecord("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ARecord-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/aRecord.ts#L66"> <b>constructor</b></a>
 </h3>
@@ -237,6 +239,7 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Enables you to manage DNS AAAA Records within Azure DNS.
 
@@ -263,6 +266,7 @@ const testAaaaRecord = new azure.dns.AaaaRecord("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AaaaRecord-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/aaaaRecord.ts#L66"> <b>constructor</b></a>
 </h3>
@@ -411,6 +415,7 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Enables you to manage DNS CNAME Records within Azure DNS.
 
@@ -437,6 +442,7 @@ const testCNameRecord = new azure.dns.CNameRecord("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CNameRecord-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/cNameRecord.ts#L66"> <b>constructor</b></a>
 </h3>
@@ -585,6 +591,7 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Enables you to manage DNS CAA Records within Azure DNS.
 
@@ -635,6 +642,7 @@ const testCaaRecord = new azure.dns.CaaRecord("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CaaRecord-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/caaRecord.ts#L93"> <b>constructor</b></a>
 </h3>
@@ -790,6 +798,7 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Enables you to manage DNS MX Records within Azure DNS.
 
@@ -828,6 +837,7 @@ const testMxRecord = new azure.dns.MxRecord("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="MxRecord-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/mxRecord.ts#L81"> <b>constructor</b></a>
 </h3>
@@ -982,6 +992,7 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Enables you to manage DNS NS Records within Azure DNS.
 
@@ -1014,6 +1025,7 @@ const testNsRecord = new azure.dns.NsRecord("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NsRecord-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/nsRecord.ts#L79"> <b>constructor</b></a>
 </h3>
@@ -1178,6 +1190,7 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Enables you to manage DNS PTR Records within Azure DNS.
 
@@ -1204,6 +1217,7 @@ const testPtrRecord = new azure.dns.PtrRecord("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PtrRecord-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/ptrRecord.ts#L69"> <b>constructor</b></a>
 </h3>
@@ -1355,6 +1369,7 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Enables you to manage DNS SRV Records within Azure DNS.
 
@@ -1389,6 +1404,7 @@ const testSrvRecord = new azure.dns.SrvRecord("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SrvRecord-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/srvRecord.ts#L77"> <b>constructor</b></a>
 </h3>
@@ -1545,6 +1561,7 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Enables you to manage DNS TXT Records within Azure DNS.
 
@@ -1581,6 +1598,7 @@ const testTxtRecord = new azure.dns.TxtRecord("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="TxtRecord-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/txtRecord.ts#L79"> <b>constructor</b></a>
 </h3>
@@ -1734,6 +1752,7 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Enables you to manage DNS zones within Azure DNS. These zones are hosted on Azure's name servers to which you can delegate the zone from the parent domain.
 
@@ -1759,6 +1778,7 @@ const testPrivate = new azure.dns.Zone("test_private", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Zone-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/zone.ts#L80"> <b>constructor</b></a>
 </h3>
@@ -1969,9 +1989,11 @@ export const dnsZoneId = test.id;
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/aRecord.ts#L141">interface <b>ARecordArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ARecord resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ARecordArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/aRecord.ts#L145">property <b>name</b></a>
 </h3>
@@ -2040,9 +2062,11 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/aRecord.ts#L114">interface <b>ARecordState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ARecord resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ARecordState-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/aRecord.ts#L118">property <b>name</b></a>
 </h3>
@@ -2111,9 +2135,11 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/aaaaRecord.ts#L141">interface <b>AaaaRecordArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a AaaaRecord resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AaaaRecordArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/aaaaRecord.ts#L145">property <b>name</b></a>
 </h3>
@@ -2182,9 +2208,11 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/aaaaRecord.ts#L114">interface <b>AaaaRecordState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering AaaaRecord resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AaaaRecordState-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/aaaaRecord.ts#L118">property <b>name</b></a>
 </h3>
@@ -2253,9 +2281,11 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/cNameRecord.ts#L141">interface <b>CNameRecordArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a CNameRecord resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CNameRecordArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/cNameRecord.ts#L145">property <b>name</b></a>
 </h3>
@@ -2324,9 +2354,11 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/cNameRecord.ts#L114">interface <b>CNameRecordState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering CNameRecord resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CNameRecordState-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/cNameRecord.ts#L118">property <b>name</b></a>
 </h3>
@@ -2395,9 +2427,11 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/caaRecord.ts#L171">interface <b>CaaRecordArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a CaaRecord resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CaaRecordArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/caaRecord.ts#L175">property <b>name</b></a>
 </h3>
@@ -2473,9 +2507,11 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/caaRecord.ts#L141">interface <b>CaaRecordState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering CaaRecord resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CaaRecordState-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/caaRecord.ts#L145">property <b>name</b></a>
 </h3>
@@ -2551,9 +2587,11 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/getZone.ts#L34">interface <b>GetZoneArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getZone.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetZoneArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/getZone.ts#L38">property <b>name</b></a>
 </h3>
@@ -2583,9 +2621,11 @@ in your subscription that matches `name` will be returned.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/getZone.ts#L50">interface <b>GetZoneResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getZone.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetZoneResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/getZone.ts#L84">property <b>id</b></a>
 </h3>
@@ -2695,9 +2735,11 @@ The type of this DNS zone, such as `Public` or `Private`.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/mxRecord.ts#L159">interface <b>MxRecordArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a MxRecord resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="MxRecordArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/mxRecord.ts#L163">property <b>name</b></a>
 </h3>
@@ -2772,9 +2814,11 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/mxRecord.ts#L129">interface <b>MxRecordState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering MxRecord resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="MxRecordState-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/mxRecord.ts#L133">property <b>name</b></a>
 </h3>
@@ -2849,9 +2893,11 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/nsRecord.ts#L160">interface <b>NsRecordArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a NsRecord resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NsRecordArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/nsRecord.ts#L164">property <b>name</b></a>
 </h3>
@@ -2936,9 +2982,11 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/nsRecord.ts#L126">interface <b>NsRecordState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering NsRecord resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NsRecordState-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/nsRecord.ts#L130">property <b>name</b></a>
 </h3>
@@ -3023,9 +3071,11 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/ptrRecord.ts#L147">interface <b>PtrRecordArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a PtrRecord resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PtrRecordArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/ptrRecord.ts#L151">property <b>name</b></a>
 </h3>
@@ -3097,9 +3147,11 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/ptrRecord.ts#L117">interface <b>PtrRecordState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering PtrRecord resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PtrRecordState-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/ptrRecord.ts#L121">property <b>name</b></a>
 </h3>
@@ -3171,9 +3223,11 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/srvRecord.ts#L155">interface <b>SrvRecordArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a SrvRecord resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SrvRecordArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/srvRecord.ts#L159">property <b>name</b></a>
 </h3>
@@ -3250,9 +3304,11 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/srvRecord.ts#L125">interface <b>SrvRecordState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering SrvRecord resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SrvRecordState-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/srvRecord.ts#L129">property <b>name</b></a>
 </h3>
@@ -3329,9 +3385,11 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/txtRecord.ts#L157">interface <b>TxtRecordArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a TxtRecord resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="TxtRecordArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/txtRecord.ts#L161">property <b>name</b></a>
 </h3>
@@ -3405,9 +3463,11 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/txtRecord.ts#L127">interface <b>TxtRecordState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering TxtRecord resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="TxtRecordState-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/txtRecord.ts#L131">property <b>name</b></a>
 </h3>
@@ -3481,9 +3541,11 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/zone.ts#L167">interface <b>ZoneArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Zone resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ZoneArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/zone.ts#L171">property <b>name</b></a>
 </h3>
@@ -3555,9 +3617,11 @@ Specifies the type of this DNS zone. Possible values are `Public` or `Private` (
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/zone.ts#L125">interface <b>ZoneState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Zone resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ZoneState-maxNumberOfRecordSets">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/dns/zone.ts#L129">property <b>maxNumberOfRecordSets</b></a>
 </h3>

@@ -64,10 +64,12 @@ import * as eks from "@pulumi/eks";
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
+{{% md %}}
 
 Cluster is a component that wraps the AWS and Kubernetes resources necessary to run an EKS cluster, its worker
 nodes, its optional StorageClasses, and an optional deployment of the Kubernetes Dashboard.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Cluster-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/cluster.ts#L553"> <b>constructor</b></a>
 </h3>
@@ -254,9 +256,11 @@ deployments.
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
 <pre class="highlight"><span class='kd'>implements</span> <a href='#NodeGroupData'>NodeGroupData</a></pre>
+{{% md %}}
 
 NodeGroup is a component that wraps the AWS EC2 instances that provide compute capacity for an EKS cluster.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NodeGroup-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/nodegroup.ts#L203"> <b>constructor</b></a>
 </h3>
@@ -360,10 +364,12 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
+{{% md %}}
 
 The ServiceRole component creates an IAM role for a particular service and attaches to it a list of well-known
 managed policies.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceRole-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/servicerole.ts#L51"> <b>constructor</b></a>
 </h3>
@@ -441,10 +447,12 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#Resource'>Resource</a></pre>
+{{% md %}}
 
 VpcCni manages the configuration of the Amazon VPC CNI plugin for Kubernetes by applying its YAML chart. Once Pulumi is
 able to programatically manage existing infrastructure, we can replace this with a real k8s resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VpcCni-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/cni.ts#L125"> <b>constructor</b></a>
 </h3>
@@ -559,10 +567,12 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#NodeGroupBaseOptions'>NodeGroupBaseOptions</a></pre>
+{{% md %}}
 
 ClusterNodeGroupOptions describes the configuration options accepted by a cluster
 to create its own node groups. It's a subset of NodeGroupOptions.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ClusterNodeGroupOptions-amiId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/nodegroup.ts#L119">property <b>amiId</b></a>
 </h3>
@@ -804,9 +814,11 @@ Desired Kubernetes master / control plane version. If you do not specify a value
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/cluster.ts#L311">interface <b>ClusterOptions</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 ClusterOptions describes the configuration options accepted by an EKSCluster component.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ClusterOptions-clusterSecurityGroupTags">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/cluster.ts#L403">property <b>clusterSecurityGroupTags</b></a>
 </h3>
@@ -1142,9 +1154,11 @@ default VPC.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/cluster.ts#L71">interface <b>CoreData</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 CoreData defines the core set of data associated with an EKS cluster, including the network in which is runs.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CoreData-cluster">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/cluster.ts#L72">property <b>cluster</b></a>
 </h3>
@@ -1251,9 +1265,11 @@ CoreData defines the core set of data associated with an EKS cluster, including 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/nodegroup.ts#L42">interface <b>NodeGroupBaseOptions</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 NodeGroupArgs represents the common configuration settings for NodeGroups.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NodeGroupBaseOptions-amiId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/nodegroup.ts#L119">property <b>amiId</b></a>
 </h3>
@@ -1534,9 +1550,11 @@ The security group for the node group.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#NodeGroupBaseOptions'>NodeGroupBaseOptions</a></pre>
+{{% md %}}
 
 NodeGroupOptions describes the configuration options accepted by a NodeGroup component.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NodeGroupOptions-amiId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/nodegroup.ts#L119">property <b>amiId</b></a>
 </h3>
@@ -1835,9 +1853,11 @@ The VPC in which to create the worker node group.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/cluster.ts#L31">interface <b>RoleMapping</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 RoleMapping describes a mapping from an AWS IAM role to a Kubernetes user and groups.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RoleMapping-groups">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/cluster.ts#L45">property <b>groups</b></a>
 </h3>
@@ -1876,9 +1896,11 @@ The user name within Kubernetes to map to the IAM role. By default, the user nam
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/servicerole.ts#L30">interface <b>ServiceRoleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 ServiceRoleArgs describe the parameters to a ServiceRole component.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceRoleArgs-description">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/servicerole.ts#L38">property <b>description</b></a>
 </h3>
@@ -1917,11 +1939,13 @@ The service associated with this role.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/storageclass.ts#L30">interface <b>StorageClass</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 StorageClass describes the inputs to a single Kubernetes StorageClass provisioned by AWS. Any number of storage
 classes can be added to a cluster at creation time. One of these storage classes may be configured the default
 storage class for the cluster.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StorageClass-allowVolumeExpansion">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/storageclass.ts#L68">property <b>allowVolumeExpansion</b></a>
 </h3>
@@ -2058,10 +2082,12 @@ time.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/nodegroup.ts#L28">interface <b>Taint</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Taint represents a Kubernetes `taint` to apply to all Nodes in a NodeGroup.  See
 https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Taint-effect">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/nodegroup.ts#L36">property <b>effect</b></a>
 </h3>
@@ -2089,9 +2115,11 @@ The value of the taint.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/cluster.ts#L51">interface <b>UserMapping</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 UserMapping describes a mapping from an AWS IAM user to a Kubernetes user and groups.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="UserMapping-groups">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/cluster.ts#L65">property <b>groups</b></a>
 </h3>
@@ -2130,9 +2158,11 @@ The user name within Kubernetes to map to the IAM user. By default, the user nam
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/cni.ts#L28">interface <b>VpcCniOptions</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 VpcCniOptions describes the configuration options available for the Amazon VPC CNI plugin for Kubernetes.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VpcCniOptions-customNetworkConfig">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/812e827b494311df6024b8d3775a1afbab9a65c9/nodejs/eks/cni.ts#L43">property <b>customNetworkConfig</b></a>
 </h3>
@@ -2208,7 +2238,9 @@ assignment on the node.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> EBSVolumeType = <span class='s2'>"io1"</span> | <span class='s2'>"gp2"</span> | <span class='s2'>"sc1"</span> | <span class='s2'>"st1"</span>;</pre>
+{{% md %}}
 
 EBSVolumeType lists the set of volume types accepted by an EKS storage class.
 
+{{% /md %}}
 </div>

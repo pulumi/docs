@@ -39,6 +39,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages the subscription's Security Center Contact.
 
@@ -58,6 +59,7 @@ const example = new azure.securitycenter.Contact("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Contact-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/securitycenter/contact.ts#L54"> <b>constructor</b></a>
 </h3>
@@ -187,6 +189,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages the Pricing Tier for Azure Security Center in the current subscription.
 
@@ -205,6 +208,7 @@ const example = new azure.securitycenter.SubscriptionPricing("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SubscriptionPricing-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/securitycenter/subscriptionPricing.ts#L41"> <b>constructor</b></a>
 </h3>
@@ -301,6 +305,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages the subscription's Security Center Workspace.
 
@@ -330,6 +335,7 @@ const exampleWorkspace = new azure.securitycenter.Workspace("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Workspace-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/securitycenter/workspace.ts#L56"> <b>constructor</b></a>
 </h3>
@@ -436,9 +442,11 @@ The ID of the Log Analytics Workspace to save the data in.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/securitycenter/contact.ts#L120">interface <b>ContactArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Contact resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ContactArgs-alertNotifications">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/securitycenter/contact.ts#L124">property <b>alertNotifications</b></a>
 </h3>
@@ -488,9 +496,11 @@ The phone number of the Security Center Contact.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/securitycenter/contact.ts#L98">interface <b>ContactState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Contact resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ContactState-alertNotifications">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/securitycenter/contact.ts#L102">property <b>alertNotifications</b></a>
 </h3>
@@ -540,9 +550,11 @@ The phone number of the Security Center Contact.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/securitycenter/subscriptionPricing.ts#L80">interface <b>SubscriptionPricingArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a SubscriptionPricing resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SubscriptionPricingArgs-tier">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/securitycenter/subscriptionPricing.ts#L84">property <b>tier</b></a>
 </h3>
@@ -559,9 +571,11 @@ The pricing tier to use. Possible values are `Free` and `Standard`.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/securitycenter/subscriptionPricing.ts#L70">interface <b>SubscriptionPricingState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering SubscriptionPricing resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SubscriptionPricingState-tier">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/securitycenter/subscriptionPricing.ts#L74">property <b>tier</b></a>
 </h3>
@@ -578,9 +592,11 @@ The pricing tier to use. Possible values are `Free` and `Standard`.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/securitycenter/workspace.ts#L104">interface <b>WorkspaceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Workspace resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="WorkspaceArgs-scope">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/securitycenter/workspace.ts#L108">property <b>scope</b></a>
 </h3>
@@ -608,9 +624,11 @@ The ID of the Log Analytics Workspace to save the data in.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/securitycenter/workspace.ts#L90">interface <b>WorkspaceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Workspace resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="WorkspaceState-scope">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/securitycenter/workspace.ts#L94">property <b>scope</b></a>
 </h3>

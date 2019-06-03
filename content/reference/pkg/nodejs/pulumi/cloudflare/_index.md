@@ -130,6 +130,7 @@ import * as cloudflare from "@pulumi/cloudflare";
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Provides a Cloudflare Access Application resource. Access Applications
 are used to restrict access to a whole application using an
@@ -149,6 +150,7 @@ const stagingApp = new cloudflare.AccessApplication("staging_app", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AccessApplication-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessApplication.ts#L57"> <b>constructor</b></a>
 </h3>
@@ -288,6 +290,7 @@ The DNS zone to which the access rule should be added.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Provides a Cloudflare Access Policy resource. Access Policies are used
 in conjunction with Access Applications to restrict access to a
@@ -330,6 +333,7 @@ conditions which can be applied. The conditions are:
 * `everyone` - (Optional) Boolean indicating permitting access for all
   requests. Example: `everyone = true`
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AccessPolicy-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L99"> <b>constructor</b></a>
 </h3>
@@ -524,6 +528,7 @@ added.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Provides a Cloudflare IP Firewall Access Rule resource. Access control can be applied on basis of IP addresses, IP ranges, AS numbers or countries.
 
@@ -572,6 +577,7 @@ for (let i = 0; i < myOffice.length; i++) {
 }
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AccessRule-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessRule.ts#L87"> <b>constructor</b></a>
 </h3>
@@ -715,6 +721,7 @@ The DNS zone to which the access rule should be added.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Provides a resource which manages Cloudflare account members.
 
@@ -733,6 +740,7 @@ const exampleUser = new cloudflare.AccountMember("example_user", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AccountMember-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accountMember.ts#L45"> <b>constructor</b></a>
 </h3>
@@ -840,6 +848,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Cloudflare Argo controls the routing to your origin and tiered caching options to speed up your website browsing experience.
 
@@ -856,6 +865,7 @@ const example = new cloudflare.Argo("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Argo-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/argo.ts#L47"> <b>constructor</b></a>
 </h3>
@@ -974,6 +984,7 @@ The DNS zone ID that you wish to manage Argo on.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Provides a resource which manages Cloudflare custom error pages.
 
@@ -991,6 +1002,7 @@ const basicChallenge = new cloudflare.CustomPages("basic_challenge", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CustomPages-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/customPages.ts#L64"> <b>constructor</b></a>
 </h3>
@@ -1139,6 +1151,7 @@ updated. Either `zone_id` or `account_id` must be provided.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Filter expressions that can be referenced across multiple features, e.g. Firewall Rule. The expression format is similar to [Wireshark Display Filter](https://www.wireshark.org/docs/man-pages/wireshark-filter.html).
 
@@ -1155,6 +1168,7 @@ const wordpress = new cloudflare.Filter("wordpress", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Filter-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/filter.ts#L59"> <b>constructor</b></a>
 </h3>
@@ -1306,6 +1320,7 @@ The DNS zone to which the Filter should be added.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Define Firewall rules using filter expressions for more control over how traffic is matched to the rule.
 A filter expression permits selecting traffic by multiple criteria allowing greater freedom in rule creation.
@@ -1331,6 +1346,7 @@ const wordpressFirewallRule = new cloudflare.FirewallRule("wordpress", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallRule-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/firewallRule.ts#L69"> <b>constructor</b></a>
 </h3>
@@ -1490,6 +1506,7 @@ The DNS zone to which the Filter should be added.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Provides a Cloudflare Load Balancer resource. This sits in front of a number of defined pools of origins and provides various options for geographically-aware load balancing. Note that the load balancing feature must be enabled in your Clouflare account before you can use this resource.
 
@@ -1529,6 +1546,7 @@ const bar = new cloudflare.LoadBalancer("bar", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LoadBalancer-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L118"> <b>constructor</b></a>
 </h3>
@@ -1785,6 +1803,7 @@ ID associated with the specified `zone`.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 If you're using Cloudflare's Load Balancing to load-balance across multiple origin servers or data centers, you configure one of these Monitors to actively check the availability of those servers over HTTP(S).
 
@@ -1812,6 +1831,7 @@ const test = new cloudflare.LoadBalancerMonitor("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LoadBalancerMonitor-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L103"> <b>constructor</b></a>
 </h3>
@@ -2062,6 +2082,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Provides a Cloudflare Load Balancer pool resource. This provides a pool of origins that can be used by a Cloudflare Load Balancer. Note that the load balancing feature must be enabled in your Clouflare account before you can use this resource.
 
@@ -2091,6 +2112,7 @@ const foo = new cloudflare.LoadBalancerPool("foo", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LoadBalancerPool-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L89"> <b>constructor</b></a>
 </h3>
@@ -2291,6 +2313,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Provides a resource which manages Cloudflare logpush jobs.
 
@@ -2309,6 +2332,7 @@ const exampleJob = new cloudflare.LogpushJob("example_job", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LogpushJob-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/logpushJob.ts#L46"> <b>constructor</b></a>
 </h3>
@@ -2445,6 +2469,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Provides a Cloudflare page rule resource.
 
@@ -2471,6 +2496,7 @@ const foobar = new cloudflare.PageRule("foobar", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PageRule-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/pageRule.ts#L69"> <b>constructor</b></a>
 </h3>
@@ -2665,12 +2691,14 @@ The ID of the zone in which the page rule will be applied.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> ProviderResource</pre>
+{{% md %}}
 
 The provider type for the cloudflare package. By default, resources use package-wide configuration
 settings, however an explicit `Provider` instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
 [documentation](https://pulumi.io/reference/programming-model.html#providers) for more information.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Provider-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/provider.ts#L13"> <b>constructor</b></a>
 </h3>
@@ -2742,6 +2770,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Provides a Cloudflare rate limit resource for a given zone. This can be used to limit the traffic you receive zone-wide, or matching more specific types of requests/responses.
 
@@ -2802,6 +2831,7 @@ const example = new cloudflare.RateLimit("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RateLimit-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L119"> <b>constructor</b></a>
 </h3>
@@ -3016,6 +3046,7 @@ The DNS zone ID.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Provides a Cloudflare record resource.
 
@@ -3050,6 +3081,7 @@ const foobar = new cloudflare.Record("foobar", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Record-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L109"> <b>constructor</b></a>
 </h3>
@@ -3327,6 +3359,7 @@ The zone id of the record
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Provides a Cloudflare Spectrum Application. You can extend the power of Cloudflare's DDoS, TLS, and IP Firewall to your other TCP-based services.
 
@@ -3347,6 +3380,7 @@ const sshProxy = new cloudflare.SpectrumApplication("ssh_proxy", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SpectrumApplication-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L72"> <b>constructor</b></a>
 </h3>
@@ -3533,6 +3567,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Provides a Cloudflare WAF rule resource for a particular zone. This can be used to configure firewall behaviour for pre-defined firewall rules.
 
@@ -3549,6 +3584,7 @@ const _100000 = new cloudflare.WafRule("100000", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="WafRule-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/wafRule.ts#L55"> <b>constructor</b></a>
 </h3>
@@ -3689,6 +3725,7 @@ The DNS zone ID.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Provides a Cloudflare worker route resource. A route will also require a `cloudflare_worker_script`.
 
@@ -3726,6 +3763,7 @@ const myRoute = new cloudflare.WorkerRoute("my_route", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="WorkerRoute-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerRoute.ts#L73"> <b>constructor</b></a>
 </h3>
@@ -3870,6 +3908,7 @@ The zone id of the route
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Provides a Cloudflare worker script resource. In order for a script to be active, you'll also need to setup a `cloudflare_worker_route`.
 
@@ -3905,6 +3944,7 @@ const myScript = new cloudflare.WorkerScript("my_script", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="WorkerScript-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerScript.ts#L70"> <b>constructor</b></a>
 </h3>
@@ -4034,6 +4074,7 @@ The zone id of the script (only for non-multi-script resources)
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Provides a Cloudflare Zone resource. Zone is the basic resource for working with Cloudflare and is roughly equivalent to a domain name that the user purchases.
 
@@ -4048,6 +4089,7 @@ const example = new cloudflare.Zone("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Zone-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts#L68"> <b>constructor</b></a>
 </h3>
@@ -4234,6 +4276,7 @@ The DNS zone name which will be added.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Provides a Cloudflare Zone Lockdown resource. Zone Lockdown allows you to define one or more URLs (with wildcard matching on the domain or path) that will only permit access if the request originates from an IP address that matches a safelist of one or more IP addresses and/or IP ranges.
 
@@ -4256,6 +4299,7 @@ const endpointLockdown = new cloudflare.ZoneLockdown("endpoint_lockdown", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ZoneLockdown-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneLockdown.ts#L65"> <b>constructor</b></a>
 </h3>
@@ -4410,6 +4454,7 @@ The DNS zone to which the access rule should be added.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Provides a resource which customizes Cloudflare zone settings. Note that after destroying this resource Zone Settings will be reset to their initial values.
 
@@ -4441,6 +4486,7 @@ const test = new cloudflare.ZoneSettingsOverride("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ZoneSettingsOverride-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneSettingsOverride.ts#L71"> <b>constructor</b></a>
 </h3>
@@ -4823,9 +4869,11 @@ const endpointLockdown = new cloudflare.ZoneLockdown("endpoint_lockdown", {
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessApplication.ts#L125">interface <b>AccessApplicationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a AccessApplication resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AccessApplicationArgs-domain">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessApplication.ts#L130">property <b>domain</b></a>
 </h3>
@@ -4877,9 +4925,11 @@ The DNS zone to which the access rule should be added.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessApplication.ts#L100">interface <b>AccessApplicationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering AccessApplication resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AccessApplicationState-aud">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessApplication.ts#L101">property <b>aud</b></a>
 </h3>
@@ -4939,9 +4989,11 @@ The DNS zone to which the access rule should be added.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L198">interface <b>AccessPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a AccessPolicy resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AccessPolicyArgs-applicationId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L203">property <b>applicationId</b></a>
 </h3>
@@ -5056,9 +5108,11 @@ added.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L154">interface <b>AccessPolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering AccessPolicy resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AccessPolicyState-applicationId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessPolicy.ts#L159">property <b>applicationId</b></a>
 </h3>
@@ -5173,9 +5227,11 @@ added.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessRule.ts#L153">interface <b>AccessRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a AccessRule resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AccessRuleArgs-configuration">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessRule.ts#L157">property <b>configuration</b></a>
 </h3>
@@ -5239,9 +5295,11 @@ The DNS zone to which the access rule should be added.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessRule.ts#L127">interface <b>AccessRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering AccessRule resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AccessRuleState-configuration">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accessRule.ts#L131">property <b>configuration</b></a>
 </h3>
@@ -5305,9 +5363,11 @@ The DNS zone to which the access rule should be added.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accountMember.ts#L93">interface <b>AccountMemberArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a AccountMember resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AccountMemberArgs-emailAddress">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accountMember.ts#L97">property <b>emailAddress</b></a>
 </h3>
@@ -5335,9 +5395,11 @@ Array of account role IDs that you want to assign to a member.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accountMember.ts#L79">interface <b>AccountMemberState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering AccountMember resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AccountMemberState-emailAddress">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/accountMember.ts#L83">property <b>emailAddress</b></a>
 </h3>
@@ -5365,9 +5427,11 @@ Array of account role IDs that you want to assign to a member.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/argo.ts#L98">interface <b>ArgoArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Argo resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ArgoArgs-smartRouting">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/argo.ts#L102">property <b>smartRouting</b></a>
 </h3>
@@ -5406,9 +5470,11 @@ The DNS zone ID that you wish to manage Argo on.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/argo.ts#L80">interface <b>ArgoState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Argo resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ArgoState-smartRouting">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/argo.ts#L84">property <b>smartRouting</b></a>
 </h3>
@@ -5447,9 +5513,11 @@ The DNS zone ID that you wish to manage Argo on.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/customPages.ts#L138">interface <b>CustomPagesArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a CustomPages resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CustomPagesArgs-accountId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/customPages.ts#L144">property <b>accountId</b></a>
 </h3>
@@ -5518,9 +5586,11 @@ updated. Either `zone_id` or `account_id` must be provided.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/customPages.ts#L104">interface <b>CustomPagesState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering CustomPages resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CustomPagesState-accountId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/customPages.ts#L110">property <b>accountId</b></a>
 </h3>
@@ -5589,9 +5659,11 @@ updated. Either `zone_id` or `account_id` must be provided.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/filter.ts#L128">interface <b>FilterArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Filter resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FilterArgs-description">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/filter.ts#L132">property <b>description</b></a>
 </h3>
@@ -5663,9 +5735,11 @@ The DNS zone to which the Filter should be added.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/filter.ts#L98">interface <b>FilterState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Filter resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FilterState-description">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/filter.ts#L102">property <b>description</b></a>
 </h3>
@@ -5737,9 +5811,11 @@ The DNS zone to which the Filter should be added.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/firewallRule.ts#L144">interface <b>FirewallRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a FirewallRule resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallRuleArgs-action">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/firewallRule.ts#L148">property <b>action</b></a>
 </h3>
@@ -5819,9 +5895,11 @@ The DNS zone to which the Filter should be added.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/firewallRule.ts#L113">interface <b>FirewallRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering FirewallRule resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallRuleState-action">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/firewallRule.ts#L117">property <b>action</b></a>
 </h3>
@@ -5901,9 +5979,11 @@ The DNS zone to which the Filter should be added.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/getIpRanges.ts#L36">interface <b>GetIpRangesResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getIpRanges.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetIpRangesResult-cidrBlocks">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/getIpRanges.ts#L37">property <b>cidrBlocks</b></a>
 </h3>
@@ -5944,9 +6024,11 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/getZones.ts#L47">interface <b>GetZonesArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getZones.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetZonesArgs-filter">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/getZones.ts#L48">property <b>filter</b></a>
 </h3>
@@ -5964,9 +6046,11 @@ A collection of arguments for invoking getZones.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/getZones.ts#L54">interface <b>GetZonesResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getZones.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetZonesResult-filter">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/getZones.ts#L55">property <b>filter</b></a>
 </h3>
@@ -6006,9 +6090,11 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L250">interface <b>LoadBalancerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a LoadBalancer resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-defaultPoolIds">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L254">property <b>defaultPoolIds</b></a>
 </h3>
@@ -6152,9 +6238,11 @@ The zone to add the load balancer to.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L226">interface <b>LoadBalancerMonitorArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a LoadBalancerMonitor resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LoadBalancerMonitorArgs-allowInsecure">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L230">property <b>allowInsecure</b></a>
 </h3>
@@ -6303,9 +6391,11 @@ The protocol to use for the healthcheck. Currently supported protocols are 'HTTP
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L163">interface <b>LoadBalancerMonitorState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering LoadBalancerMonitor resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LoadBalancerMonitorState-allowInsecure">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerMonitor.ts#L167">property <b>allowInsecure</b></a>
 </h3>
@@ -6476,9 +6566,11 @@ The protocol to use for the healthcheck. Currently supported protocols are 'HTTP
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L185">interface <b>LoadBalancerPoolArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a LoadBalancerPool resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LoadBalancerPoolArgs-checkRegions">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L189">property <b>checkRegions</b></a>
 </h3>
@@ -6577,9 +6669,11 @@ The list of origins within this pool. Traffic directed at this pool is balanced 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L139">interface <b>LoadBalancerPoolState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering LoadBalancerPool resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LoadBalancerPoolState-checkRegions">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancerPool.ts#L143">property <b>checkRegions</b></a>
 </h3>
@@ -6700,9 +6794,11 @@ The list of origins within this pool. Traffic directed at this pool is balanced 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L184">interface <b>LoadBalancerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering LoadBalancer resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LoadBalancerState-createdOn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/loadBalancer.ts#L188">property <b>createdOn</b></a>
 </h3>
@@ -6879,9 +6975,11 @@ ID associated with the specified `zone`.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/logpushJob.ts#L106">interface <b>LogpushJobArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a LogpushJob resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LogpushJobArgs-destinationConf">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/logpushJob.ts#L107">property <b>destinationConf</b></a>
 </h3>
@@ -6938,9 +7036,11 @@ Ownership challenge token to prove destination ownership. See [https://developer
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/logpushJob.ts#L91">interface <b>LogpushJobState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering LogpushJob resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LogpushJobState-destinationConf">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/logpushJob.ts#L92">property <b>destinationConf</b></a>
 </h3>
@@ -6997,9 +7097,11 @@ Ownership challenge token to prove destination ownership. See [https://developer
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/pageRule.ts#L144">interface <b>PageRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a PageRule resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PageRuleArgs-actions">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/pageRule.ts#L148">property <b>actions</b></a>
 </h3>
@@ -7103,9 +7205,11 @@ The DNS zone to which the page rule should be added.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/pageRule.ts#L114">interface <b>PageRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering PageRule resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PageRuleState-actions">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/pageRule.ts#L118">property <b>actions</b></a>
 </h3>
@@ -7220,9 +7324,11 @@ The ID of the zone in which the page rule will be applied.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/provider.ts#L42">interface <b>ProviderArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Provider resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ProviderArgs-apiClientLogging">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/provider.ts#L46">property <b>apiClientLogging</b></a>
 </h3>
@@ -7327,9 +7433,11 @@ If specified zone is owned by an organization, configure API client to always us
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L221">interface <b>RateLimitArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a RateLimit resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RateLimitArgs-action">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L225">property <b>action</b></a>
 </h3>
@@ -7453,9 +7561,11 @@ The DNS zone to apply rate limiting to.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L175">interface <b>RateLimitState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering RateLimit resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RateLimitState-action">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/rateLimit.ts#L179">property <b>action</b></a>
 </h3>
@@ -7590,9 +7700,11 @@ The DNS zone ID.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L232">interface <b>RecordArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Record resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RecordArgs-data">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L236">property <b>data</b></a>
 </h3>
@@ -7724,9 +7836,11 @@ The (string) value of the record. Either this or `data` must be specified
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L170">interface <b>RecordState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Record resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RecordState-createdOn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/record.ts#L174">property <b>createdOn</b></a>
 </h3>
@@ -7924,9 +8038,11 @@ The zone id of the record
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L165">interface <b>SpectrumApplicationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a SpectrumApplication resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SpectrumApplicationArgs-dns">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L169">property <b>dns</b></a>
 </h3>
@@ -8033,9 +8149,11 @@ TLS configuration option for Cloudflare to connect to your origin. Valid values 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L126">interface <b>SpectrumApplicationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering SpectrumApplication resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SpectrumApplicationState-dns">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/spectrumApplication.ts#L130">property <b>dns</b></a>
 </h3>
@@ -8142,9 +8260,11 @@ TLS configuration option for Cloudflare to connect to your origin. Valid values 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/wafRule.ts#L124">interface <b>WafRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a WafRule resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="WafRuleArgs-mode">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/wafRule.ts#L128">property <b>mode</b></a>
 </h3>
@@ -8183,9 +8303,11 @@ The DNS zone to apply to.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/wafRule.ts#L98">interface <b>WafRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering WafRule resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="WafRuleState-mode">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/wafRule.ts#L102">property <b>mode</b></a>
 </h3>
@@ -8246,9 +8368,11 @@ The DNS zone ID.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerRoute.ts#L138">interface <b>WorkerRouteArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a WorkerRoute resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="WorkerRouteArgs-enabled">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerRoute.ts#L139">property <b>enabled</b></a>
 </h3>
@@ -8294,9 +8418,11 @@ The zone to add the route to.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerRoute.ts#L115">interface <b>WorkerRouteState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering WorkerRoute resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="WorkerRouteState-enabled">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerRoute.ts#L116">property <b>enabled</b></a>
 </h3>
@@ -8361,9 +8487,11 @@ The zone id of the route
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerScript.ts#L127">interface <b>WorkerScriptArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a WorkerScript resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="WorkerScriptArgs-content">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerScript.ts#L131">property <b>content</b></a>
 </h3>
@@ -8413,9 +8541,11 @@ The zone id of the script (only for non-multi-script resources)
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerScript.ts#L105">interface <b>WorkerScriptState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering WorkerScript resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="WorkerScriptState-content">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/workerScript.ts#L109">property <b>content</b></a>
 </h3>
@@ -8465,9 +8595,11 @@ The zone id of the script (only for non-multi-script resources)
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts#L154">interface <b>ZoneArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Zone resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ZoneArgs-jumpStart">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts#L158">property <b>jumpStart</b></a>
 </h3>
@@ -8528,9 +8660,11 @@ The DNS zone name which will be added.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneLockdown.ts#L137">interface <b>ZoneLockdownArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ZoneLockdown resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ZoneLockdownArgs-configurations">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneLockdown.ts#L141">property <b>configurations</b></a>
 </h3>
@@ -8605,9 +8739,11 @@ The DNS zone to which the access rule should be added.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneLockdown.ts#L107">interface <b>ZoneLockdownState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ZoneLockdown resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ZoneLockdownState-configurations">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneLockdown.ts#L111">property <b>configurations</b></a>
 </h3>
@@ -8682,9 +8818,11 @@ The DNS zone to which the access rule should be added.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneSettingsOverride.ts#L139">interface <b>ZoneSettingsOverrideArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ZoneSettingsOverride resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ZoneSettingsOverrideArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneSettingsOverride.ts#L143">property <b>name</b></a>
 </h3>
@@ -8770,9 +8908,11 @@ Settings overrides that will be applied to the zone. If a setting is not specifi
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneSettingsOverride.ts#L112">interface <b>ZoneSettingsOverrideState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ZoneSettingsOverride resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ZoneSettingsOverrideState-initialSettings">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zoneSettingsOverride.ts#L116">property <b>initialSettings</b></a>
 </h3>
@@ -8964,9 +9104,11 @@ Settings overrides that will be applied to the zone. If a setting is not specifi
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts#L113">interface <b>ZoneState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Zone resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ZoneState-jumpStart">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/zone.ts#L117">property <b>jumpStart</b></a>
 </h3>

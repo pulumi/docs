@@ -32,10 +32,12 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 PriorityClass defines mapping from a priority class name to the priority integer value. The
 value can be any valid integer.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PriorityClass-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/scheduling/v1/PriorityClass.ts#L73"> <b>constructor</b></a>
 </h3>
@@ -213,9 +215,11 @@ have the name of this class in their pod spec.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 PriorityClassList is a collection of priority classes.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PriorityClassList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/scheduling/v1/PriorityClassList.ts#L56"> <b>constructor</b></a>
 </h3>

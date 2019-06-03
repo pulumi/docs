@@ -48,6 +48,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Allows you to set a user or group as the AD administrator for an Azure SQL server
 
@@ -79,6 +80,7 @@ const testActiveDirectoryAdministrator = new azure.sql.ActiveDirectoryAdministra
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ActiveDirectoryAdministrator-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/sql/activeDirectoryAdministrator.ts#L70"> <b>constructor</b></a>
 </h3>
@@ -219,6 +221,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Allows you to manage an Azure SQL Database
 
@@ -251,6 +254,7 @@ const testDatabase = new azure.sql.Database("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Database-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/sql/database.ts#L133"> <b>constructor</b></a>
 </h3>
@@ -582,6 +586,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Allows you to manage an Azure SQL Elastic Pool.
 
@@ -620,6 +625,7 @@ const testElasticPool = new azure.sql.ElasticPool("test", {
 
 > **NOTE on `azurerm_sql_elasticpool`:** -  The values of `edition`, `dtu`, and `pool_size` must be consistent with the [Azure SQL Database Service Tiers](https://docs.microsoft.com/en-gb/azure/sql-database/sql-database-service-tiers#elastic-pool-service-tiers-and-performance-in-edtus). Any inconsistent argument configuration will be rejected.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ElasticPool-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/sql/elasticPool.ts#L101"> <b>constructor</b></a>
 </h3>
@@ -826,6 +832,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Allows you to manage an Azure SQL Firewall Rule
 
@@ -856,6 +863,7 @@ const testFirewallRule = new azure.sql.FirewallRule("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallRule-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/sql/firewallRule.ts#L70"> <b>constructor</b></a>
 </h3>
@@ -997,6 +1005,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a SQL Azure Database Server.
 
@@ -1026,6 +1035,7 @@ const testSqlServer = new azure.sql.SqlServer("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SqlServer-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/sql/sqlServer.ts#L80"> <b>constructor</b></a>
 </h3>
@@ -1199,6 +1209,7 @@ The version for the new server. Valid values are: 2.0 (for v11 server) and 12.0 
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Allows you to add, update, or remove an Azure SQL server to a subnet of a virtual network.
 
@@ -1241,6 +1252,7 @@ const sqlvnetrule = new azure.sql.VirtualNetworkRule("sqlvnetrule", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualNetworkRule-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/sql/virtualNetworkRule.ts#L81"> <b>constructor</b></a>
 </h3>
@@ -1380,9 +1392,11 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/sql/activeDirectoryAdministrator.ts#L145">interface <b>ActiveDirectoryAdministratorArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ActiveDirectoryAdministrator resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ActiveDirectoryAdministratorArgs-login">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/sql/activeDirectoryAdministrator.ts#L149">property <b>login</b></a>
 </h3>
@@ -1443,9 +1457,11 @@ The Azure Tenant ID
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/sql/activeDirectoryAdministrator.ts#L119">interface <b>ActiveDirectoryAdministratorState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ActiveDirectoryAdministrator resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ActiveDirectoryAdministratorState-login">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/sql/activeDirectoryAdministrator.ts#L123">property <b>login</b></a>
 </h3>
@@ -1506,9 +1522,11 @@ The Azure Tenant ID
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/sql/database.ts#L293">interface <b>DatabaseArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Database resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DatabaseArgs-collation">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/sql/database.ts#L297">property <b>collation</b></a>
 </h3>
@@ -1730,9 +1748,11 @@ Threat detection policy configuration. The `threat_detection_policy` block suppo
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/sql/database.ts#L205">interface <b>DatabaseState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Database resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DatabaseState-collation">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/sql/database.ts#L209">property <b>collation</b></a>
 </h3>
@@ -1984,9 +2004,11 @@ Threat detection policy configuration. The `threat_detection_policy` block suppo
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/sql/elasticPool.ts#L209">interface <b>ElasticPoolArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ElasticPool resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ElasticPoolArgs-dbDtuMax">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/sql/elasticPool.ts#L213">property <b>dbDtuMax</b></a>
 </h3>
@@ -2102,9 +2124,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/sql/elasticPool.ts#L159">interface <b>ElasticPoolState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ElasticPool resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ElasticPoolState-creationDate">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/sql/elasticPool.ts#L163">property <b>creationDate</b></a>
 </h3>
@@ -2231,9 +2255,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/sql/firewallRule.ts#L143">interface <b>FirewallRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a FirewallRule resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallRuleArgs-endIpAddress">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/sql/firewallRule.ts#L147">property <b>endIpAddress</b></a>
 </h3>
@@ -2295,9 +2321,11 @@ The starting IP address to allow through the firewall for this rule.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/sql/firewallRule.ts#L116">interface <b>FirewallRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering FirewallRule resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallRuleState-endIpAddress">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/sql/firewallRule.ts#L120">property <b>endIpAddress</b></a>
 </h3>
@@ -2359,9 +2387,11 @@ The starting IP address to allow through the firewall for this rule.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/sql/sqlServer.ts#L170">interface <b>SqlServerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a SqlServer resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SqlServerArgs-administratorLogin">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/sql/sqlServer.ts#L174">property <b>administratorLogin</b></a>
 </h3>
@@ -2444,9 +2474,11 @@ The version for the new server. Valid values are: 2.0 (for v11 server) and 12.0 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/sql/sqlServer.ts#L132">interface <b>SqlServerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering SqlServer resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SqlServerState-administratorLogin">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/sql/sqlServer.ts#L136">property <b>administratorLogin</b></a>
 </h3>
@@ -2540,9 +2572,11 @@ The version for the new server. Valid values are: 2.0 (for v11 server) and 12.0 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/sql/virtualNetworkRule.ts#L150">interface <b>VirtualNetworkRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a VirtualNetworkRule resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualNetworkRuleArgs-ignoreMissingVnetServiceEndpoint">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/sql/virtualNetworkRule.ts#L154">property <b>ignoreMissingVnetServiceEndpoint</b></a>
 </h3>
@@ -2603,9 +2637,11 @@ The ID of the subnet that the SQL server will be connected to.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/sql/virtualNetworkRule.ts#L124">interface <b>VirtualNetworkRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering VirtualNetworkRule resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualNetworkRuleState-ignoreMissingVnetServiceEndpoint">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/sql/virtualNetworkRule.ts#L128">property <b>ignoreMissingVnetServiceEndpoint</b></a>
 </h3>
