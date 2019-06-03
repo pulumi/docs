@@ -391,18 +391,18 @@ To start, we'll need to create a project and stack (a deployment target) for our
 
     The output from running this command should look something like this:
 
-    ```
-    Updating stack 'k8s-guestbook-dev'
-    Performing changes:
 
-         Type                           Name                             Plan          Info
-     *   pulumi:pulumi:Stack            k8s-guestbook-k8s-guestbook-dev  no change
-     ~   └─ kubernetes:apps:Deployment  frontend                         updated       changes: ~ spec
+        Updating stack 'k8s-guestbook-dev'
+        Performing changes:
 
-    info: 1 change performed:
-        ~ 1 resource updated
-          6 resources unchanged
-    ```
+                Type                           Name                             Plan          Info
+            *   pulumi:pulumi:Stack            k8s-guestbook-k8s-guestbook-dev  no change
+            ~   └─ kubernetes:apps:Deployment  frontend                         updated       changes: ~ spec
+
+        info: 1 change performed:
+            ~ 1 resource updated
+              6 resources unchanged
+
 
 ### Cleaning Up
 
