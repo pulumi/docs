@@ -80,12 +80,14 @@ import * as {{PackageVar}} from "{{Package}}";
 <pre class="highlight">{{{CodeDetails}}}</pre>
 {{/CodeDetails}}
 {{#Comment.ShortText}}
+{{=<% %>=}}{{% md %}}<%={{ }}=%>
 
 {{{Comment.ShortText}}}
 
 {{#Comment.Text}}
 {{{Comment.Text}}}
 {{/Comment.Text}}
+{{=<% %>=}}{{% /md %}}<%={{ }}=%>
 {{/Comment.ShortText}}
 {{#Children}}
 <h3 class="pdoc-member-header" id="{{AnchorName}}">
