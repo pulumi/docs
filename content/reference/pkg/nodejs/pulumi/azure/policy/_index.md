@@ -42,6 +42,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Configures the specified Policy Definition at the specified Scope. Also, Policy Set Definitions are supported.
 
@@ -99,6 +100,7 @@ const testAssignment = new azure.policy.Assignment("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Assignment-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/policy/assignment.ts#L109"> <b>constructor</b></a>
 </h3>
@@ -284,6 +286,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a policy rule definition on a management group or your provider subscription.
 
@@ -326,6 +329,7 @@ const policy = new azure.policy.Definition("policy", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Definition-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/policy/definition.ts#L107"> <b>constructor</b></a>
 </h3>
@@ -520,6 +524,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a policy set definition.
 
@@ -560,6 +565,7 @@ const test = new azure.policy.PolicySetDefinition("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PolicySetDefinition-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/policy/policySetDefinition.ts#L91"> <b>constructor</b></a>
 </h3>
@@ -758,9 +764,11 @@ export const id = test.id;
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/policy/assignment.ts#L196">interface <b>AssignmentArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Assignment resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AssignmentArgs-description">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/policy/assignment.ts#L200">property <b>description</b></a>
 </h3>
@@ -866,9 +874,11 @@ The ID of the Policy Definition to be applied at the specified Scope.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/policy/assignment.ts#L157">interface <b>AssignmentState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Assignment resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AssignmentState-description">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/policy/assignment.ts#L161">property <b>description</b></a>
 </h3>
@@ -974,9 +984,11 @@ The ID of the Policy Definition to be applied at the specified Scope.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/policy/definition.ts#L210">interface <b>DefinitionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Definition resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DefinitionArgs-description">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/policy/definition.ts#L214">property <b>description</b></a>
 </h3>
@@ -1091,9 +1103,11 @@ or "NotSpecified". Changing this forces a new resource to be created.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/policy/definition.ts#L158">interface <b>DefinitionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Definition resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DefinitionState-description">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/policy/definition.ts#L162">property <b>description</b></a>
 </h3>
@@ -1208,9 +1222,11 @@ or "NotSpecified". Changing this forces a new resource to be created.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/policy/getPolicyDefintion.ts#L33">interface <b>GetPolicyDefintionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getPolicyDefintion.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetPolicyDefintionArgs-displayName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/policy/getPolicyDefintion.ts#L37">property <b>displayName</b></a>
 </h3>
@@ -1238,9 +1254,11 @@ Only retrieve Policy Definitions from this Management Group.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/policy/getPolicyDefintion.ts#L47">interface <b>GetPolicyDefintionResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getPolicyDefintion.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetPolicyDefintionResult-description">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/policy/getPolicyDefintion.ts#L51">property <b>description</b></a>
 </h3>
@@ -1350,9 +1368,11 @@ The Type of Policy.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/policy/policySetDefinition.ts#L175">interface <b>PolicySetDefinitionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a PolicySetDefinition resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PolicySetDefinitionArgs-description">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/policy/policySetDefinition.ts#L179">property <b>description</b></a>
 </h3>
@@ -1446,9 +1466,11 @@ The policy set type. Possible values are `BuiltIn` or `Custom`. Changing this fo
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/policy/policySetDefinition.ts#L137">interface <b>PolicySetDefinitionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering PolicySetDefinition resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PolicySetDefinitionState-description">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/policy/policySetDefinition.ts#L141">property <b>description</b></a>
 </h3>

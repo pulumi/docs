@@ -22,14 +22,14 @@ aliases:
 <li><a href="#GetProductResult">interface GetProductResult</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/pricing/getProduct.ts">pricing/getProduct.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/pricing/getProduct.ts">pricing/getProduct.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="getProduct">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/pricing/getProduct.ts#L67">function <b>getProduct</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/pricing/getProduct.ts#L67">function <b>getProduct</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -99,14 +99,16 @@ const example = pulumi.output(aws.pricing.getProduct({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="GetProductArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/pricing/getProduct.ts#L77">interface <b>GetProductArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/pricing/getProduct.ts#L77">interface <b>GetProductArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getProduct.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetProductArgs-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/pricing/getProduct.ts#L81">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/pricing/getProduct.ts#L81">property <b>filters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>filters: {
@@ -120,7 +122,7 @@ A list of filters. Passed directly to the API (see GetProducts API reference). T
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProductArgs-serviceCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/pricing/getProduct.ts#L85">property <b>serviceCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/pricing/getProduct.ts#L85">property <b>serviceCode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serviceCode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -132,14 +134,16 @@ The code of the service. Available service codes can be fetched using the Descri
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetProductResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/pricing/getProduct.ts#L91">interface <b>GetProductResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/pricing/getProduct.ts#L91">interface <b>GetProductResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getProduct.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetProductResult-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/pricing/getProduct.ts#L92">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/pricing/getProduct.ts#L92">property <b>filters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>filters: {
@@ -150,7 +154,7 @@ A collection of values returned by getProduct.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProductResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/pricing/getProduct.ts#L101">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/pricing/getProduct.ts#L101">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -161,7 +165,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProductResult-result">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/pricing/getProduct.ts#L96">property <b>result</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/pricing/getProduct.ts#L96">property <b>result</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>result: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -172,7 +176,7 @@ Set to the product returned from the API.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProductResult-serviceCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/pricing/getProduct.ts#L97">property <b>serviceCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/pricing/getProduct.ts#L97">property <b>serviceCode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>serviceCode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>

@@ -57,6 +57,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage a Load Balancer Backend Address Pool.
 
@@ -94,6 +95,7 @@ const testBackendAddressPool = new azure.lb.BackendAddressPool("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="BackendAddressPool-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/backendAddressPool.ts#L77"> <b>constructor</b></a>
 </h3>
@@ -242,6 +244,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage a Load Balancer Resource.
 
@@ -272,6 +275,7 @@ const testLoadBalancer = new azure.lb.LoadBalancer("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LoadBalancer-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/loadBalancer.ts#L81"> <b>constructor</b></a>
 </h3>
@@ -455,6 +459,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Load Balancer NAT pool.
 
@@ -497,6 +502,7 @@ const testNatPool = new azure.lb.NatPool("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NatPool-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/natPool.ts#L95"> <b>constructor</b></a>
 </h3>
@@ -686,6 +692,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Load Balancer NAT Rule.
 
@@ -727,6 +734,7 @@ const testNatRule = new azure.lb.NatRule("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NatRule-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/natRule.ts#L95"> <b>constructor</b></a>
 </h3>
@@ -924,6 +932,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Load Balancer Outbound Rule.
 
@@ -971,6 +980,7 @@ const testOutboundRule = new azure.lb.OutboundRule("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="OutboundRule-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/outboundRule.ts#L102"> <b>constructor</b></a>
 </h3>
@@ -1158,6 +1168,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a LoadBalancer Probe Resource.
 
@@ -1196,6 +1207,7 @@ const testProbe = new azure.lb.Probe("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Probe-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/probe.ts#L91"> <b>constructor</b></a>
 </h3>
@@ -1385,6 +1397,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Load Balancer Rule.
 
@@ -1426,6 +1439,7 @@ const testRule = new azure.lb.Rule("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Rule-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/rule.ts#L110"> <b>constructor</b></a>
 </h3>
@@ -1716,9 +1730,11 @@ export const loadbalancerId = test.id;
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/backendAddressPool.ts#L146">interface <b>BackendAddressPoolArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a BackendAddressPool resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="BackendAddressPoolArgs-loadbalancerId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/backendAddressPool.ts#L150">property <b>loadbalancerId</b></a>
 </h3>
@@ -1765,9 +1781,11 @@ The name of the resource group in which to create the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/backendAddressPool.ts#L119">interface <b>BackendAddressPoolState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering BackendAddressPool resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="BackendAddressPoolState-backendIpConfigurations">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/backendAddressPool.ts#L123">property <b>backendIpConfigurations</b></a>
 </h3>
@@ -1836,9 +1854,11 @@ The name of the resource group in which to create the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/getBackendAddressPool.ts#L38">interface <b>GetBackendAddressPoolArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getBackendAddressPool.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetBackendAddressPoolArgs-loadbalancerId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/getBackendAddressPool.ts#L42">property <b>loadbalancerId</b></a>
 </h3>
@@ -1866,9 +1886,11 @@ Specifies the name of the Backend Address Pool.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/getBackendAddressPool.ts#L52">interface <b>GetBackendAddressPoolResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getBackendAddressPool.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetBackendAddressPoolResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/getBackendAddressPool.ts#L58">property <b>id</b></a>
 </h3>
@@ -1901,9 +1923,11 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/getLB.ts#L34">interface <b>GetLBArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getLB.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetLBArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/getLB.ts#L38">property <b>name</b></a>
 </h3>
@@ -1931,9 +1955,11 @@ The name of the Resource Group in which the Load Balancer exists.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/getLB.ts#L48">interface <b>GetLBResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getLB.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetLBResult-frontendIpConfigurations">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/getLB.ts#L52">property <b>frontendIpConfigurations</b></a>
 </h3>
@@ -2042,9 +2068,11 @@ A mapping of tags assigned to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/loadBalancer.ts#L162">interface <b>LoadBalancerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a LoadBalancer resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-frontendIpConfigurations">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/loadBalancer.ts#L166">property <b>frontendIpConfigurations</b></a>
 </h3>
@@ -2126,9 +2154,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/loadBalancer.ts#L124">interface <b>LoadBalancerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering LoadBalancer resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LoadBalancerState-frontendIpConfigurations">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/loadBalancer.ts#L128">property <b>frontendIpConfigurations</b></a>
 </h3>
@@ -2232,9 +2262,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/natPool.ts#L200">interface <b>NatPoolArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a NatPool resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NatPoolArgs-backendPort">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/natPool.ts#L204">property <b>backendPort</b></a>
 </h3>
@@ -2336,9 +2368,11 @@ The name of the resource group in which to create the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/natPool.ts#L160">interface <b>NatPoolState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering NatPool resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NatPoolState-backendPort">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/natPool.ts#L164">property <b>backendPort</b></a>
 </h3>
@@ -2448,9 +2482,11 @@ The name of the resource group in which to create the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/natRule.ts#L200">interface <b>NatRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a NatRule resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NatRuleArgs-backendPort">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/natRule.ts#L204">property <b>backendPort</b></a>
 </h3>
@@ -2552,9 +2588,11 @@ The name of the resource group in which to create the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/natRule.ts#L159">interface <b>NatRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering NatRule resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NatRuleState-backendIpConfigurationId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/natRule.ts#L160">property <b>backendIpConfigurationId</b></a>
 </h3>
@@ -2672,9 +2710,11 @@ The name of the resource group in which to create the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/outboundRule.ts#L198">interface <b>OutboundRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a OutboundRule resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="OutboundRuleArgs-allocatedOutboundPorts">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/outboundRule.ts#L202">property <b>allocatedOutboundPorts</b></a>
 </h3>
@@ -2782,9 +2822,11 @@ The name of the resource group in which to create the resource. Changing this fo
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/outboundRule.ts#L156">interface <b>OutboundRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering OutboundRule resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="OutboundRuleState-allocatedOutboundPorts">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/outboundRule.ts#L160">property <b>allocatedOutboundPorts</b></a>
 </h3>
@@ -2892,9 +2934,11 @@ The name of the resource group in which to create the resource. Changing this fo
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/probe.ts#L184">interface <b>ProbeArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Probe resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ProbeArgs-intervalInSeconds">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/probe.ts#L188">property <b>intervalInSeconds</b></a>
 </h3>
@@ -2996,9 +3040,11 @@ The name of the resource group in which to create the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/probe.ts#L144">interface <b>ProbeState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Probe resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ProbeState-intervalInSeconds">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/probe.ts#L148">property <b>intervalInSeconds</b></a>
 </h3>
@@ -3108,9 +3154,11 @@ The name of the resource group in which to create the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/rule.ts#L236">interface <b>RuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Rule resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RuleArgs-backendAddressPoolId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/rule.ts#L240">property <b>backendAddressPoolId</b></a>
 </h3>
@@ -3256,9 +3304,11 @@ The name of the resource group in which to create the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/rule.ts#L180">interface <b>RuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Rule resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RuleState-backendAddressPoolId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/lb/rule.ts#L184">property <b>backendAddressPoolId</b></a>
 </h3>

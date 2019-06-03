@@ -33,6 +33,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Allows you to manage an Azure Search Service.
 
@@ -58,6 +59,7 @@ const testService = new azure.search.Service("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Service-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/search/service.ts#L80"> <b>constructor</b></a>
 </h3>
@@ -241,9 +243,11 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/search/service.ts#L170">interface <b>ServiceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Service resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceArgs-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/search/service.ts#L174">property <b>location</b></a>
 </h3>
@@ -326,9 +330,11 @@ A mapping of tags to assign to the resource. Changing this forces a new resource
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/search/service.ts#L128">interface <b>ServiceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Service resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceState-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/search/service.ts#L132">property <b>location</b></a>
 </h3>

@@ -93,6 +93,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an EventGrid Domain
 
@@ -116,6 +117,7 @@ const testEventGridDomain = new azure.eventhub.EventGridDomain("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="EventGridDomain-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventGridDomain.ts#L74"> <b>constructor</b></a>
 </h3>
@@ -300,6 +302,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an EventGrid Event Subscription
 
@@ -338,6 +341,7 @@ const defaultEventGridEventSubscription = new azure.eventhub.EventGridEventSubsc
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="EventGridEventSubscription-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventGridEventSubscription.ts#L109"> <b>constructor</b></a>
 </h3>
@@ -585,6 +589,7 @@ A `webhook_endpoint` block as defined below.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an EventGrid Topic
 
@@ -610,6 +615,7 @@ const testEventGridTopic = new azure.eventhub.EventGridTopic("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="EventGridTopic-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventGridTopic.ts#L72"> <b>constructor</b></a>
 </h3>
@@ -772,6 +778,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Event Hubs as a nested resource within a Event Hubs namespace.
 
@@ -805,6 +812,7 @@ const testEventHub = new azure.eventhub.EventHub("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="EventHub-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventHub.ts#L81"> <b>constructor</b></a>
 </h3>
@@ -1001,6 +1009,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Event Hubs authorization Rule within an Event Hub.
 
@@ -1042,6 +1051,7 @@ const testEventHubAuthorizationRule = new azure.eventhub.EventHubAuthorizationRu
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRule-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventHubAuthorizationRule.ts#L105"> <b>constructor</b></a>
 </h3>
@@ -1256,6 +1266,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Event Hubs Consumer Group as a nested resource within an Event Hub.
 
@@ -1295,6 +1306,7 @@ const testEventHubConsumerGroup = new azure.eventhub.EventHubConsumerGroup("test
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="EventHubConsumerGroup-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventHubConsumerGroup.ts#L79"> <b>constructor</b></a>
 </h3>
@@ -1443,6 +1455,7 @@ Specifies the user metadata.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage an EventHub Namespace.
 
@@ -1468,6 +1481,7 @@ const testEventHubNamespace = new azure.eventhub.EventHubNamespace("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="EventHubNamespace-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventHubNamespace.ts#L98"> <b>constructor</b></a>
 </h3>
@@ -1698,6 +1712,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an Authorization Rule for an Event Hub Namespace.
 
@@ -1731,6 +1746,7 @@ const testEventHubNamespaceAuthorizationRule = new azure.eventhub.EventHubNamesp
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRule-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L93"> <b>constructor</b></a>
 </h3>
@@ -2020,6 +2036,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage a ServiceBus Namespace.
 
@@ -2044,6 +2061,7 @@ const exampleNamespace = new azure.eventhub.Namespace("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Namespace-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/namespace.ts#L87"> <b>constructor</b></a>
 </h3>
@@ -2243,6 +2261,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a ServiceBus Namespace authorization Rule within a ServiceBus.
 
@@ -2275,6 +2294,7 @@ const exampleNamespaceAuthorizationRule = new azure.eventhub.NamespaceAuthorizat
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRule-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L91"> <b>constructor</b></a>
 </h3>
@@ -2470,6 +2490,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage a ServiceBus Queue.
 
@@ -2500,6 +2521,7 @@ const exampleQueue = new azure.eventhub.Queue("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Queue-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/queue.ts#L131"> <b>constructor</b></a>
 </h3>
@@ -2786,6 +2808,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an Authorization Rule for a ServiceBus Queue.
 
@@ -2825,6 +2848,7 @@ const exampleQueueAuthorizationRule = new azure.eventhub.QueueAuthorizationRule(
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="QueueAuthorizationRule-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L102"> <b>constructor</b></a>
 </h3>
@@ -3031,6 +3055,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage a ServiceBus Subscription.
 
@@ -3068,6 +3093,7 @@ const exampleSubscription = new azure.eventhub.Subscription("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Subscription-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/subscription.ts#L125"> <b>constructor</b></a>
 </h3>
@@ -3320,6 +3346,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage a ServiceBus Subscription Rule.
 
@@ -3412,6 +3439,7 @@ const exampleSubscriptionRule = new azure.eventhub.SubscriptionRule("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SubscriptionRule-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/subscriptionRule.ts#L147"> <b>constructor</b></a>
 </h3>
@@ -3605,6 +3633,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage a ServiceBus Topic.
 
@@ -3637,6 +3666,7 @@ const exampleTopic = new azure.eventhub.Topic("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Topic-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/topic.ts#L125"> <b>constructor</b></a>
 </h3>
@@ -3915,6 +3945,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a ServiceBus Topic authorization Rule within a ServiceBus Topic.
 
@@ -3953,6 +3984,7 @@ const exampleTopicAuthorizationRule = new azure.eventhub.TopicAuthorizationRule(
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="TopicAuthorizationRule-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/topicAuthorizationRule.ts#L101"> <b>constructor</b></a>
 </h3>
@@ -4298,9 +4330,11 @@ export const location = test.location;
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventGridDomain.ts#L155">interface <b>EventGridDomainArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a EventGridDomain resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="EventGridDomainArgs-inputMappingDefaultValues">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventGridDomain.ts#L159">property <b>inputMappingDefaultValues</b></a>
 </h3>
@@ -4394,9 +4428,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventGridDomain.ts#L117">interface <b>EventGridDomainState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering EventGridDomain resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="EventGridDomainState-endpoint">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventGridDomain.ts#L121">property <b>endpoint</b></a>
 </h3>
@@ -4501,9 +4537,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventGridEventSubscription.ts#L220">interface <b>EventGridEventSubscriptionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a EventGridEventSubscription resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="EventGridEventSubscriptionArgs-eventDeliverySchema">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventGridEventSubscription.ts#L224">property <b>eventDeliverySchema</b></a>
 </h3>
@@ -4671,9 +4709,11 @@ A `webhook_endpoint` block as defined below.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventGridEventSubscription.ts#L162">interface <b>EventGridEventSubscriptionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering EventGridEventSubscription resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="EventGridEventSubscriptionState-eventDeliverySchema">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventGridEventSubscription.ts#L166">property <b>eventDeliverySchema</b></a>
 </h3>
@@ -4841,9 +4881,11 @@ A `webhook_endpoint` block as defined below.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventGridTopic.ts#L147">interface <b>EventGridTopicArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a EventGridTopic resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="EventGridTopicArgs-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventGridTopic.ts#L151">property <b>location</b></a>
 </h3>
@@ -4893,9 +4935,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventGridTopic.ts#L113">interface <b>EventGridTopicState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering EventGridTopic resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="EventGridTopicState-endpoint">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventGridTopic.ts#L117">property <b>endpoint</b></a>
 </h3>
@@ -4978,9 +5022,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventHub.ts#L168">interface <b>EventHubArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a EventHub resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="EventHubArgs-captureDescription">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventHub.ts#L172">property <b>captureDescription</b></a>
 </h3>
@@ -5072,9 +5118,11 @@ The name of the resource group in which the EventHub's parent Namespace exists. 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventHubAuthorizationRule.ts#L213">interface <b>EventHubAuthorizationRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a EventHubAuthorizationRule resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRuleArgs-eventhubName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventHubAuthorizationRule.ts#L217">property <b>eventhubName</b></a>
 </h3>
@@ -5165,9 +5213,11 @@ Does this Authorization Rule have permissions to Send to the Event Hub? Defaults
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventHubAuthorizationRule.ts#L162">interface <b>EventHubAuthorizationRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering EventHubAuthorizationRule resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRuleState-eventhubName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventHubAuthorizationRule.ts#L166">property <b>eventhubName</b></a>
 </h3>
@@ -5302,9 +5352,11 @@ Does this Authorization Rule have permissions to Send to the Event Hub? Defaults
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventHubConsumerGroup.ts#L151">interface <b>EventHubConsumerGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a EventHubConsumerGroup resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="EventHubConsumerGroupArgs-eventhubName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventHubConsumerGroup.ts#L155">property <b>eventhubName</b></a>
 </h3>
@@ -5373,9 +5425,11 @@ Specifies the user metadata.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventHubConsumerGroup.ts#L124">interface <b>EventHubConsumerGroupState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering EventHubConsumerGroup resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="EventHubConsumerGroupState-eventhubName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventHubConsumerGroup.ts#L128">property <b>eventhubName</b></a>
 </h3>
@@ -5445,9 +5499,11 @@ Specifies the user metadata.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Context'>Context</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;</pre>
+{{% md %}}
 
 Data that will be passed along in the context object to the EventHubCallback.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="EventHubContext-done">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/appservice/zMixins.ts#L46">method <b>done</b></a>
 </h3>
@@ -5575,9 +5631,11 @@ HTTP response object. Provided to your function when using HTTP Bindings.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventHubNamespace.ts#L214">interface <b>EventHubNamespaceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a EventHubNamespace resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="EventHubNamespaceArgs-autoInflateEnabled">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventHubNamespace.ts#L218">property <b>autoInflateEnabled</b></a>
 </h3>
@@ -5682,9 +5740,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L192">interface <b>EventHubNamespaceAuthorizationRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a EventHubNamespaceAuthorizationRule resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRuleArgs-listen">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L196">property <b>listen</b></a>
 </h3>
@@ -5764,9 +5824,11 @@ Grants send access to this this Authorization Rule. Defaults to `false`.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L145">interface <b>EventHubNamespaceAuthorizationRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering EventHubNamespaceAuthorizationRule resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRuleState-listen">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventHubNamespaceAuthorizationRule.ts#L149">property <b>listen</b></a>
 </h3>
@@ -5890,9 +5952,11 @@ Grants send access to this this Authorization Rule. Defaults to `false`.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventHubNamespace.ts#L154">interface <b>EventHubNamespaceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering EventHubNamespace resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="EventHubNamespaceState-autoInflateEnabled">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventHubNamespace.ts#L158">property <b>autoInflateEnabled</b></a>
 </h3>
@@ -6043,9 +6107,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventHub.ts#L133">interface <b>EventHubState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering EventHub resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="EventHubState-captureDescription">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/eventHub.ts#L137">property <b>captureDescription</b></a>
 </h3>
@@ -6148,9 +6214,11 @@ The name of the resource group in which the EventHub's parent Namespace exists. 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/getEventhubNamespace.ts#L34">interface <b>GetEventhubNamespaceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getEventhubNamespace.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetEventhubNamespaceArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/getEventhubNamespace.ts#L38">property <b>name</b></a>
 </h3>
@@ -6178,9 +6246,11 @@ The Name of the Resource Group where the EventHub Namespace exists.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/getEventhubNamespace.ts#L48">interface <b>GetEventhubNamespaceResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getEventhubNamespace.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetEventhubNamespaceResult-autoInflateEnabled">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/getEventhubNamespace.ts#L52">property <b>autoInflateEnabled</b></a>
 </h3>
@@ -6333,9 +6403,11 @@ A mapping of tags to assign to the EventHub Namespace.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/getServiceBusNamespace.ts#L34">interface <b>GetServiceBusNamespaceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getServiceBusNamespace.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetServiceBusNamespaceArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/getServiceBusNamespace.ts#L38">property <b>name</b></a>
 </h3>
@@ -6363,9 +6435,11 @@ Specifies the name of the Resource Group where the ServiceBus Namespace exists.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/getServiceBusNamespace.ts#L48">interface <b>GetServiceBusNamespaceResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getServiceBusNamespace.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetServiceBusNamespaceResult-capacity">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/getServiceBusNamespace.ts#L52">property <b>capacity</b></a>
 </h3>
@@ -6488,9 +6562,11 @@ A mapping of tags assigned to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/namespace.ts#L187">interface <b>NamespaceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Namespace resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NamespaceArgs-capacity">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/namespace.ts#L191">property <b>capacity</b></a>
 </h3>
@@ -6564,9 +6640,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L187">interface <b>NamespaceAuthorizationRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a NamespaceAuthorizationRule resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRuleArgs-listen">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L191">property <b>listen</b></a>
 </h3>
@@ -6638,9 +6716,11 @@ Grants send access to this this Authorization Rule. Defaults to `false`.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L141">interface <b>NamespaceAuthorizationRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering NamespaceAuthorizationRule resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRuleState-listen">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/namespaceAuthorizationRule.ts#L145">property <b>listen</b></a>
 </h3>
@@ -6756,9 +6836,11 @@ Grants send access to this this Authorization Rule. Defaults to `false`.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/namespace.ts#L137">interface <b>NamespaceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Namespace resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NamespaceState-capacity">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/namespace.ts#L141">property <b>capacity</b></a>
 </h3>
@@ -6878,9 +6960,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/queue.ts#L283">interface <b>QueueArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Queue resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="QueueArgs-autoDeleteOnIdle">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/queue.ts#L288">property <b>autoDeleteOnIdle</b></a>
 </h3>
@@ -7087,9 +7171,11 @@ create the namespace. Changing this forces a new resource to be created.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L207">interface <b>QueueAuthorizationRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a QueueAuthorizationRule resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="QueueAuthorizationRuleArgs-listen">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L211">property <b>listen</b></a>
 </h3>
@@ -7172,9 +7258,11 @@ Does this Authorization Rule have Send permissions to the ServiceBus Queue? Defa
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L157">interface <b>QueueAuthorizationRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering QueueAuthorizationRule resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="QueueAuthorizationRuleState-listen">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/queueAuthorizationRule.ts#L161">property <b>listen</b></a>
 </h3>
@@ -7301,9 +7389,11 @@ Does this Authorization Rule have Send permissions to the ServiceBus Queue? Defa
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/queue.ts#L195">interface <b>QueueState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Queue resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="QueueState-autoDeleteOnIdle">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/queue.ts#L200">property <b>autoDeleteOnIdle</b></a>
 </h3>
@@ -7510,9 +7600,11 @@ create the namespace. Changing this forces a new resource to be created.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/subscription.ts#L264">interface <b>SubscriptionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Subscription resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SubscriptionArgs-autoDeleteOnIdle">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/subscription.ts#L270">property <b>autoDeleteOnIdle</b></a>
 </h3>
@@ -7685,9 +7777,11 @@ this Subscription in. Changing this forces a new resource to be created.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/subscriptionRule.ts#L246">interface <b>SubscriptionRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a SubscriptionRule resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SubscriptionRuleArgs-action">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/subscriptionRule.ts#L250">property <b>action</b></a>
 </h3>
@@ -7801,9 +7895,11 @@ The name of the ServiceBus Topic in which the ServiceBus Subscription exists. Ch
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/subscriptionRule.ts#L204">interface <b>SubscriptionRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering SubscriptionRule resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SubscriptionRuleState-action">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/subscriptionRule.ts#L208">property <b>action</b></a>
 </h3>
@@ -7917,9 +8013,11 @@ The name of the ServiceBus Topic in which the ServiceBus Subscription exists. Ch
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/subscription.ts#L189">interface <b>SubscriptionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Subscription resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SubscriptionState-autoDeleteOnIdle">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/subscription.ts#L195">property <b>autoDeleteOnIdle</b></a>
 </h3>
@@ -8092,9 +8190,11 @@ this Subscription in. Changing this forces a new resource to be created.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/topic.ts#L265">interface <b>TopicArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Topic resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="TopicArgs-autoDeleteOnIdle">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/topic.ts#L270">property <b>autoDeleteOnIdle</b></a>
 </h3>
@@ -8279,9 +8379,11 @@ supports ordering. Defaults to false.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/topicAuthorizationRule.ts#L206">interface <b>TopicAuthorizationRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a TopicAuthorizationRule resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="TopicAuthorizationRuleArgs-listen">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/topicAuthorizationRule.ts#L210">property <b>listen</b></a>
 </h3>
@@ -8364,9 +8466,11 @@ Specifies the name of the ServiceBus Topic. Changing this forces a new resource 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/topicAuthorizationRule.ts#L156">interface <b>TopicAuthorizationRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering TopicAuthorizationRule resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="TopicAuthorizationRuleState-listen">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/topicAuthorizationRule.ts#L160">property <b>listen</b></a>
 </h3>
@@ -8494,9 +8598,11 @@ Specifies the name of the ServiceBus Topic. Changing this forces a new resource 
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Context'>Context</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;</pre>
+{{% md %}}
 
 Data that will be passed along in the context object to the TopicCallback.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="TopicContext-done">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/appservice/zMixins.ts#L46">method <b>done</b></a>
 </h3>
@@ -8616,11 +8722,13 @@ HTTP response object. Provided to your function when using HTTP Bindings.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#HostSettings'>HostSettings</a></pre>
+{{% md %}}
 
 Host settings specific to the Service Bus Topic/Subscription plugin.
 
 For more details see https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-service-bus#host-json
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="TopicHostSettings-aggregator">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/appservice/zMixins.ts#L170">property <b>aggregator</b></a>
 </h3>
@@ -8734,9 +8842,11 @@ support.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/topic.ts#L185">interface <b>TopicState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Topic resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="TopicState-autoDeleteOnIdle">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/topic.ts#L190">property <b>autoDeleteOnIdle</b></a>
 </h3>
@@ -8922,9 +9032,11 @@ supports ordering. Defaults to false.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> EventHubCallback = appservice.Callback&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;;</pre>
+{{% md %}}
 
 Signature of the callback that can receive event hub notifications.
 
+{{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="EventHubSubscriptionArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/zMixins.ts#L312">type <b>EventHubSubscriptionArgs</b></a>
@@ -8940,9 +9052,11 @@ Signature of the callback that can receive event hub notifications.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> TopicCallback = appservice.Callback&lt;<a href='#TopicContext'>TopicContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;;</pre>
+{{% md %}}
 
 Signature of the callback that can receive topic notifications.
 
+{{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="TopicEventSubscriptionArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/eventhub/zMixins.ts#L117">type <b>TopicEventSubscriptionArgs</b></a>

@@ -32,11 +32,13 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Ingress is a collection of rules that allow inbound connections to reach the endpoints
 defined by a backend. An Ingress can be configured to give services externally-reachable
 urls, load balance traffic, terminate SSL, offer name based virtual hosting etc.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Ingress-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/networking/v1beta1/Ingress.ts#L65"> <b>constructor</b></a>
 </h3>
@@ -199,9 +201,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 IngressList is a collection of Ingress.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="IngressList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/networking/v1beta1/IngressList.ts#L56"> <b>constructor</b></a>
 </h3>

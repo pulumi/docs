@@ -42,6 +42,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Log Analytics (formally Operational Insights) Solution.
 
@@ -82,6 +83,7 @@ const testAnalyticsSolution = new azure.operationalinsights.AnalyticsSolution("t
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AnalyticsSolution-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/operationalinsights/analyticsSolution.ts#L83"> <b>constructor</b></a>
 </h3>
@@ -238,6 +240,7 @@ The full resource ID of the Log Analytics workspace with which the solution will
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Log Analytics (formally Operational Insights) Workspace.
 
@@ -260,6 +263,7 @@ const testAnalyticsWorkspace = new azure.operationalinsights.AnalyticsWorkspace(
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AnalyticsWorkspace-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L81"> <b>constructor</b></a>
 </h3>
@@ -455,6 +459,7 @@ The Workspace (or Customer) ID for the Log Analytics Workspace.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Links a Log Analytics (formally Operational Insights) Workspace to another resource. The (currently) only linkable service is an Azure Automation Account.
 
@@ -496,6 +501,7 @@ const testAnalyticsWorkspaceLinkedService = new azure.operationalinsights.Analyt
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceLinkedService-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L88"> <b>constructor</b></a>
 </h3>
@@ -686,9 +692,11 @@ export const logAnalyticsWorkspaceId = test.workspaceId;
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/operationalinsights/analyticsSolution.ts#L164">interface <b>AnalyticsSolutionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a AnalyticsSolution resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AnalyticsSolutionArgs-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/operationalinsights/analyticsSolution.ts#L168">property <b>location</b></a>
 </h3>
@@ -765,9 +773,11 @@ The full resource ID of the Log Analytics workspace with which the solution will
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/operationalinsights/analyticsSolution.ts#L134">interface <b>AnalyticsSolutionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering AnalyticsSolution resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AnalyticsSolutionState-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/operationalinsights/analyticsSolution.ts#L138">property <b>location</b></a>
 </h3>
@@ -844,9 +854,11 @@ The full resource ID of the Log Analytics workspace with which the solution will
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L177">interface <b>AnalyticsWorkspaceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a AnalyticsWorkspace resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceArgs-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L181">property <b>location</b></a>
 </h3>
@@ -918,9 +930,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L166">interface <b>AnalyticsWorkspaceLinkedServiceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a AnalyticsWorkspaceLinkedService resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceLinkedServiceArgs-linkedServiceName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L170">property <b>linkedServiceName</b></a>
 </h3>
@@ -994,9 +1008,11 @@ Name of the Log Analytics Workspace that will contain the linkedServices resourc
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L132">interface <b>AnalyticsWorkspaceLinkedServiceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering AnalyticsWorkspaceLinkedService resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceLinkedServiceState-linkedServiceName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L136">property <b>linkedServiceName</b></a>
 </h3>
@@ -1081,9 +1097,11 @@ Name of the Log Analytics Workspace that will contain the linkedServices resourc
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L131">interface <b>AnalyticsWorkspaceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering AnalyticsWorkspace resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AnalyticsWorkspaceState-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L135">property <b>location</b></a>
 </h3>
@@ -1199,9 +1217,11 @@ The Workspace (or Customer) ID for the Log Analytics Workspace.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/operationalinsights/getAnalyticsWorkspace.ts#L34">interface <b>GetAnalyticsWorkspaceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getAnalyticsWorkspace.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetAnalyticsWorkspaceArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/operationalinsights/getAnalyticsWorkspace.ts#L38">property <b>name</b></a>
 </h3>
@@ -1229,9 +1249,11 @@ The name of the resource group in which the Log Analytics workspace is located i
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/operationalinsights/getAnalyticsWorkspace.ts#L48">interface <b>GetAnalyticsWorkspaceResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getAnalyticsWorkspace.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetAnalyticsWorkspaceResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/operationalinsights/getAnalyticsWorkspace.ts#L83">property <b>id</b></a>
 </h3>

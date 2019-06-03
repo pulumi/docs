@@ -79,6 +79,7 @@ import * as docker from "@pulumi/docker";
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages the lifecycle of a Docker container.
 
@@ -96,6 +97,7 @@ const ubuntuContainer = new docker.Container("ubuntu", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Container-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/59a07466b5cb9dd4faedb9139abe0080dc36da09/sdk/nodejs/container.ts#L259"> <b>constructor</b></a>
 </h3>
@@ -799,6 +801,7 @@ See Volumes below for details.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
+{{% md %}}
 
 A docker.Image resource represents a Docker image built locally which is published and made
 available via a remote Docker registry.  This can be used to ensure that a Docker source
@@ -807,6 +810,7 @@ registry as part of a Pulumi deployment, so that it can be referenced as an imag
 other cloud services that reference Docker images - including Kubernetes Pods, AWS ECS Tasks, and
 Azure Container Instances.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Image-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/59a07466b5cb9dd4faedb9139abe0080dc36da09/sdk/nodejs/image.ts#L101"> <b>constructor</b></a>
 </h3>
@@ -919,6 +923,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Docker Network. This can be used alongside
 [docker\_container](https://www.terraform.io/docs/providers/docker/r/container.html)
@@ -934,6 +939,7 @@ import * as docker from "@pulumi/docker";
 const privateNetwork = new docker.Network("private_network", {});
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Network-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/59a07466b5cb9dd4faedb9139abe0080dc36da09/sdk/nodejs/network.ts#L88"> <b>constructor</b></a>
 </h3>
@@ -1162,12 +1168,14 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> ProviderResource</pre>
+{{% md %}}
 
 The provider type for the docker package. By default, resources use package-wide configuration
 settings, however an explicit `Provider` instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
 [documentation](https://pulumi.io/reference/programming-model.html#providers) for more information.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Provider-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/59a07466b5cb9dd4faedb9139abe0080dc36da09/sdk/nodejs/provider.ts#L13"> <b>constructor</b></a>
 </h3>
@@ -1239,6 +1247,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Pulls a Docker image to a given Docker host from a Docker Registry.
 
@@ -1270,6 +1279,7 @@ const ubuntuRemoteImage = new docker.RemoteImage("ubuntu", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RemoteImage-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/59a07466b5cb9dd4faedb9139abe0080dc36da09/sdk/nodejs/remoteImage.ts#L72"> <b>constructor</b></a>
 </h3>
@@ -1412,6 +1422,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Creates and destroys a volume in Docker. This can be used alongside
 [docker\_container](https://www.terraform.io/docs/providers/docker/r/container.html)
@@ -1427,6 +1438,7 @@ import * as docker from "@pulumi/docker";
 const sharedVolume = new docker.Volume("shared_volume", {});
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Volume-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/59a07466b5cb9dd4faedb9139abe0080dc36da09/sdk/nodejs/volume.ts#L52"> <b>constructor</b></a>
 </h3>
@@ -1631,10 +1643,12 @@ image.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-docker/blob/59a07466b5cb9dd4faedb9139abe0080dc36da09/sdk/nodejs/docker.ts#L33">interface <b>CacheFrom</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 CacheFrom may be used to specify build stages to use for the Docker build cache. The final image
 is always implicitly included.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CacheFrom-stages">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/59a07466b5cb9dd4faedb9139abe0080dc36da09/sdk/nodejs/docker.ts#L39">property <b>stages</b></a>
 </h3>
@@ -1653,9 +1667,11 @@ built explicitly and pushed to the target repository. A given stage's image will
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-docker/blob/59a07466b5cb9dd4faedb9139abe0080dc36da09/sdk/nodejs/container.ts#L615">interface <b>ContainerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Container resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ContainerArgs-attach">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/59a07466b5cb9dd4faedb9139abe0080dc36da09/sdk/nodejs/container.ts#L619">property <b>attach</b></a>
 </h3>
@@ -2194,9 +2210,11 @@ See Volumes below for details.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-docker/blob/59a07466b5cb9dd4faedb9139abe0080dc36da09/sdk/nodejs/container.ts#L386">interface <b>ContainerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Container resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ContainerState-attach">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/59a07466b5cb9dd4faedb9139abe0080dc36da09/sdk/nodejs/container.ts#L390">property <b>attach</b></a>
 </h3>
@@ -2820,9 +2838,11 @@ See Volumes below for details.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-docker/blob/59a07466b5cb9dd4faedb9139abe0080dc36da09/sdk/nodejs/docker.ts#L45">interface <b>DockerBuild</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 DockerBuild may be used to specify detailed instructions about how to build a container.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DockerBuild-args">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/59a07466b5cb9dd4faedb9139abe0080dc36da09/sdk/nodejs/docker.ts#L64">property <b>args</b></a>
 </h3>
@@ -2882,9 +2902,11 @@ it is assumed to be a file named Dockerfile in the root of the build context.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-docker/blob/59a07466b5cb9dd4faedb9139abe0080dc36da09/sdk/nodejs/image.ts#L22">interface <b>ImageArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Arguments for constructing an Image resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ImageArgs-build">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/59a07466b5cb9dd4faedb9139abe0080dc36da09/sdk/nodejs/image.ts#L35">property <b>build</b></a>
 </h3>
@@ -2986,9 +3008,11 @@ Username for login to the target Docker registry.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-docker/blob/59a07466b5cb9dd4faedb9139abe0080dc36da09/sdk/nodejs/network.ts#L196">interface <b>NetworkArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Network resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkArgs-attachable">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/59a07466b5cb9dd4faedb9139abe0080dc36da09/sdk/nodejs/network.ts#L201">property <b>attachable</b></a>
 </h3>
@@ -3129,9 +3153,11 @@ the drivers.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-docker/blob/59a07466b5cb9dd4faedb9139abe0080dc36da09/sdk/nodejs/network.ts#L136">interface <b>NetworkState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Network resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NetworkState-attachable">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/59a07466b5cb9dd4faedb9139abe0080dc36da09/sdk/nodejs/network.ts#L141">property <b>attachable</b></a>
 </h3>
@@ -3280,9 +3306,11 @@ the drivers.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-docker/blob/59a07466b5cb9dd4faedb9139abe0080dc36da09/sdk/nodejs/provider.ts#L39">interface <b>ProviderArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Provider resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ProviderArgs-caMaterial">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/59a07466b5cb9dd4faedb9139abe0080dc36da09/sdk/nodejs/provider.ts#L43">property <b>caMaterial</b></a>
 </h3>
@@ -3385,9 +3413,11 @@ PEM-encoded content of Docker client private key
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-docker/blob/59a07466b5cb9dd4faedb9139abe0080dc36da09/sdk/nodejs/remoteImage.ts#L137">interface <b>RemoteImageArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a RemoteImage resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RemoteImageArgs-keepLocally">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/59a07466b5cb9dd4faedb9139abe0080dc36da09/sdk/nodejs/remoteImage.ts#L143">property <b>keepLocally</b></a>
 </h3>
@@ -3442,9 +3472,11 @@ to trigger an image update.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-docker/blob/59a07466b5cb9dd4faedb9139abe0080dc36da09/sdk/nodejs/remoteImage.ts#L109">interface <b>RemoteImageState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering RemoteImage resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RemoteImageState-keepLocally">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/59a07466b5cb9dd4faedb9139abe0080dc36da09/sdk/nodejs/remoteImage.ts#L115">property <b>keepLocally</b></a>
 </h3>
@@ -3507,9 +3539,11 @@ to trigger an image update.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-docker/blob/59a07466b5cb9dd4faedb9139abe0080dc36da09/sdk/nodejs/volume.ts#L110">interface <b>VolumeArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Volume resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeArgs-driver">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/59a07466b5cb9dd4faedb9139abe0080dc36da09/sdk/nodejs/volume.ts#L114">property <b>driver</b></a>
 </h3>
@@ -3560,9 +3594,11 @@ provided).
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-docker/blob/59a07466b5cb9dd4faedb9139abe0080dc36da09/sdk/nodejs/volume.ts#L86">interface <b>VolumeState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Volume resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeState-driver">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/59a07466b5cb9dd4faedb9139abe0080dc36da09/sdk/nodejs/volume.ts#L90">property <b>driver</b></a>
 </h3>

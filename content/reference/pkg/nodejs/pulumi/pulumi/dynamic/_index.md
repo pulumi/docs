@@ -38,9 +38,11 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Resource represents a Pulumi Resource that incorporates an inline implementation of the Resource's CRUD operations.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Resource-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/dynamic/index.ts#L171"> <b>constructor</b></a>
 </h3>
@@ -113,9 +115,11 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/dynamic/index.ts#L37">interface <b>CheckFailure</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 CheckFailure represents a single failure in the results of a call to `ResourceProvider.check`
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CheckFailure-property">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/dynamic/index.ts#L41">property <b>property</b></a>
 </h3>
@@ -143,9 +147,11 @@ The reason that the property failed validation.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/dynamic/index.ts#L22">interface <b>CheckResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 CheckResult represents the results of a call to `ResourceProvider.check`.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CheckResult-failures">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/dynamic/index.ts#L31">property <b>failures</b></a>
 </h3>
@@ -173,9 +179,11 @@ The inputs to use, if any.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/dynamic/index.ts#L78">interface <b>CreateResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 CreateResult represents the results of a call to `ResourceProvider.create`.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CreateResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/dynamic/index.ts#L82">property <b>id</b></a>
 </h3>
@@ -203,9 +211,11 @@ Any properties that were computed during creation.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/dynamic/index.ts#L52">interface <b>DiffResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 DiffResult represents the results of a call to `ResourceProvider.diff`.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DiffResult-changes">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/dynamic/index.ts#L56">property <b>changes</b></a>
 </h3>
@@ -283,9 +293,11 @@ The current property state read from the live environment.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/dynamic/index.ts#L114">interface <b>ResourceProvider</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 ResourceProvider represents an object that provides CRUD operations for a particular type of resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceProvider-check">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/dynamic/index.ts#L121">property <b>check</b></a>
 </h3>
@@ -359,9 +371,11 @@ Update updates an existing resource with new values.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/dynamic/index.ts#L104">interface <b>UpdateResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 UpdateResult represents the results of a call to `ResourceProvider.update`.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="UpdateResult-outs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/b84b3d487dfe2fe6df52cf022dddcaab59845827/sdk/nodejs/dynamic/index.ts#L108">property <b>outs</b></a>
 </h3>

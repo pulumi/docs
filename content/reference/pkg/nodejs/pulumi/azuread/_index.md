@@ -89,6 +89,7 @@ import * as azuread from "@pulumi/azuread";
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an Application within Azure Active Directory.
 
@@ -135,6 +136,7 @@ const test = new azuread.Application("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Application-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/application.ts#L97"> <b>constructor</b></a>
 </h3>
@@ -314,6 +316,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Group within Azure Active Directory.
 
@@ -328,6 +331,7 @@ import * as azuread from "@pulumi/azuread";
 const myGroup = new azuread.Group("my_group", {});
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Group-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/group.ts#L37"> <b>constructor</b></a>
 </h3>
@@ -424,12 +428,14 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> ProviderResource</pre>
+{{% md %}}
 
 The provider type for the azuread package. By default, resources use package-wide configuration
 settings, however an explicit `Provider` instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
 [documentation](https://pulumi.io/reference/programming-model.html#providers) for more information.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Provider-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/provider.ts#L13"> <b>constructor</b></a>
 </h3>
@@ -501,6 +507,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Service Principal associated with an Application within Azure Active Directory.
 
@@ -529,6 +536,7 @@ const testServicePrincipal = new azuread.ServicePrincipal("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ServicePrincipal-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/servicePrincipal.ts#L59"> <b>constructor</b></a>
 </h3>
@@ -647,6 +655,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Password associated with a Service Principal within Azure Active Directory.
 
@@ -675,6 +684,7 @@ const testServicePrincipalPassword = new azuread.ServicePrincipalPassword("test"
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ServicePrincipalPassword-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/servicePrincipalPassword.ts#L71"> <b>constructor</b></a>
 </h3>
@@ -826,6 +836,7 @@ The Password for this Service Principal.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a User within Azure Active Directory.
 
@@ -845,6 +856,7 @@ const testUser = new azuread.User("test_user", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="User-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/user.ts#L64"> <b>constructor</b></a>
 </h3>
@@ -1198,9 +1210,11 @@ const testUser = pulumi.output(azuread.getUser({
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/application.ts#L175">interface <b>ApplicationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Application resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ApplicationArgs-availableToOtherTenants">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/application.ts#L179">property <b>availableToOtherTenants</b></a>
 </h3>
@@ -1289,9 +1303,11 @@ A collection of `required_resource_access` blocks as documented below.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/application.ts#L137">interface <b>ApplicationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Application resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ApplicationState-applicationId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/application.ts#L141">property <b>applicationId</b></a>
 </h3>
@@ -1391,9 +1407,11 @@ A collection of `required_resource_access` blocks as documented below.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/getApplication.ts#L36">interface <b>GetApplicationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getApplication.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetApplicationArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/getApplication.ts#L40">property <b>name</b></a>
 </h3>
@@ -1421,9 +1439,11 @@ Specifies the Object ID of the Application within Azure Active Directory.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/getApplication.ts#L50">interface <b>GetApplicationResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getApplication.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetApplicationResult-applicationId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/getApplication.ts#L54">property <b>applicationId</b></a>
 </h3>
@@ -1539,9 +1559,11 @@ A collection of `required_resource_access` blocks as documented below.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/getDomains.ts#L35">interface <b>GetDomainsArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getDomains.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetDomainsArgs-includeUnverified">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/getDomains.ts#L39">property <b>includeUnverified</b></a>
 </h3>
@@ -1580,9 +1602,11 @@ Set to `true` to only return the initial domain, which is your primary Azure Act
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/getDomains.ts#L53">interface <b>GetDomainsResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getDomains.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetDomainsResult-domains">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/getDomains.ts#L57">property <b>domains</b></a>
 </h3>
@@ -1640,9 +1664,11 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/getGroup.ts#L32">interface <b>GetGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getGroup.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetGroupArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/getGroup.ts#L36">property <b>name</b></a>
 </h3>
@@ -1659,9 +1685,11 @@ The Name of the Azure AD Group we want to lookup.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/getGroup.ts#L42">interface <b>GetGroupResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getGroup.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetGroupResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/getGroup.ts#L47">property <b>id</b></a>
 </h3>
@@ -1686,9 +1714,11 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/getServicePrincipal.ts#L57">interface <b>GetServicePrincipalArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getServicePrincipal.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetServicePrincipalArgs-applicationId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/getServicePrincipal.ts#L61">property <b>applicationId</b></a>
 </h3>
@@ -1727,9 +1757,11 @@ The ID of the Azure AD Service Principal.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/getServicePrincipal.ts#L75">interface <b>GetServicePrincipalResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getServicePrincipal.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetServicePrincipalResult-applicationId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/getServicePrincipal.ts#L76">property <b>applicationId</b></a>
 </h3>
@@ -1770,9 +1802,11 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/getUser.ts#L32">interface <b>GetUserArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getUser.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetUserArgs-userPrincipalName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/getUser.ts#L36">property <b>userPrincipalName</b></a>
 </h3>
@@ -1789,9 +1823,11 @@ The User Principal Name of the Azure AD User.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/getUser.ts#L42">interface <b>GetUserResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getUser.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetUserResult-accountEnabled">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/getUser.ts#L46">property <b>accountEnabled</b></a>
 </h3>
@@ -1863,9 +1899,11 @@ The User Principal Name of the Azure AD User.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/group.ts#L73">interface <b>GroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Group resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GroupArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/group.ts#L77">property <b>name</b></a>
 </h3>
@@ -1882,9 +1920,11 @@ The display name for the Group.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/group.ts#L63">interface <b>GroupState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Group resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GroupState-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/group.ts#L67">property <b>name</b></a>
 </h3>
@@ -1901,9 +1941,11 @@ The display name for the Group.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/provider.ts#L42">interface <b>ProviderArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Provider resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ProviderArgs-clientCertificatePassword">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/provider.ts#L43">property <b>clientCertificatePassword</b></a>
 </h3>
@@ -1981,9 +2023,11 @@ The set of arguments for constructing a Provider resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/servicePrincipal.ts#L110">interface <b>ServicePrincipalArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ServicePrincipal resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ServicePrincipalArgs-applicationId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/servicePrincipal.ts#L114">property <b>applicationId</b></a>
 </h3>
@@ -2011,9 +2055,11 @@ A list of tags to apply to the Service Principal.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/servicePrincipalPassword.ts#L143">interface <b>ServicePrincipalPasswordArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ServicePrincipalPassword resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ServicePrincipalPasswordArgs-endDate">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/servicePrincipalPassword.ts#L147">property <b>endDate</b></a>
 </h3>
@@ -2085,9 +2131,11 @@ The Password for this Service Principal.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/servicePrincipalPassword.ts#L113">interface <b>ServicePrincipalPasswordState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ServicePrincipalPassword resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ServicePrincipalPasswordState-endDate">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/servicePrincipalPassword.ts#L117">property <b>endDate</b></a>
 </h3>
@@ -2159,9 +2207,11 @@ The Password for this Service Principal.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/servicePrincipal.ts#L92">interface <b>ServicePrincipalState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ServicePrincipal resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ServicePrincipalState-applicationId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/servicePrincipal.ts#L96">property <b>applicationId</b></a>
 </h3>
@@ -2200,9 +2250,11 @@ A list of tags to apply to the Service Principal.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/user.ts#L143">interface <b>UserArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a User resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="UserArgs-accountEnabled">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/user.ts#L148">property <b>accountEnabled</b></a>
 </h3>
@@ -2272,9 +2324,11 @@ The User Principal Name of the Azure AD User.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/user.ts#L111">interface <b>UserState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering User resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="UserState-accountEnabled">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/15b556c3e2331e12096b1c93552c24a5b4111890/sdk/nodejs/user.ts#L116">property <b>accountEnabled</b></a>
 </h3>

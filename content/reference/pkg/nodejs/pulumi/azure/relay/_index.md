@@ -33,6 +33,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an Azure Relay Namespace.
 
@@ -59,6 +60,7 @@ const testNamespace = new azure.relay.Namespace("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Namespace-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/relay/namespace.ts#L85"> <b>constructor</b></a>
 </h3>
@@ -255,9 +257,11 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/relay/namespace.ts#L181">interface <b>NamespaceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Namespace resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NamespaceArgs-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/relay/namespace.ts#L185">property <b>location</b></a>
 </h3>
@@ -320,9 +324,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/relay/namespace.ts#L135">interface <b>NamespaceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Namespace resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NamespaceState-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/relay/namespace.ts#L139">property <b>location</b></a>
 </h3>

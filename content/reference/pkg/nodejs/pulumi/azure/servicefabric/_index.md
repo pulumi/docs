@@ -33,6 +33,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage a Service Fabric Cluster.
 
@@ -65,6 +66,7 @@ const testCluster = new azure.servicefabric.Cluster("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Cluster-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/servicefabric/cluster.ts#L123"> <b>constructor</b></a>
 </h3>
@@ -389,9 +391,11 @@ Specifies the Image expected for the Service Fabric Cluster, such as `Windows`. 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/servicefabric/cluster.ts#L279">interface <b>ClusterArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Cluster resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ClusterArgs-addOnFeatures">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/servicefabric/cluster.ts#L283">property <b>addOnFeatures</b></a>
 </h3>
@@ -626,9 +630,11 @@ Specifies the Image expected for the Service Fabric Cluster, such as `Windows`. 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/servicefabric/cluster.ts#L201">interface <b>ClusterState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Cluster resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ClusterState-addOnFeatures">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/servicefabric/cluster.ts#L205">property <b>addOnFeatures</b></a>
 </h3>

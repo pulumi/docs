@@ -45,6 +45,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Sets a PostgreSQL Configuration value on a PostgreSQL Server.
 
@@ -86,6 +87,7 @@ const testConfiguration = new azure.postgresql.Configuration("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Configuration-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/postgresql/configuration.ts#L76"> <b>constructor</b></a>
 </h3>
@@ -215,6 +217,7 @@ Specifies the value of the PostgreSQL Configuration. See the PostgreSQL document
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a PostgreSQL Database within a PostgreSQL Server
 
@@ -257,6 +260,7 @@ const testDatabase = new azure.postgresql.Database("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Database-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/postgresql/database.ts#L82"> <b>constructor</b></a>
 </h3>
@@ -398,6 +402,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Firewall Rule for a PostgreSQL Server
 
@@ -441,6 +446,7 @@ const testFirewallRule = new azure.postgresql.FirewallRule("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallRule-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/postgresql/firewallRule.ts#L83"> <b>constructor</b></a>
 </h3>
@@ -582,6 +588,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage a PostgreSQL Server.
 
@@ -617,6 +624,7 @@ const testServer = new azure.postgresql.Server("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Server-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/postgresql/server.ts#L98"> <b>constructor</b></a>
 </h3>
@@ -832,6 +840,7 @@ Specifies the version of PostgreSQL to use. Valid values are `9.5`, `9.6`, `10`,
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a PostgreSQL Virtual Network Rule.
 
@@ -889,6 +898,7 @@ const testVirtualNetworkRule = new azure.postgresql.VirtualNetworkRule("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualNetworkRule-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/postgresql/virtualNetworkRule.ts#L96"> <b>constructor</b></a>
 </h3>
@@ -1028,9 +1038,11 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/postgresql/configuration.ts#L139">interface <b>ConfigurationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Configuration resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ConfigurationArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/postgresql/configuration.ts#L143">property <b>name</b></a>
 </h3>
@@ -1080,9 +1092,11 @@ Specifies the value of the PostgreSQL Configuration. See the PostgreSQL document
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/postgresql/configuration.ts#L117">interface <b>ConfigurationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Configuration resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ConfigurationState-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/postgresql/configuration.ts#L121">property <b>name</b></a>
 </h3>
@@ -1132,9 +1146,11 @@ Specifies the value of the PostgreSQL Configuration. See the PostgreSQL document
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/postgresql/database.ts#L155">interface <b>DatabaseArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Database resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DatabaseArgs-charset">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/postgresql/database.ts#L159">property <b>charset</b></a>
 </h3>
@@ -1196,9 +1212,11 @@ Specifies the name of the PostgreSQL Server. Changing this forces a new resource
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/postgresql/database.ts#L128">interface <b>DatabaseState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Database resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DatabaseState-charset">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/postgresql/database.ts#L132">property <b>charset</b></a>
 </h3>
@@ -1260,9 +1278,11 @@ Specifies the name of the PostgreSQL Server. Changing this forces a new resource
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/postgresql/firewallRule.ts#L156">interface <b>FirewallRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a FirewallRule resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallRuleArgs-endIpAddress">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/postgresql/firewallRule.ts#L160">property <b>endIpAddress</b></a>
 </h3>
@@ -1324,9 +1344,11 @@ Specifies the Start IP Address associated with this Firewall Rule. Changing this
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/postgresql/firewallRule.ts#L129">interface <b>FirewallRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering FirewallRule resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallRuleState-endIpAddress">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/postgresql/firewallRule.ts#L133">property <b>endIpAddress</b></a>
 </h3>
@@ -1388,9 +1410,11 @@ Specifies the Start IP Address associated with this Firewall Rule. Changing this
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/postgresql/server.ts#L215">interface <b>ServerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Server resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ServerArgs-administratorLogin">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/postgresql/server.ts#L219">property <b>administratorLogin</b></a>
 </h3>
@@ -1515,9 +1539,11 @@ Specifies the version of PostgreSQL to use. Valid values are `9.5`, `9.6`, `10`,
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/postgresql/server.ts#L165">interface <b>ServerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Server resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ServerState-administratorLogin">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/postgresql/server.ts#L169">property <b>administratorLogin</b></a>
 </h3>
@@ -1653,9 +1679,11 @@ Specifies the version of PostgreSQL to use. Valid values are `9.5`, `9.6`, `10`,
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/postgresql/virtualNetworkRule.ts#L165">interface <b>VirtualNetworkRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a VirtualNetworkRule resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualNetworkRuleArgs-ignoreMissingVnetServiceEndpoint">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/postgresql/virtualNetworkRule.ts#L169">property <b>ignoreMissingVnetServiceEndpoint</b></a>
 </h3>
@@ -1716,9 +1744,11 @@ The ID of the subnet that the PostgreSQL server will be connected to.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/postgresql/virtualNetworkRule.ts#L139">interface <b>VirtualNetworkRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering VirtualNetworkRule resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualNetworkRuleState-ignoreMissingVnetServiceEndpoint">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/postgresql/virtualNetworkRule.ts#L143">property <b>ignoreMissingVnetServiceEndpoint</b></a>
 </h3>

@@ -120,6 +120,7 @@ import * as linode from "@pulumi/linode";
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Provides a Linode Domain resource.  This can be used to create, modify, and delete Linode Domains through Linode's managed DNS service.
 For more information, see [DNS Manager](https://www.linode.com/docs/platform/manager/dns-manager/) and the [Linode APIv4 docs](https://developers.linode.com/api/v4#operation/createDomain).
@@ -155,6 +156,7 @@ const foobarDomainRecord = new linode.DomainRecord("foobar", {
 
 This resource exports no additional attributes, however `status` may reflect degraded states.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Domain-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/domain.ts#L106"> <b>constructor</b></a>
 </h3>
@@ -383,6 +385,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Provides a Linode Domain Record resource.  This can be used to create, modify, and delete Linodes Domain Records.
 For more information, see [DNS Manager](https://www.linode.com/docs/platform/manager/dns-manager/) and the [Linode APIv4 docs](https://developers.linode.com/api/v4#operation/createDomainRecord).
@@ -412,6 +415,7 @@ const foobarDomainRecord = new linode.DomainRecord("foobar", {
 
 This resource exports no additional attributes.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DomainRecord-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/domainRecord.ts#L93"> <b>constructor</b></a>
 </h3>
@@ -619,6 +623,7 @@ The relative weight of this Record. Higher values are preferred.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Provides a Linode Image resource.  This can be used to create, modify, and delete Linodes Images.  Linode Images are snapshots of a Linode Instance Disk which can then be used to provision more Linode Instances.  Images can be used across regions.
 
@@ -671,6 +676,7 @@ This resource exports the following attributes:
 
 * `vendor` - The upstream distribution vendor. Nil for private Images.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Image-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/image.ts#L120"> <b>constructor</b></a>
 </h3>
@@ -889,6 +895,7 @@ The upstream distribution vendor. Nil for private Images.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Provides a Linode Instance resource.  This can be used to create, modify, and delete Linodes.
 For more information, see [Getting Started with Linode](https://linode.com/docs/getting-started/) and the [Linode APIv4 docs](https://developers.linode.com/api/v4#operation/createLinodeInstance).
@@ -1001,6 +1008,7 @@ This Linode Instance resource exports the following attributes:
 
     * `window` - The window ('W0'-'W22') in which your backups will be taken, in UTC. A backups window is a two-hour span of time in which the backup may occur. For example, 'W10' indicates that your backups should be taken between 10:00 and 12:00. If you do not choose a backup window, one will be selected for you automatically.  If not set manually, when backups are initially enabled this may come back as Scheduling until the window is automatically selected.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Instance-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/instance.ts#L233"> <b>constructor</b></a>
 </h3>
@@ -1463,6 +1471,7 @@ The watchdog, named Lassie, is a Shutdown Watchdog that monitors your Linode and
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Provides a Linode NodeBalancer resource.  This can be used to create, modify, and delete Linodes NodeBalancers in Linode's managed load balancer service.
 For more information, see [Getting Started with NodeBalancers](https://www.linode.com/docs/platform/nodebalancer/getting-started-with-nodebalancers/) and the [Linode APIv4 docs](https://developers.linode.com/api/v4#operation/createNodeBalancer).
@@ -1495,6 +1504,7 @@ This resource exports the following attributes:
 
 * `ipv6` - The Public IPv6 Address of this NodeBalancer
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NodeBalancer-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/nodeBalancer.ts#L82"> <b>constructor</b></a>
 </h3>
@@ -1685,6 +1695,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Provides a Linode NodeBalancer Config resource.  This can be used to create, modify, and delete Linodes NodeBalancer Configs.
 For more information, see [Getting Started with NodeBalancers](https://www.linode.com/docs/platform/nodebalancer/getting-started-with-nodebalancers/) and the [Linode APIv4 docs](https://developers.linode.com/api/v4#operation/createNodeBalancerConfig).
@@ -1729,6 +1740,7 @@ This resource exports the following attributes:
 
 * `node_status_down` - The number of backends considered to be 'DOWN' and unhealthy. These are not in rotation, and not serving requests.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NodeBalancerConfig-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/nodeBalancerConfig.ts#L133"> <b>constructor</b></a>
 </h3>
@@ -2013,6 +2025,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Provides a Linode NodeBalancer Node resource.  This can be used to create, modify, and delete Linodes NodeBalancer Nodes.
 For more information, see [Getting Started with NodeBalancers](https://www.linode.com/docs/platform/nodebalancer/getting-started-with-nodebalancers/) and the [Linode APIv4 docs](https://developers.linode.com/api/v4#operation/createNodeBalancerNode).
@@ -2074,6 +2087,7 @@ This resource exports the following attributes:
 
 * `nodebalancer_id` - The ID of the NodeBalancer this NodeBalancerNode is attached to.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NodeBalancerNode-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/nodeBalancerNode.ts#L108"> <b>constructor</b></a>
 </h3>
@@ -2236,12 +2250,14 @@ Used when picking a backend to serve a request and is not pinned to a single bac
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> ProviderResource</pre>
+{{% md %}}
 
 The provider type for the linode package. By default, resources use package-wide configuration
 settings, however an explicit `Provider` instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
 [documentation](https://pulumi.io/reference/programming-model.html#providers) for more information.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Provider-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/provider.ts#L13"> <b>constructor</b></a>
 </h3>
@@ -2313,6 +2329,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Provides a Linode RDNS resource.  This can be used to create and modify RDNS records.
 
@@ -2339,6 +2356,7 @@ const fooRdns = new linode.Rdns("foo", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Rdns-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/rdns.ts#L53"> <b>constructor</b></a>
 </h3>
@@ -2446,6 +2464,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Provides a Linode SSH Key resource.  This can be used to create, modify, and delete Linodes SSH Keys.  Managed SSH Keys allow instances to be created with a list of Linode usernames, whose SSH keys will be automatically applied to the root account's `~/.ssh/authorized_keys` file.
 For more information, see the [Linode APIv4 docs](https://developers.linode.com/api/v4#operation/getSSHKeys).
@@ -2479,6 +2498,7 @@ This resource exports the following attributes:
 
 * `created` - The date this SSH Key was created.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SshKey-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/sshKey.ts#L64"> <b>constructor</b></a>
 </h3>
@@ -2597,6 +2617,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Provides a Linode StackScript resource.  This can be used to create, modify, and delete Linode StackScripts.  StackScripts are private or public managed scripts which run within an instance during startup.  StackScripts can include variables whose values are specified when the Instance is created.
 
@@ -2669,6 +2690,7 @@ This resource exports the following attributes:
 
   * `default` - The default value. If not specified, this value will be used.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StackScript-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/stackScript.ts#L144"> <b>constructor</b></a>
 </h3>
@@ -2905,6 +2927,7 @@ The User who created the StackScript.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Provides a Linode Token resource.  This can be used to create, modify, and delete Linode API Personal Access Tokens.  Personal Access Tokens proxy user credentials for Linode API access.  This is necessary for tools, such as Terraform, to interact with Linode services on a user's behalf.
 
@@ -2936,6 +2959,7 @@ This resource exports the following attributes:
 
 * `created` - The date this Token was created.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Token-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/token.ts#L70"> <b>constructor</b></a>
 </h3>
@@ -3076,6 +3100,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Provides a Linode Volume resource.  This can be used to create, modify, and delete Linodes Block Storage Volumes.  Block Storage Volumes are removable storage disks that persist outside the life-cycle of Linode Instances. These volumes can be attached to and detached from Linode instances throughout a region.
 
@@ -3131,6 +3156,7 @@ This resource exports the following attributes:
 
 * `filesystem_path` - The full filesystem path for the Volume based on the Volume's label. The path is "/dev/disk/by-id/scsi-0Linode_Volume_" + the Volume label
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Volume-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/volume.ts#L103"> <b>constructor</b></a>
 </h3>
@@ -3738,9 +3764,11 @@ The Linode User resource exports the following attributes:
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/domain.ts#L220">interface <b>DomainArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Domain resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DomainArgs-axfrIps">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/domain.ts#L224">property <b>axfrIps</b></a>
 </h3>
@@ -3889,9 +3917,11 @@ If this Domain represents the authoritative source of information for the domain
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/domainRecord.ts#L202">interface <b>DomainRecordArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a DomainRecord resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DomainRecordArgs-domainId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/domainRecord.ts#L206">property <b>domainId</b></a>
 </h3>
@@ -4019,9 +4049,11 @@ The relative weight of this Record. Higher values are preferred.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/domainRecord.ts#L151">interface <b>DomainRecordState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering DomainRecord resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DomainRecordState-domainId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/domainRecord.ts#L155">property <b>domainId</b></a>
 </h3>
@@ -4149,9 +4181,11 @@ The relative weight of this Record. Higher values are preferred.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/domain.ts#L162">interface <b>DomainState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Domain resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DomainState-axfrIps">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/domain.ts#L166">property <b>axfrIps</b></a>
 </h3>
@@ -4300,9 +4334,11 @@ If this Domain represents the authoritative source of information for the domain
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/getAccount.ts#L59">interface <b>GetAccountResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getAccount.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetAccountResult-address1">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/getAccount.ts#L60">property <b>address1</b></a>
 </h3>
@@ -4415,9 +4451,11 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/getDomain.ts#L69">interface <b>GetDomainArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getDomain.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetDomainArgs-domain">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/getDomain.ts#L73">property <b>domain</b></a>
 </h3>
@@ -4445,9 +4483,11 @@ The unique numeric ID of the Domain record to query.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/getDomain.ts#L83">interface <b>GetDomainResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getDomain.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetDomainResult-axfrIps">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/getDomain.ts#L84">property <b>axfrIps</b></a>
 </h3>
@@ -4565,9 +4605,11 @@ A collection of values returned by getDomain.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/getImage.ts#L54">interface <b>GetImageArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getImage.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetImageArgs-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/getImage.ts#L58">property <b>id</b></a>
 </h3>
@@ -4584,9 +4626,11 @@ The unique ID of this Image.  The ID of private images begin with `private/` fol
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/getImage.ts#L64">interface <b>GetImageResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getImage.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetImageResult-created">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/getImage.ts#L65">property <b>created</b></a>
 </h3>
@@ -4680,9 +4724,11 @@ A collection of values returned by getImage.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/getInstanceType.ts#L53">interface <b>GetInstanceTypeArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getInstanceType.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetInstanceTypeArgs-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/getInstanceType.ts#L57">property <b>id</b></a>
 </h3>
@@ -4707,9 +4753,11 @@ Label used to identify instance type
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/getInstanceType.ts#L64">interface <b>GetInstanceTypeResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getInstanceType.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetInstanceTypeResult-addons">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/getInstanceType.ts#L65">property <b>addons</b></a>
 </h3>
@@ -4805,9 +4853,11 @@ A collection of values returned by getInstanceType.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/getNetworkingIp.ts#L54">interface <b>GetNetworkingIpArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getNetworkingIp.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetNetworkingIpArgs-address">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/getNetworkingIp.ts#L58">property <b>address</b></a>
 </h3>
@@ -4824,9 +4874,11 @@ The IP Address to access.  The address must be associated with the account and a
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/getNetworkingIp.ts#L64">interface <b>GetNetworkingIpResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getNetworkingIp.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetNetworkingIpResult-address">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/getNetworkingIp.ts#L65">property <b>address</b></a>
 </h3>
@@ -4915,9 +4967,11 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/getProfile.ts#L65">interface <b>GetProfileResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getProfile.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetProfileResult-authorizedKeys">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/getProfile.ts#L66">property <b>authorizedKeys</b></a>
 </h3>
@@ -5021,9 +5075,11 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/getRegion.ts#L33">interface <b>GetRegionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getRegion.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetRegionArgs-country">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/getRegion.ts#L34">property <b>country</b></a>
 </h3>
@@ -5045,9 +5101,11 @@ A collection of arguments for invoking getRegion.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/getRegion.ts#L41">interface <b>GetRegionResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getRegion.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetRegionResult-country">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/getRegion.ts#L42">property <b>country</b></a>
 </h3>
@@ -5069,9 +5127,11 @@ A collection of values returned by getRegion.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/getSshKey.ts#L32">interface <b>GetSshKeyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getSshKey.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetSshKeyArgs-label">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/getSshKey.ts#L33">property <b>label</b></a>
 </h3>
@@ -5085,9 +5145,11 @@ A collection of arguments for invoking getSshKey.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/getSshKey.ts#L39">interface <b>GetSshKeyResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getSshKey.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetSshKeyResult-created">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/getSshKey.ts#L40">property <b>created</b></a>
 </h3>
@@ -5128,9 +5190,11 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/getUser.ts#L42">interface <b>GetUserArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getUser.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetUserArgs-username">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/getUser.ts#L46">property <b>username</b></a>
 </h3>
@@ -5147,9 +5211,11 @@ The unique username of this User.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/getUser.ts#L52">interface <b>GetUserResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getUser.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetUserResult-email">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/getUser.ts#L53">property <b>email</b></a>
 </h3>
@@ -5198,9 +5264,11 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/image.ts#L232">interface <b>ImageArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Image resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ImageArgs-description">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/image.ts#L236">property <b>description</b></a>
 </h3>
@@ -5250,9 +5318,11 @@ The ID of the Linode that this Image will be created from.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/image.ts#L177">interface <b>ImageState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Image resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ImageState-created">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/image.ts#L181">property <b>created</b></a>
 </h3>
@@ -5391,9 +5461,11 @@ The upstream distribution vendor. Nil for private Images.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/instance.ts#L422">interface <b>InstanceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Instance resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="InstanceArgs-alerts">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/instance.ts#L423">property <b>alerts</b></a>
 </h3>
@@ -5688,9 +5760,11 @@ The watchdog, named Lassie, is a Shutdown Watchdog that monitors your Linode and
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/instance.ts#L314">interface <b>InstanceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Instance resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="InstanceState-alerts">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/instance.ts#L315">property <b>alerts</b></a>
 </h3>
@@ -6073,9 +6147,11 @@ The watchdog, named Lassie, is a Shutdown Watchdog that monitors your Linode and
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/nodeBalancer.ts#L166">interface <b>NodeBalancerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a NodeBalancer resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NodeBalancerArgs-clientConnThrottle">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/nodeBalancer.ts#L170">property <b>clientConnThrottle</b></a>
 </h3>
@@ -6125,9 +6201,11 @@ A list of tags applied to this object. Tags are for organizational purposes only
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/nodeBalancerConfig.ts#L272">interface <b>NodeBalancerConfigArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a NodeBalancerConfig resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NodeBalancerConfigArgs-algorithm">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/nodeBalancerConfig.ts#L276">property <b>algorithm</b></a>
 </h3>
@@ -6299,9 +6377,11 @@ Controls how session stickiness is handled on this port: 'none', 'table', 'http_
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/nodeBalancerConfig.ts#L196">interface <b>NodeBalancerConfigState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering NodeBalancerConfig resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NodeBalancerConfigState-algorithm">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/nodeBalancerConfig.ts#L200">property <b>algorithm</b></a>
 </h3>
@@ -6506,9 +6586,11 @@ Controls how session stickiness is handled on this port: 'none', 'table', 'http_
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/nodeBalancerNode.ts#L192">interface <b>NodeBalancerNodeArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a NodeBalancerNode resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NodeBalancerNodeArgs-address">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/nodeBalancerNode.ts#L196">property <b>address</b></a>
 </h3>
@@ -6580,9 +6662,11 @@ Used when picking a backend to serve a request and is not pinned to a single bac
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/nodeBalancerNode.ts#L158">interface <b>NodeBalancerNodeState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering NodeBalancerNode resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NodeBalancerNodeState-address">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/nodeBalancerNode.ts#L162">property <b>address</b></a>
 </h3>
@@ -6665,9 +6749,11 @@ Used when picking a backend to serve a request and is not pinned to a single bac
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/nodeBalancer.ts#L129">interface <b>NodeBalancerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering NodeBalancer resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="NodeBalancerState-clientConnThrottle">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/nodeBalancer.ts#L133">property <b>clientConnThrottle</b></a>
 </h3>
@@ -6778,9 +6864,11 @@ A list of tags applied to this object. Tags are for organizational purposes only
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/provider.ts#L36">interface <b>ProviderArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Provider resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ProviderArgs-token">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/provider.ts#L40">property <b>token</b></a>
 </h3>
@@ -6819,9 +6907,11 @@ The HTTP(S) API address of the Linode API to use.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/rdns.ts#L101">interface <b>RdnsArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Rdns resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RdnsArgs-address">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/rdns.ts#L105">property <b>address</b></a>
 </h3>
@@ -6849,9 +6939,11 @@ The name of the RDNS address.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/rdns.ts#L87">interface <b>RdnsState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Rdns resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RdnsState-address">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/rdns.ts#L91">property <b>address</b></a>
 </h3>
@@ -6879,9 +6971,11 @@ The name of the RDNS address.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/sshKey.ts#L118">interface <b>SshKeyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a SshKey resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SshKeyArgs-label">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/sshKey.ts#L122">property <b>label</b></a>
 </h3>
@@ -6909,9 +7003,11 @@ The public SSH Key, which is used to authenticate to the root user of the Linode
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/sshKey.ts#L100">interface <b>SshKeyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering SshKey resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SshKeyState-created">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/sshKey.ts#L104">property <b>created</b></a>
 </h3>
@@ -6950,9 +7046,11 @@ The public SSH Key, which is used to authenticate to the root user of the Linode
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/stackScript.ts#L265">interface <b>StackScriptArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a StackScript resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StackScriptArgs-description">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/stackScript.ts#L269">property <b>description</b></a>
 </h3>
@@ -7024,9 +7122,11 @@ The script to execute when provisioning a new Linode with this StackScript.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/stackScript.ts#L206">interface <b>StackScriptState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering StackScript resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StackScriptState-created">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/stackScript.ts#L210">property <b>created</b></a>
 </h3>
@@ -7183,9 +7283,11 @@ The User who created the StackScript.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/token.ts#L133">interface <b>TokenArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Token resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="TokenArgs-expiry">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/token.ts#L137">property <b>expiry</b></a>
 </h3>
@@ -7224,9 +7326,11 @@ The scopes this token was created with. These define what parts of the Account t
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/token.ts#L107">interface <b>TokenState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Token resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="TokenState-created">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/token.ts#L111">property <b>created</b></a>
 </h3>
@@ -7287,9 +7391,11 @@ The token used to access the API.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/volume.ts#L182">interface <b>VolumeArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Volume resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeArgs-label">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/volume.ts#L186">property <b>label</b></a>
 </h3>
@@ -7350,9 +7456,11 @@ A list of tags applied to this object. Tags are for organizational purposes only
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/volume.ts#L147">interface <b>VolumeState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Volume resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeState-filesystemPath">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/volume.ts#L152">property <b>filesystemPath</b></a>
 </h3>

@@ -39,6 +39,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Consumer Group within an IotHub
 
@@ -73,6 +74,7 @@ const testConsumerGroup = new azure.iot.ConsumerGroup("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ConsumerGroup-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/iot/consumerGroup.ts#L69"> <b>constructor</b></a>
 </h3>
@@ -202,6 +204,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an IotHub
 
@@ -263,6 +266,7 @@ const testContainer = new azure.storage.Container("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="IoTHub-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/iot/ioTHub.ts#L141"> <b>constructor</b></a>
 </h3>
@@ -554,6 +558,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an IotHub Shared Access Policy
 
@@ -586,6 +591,7 @@ const exampleSharedAccessPolicy = new azure.iot.SharedAccessPolicy("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SharedAccessPolicy-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/iot/sharedAccessPolicy.ts#L95"> <b>constructor</b></a>
 </h3>
@@ -791,9 +797,11 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/iot/consumerGroup.ts#L132">interface <b>ConsumerGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ConsumerGroup resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ConsumerGroupArgs-eventhubEndpointName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/iot/consumerGroup.ts#L136">property <b>eventhubEndpointName</b></a>
 </h3>
@@ -843,9 +851,11 @@ The name of the resource group that contains the IoT hub. Changing this forces a
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/iot/consumerGroup.ts#L110">interface <b>ConsumerGroupState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ConsumerGroup resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ConsumerGroupState-eventhubEndpointName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/iot/consumerGroup.ts#L114">property <b>eventhubEndpointName</b></a>
 </h3>
@@ -895,9 +905,11 @@ The name of the resource group that contains the IoT hub. Changing this forces a
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/iot/ioTHub.ts#L270">interface <b>IoTHubArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a IoTHub resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="IoTHubArgs-endpoints">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/iot/ioTHub.ts#L274">property <b>endpoints</b></a>
 </h3>
@@ -1030,9 +1042,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/iot/ioTHub.ts#L203">interface <b>IoTHubState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering IoTHub resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="IoTHubState-endpoints">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/iot/ioTHub.ts#L207">property <b>endpoints</b></a>
 </h3>
@@ -1244,9 +1258,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/iot/sharedAccessPolicy.ts#L197">interface <b>SharedAccessPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a SharedAccessPolicy resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SharedAccessPolicyArgs-deviceConnect">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/iot/sharedAccessPolicy.ts#L201">property <b>deviceConnect</b></a>
 </h3>
@@ -1329,9 +1345,11 @@ Adds `ServiceConnect` permission to this Shared Access Account. It allows sendin
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/iot/sharedAccessPolicy.ts#L147">interface <b>SharedAccessPolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering SharedAccessPolicy resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SharedAccessPolicyState-deviceConnect">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/iot/sharedAccessPolicy.ts#L151">property <b>deviceConnect</b></a>
 </h3>

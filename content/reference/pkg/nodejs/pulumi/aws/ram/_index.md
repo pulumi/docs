@@ -31,17 +31,18 @@ aliases:
 <li><a href="#ResourceShareState">interface ResourceShareState</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/getResourceShare.ts">ram/getResourceShare.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/principalAssociation.ts">ram/principalAssociation.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/resourceAssociation.ts">ram/resourceAssociation.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/resourceShare.ts">ram/resourceShare.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/getResourceShare.ts">ram/getResourceShare.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/principalAssociation.ts">ram/principalAssociation.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/resourceAssociation.ts">ram/resourceAssociation.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/resourceShare.ts">ram/resourceShare.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="PrincipalAssociation">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/principalAssociation.ts#L42">class <b>PrincipalAssociation</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/principalAssociation.ts#L42">class <b>PrincipalAssociation</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Provides a Resource Access Manager (RAM) principal association.
 
@@ -77,8 +78,9 @@ const example = new aws.ram.PrincipalAssociation("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PrincipalAssociation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/principalAssociation.ts#L62"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/principalAssociation.ts#L62"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -95,7 +97,7 @@ Create a PrincipalAssociation resource with the given unique name, arguments, an
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PrincipalAssociation-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/principalAssociation.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/principalAssociation.ts#L51">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -109,7 +111,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PrincipalAssociation-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -119,7 +121,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PrincipalAssociation-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -133,7 +135,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PrincipalAssociation-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -145,7 +147,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PrincipalAssociation-principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/principalAssociation.ts#L58">property <b>principal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/principalAssociation.ts#L58">property <b>principal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>principal: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -156,7 +158,7 @@ The principal to associate with the resource share. Possible values are an AWS a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PrincipalAssociation-resourceShareArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/principalAssociation.ts#L62">property <b>resourceShareArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/principalAssociation.ts#L62">property <b>resourceShareArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceShareArn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -167,7 +169,7 @@ The Amazon Resource Name (ARN) of the resource share.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PrincipalAssociation-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -180,10 +182,11 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResourceAssociation">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/resourceAssociation.ts#L24">class <b>ResourceAssociation</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/resourceAssociation.ts#L24">class <b>ResourceAssociation</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Resource Access Manager (RAM) Resource Association.
 
@@ -201,8 +204,9 @@ const example = new aws.ram.ResourceAssociation("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceAssociation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/resourceAssociation.ts#L44"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/resourceAssociation.ts#L44"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -219,7 +223,7 @@ Create a ResourceAssociation resource with the given unique name, arguments, and
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceAssociation-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/resourceAssociation.ts#L33">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/resourceAssociation.ts#L33">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -233,7 +237,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceAssociation-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -243,7 +247,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceAssociation-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -257,7 +261,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceAssociation-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -269,7 +273,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceAssociation-resourceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/resourceAssociation.ts#L40">property <b>resourceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/resourceAssociation.ts#L40">property <b>resourceArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceArn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -280,7 +284,7 @@ Amazon Resource Name (ARN) of the resource to associate with the RAM Resource Sh
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceAssociation-resourceShareArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/resourceAssociation.ts#L44">property <b>resourceShareArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/resourceAssociation.ts#L44">property <b>resourceShareArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>resourceShareArn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -291,7 +295,7 @@ Amazon Resource Name (ARN) of the RAM Resource Share.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceAssociation-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -304,10 +308,11 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResourceShare">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/resourceShare.ts#L24">class <b>ResourceShare</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/resourceShare.ts#L24">class <b>ResourceShare</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Resource Access Manager (RAM) Resource Share. To association principals with the share, see the [`aws_ram_principal_association` resource](https://www.terraform.io/docs/providers/aws/r/ram_principal_association.html). To associate resources with the share, see the [`aws_ram_resource_association` resource](https://www.terraform.io/docs/providers/aws/r/ram_resource_association.html).
 
@@ -325,8 +330,9 @@ const example = new aws.ram.ResourceShare("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceShare-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/resourceShare.ts#L52"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/resourceShare.ts#L52"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -343,7 +349,7 @@ Create a ResourceShare resource with the given unique name, arguments, and optio
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceShare-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/resourceShare.ts#L33">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/resourceShare.ts#L33">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -357,7 +363,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceShare-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -367,7 +373,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceShare-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -381,7 +387,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceShare-allowExternalPrincipals">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/resourceShare.ts#L40">property <b>allowExternalPrincipals</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/resourceShare.ts#L40">property <b>allowExternalPrincipals</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>allowExternalPrincipals: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -392,7 +398,7 @@ Indicates whether principals outside your organization can be associated with a 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceShare-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/resourceShare.ts#L44">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/resourceShare.ts#L44">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -403,7 +409,7 @@ The Amazon Resource Name (ARN) of the resource share.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceShare-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -415,7 +421,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceShare-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/resourceShare.ts#L48">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/resourceShare.ts#L48">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -426,7 +432,7 @@ The name of the resource share.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceShare-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/resourceShare.ts#L52">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/resourceShare.ts#L52">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -437,7 +443,7 @@ A mapping of tags to assign to the resource share.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceShare-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -450,7 +456,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getResourceShare">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/getResourceShare.ts#L37">function <b>getResourceShare</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/getResourceShare.ts#L37">function <b>getResourceShare</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -490,14 +496,16 @@ const tagFilter = pulumi.output(aws.ram.getResourceShare({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="GetResourceShareArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/getResourceShare.ts#L48">interface <b>GetResourceShareArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/getResourceShare.ts#L48">interface <b>GetResourceShareArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getResourceShare.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetResourceShareArgs-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/getResourceShare.ts#L52">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/getResourceShare.ts#L52">property <b>filters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>filters?: {
@@ -511,7 +519,7 @@ A filter used to scope the list e.g. by tags. See [related docs] (https://docs.a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetResourceShareArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/getResourceShare.ts#L56">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/getResourceShare.ts#L56">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -522,7 +530,7 @@ The name of the tag key to filter on.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetResourceShareArgs-resourceOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/getResourceShare.ts#L60">property <b>resourceOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/getResourceShare.ts#L60">property <b>resourceOwner</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceOwner: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -534,14 +542,16 @@ The owner of the resource share. Valid values are SELF or OTHER-ACCOUNTS
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetResourceShareResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/getResourceShare.ts#L66">interface <b>GetResourceShareResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/getResourceShare.ts#L66">interface <b>GetResourceShareResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getResourceShare.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetResourceShareResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/getResourceShare.ts#L70">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/getResourceShare.ts#L70">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -552,7 +562,7 @@ The Amazon Resource Name (ARN) of the resource share.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetResourceShareResult-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/getResourceShare.ts#L71">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/getResourceShare.ts#L71">property <b>filters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>filters?: {
@@ -563,7 +573,7 @@ The Amazon Resource Name (ARN) of the resource share.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetResourceShareResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/getResourceShare.ts#L75">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/getResourceShare.ts#L75">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -574,7 +584,7 @@ The Amazon Resource Name (ARN) of the resource share.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetResourceShareResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/getResourceShare.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/getResourceShare.ts#L76">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -582,7 +592,7 @@ The Amazon Resource Name (ARN) of the resource share.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetResourceShareResult-resourceOwner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/getResourceShare.ts#L77">property <b>resourceOwner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/getResourceShare.ts#L77">property <b>resourceOwner</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceOwner: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -590,7 +600,7 @@ The Amazon Resource Name (ARN) of the resource share.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetResourceShareResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/getResourceShare.ts#L81">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/getResourceShare.ts#L81">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -601,7 +611,7 @@ The Status of the RAM share.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetResourceShareResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/getResourceShare.ts#L85">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/getResourceShare.ts#L85">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -613,14 +623,16 @@ The Tags attached to the RAM share
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PrincipalAssociationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/principalAssociation.ts#L110">interface <b>PrincipalAssociationArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/principalAssociation.ts#L110">interface <b>PrincipalAssociationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a PrincipalAssociation resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PrincipalAssociationArgs-principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/principalAssociation.ts#L114">property <b>principal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/principalAssociation.ts#L114">property <b>principal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>principal: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -631,7 +643,7 @@ The principal to associate with the resource share. Possible values are an AWS a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PrincipalAssociationArgs-resourceShareArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/principalAssociation.ts#L118">property <b>resourceShareArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/principalAssociation.ts#L118">property <b>resourceShareArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceShareArn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -643,14 +655,16 @@ The Amazon Resource Name (ARN) of the resource share.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PrincipalAssociationState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/principalAssociation.ts#L96">interface <b>PrincipalAssociationState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/principalAssociation.ts#L96">interface <b>PrincipalAssociationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering PrincipalAssociation resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PrincipalAssociationState-principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/principalAssociation.ts#L100">property <b>principal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/principalAssociation.ts#L100">property <b>principal</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>principal?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -661,7 +675,7 @@ The principal to associate with the resource share. Possible values are an AWS a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PrincipalAssociationState-resourceShareArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/principalAssociation.ts#L104">property <b>resourceShareArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/principalAssociation.ts#L104">property <b>resourceShareArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceShareArn?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -673,14 +687,16 @@ The Amazon Resource Name (ARN) of the resource share.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResourceAssociationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/resourceAssociation.ts#L92">interface <b>ResourceAssociationArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/resourceAssociation.ts#L92">interface <b>ResourceAssociationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ResourceAssociation resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceAssociationArgs-resourceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/resourceAssociation.ts#L96">property <b>resourceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/resourceAssociation.ts#L96">property <b>resourceArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceArn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -691,7 +707,7 @@ Amazon Resource Name (ARN) of the resource to associate with the RAM Resource Sh
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceAssociationArgs-resourceShareArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/resourceAssociation.ts#L100">property <b>resourceShareArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/resourceAssociation.ts#L100">property <b>resourceShareArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceShareArn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -703,14 +719,16 @@ Amazon Resource Name (ARN) of the RAM Resource Share.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResourceAssociationState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/resourceAssociation.ts#L78">interface <b>ResourceAssociationState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/resourceAssociation.ts#L78">interface <b>ResourceAssociationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ResourceAssociation resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceAssociationState-resourceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/resourceAssociation.ts#L82">property <b>resourceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/resourceAssociation.ts#L82">property <b>resourceArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceArn?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -721,7 +739,7 @@ Amazon Resource Name (ARN) of the resource to associate with the RAM Resource Sh
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceAssociationState-resourceShareArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/resourceAssociation.ts#L86">property <b>resourceShareArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/resourceAssociation.ts#L86">property <b>resourceShareArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceShareArn?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -733,14 +751,16 @@ Amazon Resource Name (ARN) of the RAM Resource Share.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResourceShareArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/resourceShare.ts#L106">interface <b>ResourceShareArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/resourceShare.ts#L106">interface <b>ResourceShareArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ResourceShare resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceShareArgs-allowExternalPrincipals">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/resourceShare.ts#L110">property <b>allowExternalPrincipals</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/resourceShare.ts#L110">property <b>allowExternalPrincipals</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowExternalPrincipals?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -751,7 +771,7 @@ Indicates whether principals outside your organization can be associated with a 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceShareArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/resourceShare.ts#L114">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/resourceShare.ts#L114">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -762,7 +782,7 @@ The name of the resource share.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceShareArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/resourceShare.ts#L118">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/resourceShare.ts#L118">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -774,14 +794,16 @@ A mapping of tags to assign to the resource share.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResourceShareState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/resourceShare.ts#L84">interface <b>ResourceShareState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/resourceShare.ts#L84">interface <b>ResourceShareState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ResourceShare resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceShareState-allowExternalPrincipals">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/resourceShare.ts#L88">property <b>allowExternalPrincipals</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/resourceShare.ts#L88">property <b>allowExternalPrincipals</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowExternalPrincipals?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -792,7 +814,7 @@ Indicates whether principals outside your organization can be associated with a 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceShareState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/resourceShare.ts#L92">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/resourceShare.ts#L92">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -803,7 +825,7 @@ The Amazon Resource Name (ARN) of the resource share.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceShareState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/resourceShare.ts#L96">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/resourceShare.ts#L96">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -814,7 +836,7 @@ The name of the resource share.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceShareState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/ram/resourceShare.ts#L100">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/ram/resourceShare.ts#L100">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>

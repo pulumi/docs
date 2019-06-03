@@ -38,10 +38,12 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 ClusterRole is a cluster level, logical grouping of PolicyRules that can be referenced as a
 unit by a RoleBinding or ClusterRoleBinding.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ClusterRole-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/rbac/v1alpha1/ClusterRole.ts#L63"> <b>constructor</b></a>
 </h3>
@@ -203,10 +205,12 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 ClusterRoleBinding references a ClusterRole, but not contain it.  It can reference a
 ClusterRole in the global namespace, and adds who information via Subject.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ClusterRoleBinding-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/rbac/v1alpha1/ClusterRoleBinding.ts#L62"> <b>constructor</b></a>
 </h3>
@@ -367,9 +371,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 ClusterRoleBindingList is a collection of ClusterRoleBindings
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ClusterRoleBindingList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/rbac/v1alpha1/ClusterRoleBindingList.ts#L55"> <b>constructor</b></a>
 </h3>
@@ -518,9 +524,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 ClusterRoleList is a collection of ClusterRoles
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ClusterRoleList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/rbac/v1alpha1/ClusterRoleList.ts#L55"> <b>constructor</b></a>
 </h3>
@@ -669,10 +677,12 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Role is a namespaced, logical grouping of PolicyRules that can be referenced as a unit by a
 RoleBinding.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Role-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/rbac/v1alpha1/Role.ts#L56"> <b>constructor</b></a>
 </h3>
@@ -821,12 +831,14 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 RoleBinding references a role, but does not contain it.  It can reference a Role in the same
 namespace or a ClusterRole in the global namespace. It adds who information via Subjects and
 namespace information by which namespace it exists in.  RoleBindings in a given namespace
 only have effect in that namespace.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RoleBinding-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/rbac/v1alpha1/RoleBinding.ts#L64"> <b>constructor</b></a>
 </h3>
@@ -987,9 +999,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 RoleBindingList is a collection of RoleBindings
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RoleBindingList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/rbac/v1alpha1/RoleBindingList.ts#L55"> <b>constructor</b></a>
 </h3>
@@ -1138,9 +1152,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 RoleList is a collection of Roles
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RoleList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/rbac/v1alpha1/RoleList.ts#L55"> <b>constructor</b></a>
 </h3>

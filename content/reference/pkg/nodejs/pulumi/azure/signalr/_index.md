@@ -33,6 +33,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an Azure SignalR service.
 
@@ -57,6 +58,7 @@ const exampleService = new azure.signalr.Service("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Service-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/signalr/service.ts#L95"> <b>constructor</b></a>
 </h3>
@@ -287,9 +289,11 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/signalr/service.ts#L209">interface <b>ServiceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Service resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceArgs-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/signalr/service.ts#L213">property <b>location</b></a>
 </h3>
@@ -353,9 +357,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/signalr/service.ts#L151">interface <b>ServiceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Service resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ServiceState-hostname">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/signalr/service.ts#L155">property <b>hostname</b></a>
 </h3>

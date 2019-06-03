@@ -28,17 +28,18 @@ aliases:
 <li><a href="#GetBrokerResult">interface GetBrokerResult</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts">mq/broker.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/configuration.ts">mq/configuration.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/getBroker.ts">mq/getBroker.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts">mq/broker.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/configuration.ts">mq/configuration.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/getBroker.ts">mq/getBroker.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Broker">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L48">class <b>Broker</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L48">class <b>Broker</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Provides an MQ Broker Resource. This resources also manages users for the broker.
 
@@ -80,8 +81,9 @@ const example = new aws.mq.Broker("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Broker-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L137"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L137"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -98,7 +100,7 @@ Create a Broker resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Broker-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L57">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L57">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -112,7 +114,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Broker-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -122,7 +124,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Broker-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -136,7 +138,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Broker-applyImmediately">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L65">property <b>applyImmediately</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L65">property <b>applyImmediately</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>applyImmediately: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -148,7 +150,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Broker-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L69">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L69">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -159,7 +161,7 @@ The ARN of the broker.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Broker-autoMinorVersionUpgrade">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L73">property <b>autoMinorVersionUpgrade</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L73">property <b>autoMinorVersionUpgrade</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>autoMinorVersionUpgrade: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -170,7 +172,7 @@ Enables automatic upgrades to new minor versions for brokers, as Apache releases
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Broker-brokerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L77">property <b>brokerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L77">property <b>brokerName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>brokerName: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -181,7 +183,7 @@ The name of the broker.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Broker-configuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L81">property <b>configuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L81">property <b>configuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>configuration: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -195,7 +197,7 @@ Configuration of the broker. See below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Broker-deploymentMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L85">property <b>deploymentMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L85">property <b>deploymentMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>deploymentMode: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -206,7 +208,7 @@ The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STAN
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Broker-engineType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L89">property <b>engineType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L89">property <b>engineType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>engineType: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -217,7 +219,7 @@ The type of broker engine. Currently, Amazon MQ supports only `ActiveMQ`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Broker-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L93">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L93">property <b>engineVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>engineVersion: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -228,7 +230,7 @@ The version of the broker engine. Currently, See the [AmazonMQ Broker Engine doc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Broker-hostInstanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L97">property <b>hostInstanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L97">property <b>hostInstanceType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>hostInstanceType: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -239,7 +241,7 @@ The broker's instance type. e.g. `mq.t2.micro` or `mq.m4.large`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Broker-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -251,7 +253,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Broker-instances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L109">property <b>instances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L109">property <b>instances</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>instances: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -274,7 +276,7 @@ A list of information about allocated brokers (both active & standby).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Broker-logs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L113">property <b>logs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L113">property <b>logs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>logs: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -288,7 +290,7 @@ Logging configuration of the broker. See below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Broker-maintenanceWindowStartTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L117">property <b>maintenanceWindowStartTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L117">property <b>maintenanceWindowStartTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>maintenanceWindowStartTime: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -303,7 +305,7 @@ Maintenance window start time. See below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Broker-publiclyAccessible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L121">property <b>publiclyAccessible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L121">property <b>publiclyAccessible</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>publiclyAccessible: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -314,7 +316,7 @@ Whether to enable connections from applications outside of the VPC that hosts th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Broker-securityGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L125">property <b>securityGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L125">property <b>securityGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>securityGroups: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -325,7 +327,7 @@ The list of security group IDs assigned to the broker.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Broker-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L129">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L129">property <b>subnetIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>subnetIds: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -336,7 +338,7 @@ The list of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deploy
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Broker-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L133">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L133">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -347,7 +349,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Broker-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -359,7 +361,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Broker-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L137">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L137">property <b>users</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>users: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -376,10 +378,11 @@ The list of all ActiveMQ usernames for the specified broker. See below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Configuration">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/configuration.ts#L34">class <b>Configuration</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/configuration.ts#L34">class <b>Configuration</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Provides an MQ Configuration Resource.
 
@@ -407,8 +410,9 @@ const example = new aws.mq.Configuration("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Configuration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/configuration.ts#L80"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/configuration.ts#L80"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -425,7 +429,7 @@ Create a Configuration resource with the given unique name, arguments, and optio
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Configuration-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/configuration.ts#L43">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/configuration.ts#L43">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -439,7 +443,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Configuration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -449,7 +453,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Configuration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -463,7 +467,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Configuration-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/configuration.ts#L50">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/configuration.ts#L50">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -474,7 +478,7 @@ The ARN of the configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Configuration-data">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/configuration.ts#L56">property <b>data</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/configuration.ts#L56">property <b>data</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>data: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -487,7 +491,7 @@ for supported parameters and format of the XML.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Configuration-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/configuration.ts#L60">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/configuration.ts#L60">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -498,7 +502,7 @@ The description of the configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Configuration-engineType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/configuration.ts#L64">property <b>engineType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/configuration.ts#L64">property <b>engineType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>engineType: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -509,7 +513,7 @@ The type of broker engine.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Configuration-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/configuration.ts#L68">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/configuration.ts#L68">property <b>engineVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>engineVersion: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -520,7 +524,7 @@ The version of the broker engine.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Configuration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -532,7 +536,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Configuration-latestRevision">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/configuration.ts#L72">property <b>latestRevision</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/configuration.ts#L72">property <b>latestRevision</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>latestRevision: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -543,7 +547,7 @@ The latest revision of the configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Configuration-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/configuration.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/configuration.ts#L76">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -554,7 +558,7 @@ The name of the configuration
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Configuration-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/configuration.ts#L80">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/configuration.ts#L80">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -565,7 +569,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Configuration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -578,7 +582,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getBroker">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/getBroker.ts#L28">function <b>getBroker</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/getBroker.ts#L28">function <b>getBroker</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -609,14 +613,16 @@ const byName = pulumi.output(aws.mq.getBroker({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="BrokerArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L296">interface <b>BrokerArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L296">interface <b>BrokerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Broker resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="BrokerArgs-applyImmediately">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L301">property <b>applyImmediately</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L301">property <b>applyImmediately</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>applyImmediately?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -628,7 +634,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BrokerArgs-autoMinorVersionUpgrade">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L305">property <b>autoMinorVersionUpgrade</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L305">property <b>autoMinorVersionUpgrade</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>autoMinorVersionUpgrade?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -639,7 +645,7 @@ Enables automatic upgrades to new minor versions for brokers, as Apache releases
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BrokerArgs-brokerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L309">property <b>brokerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L309">property <b>brokerName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>brokerName: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -650,7 +656,7 @@ The name of the broker.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BrokerArgs-configuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L313">property <b>configuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L313">property <b>configuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>configuration?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -664,7 +670,7 @@ Configuration of the broker. See below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BrokerArgs-deploymentMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L317">property <b>deploymentMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L317">property <b>deploymentMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>deploymentMode?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -675,7 +681,7 @@ The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STAN
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BrokerArgs-engineType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L321">property <b>engineType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L321">property <b>engineType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>engineType: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -686,7 +692,7 @@ The type of broker engine. Currently, Amazon MQ supports only `ActiveMQ`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BrokerArgs-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L325">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L325">property <b>engineVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>engineVersion: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -697,7 +703,7 @@ The version of the broker engine. Currently, See the [AmazonMQ Broker Engine doc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BrokerArgs-hostInstanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L329">property <b>hostInstanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L329">property <b>hostInstanceType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostInstanceType: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -708,7 +714,7 @@ The broker's instance type. e.g. `mq.t2.micro` or `mq.m4.large`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BrokerArgs-logs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L333">property <b>logs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L333">property <b>logs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>logs?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -722,7 +728,7 @@ Logging configuration of the broker. See below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BrokerArgs-maintenanceWindowStartTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L337">property <b>maintenanceWindowStartTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L337">property <b>maintenanceWindowStartTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maintenanceWindowStartTime?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -737,7 +743,7 @@ Maintenance window start time. See below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BrokerArgs-publiclyAccessible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L341">property <b>publiclyAccessible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L341">property <b>publiclyAccessible</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>publiclyAccessible?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -748,7 +754,7 @@ Whether to enable connections from applications outside of the VPC that hosts th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BrokerArgs-securityGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L345">property <b>securityGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L345">property <b>securityGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>securityGroups: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -759,7 +765,7 @@ The list of security group IDs assigned to the broker.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BrokerArgs-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L349">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L349">property <b>subnetIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>subnetIds?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -770,7 +776,7 @@ The list of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deploy
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BrokerArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L353">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L353">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -781,7 +787,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BrokerArgs-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L357">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L357">property <b>users</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>users: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -798,14 +804,16 @@ The list of all ActiveMQ usernames for the specified broker. See below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BrokerState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L213">interface <b>BrokerState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L213">interface <b>BrokerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Broker resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="BrokerState-applyImmediately">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L218">property <b>applyImmediately</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L218">property <b>applyImmediately</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>applyImmediately?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -817,7 +825,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BrokerState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L222">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L222">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -828,7 +836,7 @@ The ARN of the broker.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BrokerState-autoMinorVersionUpgrade">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L226">property <b>autoMinorVersionUpgrade</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L226">property <b>autoMinorVersionUpgrade</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>autoMinorVersionUpgrade?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -839,7 +847,7 @@ Enables automatic upgrades to new minor versions for brokers, as Apache releases
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BrokerState-brokerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L230">property <b>brokerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L230">property <b>brokerName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>brokerName?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -850,7 +858,7 @@ The name of the broker.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BrokerState-configuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L234">property <b>configuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L234">property <b>configuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>configuration?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -864,7 +872,7 @@ Configuration of the broker. See below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BrokerState-deploymentMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L238">property <b>deploymentMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L238">property <b>deploymentMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>deploymentMode?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -875,7 +883,7 @@ The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STAN
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BrokerState-engineType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L242">property <b>engineType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L242">property <b>engineType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>engineType?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -886,7 +894,7 @@ The type of broker engine. Currently, Amazon MQ supports only `ActiveMQ`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BrokerState-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L246">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L246">property <b>engineVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>engineVersion?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -897,7 +905,7 @@ The version of the broker engine. Currently, See the [AmazonMQ Broker Engine doc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BrokerState-hostInstanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L250">property <b>hostInstanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L250">property <b>hostInstanceType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostInstanceType?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -908,7 +916,7 @@ The broker's instance type. e.g. `mq.t2.micro` or `mq.m4.large`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BrokerState-instances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L262">property <b>instances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L262">property <b>instances</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>instances?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -931,7 +939,7 @@ A list of information about allocated brokers (both active & standby).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BrokerState-logs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L266">property <b>logs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L266">property <b>logs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>logs?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -945,7 +953,7 @@ Logging configuration of the broker. See below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BrokerState-maintenanceWindowStartTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L270">property <b>maintenanceWindowStartTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L270">property <b>maintenanceWindowStartTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maintenanceWindowStartTime?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -960,7 +968,7 @@ Maintenance window start time. See below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BrokerState-publiclyAccessible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L274">property <b>publiclyAccessible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L274">property <b>publiclyAccessible</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>publiclyAccessible?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -971,7 +979,7 @@ Whether to enable connections from applications outside of the VPC that hosts th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BrokerState-securityGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L278">property <b>securityGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L278">property <b>securityGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>securityGroups?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -982,7 +990,7 @@ The list of security group IDs assigned to the broker.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BrokerState-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L282">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L282">property <b>subnetIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>subnetIds?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -993,7 +1001,7 @@ The list of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deploy
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BrokerState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L286">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L286">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1004,7 +1012,7 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BrokerState-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/broker.ts#L290">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/broker.ts#L290">property <b>users</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>users?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1021,14 +1029,16 @@ The list of all ActiveMQ usernames for the specified broker. See below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConfigurationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/configuration.ts#L169">interface <b>ConfigurationArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/configuration.ts#L169">interface <b>ConfigurationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Configuration resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ConfigurationArgs-data">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/configuration.ts#L175">property <b>data</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/configuration.ts#L175">property <b>data</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>data: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1041,7 +1051,7 @@ for supported parameters and format of the XML.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/configuration.ts#L179">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/configuration.ts#L179">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1052,7 +1062,7 @@ The description of the configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationArgs-engineType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/configuration.ts#L183">property <b>engineType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/configuration.ts#L183">property <b>engineType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>engineType: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1063,7 +1073,7 @@ The type of broker engine.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationArgs-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/configuration.ts#L187">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/configuration.ts#L187">property <b>engineVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>engineVersion: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1074,7 +1084,7 @@ The version of the broker engine.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/configuration.ts#L191">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/configuration.ts#L191">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1085,7 +1095,7 @@ The name of the configuration
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/configuration.ts#L195">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/configuration.ts#L195">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1097,14 +1107,16 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConfigurationState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/configuration.ts#L129">interface <b>ConfigurationState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/configuration.ts#L129">interface <b>ConfigurationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Configuration resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ConfigurationState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/configuration.ts#L133">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/configuration.ts#L133">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1115,7 +1127,7 @@ The ARN of the configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationState-data">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/configuration.ts#L139">property <b>data</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/configuration.ts#L139">property <b>data</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>data?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1128,7 +1140,7 @@ for supported parameters and format of the XML.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/configuration.ts#L143">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/configuration.ts#L143">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1139,7 +1151,7 @@ The description of the configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationState-engineType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/configuration.ts#L147">property <b>engineType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/configuration.ts#L147">property <b>engineType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>engineType?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1150,7 +1162,7 @@ The type of broker engine.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationState-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/configuration.ts#L151">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/configuration.ts#L151">property <b>engineVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>engineVersion?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1161,7 +1173,7 @@ The version of the broker engine.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationState-latestRevision">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/configuration.ts#L155">property <b>latestRevision</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/configuration.ts#L155">property <b>latestRevision</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>latestRevision?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1172,7 +1184,7 @@ The latest revision of the configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/configuration.ts#L159">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/configuration.ts#L159">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1183,7 +1195,7 @@ The name of the configuration
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/configuration.ts#L163">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/configuration.ts#L163">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -1195,14 +1207,16 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetBrokerArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/getBroker.ts#L41">interface <b>GetBrokerArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/getBroker.ts#L41">interface <b>GetBrokerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getBroker.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetBrokerArgs-brokerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/getBroker.ts#L45">property <b>brokerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/getBroker.ts#L45">property <b>brokerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>brokerId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1213,7 +1227,7 @@ The unique id of the mq broker.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBrokerArgs-brokerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/getBroker.ts#L49">property <b>brokerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/getBroker.ts#L49">property <b>brokerName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>brokerName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1224,7 +1238,7 @@ The unique name of the mq broker.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBrokerArgs-logs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/getBroker.ts#L50">property <b>logs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/getBroker.ts#L50">property <b>logs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>logs?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -1235,7 +1249,7 @@ The unique name of the mq broker.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBrokerArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/getBroker.ts#L51">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/getBroker.ts#L51">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -1244,14 +1258,16 @@ The unique name of the mq broker.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetBrokerResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/getBroker.ts#L57">interface <b>GetBrokerResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/getBroker.ts#L57">interface <b>GetBrokerResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getBroker.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetBrokerResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/getBroker.ts#L58">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/getBroker.ts#L58">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1259,7 +1275,7 @@ A collection of values returned by getBroker.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBrokerResult-autoMinorVersionUpgrade">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/getBroker.ts#L59">property <b>autoMinorVersionUpgrade</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/getBroker.ts#L59">property <b>autoMinorVersionUpgrade</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>autoMinorVersionUpgrade: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -1267,7 +1283,7 @@ A collection of values returned by getBroker.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBrokerResult-brokerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/getBroker.ts#L60">property <b>brokerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/getBroker.ts#L60">property <b>brokerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>brokerId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1275,7 +1291,7 @@ A collection of values returned by getBroker.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBrokerResult-brokerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/getBroker.ts#L61">property <b>brokerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/getBroker.ts#L61">property <b>brokerName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>brokerName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1283,7 +1299,7 @@ A collection of values returned by getBroker.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBrokerResult-configuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/getBroker.ts#L62">property <b>configuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/getBroker.ts#L62">property <b>configuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>configuration: {
@@ -1294,7 +1310,7 @@ A collection of values returned by getBroker.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBrokerResult-deploymentMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/getBroker.ts#L63">property <b>deploymentMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/getBroker.ts#L63">property <b>deploymentMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>deploymentMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1302,7 +1318,7 @@ A collection of values returned by getBroker.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBrokerResult-engineType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/getBroker.ts#L64">property <b>engineType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/getBroker.ts#L64">property <b>engineType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>engineType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1310,7 +1326,7 @@ A collection of values returned by getBroker.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBrokerResult-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/getBroker.ts#L65">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/getBroker.ts#L65">property <b>engineVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>engineVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1318,7 +1334,7 @@ A collection of values returned by getBroker.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBrokerResult-hostInstanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/getBroker.ts#L66">property <b>hostInstanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/getBroker.ts#L66">property <b>hostInstanceType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hostInstanceType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1326,7 +1342,7 @@ A collection of values returned by getBroker.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBrokerResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/getBroker.ts#L78">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/getBroker.ts#L78">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1337,7 +1353,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBrokerResult-instances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/getBroker.ts#L67">property <b>instances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/getBroker.ts#L67">property <b>instances</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>instances: {
@@ -1349,7 +1365,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBrokerResult-logs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/getBroker.ts#L68">property <b>logs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/getBroker.ts#L68">property <b>logs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>logs?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -1360,7 +1376,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBrokerResult-maintenanceWindowStartTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/getBroker.ts#L69">property <b>maintenanceWindowStartTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/getBroker.ts#L69">property <b>maintenanceWindowStartTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maintenanceWindowStartTime: {
@@ -1372,7 +1388,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBrokerResult-publiclyAccessible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/getBroker.ts#L70">property <b>publiclyAccessible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/getBroker.ts#L70">property <b>publiclyAccessible</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>publiclyAccessible: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -1380,7 +1396,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBrokerResult-securityGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/getBroker.ts#L71">property <b>securityGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/getBroker.ts#L71">property <b>securityGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>securityGroups: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -1388,7 +1404,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBrokerResult-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/getBroker.ts#L72">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/getBroker.ts#L72">property <b>subnetIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>subnetIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -1396,7 +1412,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBrokerResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/getBroker.ts#L73">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/getBroker.ts#L73">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
@@ -1404,7 +1420,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBrokerResult-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/c8d00d99880b7be8b4e79c50d210e91a4e9a942b/sdk/nodejs/mq/getBroker.ts#L74">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e30ab57387a41f572a139d5719b5d7182344f8e0/sdk/nodejs/mq/getBroker.ts#L74">property <b>users</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>users: {

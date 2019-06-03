@@ -79,9 +79,11 @@ import * as kubernetes from "@pulumi/kubernetes";
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> ProviderResource</pre>
+{{% md %}}
 
 The provider type for the kubernetes package.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Provider-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/provider.ts#L6"> <b>constructor</b></a>
 </h3>
@@ -152,9 +154,11 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/provider.ts#L28">interface <b>ProviderArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Provider.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ProviderArgs-cluster">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/provider.ts#L32">property <b>cluster</b></a>
 </h3>

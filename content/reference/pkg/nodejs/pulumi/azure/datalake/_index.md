@@ -48,6 +48,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage an Azure Data Lake Analytics Account.
 
@@ -74,6 +75,7 @@ const exampleAnalyticsAccount = new azure.datalake.AnalyticsAccount("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AnalyticsAccount-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datalake/analyticsAccount.ts#L69"> <b>constructor</b></a>
 </h3>
@@ -225,6 +227,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage a Azure Data Lake Analytics Firewall Rule.
 
@@ -258,6 +261,7 @@ const exampleAnalyticsFirewallRule = new azure.datalake.AnalyticsFirewallRule("e
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AnalyticsFirewallRule-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datalake/analyticsFirewallRule.ts#L72"> <b>constructor</b></a>
 </h3>
@@ -398,6 +402,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage an Azure Data Lake Store.
 
@@ -420,6 +425,7 @@ const exampleStore = new azure.datalake.Store("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Store-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datalake/store.ts#L81"> <b>constructor</b></a>
 </h3>
@@ -615,6 +621,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage a Azure Data Lake Store File.
 
@@ -643,6 +650,7 @@ const exampleStoreFile = new azure.datalake.StoreFile("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StoreFile-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datalake/storeFile.ts#L59"> <b>constructor</b></a>
 </h3>
@@ -761,6 +769,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage a Azure Data Lake Store Firewall Rule.
 
@@ -788,6 +797,7 @@ const exampleStoreFirewallRule = new azure.datalake.StoreFirewallRule("example",
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StoreFirewallRule-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datalake/storeFirewallRule.ts#L66"> <b>constructor</b></a>
 </h3>
@@ -954,9 +964,11 @@ export const dataLakeStoreId = test.id;
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datalake/analyticsAccount.ts#L141">interface <b>AnalyticsAccountArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a AnalyticsAccount resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AnalyticsAccountArgs-defaultStoreAccountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datalake/analyticsAccount.ts#L145">property <b>defaultStoreAccountName</b></a>
 </h3>
@@ -1028,9 +1040,11 @@ The monthly commitment tier for Data Lake Analytics Account. Accepted values are
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datalake/analyticsAccount.ts#L111">interface <b>AnalyticsAccountState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering AnalyticsAccount resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AnalyticsAccountState-defaultStoreAccountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datalake/analyticsAccount.ts#L115">property <b>defaultStoreAccountName</b></a>
 </h3>
@@ -1102,9 +1116,11 @@ The monthly commitment tier for Data Lake Analytics Account. Accepted values are
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datalake/analyticsFirewallRule.ts#L144">interface <b>AnalyticsFirewallRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a AnalyticsFirewallRule resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AnalyticsFirewallRuleArgs-accountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datalake/analyticsFirewallRule.ts#L148">property <b>accountName</b></a>
 </h3>
@@ -1165,9 +1181,11 @@ The Start IP address for the firewall rule.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datalake/analyticsFirewallRule.ts#L118">interface <b>AnalyticsFirewallRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering AnalyticsFirewallRule resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AnalyticsFirewallRuleState-accountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datalake/analyticsFirewallRule.ts#L122">property <b>accountName</b></a>
 </h3>
@@ -1228,9 +1246,11 @@ The Start IP address for the firewall rule.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datalake/getStore.ts#L34">interface <b>GetStoreArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getStore.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetStoreArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datalake/getStore.ts#L38">property <b>name</b></a>
 </h3>
@@ -1258,9 +1278,11 @@ The Name of the Resource Group where the Data Lake Store exists.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datalake/getStore.ts#L48">interface <b>GetStoreResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getStore.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetStoreResult-encryptionState">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datalake/getStore.ts#L52">property <b>encryptionState</b></a>
 </h3>
@@ -1367,9 +1389,11 @@ Current monthly commitment tier for the account.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datalake/store.ts#L174">interface <b>StoreArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Store resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StoreArgs-encryptionState">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datalake/store.ts#L178">property <b>encryptionState</b></a>
 </h3>
@@ -1474,9 +1498,11 @@ The monthly commitment tier for Data Lake Store. Accepted values are `Consumptio
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datalake/storeFile.ts#L116">interface <b>StoreFileArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a StoreFile resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StoreFileArgs-accountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datalake/storeFile.ts#L120">property <b>accountName</b></a>
 </h3>
@@ -1515,9 +1541,11 @@ The path created for the file on the Data Lake Store.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datalake/storeFile.ts#L98">interface <b>StoreFileState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering StoreFile resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StoreFileState-accountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datalake/storeFile.ts#L102">property <b>accountName</b></a>
 </h3>
@@ -1556,9 +1584,11 @@ The path created for the file on the Data Lake Store.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datalake/storeFirewallRule.ts#L138">interface <b>StoreFirewallRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a StoreFirewallRule resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StoreFirewallRuleArgs-accountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datalake/storeFirewallRule.ts#L142">property <b>accountName</b></a>
 </h3>
@@ -1619,9 +1649,11 @@ The Start IP address for the firewall rule.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datalake/storeFirewallRule.ts#L112">interface <b>StoreFirewallRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering StoreFirewallRule resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StoreFirewallRuleState-accountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datalake/storeFirewallRule.ts#L116">property <b>accountName</b></a>
 </h3>
@@ -1682,9 +1714,11 @@ The Start IP address for the firewall rule.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datalake/store.ts#L128">interface <b>StoreState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Store resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StoreState-encryptionState">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/datalake/store.ts#L132">property <b>encryptionState</b></a>
 </h3>

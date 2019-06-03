@@ -42,6 +42,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Assigns a given Principal (User or Application) to a given Role.
 
@@ -112,6 +113,7 @@ const testAssignment = new azure.role.Assignment("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Assignment-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/role/assignment.ts#L109"> <b>constructor</b></a>
 </h3>
@@ -252,6 +254,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a custom Role Definition, used to assign Roles to Users/Principals. See ['Understand role definitions'](https://docs.microsoft.com/en-us/azure/role-based-access-control/role-definitions) in the Azure documentation for more details.
 
@@ -274,6 +277,7 @@ const test = new azure.role.Definition("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Definition-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/role/definition.ts#L65"> <b>constructor</b></a>
 </h3>
@@ -498,9 +502,11 @@ export const customRoleDefinitionId = customRoleDefinition.id;
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/role/assignment.ts#L175">interface <b>AssignmentArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Assignment resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AssignmentArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/role/assignment.ts#L179">property <b>name</b></a>
 </h3>
@@ -561,9 +567,11 @@ The scope at which the Role Assignment applies too, such as `/subscriptions/0b1f
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/role/assignment.ts#L149">interface <b>AssignmentState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Assignment resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AssignmentState-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/role/assignment.ts#L153">property <b>name</b></a>
 </h3>
@@ -624,9 +632,11 @@ The scope at which the Role Assignment applies too, such as `/subscriptions/0b1f
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/role/definition.ts#L140">interface <b>DefinitionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Definition resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DefinitionArgs-assignableScopes">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/role/definition.ts#L144">property <b>assignableScopes</b></a>
 </h3>
@@ -703,9 +713,11 @@ The scope at which the Role Definition applies too, such as `/subscriptions/0b1f
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/role/definition.ts#L110">interface <b>DefinitionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Definition resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DefinitionState-assignableScopes">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/role/definition.ts#L114">property <b>assignableScopes</b></a>
 </h3>
@@ -782,9 +794,11 @@ The scope at which the Role Definition applies too, such as `/subscriptions/0b1f
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/role/getBuiltinRoleDefinition.ts#L34">interface <b>GetBuiltinRoleDefinitionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getBuiltinRoleDefinition.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetBuiltinRoleDefinitionArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/role/getBuiltinRoleDefinition.ts#L38">property <b>name</b></a>
 </h3>
@@ -801,9 +815,11 @@ Specifies the name of the built-in Role Definition. Possible values are: `Contri
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/role/getBuiltinRoleDefinition.ts#L44">interface <b>GetBuiltinRoleDefinitionResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getBuiltinRoleDefinition.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetBuiltinRoleDefinitionResult-assignableScopes">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/role/getBuiltinRoleDefinition.ts#L48">property <b>assignableScopes</b></a>
 </h3>
@@ -877,9 +893,11 @@ the Type of the Role.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/role/getRoleDefinition.ts#L50">interface <b>GetRoleDefinitionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getRoleDefinition.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetRoleDefinitionArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/role/getRoleDefinition.ts#L54">property <b>name</b></a>
 </h3>
@@ -918,9 +936,11 @@ Specifies the Scope at which the Custom Role Definition exists.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/role/getRoleDefinition.ts#L68">interface <b>GetRoleDefinitionResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getRoleDefinition.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetRoleDefinitionResult-assignableScopes">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/role/getRoleDefinition.ts#L72">property <b>assignableScopes</b></a>
 </h3>

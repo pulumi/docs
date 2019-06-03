@@ -40,6 +40,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 DEPRECATED - This group version of ControllerRevision is deprecated by
 apps/v1/ControllerRevision. See the release notes for more information. ControllerRevision
@@ -52,6 +53,7 @@ rollback, this object is beta. However, it may be subject to name and representa
 in future releases, and clients should not depend on its stability. It is primarily for
 internal use by controllers.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ControllerRevision-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/apps/v1beta2/ControllerRevision.ts#L70"> <b>constructor</b></a>
 </h3>
@@ -212,9 +214,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 ControllerRevisionList is a resource containing a list of ControllerRevision objects.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ControllerRevisionList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/apps/v1beta2/ControllerRevisionList.ts#L56"> <b>constructor</b></a>
 </h3>
@@ -364,10 +368,12 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 DEPRECATED - This group version of DaemonSet is deprecated by apps/v1/DaemonSet. See the
 release notes for more information. DaemonSet represents the configuration of a daemon set.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DaemonSet-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/apps/v1beta2/DaemonSet.ts#L65"> <b>constructor</b></a>
 </h3>
@@ -531,9 +537,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 DaemonSetList is a collection of daemon sets.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DaemonSetList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/apps/v1beta2/DaemonSetList.ts#L56"> <b>constructor</b></a>
 </h3>
@@ -683,11 +691,13 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 DEPRECATED - This group version of Deployment is deprecated by apps/v1/Deployment. See the
 release notes for more information. Deployment enables declarative updates for Pods and
 ReplicaSets.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Deployment-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/apps/v1beta2/Deployment.ts#L62"> <b>constructor</b></a>
 </h3>
@@ -847,9 +857,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 DeploymentList is a list of Deployments.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DeploymentList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/apps/v1beta2/DeploymentList.ts#L55"> <b>constructor</b></a>
 </h3>
@@ -998,11 +1010,13 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 DEPRECATED - This group version of ReplicaSet is deprecated by apps/v1/ReplicaSet. See the
 release notes for more information. ReplicaSet ensures that a specified number of pod
 replicas are running at any given time.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ReplicaSet-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/apps/v1beta2/ReplicaSet.ts#L67"> <b>constructor</b></a>
 </h3>
@@ -1167,9 +1181,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 ReplicaSetList is a collection of ReplicaSets.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ReplicaSetList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/apps/v1beta2/ReplicaSetList.ts#L57"> <b>constructor</b></a>
 </h3>
@@ -1320,6 +1336,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 DEPRECATED - This group version of StatefulSet is deprecated by apps/v1/StatefulSet. See the
 release notes for more information. StatefulSet represents a set of pods with consistent
@@ -1329,6 +1346,7 @@ identities. Identities are defined as:
 The StatefulSet guarantees that a given network identity will always map to the same storage
 identity.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StatefulSet-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/apps/v1beta2/StatefulSet.ts#L65"> <b>constructor</b></a>
 </h3>
@@ -1486,9 +1504,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 StatefulSetList is a collection of StatefulSets.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StatefulSetList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/apps/v1beta2/StatefulSetList.ts#L51"> <b>constructor</b></a>
 </h3>

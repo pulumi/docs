@@ -39,6 +39,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Traffic Manager Endpoint.
 
@@ -86,6 +87,7 @@ const testEndpoint = new azure.trafficmanager.Endpoint("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Endpoint-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/trafficmanager/endpoint.ts#L139"> <b>constructor</b></a>
 </h3>
@@ -335,6 +337,7 @@ routing method. Supports values between 1 and 1000.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Traffic Manager Profile to which multiple endpoints can be attached.
 
@@ -379,6 +382,7 @@ const testProfile = new azure.trafficmanager.Profile("test", {
 
 The Traffic Manager is created with the location `global`.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Profile-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/trafficmanager/profile.ts#L106"> <b>constructor</b></a>
 </h3>
@@ -595,9 +599,11 @@ export const locationCode = test.id;
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/trafficmanager/endpoint.ts#L277">interface <b>EndpointArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Endpoint resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="EndpointArgs-endpointLocation">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/trafficmanager/endpoint.ts#L285">property <b>endpointLocation</b></a>
 </h3>
@@ -759,9 +765,11 @@ routing method. Supports values between 1 and 1000.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/trafficmanager/endpoint.ts#L198">interface <b>EndpointState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Endpoint resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="EndpointState-endpointLocation">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/trafficmanager/endpoint.ts#L206">property <b>endpointLocation</b></a>
 </h3>
@@ -931,9 +939,11 @@ routing method. Supports values between 1 and 1000.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/trafficmanager/getGeographicalLocation.ts#L32">interface <b>GetGeographicalLocationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getGeographicalLocation.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetGeographicalLocationArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/trafficmanager/getGeographicalLocation.ts#L36">property <b>name</b></a>
 </h3>
@@ -950,9 +960,11 @@ Specifies the name of the Location, for example `World`, `Europe` or `Germany`.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/trafficmanager/getGeographicalLocation.ts#L42">interface <b>GetGeographicalLocationResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getGeographicalLocation.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetGeographicalLocationResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/trafficmanager/getGeographicalLocation.ts#L47">property <b>id</b></a>
 </h3>
@@ -977,9 +989,11 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/trafficmanager/profile.ts#L207">interface <b>ProfileArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Profile resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ProfileArgs-dnsConfigs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/trafficmanager/profile.ts#L212">property <b>dnsConfigs</b></a>
 </h3>
@@ -1080,9 +1094,11 @@ Specifies the algorithm used to route traffic, possible values are:
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/trafficmanager/profile.ts#L158">interface <b>ProfileState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Profile resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ProfileState-dnsConfigs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/trafficmanager/profile.ts#L163">property <b>dnsConfigs</b></a>
 </h3>

@@ -51,6 +51,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Custom Action within a Logic App Workflow
 
@@ -90,6 +91,7 @@ const testActionCustom = new azure.logicapps.ActionCustom("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ActionCustom-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/actionCustom.ts#L70"> <b>constructor</b></a>
 </h3>
@@ -208,6 +210,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an HTTP Action within a Logic App Workflow
 
@@ -234,6 +237,7 @@ const testActionHttp = new azure.logicapps.ActionHttp("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ActionHttp-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/actionHttp.ts#L69"> <b>constructor</b></a>
 </h3>
@@ -385,6 +389,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Custom Trigger within a Logic App Workflow
 
@@ -417,6 +422,7 @@ const testTriggerCustom = new azure.logicapps.TriggerCustom("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="TriggerCustom-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/triggerCustom.ts#L63"> <b>constructor</b></a>
 </h3>
@@ -535,6 +541,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a HTTP Request Trigger within a Logic App Workflow
 
@@ -568,6 +575,7 @@ const testTriggerHttpRequest = new azure.logicapps.TriggerHttpRequest("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="TriggerHttpRequest-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/triggerHttpRequest.ts#L72"> <b>constructor</b></a>
 </h3>
@@ -708,6 +716,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Recurrence Trigger within a Logic App Workflow
 
@@ -734,6 +743,7 @@ const testTriggerRecurrence = new azure.logicapps.TriggerRecurrence("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="TriggerRecurrence-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/triggerRecurrence.ts#L61"> <b>constructor</b></a>
 </h3>
@@ -863,6 +873,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Logic App Workflow.
 
@@ -883,6 +894,7 @@ const testWorkflow = new azure.logicapps.Workflow("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Workflow-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/workflow.ts#L71"> <b>constructor</b></a>
 </h3>
@@ -1082,9 +1094,11 @@ export const accessEndpoint = test.accessEndpoint;
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/actionCustom.ts#L124">interface <b>ActionCustomArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ActionCustom resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ActionCustomArgs-body">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/actionCustom.ts#L128">property <b>body</b></a>
 </h3>
@@ -1123,9 +1137,11 @@ Specifies the name of the HTTP Action to be created within the Logic App Workflo
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/actionCustom.ts#L106">interface <b>ActionCustomState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ActionCustom resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ActionCustomState-body">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/actionCustom.ts#L110">property <b>body</b></a>
 </h3>
@@ -1164,9 +1180,11 @@ Specifies the name of the HTTP Action to be created within the Logic App Workflo
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/actionHttp.ts#L144">interface <b>ActionHttpArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ActionHttp resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ActionHttpArgs-body">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/actionHttp.ts#L148">property <b>body</b></a>
 </h3>
@@ -1238,9 +1256,11 @@ Specifies the URI which will be called when this HTTP Action is triggered.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/actionHttp.ts#L114">interface <b>ActionHttpState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ActionHttp resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ActionHttpState-body">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/actionHttp.ts#L118">property <b>body</b></a>
 </h3>
@@ -1312,9 +1332,11 @@ Specifies the URI which will be called when this HTTP Action is triggered.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/getWorkflow.ts#L34">interface <b>GetWorkflowArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getWorkflow.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetWorkflowArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/getWorkflow.ts#L38">property <b>name</b></a>
 </h3>
@@ -1342,9 +1364,11 @@ The name of the Resource Group in which the Logic App Workflow exists.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/getWorkflow.ts#L48">interface <b>GetWorkflowResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getWorkflow.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetWorkflowResult-accessEndpoint">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/getWorkflow.ts#L52">property <b>accessEndpoint</b></a>
 </h3>
@@ -1443,9 +1467,11 @@ The version of the Schema used for this Logic App Workflow. Defaults to `1.0.0.0
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/triggerCustom.ts#L117">interface <b>TriggerCustomArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a TriggerCustom resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="TriggerCustomArgs-body">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/triggerCustom.ts#L121">property <b>body</b></a>
 </h3>
@@ -1484,9 +1510,11 @@ Specifies the name of the HTTP Trigger to be created within the Logic App Workfl
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/triggerCustom.ts#L99">interface <b>TriggerCustomState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering TriggerCustom resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="TriggerCustomState-body">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/triggerCustom.ts#L103">property <b>body</b></a>
 </h3>
@@ -1525,9 +1553,11 @@ Specifies the name of the HTTP Trigger to be created within the Logic App Workfl
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/triggerHttpRequest.ts#L138">interface <b>TriggerHttpRequestArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a TriggerHttpRequest resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="TriggerHttpRequestArgs-logicAppId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/triggerHttpRequest.ts#L142">property <b>logicAppId</b></a>
 </h3>
@@ -1588,9 +1618,11 @@ A JSON Blob defining the Schema of the incoming request. This needs to be valid 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/triggerHttpRequest.ts#L112">interface <b>TriggerHttpRequestState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering TriggerHttpRequest resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="TriggerHttpRequestState-logicAppId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/triggerHttpRequest.ts#L116">property <b>logicAppId</b></a>
 </h3>
@@ -1651,9 +1683,11 @@ A JSON Blob defining the Schema of the incoming request. This needs to be valid 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/triggerRecurrence.ts#L124">interface <b>TriggerRecurrenceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a TriggerRecurrence resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="TriggerRecurrenceArgs-frequency">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/triggerRecurrence.ts#L128">property <b>frequency</b></a>
 </h3>
@@ -1703,9 +1737,11 @@ Specifies the name of the Recurrence Triggers to be created within the Logic App
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/triggerRecurrence.ts#L102">interface <b>TriggerRecurrenceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering TriggerRecurrence resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="TriggerRecurrenceState-frequency">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/triggerRecurrence.ts#L106">property <b>frequency</b></a>
 </h3>
@@ -1755,9 +1791,11 @@ Specifies the name of the Recurrence Triggers to be created within the Logic App
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/workflow.ts#L152">interface <b>WorkflowArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Workflow resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="WorkflowArgs-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/workflow.ts#L156">property <b>location</b></a>
 </h3>
@@ -1840,9 +1878,11 @@ Specifies the version of the Schema used for this Logic App Workflow. Defaults t
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/workflow.ts#L114">interface <b>WorkflowState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Workflow resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="WorkflowState-accessEndpoint">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/logicapps/workflow.ts#L118">property <b>accessEndpoint</b></a>
 </h3>

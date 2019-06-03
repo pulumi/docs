@@ -34,11 +34,13 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 LocalSubjectAccessReview checks whether or not a user or group can perform an action in a
 given namespace. Having a namespace scoped resource makes it much easier to grant namespace
 scoped policy that includes permissions checking.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LocalSubjectAccessReview-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/LocalSubjectAccessReview.ts#L61"> <b>constructor</b></a>
 </h3>
@@ -196,11 +198,13 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 SelfSubjectAccessReview checks whether or the current user can perform an action.  Not
 filling in a spec.namespace means "in all namespaces".  Self is a special case, because users
 should always be able to check whether they can perform an action
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SelfSubjectAccessReview-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/SelfSubjectAccessReview.ts#L60"> <b>constructor</b></a>
 </h3>
@@ -357,6 +361,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 SelfSubjectRulesReview enumerates the set of actions the current user can perform within a
 namespace. The returned list of actions may be incomplete depending on the server's
@@ -367,6 +372,7 @@ this raises confused deputy, cache lifetime/revocation, and correctness concerns
 SubjectAccessReview, and LocalAccessReview are the correct way to defer authorization
 decisions to the API server.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SelfSubjectRulesReview-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/SelfSubjectRulesReview.ts#L65"> <b>constructor</b></a>
 </h3>
@@ -523,9 +529,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 SubjectAccessReview checks whether or not a user or group can perform an action.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SubjectAccessReview-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/SubjectAccessReview.ts#L58"> <b>constructor</b></a>
 </h3>

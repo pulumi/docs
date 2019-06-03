@@ -31,11 +31,11 @@ import * as f5bigip from "@pulumi/f5bigip";
 <li><a href="#getEnv">function getEnv</a></li>
 <li><a href="#getEnvBoolean">function getEnvBoolean</a></li>
 <li><a href="#getEnvNumber">function getEnvNumber</a></li>
-<li><a href="#requireWithDefault">function requireWithDefault</a></li>
+<li><a href="#getVersion">function getVersion</a></li>
 <li><a href="#ProviderArgs">interface ProviderArgs</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-f5bigip/blob/d8583a94dd650bb4fdd3e65ef66ff9c395d5989a/sdk/nodejs/provider.ts">provider.ts</a> <a href="https://github.com/pulumi/pulumi-f5bigip/blob/d8583a94dd650bb4fdd3e65ef66ff9c395d5989a/sdk/nodejs/utilities.ts">utilities.ts</a> 
+<a href="https://github.com/pulumi/pulumi-f5bigip/blob/d6be4bea908878d717b038a38a854062c92c7bc0/sdk/nodejs/provider.ts">provider.ts</a> <a href="https://github.com/pulumi/pulumi-f5bigip/blob/d6be4bea908878d717b038a38a854062c92c7bc0/sdk/nodejs/utilities.ts">utilities.ts</a> 
 </div>
 </div>
 </div>
@@ -59,18 +59,20 @@ import * as f5bigip from "@pulumi/f5bigip";
 </div>
 
 <h2 class="pdoc-module-header" id="Provider">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/d8583a94dd650bb4fdd3e65ef66ff9c395d5989a/sdk/nodejs/provider.ts#L13">class <b>Provider</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/d6be4bea908878d717b038a38a854062c92c7bc0/sdk/nodejs/provider.ts#L13">class <b>Provider</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> ProviderResource</pre>
+{{% md %}}
 
 The provider type for the bigip package. By default, resources use package-wide configuration
 settings, however an explicit `Provider` instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
 [documentation](https://pulumi.io/reference/programming-model.html#providers) for more information.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/d8583a94dd650bb4fdd3e65ef66ff9c395d5989a/sdk/nodejs/provider.ts#L13"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/d6be4bea908878d717b038a38a854062c92c7bc0/sdk/nodejs/provider.ts#L13"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -87,7 +89,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/d8583a94dd650bb4fdd3e65ef66ff9c395d5989a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/d6be4bea908878d717b038a38a854062c92c7bc0/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -97,7 +99,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/d8583a94dd650bb4fdd3e65ef66ff9c395d5989a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/d6be4bea908878d717b038a38a854062c92c7bc0/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -111,7 +113,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/d8583a94dd650bb4fdd3e65ef66ff9c395d5989a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/d6be4bea908878d717b038a38a854062c92c7bc0/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -123,7 +125,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/d8583a94dd650bb4fdd3e65ef66ff9c395d5989a/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/d6be4bea908878d717b038a38a854062c92c7bc0/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -136,7 +138,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getEnv">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/d8583a94dd650bb4fdd3e65ef66ff9c395d5989a/sdk/nodejs/utilities.ts#L7">function <b>getEnv</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/d6be4bea908878d717b038a38a854062c92c7bc0/sdk/nodejs/utilities.ts#L5">function <b>getEnv</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -146,7 +148,7 @@ deployments.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getEnvBoolean">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/d8583a94dd650bb4fdd3e65ef66ff9c395d5989a/sdk/nodejs/utilities.ts#L17">function <b>getEnvBoolean</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/d6be4bea908878d717b038a38a854062c92c7bc0/sdk/nodejs/utilities.ts#L15">function <b>getEnvBoolean</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -156,7 +158,7 @@ deployments.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getEnvNumber">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/d8583a94dd650bb4fdd3e65ef66ff9c395d5989a/sdk/nodejs/utilities.ts#L32">function <b>getEnvNumber</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/d6be4bea908878d717b038a38a854062c92c7bc0/sdk/nodejs/utilities.ts#L30">function <b>getEnvNumber</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -165,25 +167,27 @@ deployments.
 
 {{% /md %}}
 </div>
-<h2 class="pdoc-module-header" id="requireWithDefault">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/d8583a94dd650bb4fdd3e65ef66ff9c395d5989a/sdk/nodejs/utilities.ts#L43">function <b>requireWithDefault</b></a>
+<h2 class="pdoc-module-header" id="getVersion">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/d6be4bea908878d717b038a38a854062c92c7bc0/sdk/nodejs/utilities.ts#L41">function <b>getVersion</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span>requireWithDefault&lt;T&gt;(req: () => T, def: T | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): T</pre>
+<pre class="highlight"><span class='kd'></span>getVersion(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></pre>
 
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="ProviderArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/d8583a94dd650bb4fdd3e65ef66ff9c395d5989a/sdk/nodejs/provider.ts#L47">interface <b>ProviderArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/d6be4bea908878d717b038a38a854062c92c7bc0/sdk/nodejs/provider.ts#L47">interface <b>ProviderArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Provider resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ProviderArgs-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/d8583a94dd650bb4fdd3e65ef66ff9c395d5989a/sdk/nodejs/provider.ts#L51">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/d6be4bea908878d717b038a38a854062c92c7bc0/sdk/nodejs/provider.ts#L51">property <b>address</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>address: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -194,7 +198,7 @@ Domain name/IP of the BigIP
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-loginRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/d8583a94dd650bb4fdd3e65ef66ff9c395d5989a/sdk/nodejs/provider.ts#L55">property <b>loginRef</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/d6be4bea908878d717b038a38a854062c92c7bc0/sdk/nodejs/provider.ts#L55">property <b>loginRef</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>loginRef?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -205,7 +209,7 @@ Login reference for token authentication (see BIG-IP REST docs for details)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/d8583a94dd650bb4fdd3e65ef66ff9c395d5989a/sdk/nodejs/provider.ts#L59">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/d6be4bea908878d717b038a38a854062c92c7bc0/sdk/nodejs/provider.ts#L59">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>password: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -216,7 +220,7 @@ The user's password
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-tokenAuth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/d8583a94dd650bb4fdd3e65ef66ff9c395d5989a/sdk/nodejs/provider.ts#L63">property <b>tokenAuth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/d6be4bea908878d717b038a38a854062c92c7bc0/sdk/nodejs/provider.ts#L63">property <b>tokenAuth</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tokenAuth?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -227,7 +231,7 @@ Enable to use an external authentication source (LDAP, TACACS, etc)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/d8583a94dd650bb4fdd3e65ef66ff9c395d5989a/sdk/nodejs/provider.ts#L67">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/d6be4bea908878d717b038a38a854062c92c7bc0/sdk/nodejs/provider.ts#L67">property <b>username</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>username: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

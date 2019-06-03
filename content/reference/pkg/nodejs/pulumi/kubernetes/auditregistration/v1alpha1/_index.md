@@ -32,9 +32,11 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 AuditSink represents a cluster level audit sink
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AuditSink-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/auditregistration/v1alpha1/AuditSink.ts#L53"> <b>constructor</b></a>
 </h3>
@@ -180,9 +182,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 AuditSinkList is a list of AuditSink items.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AuditSinkList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/auditregistration/v1alpha1/AuditSinkList.ts#L53"> <b>constructor</b></a>
 </h3>

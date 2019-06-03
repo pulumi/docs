@@ -33,25 +33,31 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> token: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;token&#34;) || utilities.getEnv(&#34;LINODE_TOKEN&#34;, &#34;LINODE_API_TOKEN&#34;)</span>;</pre>
+{{% md %}}
 
 The token that allows you access to your Linode account
 
+{{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="uaPrefix">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/config/vars.ts#L16">let <b>uaPrefix</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> uaPrefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;uaPrefix&#34;)</span>;</pre>
+{{% md %}}
 
 An HTTP User-Agent Prefix to prepend in API requests.
 
+{{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="url">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/44d929a1ef85425240b0832ef88f173ed3770304/sdk/nodejs/config/vars.ts#L20">let <b>url</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>let</span> url: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;url&#34;)</span>;</pre>
+{{% md %}}
 
 The HTTP(S) API address of the Linode API to use.
 
+{{% /md %}}
 </div>

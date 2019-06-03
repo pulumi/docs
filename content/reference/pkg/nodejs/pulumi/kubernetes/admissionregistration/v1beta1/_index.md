@@ -34,10 +34,12 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 MutatingWebhookConfiguration describes the configuration of and admission webhook that accept
 or reject and may change the object.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="MutatingWebhookConfiguration-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfiguration.ts#L57"> <b>constructor</b></a>
 </h3>
@@ -187,9 +189,11 @@ Webhooks is a list of webhooks and the affected resources and operations.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 MutatingWebhookConfigurationList is a list of MutatingWebhookConfiguration.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="MutatingWebhookConfigurationList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/MutatingWebhookConfigurationList.ts#L56"> <b>constructor</b></a>
 </h3>
@@ -339,10 +343,12 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 ValidatingWebhookConfiguration describes the configuration of and admission webhook that
 accept or reject and object without changing it.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ValidatingWebhookConfiguration-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfiguration.ts#L57"> <b>constructor</b></a>
 </h3>
@@ -492,9 +498,11 @@ Webhooks is a list of webhooks and the affected resources and operations.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 ValidatingWebhookConfigurationList is a list of ValidatingWebhookConfiguration.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ValidatingWebhookConfigurationList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/admissionregistration/v1beta1/ValidatingWebhookConfigurationList.ts#L56"> <b>constructor</b></a>
 </h3>

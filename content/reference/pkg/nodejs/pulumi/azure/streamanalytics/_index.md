@@ -57,6 +57,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a JavaScript UDF Function within Stream Analytics Streaming Job.
 
@@ -90,6 +91,7 @@ const test = new azure.streamanalytics.FunctionJavaScriptUDF("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FunctionJavaScriptUDF-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L76"> <b>constructor</b></a>
 </h3>
@@ -245,6 +247,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Stream Analytics Job.
 
@@ -279,6 +282,7 @@ const exampleJob = new azure.streamanalytics.Job("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Job-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/job.ts#L105"> <b>constructor</b></a>
 </h3>
@@ -507,6 +511,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Stream Analytics Output to Blob Storage.
 
@@ -554,6 +559,7 @@ const exampleOutputBlob = new azure.streamanalytics.OutputBlob("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="OutputBlob-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/outputBlob.ts#L106"> <b>constructor</b></a>
 </h3>
@@ -754,6 +760,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Stream Analytics Output to an EventHub.
 
@@ -799,6 +806,7 @@ const exampleOutputEventHub = new azure.streamanalytics.OutputEventHub("example"
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="OutputEventHub-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/outputEventHub.ts#L96"> <b>constructor</b></a>
 </h3>
@@ -977,6 +985,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Stream Analytics Output to a ServiceBus Queue.
 
@@ -1019,6 +1028,7 @@ const test = new azure.streamanalytics.OutputServiceBusQueue("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="OutputServiceBusQueue-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L93"> <b>constructor</b></a>
 </h3>
@@ -1197,6 +1207,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Stream Analytics Stream Input Blob.
 
@@ -1243,6 +1254,7 @@ const test = new azure.streamanalytics.StreamInputEventHub("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StreamInputBlob-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/streamInputBlob.ts#L105"> <b>constructor</b></a>
 </h3>
@@ -1442,6 +1454,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Stream Analytics Stream Input EventHub.
 
@@ -1495,6 +1508,7 @@ const testStreamInputEventHub = new azure.streamanalytics.StreamInputEventHub("t
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StreamInputEventHub-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L108"> <b>constructor</b></a>
 </h3>
@@ -1683,6 +1697,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Stream Analytics Stream Input IoTHub.
 
@@ -1725,6 +1740,7 @@ const testStreamInputIotHub = new azure.streamanalytics.StreamInputIotHub("test"
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StreamInputIotHub-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L97"> <b>constructor</b></a>
 </h3>
@@ -1939,9 +1955,11 @@ export const jobId = test.jobId;
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L157">interface <b>FunctionJavaScriptUDFArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a FunctionJavaScriptUDF resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FunctionJavaScriptUDFArgs-inputs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L161">property <b>inputs</b></a>
 </h3>
@@ -2017,9 +2035,11 @@ The name of the Stream Analytics Job where this Function should be created. Chan
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L127">interface <b>FunctionJavaScriptUDFState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering FunctionJavaScriptUDF resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FunctionJavaScriptUDFState-inputs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/functionJavaScriptUDF.ts#L131">property <b>inputs</b></a>
 </h3>
@@ -2095,9 +2115,11 @@ The name of the Stream Analytics Job where this Function should be created. Chan
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/getJob.ts#L34">interface <b>GetJobArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getJob.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetJobArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/getJob.ts#L38">property <b>name</b></a>
 </h3>
@@ -2125,9 +2147,11 @@ Specifies the name of the resource group the Stream Analytics Job is located in.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/getJob.ts#L48">interface <b>GetJobResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getJob.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetJobResult-compatibilityLevel">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/getJob.ts#L52">property <b>compatibilityLevel</b></a>
 </h3>
@@ -2270,9 +2294,11 @@ The query that will be run in the streaming job, [written in Stream Analytics Qu
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/job.ts#L240">interface <b>JobArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Job resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="JobArgs-compatibilityLevel">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/job.ts#L244">property <b>compatibilityLevel</b></a>
 </h3>
@@ -2410,9 +2436,11 @@ Specifies the query that will be run in the streaming job, [written in Stream An
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/job.ts#L182">interface <b>JobState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Job resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="JobState-compatibilityLevel">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/job.ts#L186">property <b>compatibilityLevel</b></a>
 </h3>
@@ -2561,9 +2589,11 @@ Specifies the query that will be run in the streaming job, [written in Stream An
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/outputBlob.ts#L223">interface <b>OutputBlobArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a OutputBlob resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="OutputBlobArgs-dateFormat">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/outputBlob.ts#L227">property <b>dateFormat</b></a>
 </h3>
@@ -2684,9 +2714,11 @@ The time format. Wherever `{time}` appears in `path_pattern`, the value of this 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/outputBlob.ts#L177">interface <b>OutputBlobState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering OutputBlob resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="OutputBlobState-dateFormat">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/outputBlob.ts#L181">property <b>dateFormat</b></a>
 </h3>
@@ -2807,9 +2839,11 @@ The time format. Wherever `{time}` appears in `path_pattern`, the value of this 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/outputEventHub.ts#L195">interface <b>OutputEventHubArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a OutputEventHub resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="OutputEventHubArgs-eventhubName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/outputEventHub.ts#L199">property <b>eventhubName</b></a>
 </h3>
@@ -2908,9 +2942,11 @@ The name of the Stream Analytics Job. Changing this forces a new resource to be 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/outputEventHub.ts#L157">interface <b>OutputEventHubState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering OutputEventHub resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="OutputEventHubState-eventhubName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/outputEventHub.ts#L161">property <b>eventhubName</b></a>
 </h3>
@@ -3009,9 +3045,11 @@ The name of the Stream Analytics Job. Changing this forces a new resource to be 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L192">interface <b>OutputServiceBusQueueArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a OutputServiceBusQueue resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="OutputServiceBusQueueArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L196">property <b>name</b></a>
 </h3>
@@ -3110,9 +3148,11 @@ The name of the Stream Analytics Job. Changing this forces a new resource to be 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L154">interface <b>OutputServiceBusQueueState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering OutputServiceBusQueue resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="OutputServiceBusQueueState-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/outputServiceBusQueue.ts#L158">property <b>name</b></a>
 </h3>
@@ -3211,9 +3251,11 @@ The name of the Stream Analytics Job. Changing this forces a new resource to be 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/streamInputBlob.ts#L222">interface <b>StreamInputBlobArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a StreamInputBlob resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StreamInputBlobArgs-dateFormat">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/streamInputBlob.ts#L226">property <b>dateFormat</b></a>
 </h3>
@@ -3333,9 +3375,11 @@ The time format. Wherever `{time}` appears in `path_pattern`, the value of this 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/streamInputBlob.ts#L176">interface <b>StreamInputBlobState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering StreamInputBlob resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StreamInputBlobState-dateFormat">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/streamInputBlob.ts#L180">property <b>dateFormat</b></a>
 </h3>
@@ -3455,9 +3499,11 @@ The time format. Wherever `{time}` appears in `path_pattern`, the value of this 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L216">interface <b>StreamInputEventHubArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a StreamInputEventHub resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StreamInputEventHubArgs-eventhubConsumerGroupName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L220">property <b>eventhubConsumerGroupName</b></a>
 </h3>
@@ -3566,9 +3612,11 @@ The name of the Stream Analytics Job. Changing this forces a new resource to be 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L174">interface <b>StreamInputEventHubState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering StreamInputEventHub resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StreamInputEventHubState-eventhubConsumerGroupName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/streamInputEventHub.ts#L178">property <b>eventhubConsumerGroupName</b></a>
 </h3>
@@ -3677,9 +3725,11 @@ The name of the Stream Analytics Job. Changing this forces a new resource to be 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L205">interface <b>StreamInputIotHubArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a StreamInputIotHub resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StreamInputIotHubArgs-endpoint">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L209">property <b>endpoint</b></a>
 </h3>
@@ -3788,9 +3838,11 @@ The name of the Stream Analytics Job. Changing this forces a new resource to be 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L163">interface <b>StreamInputIotHubState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering StreamInputIotHub resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StreamInputIotHubState-endpoint">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/streamanalytics/streamInputIotHub.ts#L167">property <b>endpoint</b></a>
 </h3>

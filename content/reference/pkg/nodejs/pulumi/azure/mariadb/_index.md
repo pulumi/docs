@@ -36,6 +36,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a MariaDB Database within a MariaDB Server
 
@@ -78,6 +79,7 @@ const exampleDatabase = new azure.mariadb.Database("example", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Database-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mariadb/database.ts#L82"> <b>constructor</b></a>
 </h3>
@@ -219,6 +221,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a MariaDB Server.
 
@@ -256,6 +259,7 @@ const testServer = new azure.mariadb.Server("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Server-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mariadb/server.ts#L100"> <b>constructor</b></a>
 </h3>
@@ -470,9 +474,11 @@ Specifies the version of MariaDB to use. The valid value is `10.2`. Changing thi
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mariadb/database.ts#L155">interface <b>DatabaseArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Database resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DatabaseArgs-charset">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mariadb/database.ts#L159">property <b>charset</b></a>
 </h3>
@@ -534,9 +540,11 @@ Specifies the name of the MariaDB Server. Changing this forces a new resource to
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mariadb/database.ts#L128">interface <b>DatabaseState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Database resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DatabaseState-charset">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mariadb/database.ts#L132">property <b>charset</b></a>
 </h3>
@@ -598,9 +606,11 @@ Specifies the name of the MariaDB Server. Changing this forces a new resource to
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mariadb/server.ts#L217">interface <b>ServerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Server resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ServerArgs-administratorLogin">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mariadb/server.ts#L221">property <b>administratorLogin</b></a>
 </h3>
@@ -725,9 +735,11 @@ Specifies the version of MariaDB to use. The valid value is `10.2`. Changing thi
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mariadb/server.ts#L167">interface <b>ServerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Server resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ServerState-administratorLogin">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mariadb/server.ts#L171">property <b>administratorLogin</b></a>
 </h3>

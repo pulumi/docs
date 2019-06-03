@@ -33,6 +33,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a user assigned identity.
 
@@ -53,6 +54,7 @@ const testIdentity = new azure.msi.UserAssignedIdentity("testIdentity", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="UserAssignedIdentity-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/msi/userAssignedIdentity.ts#L66"> <b>constructor</b></a>
 </h3>
@@ -206,9 +208,11 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/msi/userAssignedIdentity.ts#L138">interface <b>UserAssignedIdentityArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a UserAssignedIdentity resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="UserAssignedIdentityArgs-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/msi/userAssignedIdentity.ts#L143">property <b>location</b></a>
 </h3>
@@ -261,9 +265,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/msi/userAssignedIdentity.ts#L105">interface <b>UserAssignedIdentityState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering UserAssignedIdentity resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="UserAssignedIdentityState-clientId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/msi/userAssignedIdentity.ts#L109">property <b>clientId</b></a>
 </h3>

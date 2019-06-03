@@ -45,6 +45,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Sets a MySQL Configuration value on a MySQL Server.
 
@@ -86,6 +87,7 @@ const testConfiguration = new azure.mysql.Configuration("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Configuration-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mysql/configuration.ts#L76"> <b>constructor</b></a>
 </h3>
@@ -215,6 +217,7 @@ Specifies the value of the MySQL Configuration. See the MySQL documentation for 
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a MySQL Database within a MySQL Server
 
@@ -257,6 +260,7 @@ const testDatabase = new azure.mysql.Database("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Database-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mysql/database.ts#L81"> <b>constructor</b></a>
 </h3>
@@ -397,6 +401,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Firewall Rule for a MySQL Server
 
@@ -440,6 +445,7 @@ const testFirewallRule = new azure.mysql.FirewallRule("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallRule-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mysql/firewallRule.ts#L82"> <b>constructor</b></a>
 </h3>
@@ -580,6 +586,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a MySQL Server.
 
@@ -615,6 +622,7 @@ const testServer = new azure.mysql.Server("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Server-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mysql/server.ts#L98"> <b>constructor</b></a>
 </h3>
@@ -830,6 +838,7 @@ Specifies the version of MySQL to use. Valid values are `5.6` and `5.7`. Changin
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a MySQL Virtual Network Rule.
 
@@ -886,6 +895,7 @@ const testVirtualNetworkRule = new azure.mysql.VirtualNetworkRule("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualNetworkRule-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mysql/virtualNetworkRule.ts#L91"> <b>constructor</b></a>
 </h3>
@@ -1014,9 +1024,11 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mysql/configuration.ts#L139">interface <b>ConfigurationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Configuration resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ConfigurationArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mysql/configuration.ts#L143">property <b>name</b></a>
 </h3>
@@ -1066,9 +1078,11 @@ Specifies the value of the MySQL Configuration. See the MySQL documentation for 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mysql/configuration.ts#L117">interface <b>ConfigurationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Configuration resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ConfigurationState-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mysql/configuration.ts#L121">property <b>name</b></a>
 </h3>
@@ -1118,9 +1132,11 @@ Specifies the value of the MySQL Configuration. See the MySQL documentation for 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mysql/database.ts#L153">interface <b>DatabaseArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Database resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DatabaseArgs-charset">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mysql/database.ts#L157">property <b>charset</b></a>
 </h3>
@@ -1181,9 +1197,11 @@ Specifies the name of the MySQL Server. Changing this forces a new resource to b
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mysql/database.ts#L127">interface <b>DatabaseState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Database resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DatabaseState-charset">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mysql/database.ts#L131">property <b>charset</b></a>
 </h3>
@@ -1244,9 +1262,11 @@ Specifies the name of the MySQL Server. Changing this forces a new resource to b
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mysql/firewallRule.ts#L154">interface <b>FirewallRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a FirewallRule resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallRuleArgs-endIpAddress">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mysql/firewallRule.ts#L158">property <b>endIpAddress</b></a>
 </h3>
@@ -1307,9 +1327,11 @@ Specifies the Start IP Address associated with this Firewall Rule. Changing this
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mysql/firewallRule.ts#L128">interface <b>FirewallRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering FirewallRule resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallRuleState-endIpAddress">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mysql/firewallRule.ts#L132">property <b>endIpAddress</b></a>
 </h3>
@@ -1370,9 +1392,11 @@ Specifies the Start IP Address associated with this Firewall Rule. Changing this
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mysql/server.ts#L215">interface <b>ServerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Server resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ServerArgs-administratorLogin">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mysql/server.ts#L219">property <b>administratorLogin</b></a>
 </h3>
@@ -1497,9 +1521,11 @@ Specifies the version of MySQL to use. Valid values are `5.6` and `5.7`. Changin
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mysql/server.ts#L165">interface <b>ServerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Server resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ServerState-administratorLogin">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mysql/server.ts#L169">property <b>administratorLogin</b></a>
 </h3>
@@ -1635,9 +1661,11 @@ Specifies the version of MySQL to use. Valid values are `5.6` and `5.7`. Changin
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mysql/virtualNetworkRule.ts#L154">interface <b>VirtualNetworkRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a VirtualNetworkRule resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualNetworkRuleArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mysql/virtualNetworkRule.ts#L158">property <b>name</b></a>
 </h3>
@@ -1687,9 +1715,11 @@ The ID of the subnet that the MySQL server will be connected to.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mysql/virtualNetworkRule.ts#L132">interface <b>VirtualNetworkRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering VirtualNetworkRule resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualNetworkRuleState-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/mysql/virtualNetworkRule.ts#L136">property <b>name</b></a>
 </h3>

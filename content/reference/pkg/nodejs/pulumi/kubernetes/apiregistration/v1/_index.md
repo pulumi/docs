@@ -32,9 +32,11 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 APIService represents a server for a particular GroupVersion. Name must be "version.group".
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="APIService-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/apiregistration/v1/APIService.ts#L58"> <b>constructor</b></a>
 </h3>
@@ -191,9 +193,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 APIServiceList is a list of APIService objects.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="APIServiceList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/apiregistration/v1/APIServiceList.ts#L51"> <b>constructor</b></a>
 </h3>

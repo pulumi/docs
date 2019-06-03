@@ -33,6 +33,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an AutoScale Setting which can be applied to Virtual Machine Scale Sets, App Services and other scalable resources.
 
@@ -270,6 +271,7 @@ const testSetting = new azure.autoscale.Setting("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Setting-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/autoscale/setting.ts#L288"> <b>constructor</b></a>
 </h3>
@@ -488,9 +490,11 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/autoscale/setting.ts#L375">interface <b>SettingArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Setting resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SettingArgs-enabled">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/autoscale/setting.ts#L379">property <b>enabled</b></a>
 </h3>
@@ -630,9 +634,11 @@ Specifies the resource ID of the resource that the autoscale setting should be a
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/autoscale/setting.ts#L337">interface <b>SettingState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Setting resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SettingState-enabled">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/autoscale/setting.ts#L341">property <b>enabled</b></a>
 </h3>

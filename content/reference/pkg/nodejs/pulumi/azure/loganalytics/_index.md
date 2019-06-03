@@ -33,6 +33,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Links a Log Analytics (formally Operational Insights) Workspace to another resource. The (currently) only linkable service is an Azure Automation Account.
 
@@ -71,6 +72,7 @@ const testLinkedService = new azure.loganalytics.LinkedService("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LinkedService-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/loganalytics/linkedService.ts#L85"> <b>constructor</b></a>
 </h3>
@@ -234,9 +236,11 @@ Name of the Log Analytics Workspace that will contain the linkedServices resourc
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/loganalytics/linkedService.ts#L163">interface <b>LinkedServiceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a LinkedService resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LinkedServiceArgs-linkedServiceName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/loganalytics/linkedService.ts#L167">property <b>linkedServiceName</b></a>
 </h3>
@@ -310,9 +314,11 @@ Name of the Log Analytics Workspace that will contain the linkedServices resourc
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/loganalytics/linkedService.ts#L129">interface <b>LinkedServiceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering LinkedService resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="LinkedServiceState-linkedServiceName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/loganalytics/linkedService.ts#L133">property <b>linkedServiceName</b></a>
 </h3>

@@ -46,19 +46,19 @@ aliases:
 <li><a href="#Month">type Month</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/autoscaling.ts">autoscaling/autoscaling.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts">autoscaling/launchConfiguration.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/metrics.ts">autoscaling/metrics.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/schedule.ts">autoscaling/schedule.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/stepScaling.ts">autoscaling/stepScaling.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/targetTracking.ts">autoscaling/targetTracking.ts</a> 
+<a href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/autoscaling.ts">autoscaling/autoscaling.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts">autoscaling/launchConfiguration.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/metrics.ts">autoscaling/metrics.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/schedule.ts">autoscaling/schedule.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/stepScaling.ts">autoscaling/stepScaling.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/targetTracking.ts">autoscaling/targetTracking.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="AutoScalingGroup">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/autoscaling.ts#L26">class <b>AutoScalingGroup</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/autoscaling.ts#L26">class <b>AutoScalingGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
 <h3 class="pdoc-member-header" id="AutoScalingGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/autoscaling.ts#L51"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/autoscaling.ts#L51"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -68,7 +68,7 @@ aliases:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -78,7 +78,7 @@ aliases:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L148">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L148">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -92,7 +92,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingGroup-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L163">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L163">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -102,7 +102,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingGroup-scaleInSteps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/autoscaling.ts#L210">method <b>scaleInSteps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/autoscaling.ts#L210">method <b>scaleInSteps</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -119,7 +119,7 @@ See [StepScalingPolicy] for more details.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingGroup-scaleOnSchedule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/autoscaling.ts#L95">method <b>scaleOnSchedule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/autoscaling.ts#L95">method <b>scaleOnSchedule</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -129,7 +129,7 @@ See [StepScalingPolicy] for more details.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingGroup-scaleToTrackAverageCPUUtilization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/autoscaling.ts#L149">method <b>scaleToTrackAverageCPUUtilization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/autoscaling.ts#L149">method <b>scaleToTrackAverageCPUUtilization</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -142,7 +142,7 @@ Scales in response to the average CPU utilization of the [AutoScalingGroup].
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingGroup-scaleToTrackAverageNetworkIn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/autoscaling.ts#L160">method <b>scaleToTrackAverageNetworkIn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/autoscaling.ts#L160">method <b>scaleToTrackAverageNetworkIn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -156,7 +156,7 @@ Scales in response to the average number of bytes received on all network interf
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingGroup-scaleToTrackAverageNetworkOut">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/autoscaling.ts#L171">method <b>scaleToTrackAverageNetworkOut</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/autoscaling.ts#L171">method <b>scaleToTrackAverageNetworkOut</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -170,7 +170,7 @@ Scales in response to the average number of bytes sent out on all network interf
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingGroup-scaleToTrackMetric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/autoscaling.ts#L142">method <b>scaleToTrackMetric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/autoscaling.ts#L142">method <b>scaleToTrackMetric</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -208,7 +208,7 @@ more details.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingGroup-scaleToTrackRequestCountPerTarget">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/autoscaling.ts#L183">method <b>scaleToTrackRequestCountPerTarget</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/autoscaling.ts#L183">method <b>scaleToTrackRequestCountPerTarget</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -223,7 +223,7 @@ when constructed using [AutoScalingGroupArgs.targetGroups].
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingGroup-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/autoscaling.ts#L44">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/autoscaling.ts#L44">property <b>group</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>group: aws.autoscaling.Group;</pre>
@@ -234,7 +234,7 @@ Underlying [autoscaling.Group] that is created by cloudformation.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingGroup-launchConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/autoscaling.ts#L39">property <b>launchConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/autoscaling.ts#L39">property <b>launchConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>launchConfiguration: <a href='#AutoScalingLaunchConfiguration'>AutoScalingLaunchConfiguration</a>;</pre>
@@ -245,7 +245,7 @@ The launch configuration for this auto scaling group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingGroup-stack">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/autoscaling.ts#L34">property <b>stack</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/autoscaling.ts#L34">property <b>stack</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>stack: aws.cloudformation.Stack;</pre>
@@ -258,7 +258,7 @@ express everything that can be configured through [CloudFormation] itself.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingGroup-targetGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/autoscaling.ts#L51">property <b>targetGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/autoscaling.ts#L51">property <b>targetGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>targetGroups: x.elasticloadbalancingv2.TargetGroup[];</pre>
@@ -271,7 +271,7 @@ for more details.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -283,7 +283,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingGroup-vpc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/autoscaling.ts#L27">property <b>vpc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/autoscaling.ts#L27">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>vpc: x.ec2.Vpc;</pre>
@@ -292,12 +292,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AutoScalingLaunchConfiguration">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L22">class <b>AutoScalingLaunchConfiguration</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L22">class <b>AutoScalingLaunchConfiguration</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfiguration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L32"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L32"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -307,7 +307,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfiguration-createInstanceProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L97">method <b>createInstanceProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L97">method <b>createInstanceProfile</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -324,7 +324,7 @@ they will be used to create [RolePolicyAttachment]s for the Role.  Otherwise,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfiguration-defaultInstanceProfilePolicyARNs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L86">method <b>defaultInstanceProfilePolicyARNs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L86">method <b>defaultInstanceProfilePolicyARNs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -334,7 +334,7 @@ they will be used to create [RolePolicyAttachment]s for the Role.  Otherwise,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfiguration-defaultInstanceProfilePolicyDocument">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L71">method <b>defaultInstanceProfilePolicyDocument</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L71">method <b>defaultInstanceProfilePolicyDocument</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -344,7 +344,7 @@ they will be used to create [RolePolicyAttachment]s for the Role.  Otherwise,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfiguration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -354,7 +354,7 @@ they will be used to create [RolePolicyAttachment]s for the Role.  Otherwise,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfiguration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L148">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L148">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -368,7 +368,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfiguration-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L163">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L163">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -378,7 +378,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfiguration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L24">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L24">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -386,7 +386,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfiguration-instanceProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L27">property <b>instanceProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L27">property <b>instanceProfile</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>instanceProfile: aws.iam.InstanceProfile;</pre>
@@ -394,7 +394,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfiguration-launchConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L23">property <b>launchConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L23">property <b>launchConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>launchConfiguration: aws.ec2.LaunchConfiguration;</pre>
@@ -402,7 +402,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfiguration-securityGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L25">property <b>securityGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L25">property <b>securityGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>securityGroups: x.ec2.SecurityGroup[];</pre>
@@ -410,7 +410,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfiguration-stackName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L32">property <b>stackName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L32">property <b>stackName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>stackName: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -421,7 +421,7 @@ Name to give the auto-scaling-group's cloudformation stack name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfiguration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -434,10 +434,11 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="StepScalingPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/stepScaling.ts#L190">class <b>StepScalingPolicy</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/stepScaling.ts#L190">class <b>StepScalingPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
+{{% md %}}
 
 Step scaling policies increase or decrease the current capacity of your Auto Scaling group based
 on a set of scaling adjustments, known as step adjustments. The adjustments vary based on the
@@ -471,8 +472,9 @@ rounded down to 1). If the metric value falls to 30 even after this decrease in 
 Application Auto Scaling decreases the target capacity by 3, to 10, based on the third step
 adjustment of the scale-in policy (remove 30 percent of 13, 3.9, rounded down to 3).
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="StepScalingPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/stepScaling.ts#L211"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/stepScaling.ts#L211"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -482,7 +484,7 @@ adjustment of the scale-in policy (remove 30 percent of 13, 3.9, rounded down to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StepScalingPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -492,7 +494,7 @@ adjustment of the scale-in policy (remove 30 percent of 13, 3.9, rounded down to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StepScalingPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L148">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L148">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -506,7 +508,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StepScalingPolicy-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L163">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L163">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -516,7 +518,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StepScalingPolicy-lowerAlarm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/stepScaling.ts#L211">property <b>lowerAlarm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/stepScaling.ts#L211">property <b>lowerAlarm</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>lowerAlarm: aws.cloudwatch.MetricAlarm | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</pre>
@@ -528,7 +530,7 @@ range of steps.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StepScalingPolicy-lowerPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/stepScaling.ts#L205">property <b>lowerPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/stepScaling.ts#L205">property <b>lowerPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>lowerPolicy: aws.autoscaling.Policy | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</pre>
@@ -539,7 +541,7 @@ Underlying [Policy] created to define the scaling strategy for the lower set of 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StepScalingPolicy-upperAlarm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/stepScaling.ts#L200">property <b>upperAlarm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/stepScaling.ts#L200">property <b>upperAlarm</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>upperAlarm: aws.cloudwatch.MetricAlarm | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</pre>
@@ -551,7 +553,7 @@ range of steps.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StepScalingPolicy-upperPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/stepScaling.ts#L194">property <b>upperPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/stepScaling.ts#L194">property <b>upperPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>upperPolicy: aws.autoscaling.Policy | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</pre>
@@ -562,7 +564,7 @@ Underlying [Policy] created to define the scaling strategy for the upper set of 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StepScalingPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -575,37 +577,37 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="convertLowerSteps">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/stepScaling.ts#L357">function <b>convertLowerSteps</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/stepScaling.ts#L357">function <b>convertLowerSteps</b></a>
 </h2>
 <div class="pdoc-module-contents">
 </div>
 <h2 class="pdoc-module-header" id="convertSteps">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/stepScaling.ts#L286">function <b>convertSteps</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/stepScaling.ts#L286">function <b>convertSteps</b></a>
 </h2>
 <div class="pdoc-module-contents">
 </div>
 <h2 class="pdoc-module-header" id="convertUpperSteps">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/stepScaling.ts#L308">function <b>convertUpperSteps</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/stepScaling.ts#L308">function <b>convertUpperSteps</b></a>
 </h2>
 <div class="pdoc-module-contents">
 </div>
 <h2 class="pdoc-module-header" id="createCustomMetricPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/targetTracking.ts#L139">function <b>createCustomMetricPolicy</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/targetTracking.ts#L139">function <b>createCustomMetricPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 </div>
 <h2 class="pdoc-module-header" id="createPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/targetTracking.ts#L108">function <b>createPolicy</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/targetTracking.ts#L108">function <b>createPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 </div>
 <h2 class="pdoc-module-header" id="createPredefinedMetricPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/targetTracking.ts#L123">function <b>createPredefinedMetricPolicy</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/targetTracking.ts#L123">function <b>createPredefinedMetricPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 </div>
 <h2 class="pdoc-module-header" id="cronExpression">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/schedule.ts#L22">function <b>cronExpression</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/schedule.ts#L22">function <b>cronExpression</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -619,12 +621,12 @@ used as the [recurrence] property of [ScheduleArgs].
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="ApplicationTargetGroupTrackingPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/targetTracking.ts#L59">interface <b>ApplicationTargetGroupTrackingPolicyArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/targetTracking.ts#L59">interface <b>ApplicationTargetGroupTrackingPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#TargetTrackingPolicyArgs'>TargetTrackingPolicyArgs</a></pre>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroupTrackingPolicyArgs-disableScaleIn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/targetTracking.ts#L51">property <b>disableScaleIn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/targetTracking.ts#L51">property <b>disableScaleIn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>disableScaleIn?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -638,7 +640,7 @@ Auto Scaling group.  Defaults to [false] if unspecified.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroupTrackingPolicyArgs-estimatedInstanceWarmup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/targetTracking.ts#L43">property <b>estimatedInstanceWarmup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/targetTracking.ts#L43">property <b>estimatedInstanceWarmup</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>estimatedInstanceWarmup?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -650,7 +652,7 @@ metrics. Without a value, AWS will default to the group's specified cooldown per
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroupTrackingPolicyArgs-targetGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/targetTracking.ts#L65">property <b>targetGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/targetTracking.ts#L65">property <b>targetGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>targetGroup: x.elasticloadbalancingv2.ApplicationTargetGroup;</pre>
@@ -663,7 +665,7 @@ be provided to the [AutoScalingGroup] using [AutoScalingGroupArgs.targetGroups].
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroupTrackingPolicyArgs-targetValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/targetTracking.ts#L56">property <b>targetValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/targetTracking.ts#L56">property <b>targetValue</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>targetValue: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -675,11 +677,11 @@ The target value for the metric.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AutoScalingGroupArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/autoscaling.ts#L298">interface <b>AutoScalingGroupArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/autoscaling.ts#L298">interface <b>AutoScalingGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="AutoScalingGroupArgs-disableRollback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/autoscaling.ts#L349">property <b>disableRollback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/autoscaling.ts#L349">property <b>disableRollback</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>disableRollback?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -691,7 +693,7 @@ creation failed.  Defaults to 'false'.  Conflicts with `onFailure`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingGroupArgs-launchConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/autoscaling.ts#L320">property <b>launchConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/autoscaling.ts#L320">property <b>launchConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>launchConfiguration?: <a href='#AutoScalingLaunchConfiguration'>AutoScalingLaunchConfiguration</a>;</pre>
@@ -708,7 +710,7 @@ If neither are provided, a default instance will be create by calling
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingGroupArgs-launchConfigurationArgs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/autoscaling.ts#L331">property <b>launchConfigurationArgs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/autoscaling.ts#L331">property <b>launchConfigurationArgs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>launchConfigurationArgs?: <a href='#AutoScalingLaunchConfigurationArgs'>AutoScalingLaunchConfigurationArgs</a>;</pre>
@@ -725,7 +727,7 @@ If neither are provided, a default instance will be create by calling
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingGroupArgs-onFailure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/autoscaling.ts#L355">property <b>onFailure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/autoscaling.ts#L355">property <b>onFailure</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>onFailure?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"DO_NOTHING"</span> | <span class='s2'>"ROLLBACK"</span> | <span class='s2'>"DELETE"</span>&gt;;</pre>
@@ -737,7 +739,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disableRollback`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingGroupArgs-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/autoscaling.ts#L309">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/autoscaling.ts#L309">property <b>subnetIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>subnetIds?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[];</pre>
@@ -749,7 +751,7 @@ the `vpc` will be used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingGroupArgs-targetGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/autoscaling.ts#L343">property <b>targetGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/autoscaling.ts#L343">property <b>targetGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>targetGroups?: x.elasticloadbalancingv2.TargetGroup[];</pre>
@@ -761,7 +763,7 @@ have the "instance" [targetType].
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingGroupArgs-templateParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/autoscaling.ts#L337">property <b>templateParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/autoscaling.ts#L337">property <b>templateParameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>templateParameters?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TemplateParameters'>TemplateParameters</a>&gt;;</pre>
@@ -773,7 +775,7 @@ the defaults specified in TemplateParameters will be used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingGroupArgs-vpc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/autoscaling.ts#L303">property <b>vpc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/autoscaling.ts#L303">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vpc?: x.ec2.Vpc;</pre>
@@ -786,14 +788,16 @@ created for the default vpc.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AutoScalingLaunchConfigurationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L279">interface <b>AutoScalingLaunchConfigurationArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L279">interface <b>AutoScalingLaunchConfigurationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments when creating the launch configuration for a cluster's autoscaling group.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfigurationArgs-associatePublicIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L285">property <b>associatePublicIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L285">property <b>associatePublicIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>associatePublicIpAddress?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -804,7 +808,7 @@ Associate a public ip address with an instance in a VPC.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfigurationArgs-ebsBlockDevices">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L401">property <b>ebsBlockDevices</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L401">property <b>ebsBlockDevices</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ebsBlockDevices?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -899,7 +903,7 @@ will be mounted at '/dev/xvdcz'.  Both devices will be deleted upon termination.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfigurationArgs-ebsOptimized">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L290">property <b>ebsOptimized</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L290">property <b>ebsOptimized</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ebsOptimized?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -910,7 +914,7 @@ If true, the launched EC2 instance will be EBS-optimized.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfigurationArgs-ecsOptimizedAMIName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L372">property <b>ecsOptimizedAMIName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L372">property <b>ecsOptimizedAMIName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ecsOptimizedAMIName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -928,7 +932,7 @@ valid values.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfigurationArgs-enableMonitoring">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L295">property <b>enableMonitoring</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L295">property <b>enableMonitoring</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>enableMonitoring?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -939,7 +943,7 @@ Enables/disables detailed monitoring. This is enabled by default.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfigurationArgs-ephemeralBlockDevices">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L301">property <b>ephemeralBlockDevices</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L301">property <b>ephemeralBlockDevices</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>ephemeralBlockDevices?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -978,7 +982,7 @@ Customize Ephemeral (also known as
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfigurationArgs-iamInstanceProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L307">property <b>iamInstanceProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L307">property <b>iamInstanceProfile</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>iamInstanceProfile?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | aws.iam.InstanceProfile&gt;;</pre>
@@ -990,7 +994,7 @@ with launched instances.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfigurationArgs-instanceProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L360">property <b>instanceProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L360">property <b>instanceProfile</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>instanceProfile?: aws.iam.InstanceProfile;</pre>
@@ -1002,7 +1006,7 @@ be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfigurationArgs-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L377">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L377">property <b>instanceType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>instanceType?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;aws.ec2.InstanceType&gt;;</pre>
@@ -1013,7 +1017,7 @@ The size of instance to launch.  Defaults to t2.micro if unspecified.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfigurationArgs-keyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L312">property <b>keyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L312">property <b>keyName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>keyName?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1024,7 +1028,7 @@ The key name that should be used for the instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfigurationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L318">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L318">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1036,7 +1040,7 @@ this blank, Terraform will auto-generate a unique name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfigurationArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L324">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L324">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>namePrefix?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1048,7 +1052,7 @@ prefix. Conflicts with `name`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfigurationArgs-placementTenancy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L384">property <b>placementTenancy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L384">property <b>placementTenancy</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>placementTenancy?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"default"</span> | <span class='s2'>"dedicated"</span>&gt;;</pre>
@@ -1061,7 +1065,7 @@ for more details.  Default is "default" if unspecified.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfigurationArgs-rootBlockDevice">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L393">property <b>rootBlockDevice</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L393">property <b>rootBlockDevice</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>rootBlockDevice?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -1091,7 +1095,7 @@ termination.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfigurationArgs-securityGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L408">property <b>securityGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L408">property <b>securityGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>securityGroups?: x.ec2.SecurityGroupOrId[];</pre>
@@ -1102,7 +1106,7 @@ A list of associated security group IDs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfigurationArgs-spotPrice">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L329">property <b>spotPrice</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L329">property <b>spotPrice</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>spotPrice?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1113,7 +1117,7 @@ The maximum price to use for reserving spot instances.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfigurationArgs-stackName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L354">property <b>stackName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L354">property <b>stackName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>stackName?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1124,7 +1128,7 @@ The name of the stack the launch configuration will signal.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfigurationArgs-userData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L413">property <b>userData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L413">property <b>userData</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userData?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | <a href='#AutoScalingUserData'>AutoScalingUserData</a>;</pre>
@@ -1135,7 +1139,7 @@ The user data to provide when launching the instance. Do not pass gzip-compresse
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfigurationArgs-userDataBase64">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L337">property <b>userDataBase64</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L337">property <b>userDataBase64</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userDataBase64?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1149,7 +1153,7 @@ corruption.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfigurationArgs-vpcClassicLinkId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L342">property <b>vpcClassicLinkId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L342">property <b>vpcClassicLinkId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vpcClassicLinkId?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1160,7 +1164,7 @@ The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingLaunchConfigurationArgs-vpcClassicLinkSecurityGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L347">property <b>vpcClassicLinkSecurityGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L347">property <b>vpcClassicLinkSecurityGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>vpcClassicLinkSecurityGroups?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1172,11 +1176,11 @@ The IDs of one or more security groups for the specified ClassicLink-enabled VPC
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AutoScalingUserData">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L416">interface <b>AutoScalingUserData</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L416">interface <b>AutoScalingUserData</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="AutoScalingUserData-extraBootcmdLines">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L425">method <b>extraBootcmdLines</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L425">method <b>extraBootcmdLines</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1189,7 +1193,7 @@ Additional lines to be placed in the `bootcmd` section of the launch configurati
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingUserData-extraRuncmdLines">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L420">method <b>extraRuncmdLines</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L420">method <b>extraRuncmdLines</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1203,10 +1207,11 @@ Additional lines to be placed in the `runcmd` section of the launch configuratio
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CustomMetricTargetTrackingPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/targetTracking.ts#L102">interface <b>CustomMetricTargetTrackingPolicyArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/targetTracking.ts#L102">interface <b>CustomMetricTargetTrackingPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#TargetTrackingPolicyArgs'>TargetTrackingPolicyArgs</a></pre>
+{{% md %}}
 
 Represents a CloudWatch metric of your choosing for a target tracking scaling policy to use with
 Amazon EC2 Auto Scaling.
@@ -1223,8 +1228,9 @@ To create your customized metric specification:
    increase or decrease in inverse proportion to the number of capacity units. That is, the value
    of the metric should decrease when capacity increases.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CustomMetricTargetTrackingPolicyArgs-disableScaleIn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/targetTracking.ts#L51">property <b>disableScaleIn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/targetTracking.ts#L51">property <b>disableScaleIn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>disableScaleIn?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1238,7 +1244,7 @@ Auto Scaling group.  Defaults to [false] if unspecified.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomMetricTargetTrackingPolicyArgs-estimatedInstanceWarmup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/targetTracking.ts#L43">property <b>estimatedInstanceWarmup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/targetTracking.ts#L43">property <b>estimatedInstanceWarmup</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>estimatedInstanceWarmup?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1250,7 +1256,7 @@ metrics. Without a value, AWS will default to the group's specified cooldown per
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomMetricTargetTrackingPolicyArgs-metric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/targetTracking.ts#L104">property <b>metric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/targetTracking.ts#L104">property <b>metric</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metric: x.cloudwatch.Metric;</pre>
@@ -1261,7 +1267,7 @@ The metric to track
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomMetricTargetTrackingPolicyArgs-targetValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/targetTracking.ts#L56">property <b>targetValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/targetTracking.ts#L56">property <b>targetValue</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>targetValue: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1273,11 +1279,11 @@ The target value for the metric.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ScalingStep">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/stepScaling.ts#L99">interface <b>ScalingStep</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/stepScaling.ts#L99">interface <b>ScalingStep</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="ScalingStep-adjustment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/stepScaling.ts#L111">property <b>adjustment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/stepScaling.ts#L111">property <b>adjustment</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adjustment: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1289,7 +1295,7 @@ positive value scales up. A negative value scales down.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScalingStep-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/stepScaling.ts#L105">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/stepScaling.ts#L105">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>value: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1303,11 +1309,11 @@ values `<=` to this will trigger this step's [scalingAdjustment].
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ScalingSteps">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/stepScaling.ts#L65">interface <b>ScalingSteps</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/stepScaling.ts#L65">interface <b>ScalingSteps</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="ScalingSteps-lower">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/stepScaling.ts#L96">property <b>lower</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/stepScaling.ts#L96">property <b>lower</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>lower?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ScalingStep'>ScalingStep</a>&gt;[];</pre>
@@ -1330,7 +1336,7 @@ At least one of `upper` or `lower` must be non-empty.  If both are provided, `up
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScalingSteps-upper">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/stepScaling.ts#L79">property <b>upper</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/stepScaling.ts#L79">property <b>upper</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>upper?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ScalingStep'>ScalingStep</a>&gt;[];</pre>
@@ -1352,11 +1358,11 @@ At least one of `upper` or `lower` must be non-empty.  If both are provided, `up
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ScheduleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/schedule.ts#L116">interface <b>ScheduleArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/schedule.ts#L116">interface <b>ScheduleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="ScheduleArgs-desiredCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/schedule.ts#L126">property <b>desiredCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/schedule.ts#L126">property <b>desiredCapacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>desiredCapacity?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1368,7 +1374,7 @@ the size at the scheduled time.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScheduleArgs-endTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/schedule.ts#L132">property <b>endTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/schedule.ts#L132">property <b>endTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>endTime?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1381,7 +1387,7 @@ returns an error message.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScheduleArgs-maxSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/schedule.ts#L137">property <b>maxSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/schedule.ts#L137">property <b>maxSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxSize?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1393,7 +1399,7 @@ the size at the scheduled time.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScheduleArgs-minSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/schedule.ts#L142">property <b>minSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/schedule.ts#L142">property <b>minSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>minSize?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1405,7 +1411,7 @@ the size at the scheduled time.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScheduleArgs-recurrence">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/schedule.ts#L148">property <b>recurrence</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/schedule.ts#L148">property <b>recurrence</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>recurrence?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#ScheduleRecurrenceArgs'>ScheduleRecurrenceArgs</a>&gt;;</pre>
@@ -1418,7 +1424,7 @@ of this.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScheduleArgs-scheduledActionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/schedule.ts#L121">property <b>scheduledActionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/schedule.ts#L121">property <b>scheduledActionName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>scheduledActionName?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1430,7 +1436,7 @@ The name of this scaling action.  If not provided, the name of the requested
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScheduleArgs-startTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/schedule.ts#L154">property <b>startTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/schedule.ts#L154">property <b>startTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>startTime?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1444,11 +1450,11 @@ returns an error message.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ScheduleRecurrenceArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/schedule.ts#L99">interface <b>ScheduleRecurrenceArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/schedule.ts#L99">interface <b>ScheduleRecurrenceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="ScheduleRecurrenceArgs-dayOfMonth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/schedule.ts#L107">property <b>dayOfMonth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/schedule.ts#L107">property <b>dayOfMonth</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dayOfMonth?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -1459,7 +1465,7 @@ returns an error message.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScheduleRecurrenceArgs-dayOfWeek">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/schedule.ts#L113">property <b>dayOfWeek</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/schedule.ts#L113">property <b>dayOfWeek</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>dayOfWeek?: <a href='#DayOfWeek'>DayOfWeek</a>;</pre>
@@ -1470,7 +1476,7 @@ Day of the week to perform the scheduled action on.  Leave undefined to indicate
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScheduleRecurrenceArgs-hour">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/schedule.ts#L104">property <b>hour</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/schedule.ts#L104">property <b>hour</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>hour?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -1481,7 +1487,7 @@ Day of the week to perform the scheduled action on.  Leave undefined to indicate
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScheduleRecurrenceArgs-minute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/schedule.ts#L101">property <b>minute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/schedule.ts#L101">property <b>minute</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>minute?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -1492,7 +1498,7 @@ Day of the week to perform the scheduled action on.  Leave undefined to indicate
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScheduleRecurrenceArgs-month">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/schedule.ts#L110">property <b>month</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/schedule.ts#L110">property <b>month</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>month?: <a href='#Month'>Month</a>;</pre>
@@ -1504,11 +1510,11 @@ Month of the year to perform the scheduled action on.  Leave undefined to indica
 </div>
 </div>
 <h2 class="pdoc-module-header" id="StepScalingPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/stepScaling.ts#L114">interface <b>StepScalingPolicyArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/stepScaling.ts#L114">interface <b>StepScalingPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="StepScalingPolicyArgs-adjustmentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/stepScaling.ts#L135">property <b>adjustmentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/stepScaling.ts#L135">property <b>adjustmentType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adjustmentType: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AdjustmentType'>AdjustmentType</a>&gt;;</pre>
@@ -1522,7 +1528,7 @@ minimum group size.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StepScalingPolicyArgs-estimatedInstanceWarmup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/stepScaling.ts#L141">property <b>estimatedInstanceWarmup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/stepScaling.ts#L141">property <b>estimatedInstanceWarmup</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>estimatedInstanceWarmup?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1534,7 +1540,7 @@ metrics. Without a value, AWS will default to the group's specified cooldown per
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StepScalingPolicyArgs-evaluationPeriods">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/stepScaling.ts#L154">property <b>evaluationPeriods</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/stepScaling.ts#L154">property <b>evaluationPeriods</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>evaluationPeriods?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1546,7 +1552,7 @@ is fired.  Defaults to `1` if unspecified.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StepScalingPolicyArgs-metric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/stepScaling.ts#L122">property <b>metric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/stepScaling.ts#L122">property <b>metric</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>metric: x.cloudwatch.Metric;</pre>
@@ -1561,7 +1567,7 @@ events come in in a timely enough manner to allow the ASG to respond accordingly
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StepScalingPolicyArgs-minAdjustmentMagnitude">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/stepScaling.ts#L148">property <b>minAdjustmentMagnitude</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/stepScaling.ts#L148">property <b>minAdjustmentMagnitude</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>minAdjustmentMagnitude?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1574,7 +1580,7 @@ Scaling group by at least this many instances.  Defaults to `1` if not specified
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StepScalingPolicyArgs-steps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/stepScaling.ts#L127">property <b>steps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/stepScaling.ts#L127">property <b>steps</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>steps: <a href='#ScalingSteps'>ScalingSteps</a>;</pre>
@@ -1586,11 +1592,11 @@ A set of adjustments that manage group scaling.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TargetTrackingPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/targetTracking.ts#L38">interface <b>TargetTrackingPolicyArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/targetTracking.ts#L38">interface <b>TargetTrackingPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="TargetTrackingPolicyArgs-disableScaleIn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/targetTracking.ts#L51">property <b>disableScaleIn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/targetTracking.ts#L51">property <b>disableScaleIn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>disableScaleIn?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1604,7 +1610,7 @@ Auto Scaling group.  Defaults to [false] if unspecified.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TargetTrackingPolicyArgs-estimatedInstanceWarmup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/targetTracking.ts#L43">property <b>estimatedInstanceWarmup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/targetTracking.ts#L43">property <b>estimatedInstanceWarmup</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>estimatedInstanceWarmup?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1616,7 +1622,7 @@ metrics. Without a value, AWS will default to the group's specified cooldown per
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TargetTrackingPolicyArgs-targetValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/targetTracking.ts#L56">property <b>targetValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/targetTracking.ts#L56">property <b>targetValue</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>targetValue: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1628,11 +1634,11 @@ The target value for the metric.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TemplateParameters">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/autoscaling.ts#L386">interface <b>TemplateParameters</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/autoscaling.ts#L386">interface <b>TemplateParameters</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="TemplateParameters-defaultCooldown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/autoscaling.ts#L392">property <b>defaultCooldown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/autoscaling.ts#L392">property <b>defaultCooldown</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>defaultCooldown?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1644,7 +1650,7 @@ activity can start.  Defaults to 300 if unspecified.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TemplateParameters-desiredCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/autoscaling.ts#L430">property <b>desiredCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/autoscaling.ts#L430">property <b>desiredCapacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>desiredCapacity?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1655,7 +1661,7 @@ The desired size of the auto scale group.  Defaults to [minSize] if unspecified.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TemplateParameters-healthCheckGracePeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/autoscaling.ts#L398">property <b>healthCheckGracePeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/autoscaling.ts#L398">property <b>healthCheckGracePeriod</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>healthCheckGracePeriod?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1667,7 +1673,7 @@ if unspecified.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TemplateParameters-healthCheckType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/autoscaling.ts#L403">property <b>healthCheckType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/autoscaling.ts#L403">property <b>healthCheckType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>healthCheckType?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"EC2"</span> | <span class='s2'>"ELB"</span>&gt;;</pre>
@@ -1678,7 +1684,7 @@ if unspecified.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TemplateParameters-maxSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/autoscaling.ts#L420">property <b>maxSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/autoscaling.ts#L420">property <b>maxSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>maxSize?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1689,7 +1695,7 @@ The maximum size of the auto scale group.  Defaults to 100 if unspecified.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TemplateParameters-minSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/autoscaling.ts#L425">property <b>minSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/autoscaling.ts#L425">property <b>minSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>minSize?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1700,7 +1706,7 @@ The minimum size of the auto scale group.  Defaults to 2 if unspecified.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TemplateParameters-suspendedProcesses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/autoscaling.ts#L413">property <b>suspendedProcesses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/autoscaling.ts#L413">property <b>suspendedProcesses</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>suspendedProcesses?: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"Launch"</span> | <span class='s2'>"Terminate"</span> | <span class='s2'>"HealthCheck"</span> | <span class='s2'>"ReplaceUnhealthy"</span> | <span class='s2'>"AZRebalance"</span> | <span class='s2'>"AlarmNotification"</span> | <span class='s2'>"ScheduledActions"</span> | <span class='s2'>"AddToLoadBalancer"</span>&gt;[]&gt;;</pre>
@@ -1717,14 +1723,16 @@ Defaults to "ScheduledActions" if not specified
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserDataLine">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L437">interface <b>UserDataLine</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L437">interface <b>UserDataLine</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A line that should be added to the [userData] section of a LaunchConfiguration template.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="UserDataLine-automaticallyIndent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L447">property <b>automaticallyIndent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L447">property <b>automaticallyIndent</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>automaticallyIndent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -1736,7 +1744,7 @@ Set explicitly to [false] to control all indentation.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserDataLine-contents">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/launchConfiguration.ts#L441">property <b>contents</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/launchConfiguration.ts#L441">property <b>contents</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>contents: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1748,11 +1756,11 @@ Actual contents of the line.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="metrics">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/metrics.ts#L19">module <b>metrics</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/metrics.ts#L19">module <b>metrics</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="groupDesiredCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/metrics.ts#L78">function <b>groupDesiredCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/metrics.ts#L78">function <b>groupDesiredCapacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1765,7 +1773,7 @@ The number of instances that the Auto Scaling group attempts to maintain.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="groupInServiceInstances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/metrics.ts#L86">function <b>groupInServiceInstances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/metrics.ts#L86">function <b>groupInServiceInstances</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1779,7 +1787,7 @@ include instances that are pending or terminating.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="groupMaxSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/metrics.ts#L71">function <b>groupMaxSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/metrics.ts#L71">function <b>groupMaxSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1792,7 +1800,7 @@ The maximum size of the Auto Scaling group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="groupMinSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/metrics.ts#L64">function <b>groupMinSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/metrics.ts#L64">function <b>groupMinSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1805,7 +1813,7 @@ The minimum size of the Auto Scaling group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="groupPendingInstances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/metrics.ts#L94">function <b>groupPendingInstances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/metrics.ts#L94">function <b>groupPendingInstances</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1819,7 +1827,7 @@ does not include instances that are in service or terminating.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="groupStandbyInstances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/metrics.ts#L102">function <b>groupStandbyInstances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/metrics.ts#L102">function <b>groupStandbyInstances</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1833,7 +1841,7 @@ but are not actively in service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="groupTerminatingInstances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/metrics.ts#L110">function <b>groupTerminatingInstances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/metrics.ts#L110">function <b>groupTerminatingInstances</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1847,7 +1855,7 @@ instances that are in service or pending.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="groupTotalInstances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/metrics.ts#L118">function <b>groupTotalInstances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/metrics.ts#L118">function <b>groupTotalInstances</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1861,7 +1869,7 @@ instances that are in service, pending, and terminating.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="metric">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/metrics.ts#L48">function <b>metric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/metrics.ts#L48">function <b>metric</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1892,7 +1900,7 @@ dimension.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoScalingMetricChange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/metrics.ts#L20">interface <b>AutoScalingMetricChange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/metrics.ts#L20">interface <b>AutoScalingMetricChange</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1900,28 +1908,32 @@ dimension.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AdjustmentType">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/stepScaling.ts#L23">type <b>AdjustmentType</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/stepScaling.ts#L23">type <b>AdjustmentType</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> AdjustmentType = <span class='s2'>"ChangeInCapacity"</span> | <span class='s2'>"ExactCapacity"</span> | <span class='s2'>"PercentChangeInCapacity"</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="DayOfWeek">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/schedule.ts#L89">type <b>DayOfWeek</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/schedule.ts#L89">type <b>DayOfWeek</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> DayOfWeek = <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='s2'>"Monday"</span> | <span class='s2'>"Tuesday"</span> | <span class='s2'>"Wednesday"</span> | <span class='s2'>"Thursday"</span> | <span class='s2'>"Friday"</span> | <span class='s2'>"Saturday"</span> | <span class='s2'>"Sunday"</span>;</pre>
+{{% md %}}
 
 If a number, it must be between 0 to 7 (inclusive).  (0 and 7 both represent Sunday). Leave
 undefined to indicate no specific value.
 
+{{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="Month">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/bf6ce7cbab4ec1d6d991bc85ae320f5a3839b0f0/nodejs/awsx/autoscaling/schedule.ts#L95">type <b>Month</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/ddfd7cbca170e5bd37b578b2dcafd5ed7ba80153/nodejs/awsx/autoscaling/schedule.ts#L95">type <b>Month</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>type</span> Month = <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='s2'>"January"</span> | <span class='s2'>"February"</span> | <span class='s2'>"March"</span> | <span class='s2'>"April"</span> | <span class='s2'>"May"</span> | <span class='s2'>"June"</span> | <span class='s2'>"July"</span> | <span class='s2'>"August"</span> | <span class='s2'>"September"</span> | <span class='s2'>"October"</span> | <span class='s2'>"November"</span> | <span class='s2'>"December"</span>;</pre>
+{{% md %}}
 
 If a number, it must be between 1 to 12 (inclusive).  Leave undefined to indicate no specific
 value.
 
+{{% /md %}}
 </div>

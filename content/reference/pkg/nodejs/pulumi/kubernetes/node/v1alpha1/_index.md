@@ -32,6 +32,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 RuntimeClass defines a class of container runtime supported in the cluster. The RuntimeClass
 is used to determine which container runtime is used to run all containers in a pod.
@@ -40,6 +41,7 @@ referenced in the PodSpec. The Kubelet is responsible for resolving the RuntimeC
 reference before running the pod.  For more details, see
 https://git.k8s.io/enhancements/keps/sig-node/runtime-class.md
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RuntimeClass-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node/v1alpha1/RuntimeClass.ts#L61"> <b>constructor</b></a>
 </h3>
@@ -189,9 +191,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 RuntimeClassList is a list of RuntimeClass objects.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RuntimeClassList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node/v1alpha1/RuntimeClassList.ts#L56"> <b>constructor</b></a>
 </h3>

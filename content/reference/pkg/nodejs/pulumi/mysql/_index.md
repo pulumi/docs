@@ -74,6 +74,7 @@ import * as mysql from "@pulumi/mysql";
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 The ``mysql_database`` resource creates and manages a database on a MySQL
 server.
@@ -93,6 +94,7 @@ import * as mysql from "@pulumi/mysql";
 const app = new mysql.Database("app", {});
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Database-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/2ee7c782a4930cc64af965a1946263b6c470ff15/sdk/nodejs/database.ts#L57"> <b>constructor</b></a>
 </h3>
@@ -218,6 +220,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 The ``mysql_grant`` resource creates and manages privileges given to
 a user on a MySQL server.
@@ -281,6 +284,7 @@ const developerGrant = new mysql.Grant("developer", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Grant-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/2ee7c782a4930cc64af965a1946263b6c470ff15/sdk/nodejs/grant.ts#L118"> <b>constructor</b></a>
 </h3>
@@ -465,12 +469,14 @@ The name of the user. Conflicts with `role`.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> ProviderResource</pre>
+{{% md %}}
 
 The provider type for the mysql package. By default, resources use package-wide configuration
 settings, however an explicit `Provider` instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
 [documentation](https://pulumi.io/reference/programming-model.html#providers) for more information.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Provider-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/2ee7c782a4930cc64af965a1946263b6c470ff15/sdk/nodejs/provider.ts#L13"> <b>constructor</b></a>
 </h3>
@@ -542,6 +548,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 The ``mysql_role`` resource creates and manages a user on a MySQL
 server.
@@ -557,6 +564,7 @@ import * as mysql from "@pulumi/mysql";
 const developer = new mysql.Role("developer", {});
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Role-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/2ee7c782a4930cc64af965a1946263b6c470ff15/sdk/nodejs/role.ts#L38"> <b>constructor</b></a>
 </h3>
@@ -653,6 +661,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 The ``mysql_user`` resource creates and manages a user on a MySQL
 server.
@@ -688,6 +697,7 @@ const nologin = new mysql.User("nologin", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="User-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/2ee7c782a4930cc64af965a1946263b6c470ff15/sdk/nodejs/user.ts#L78"> <b>constructor</b></a>
 </h3>
@@ -839,6 +849,7 @@ The name of the user.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 The `mysql_user_password` resource sets and manages a passwordd for a given
 user on a MySQL server.
@@ -850,6 +861,7 @@ user on a MySQL server.
 > **NOTE on How Passwords are Created:** This resource **automatically**
    generates a **random** password. The password will be a random UUID.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="UserPassword-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/2ee7c782a4930cc64af965a1946263b6c470ff15/sdk/nodejs/userPassword.ts#L50"> <b>constructor</b></a>
 </h3>
@@ -1029,9 +1041,11 @@ The IAM user to associate with this access key.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/2ee7c782a4930cc64af965a1946263b6c470ff15/sdk/nodejs/database.ts#L119">interface <b>DatabaseArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Database resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DatabaseArgs-defaultCharacterSet">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/2ee7c782a4930cc64af965a1946263b6c470ff15/sdk/nodejs/database.ts#L125">property <b>defaultCharacterSet</b></a>
 </h3>
@@ -1077,9 +1091,11 @@ the operating system on which the MySQL server is running.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/2ee7c782a4930cc64af965a1946263b6c470ff15/sdk/nodejs/database.ts#L94">interface <b>DatabaseState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Database resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DatabaseState-defaultCharacterSet">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/2ee7c782a4930cc64af965a1946263b6c470ff15/sdk/nodejs/database.ts#L100">property <b>defaultCharacterSet</b></a>
 </h3>
@@ -1125,9 +1141,11 @@ the operating system on which the MySQL server is running.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/2ee7c782a4930cc64af965a1946263b6c470ff15/sdk/nodejs/grant.ts#L212">interface <b>GrantArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Grant resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GrantArgs-database">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/2ee7c782a4930cc64af965a1946263b6c470ff15/sdk/nodejs/grant.ts#L216">property <b>database</b></a>
 </h3>
@@ -1232,9 +1250,11 @@ The name of the user. Conflicts with `role`.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/2ee7c782a4930cc64af965a1946263b6c470ff15/sdk/nodejs/grant.ts#L170">interface <b>GrantState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Grant resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GrantState-database">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/2ee7c782a4930cc64af965a1946263b6c470ff15/sdk/nodejs/grant.ts#L174">property <b>database</b></a>
 </h3>
@@ -1339,9 +1359,11 @@ The name of the user. Conflicts with `role`.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/2ee7c782a4930cc64af965a1946263b6c470ff15/sdk/nodejs/provider.ts#L50">interface <b>ProviderArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Provider resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ProviderArgs-endpoint">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/2ee7c782a4930cc64af965a1946263b6c470ff15/sdk/nodejs/provider.ts#L51">property <b>endpoint</b></a>
 </h3>
@@ -1379,9 +1401,11 @@ The set of arguments for constructing a Provider resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/2ee7c782a4930cc64af965a1946263b6c470ff15/sdk/nodejs/role.ts#L81">interface <b>RoleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Role resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RoleArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/2ee7c782a4930cc64af965a1946263b6c470ff15/sdk/nodejs/role.ts#L85">property <b>name</b></a>
 </h3>
@@ -1398,9 +1422,11 @@ The name of the role.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/2ee7c782a4930cc64af965a1946263b6c470ff15/sdk/nodejs/role.ts#L71">interface <b>RoleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Role resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="RoleState-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/2ee7c782a4930cc64af965a1946263b6c470ff15/sdk/nodejs/role.ts#L75">property <b>name</b></a>
 </h3>
@@ -1417,9 +1443,11 @@ The name of the role.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/2ee7c782a4930cc64af965a1946263b6c470ff15/sdk/nodejs/user.ts#L154">interface <b>UserArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a User resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="UserArgs-authPlugin">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/2ee7c782a4930cc64af965a1946263b6c470ff15/sdk/nodejs/user.ts#L158">property <b>authPlugin</b></a>
 </h3>
@@ -1491,9 +1519,11 @@ The name of the user.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/2ee7c782a4930cc64af965a1946263b6c470ff15/sdk/nodejs/userPassword.ts#L123">interface <b>UserPasswordArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a UserPassword resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="UserPasswordArgs-host">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/2ee7c782a4930cc64af965a1946263b6c470ff15/sdk/nodejs/userPassword.ts#L127">property <b>host</b></a>
 </h3>
@@ -1532,9 +1562,11 @@ The IAM user to associate with this access key.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/2ee7c782a4930cc64af965a1946263b6c470ff15/sdk/nodejs/userPassword.ts#L97">interface <b>UserPasswordState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering UserPassword resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="UserPasswordState-encryptedPassword">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/2ee7c782a4930cc64af965a1946263b6c470ff15/sdk/nodejs/userPassword.ts#L101">property <b>encryptedPassword</b></a>
 </h3>
@@ -1595,9 +1627,11 @@ The IAM user to associate with this access key.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-mysql/blob/2ee7c782a4930cc64af965a1946263b6c470ff15/sdk/nodejs/user.ts#L124">interface <b>UserState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering User resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="UserState-authPlugin">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-mysql/blob/2ee7c782a4930cc64af965a1946263b6c470ff15/sdk/nodejs/user.ts#L128">property <b>authPlugin</b></a>
 </h3>

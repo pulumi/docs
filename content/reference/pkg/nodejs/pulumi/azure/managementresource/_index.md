@@ -33,6 +33,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Management Lock which is scoped to a Subscription, Resource Group or Resource.
 
@@ -94,6 +95,7 @@ const public_ip = new azure.managementresource.ManangementLock("public-ip", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ManangementLock-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/managementresource/manangementLock.ts#L96"> <b>constructor</b></a>
 </h3>
@@ -222,9 +224,11 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/managementresource/manangementLock.ts#L156">interface <b>ManangementLockArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ManangementLock resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ManangementLockArgs-lockLevel">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/managementresource/manangementLock.ts#L160">property <b>lockLevel</b></a>
 </h3>
@@ -274,9 +278,11 @@ Specifies the scope at which the Management Lock should be created. Changing thi
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/managementresource/manangementLock.ts#L134">interface <b>ManangementLockState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ManangementLock resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ManangementLockState-lockLevel">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/managementresource/manangementLock.ts#L138">property <b>lockLevel</b></a>
 </h3>

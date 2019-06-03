@@ -48,6 +48,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an Azure Batch account.
 
@@ -80,6 +81,7 @@ const testAccount = new azure.batch.Account("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Account-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/batch/account.ts#L87"> <b>constructor</b></a>
 </h3>
@@ -264,6 +266,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a certificate in an Azure Batch account.
 
@@ -308,6 +311,7 @@ const testCertificate = new azure.batch.Certificate("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Certificate-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/batch/certificate.ts#L96"> <b>constructor</b></a>
 </h3>
@@ -489,6 +493,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an Azure Batch pool.
 
@@ -576,6 +581,7 @@ const testPool = new azure.batch.Pool("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Pool-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/batch/pool.ts#L159"> <b>constructor</b></a>
 </h3>
@@ -932,9 +938,11 @@ const test = pulumi.output(azure.batch.getPool({
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/batch/account.ts#L174">interface <b>AccountArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Account resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AccountArgs-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/batch/account.ts#L178">property <b>location</b></a>
 </h3>
@@ -1006,9 +1014,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/batch/account.ts#L132">interface <b>AccountState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Account resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AccountState-accountEndpoint">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/batch/account.ts#L136">property <b>accountEndpoint</b></a>
 </h3>
@@ -1113,9 +1123,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/batch/certificate.ts#L195">interface <b>CertificateArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Certificate resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CertificateArgs-accountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/batch/certificate.ts#L199">property <b>accountName</b></a>
 </h3>
@@ -1195,9 +1207,11 @@ The thumbprint of the certificate. At this time the only supported value is 'SHA
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/batch/certificate.ts#L156">interface <b>CertificateState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Certificate resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CertificateState-accountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/batch/certificate.ts#L160">property <b>accountName</b></a>
 </h3>
@@ -1299,9 +1313,11 @@ The thumbprint of the certificate. At this time the only supported value is 'SHA
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/batch/getAccount.ts#L34">interface <b>GetAccountArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getAccount.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetAccountArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/batch/getAccount.ts#L38">property <b>name</b></a>
 </h3>
@@ -1329,9 +1345,11 @@ The Name of the Resource Group where this Batch account exists.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/batch/getAccount.ts#L48">interface <b>GetAccountResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getAccount.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetAccountResult-accountEndpoint">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/batch/getAccount.ts#L52">property <b>accountEndpoint</b></a>
 </h3>
@@ -1444,9 +1462,11 @@ A map of tags assigned to the Batch account.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/batch/getCertificate.ts#L36">interface <b>GetCertificateArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getCertificate.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetCertificateArgs-accountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/batch/getCertificate.ts#L40">property <b>accountName</b></a>
 </h3>
@@ -1485,9 +1505,11 @@ The Name of the Resource Group where this Batch account exists.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/batch/getCertificate.ts#L54">interface <b>GetCertificateResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getCertificate.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetCertificateResult-accountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/batch/getCertificate.ts#L55">property <b>accountName</b></a>
 </h3>
@@ -1572,9 +1594,11 @@ The algorithm of the certificate thumbprint.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/batch/getPool.ts#L36">interface <b>GetPoolArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getPool.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetPoolArgs-accountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/batch/getPool.ts#L37">property <b>accountName</b></a>
 </h3>
@@ -1645,9 +1669,11 @@ A collection of arguments for invoking getPool.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/batch/getPool.ts#L47">interface <b>GetPoolResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getPool.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetPoolResult-accountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/batch/getPool.ts#L51">property <b>accountName</b></a>
 </h3>
@@ -1841,9 +1867,11 @@ The size of the VM created in the Batch pool.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/batch/pool.ts#L285">interface <b>PoolArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Pool resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PoolArgs-accountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/batch/pool.ts#L289">property <b>accountName</b></a>
 </h3>
@@ -2040,9 +2068,11 @@ Specifies the size of the VM created in the Batch pool.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/batch/pool.ts#L226">interface <b>PoolState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Pool resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="PoolState-accountName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/batch/pool.ts#L230">property <b>accountName</b></a>
 </h3>

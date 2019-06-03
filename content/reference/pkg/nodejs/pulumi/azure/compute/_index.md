@@ -90,6 +90,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an availability set for virtual machines.
 
@@ -113,6 +114,7 @@ const testAvailabilitySet = new azure.compute.AvailabilitySet("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AvailabilitySet-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/availabilitySet.ts#L70"> <b>constructor</b></a>
 </h3>
@@ -275,6 +277,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages attaching a Disk to a Virtual Machine.
 
@@ -361,6 +364,7 @@ const testDataDiskAttachment = new azure.compute.DataDiskAttachment("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DataDiskAttachment-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/dataDiskAttachment.ts#L129"> <b>constructor</b></a>
 </h3>
@@ -512,6 +516,7 @@ Specifies if Write Accelerator is enabled on the disk. This can only be enabled 
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Virtual Machine Extension to provide post deployment configuration
 and run automated tasks.
@@ -616,6 +621,7 @@ const testExtension = new azure.compute.Extension("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Extension-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/extension.ts#L178"> <b>constructor</b></a>
 </h3>
@@ -833,6 +839,7 @@ this forces a new resource to be created.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage a custom virtual machine image that can be used to create virtual machines.
 
@@ -877,6 +884,7 @@ const testImage = new azure.compute.Image("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Image-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/image.ts#L98"> <b>constructor</b></a>
 </h3>
@@ -1066,6 +1074,7 @@ Is zone resiliency enabled?  Defaults to `false`.  Changing this forces a new re
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage a managed disk.
 
@@ -1127,6 +1136,7 @@ const copy = new azure.compute.ManagedDisk("copy", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ManagedDisk-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/managedDisk.ts#L138"> <b>constructor</b></a>
 </h3>
@@ -1371,6 +1381,7 @@ A collection containing the availability zone to allocate the Managed Disk in.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage a virtual machine scale set.
 
@@ -1609,6 +1620,7 @@ const testScaleSet = new azure.compute.ScaleSet("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ScaleSet-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/scaleSet.ts#L362"> <b>constructor</b></a>
 </h3>
@@ -2090,6 +2102,7 @@ A collection of availability zones to spread the Virtual Machines over.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Shared Image within a Shared Image Gallery.
 
@@ -2129,6 +2142,7 @@ const testSharedImage = new azure.compute.SharedImage("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SharedImage-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/sharedImage.ts#L102"> <b>constructor</b></a>
 </h3>
@@ -2339,6 +2353,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Shared Image Gallery.
 
@@ -2366,6 +2381,7 @@ const testSharedImageGallery = new azure.compute.SharedImageGallery("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SharedImageGallery-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/sharedImageGallery.ts#L70"> <b>constructor</b></a>
 </h3>
@@ -2517,6 +2533,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Version of a Shared Image within a Shared Image Gallery.
 
@@ -2551,6 +2568,7 @@ const test = new azure.compute.SharedImageVersion("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SharedImageVersion-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/sharedImageVersion.ts#L89"> <b>constructor</b></a>
 </h3>
@@ -2738,6 +2756,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Disk Snapshot.
 
@@ -2768,6 +2787,7 @@ const testSnapshot = new azure.compute.Snapshot("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Snapshot-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/snapshot.ts#L86"> <b>constructor</b></a>
 </h3>
@@ -2970,6 +2990,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a Virtual Machine.
 
@@ -3044,6 +3065,7 @@ const mainVirtualMachine = new azure.compute.VirtualMachine("main", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualMachine-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/virtualMachine.ts#L181"> <b>constructor</b></a>
 </h3>
@@ -3751,9 +3773,11 @@ export const virtualMachineId = test.id;
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/availabilitySet.ts#L145">interface <b>AvailabilitySetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a AvailabilitySet resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AvailabilitySetArgs-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/availabilitySet.ts#L149">property <b>location</b></a>
 </h3>
@@ -3836,9 +3860,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/availabilitySet.ts#L111">interface <b>AvailabilitySetState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering AvailabilitySet resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="AvailabilitySetState-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/availabilitySet.ts#L115">property <b>location</b></a>
 </h3>
@@ -3921,9 +3947,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/dataDiskAttachment.ts#L207">interface <b>DataDiskAttachmentArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a DataDiskAttachment resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DataDiskAttachmentArgs-caching">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/dataDiskAttachment.ts#L211">property <b>caching</b></a>
 </h3>
@@ -3995,9 +4023,11 @@ Specifies if Write Accelerator is enabled on the disk. This can only be enabled 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/dataDiskAttachment.ts#L177">interface <b>DataDiskAttachmentState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering DataDiskAttachment resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="DataDiskAttachmentState-caching">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/dataDiskAttachment.ts#L181">property <b>caching</b></a>
 </h3>
@@ -4069,9 +4099,11 @@ Specifies if Write Accelerator is enabled on the disk. This can only be enabled 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/extension.ts#L300">interface <b>ExtensionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Extension resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ExtensionArgs-autoUpgradeMinorVersion">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/extension.ts#L305">property <b>autoUpgradeMinorVersion</b></a>
 </h3>
@@ -4209,9 +4241,11 @@ this forces a new resource to be created.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/extension.ts#L239">interface <b>ExtensionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Extension resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ExtensionState-autoUpgradeMinorVersion">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/extension.ts#L244">property <b>autoUpgradeMinorVersion</b></a>
 </h3>
@@ -4349,9 +4383,11 @@ this forces a new resource to be created.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getAvailabilitySet.ts#L34">interface <b>GetAvailabilitySetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getAvailabilitySet.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetAvailabilitySetArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getAvailabilitySet.ts#L38">property <b>name</b></a>
 </h3>
@@ -4379,9 +4415,11 @@ The name of the resource group in which the Availability Set exists.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getAvailabilitySet.ts#L48">interface <b>GetAvailabilitySetResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getAvailabilitySet.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetAvailabilitySetResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getAvailabilitySet.ts#L74">property <b>id</b></a>
 </h3>
@@ -4469,9 +4507,11 @@ A mapping of tags assigned to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getImage.ts#L36">interface <b>GetImageArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getImage.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetImageArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getImage.ts#L40">property <b>name</b></a>
 </h3>
@@ -4521,9 +4561,11 @@ By default when matching by regex, images are sorted by name in ascending order 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getImage.ts#L58">interface <b>GetImageResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getImage.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetImageResult-dataDisks">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getImage.ts#L62">property <b>dataDisks</b></a>
 </h3>
@@ -4643,9 +4685,11 @@ is zone resiliency enabled?
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getManagedDisk.ts#L102">interface <b>GetManagedDiskArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getManagedDisk.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetManagedDiskArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getManagedDisk.ts#L106">property <b>name</b></a>
 </h3>
@@ -4689,9 +4733,11 @@ Specifies the name of the resource group.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getManagedDisk.ts#L118">interface <b>GetManagedDiskResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getManagedDisk.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetManagedDiskResult-createOption">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getManagedDisk.ts#L119">property <b>createOption</b></a>
 </h3>
@@ -4809,9 +4855,11 @@ A collection containing the availability zone the managed disk is allocated in.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getPlatformImage.ts#L38">interface <b>GetPlatformImageArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getPlatformImage.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetPlatformImageArgs-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getPlatformImage.ts#L42">property <b>location</b></a>
 </h3>
@@ -4861,9 +4909,11 @@ Specifies the SKU of the Platform Image.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getPlatformImage.ts#L60">interface <b>GetPlatformImageResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getPlatformImage.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetPlatformImageResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getPlatformImage.ts#L72">property <b>id</b></a>
 </h3>
@@ -4923,9 +4973,11 @@ The latest version of the Platform Image.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getSharedImage.ts#L36">interface <b>GetSharedImageArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getSharedImage.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetSharedImageArgs-galleryName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getSharedImage.ts#L40">property <b>galleryName</b></a>
 </h3>
@@ -4964,9 +5016,11 @@ The name of the Resource Group in which the Shared Image Gallery exists.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getSharedImageGallery.ts#L34">interface <b>GetSharedImageGalleryArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getSharedImageGallery.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetSharedImageGalleryArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getSharedImageGallery.ts#L38">property <b>name</b></a>
 </h3>
@@ -4994,9 +5048,11 @@ The name of the Resource Group in which the Shared Image Gallery exists.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getSharedImageGallery.ts#L48">interface <b>GetSharedImageGalleryResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getSharedImageGallery.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetSharedImageGalleryResult-description">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getSharedImageGallery.ts#L52">property <b>description</b></a>
 </h3>
@@ -5070,9 +5126,11 @@ The unique name assigned to the Shared Image Gallery.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getSharedImage.ts#L54">interface <b>GetSharedImageResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getSharedImage.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetSharedImageResult-description">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getSharedImage.ts#L58">property <b>description</b></a>
 </h3>
@@ -5205,9 +5263,11 @@ A mapping of tags assigned to the Shared Image.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getSharedImageVersion.ts#L38">interface <b>GetSharedImageVersionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getSharedImageVersion.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetSharedImageVersionArgs-galleryName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getSharedImageVersion.ts#L42">property <b>galleryName</b></a>
 </h3>
@@ -5257,9 +5317,11 @@ The name of the Resource Group in which the Shared Image Gallery exists.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getSharedImageVersion.ts#L60">interface <b>GetSharedImageVersionResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getSharedImageVersion.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetSharedImageVersionResult-excludeFromLatest">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getSharedImageVersion.ts#L64">property <b>excludeFromLatest</b></a>
 </h3>
@@ -5369,9 +5431,11 @@ One or more `target_region` blocks as documented below.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getSnapshot.ts#L32">interface <b>GetSnapshotArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getSnapshot.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetSnapshotArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getSnapshot.ts#L36">property <b>name</b></a>
 </h3>
@@ -5399,9 +5463,11 @@ Specifies the name of the resource group the Snapshot is located in.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getSnapshot.ts#L46">interface <b>GetSnapshotResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getSnapshot.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetSnapshotResult-creationOption">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getSnapshot.ts#L47">property <b>creationOption</b></a>
 </h3>
@@ -5520,9 +5586,11 @@ The ID of an storage account.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getVirtualMachine.ts#L34">interface <b>GetVirtualMachineArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getVirtualMachine.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetVirtualMachineArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getVirtualMachine.ts#L38">property <b>name</b></a>
 </h3>
@@ -5550,9 +5618,11 @@ Specifies the name of the resource group the Virtual Machine is located in.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getVirtualMachine.ts#L48">interface <b>GetVirtualMachineResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getVirtualMachine.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetVirtualMachineResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/getVirtualMachine.ts#L54">property <b>id</b></a>
 </h3>
@@ -5585,9 +5655,11 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/image.ts#L182">interface <b>ImageArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Image resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ImageArgs-dataDisks">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/image.ts#L186">property <b>dataDisks</b></a>
 </h3>
@@ -5697,9 +5769,11 @@ Is zone resiliency enabled?  Defaults to `false`.  Changing this forces a new re
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/image.ts#L141">interface <b>ImageState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Image resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ImageState-dataDisks">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/image.ts#L145">property <b>dataDisks</b></a>
 </h3>
@@ -5809,9 +5883,11 @@ Is zone resiliency enabled?  Defaults to `false`.  Changing this forces a new re
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/managedDisk.ts#L261">interface <b>ManagedDiskArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ManagedDisk resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ManagedDiskArgs-createOption">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/managedDisk.ts#L265">property <b>createOption</b></a>
 </h3>
@@ -5976,9 +6052,11 @@ A collection containing the availability zone to allocate the Managed Disk in.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/managedDisk.ts#L197">interface <b>ManagedDiskState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ManagedDisk resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ManagedDiskState-createOption">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/managedDisk.ts#L201">property <b>createOption</b></a>
 </h3>
@@ -6143,9 +6221,11 @@ A collection containing the availability zone to allocate the Managed Disk in.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/scaleSet.ts#L569">interface <b>ScaleSetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ScaleSet resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ScaleSetArgs-automaticOsUpgrade">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/scaleSet.ts#L573">property <b>automaticOsUpgrade</b></a>
 </h3>
@@ -6547,9 +6627,11 @@ A collection of availability zones to spread the Virtual Machines over.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/scaleSet.ts#L458">interface <b>ScaleSetState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ScaleSet resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ScaleSetState-automaticOsUpgrade">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/scaleSet.ts#L462">property <b>automaticOsUpgrade</b></a>
 </h3>
@@ -6951,9 +7033,11 @@ A collection of availability zones to spread the Virtual Machines over.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/sharedImage.ts#L210">interface <b>SharedImageArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a SharedImage resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SharedImageArgs-description">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/sharedImage.ts#L214">property <b>description</b></a>
 </h3>
@@ -7084,9 +7168,11 @@ A mapping of tags to assign to the Shared Image.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/sharedImageGallery.ts#L139">interface <b>SharedImageGalleryArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a SharedImageGallery resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SharedImageGalleryArgs-description">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/sharedImageGallery.ts#L143">property <b>description</b></a>
 </h3>
@@ -7147,9 +7233,11 @@ A mapping of tags to assign to the Shared Image Gallery.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/sharedImageGallery.ts#L109">interface <b>SharedImageGalleryState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering SharedImageGallery resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SharedImageGalleryState-description">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/sharedImageGallery.ts#L113">property <b>description</b></a>
 </h3>
@@ -7221,9 +7309,11 @@ The Unique Name for this Shared Image Gallery.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/sharedImage.ts#L160">interface <b>SharedImageState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering SharedImage resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SharedImageState-description">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/sharedImage.ts#L164">property <b>description</b></a>
 </h3>
@@ -7354,9 +7444,11 @@ A mapping of tags to assign to the Shared Image.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/sharedImageVersion.ts#L188">interface <b>SharedImageVersionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a SharedImageVersion resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SharedImageVersionArgs-excludeFromLatest">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/sharedImageVersion.ts#L192">property <b>excludeFromLatest</b></a>
 </h3>
@@ -7464,9 +7556,11 @@ One or more `target_region` blocks as documented below.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/sharedImageVersion.ts#L146">interface <b>SharedImageVersionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering SharedImageVersion resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SharedImageVersionState-excludeFromLatest">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/sharedImageVersion.ts#L150">property <b>excludeFromLatest</b></a>
 </h3>
@@ -7574,9 +7668,11 @@ One or more `target_region` blocks as documented below.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/snapshot.ts#L179">interface <b>SnapshotArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Snapshot resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SnapshotArgs-createOption">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/snapshot.ts#L183">property <b>createOption</b></a>
 </h3>
@@ -7699,9 +7795,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/snapshot.ts#L136">interface <b>SnapshotState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Snapshot resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="SnapshotState-createOption">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/snapshot.ts#L140">property <b>createOption</b></a>
 </h3>
@@ -7824,9 +7922,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/virtualMachine.ts#L355">interface <b>VirtualMachineArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a VirtualMachine resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualMachineArgs-availabilitySetId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/virtualMachine.ts#L359">property <b>availabilitySetId</b></a>
 </h3>
@@ -8143,9 +8243,11 @@ A list of a single item of the Availability Zone which the Virtual Machine shoul
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/virtualMachine.ts#L261">interface <b>VirtualMachineState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering VirtualMachine resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VirtualMachineState-availabilitySetId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/compute/virtualMachine.ts#L265">property <b>availabilitySetId</b></a>
 </h3>

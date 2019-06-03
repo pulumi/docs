@@ -33,6 +33,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages a DevSpace Controller.
 
@@ -47,11 +48,11 @@ const testResourceGroup = new azure.core.ResourceGroup("test", {
     name: "acctestRG1",
 });
 const testKubernetesCluster = new azure.containerservice.KubernetesCluster("test", {
-    agentPoolProfiles: [{
+    agentPoolProfile: {
         count: 1,
         name: "default",
         vmSize: "Standard_DS2_v2",
-    }],
+    },
     dnsPrefix: "acctestaks1",
     location: testResourceGroup.location,
     name: "acctestaks1",
@@ -78,6 +79,7 @@ const testController = new azure.devspace.Controller("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Controller-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devspace/controller.ts#L100"> <b>constructor</b></a>
 </h3>
@@ -264,9 +266,11 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devspace/controller.ts#L199">interface <b>ControllerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Controller resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ControllerArgs-hostSuffix">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devspace/controller.ts#L203">property <b>hostSuffix</b></a>
 </h3>
@@ -363,9 +367,11 @@ The resource id of Azure Kubernetes Service cluster. Changing this forces a new 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devspace/controller.ts#L157">interface <b>ControllerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Controller resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ControllerState-dataPlaneFqdn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/devspace/controller.ts#L161">property <b>dataPlaneFqdn</b></a>
 </h3>

@@ -31,10 +31,12 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 TokenReview attempts to authenticate a token to a known user. Note: TokenReview requests may
 be cached by the webhook token authenticator plugin in the kube-apiserver.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="TokenReview-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authentication/v1beta1/TokenReview.ts#L59"> <b>constructor</b></a>
 </h3>

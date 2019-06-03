@@ -45,6 +45,7 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an Recovery Protected VM.
 
@@ -81,6 +82,7 @@ const vm1 = new azure.recoveryservices.ProtectedVM("vm1", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ProtectedVM-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/recoveryservices/protectedVM.ts#L75"> <b>constructor</b></a>
 </h3>
@@ -221,6 +223,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manages an Recovery Services VM Protection Policy.
 
@@ -281,6 +284,7 @@ const test = new azure.recoveryservices.ProtectionPolicyVM("test", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ProtectionPolicyVM-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L119"> <b>constructor</b></a>
 </h3>
@@ -494,6 +498,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 Manage an Recovery Services Vault.
 
@@ -515,6 +520,7 @@ const vault = new azure.recoveryservices.Vault("vault", {
 });
 ```
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="Vault-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/recoveryservices/vault.ts#L60"> <b>constructor</b></a>
 </h3>
@@ -705,9 +711,11 @@ const vault = pulumi.output(azure.recoveryservices.getVault({
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/recoveryservices/getVMProtectionPolicy.ts#L34">interface <b>GetVMProtectionPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getVMProtectionPolicy.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetVMProtectionPolicyArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/recoveryservices/getVMProtectionPolicy.ts#L38">property <b>name</b></a>
 </h3>
@@ -746,9 +754,11 @@ The name of the resource group in which the Recovery Services VM Protection Poli
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/recoveryservices/getVMProtectionPolicy.ts#L52">interface <b>GetVMProtectionPolicyResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getVMProtectionPolicy.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetVMProtectionPolicyResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/recoveryservices/getVMProtectionPolicy.ts#L63">property <b>id</b></a>
 </h3>
@@ -800,9 +810,11 @@ A mapping of tags assigned to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/recoveryservices/getVault.ts#L32">interface <b>GetVaultArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of arguments for invoking getVault.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetVaultArgs-name">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/recoveryservices/getVault.ts#L36">property <b>name</b></a>
 </h3>
@@ -830,9 +842,11 @@ The name of the resource group in which the Recovery Services Vault resides.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/recoveryservices/getVault.ts#L46">interface <b>GetVaultResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 A collection of values returned by getVault.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="GetVaultResult-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/recoveryservices/getVault.ts#L64">property <b>id</b></a>
 </h3>
@@ -898,9 +912,11 @@ A mapping of tags assigned to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/recoveryservices/protectedVM.ts#L147">interface <b>ProtectedVMArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ProtectedVM resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ProtectedVMArgs-backupPolicyId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/recoveryservices/protectedVM.ts#L151">property <b>backupPolicyId</b></a>
 </h3>
@@ -961,9 +977,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/recoveryservices/protectedVM.ts#L121">interface <b>ProtectedVMState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ProtectedVM resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ProtectedVMState-backupPolicyId">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/recoveryservices/protectedVM.ts#L125">property <b>backupPolicyId</b></a>
 </h3>
@@ -1024,9 +1042,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L218">interface <b>ProtectionPolicyVMArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a ProtectionPolicyVM resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ProtectionPolicyVMArgs-backup">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L222">property <b>backup</b></a>
 </h3>
@@ -1160,9 +1180,11 @@ Specifies the timezone. Defaults to `UTC`
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L172">interface <b>ProtectionPolicyVMState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering ProtectionPolicyVM resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="ProtectionPolicyVMState-backup">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L176">property <b>backup</b></a>
 </h3>
@@ -1296,9 +1318,11 @@ Specifies the timezone. Defaults to `UTC`
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/recoveryservices/vault.ts#L126">interface <b>VaultArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 The set of arguments for constructing a Vault resource.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VaultArgs-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/recoveryservices/vault.ts#L130">property <b>location</b></a>
 </h3>
@@ -1359,9 +1383,11 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/recoveryservices/vault.ts#L100">interface <b>VaultState</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
 
 Input properties used for looking up and filtering Vault resources.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="VaultState-location">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/2a0055140cfc0f4bc9650e85334e4bbbfbae4a3e/sdk/nodejs/recoveryservices/vault.ts#L104">property <b>location</b></a>
 </h3>

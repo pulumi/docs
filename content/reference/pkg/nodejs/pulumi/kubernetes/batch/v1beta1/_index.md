@@ -32,9 +32,11 @@ aliases:
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 CronJob represents the configuration of a single cron job.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CronJob-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/batch/v1beta1/CronJob.ts#L63"> <b>constructor</b></a>
 </h3>
@@ -197,9 +199,11 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{% md %}}
 
 CronJobList is a collection of cron jobs.
 
+{{% /md %}}
 <h3 class="pdoc-member-header" id="CronJobList-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/batch/v1beta1/CronJobList.ts#L56"> <b>constructor</b></a>
 </h3>
