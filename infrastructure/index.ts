@@ -31,6 +31,15 @@ const contentBucket = new aws.s3.Bucket(
         website: {
             indexDocument: "index.html",
             errorDocument: "404.html",
+            routingRules: JSON.stringify([{
+                "Condition": {
+                    "KeyPrefixEquals": "reference/pkg/nodejs/@pulumi/",
+                },
+                "Redirect": {
+                    "HostName": config.targetDomain,
+                    "ReplaceKeyPrefixWith": "reference/pkg/nodejs/pulumi/",
+                },
+            }]),
         },
     },
     {
