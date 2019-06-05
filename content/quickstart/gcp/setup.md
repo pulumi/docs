@@ -43,5 +43,5 @@ values as `project`, `region`, or `zone` properties.  You may also set these val
 ```bash
 $ pulumi config set gcp:project <your-project-here>
 $ pulumi config set gcp:region <your-region-here>
-$ pulumi config set gcp:region <your-zone-here>
+$ pulumi config set gcp:zone <your-zone-here>
 ```
