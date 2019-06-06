@@ -1,9 +1,10 @@
 ---
-title: "Tutorial: Hello, World!"
+title: "Tutorial #1: Hello, World!"
 aliases: ["tutorial-exposed-deployment.html"]
 menu:
   quickstart:
-    parent: kubernetes
+    parent: kubernetes-workloads
+    weight: 6
 ---
 
 In this tutorial, we'll deploy `nginx` to a Kubernetes cluster, and publicly expose it to the

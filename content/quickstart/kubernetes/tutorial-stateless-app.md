@@ -1,9 +1,10 @@
 ---
-title: "Tutorial: Run a Stateless App Deployment"
+title: "Tutorial #6: Run a Stateless App Deployment"
 aliases: ["tutorial-stateless-app.html"]
 menu:
   quickstart:
-    parent: kubernetes
+    parent: kubernetes-workloads
+    weight: 6
 ---
 
 In this tutorial, we'll run an application using a [Kubernetes
@@ -266,30 +267,21 @@ to see what this looks like. After that, we'll clean up and we're done!
 
 ### Cleaning Up
 
-7.  From here, feel free to experiment. As soon as you're done, let's clean up our stack:
+From here, feel free to experiment. As soon as you're done, let's clean up our stack:
 
-    ```shell
-    $ pulumi destroy --yes
-    $ pulumi stack rm --yes
-    ```
+```shell
+$ pulumi destroy --yes
+$ pulumi stack rm --yes
+```
 
-    Afterwards, query the list of pods to verify that none are remaining:
+Afterwards, query the list of pods to verify that none are remaining:
 
-    ```
-    $ kubectl get pods -l app=nginx
-    ```
+```
+$ kubectl get pods -l app=nginx
+```
 
-    This should print out something along these lines:
+This should print out something along these lines:
 
-    ```
-    No resources found.
-    ```
-
-## Next Steps
-
-Congratulations! You've created your first Pulumi Kubernetes application.
-
-The next tutorial entails creating a more full-fledged application that has three Kubernetes Service objects, in
-addition to Deployments, which gives us stable, load balanced IP addresses more suitable for a production application:
-
-* [Guestbook App with Redis and Nginx]({{< relref "tutorial-guestbook.md" >}})
+```
+No resources found.
+```

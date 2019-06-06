@@ -17,7 +17,7 @@ Pulumi is [open source on GitHub](https://github.com/pulumi/pulumi) and is free 
 
 | | | 
 :-------------------------:|:-------------------------:|:-------------------------:
-<img src="/images/quickstart/hourglass.png" width="350"/>|                     |<img src="/images/quickstart/general-architecture.png" width="300"/>
+<img src="/images/quickstart/hourglass.svg" width="450"/>|                      |<img src="/images/quickstart/general-architecture.svg" width="400"/>
 
 ## Download and Install
 

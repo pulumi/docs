@@ -7,43 +7,60 @@ menu:
   quickstart:
     identifier: kubernetes-setup
     parent: kubernetes
-    weight: 1
+    weight: 2
 ---
 
 <!-- LINKS -->
-[Pulumi Kubernetes provider]: {{< relref "./" >}}
-[Kubernetes Go client library]: https://github.com/kubernetes/client-go
-[kubeconfig file]: https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/
-[GKE]: https://cloud.google.com/kubernetes-engine/docs/tutorials/
-[EKS]: https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html
-[AKS]: https://docs.microsoft.com/en-us/azure/aks/
+[pulumi-kubernetes-provider]: {{< relref "./" >}}
+[client-go]: https://github.com/kubernetes/client-go
+[gke-tutorial]: {{< relref "/tutorial-gke" >}}
+[eks-tutorial]: {{< relref "/tutorial-eks" >}}
+[aks-tutorial]: {{< relref "/tutorial-azure-kubernetes-service" >}}
 [Heptio AWS quickstart]: https://aws.amazon.com/quickstart/architecture/heptio-kubernetes/
+[provider-args]: https://pulumi.io/reference/pkg/nodejs/pulumi/kubernetes/#ProviderArgs
+[provider-kubeconfig]: https://pulumi.io/reference/pkg/nodejs/pulumi/kubernetes/#ProviderArgs-kubeconfig
+[kubeconfig]: https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/
+[install]: {{< relref "/quickstart/install.md" >}}
+[nodejs]: https://nodejs.org/en/
+[npm]: https://www.npmjs.com/get-npm
+[yarn]: https://yarnpkg.com/en/docs/install
 
-The [Pulumi Kubernetes provider] authenticates and connects to a Kubernetes cluster using a local [kubeconfig file]. This logic is implemented using the official [Kubernetes Go client library], so Pulumi's behavior is identical to `kubectl`. If you have already provisioned a Kubernetes cluster and set up `kubectl` to connect to it, the Pulumi CLI should "just work."
+Your Pulumi program is required to import the [pulumi/kubernetes][pulumi-kubernetes-provider] provider package to allow the Pulumi CLI to authenticate and interact with a running Kubernetes cluster.
 
-**Note:** If you don't already have a Kubernetes cluster, you can [create one with Pulumi](https://github.com/pulumi/examples/tree/master/gcp-ts-gke). This allows you to manage the full stack, from the Kubernetes cluster to the workloads running on it! [GKE](https://cloud.google.com/kubernetes-engine/docs/tutorials/), [EKS](https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html) and [AKS](https://docs.microsoft.com/en-us/azure/aks/) are supported. 
+By default, Pulumi will use a local [kubeconfig] if available, or one can be passed as a [provider argument][provider-kubeconfig] in the request.
 
-## Pre-requisites
+With the `kubeconfig` available, Pulumi communicates with the API Server using the official Kubernetes [client-go] library, just like `kubectl` does.
 
-If you're not yet set up, you'll need to do two things:
+## Pre-Requisites
 
-1.  Provision a Kubernetes cluster. There are several popular guides for each of the major public clouds:
-    * For **AWS**, there is [EKS](https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html) and the [Heptio quickstart](https://aws.amazon.com/quickstart/architecture/heptio-kubernetes/).
-    * For **Azure**, there is [AKS](https://docs.microsoft.com/en-us/azure/aks/).
-    * For **GCP**, there is [GKE](https://cloud.google.com/kubernetes-engine/docs/tutorials/).
-1.  Download `kubectl`, the Kubernetes CLI. There is an extensive tutorial available [in the Kubernetes docs](https://kubernetes.io/docs/tasks/tools/install-kubectl/). If you're using [Homebrew](https://brew.sh/) on macOS, you can install the community-managed `kubectl` formula via `brew install kubectl`.
+If you do not have a cluster set up and running yet, you'll need to do the
+following steps.
 
-## Configuration
+1.  Follow the directions [here][install] to install the Pulumi CLI.
+1.  Install a package manager for your Pulumi program language runtime, such as [npm] or [Yarn] for [Node.js][nodejs], or PyPI for Python.
+1.  Provision a Kubernetes cluster. For a new managed Kubernetes cluster, check out the [cluster guides.]({{< relref "tutorial-clusters" >}})
+1.  Download [`kubectl`](https://kubernetes.io/docs/tasks/tools/install-kubectl/) and verify the cluster is up and running. 
 
-By default, `kubectl` and Pulumi will both look for a kubeconfig file in:
+## Steps
 
-* `$KUBECONFIG`, the environment variable
-* `~/.kube/config`, in the current user's home directory
+By default, Pulumi will look for a kubeconfig file in the following locations,
+just like `kubectl`:
 
-If the kubeconfig file is not in either of these locations, Pulumi will not find it, and it will
-fail to authenticate against the cluster.
+* The environment variable: `$KUBECONFIG`,
+* Or in current user's default kubeconfig directory: `~/.kube/config`
 
-> Pulumi never sends your Kubernetes authentication secrets or credentials to the Pulumi service. Because the Pulumi client uses the Kubernetes Go client to connect to the cluster and execute operations on your behalf, your credentials are only ever stored where you left them (typically in the local kubeconfig file, `~/.ssh`, and so on).
+If the kubeconfig file is not in either of these locations, Pulumi will **not** find it, and it will
+fail to authenticate against the cluster. Set one of these locations to a valid kubeconfig file, if you have not done so
+already.
+
+Once the cluster is accessible, setup is complete and you can proceed to the
+desired tutorials.
+
+> Note: Pulumi **never** sends **any** authentication secrets or credentials to the Pulumi service. See the [FAQ]({{< relref "faq#does-the-pulumi-service-see-my-credentials-in-the-kubeconfig-file">}}) for more detail.
+
+## Misc.
+
+#### Kubernetes Configuration
 
 The kubeconfig file defines some number of _contexts_. Each context is a name that is associated
 with a _cluster_, _namespace_, and a "_user_" (a local-only name that's associated with a credential
@@ -59,14 +76,14 @@ $ kubectl config \
 ```
 
 If you have done this and are using the default context file, you will be able to set the
-configuration variable `kubernetes:context` to the given context name:
+configuration variable `kubernetes:context` in the Pulumi config system to the given context name:
 
 ```shell
 $ pulumi stack init new-kube-stack
 $ pulumi config set kubernetes:context my-context
 ```
 
-If you don't want to need to select a context everywhere, you can always make it the default:
+If you don't want to select a context, you can always make it the default:
 
 ```shell
 $ kubectl config \
@@ -77,25 +94,14 @@ $ kubectl config \
 > others; it makes your stack dependent on ambient information not known to Pulumi, an anti-pattern
 > that leads to unrepeatable deployments.
 
-Additionally, the Kubernetes provider accepts the following configuration settings. These can be
-provided to the default Kubernetes provider via `pulumi config set kubernetes:<option>`, or passed
-to the constructor of `new kubernetes.Provider` to construct a specific instance of the Kubernetes provider.
+Additionally, the Kubernetes provider accepts many [configuration settings][provider-args].
 
-* `kubeconfig`: (Optional) The kubeconfig file to use for all resource operations.
-* `context`: (Optional) Override the context to use. This works with both kubeconfig files that are
-  taken from the system, and those that are supplied with the `kubeconfig` configuration variable.
-* `cluster`: (Optional) Override the cluster to use. This works with both kubeconfig files that are
-  taken from the system, and those that are supplied with the `kubeconfig` configuration variable.
-* `namespace`: (Optional) Override the namespace to use. This works with both kubeconfig files that
-  are taken from the system, and those that are supplied with the `kubeconfig` configuration
-  variable.
+These can be provided to the default Kubernetes provider via `pulumi config set kubernetes:<option>`, or passed
+to the constructor of a `new kubernetes.Provider` to construct a specific instance of the Kubernetes provider for your requests.
 
-## Pulumi Service Dashboard Links
+#### Pulumi Dashboard Resource Links
 
-Each Kubernetes resource managed by Pulumi will have a link on the corresponding Pulumi Service webpage
-to view the Kubernetes Dashboard page for that resource. These links are only valid after the following
-prerequisite steps are taken:
+Each Kubernetes resource managed by Pulumi will have a link in the corresponding [Pulumi Dashboard](https://app.pulumi.com")
+to view the resource in the cluster. These links are local, and require the client run `kubectl proxy` beforehand to access the resource.
 
-1. Install the [Kubernetes Dashboard](https://github.com/kubernetes/dashboard).
-1. Use `kubectl proxy` to expose the Dashboard on `localhost`.
-1. [Authenticate](https://github.com/kubernetes/dashboard/wiki/Access-control#authentication) to the Dashboard.
+To learn more about `kubectl proxy` check out the [reference docs](https://kubernetes.io/docs/tasks/access-kubernetes-api/http-proxy-access-api/).

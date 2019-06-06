@@ -1,11 +1,12 @@
 ---
-title: "Tutorial: Guestbook App with Redis and Nginx"
+title: "Tutorial #3: Guestbook App with Redis and Nginx"
 aliases:
     - tutorial-guestbook.html
     - /quickstart/kubernetes-guestbook.html
 menu:
   quickstart:
-    parent: kubernetes
+    parent: kubernetes-workloads
+    weight: 6
 ---
 
 In this tutorial, we'll build and deploy
