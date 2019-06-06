@@ -17,8 +17,8 @@ menu:
 [eks-tutorial]: {{< relref "/tutorial-eks" >}}
 [aks-tutorial]: {{< relref "/tutorial-azure-kubernetes-service" >}}
 [Heptio AWS quickstart]: https://aws.amazon.com/quickstart/architecture/heptio-kubernetes/
-[provider-args]: https://pulumi.io/reference/pkg/nodejs/pulumi/kubernetes/#ProviderArgs
-[provider-kubeconfig]: https://pulumi.io/reference/pkg/nodejs/pulumi/kubernetes/#ProviderArgs-kubeconfig
+[provider-args]: {{< relref "/reference/pkg/nodejs/pulumi/kubernetes#ProviderArgs" >}}
+[provider-kubeconfig]: {{< relref "/reference/pkg/nodejs/pulumi/kubernetes#ProviderArgs-kubeconfig" >}}
 [kubeconfig]: https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/
 [install]: {{< relref "/quickstart/install.md" >}}
 [nodejs]: https://nodejs.org/en/
@@ -101,7 +101,7 @@ to the constructor of a `new kubernetes.Provider` to construct a specific instan
 
 #### Pulumi Dashboard Resource Links
 
-Each Kubernetes resource managed by Pulumi will have a link in the corresponding [Pulumi Dashboard](https://app.pulumi.com")
+Each Kubernetes resource managed by Pulumi will have a link in the corresponding [Pulumi Console](https://app.pulumi.com")
 to view the resource in the cluster. These links are local, and require the client run `kubectl proxy` beforehand to access the resource.
 
 To learn more about `kubectl proxy` check out the [reference docs](https://kubernetes.io/docs/tasks/access-kubernetes-api/http-proxy-access-api/).

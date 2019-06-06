@@ -1,8 +1,9 @@
 ---
 title: "Tutorial: EKS - Hello World!"
 aliases:
-    - tutorial-eks.html
-    - /quickstart/kubernetes/eks-hello-world.html
+    - /quickstart/aws/tutorial-eks.html
+    - /quickstart/aws/tutorial-eks/
+    - /quickstart/eks-hello-world.html
 menu:
   quickstart:
     parent: kubernetes-clusters

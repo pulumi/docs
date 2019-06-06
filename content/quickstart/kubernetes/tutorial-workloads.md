@@ -1,6 +1,5 @@
 ---
 title: Tutorials - Workloads
-aliases: ["/reference/kubernetes-workloads.html"]
 menu:
   quickstart:
     identifier: kubernetes-workloads
