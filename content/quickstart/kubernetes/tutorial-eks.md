@@ -2,10 +2,11 @@
 title: "Tutorial: EKS - Hello World!"
 aliases:
     - tutorial-eks.html
-    - /quickstart/eks-hello-world.html
+    - /quickstart/kubernetes/eks-hello-world.html
 menu:
   quickstart:
-    parent: aws
+    parent: kubernetes-clusters
+    weight: 1
 ---
 
 In this tutorial, we'll launch a new Managed Kubernetes cluster in Elastic Container Service for Kubernetes (EKS) on AWS. The [code for this tutorial](https://github.com/pulumi/examples/tree/master/aws-ts-eks-hello-world) is available on GitHub.
