@@ -186,7 +186,7 @@ Resource inputs have type [`Input`][pulumi.Input], which accepts either a raw va
 
 ##### Apply {#apply}
 
-To transform an output into a new value, use the [`apply` method]({{< relref "pkg/nodejs/pulumi/pulumi#property-apply" >}}). For example, use the following to create an HTTPS URL from the DNS name of a virtual machine: 
+To transform an output into a new value, use the [`apply` method]({{< relref "pkg/nodejs/pulumi/pulumi/#OutputInstance-apply" >}}). For example, use the following to create an HTTPS URL from the DNS name of a virtual machine:
 
 {{< langchoose >}}
 
@@ -1185,7 +1185,7 @@ For more details see the docs on [serializing functions]({{< relref "serializing
 
 ### OutputInstance.apply
 
-It is recommended that the `func` argument of [OutputInstance.apply]({{< relref "pkg/nodejs/pulumi/pulumi#Output-apply" >}}) not create any resources, as doing so can lead to the results of `pulumi preview` being wrong, as the `apply` callback will not get run during a preview (because the real outputs values aren't yet known until the resources are deployed), and therefore any resources created in the callback will not be seen during the `preview`.  
+It is recommended that the `func` argument of [OutputInstance.apply]({{< relref "pkg/nodejs/pulumi/pulumi/#OutputInstance-apply" >}}) not create any resources, as doing so can lead to the results of `pulumi preview` being wrong, as the `apply` callback will not get run during a preview (because the real outputs values aren't yet known until the resources are deployed), and therefore any resources created in the callback will not be seen during the `preview`.
 
 However, you may have a scenario in which the actual value, such as an array of Outputs, is needed to create a resource but is not determined until the time of `pulumi update` and after part of the deployment has already happened (e.g. an array of [Nameservers]({{< relref "pkg/nodejs/pulumi/aws/route53#Zone-nameServers" >}})).  In that case, Pulumi lets you express this within the `apply`, but be cautioned that the preview may not include some changes to resources that are created (or later removed) from within the `apply`.
 
