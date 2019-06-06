@@ -11,7 +11,7 @@ menu:
 
 The OpenStack provider for Pulumi can be used to provision any of the cloud resources available in [OpenStack](https://www.openstack.org/).  The OpenStack provider must be configured with credentials to deploy and update resources in an OpenStack cloud.
 
-See the [full API documentation]({{< relref "/reference/pkg/nodejs/pulumi/openstack" >}}) for complete details of the available OpenStack provider APIs.
+See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/openstack" >}}) for complete details of the available OpenStack provider APIs.
 
 ## Setup
 
@@ -36,4 +36,4 @@ The following packages are available in packager managers:
 * Python: [`pulumi-openstack`](https://pypi.org/project/pulumi-openstack/)
 * Go: [`github.com/pulumi/pulumi-openstack/sdk/go/openstack`](https://github.com/pulumi/pulumi-openstack)
 
-The OpenStack provider is open source and available in the [pulumi/pulumi-openstack](https://github.com/pulumi/pulumi-openstack) repo. 
+The OpenStack provider is open source and available in the [pulumi/pulumi-openstack](https://github.com/pulumi/pulumi-openstack) repo.

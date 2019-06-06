@@ -40,8 +40,8 @@ helm init --client-only
 ```
 
 If you haven't already, follow the steps in [Pulumi Installation and
-Setup]({{< relref "/quickstart/install.md" >}}) and [Configuring Pulumi
-Kubernetes]({{< relref "/quickstart/kubernetes/setup.md" >}}) to get setup with
+Setup]({{< relref "/docs/quickstart/install.md" >}}) and [Configuring Pulumi
+Kubernetes]({{< relref "/docs/quickstart/kubernetes/setup.md" >}}) to get setup with
 Pulumi and Kubernetes.
 
 Now, install dependencies:

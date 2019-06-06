@@ -4568,10 +4568,35 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="function">
+<dt id="pulumi_kubernetes.yaml.copy">
+<code class="descclassname">pulumi_kubernetes.yaml.</code><code class="descname">copy</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.yaml.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shallow copy operation on arbitrary Python objects.</p>
+<p>See the module’s <strong>doc</strong> string for more info.</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="pulumi_kubernetes.yaml.deepcopy">
 <code class="descclassname">pulumi_kubernetes.yaml.</code><code class="descname">deepcopy</code><span class="sig-paren">(</span><em>x</em>, <em>memo=None</em>, <em>_nil=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.yaml.deepcopy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deep copy operation on arbitrary Python objects.</p>
 <p>See the module’s <strong>doc</strong> string for more info.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_kubernetes.yaml.getargspec">
+<code class="descclassname">pulumi_kubernetes.yaml.</code><code class="descname">getargspec</code><span class="sig-paren">(</span><em>func</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.yaml.getargspec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the names and default values of a function’s parameters.</p>
+<p>A tuple of four things is returned: (args, varargs, keywords, defaults).
+‘args’ is a list of the argument names, including keyword-only argument names.
+‘varargs’ and ‘keywords’ are the names of the * and ** parameters or None.
+‘defaults’ is an n-tuple of the default values of the last n parameters.</p>
+<p>This function is deprecated, as it does not support annotations or
+keyword-only parameters and will raise ValueError if either is present
+on the supplied callable.</p>
+<p>For a more structured introspection API, use inspect.signature() instead.</p>
+<p>Alternatively, use getfullargspec() for an API with a similar namedtuple
+based interface, but full support for annotations and keyword-only
+parameters.</p>
+<p>Deprecated since Python 3.5, use <code class="docutils literal notranslate"><span class="pre">inspect.getfullargspec()</span></code>.</p>
 </dd></dl>
 
 </div>

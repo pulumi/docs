@@ -476,7 +476,8 @@ Guide</a>.</li>
 <dl class="attribute">
 <dt id="pulumi_aws.ecs.Service.wait_for_steady_state">
 <code class="descname">wait_for_steady_state</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.Service.wait_for_steady_state" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, Terraform will wait for the service to reach a steady state (like <cite>``aws ecs wait services-stable`</cite> &lt;<a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/ecs/wait/services-stable.html">https://docs.aws.amazon.com/cli/latest/reference/ecs/wait/services-stable.html</a>&gt;`_) before continuing. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="pulumi_aws.ecs.Service.translate_output_property">

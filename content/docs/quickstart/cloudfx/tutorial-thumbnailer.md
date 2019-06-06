@@ -79,8 +79,8 @@ and a video walkthrough of this example is [available on YouTube](https://www.yo
 
     This code declares the following resources:
 
-    - **Cloud infrastructure**. S3 bucket for videos and still frames. We define a [stack output property]({{< relref "/reference/stack.md#outputs" >}}) `bucketName`, to easily retrieve this value after the project has been deployed.
-    - **Containers**. Uses [cloud.Task]({{< relref "/reference/pkg/nodejs/pulumi/cloud#Task" >}}), which is a high-level, convenient component for working with containers. The component automatically provisions a container registry instance in ECR, runs a Docker build, and saves the Docker image to the provisioned ECR instance. It also defines an ECS task and configures it to use the built image.
+    - **Cloud infrastructure**. S3 bucket for videos and still frames. We define a [stack output property]({{< relref "/docs/reference/stack.md#outputs" >}}) `bucketName`, to easily retrieve this value after the project has been deployed.
+    - **Containers**. Uses [cloud.Task]({{< relref "/docs/reference/pkg/nodejs/pulumi/cloud#Task" >}}), which is a high-level, convenient component for working with containers. The component automatically provisions a container registry instance in ECR, runs a Docker build, and saves the Docker image to the provisioned ECR instance. It also defines an ECS task and configures it to use the built image.
     - **Serverless functions**
       - The Lambda function `onNewVideo` is triggered whenever a new `.mp4` video file is uploaded to the S3 bucket. The Lambda extracts the time index that is encoded in the video filename (in the form `file_mm-ss`) and launches the container task.
       - The Lambda function `onNewThumbnail` is triggered when a new `.jpg` thumbnail file is uploaded to the S3 bucket, and prints a message to the log file.
@@ -119,7 +119,7 @@ and a video walkthrough of this example is [available on YouTube](https://www.yo
     $ pulumi config set cloud-aws:useFargate true
     ```
 
-1.  Preview and deploy changes via `pulumi up`, which will take a few minutes. During the preview phase, Pulumi runs the Docker build. 
+1.  Preview and deploy changes via `pulumi up`, which will take a few minutes. During the preview phase, Pulumi runs the Docker build.
 
     ```bash
     $ pulumi up
@@ -130,7 +130,7 @@ and a video walkthrough of this example is [available on YouTube](https://www.yo
       ...
       global: global
         info: Building container image 'pulum-dc8d99de-container': context=./docker-ffmpeg-thumb
-    
+
     Do you want to perform this update? yes
     Updating stack 'thumbnailer-testing'
     Performing changes:
@@ -159,7 +159,7 @@ To test the application, we'll upload a video to S3, view the running applicatio
     upload: cat.mp4 to s3://bucket-0c91106/cat_00-01.mp4
     ```
 
-### 2. View logs 
+### 2. View logs
 
 Run `pulumi logs -f` for the streaming logs of the Lambda functions as well as the Fargate task. Note that the log contains a prefix that matches the functions and tasks in your code, such as `onNewVideo` and `ffmpegThumbTask`:
 
@@ -179,11 +179,11 @@ upload: ./cat.jpg to s3://bucket-756b44a/cat.jpg                  pleted 86.6 Ki
 
 ### 3. Download the thumbnail file
 
-After you see the `*** New thumbnail` message, copy the jpg from S3. 
+After you see the `*** New thumbnail` message, copy the jpg from S3.
 
 ```bash
 $ aws s3 cp s3://$(pulumi stack output bucketName)/cat.jpg .
-download: s3://bucket-0c91106/cat.jpg to ./cat.jpg            
+download: s3://bucket-0c91106/cat.jpg to ./cat.jpg
 ```
 
 ## Clean up

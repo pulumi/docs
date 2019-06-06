@@ -36,14 +36,14 @@ You can accept the defaults for this command. For instance, you can change the A
 
 <img src="/images/quickstart/hello/Quickstart1.png" alt="Run Pulumi new" width="700">
 
-After some dependency installations from NPM, you'll see a few files have been generated from this initialization process. 
+After some dependency installations from NPM, you'll see a few files have been generated from this initialization process.
 
 <img src="/images/quickstart/hello/Quickstart2.png" alt="View files" width="700">
 
 Let's look at some of those.
 
-- `Pulumi.yaml` defines the [project]({{< relref "/reference/project.md" >}}).
-- `Pulumi.ahoy-pulumi-dev.yaml` is the [configuration file]({{< relref "/reference/config.md" >}}) for the stack we initialized.
+- `Pulumi.yaml` defines the [project]({{< relref "/docs/reference/project.md" >}}).
+- `Pulumi.ahoy-pulumi-dev.yaml` is the [configuration file]({{< relref "/docs/reference/config.md" >}}) for the stack we initialized.
 - `www` contains our sample static content.
 - The key file for defining our stack resources `index.js` so let's examine that.
 
@@ -85,7 +85,7 @@ const endpoint = new awsx.apigateway.API("hello", {
 exports.url = endpoint.url;
 ```
 
-See the [reference documentation]({{< relref "/reference" >}}) for details on the APIs we're using.
+See the [reference documentation]({{< relref "/docs/reference" >}}) for details on the APIs we're using.
 
 ## Deploy the stack
 
@@ -149,4 +149,4 @@ From here, you can dive deeper:
         REST APIs that use a document database
   - [Multi-cloud Serverless plus Containers]({{< relref "../cloudfx/tutorial-thumbnailer.md" >}}): Create a multi-cloud video
         thumbnail app that uses containers, serverless, and infrastructure together
-- Take [a tour of Pulumi]({{< relref "/tour" >}}).
+- Take [a tour of Pulumi]({{< relref "/docs/tour" >}}).

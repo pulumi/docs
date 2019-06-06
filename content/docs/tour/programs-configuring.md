@@ -10,7 +10,7 @@ menu:
 
 Programs and packages use configuration variables for easy per-stack customization.
 
-The [`pulumi config`]({{< relref "/reference/cli/pulumi_config.md" >}}) family of commands manage a stack's configuration.
+The [`pulumi config`]({{< relref "/docs/reference/cli/pulumi_config.md" >}}) family of commands manage a stack's configuration.
 
 Each configuration setting inside of a stack has a key and a value.  We will interact with settings using the keys.
 These keys include the package name and the variable name, as in `aws:region` which is the `aws` package's `region`.

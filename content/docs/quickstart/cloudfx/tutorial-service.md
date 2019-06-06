@@ -9,7 +9,7 @@ menu:
     parent: cloud
 ---
 
-In this tutorial, we'll use JavaScript to build and deploy a simple container using the [`@pulumi/cloud`]({{< relref "/reference/pkg/nodejs/pulumi/cloud" >}}) framework.  This example can be deployed to AWS (on either Fargate or ECS) or to Azure (on ACI).  By authoring our infrastructure using the `@pulumi/cloud` framework, it can be deployed transparently to either cloud (with support for other clouds on the roadmap). The [code for this tutorial](https://github.com/pulumi/examples/tree/master/cloud-js-containers) is available on GitHub.
+In this tutorial, we'll use JavaScript to build and deploy a simple container using the [`@pulumi/cloud`]({{< relref "/docs/reference/pkg/nodejs/pulumi/cloud" >}}) framework.  This example can be deployed to AWS (on either Fargate or ECS) or to Azure (on ACI).  By authoring our infrastructure using the `@pulumi/cloud` framework, it can be deployed transparently to either cloud (with support for other clouds on the roadmap). The [code for this tutorial](https://github.com/pulumi/examples/tree/master/cloud-js-containers) is available on GitHub.
 
 ## Prerequisites
 
@@ -47,7 +47,7 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container us
     exports.url = service.defaultEndpoint.apply(e => `http://${e.hostname}`);
     ```
 
-    This example uses [cloud.Service]({{< relref "/reference/pkg/nodejs/pulumi/cloud#Service" >}}), which is a high-level, convenient interface for building containers and provisioning a container service on your target cloud.
+    This example uses [cloud.Service]({{< relref "/docs/reference/pkg/nodejs/pulumi/cloud#Service" >}}), which is a high-level, convenient interface for building containers and provisioning a container service on your target cloud.
 
 1.  Create a subfolder `app` with the following files:
 

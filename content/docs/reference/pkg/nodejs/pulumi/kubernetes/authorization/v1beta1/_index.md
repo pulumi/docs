@@ -23,14 +23,14 @@ aliases:
 <li><a href="#SubjectAccessReview">class SubjectAccessReview</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/LocalSubjectAccessReview.ts">authorization/v1beta1/LocalSubjectAccessReview.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/SelfSubjectAccessReview.ts">authorization/v1beta1/SelfSubjectAccessReview.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/SelfSubjectRulesReview.ts">authorization/v1beta1/SelfSubjectRulesReview.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/SubjectAccessReview.ts">authorization/v1beta1/SubjectAccessReview.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/LocalSubjectAccessReview.ts">authorization/v1beta1/LocalSubjectAccessReview.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/SelfSubjectAccessReview.ts">authorization/v1beta1/SelfSubjectAccessReview.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/SelfSubjectRulesReview.ts">authorization/v1beta1/SelfSubjectRulesReview.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/SubjectAccessReview.ts">authorization/v1beta1/SubjectAccessReview.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="LocalSubjectAccessReview">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/LocalSubjectAccessReview.ts#L13">class <b>LocalSubjectAccessReview</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/LocalSubjectAccessReview.ts#L14">class <b>LocalSubjectAccessReview</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -42,7 +42,7 @@ scoped policy that includes permissions checking.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LocalSubjectAccessReview-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/LocalSubjectAccessReview.ts#L61"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/LocalSubjectAccessReview.ts#L74"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -59,7 +59,7 @@ Create a authorization.v1beta1.LocalSubjectAccessReview resource with the given 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocalSubjectAccessReview-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/LocalSubjectAccessReview.ts#L56">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/LocalSubjectAccessReview.ts#L57">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -75,18 +75,8 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="LocalSubjectAccessReview-getInputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/LocalSubjectAccessReview.ts#L60">method <b>getInputs</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.authorization.v1beta1.LocalSubjectAccessReview</pre>
-
-{{% /md %}}
-</div>
 <h3 class="pdoc-member-header" id="LocalSubjectAccessReview-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -96,21 +86,21 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocalSubjectAccessReview-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/LocalSubjectAccessReview.ts#L68">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+<pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
 
 
-Returns true if the given object is an instance of CustomResource.  This is designed to work even when
-multiple copies of the Pulumi SDK have been loaded into the same process.
+Returns true if the given object is an instance of LocalSubjectAccessReview.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocalSubjectAccessReview-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/LocalSubjectAccessReview.ts#L20">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/LocalSubjectAccessReview.ts#L21">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"authorization.k8s.io/v1beta1"</span>&gt;;</pre>
@@ -124,7 +114,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocalSubjectAccessReview-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -136,7 +126,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocalSubjectAccessReview-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/LocalSubjectAccessReview.ts#L28">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/LocalSubjectAccessReview.ts#L29">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"LocalSubjectAccessReview"</span>&gt;;</pre>
@@ -150,7 +140,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocalSubjectAccessReview-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/LocalSubjectAccessReview.ts#L31">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/LocalSubjectAccessReview.ts#L32">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
@@ -158,7 +148,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocalSubjectAccessReview-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/LocalSubjectAccessReview.ts#L37">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/LocalSubjectAccessReview.ts#L38">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>spec: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.authorization.v1beta1.SubjectAccessReviewSpec&gt;;</pre>
@@ -170,7 +160,7 @@ the namespace you made the request against.  If empty, it is defaulted.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocalSubjectAccessReview-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/LocalSubjectAccessReview.ts#L42">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/LocalSubjectAccessReview.ts#L43">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>status: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.authorization.v1beta1.SubjectAccessReviewStatus&gt;;</pre>
@@ -181,7 +171,7 @@ Status is filled in by the server and indicates whether the request is allowed o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocalSubjectAccessReview-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -194,7 +184,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SelfSubjectAccessReview">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/SelfSubjectAccessReview.ts#L13">class <b>SelfSubjectAccessReview</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/SelfSubjectAccessReview.ts#L14">class <b>SelfSubjectAccessReview</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -206,7 +196,7 @@ should always be able to check whether they can perform an action
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SelfSubjectAccessReview-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/SelfSubjectAccessReview.ts#L60"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/SelfSubjectAccessReview.ts#L73"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -223,7 +213,7 @@ Create a authorization.v1beta1.SelfSubjectAccessReview resource with the given u
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSubjectAccessReview-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/SelfSubjectAccessReview.ts#L55">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/SelfSubjectAccessReview.ts#L56">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -239,18 +229,8 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="SelfSubjectAccessReview-getInputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/SelfSubjectAccessReview.ts#L59">method <b>getInputs</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.authorization.v1beta1.SelfSubjectAccessReview</pre>
-
-{{% /md %}}
-</div>
 <h3 class="pdoc-member-header" id="SelfSubjectAccessReview-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -260,21 +240,21 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSubjectAccessReview-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/SelfSubjectAccessReview.ts#L67">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+<pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
 
 
-Returns true if the given object is an instance of CustomResource.  This is designed to work even when
-multiple copies of the Pulumi SDK have been loaded into the same process.
+Returns true if the given object is an instance of SelfSubjectAccessReview.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSubjectAccessReview-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/SelfSubjectAccessReview.ts#L20">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/SelfSubjectAccessReview.ts#L21">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"authorization.k8s.io/v1beta1"</span>&gt;;</pre>
@@ -288,7 +268,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSubjectAccessReview-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -300,7 +280,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSubjectAccessReview-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/SelfSubjectAccessReview.ts#L28">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/SelfSubjectAccessReview.ts#L29">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"SelfSubjectAccessReview"</span>&gt;;</pre>
@@ -314,7 +294,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSubjectAccessReview-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/SelfSubjectAccessReview.ts#L31">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/SelfSubjectAccessReview.ts#L32">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
@@ -322,7 +302,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSubjectAccessReview-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/SelfSubjectAccessReview.ts#L36">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/SelfSubjectAccessReview.ts#L37">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>spec: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.authorization.v1beta1.SelfSubjectAccessReviewSpec&gt;;</pre>
@@ -333,7 +313,7 @@ Spec holds information about the request being evaluated.  user and groups must 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSubjectAccessReview-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/SelfSubjectAccessReview.ts#L41">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/SelfSubjectAccessReview.ts#L42">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>status: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.authorization.v1beta1.SubjectAccessReviewStatus&gt;;</pre>
@@ -344,7 +324,7 @@ Status is filled in by the server and indicates whether the request is allowed o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSubjectAccessReview-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -357,7 +337,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SelfSubjectRulesReview">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/SelfSubjectRulesReview.ts#L18">class <b>SelfSubjectRulesReview</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/SelfSubjectRulesReview.ts#L19">class <b>SelfSubjectRulesReview</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -374,7 +354,7 @@ decisions to the API server.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SelfSubjectRulesReview-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/SelfSubjectRulesReview.ts#L65"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/SelfSubjectRulesReview.ts#L78"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -391,7 +371,7 @@ Create a authorization.v1beta1.SelfSubjectRulesReview resource with the given un
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSubjectRulesReview-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/SelfSubjectRulesReview.ts#L60">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/SelfSubjectRulesReview.ts#L61">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -407,18 +387,8 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="SelfSubjectRulesReview-getInputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/SelfSubjectRulesReview.ts#L64">method <b>getInputs</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.authorization.v1beta1.SelfSubjectRulesReview</pre>
-
-{{% /md %}}
-</div>
 <h3 class="pdoc-member-header" id="SelfSubjectRulesReview-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -428,21 +398,21 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSubjectRulesReview-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/SelfSubjectRulesReview.ts#L72">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+<pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
 
 
-Returns true if the given object is an instance of CustomResource.  This is designed to work even when
-multiple copies of the Pulumi SDK have been loaded into the same process.
+Returns true if the given object is an instance of SelfSubjectRulesReview.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSubjectRulesReview-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/SelfSubjectRulesReview.ts#L25">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/SelfSubjectRulesReview.ts#L26">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"authorization.k8s.io/v1beta1"</span>&gt;;</pre>
@@ -456,7 +426,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSubjectRulesReview-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -468,7 +438,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSubjectRulesReview-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/SelfSubjectRulesReview.ts#L33">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/SelfSubjectRulesReview.ts#L34">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"SelfSubjectRulesReview"</span>&gt;;</pre>
@@ -482,7 +452,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSubjectRulesReview-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/SelfSubjectRulesReview.ts#L36">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/SelfSubjectRulesReview.ts#L37">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
@@ -490,7 +460,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSubjectRulesReview-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/SelfSubjectRulesReview.ts#L41">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/SelfSubjectRulesReview.ts#L42">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>spec: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.authorization.v1beta1.SelfSubjectRulesReviewSpec&gt;;</pre>
@@ -501,7 +471,7 @@ Spec holds information about the request being evaluated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSubjectRulesReview-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/SelfSubjectRulesReview.ts#L46">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/SelfSubjectRulesReview.ts#L47">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>status: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.authorization.v1beta1.SubjectRulesReviewStatus&gt;;</pre>
@@ -512,7 +482,7 @@ Status is filled in by the server and indicates the set of actions a user can pe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSubjectRulesReview-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -525,7 +495,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubjectAccessReview">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/SubjectAccessReview.ts#L11">class <b>SubjectAccessReview</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/SubjectAccessReview.ts#L12">class <b>SubjectAccessReview</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -535,7 +505,7 @@ SubjectAccessReview checks whether or not a user or group can perform an action.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SubjectAccessReview-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/SubjectAccessReview.ts#L58"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/SubjectAccessReview.ts#L71"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -552,7 +522,7 @@ Create a authorization.v1beta1.SubjectAccessReview resource with the given uniqu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReview-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/SubjectAccessReview.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/SubjectAccessReview.ts#L54">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -568,18 +538,8 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="SubjectAccessReview-getInputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/SubjectAccessReview.ts#L57">method <b>getInputs</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'>public </span>getInputs(): inputApi.authorization.v1beta1.SubjectAccessReview</pre>
-
-{{% /md %}}
-</div>
 <h3 class="pdoc-member-header" id="SubjectAccessReview-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -589,21 +549,21 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReview-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/SubjectAccessReview.ts#L65">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
 
-<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+<pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
 
 
-Returns true if the given object is an instance of CustomResource.  This is designed to work even when
-multiple copies of the Pulumi SDK have been loaded into the same process.
+Returns true if the given object is an instance of SubjectAccessReview.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReview-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/SubjectAccessReview.ts#L18">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/SubjectAccessReview.ts#L19">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"authorization.k8s.io/v1beta1"</span>&gt;;</pre>
@@ -617,7 +577,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReview-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -629,7 +589,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReview-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/SubjectAccessReview.ts#L26">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/SubjectAccessReview.ts#L27">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"SubjectAccessReview"</span>&gt;;</pre>
@@ -643,7 +603,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReview-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/SubjectAccessReview.ts#L29">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/SubjectAccessReview.ts#L30">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.meta.v1.ObjectMeta&gt;;</pre>
@@ -651,7 +611,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReview-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/SubjectAccessReview.ts#L34">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/SubjectAccessReview.ts#L35">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>spec: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.authorization.v1beta1.SubjectAccessReviewSpec&gt;;</pre>
@@ -662,7 +622,7 @@ Spec holds information about the request being evaluated
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReview-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/authorization/v1beta1/SubjectAccessReview.ts#L39">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/authorization/v1beta1/SubjectAccessReview.ts#L40">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>status: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;outputApi.authorization.v1beta1.SubjectAccessReviewStatus&gt;;</pre>
@@ -673,7 +633,7 @@ Status is filled in by the server and indicates whether the request is allowed o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReview-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ff9e6550e366d1317a169380ac0aab19bd12bdd4/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/7989847312c7a0b569453e0041b67b5d7506c7af/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>

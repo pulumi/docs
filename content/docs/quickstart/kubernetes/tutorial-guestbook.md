@@ -209,7 +209,7 @@ To start, we'll need to create a project and stack (a deployment target) for our
     production Kubernetes clusters, we will want it to be of type `LoadBalancer`, ensuring that a load balancer in your
     target cloud environment is allocated.
 
-    The above code uses [configuration]({{< relref "/reference/config.md" >}}) to make this parameterizable.
+    The above code uses [configuration]({{< relref "/docs/reference/config.md" >}}) to make this parameterizable.
     If you'd like our program to use a load balancer, simply run:
 
     ```shell

@@ -2254,7 +2254,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.networking.Subnet">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">Subnet</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allocation_pools=None</em>, <em>cidr=None</em>, <em>description=None</em>, <em>dns_nameservers=None</em>, <em>enable_dhcp=None</em>, <em>gateway_ip=None</em>, <em>host_routes=None</em>, <em>ip_version=None</em>, <em>ipv6_address_mode=None</em>, <em>ipv6_ra_mode=None</em>, <em>name=None</em>, <em>network_id=None</em>, <em>no_gateway=None</em>, <em>prefix_length=None</em>, <em>region=None</em>, <em>subnetpool_id=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Subnet" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">Subnet</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allocation_pools=None</em>, <em>allocation_pools_collection=None</em>, <em>cidr=None</em>, <em>description=None</em>, <em>dns_nameservers=None</em>, <em>enable_dhcp=None</em>, <em>gateway_ip=None</em>, <em>host_routes=None</em>, <em>ip_version=None</em>, <em>ipv6_address_mode=None</em>, <em>ipv6_ra_mode=None</em>, <em>name=None</em>, <em>network_id=None</em>, <em>no_gateway=None</em>, <em>prefix_length=None</em>, <em>region=None</em>, <em>subnetpool_id=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Subnet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Neutron subnet resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2265,7 +2265,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>allocation_pools</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of sub-ranges of CIDR available for
 dynamic allocation to ports. The allocation_pool object structure is
-documented below. Changing this creates a new subnet.</li>
+documented below.</li>
+<li><strong>allocation_pools_collection</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of sub-ranges of CIDR available for dynamic allocation to ports.
+The allocation_pools object structure is documented below.</li>
 <li><strong>cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – CIDR representing IP range for this subnet, based on IP
 version. You can omit this option if you are creating a subnet from a
 subnet pool.</li>
@@ -2328,7 +2330,14 @@ explicitly and implicitly added.</p>
 <code class="descname">allocation_pools</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Subnet.allocation_pools" title="Permalink to this definition">¶</a></dt>
 <dd><p>An array of sub-ranges of CIDR available for
 dynamic allocation to ports. The allocation_pool object structure is
-documented below. Changing this creates a new subnet.</p>
+documented below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.networking.Subnet.allocation_pools_collection">
+<code class="descname">allocation_pools_collection</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Subnet.allocation_pools_collection" title="Permalink to this definition">¶</a></dt>
+<dd><p>An array of sub-ranges of CIDR available for dynamic allocation to ports.
+The allocation_pools object structure is documented below.</p>
 </dd></dl>
 
 <dl class="attribute">

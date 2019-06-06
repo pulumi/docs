@@ -6,7 +6,7 @@ menu:
     parent: gcp
 ---
 
-In this tutorial, we'll use JavaScript to deploy a simple webserver Virtual Machine instance to Google Compute Engine. The [code for this tutorial](https://github.com/pulumi/examples/tree/master/gcp-js-webserver) is available on GitHub. 
+In this tutorial, we'll use JavaScript to deploy a simple webserver Virtual Machine instance to Google Compute Engine. The [code for this tutorial](https://github.com/pulumi/examples/tree/master/gcp-js-webserver) is available on GitHub.
 
 ## Prerequisites
 
@@ -47,7 +47,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver Virtual Mach
         networkInterfaces: [{
             network: network.id,
             // accessConfigus must includ a single empty config to request an ephemeral IP
-            accessConfigs: [{}], 
+            accessConfigs: [{}],
         }],
     });
 
@@ -56,7 +56,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver Virtual Mach
     exports.instanceIP = computeInstance.networkInterfaces.apply(ni => ni[0].accessConfigs[0].natIp);
     ```
 
-    This example uses the [@pulumi/gcp]({{< relref "/reference/pkg/nodejs/pulumi/gcp" >}}) package to create and manage three Google Cloud resources: a [gcp.compute.Network]({{< relref "/reference/pkg/nodejs/pulumi/gcp/compute#Network" >}}) in which the virtual machine will run, a [gcp.compute.Firewall]({{< relref "/reference/pkg/nodejs/pulumi/gcp/compute#Firewall" >}}) which allows access for incoming SSH access, and a [gcp.compute.Instance]({{< relref "/reference/pkg/nodejs/pulumi/gcp/compute#Instance" >}}) which is created inside the network from the Debian 9 base image.
+    This example uses the [@pulumi/gcp]({{< relref "/docs/reference/pkg/nodejs/pulumi/gcp" >}}) package to create and manage three Google Cloud resources: a [gcp.compute.Network]({{< relref "/docs/reference/pkg/nodejs/pulumi/gcp/compute#Network" >}}) in which the virtual machine will run, a [gcp.compute.Firewall]({{< relref "/docs/reference/pkg/nodejs/pulumi/gcp/compute#Firewall" >}}) which allows access for incoming SSH access, and a [gcp.compute.Instance]({{< relref "/docs/reference/pkg/nodejs/pulumi/gcp/compute#Instance" >}}) which is created inside the network from the Debian 9 base image.
 
 1.  To preview and deploy changes, run `pulumi up`. The command shows a preview of the resources that will be created and prompts on whether to proceed with the deployment.  Note that the stack itself is counted as a resource, though it does not correspond to a physical cloud resource.
 
@@ -73,7 +73,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver Virtual Mach
             + 3 to create
             1 unchanged
 
-1.  Now, proceed with the deployment, which will take around a minute to complete. 
+1.  Now, proceed with the deployment, which will take around a minute to complete.
 
         Do you want to perform this update? yes
         Updating (webservergcp-dev):
@@ -98,7 +98,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver Virtual Mach
 
     To see the full details of the deployment and the resources that are now part of the stack, open the update permalink in a browser.
 
-1.  To view the provisioned resources on the command line, run `pulumi stack`. You'll also see two [stack outputs]({{< relref "/reference/stack.md#output" >}}) corresponding to the IP and full-qualified host name of the virtual machine instance we've created.  
+1.  To view the provisioned resources on the command line, run `pulumi stack`. You'll also see two [stack outputs]({{< relref "/docs/reference/stack.md#output" >}}) corresponding to the IP and full-qualified host name of the virtual machine instance we've created.
 
     ```
     $ pulumi stack
@@ -149,7 +149,7 @@ Pulumi program to define the new state we want our infrastructure to be in, then
         networkInterfaces: [{
             network: network.id,
             // accessConfigus must include a single empty config to request an ephemeral IP
-            accessConfigs: [{}], 
+            accessConfigs: [{}],
         }],
     });
 

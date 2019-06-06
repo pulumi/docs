@@ -286,6 +286,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.iot.RoleAlias.arn">
+<code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iot.RoleAlias.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN assigned by AWS to this role alias.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.iot.RoleAlias.credential_duration">
 <code class="descname">credential_duration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iot.RoleAlias.credential_duration" title="Permalink to this definition">¶</a></dt>
 <dd><p>The duration of the credential, in seconds. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 900 seconds (15 minutes) to 3600 seconds (60 minutes).</p>

@@ -5892,7 +5892,7 @@ setting for this virtual machine. Can be one of <code class="docutils literal no
 Default: <code class="docutils literal notranslate"><span class="pre">automatic</span></code>.</li>
 <li><strong>extra_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Extra configuration data for this virtual
 machine. Can be used to supply advanced parameters not normally in
-configuration, such as data for cloud-config (under the guestinfo namespace).</li>
+configuration, such as instance metadata.</li>
 <li><strong>firmware</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The firmware interface to use on the virtual machine.
 Can be one of <code class="docutils literal notranslate"><span class="pre">bios</span></code> or <code class="docutils literal notranslate"><span class="pre">EFI</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">bios</span></code>.</li>
 <li><strong>folder</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path to the folder to put this virtual machine in,
@@ -6202,7 +6202,7 @@ Default: <code class="docutils literal notranslate"><span class="pre">automatic<
 <code class="descname">extra_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.extra_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Extra configuration data for this virtual
 machine. Can be used to supply advanced parameters not normally in
-configuration, such as data for cloud-config (under the guestinfo namespace).</p>
+configuration, such as instance metadata.</p>
 </dd></dl>
 
 <dl class="attribute">

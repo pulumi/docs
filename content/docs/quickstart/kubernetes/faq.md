@@ -31,7 +31,7 @@ sure that multiple users don't update the same resources simultaneously.
 In general, it's safe to think of the `pulumi` CLI roughly as a replacement for the `kubectl`.
 Wherever you would run `kubectl` to deploy your app (_e.g._, CI/CD), you'd run `pulumi` instead.
 
-See also the relevant entry in the general [Pulumi FAQ]({{< relref "/reference/faq.md" >}}).
+See also the relevant entry in the general [Pulumi FAQ]({{< relref "/docs/reference/faq.md" >}}).
 
 ## Does the Pulumi service ever _see_ the cluster credentials in my [kubeconfig file][kubeconfig]?
 
@@ -116,5 +116,5 @@ their application.
 
 [kubeconfig]: https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/
 [client-go]: https://github.com/kubernetes/client-go
-[login]: {{< relref "/reference/cli/pulumi_login.md" >}}
+[login]: {{< relref "/docs/reference/cli/pulumi_login.md" >}}
 [eks]: https://github.com/pulumi/examples/tree/master/aws-ts-eks

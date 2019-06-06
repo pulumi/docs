@@ -183,7 +183,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessApplication-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -193,7 +193,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessApplication-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -227,7 +227,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessApplication-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -262,7 +262,7 @@ re-authorise. Must be one of `30m`, `6h`, `12h`, `24h`, `168h`, `730h`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessApplication-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -366,7 +366,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -376,7 +376,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -431,7 +431,7 @@ full list.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -499,7 +499,7 @@ full list.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -610,7 +610,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -620,7 +620,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -648,7 +648,7 @@ Rule configuration to apply to a matched request. It's a complex value. See desc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -682,7 +682,7 @@ A personal note about the rule. Typically used as a reminder or explanation for 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccessRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -773,7 +773,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountMember-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -783,7 +783,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountMember-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -808,7 +808,7 @@ The email address of the user who you wish to manage. Note: Following creation, 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountMember-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -831,7 +831,7 @@ Array of account role IDs that you want to assign to a member.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountMember-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -898,7 +898,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Argo-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -908,7 +908,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Argo-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -922,7 +922,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Argo-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -956,7 +956,7 @@ Whether tiered caching is enabled. Valid values: `on` or `off`. Defaults to `off
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Argo-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1035,7 +1035,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomPages-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1045,7 +1045,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomPages-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1072,7 +1072,7 @@ updated. Either `account_id` or `zone_id` must be provided. If
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomPages-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1122,7 +1122,7 @@ URL of where the custom page source is located.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomPages-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1201,7 +1201,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Filter-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1211,7 +1211,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Filter-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1247,7 +1247,7 @@ The filter expression to be used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Filter-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1281,7 +1281,7 @@ Short reference tag to quickly select related rules.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Filter-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1379,7 +1379,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1389,7 +1389,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1433,7 +1433,7 @@ A description of the rule to help identify it.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1467,7 +1467,7 @@ The priority of the rule to allow control of processing order. A lower number in
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1579,7 +1579,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1589,7 +1589,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1658,7 +1658,7 @@ The pool ID to use when all other pools are detected as unhealthy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1764,7 +1764,7 @@ Time to live (TTL) of this load balancer's DNS `name`. Conflicts with `proxied` 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1864,7 +1864,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitor-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1874,7 +1874,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitor-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1968,7 +1968,7 @@ The header name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitor-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2065,7 +2065,7 @@ The protocol to use for the healthcheck. Currently supported protocols are 'HTTP
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerMonitor-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2145,7 +2145,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPool-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2155,7 +2155,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPool-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2213,7 +2213,7 @@ Whether to enable (the default) this origin within the Pool. Disabled origins wi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPool-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2296,7 +2296,7 @@ The list of origins within this pool. Traffic directed at this pool is balanced 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerPool-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2365,7 +2365,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogpushJob-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2375,7 +2375,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogpushJob-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2405,7 +2405,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogpushJob-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2444,7 +2444,7 @@ Ownership challenge token to prove destination ownership. See [https://developer
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogpushJob-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2529,7 +2529,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PageRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2539,7 +2539,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PageRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2607,7 +2607,7 @@ The actions taken by the page rule, options given below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PageRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2652,7 +2652,7 @@ The URL pattern to target with the page rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PageRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2717,7 +2717,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2727,7 +2727,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2741,7 +2741,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2753,7 +2753,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2864,7 +2864,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimit-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2874,7 +2874,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimit-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2952,7 +2952,7 @@ Whether this ratelimit is currently disabled. Default: `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimit-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3007,7 +3007,7 @@ The threshold that triggers the rate limit mitigations, combine with period. i.e
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RateLimit-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3114,7 +3114,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3124,7 +3124,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3220,7 +3220,7 @@ The FQDN of the record
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3320,7 +3320,7 @@ The type of the record
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3413,7 +3413,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplication-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3423,7 +3423,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplication-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3451,7 +3451,7 @@ The name and type of DNS record for the Spectrum application. Fields documented 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplication-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3542,7 +3542,7 @@ TLS configuration option for Cloudflare to connect to your origin. Valid values 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpectrumApplication-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3617,7 +3617,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WafRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3627,7 +3627,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WafRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3641,7 +3641,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WafRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3686,7 +3686,7 @@ The WAF Rule ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WafRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3796,7 +3796,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerRoute-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3806,7 +3806,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerRoute-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3828,7 +3828,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerRoute-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3869,7 +3869,7 @@ The [route pattern](https://developers.cloudflare.com/workers/api/route-matching
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerRoute-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3977,7 +3977,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerScript-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3987,7 +3987,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerScript-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4012,7 +4012,7 @@ The script content.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerScript-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4035,7 +4035,7 @@ The name for the script.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="WorkerScript-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -4122,7 +4122,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4132,7 +4132,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4146,7 +4146,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4235,7 +4235,7 @@ A full zone implies that DNS is hosted with Cloudflare. A partial zone is typica
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -4332,7 +4332,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneLockdown-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4342,7 +4342,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneLockdown-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4381,7 +4381,7 @@ A description about the lockdown entry. Typically used as a reminder or explanat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneLockdown-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4415,7 +4415,7 @@ A list of simple wildcard patterns to match requests against. The order of the u
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneLockdown-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -4519,7 +4519,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneSettingsOverride-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4529,7 +4529,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneSettingsOverride-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4543,7 +4543,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneSettingsOverride-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4725,7 +4725,7 @@ Settings overrides that will be applied to the zone. If a setting is not specifi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneSettingsOverride-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudflare/blob/f8c710258b773232140fb1b81bab8c7e00a0e651/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>

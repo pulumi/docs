@@ -37,7 +37,7 @@ thus making Google Cloud DNS authoritative for this zone.</p>
 
 <dl class="class">
 <dt id="pulumi_gcp.dns.ManagedZone">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.dns.</code><code class="descname">ManagedZone</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>dns_name=None</em>, <em>forwarding_config=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>peering_config=None</em>, <em>private_visibility_config=None</em>, <em>project=None</em>, <em>visibility=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.dns.ManagedZone" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.dns.</code><code class="descname">ManagedZone</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>dns_name=None</em>, <em>dnssec_config=None</em>, <em>forwarding_config=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>peering_config=None</em>, <em>private_visibility_config=None</em>, <em>project=None</em>, <em>visibility=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.dns.ManagedZone" title="Permalink to this definition">¶</a></dt>
 <dd><p>A zone is a subtree of the DNS namespace under one administrative
 responsibility. A ManagedZone is a resource that represents a DNS zone
 hosted by the Cloud DNS service.</p>

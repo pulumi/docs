@@ -198,11 +198,17 @@ resource.</li>
 </tr>
 </tbody>
 </table>
+<dl class="attribute">
+<dt id="pulumi.ProviderResource.package">
+<code class="descname">package</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ProviderResource.package" title="Permalink to this definition">¶</a></dt>
+<dd><p>package is the name of the package this is provider for.  Common examples are “aws” and “azure”.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi.ResourceOptions">
-<em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">ResourceOptions</code><span class="sig-paren">(</span><em>parent: Optional[Resource] = None</em>, <em>depends_on: Optional[List[Resource]] = None</em>, <em>protect: Optional[bool] = None</em>, <em>provider: Optional[ProviderResource] = None</em>, <em>providers: Optional[Mapping[str</em>, <em>ProviderResource]] = None</em>, <em>delete_before_replace: Optional[bool] = None</em>, <em>ignore_changes: Optional[List[str]] = None</em>, <em>version: Optional[str] = None</em>, <em>additional_secret_outputs: Optional[List[str]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ResourceOptions" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">ResourceOptions</code><span class="sig-paren">(</span><em>parent: Optional[Resource] = None</em>, <em>depends_on: Optional[List[Resource]] = None</em>, <em>protect: Optional[bool] = None</em>, <em>provider: Optional[ProviderResource] = None</em>, <em>providers: Optional[Mapping[str</em>, <em>ProviderResource]] = None</em>, <em>delete_before_replace: Optional[bool] = None</em>, <em>ignore_changes: Optional[List[str]] = None</em>, <em>version: Optional[str] = None</em>, <em>additional_secret_outputs: Optional[List[str]] = None</em>, <em>id: Optional[str] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ResourceOptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>ResourceOptions is a bag of optional settings that control a resource’s behavior.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -224,6 +230,7 @@ by package name (e.g. “aws”)</li>
 or replacements.</li>
 <li><strong>additional_secret_outputs</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>string</em><em>]</em><em>]</em>) – If provided, a list of output property names that should
 also be treated as secret.</li>
+<li><strong>id</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – If provided, an existing resource ID to read, rather than create.</li>
 </ul>
 </td>
 </tr>
@@ -287,6 +294,12 @@ used.</p>
 <dd><p>The names of outputs for this resource that should be treated as secrets. This augments the list that
 the resource provider and pulumi engine already determine based on inputs to your resource. It can be used
 to mark certain ouputs as a secrets on a per resource basis.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi.ResourceOptions.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>An optional existing ID to load, rather than create.</p>
 </dd></dl>
 
 </dd></dl>

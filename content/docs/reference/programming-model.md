@@ -12,7 +12,7 @@ menu:
 
 ## Overview {#overview}
 
-In Pulumi, [resources](#resources) are defined by allocating resource objects in a program.  For example, your program would contain a statement such as `new aws.ec2.Instance(...)` in order to create a new AWS EC2 instance.  The first argument passed to the resource constructor is its `name`, which must be unique within the Pulumi program. 
+In Pulumi, [resources](#resources) are defined by allocating resource objects in a program.  For example, your program would contain a statement such as `new aws.ec2.Instance(...)` in order to create a new AWS EC2 instance.  The first argument passed to the resource constructor is its `name`, which must be unique within the Pulumi program.
 
 Dependencies between resources are expressed in Pulumi by using the [output properties](#outputs) of one resource in the construction of another resource.  For example, this definition of an EC2 instance creates a dependency on a `SecurityGroup`:
 
@@ -58,13 +58,13 @@ if err != nil {
 }
 ```
 
-To publish values that you wish to access outside your application, create a [stack output](#stack-outputs) via module exports. 
+To publish values that you wish to access outside your application, create a [stack output](#stack-outputs) via module exports.
 
-In Pulumi, you can group multiple resources in a [component](#components). A component is a logical container for physical cloud resources and affects how resources are grouped in the CLI and the pulumi.com console. 
+In Pulumi, you can group multiple resources in a [component](#components). A component is a logical container for physical cloud resources and affects how resources are grouped in the CLI and the pulumi.com console.
 
 ## Programs {#programs}
 
-Pulumi programs are authored in general purpose programming languages such as [JavaScript]({{< relref "javascript.md" >}}) or [Python]({{< relref "python.md" >}}). You can use any packages supported by the language's package manager, as well as [Pulumi packages]({{< relref "pkg" >}}). 
+Pulumi programs are authored in general purpose programming languages such as [JavaScript]({{< relref "javascript.md" >}}) or [Python]({{< relref "python.md" >}}). You can use any packages supported by the language's package manager, as well as [Pulumi packages]({{< relref "pkg" >}}).
 
 When `pulumi up` is run, your Pulumi program is run and the Pulumi CLI determines the desired state of application resources. A Pulumi program can reference artifacts that have already been published (such as S3 objects or pre-built Docker images) or it can define application resources itself so that everything is versioned together. For example, if your program uses `cloud.Service` with a `build` step, or defines a Lambda for an S3 trigger, you're defining application code that is implicitly deployed during the `pulumi up`.
 
@@ -110,11 +110,11 @@ res, err := NewResource(ctx, name, args, opt1, opt2)
 
 All resources have a [`name`](#names), which must be unique in the Pulumi program.
 
-The `args` provided to a resource determine what inputs will be used to initialize the resource.  These can typically be either raw values or [outputs from other resources](#outputs). 
+The `args` provided to a resource determine what inputs will be used to initialize the resource.  These can typically be either raw values or [outputs from other resources](#outputs).
 
 ### Resource options {#resourceoptions}
 
-All resource constructors also accept an `options` argument which can provide the following additional resource options controlling how the resource will be managed by Pulumi. 
+All resource constructors also accept an `options` argument which can provide the following additional resource options controlling how the resource will be managed by Pulumi.
 
 ###### `dependsOn`
 Provides a list of explicit resource dependencies to add to the resource. Every resource referenced either directly or indirectly by an `Output` that is passed in to the resource constructor will implicitly be included, so this additional information is only needed when the dependency is on something that is not already an input to the resource. The default is `[]`.
@@ -161,7 +161,7 @@ Resources constructed as children of a [component](#components) should make sure
 
 #### Auto-naming {#autonaming}
 
-The name of a resource is also used by many providers as a default prefix for constructing the cloud-provider name for the resource.  For example, constructing a `new aws.s3.Bucket("mybucket")` will result in an AWS bucket named something like `mybucket-eb24ea8`.  
+The name of a resource is also used by many providers as a default prefix for constructing the cloud-provider name for the resource.  For example, constructing a `new aws.s3.Bucket("mybucket")` will result in an AWS bucket named something like `mybucket-eb24ea8`.
 
 This random postfix is added by default for two reasons.  First, it ensures that two instances of a program can be deployed to the same environment without risk of name collisions.  Second, it ensures that it will be possible to do zero-downtime replacements when needed, by creating the new resource first, updating any references to point to it, and then deleting the old resource.
 
@@ -205,14 +205,14 @@ url = virtual_machine.dns_name.apply(
 ```
 
 ```go
-url := virtualmachine.DnsName().Apply(func(dnsName string) (interface{}, error) { 
-    return "https://" + dnsName, nil 
+url := virtualmachine.DnsName().Apply(func(dnsName string) (interface{}, error) {
+    return "https://" + dnsName, nil
 })
 ```
 
 The `apply` method accepts a callback which will be passed the value of the `Output` when it is available, and which returns the new value.  The result of the call to `apply` is a new `Output` whose value is the value returned from the callback, and which includes the dependencies of the original `Output`.  If the callback itself returns an `Output`, the dependencies of that output are unioned into the dependencies of the returned `Output`.
 
-> _Note_: Several common types of transformations can be done more convienently.  See [Accessing properties of an Output](#lifting) for how to access Output value properties simply.   Also, `Output` itself cannot be used directly in string concatenation as it is not itself the value of the output.  See (Working with Outputs and strings)[#ouputs-and-strings] for examples of how to more simply work use the two together.  For cases where these convenience forms are not sufficient, `.apply` is available the most general way to transform one `Output` into another.  
+> _Note_: Several common types of transformations can be done more convienently.  See [Accessing properties of an Output](#lifting) for how to access Output value properties simply.   Also, `Output` itself cannot be used directly in string concatenation as it is not itself the value of the output.  See (Working with Outputs and strings)[#ouputs-and-strings] for examples of how to more simply work use the two together.  For cases where these convenience forms are not sufficient, `.apply` is available the most general way to transform one `Output` into another.
 
 ##### Accessing properties of an Output {#lifting}
 
@@ -246,7 +246,7 @@ let certValidation = new aws.route53.Record("cert_validation", {
 certificate = aws.acm.Certificate("cert",
   domain_name="example.com",
   validation_method="DNS",
-  
+
 record = aws.route53.Record("validation",
   # Need to pass along a deep subproperty of this Output
   records=[certificate.domain_validation_options.apply(
@@ -257,7 +257,7 @@ record = aws.route53.Record("validation",
 
 ```go
 // Helpers for accessing properties are not yet available in Go.
-// 
+//
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
@@ -289,7 +289,7 @@ let certValidation = new aws.route53.Record("cert_validation", {
 certificate = aws.acm.Certificate("cert",
   domain_name="example.com",
   validation_method="DNS",
-  
+
 record = aws.route53.Record("validation",
   records=[certificate.domain_validation_options[0].resource_record_value],
   ...
@@ -297,7 +297,7 @@ record = aws.route53.Record("validation",
 
 ```go
 // Helpers for accessing properties are not yet available in Go.
-// 
+//
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
@@ -328,7 +328,7 @@ connection_string = Output.all(sql_server.name, database.name) \
 
 ```go
 // `all` is not yet available in Go.
-// 
+//
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
@@ -361,7 +361,7 @@ def split(input):
 
 ```go
 // Helpers for converting Inputs to Outputs are not yet available in Go.
-// 
+//
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
@@ -389,13 +389,13 @@ const url: Output<string> = // ?
 
 ```python
 # Helpers for combining Outputs into strings are not yet available in Python.
-# 
+#
 # See https://github.com/pulumi/pulumi/issues/2366.
 ```
 
 ```go
 // Helpers for combining Outputs into strings are not yet available in Go.
-// 
+//
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
@@ -411,13 +411,13 @@ const url: Output<string> = pulumi.all([hostname, port]).apply(([hostname, port]
 
 ```python
 # Helpers for combining Outputs into strings are not yet available in Python.
-# 
+#
 # See https://github.com/pulumi/pulumi/issues/2366.
 ```
 
 ```go
 // Helpers for combining Outputs into strings are not yet available in Go.
-// 
+//
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
@@ -435,13 +435,13 @@ const url2: Output<string> = pulumi.interpolate `http://${hostname}:${port}/`;
 
 ```python
 # Helpers for combining Outputs into strings are not yet available in Python.
-# 
+#
 # See https://github.com/pulumi/pulumi/issues/2366.
 ```
 
 ```go
 // Helpers for combining Outputs into strings are not yet available in Go.
-// 
+//
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
@@ -469,7 +469,7 @@ pulumi.export("url", resource.url)
 ctx.Export("url", resource.Url())
 ```
 
-From the CLI, you can then use `pulumi stack output url` to get the value and incorporate into other scripts or tools. 
+From the CLI, you can then use `pulumi stack output url` to get the value and incorporate into other scripts or tools.
 
 The right-hand side of a stack export can be a regular JavaScript value, an [Output](#outputs), or a `Promise`. The actual value will be resolved at the end of `pulumi up`.
 
@@ -478,7 +478,7 @@ Stack exports are JSON serialized, though quotes are removed when exporting just
 {{< langchoose >}}
 
 ```javascript
-exports.x = "hello" 
+exports.x = "hello"
 exports.o = {num: 42}
 ```
 
@@ -550,7 +550,7 @@ fmt.Printf("Hello, %s!", name);
 
 Config values can be retrieved using [config.get] or [config.require].  Using `get` will return `undefined` if the configuration value was not provided, and `require` will raise an exception with a helpful error message to prevent the deployment from continuing.
 
-Configuration values are always stored as strings, but can be parsed as richly typed values.  For example, [config.getNumber] will convert the string value to a number and return a `Number` value instead of a string.  It will raise an exception if the value cannot be parsed as a number. 
+Configuration values are always stored as strings, but can be parsed as richly typed values.  For example, [config.getNumber] will convert the string value to a number and return a `Number` value instead of a string.  It will raise an exception if the value cannot be parsed as a number.
 
 For richer structured data, the [config.getObject] method can be used to parse JSON values.  For example, following `pulumi config set data '{"active": true, "nums": [1,2,3]}'`, a program can read the `data` config into a rich object with:
 
@@ -559,7 +559,7 @@ For richer structured data, the [config.getObject] method can be used to parse J
 ```javascript
 let config = new pulumi.Config();
 let data = config.requireObject("data");
-console.log(`Active: ${data.active}`); 
+console.log(`Active: ${data.active}`);
 ```
 
 ```typescript
@@ -570,7 +570,7 @@ interface Data {
 
 let config = new pulumi.Config();
 let data = config.requireObject<Data>("data");
-console.log(`Active: ${data.active}`); 
+console.log(`Active: ${data.active}`);
 ```
 
 ```python
@@ -581,13 +581,13 @@ console.log(`Active: ${data.active}`);
 
 ```go
 // JSON parsing helpers for config are not built-in for Go currently.
-// 
+//
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
 ## Components {#components}
 
-A Pulumi **component** is a logical group of resources that contains other components and physical cloud resources. A Pulumi stack is itself a component that contains all top-level components and resources in a program. 
+A Pulumi **component** is a logical group of resources that contains other components and physical cloud resources. A Pulumi stack is itself a component that contains all top-level components and resources in a program.
 
 To create a new component, either in a top-level program or in a library, create a subclass of [pulumi.ComponentResource]. Components provide a way to create reusable abstractions made up of other resources.
 
@@ -619,7 +619,7 @@ class MyResource(ComponentResource):
 
 ```go
 // ComponentResources are not directly supported in Go currently.
-// 
+//
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
@@ -672,7 +672,7 @@ self.register_outputs({
 
 ```go
 // ComponentResources are not directly supported in Go currently.
-// 
+//
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
@@ -697,7 +697,7 @@ component = MyResource("component", ResourceOptions(providers={
 
 ```go
 // ComponentResources are not directly supported in Go currently.
-// 
+//
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
@@ -735,7 +735,7 @@ instance = ec2.Instance("myInstance", instance_type="t2.micro", ami="myAMI")
 
 ```go
 // Providers are not supported in Go currently.
-// 
+//
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
@@ -830,7 +830,7 @@ listener = aws.elasticloadbalancingv2.Listener("listener",
 
 ```go
 // Providers are not supported in Go currently.
-// 
+//
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
@@ -884,7 +884,7 @@ my_resource = MyResource("myResource", pulumi.ResourceOptions(providers={
 
 ```go
 // Providers are not supported in Go currently.
-// 
+//
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
@@ -893,7 +893,7 @@ my_resource = MyResource("myResource", pulumi.ResourceOptions(providers={
 Every `CustomResource` has a provider associated with it which knows how to create/read/update/delete instances of the custom resource in the backing cloud provider.  This provider can be defined by implementing the Pulumi Resource Provider gRPC interface.  There are generally two approaches to implementing this provider interface:
 
 1. Create a provider binary with the appropriate name and put it on the path, such that it will be loaded to handle CRUD operations from the Pulumi engine on resources from the package it is defined to handle.  For example the `pulumi-resource-aws` binary will handle resources from the `aws` package.  This binary can be authored in any language, but must be authored and distributed out of band of a Pulumi program.
-2. Define an implementation of the Provider interface directly within your Pulumi program, just for use within that program.  
+2. Define an implementation of the Provider interface directly within your Pulumi program, just for use within that program.
 
 The former is used for most common Pulumi providers like AWS and Kubernetes.  The latter is a concept called Dynamic Providers, which provide a flexible approach to defining custom resource types directly within the source code of your Pulumi program.
 
@@ -937,7 +937,7 @@ This resource provider is then used to create a new kind of custom resource by i
 ```javascript
 class MyResource extends pulumi.dynamic.Resource {
     constructor(name, props, opts) {
-        super(myprovider, name, props, opts); 
+        super(myprovider, name, props, opts);
     }
 }
 ```
@@ -945,7 +945,7 @@ class MyResource extends pulumi.dynamic.Resource {
 ```typescript
 class MyResource extends pulumi.dynamic.Resource {
     constructor(name: string, props: {}, opts?: pulumi.CustomResourceOptions) {
-        super(myprovider, name, props, opts); 
+        super(myprovider, name, props, opts);
     }
 }
 ```
@@ -1044,7 +1044,7 @@ export class Random extends pulumi.dynamic.Resource {
 
 #### Example: GitHub Labels REST API
 
-This example highlights making REST API calls to some backing provider (in this case the GitHub API) to perform CRUD operations.  Because the resource provider method implementations will be serialized and used in a different process, we keep all the work to initialize the REST client and make calls to it local to each function.  
+This example highlights making REST API calls to some backing provider (in this case the GitHub API) to perform CRUD operations.  Because the resource provider method implementations will be serialized and used in a different process, we keep all the work to initialize the REST client and make calls to it local to each function.
 
 
 {{< langchoose >}}
@@ -1135,11 +1135,11 @@ export class Label extends pulumi.dynamic.Resource {
 
 Pulumi packages are normal NPM or Python packages. They transitively depend on `@pulumi/pulumi` which defines how resources created by a Pulumi program will be communicated to the Pulumi engine.  This ability to register resources with the Pulumi engine is the only difference between a Pulumi package and any other NPM package.
 
-Some Pulumi packages have a dependency on a [Resource Provider plugin]({{< relref "/reference/cli/pulumi_plugin.md" >}}) which contains the implementation for how to Create, Read, Update and Delete resources defined by the package.  The [pulumi.CustomResource] base class is used to connect a JavaScript resource class with the resource provider it depends on for resource management.  Packages like [@pulumi/aws] and [@pulumi/kubernetes] define resources, such as `aws.ec2.Instance`, `kubernetes.Pod`, which are managed by the AWS and Kubernetes resource provider plugins. Packages such as [@pulumi/cloud] and [@pulumi/awsx] contain only higher-level component resources, which are not managed by a resource provider plugin.
+Some Pulumi packages have a dependency on a [Resource Provider plugin]({{< relref "/docs/reference/cli/pulumi_plugin.md" >}}) which contains the implementation for how to Create, Read, Update and Delete resources defined by the package.  The [pulumi.CustomResource] base class is used to connect a JavaScript resource class with the resource provider it depends on for resource management.  Packages like [@pulumi/aws] and [@pulumi/kubernetes] define resources, such as `aws.ec2.Instance`, `kubernetes.Pod`, which are managed by the AWS and Kubernetes resource provider plugins. Packages such as [@pulumi/cloud] and [@pulumi/awsx] contain only higher-level component resources, which are not managed by a resource provider plugin.
 
 ## Runtime code {#runtime}
 
-You can create libraries and components that allow the caller to pass in JavaScript callbacks to invoke at runtime. For example, you can create an AWS Lambda function (or an Azure Function) by providing a JavaScript callback to be used as its implementation. 
+You can create libraries and components that allow the caller to pass in JavaScript callbacks to invoke at runtime. For example, you can create an AWS Lambda function (or an Azure Function) by providing a JavaScript callback to be used as its implementation.
 
 {{< langchoose >}}
 
@@ -1167,11 +1167,11 @@ bucket.onObjectCreated("onObject", async (ev: aws.s3.BucketEvent) => {
 
 ```go
 // Runtime code provided via callbacks are not supported in Go currently.
-// 
+//
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
-Libraries which use JavaScript callbacks as inputs to be provided as source text to resource construction (like the Lambda that is created by the `onObjectCreated` function in the example above) are built on top of the [pulumi.runtime.serializeFunction] API, which takes as input a JavaScript `Function` object, and returns a `Promise` that contains the serialized form of that function. 
+Libraries which use JavaScript callbacks as inputs to be provided as source text to resource construction (like the Lambda that is created by the `onObjectCreated` function in the example above) are built on top of the [pulumi.runtime.serializeFunction] API, which takes as input a JavaScript `Function` object, and returns a `Promise` that contains the serialized form of that function.
 
 When serializing a function to text, the following steps are taken:
 

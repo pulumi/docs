@@ -65,7 +65,7 @@ Stack 'ahoy-pulumi-dev' has been removed!
 That concludes our first lesson.  Please proceed to learn a bit more about the concepts we've just encountered and
 how to extend this basic knowledge to build even more powerful cloud programs using Pulumi.
 
-If you're ready to start programming the cloud, check out the [getting started]({{< relref "/quickstart" >}}) guide next!
+If you're ready to start programming the cloud, check out the [getting started]({{< relref "/docs/quickstart" >}}) guide next!
 
 <div class="tour-nav">
     <a class="tour-button enabled" href="{{< relref "basics-previewing.md" >}}" title="Performing updates">◀</a>

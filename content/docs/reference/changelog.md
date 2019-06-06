@@ -9,7 +9,7 @@ menu:
 ---
 
 <!-- Common links -->
-[`Output`]: {{< relref "/reference/pkg/nodejs/pulumi/pulumi/_index.md#Output" >}}
+[`Output`]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi/_index.md#Output" >}}
 [Python documentation]: {{< relref "python.md" >}}
 [Defining and setting stack settings]: {{< relref "config.md#config-stack" >}}
 [Configuration]: {{< relref "config.md" >}}
@@ -250,7 +250,7 @@ The full changelog is linked below.
 
 Released on November 14, 2018
 
-This release includes significant improvements to Python support in Pulumi.  Python 3.6 or greater is [now required]({{< relref "/reference/python.md" >}}), and Python users now get support for outputs, parallelism, improved error reporting, and Kubernetes - plus many more new and updated features.
+This release includes significant improvements to Python support in Pulumi.  Python 3.6 or greater is [now required]({{< relref "/docs/reference/python.md" >}}), and Python users now get support for outputs, parallelism, improved error reporting, and Kubernetes - plus many more new and updated features.
 
 As part of this release, we've also started to use `CHANGELOG.md`'s in each repository to track changes between releases. You can read the individual changelogs in GitHub:
 
@@ -458,7 +458,7 @@ Providers are now able to register "ephmeral" update messages which are shown in
 
 #### Local backend
 
-The local backend (which stores your deployment's state file locally, instead of on pulumi.com) has been improved. You can now use `pulumi login --local` or `pulumi login file://<path-to-storage-root>` to select the local backend and control where state files are stored. In addition, older versions of the CLI would behave slightly differently when using the local backend vs pulumi.com, for example, some operations would not show previews before running.  This has been fixed.  When using the local backend, updates print the on disk location of the checkpoint file that was written. The local backend is covered in more detail in (here)[{{< relref "/reference/state.md" >}}].
+The local backend (which stores your deployment's state file locally, instead of on pulumi.com) has been improved. You can now use `pulumi login --local` or `pulumi login file://<path-to-storage-root>` to select the local backend and control where state files are stored. In addition, older versions of the CLI would behave slightly differently when using the local backend vs pulumi.com, for example, some operations would not show previews before running.  This has been fixed.  When using the local backend, updates print the on disk location of the checkpoint file that was written. The local backend is covered in more detail in (here)[{{< relref "/docs/reference/state.md" >}}].
 
 #### `pulumi refresh`
 
@@ -603,7 +603,7 @@ stack updates and previews as part of pull requests. This allows you to see the 
 merging the code.
 
 The Pulumi GitHub application is still in preview as we work to support more CI systems and provide richer output. For information on how to install the
-GitHub application and configure it with your CI system, please [visit our documentation]({{< relref "/reference/cd-github.md" >}}) page.
+GitHub application and configure it with your CI system, please [visit our documentation]({{< relref "/docs/reference/cd-github.md" >}}) page.
 
 ### @pulumi/pulumi 0.15.0
 
@@ -636,7 +636,7 @@ Kubernetes support has been brought to production-ready level of quality. Many f
 * Support for provisioning and deploying to clusters in a single program
 * Deploying Helm Charts using the `helm.v2.Chart` type
 
-To use Pulumi with Kubernetes, please [visit our Getting Started page on Kubernetes]({{< relref "/quickstart/kubernetes" >}}).
+To use Pulumi with Kubernetes, please [visit our Getting Started page on Kubernetes]({{< relref "/docs/quickstart/kubernetes" >}}).
 
 ### @pulumi/openstack 0.15.0
 
@@ -927,7 +927,7 @@ This package is new in this release! Use it to directly manage API Gateway and L
 
 ### @pulumi/gcp v0.14.0
 
-This package is new in this release! Use it to deploy and manage resources for Google Cloud Platform. See the reference documentation for  [@pulumi/gcp]({{< relref "/reference/pkg/nodejs/pulumi/gcp" >}}).
+This package is new in this release! Use it to deploy and manage resources for Google Cloud Platform. See the reference documentation for  [@pulumi/gcp]({{< relref "/docs/reference/pkg/nodejs/pulumi/gcp" >}}).
 
 ## v0.12.2 {#v122}
 
@@ -997,7 +997,7 @@ Released on April 26, 2018
 -  Add a `pulumi cancel` command ([pulumi/pulumi#1230](https://github.com/pulumi/pulumi/pull/1230)). This command cancels any in-progress operation for the current stack.
 
 ### Changed
--  (**Breaking**) Eliminate `pulumi init` requirement ([pulumi/pulumi#1226](https://github.com/pulumi/pulumi/pull/1226)). The `pulumi init` command is no longer required and should not be used for new stacks. For stacks created prior to the v0.12.0 SDK, `pulumi init` should still be run in the project directory if you are connecting to an existing stack. For new projects, stacks will be created under the currently logged in account. After upgrading the CLI, it is necessary to run `pulumi stack select`, as the location of bookkeeping files has been changed. For more information, see [Creating Stacks]({{< relref "/reference/stack.md#create-stack" >}}).
+-  (**Breaking**) Eliminate `pulumi init` requirement ([pulumi/pulumi#1226](https://github.com/pulumi/pulumi/pull/1226)). The `pulumi init` command is no longer required and should not be used for new stacks. For stacks created prior to the v0.12.0 SDK, `pulumi init` should still be run in the project directory if you are connecting to an existing stack. For new projects, stacks will be created under the currently logged in account. After upgrading the CLI, it is necessary to run `pulumi stack select`, as the location of bookkeeping files has been changed. For more information, see [Creating Stacks]({{< relref "/docs/reference/stack.md#create-stack" >}}).
 
 -  (**Breaking**) Remove the explicit 'pulumi preview' command ([pulumi/pulumi#1170](https://github.com/pulumi/pulumi/pull/1170)). The `pulumi preview` output has now been merged in to the `pulumi up` command. Before an update is run, the preview is shown and you can choose whether to proceed or see more update details. To see just the preview operation, run `pulumi up --preview`.
 

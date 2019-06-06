@@ -9,7 +9,7 @@ menu:
     parent: aws
 ---
 
-In this tutorial, we'll use JavaScript to deploy a simple webserver EC2 instance in AWS. The [code for this tutorial](https://github.com/pulumi/examples/tree/master/aws-js-webserver) is available on GitHub. 
+In this tutorial, we'll use JavaScript to deploy a simple webserver EC2 instance in AWS. The [code for this tutorial](https://github.com/pulumi/examples/tree/master/aws-js-webserver) is available on GitHub.
 
 {{< aws-js-prereqs >}}
 
@@ -21,7 +21,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver EC2 instance
     $ mkdir webserver && cd webserver
     $ pulumi new aws-javascript
     ...
-    aws:region: (us-east-1) 
+    aws:region: (us-east-1)
     ```
 
 1.  Open `index.js` and replace the contents with the following:
@@ -32,7 +32,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver EC2 instance
     let size = "t2.micro";     // t2.micro is available in the AWS free tier
     let ami  = "ami-0ff8a91507f77f867"; // AMI for Amazon Linux in us-east-1 (Virginia)
 
-    let group = new aws.ec2.SecurityGroup("webserver-secgrp", { 
+    let group = new aws.ec2.SecurityGroup("webserver-secgrp", {
         ingress: [
             { protocol: "tcp", fromPort: 22, toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
         ],
@@ -91,7 +91,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver EC2 instance
 
     To see the full details of the deployment and the resources that are now part of the stack, open the update link in a browser. The **Resources** tab on pulumi.com has a link to the AWS console for the provisioned EC2 instance.
 
-1.  To view the provisioned resources on the command line, run `pulumi stack`. You'll also see two [stack outputs]({{< relref "/reference/stack#outputs" >}}) corresponding to the IP and full-qualified host name of the EC2 instance we've created.
+1.  To view the provisioned resources on the command line, run `pulumi stack`. You'll also see two [stack outputs]({{< relref "/docs/reference/stack#outputs" >}}) corresponding to the IP and full-qualified host name of the EC2 instance we've created.
 
     ```
     $ pulumi stack
@@ -120,10 +120,10 @@ Pulumi program to define the new state we want our infrastructure to be in, then
     ```javascript
     ...
 
-    let group = new aws.ec2.SecurityGroup("webserver-secgrp", { 
+    let group = new aws.ec2.SecurityGroup("webserver-secgrp", {
         ingress: [
             { protocol: "tcp", fromPort: 22, toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
-            { protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: ["0.0.0.0/0"] }, 
+            { protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
             // ^-- ADD THIS LINE
         ],
     });
@@ -158,7 +158,7 @@ Pulumi program to define the new state we want our infrastructure to be in, then
         Performing changes:
 
             Type                      Name                               Status       Info
-        *   pulumi:pulumi:Stack       ec2-quickstart-ec2-quickstart-dev  done         
+        *   pulumi:pulumi:Stack       ec2-quickstart-ec2-quickstart-dev  done
         ~   ├─ aws:ec2:SecurityGroup  webserver-secgrp                   updated      changes: ~ ingress
         +-  └─ aws:ec2:Instance       webserver-www                      replaced     changes: + userData
 
@@ -199,7 +199,7 @@ In this tutorial, we saw how to use Pulumi programs to create and manage cloud r
 For a similar example in other languages and clouds, see the [Web Server examples collection](https://github.com/pulumi/examples#web-server).
 
 <!-- Common links -->
-[EC2 Instance]: {{< relref "/reference/pkg/nodejs/pulumi/aws/ec2#Instance" >}}
-[Security Group]: {{< relref "/reference/pkg/nodejs/pulumi/aws/ec2#SecurityGroup" >}}
-[@pulumi/aws]: {{< relref "/reference/pkg/nodejs/pulumi/aws" >}}
+[EC2 Instance]: {{< relref "/docs/reference/pkg/nodejs/pulumi/aws/ec2#Instance" >}}
+[Security Group]: {{< relref "/docs/reference/pkg/nodejs/pulumi/aws/ec2#SecurityGroup" >}}
+[@pulumi/aws]: {{< relref "/docs/reference/pkg/nodejs/pulumi/aws" >}}
 <!-- End common links -->

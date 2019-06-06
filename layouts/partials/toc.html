@@ -1,15 +1,15 @@
 {{ $menu := .Site.Menus.main }}
 {{ $has_toc := false }}
-{{ if hasPrefix .RelPermalink "/quickstart/" }}
+{{ if hasPrefix .RelPermalink "/docs/quickstart/" }}
     {{ $menu = .Site.Menus.quickstart }}
     {{ $has_toc = true }}
-{{ else if hasPrefix .RelPermalink "/reference/"}}
+{{ else if hasPrefix .RelPermalink "/docs/reference/"}}
     {{ $menu = .Site.Menus.reference }}
     {{ $has_toc = true }}
-{{ else if hasPrefix .RelPermalink "/tour/" }}
+{{ else if hasPrefix .RelPermalink "/docs/tour/" }}
     {{ $menu = .Site.Menus.tour }}
     {{ $has_toc = true }}
-{{ else if hasPrefix .RelPermalink "/aws/" }}
+{{ else if hasPrefix .RelPermalink "/docs/aws/" }}
     {{ $menu = .Site.Menus.aws }}
     {{ $has_toc = true }}
 {{ end }}

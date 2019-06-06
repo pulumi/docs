@@ -20,7 +20,7 @@ altered to fit into any existing type of deployment setup.
 - An account on https://app.pulumi.com and that you have created a new project.
   - This just means you will sign-in using your GitLab credentials.
   - However, pulumi can be run from anywhere and your infrastrucutre code itself can be hosted anywhere.
-- The latest CLI. Installation instructions are [here]({{< relref "/quickstart/install.md" >}}).
+- The latest CLI. Installation instructions are [here]({{< relref "/docs/quickstart/install.md" >}}).
 - A bare repo and set the remote URL to be your GitLab project.
 
 ## Stack and Branch Mappings
@@ -41,7 +41,7 @@ In order to prevent abuse of protected resources, as well as some sensitive info
 by your repository, GitLab has the concept of [Protected Branches and Tags](https://gitlab.com/help/user/project/protected_branches.md).
 
 If you are running `pulumi` from any branch other than the `master` branch,
-you are likely to hit an error that the `PULUMI_ACCESS_TOKEN` 
+you are likely to hit an error that the `PULUMI_ACCESS_TOKEN`
 environment variable (introduced later in this document) cannot be accessed.
 You can fix this by specifying a wildcard regex to allow specific branches to
 be able to access the secret environment variables. Please refer to the GitLab
@@ -54,7 +54,7 @@ You can apply some amount of control with the use of the configuration variables
 `only` and `except`. You may also consider using `only:changes`, however,
 note that there are some caveats to that. You can learn more [here](https://docs.gitlab.com/ee/ci/yaml/#only-changes).
 
-> See [this](https://gitlab.com/gitlab-org/gitlab-ce/issues/23902) issue for _community edition_ and 
+> See [this](https://gitlab.com/gitlab-org/gitlab-ce/issues/23902) issue for _community edition_ and
 [this](https://gitlab.com/gitlab-org/gitlab-ee/issues/7380) issue for _enterprise edition_ to learn more.
 
 ## Environment Variables
@@ -92,7 +92,7 @@ that only shows you changes (if any) in your infrastructure.
 # options to create a pipeline that will create the `pulumi-preview` job in the pipeline,
 # for all branches except the master.
 # Only for master branch merges, the main `pulumi` job is executed automatically.
-# 
+#
 stages:
   - build
   - infrastructure-update
@@ -132,7 +132,7 @@ pulumi-preview:
   script:
     - ./scripts/pulumi-preview.sh
   # This job may only be triggered manually,
-  # even though the pipeline is created, 
+  # even though the pipeline is created,
   # when a non-master branch is pushed-up.
   when: manual
   # This job should be created in the pipeline only if it is not the master branch.

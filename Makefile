@@ -24,7 +24,7 @@ generate:
 	@echo -e "\033[0;32mGENERATE:\033[0m"
 	./scripts/run_typedoc.sh
 	./scripts/generate_python_docs.sh
-	pulumi gen-markdown ./content/reference/cli
+	pulumi gen-markdown ./content/docs/reference/cli
 
 .PHONY: build
 build:
@@ -44,8 +44,8 @@ test:
 	#       although valid and publicly available, is reported as a broken link.
 	# Fixes for the former two are tracked by https://github.com/pulumi/docs/issues/568.
 	./node_modules/.bin/blc http://localhost:1313 -r \
-		--exclude "/reference/pkg" \
-		--exclude "/reference/changelog" \
+		--exclude "/docs/reference/pkg" \
+		--exclude "/docs/reference/changelog" \
 		--exclude "https://github.com/pulumi/docs/edit/master" \
 		--exclude "https://www.linkedin.com/company/pulumi/" \
 		--exclude "https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task"

@@ -860,7 +860,8 @@ new resource to be created.</li>
 operation targets a source that contains an operating system. Valid values are <code class="docutils literal notranslate"><span class="pre">Linux</span></code> or <code class="docutils literal notranslate"><span class="pre">Windows</span></code></li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create
 the managed disk.</li>
-<li><strong>source_resource_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of an existing managed disk to copy when <code class="docutils literal notranslate"><span class="pre">create_option</span></code> is <code class="docutils literal notranslate"><span class="pre">Copy</span></code>.</li>
+<li><strong>source_resource_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of an existing managed disk to copy <code class="docutils literal notranslate"><span class="pre">create_option</span></code> is <code class="docutils literal notranslate"><span class="pre">Copy</span></code>
+or the recovery point to restore when <code class="docutils literal notranslate"><span class="pre">create_option</span></code> is <code class="docutils literal notranslate"><span class="pre">Restore</span></code></li>
 <li><strong>source_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URI to a valid VHD file to be used when <code class="docutils literal notranslate"><span class="pre">create_option</span></code> is <code class="docutils literal notranslate"><span class="pre">Import</span></code>.</li>
 <li><strong>storage_account_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of storage to use for the managed disk.
 Allowable values are <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">StandardSSD_LRS</span></code> or <code class="docutils literal notranslate"><span class="pre">UltraSSD_LRS</span></code>.</li>
@@ -927,7 +928,8 @@ the managed disk.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.ManagedDisk.source_resource_id">
 <code class="descname">source_resource_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.ManagedDisk.source_resource_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>ID of an existing managed disk to copy when <code class="docutils literal notranslate"><span class="pre">create_option</span></code> is <code class="docutils literal notranslate"><span class="pre">Copy</span></code>.</p>
+<dd><p>ID of an existing managed disk to copy <code class="docutils literal notranslate"><span class="pre">create_option</span></code> is <code class="docutils literal notranslate"><span class="pre">Copy</span></code>
+or the recovery point to restore when <code class="docutils literal notranslate"><span class="pre">create_option</span></code> is <code class="docutils literal notranslate"><span class="pre">Restore</span></code></p>
 </dd></dl>
 
 <dl class="attribute">

@@ -208,12 +208,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_packet.Device">
-<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">Device</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>always_pxe=None</em>, <em>billing_cycle=None</em>, <em>description=None</em>, <em>facilities=None</em>, <em>hardware_reservation_id=None</em>, <em>hostname=None</em>, <em>ipxe_script_url=None</em>, <em>network_type=None</em>, <em>operating_system=None</em>, <em>plan=None</em>, <em>project_id=None</em>, <em>project_ssh_key_ids=None</em>, <em>public_ipv4_subnet_size=None</em>, <em>storage=None</em>, <em>tags=None</em>, <em>user_data=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Device" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_packet.</code><code class="descname">Device</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>always_pxe=None</em>, <em>billing_cycle=None</em>, <em>description=None</em>, <em>facilities=None</em>, <em>hardware_reservation_id=None</em>, <em>hostname=None</em>, <em>ip_address_types=None</em>, <em>ipxe_script_url=None</em>, <em>network_type=None</em>, <em>operating_system=None</em>, <em>plan=None</em>, <em>project_id=None</em>, <em>project_ssh_key_ids=None</em>, <em>public_ipv4_subnet_size=None</em>, <em>storage=None</em>, <em>tags=None</em>, <em>user_data=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Device" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Packet device resource. This can be used to create,
 modify, and delete devices.</p>
 <blockquote>
 <div><dl class="docutils">
-<dt><strong>Note:</strong> All arguments including the root_password and user_data will be stored in</dt>
+<dt><strong>Note:</strong> All arguments including the <code class="docutils literal notranslate"><span class="pre">root_password</span></code> and <code class="docutils literal notranslate"><span class="pre">user_data</span></code> will be stored in</dt>
 <dd>the raw state as plain-text.</dd>
 </dl>
 <p><a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
@@ -232,6 +232,7 @@ continue to boot via iPXE on reboots.</li>
 <li><strong>facilities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of facility codes with deployment preferences. Packet API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or <code class="docutils literal notranslate"><span class="pre">any</span></code> (a wildcard). To find the facility code, visit <a class="reference external" href="https://www.packet.com/developers/api/#facilities">Facilities API docs</a>, set your API auth token in the top of the page and see JSON from the API response.</li>
 <li><strong>hardware_reservation_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of hardware reservation where you want this device deployed, or <code class="docutils literal notranslate"><span class="pre">next-available</span></code> if you want to pick your next available reservation automatically.</li>
 <li><strong>hostname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The device name</li>
+<li><strong>ip_address_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set containing one or more of [<code class="docutils literal notranslate"><span class="pre">private_ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">public_ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">public_ipv6</span></code>]. It specifies which IP address types a new device should obtain. If omitted, a created device will obtain all 3 addresses. If you only want private IPv4 address for the new device, pass [<code class="docutils literal notranslate"><span class="pre">private_ipv4</span></code>].</li>
 <li><strong>ipxe_script_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL pointing to a hosted iPXE script. More
 information is in the
 <a class="reference external" href="https://support.packet.com/kb/articles/custom-ipxe">Custom iPXE</a>
@@ -320,6 +321,12 @@ continue to boot via iPXE on reboots.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_packet.Device.ip_address_types">
+<code class="descname">ip_address_types</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Device.ip_address_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>A set containing one or more of [<code class="docutils literal notranslate"><span class="pre">private_ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">public_ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">public_ipv6</span></code>]. It specifies which IP address types a new device should obtain. If omitted, a created device will obtain all 3 addresses. If you only want private IPv4 address for the new device, pass [<code class="docutils literal notranslate"><span class="pre">private_ipv4</span></code>].</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_packet.Device.ipxe_script_url">
 <code class="descname">ipxe_script_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Device.ipxe_script_url" title="Permalink to this definition">¶</a></dt>
 <dd><p>URL pointing to a hosted iPXE script. More
@@ -363,6 +370,12 @@ The fields of the network attributes are:</li>
 <dt id="pulumi_packet.Device.plan">
 <code class="descname">plan</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Device.plan" title="Permalink to this definition">¶</a></dt>
 <dd><p>The device plan slug. To find the plan slug, visit <a class="reference external" href="https://www.packet.com/developers/api/#plans">Device plans API docs</a>, set your auth token in the top of the page and see JSON from the API response.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.Device.ports">
+<code class="descname">ports</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Device.ports" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ports assigned to the device</p>
 </dd></dl>
 
 <dl class="attribute">

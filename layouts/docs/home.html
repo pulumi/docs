@@ -1,0 +1,17 @@
+{{ define "main" }}
+    <div class="content">
+        {{ with .File }}
+        <div class="edit-this-page">
+            <a href="{{ $.Site.Params.repositoryURL }}/edit/{{ $.Site.Params.repositoryBranch }}/content/{{ .Path }}" target="_blank">
+                <i class="fab fa-github"></i>
+                Edit This Page
+            </a>
+        </div>
+        {{ end }}
+
+        <!-- TODO: Check for nil or empty title? -->
+        <h1>{{ .Title }}</h1>
+
+        {{ .Content }}
+    </div>
+{{ end }}

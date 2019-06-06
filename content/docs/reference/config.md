@@ -10,15 +10,15 @@ menu:
 
 {{< mini-toc >}}
 
-Often, your Pulumi program will need configuration values that change independently from the program itself. For example, you may want to use a different size of AWS EC2 instance depending on whether the program is deployed to a development or production stack. 
+Often, your Pulumi program will need configuration values that change independently from the program itself. For example, you may want to use a different size of AWS EC2 instance depending on whether the program is deployed to a development or production stack.
 
-For these configuration values, you can use _stack settings_. Stack settings are defined in [`Pulumi.<stack-name>.yaml`] and are set via the `pulumi config set` command. 
+For these configuration values, you can use _stack settings_. Stack settings are defined in [`Pulumi.<stack-name>.yaml`] and are set via the `pulumi config set` command.
 
 ## Configuring Stacks {#config-stack}
 
-To add a new configuration key/value pair, use `pulumi config set <key> [value]`. 
+To add a new configuration key/value pair, use `pulumi config set <key> [value]`.
 
-Since [Pulumi components]({{< relref "./programming-model.md#components" >}}) can define configuration keys, you can use a namespace with the syntax  `namespace:key`. If a namespace is not specified, the [project name] defined in `Pulumi.yaml` is used. 
+Since [Pulumi components]({{< relref "./programming-model.md#components" >}}) can define configuration keys, you can use a namespace with the syntax  `namespace:key`. If a namespace is not specified, the [project name] defined in `Pulumi.yaml` is used.
 
 For example, if a project is named `broome-proj` and the active stack is `dev`, the following command adds the key  `broome-proj:name` to `Pulumi.dev.yaml`:
 
@@ -26,7 +26,7 @@ For example, if a project is named `broome-proj` and the active stack is `dev`, 
 $ pulumi config set name BroomeLLC
 ```
 
-To specify a particular namespace, use `config set namespace:name`. For instance, the [AWS package]({{< relref "/quickstart/aws" >}}) defines the required setting `region`, which is set via `aws:region`.
+To specify a particular namespace, use `config set namespace:name`. For instance, the [AWS package]({{< relref "/docs/quickstart/aws" >}}) defines the required setting `region`, which is set via `aws:region`.
 
 By default, configuration values are saved in plaintext. To explicitly save a setting as plaintext, use the `--plaintext` flag.
 
@@ -34,13 +34,13 @@ By default, configuration values are saved in plaintext. To explicitly save a se
 $ pulumi config set --plaintext aws:region us-west-2
 ```
 
-If `[value]` is not specified, the CLI will prompt for it. Alternatively, the config value can be set from standard input, which is useful for multiline values or any value that must be escaped on the command line. 
+If `[value]` is not specified, the CLI will prompt for it. Alternatively, the config value can be set from standard input, which is useful for multiline values or any value that must be escaped on the command line.
 
 ```bash
 $ cat my_key.pub | pulumi config set publicKey
 ```
 
-> NOTE: When using the `config set` command, any existing values for `<key>` will be overridden without warning. 
+> NOTE: When using the `config set` command, any existing values for `<key>` will be overridden without warning.
 
 ## Encrypted Secrets {#secrets}
 
@@ -50,9 +50,9 @@ To add an encrypted stack setting, such as for configuration secrets, use the `-
 $ pulumi config set --secret secretValue S3cr37
 
 $ pulumi config
-KEY                                              VALUE                                           
-aws:region                                       us-west-1                                       
-secretValue                                      ********                                        
+KEY                                              VALUE
+aws:region                                       us-west-1
+secretValue                                      ********
 ```
 
 ## Source Control
@@ -67,16 +67,16 @@ To view the active settings for the currently selected stack, use `pulumi config
 
 ```bash
 $ pulumi config
-KEY                                              VALUE                                           
-aws:region                                       us-west-1                                       
-secretValue                                      ********                                        
+KEY                                              VALUE
+aws:region                                       us-west-1
+secretValue                                      ********
 ```
 
 ```bash
 $ pulumi config --show-secrets
-KEY                                              VALUE                                           
-aws:region                                       us-west-1                                       
-secretValue                                      S3cr37                                          
+KEY                                              VALUE
+aws:region                                       us-west-1
+secretValue                                      S3cr37
 ```
 
 ## Using Configuration in Code
@@ -136,4 +136,4 @@ fmt.Println(c.Require("secretValue")) // prints "S3cr37"
 
 [`Pulumi.<stack-name>.yaml`]: {{< relref "project.md#stack-settings-file" >}}
 [project name]: {{< relref "project.md#project-name" >}}
-[AWS package]: {{< relref "/quickstart/aws" >}}
+[AWS package]: {{< relref "/docs/quickstart/aws" >}}

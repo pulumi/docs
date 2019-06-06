@@ -1,4 +1,5 @@
 ---
+layout: "home"
 noindex: true
 ---
 
@@ -11,18 +12,18 @@ noindex: true
         Provision infrastructure on any cloud using your favorite language.
     </h3>
     <p style="text-align: center; margin-bottom: 0">
-        <a href="{{< relref "/quickstart/install.md" >}}"><button class="button primary">INSTALL</button></a>
-        <a href="{{< relref "/quickstart" >}}"><button class="button primary">GET STARTED</button></a>
-        <a href="{{< relref "/reference" >}}"><button class="button primary">LEARN</button></a>
+        <a href="{{< relref "/docs/quickstart/install.md" >}}"><button class="button primary">INSTALL</button></a>
+        <a href="{{< relref "/docs/quickstart" >}}"><button class="button primary">GET STARTED</button></a>
+        <a href="{{< relref "/docs/reference" >}}"><button class="button primary">LEARN</button></a>
     </p>
 </div>
 
 <div class="card-table" style="background: #fafafa; margin: 64px 0 0 0; border-top: 1px solid #eee">
     <div class="mdl-card mdl-shadow--2dp get-started-card">
-        <a href="{{< relref "/quickstart/aws" >}}"><img src="/images/quickstart/aws-purple.png" style="width: 250px"></a>
-        <a href="{{< relref "/quickstart/azure" >}}"><img src="/images/quickstart/azure-purple.png" style="width: 250px"></a>
-        <a href="{{< relref "/quickstart/gcp" >}}"><img src="/images/quickstart/gcp-purple.png" style="width: 250px"></a>
-        <a href="{{< relref "/quickstart/kubernetes" >}}"><img src="/images/quickstart/k8s-purple.png" style="width: 250px"></a>
+        <a href="{{< relref "/docs/quickstart/aws" >}}"><img src="/images/quickstart/aws-purple.png" style="width: 250px"></a>
+        <a href="{{< relref "/docs/quickstart/azure" >}}"><img src="/images/quickstart/azure-purple.png" style="width: 250px"></a>
+        <a href="{{< relref "/docs/quickstart/gcp" >}}"><img src="/images/quickstart/gcp-purple.png" style="width: 250px"></a>
+        <a href="{{< relref "/docs/quickstart/kubernetes" >}}"><img src="/images/quickstart/k8s-purple.png" style="width: 250px"></a>
     </div>
 </div>
 
@@ -79,13 +80,13 @@ noindex: true
 
 <div class="card-table" style="background: #fafafa; border-top: 1px solid #eee; border-bottom: 1px solid #eee; margin-bottom: 64px">
     <div class="mdl-card mdl-shadow--2dp get-started-card">
-        <a href="{{< relref "/quickstart/aws/tutorial-service.md" >}}">
+        <a href="{{< relref "/docs/quickstart/aws/tutorial-service.md" >}}">
           <img src="/images/icon-feature-containers.svg"
               style="margin-bottom: 30px" width="125">
         </a>
         <div class="mdl-card__title">
             <h2 class="mdl-card__title-text no-anchor">
-                <a href="{{< relref "/quickstart/aws/tutorial-service.md" >}}">Containers</a>
+                <a href="{{< relref "/docs/quickstart/aws/tutorial-service.md" >}}">Containers</a>
             </h2>
         </div>
         <div class="mdl-card__supporting-text">
@@ -94,19 +95,19 @@ noindex: true
             </span>
         </div>
         <div class="mdl-card__actions">
-            <a href="{{< relref "/quickstart/aws/tutorial-service.md" >}}">
+            <a href="{{< relref "/docs/quickstart/aws/tutorial-service.md" >}}">
                 <button class="button">START NOW</button>
             </a>
         </div>
     </div>
     <div class="mdl-card mdl-shadow--2dp get-started-card">
-        <a href="{{< relref "/quickstart/aws/tutorial-rest-api.md" >}}">
+        <a href="{{< relref "/docs/quickstart/aws/tutorial-rest-api.md" >}}">
           <img src="/images/icon-feature-serverless.svg"
               style="margin-bottom: 30px" width="125">
         </a>
         <div class="mdl-card__title">
             <h2 class="mdl-card__title-text no-anchor">
-                <a href="{{< relref "/quickstart/aws/tutorial-rest-api.md" >}}">Serverless</a>
+                <a href="{{< relref "/docs/quickstart/aws/tutorial-rest-api.md" >}}">Serverless</a>
             </h2>
         </div>
         <div class="mdl-card__supporting-text">
@@ -115,19 +116,19 @@ noindex: true
             </span>
         </div>
         <div class="mdl-card__actions">
-            <a href="{{< relref "/quickstart/aws/tutorial-rest-api.md" >}}">
+            <a href="{{< relref "/docs/quickstart/aws/tutorial-rest-api.md" >}}">
                 <button class="button">START NOW</button>
             </a>
         </div>
     </div>
     <div class="mdl-card mdl-shadow--2dp get-started-card">
-        <a href="{{< relref "/quickstart/aws/tutorial-ec2-webserver.md" >}}">
+        <a href="{{< relref "/docs/quickstart/aws/tutorial-ec2-webserver.md" >}}">
           <img src="/images/icon-feature-data.svg"
               style="margin-bottom: 30px" width="125">
         </a>
         <div class="mdl-card__title">
             <h2 class="mdl-card__title-text no-anchor">
-                <a href="{{< relref "/quickstart/aws/tutorial-ec2-webserver.md" >}}">Infrastructure</a>
+                <a href="{{< relref "/docs/quickstart/aws/tutorial-ec2-webserver.md" >}}">Infrastructure</a>
             </h2>
         </div>
         <div class="mdl-card__supporting-text">
@@ -136,19 +137,19 @@ noindex: true
             </span>
         </div>
         <div class="mdl-card__actions">
-            <a href="{{< relref "/quickstart/aws/tutorial-ec2-webserver.md" >}}">
+            <a href="{{< relref "/docs/quickstart/aws/tutorial-ec2-webserver.md" >}}">
                 <button class="button">START NOW</button>
             </a>
         </div>
     </div>
     <div class="mdl-card mdl-shadow--2dp get-started-card">
-        <a href="{{< relref "/quickstart/kubernetes" >}}">
+        <a href="{{< relref "/docs/quickstart/kubernetes" >}}">
           <img src="/images/icon-feature-kubernetes.svg"
               style="margin-bottom: 30px" width="125">
         </a>
         <div class="mdl-card__title">
             <h2 class="mdl-card__title-text no-anchor">
-                <a href="{{< relref "/quickstart/kubernetes" >}}">Kubernetes</a>
+                <a href="{{< relref "/docs/quickstart/kubernetes" >}}">Kubernetes</a>
             </h2>
         </div>
         <div class="mdl-card__supporting-text">
@@ -157,7 +158,7 @@ noindex: true
             </span>
         </div>
         <div class="mdl-card__actions">
-            <a href="{{< relref "/quickstart/kubernetes" >}}">
+            <a href="{{< relref "/docs/quickstart/kubernetes" >}}">
                 <button class="button">START NOW</button>
             </a>
         </div>

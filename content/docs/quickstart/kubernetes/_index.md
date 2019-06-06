@@ -19,7 +19,7 @@ designed to fit in anywhere you already use Kubernetes:
 
 -   **API-compatible with Kubernetes** -- users do not have to learn a new API to write Kubernetes
     applications with Pulumi. (See the [Kubernetes][api-reference] and
-    [Pulumi]({{< relref "/reference/pkg/nodejs/pulumi/kubernetes" >}}) API documentation for more
+    [Pulumi]({{< relref "/docs/reference/pkg/nodejs/pulumi/kubernetes" >}}) API documentation for more
     details.)
 
 -   **Compatible with Kubernetes YAML and Helm Charts.** For example:
@@ -121,7 +121,7 @@ Pulumi.
 
 ## Kubernetes the Prod Way
 
-[Kubernetes the Prod Way]({{< relref "/quickstart/k8s-the-prod-way" >}}) is a tutorial aimed at users
+[Kubernetes the Prod Way]({{< relref "/docs/quickstart/k8s-the-prod-way" >}}) is a tutorial aimed at users
 looking for guidance on how to set up a Kubernetes cluster for production workloads, including
 identity, managed infrastructure (_e.g._, databases, Kubernetes clusters).
 
@@ -153,11 +153,11 @@ You can find a list of frequently-asked questions [here]({{< relref "faq.md" >}}
 [k8s]: https://kubernetes.io/
 [wp]: https://github.com/pulumi/examples/tree/master/kubernetes-ts-helm-wordpress
 [kubeconfig]: https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/
-[aws]: {{< relref "/quickstart/aws" >}}
-[azure]: {{< relref "/quickstart/azure" >}}
-[gcp]: {{< relref "/quickstart/gcp" >}}
+[aws]: {{< relref "/docs/quickstart/aws" >}}
+[azure]: {{< relref "/docs/quickstart/azure" >}}
+[gcp]: {{< relref "/docs/quickstart/gcp" >}}
 [eks]: https://aws.amazon.com/eks/
-[install]: {{< relref "/quickstart/install.md" >}}
+[install]: {{< relref "/docs/quickstart/install.md" >}}
 [nodejs]: https://nodejs.org/en/
 [npm]: https://www.npmjs.com/get-npm
 [yarn]: https://yarnpkg.com/en/docs/install

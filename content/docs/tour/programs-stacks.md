@@ -18,11 +18,11 @@ There are many reasons we might want more than one stack for our program:
 * Individual developer or test stacks
 * Shared environments like `prod`, `staging`, and `dev`
 * Replicated instances within an environment like `prod-na-east`, `prod-na-west`, and `prod-asia`
-* Single tenanted instances of a SaaS product like `acmecorp`, `contoso`, and `northwind` 
+* Single tenanted instances of a SaaS product like `acmecorp`, `contoso`, and `northwind`
 
 Each stack is entirely isolated from all other stacks, enabling concurrent deployments and fine-grained access controls.
 
-The [`pulumi stack`]({{< relref "/reference/cli/pulumi_stack.md" >}}) command manages everything about stacks.
+The [`pulumi stack`]({{< relref "/docs/reference/cli/pulumi_stack.md" >}}) command manages everything about stacks.
 
 The `stack ls` command shows us the current project's stacks and some basic information about each one:
 

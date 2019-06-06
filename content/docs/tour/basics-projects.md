@@ -11,10 +11,10 @@ menu:
 
 To get started with Pulumi, you'll need a project.
 
-A project is defined by a directory that contains a `Pulumi.yaml` [project file]({{< relref "/reference/project.md" >}}).  This file
+A project is defined by a directory that contains a `Pulumi.yaml` [project file]({{< relref "/docs/reference/project.md" >}}).  This file
 simply defines minimal metadata about your program so that Pulumi knows what to do with it.
 
-Use [`pulumi new <template-name>`]({{< relref "/reference/cli/pulumi_new.md" >}}) to quickly scaffold a new project from scratch:
+Use [`pulumi new <template-name>`]({{< relref "/docs/reference/cli/pulumi_new.md" >}}) to quickly scaffold a new project from scratch:
 
 {{< langchoose >}}
 

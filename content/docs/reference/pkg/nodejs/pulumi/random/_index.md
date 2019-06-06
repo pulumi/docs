@@ -90,7 +90,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -100,7 +100,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -114,7 +114,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -126,7 +126,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -218,7 +218,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomId-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -228,7 +228,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomId-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -306,7 +306,7 @@ The generated id presented in padded hexadecimal digits. This result will always
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomId-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -344,7 +344,7 @@ base64 encoded.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomId-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -433,7 +433,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomInteger-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -443,7 +443,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomInteger-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -457,7 +457,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomInteger-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -526,7 +526,7 @@ A custom seed to always produce the same value.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomInteger-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -615,7 +615,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomPet-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -625,7 +625,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomPet-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -639,7 +639,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomPet-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -697,7 +697,7 @@ The character to separate words in the pet name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomPet-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -775,7 +775,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomShuffle-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -785,7 +785,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomShuffle-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -799,7 +799,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomShuffle-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -877,7 +877,7 @@ all time.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomShuffle-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -951,7 +951,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomString-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -961,7 +961,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomString-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -975,7 +975,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomString-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1132,7 +1132,7 @@ in random string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomString-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1207,7 +1207,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomUuid-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1217,7 +1217,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomUuid-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1231,7 +1231,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomUuid-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1267,7 +1267,7 @@ The generated uuid presented in string format.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RandomUuid-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-random/blob/eb70e44cbe8c6473ed917ee7f661c33a19b599f6/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>

@@ -3,7 +3,7 @@ title: "Tutorial: Pulumi Components"
 aliases: ["component-tutorial.html"]
 ---
 
-It's easy to turn the [S3 website example] into a reusable [Component] that you share with your team or the community. A component is a logical container for physical cloud resources and controls how resources are grouped in the CLI and pulumi.com Console. To create a component in JavaScript, simply subclass [pulumi.ComponentResource]. 
+It's easy to turn the [S3 website example] into a reusable [Component] that you share with your team or the community. A component is a logical container for physical cloud resources and controls how resources are grouped in the CLI and pulumi.com Console. To create a component in JavaScript, simply subclass [pulumi.ComponentResource].
 
 In this tutorial, we'll create a simplified version of the example above, that just creates an S3 bucket. For a working end-to-end version that serves a stack website, see the [full source in the Pulumi examples repo][s3-folder-component].
 
@@ -20,11 +20,11 @@ In this tutorial, we'll create a simplified version of the example above, that j
 
         constructor(bucketName, path, opts) {
             // Register this component with name examples:S3Folder
-            super("examples:S3Folder", bucketName, {}, opts); 
+            super("examples:S3Folder", bucketName, {}, opts);
             console.log(`Path where files would be uploaded: ${path}`);
 
             // Create a bucket and expose a website index document
-            let siteBucket = new aws.s3.Bucket(bucketName, {}, 
+            let siteBucket = new aws.s3.Bucket(bucketName, {},
                 { parent: this } ); // specify resource parent
 
             // Create a property for the bucket name that was created
@@ -62,19 +62,19 @@ In this tutorial, we'll create a simplified version of the example above, that j
 
     Since we want a stack output for `bucketName`, we create a stack output of the component output property `folder.bucketName`.
 
-1.  Run `pulumi up`. The output of `console.log` is printed in the "Diagnostics" section. Note the parent-child relationship between the resources that have been created. 
+1.  Run `pulumi up`. The output of `console.log` is printed in the "Diagnostics" section. Note the parent-child relationship between the resources that have been created.
 
 1.  Verify the bucket exists by using the AWS Console or CLI:
 
     ```bash
     $ aws s3 ls | grep $(pulumi stack output bucketName)
     2018-04-19 18:40:04 s3-website-bucket-82616a0
-    ```  
+    ```
 
 <!-- LINKS -->
 [pulumi.ComponentResource]: {{< relref "pkg/nodejs/pulumi/pulumi#ComponentResource" >}}
 [Component]: {{< relref "programming-model.md#components" >}}
 [s3-folder]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder
 [s3-folder-component]: https://github.com/pulumi/examples/tree/master/aws-js-s3-folder-component
-[S3 website example]: {{< relref "/quickstart/aws/tutorial-s3-website.md" >}}
+[S3 website example]: {{< relref "/docs/quickstart/aws/tutorial-s3-website.md" >}}
 <!-- END LINKS -->

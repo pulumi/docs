@@ -47,7 +47,7 @@ This program allocates a single AWS S3 Bucket resource, whose name is `my-bucket
 be unique amongst all other instances of those resources in a single program, to help Pulumi identify them.
 
 Each resource class derives from
-[a common `Resource` base class]({{< relref "/reference/pkg/nodejs/pulumi/pulumi#Resource" >}}) defined by the Pulumi SDK,
+[a common `Resource` base class]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Resource" >}}) defined by the Pulumi SDK,
 whose shape differs in each language.
 
 More complex resource types require additional properties, as we'll soon see.  Resources often have two properties:

@@ -9,12 +9,12 @@ menu:
     parent: aws
 ---
 
-In this tutorial, we'll use TypeScript to build and deploy a simple container using the [`@pulumi/aws`]({{< relref "/reference/pkg/nodejs/pulumi/aws" >}}) and [`@pulumi/awsx`]({{< relref "/reference/pkg/nodejs/pulumi/awsx" >}}) frameworks.  This example can be deployed to AWS on either Fargate, and can be simply updated to use ECS as well.  The [code for this tutorial](https://github.com/pulumi/examples/tree/master/aws-ts-containers) is available on GitHub.
+In this tutorial, we'll use TypeScript to build and deploy a simple container using the [`@pulumi/aws`]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws" >}}) and [`@pulumi/awsx`]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx" >}}) frameworks.  This example can be deployed to AWS on either Fargate, and can be simply updated to use ECS as well.  The [code for this tutorial](https://github.com/pulumi/examples/tree/master/aws-ts-containers) is available on GitHub.
 
 ## Prerequisites
 
-1.  [Install Pulumi]({{< relref "/quickstart/install.md" >}})
-1.  Configure [AWS]({{< relref "/quickstart/aws/setup.md" >}}) credentials
+1.  [Install Pulumi]({{< relref "/docs/quickstart/install.md" >}})
+1.  Configure [AWS]({{< relref "/docs/quickstart/aws/setup.md" >}}) credentials
 
 ## Serve an HTML file in an NGINX container
 
@@ -33,7 +33,7 @@ In this tutorial, we'll use TypeScript to build and deploy a simple container us
     import * as pulumi from "@pulumi/pulumi";
     import * as aws from "@pulumi/aws";
     import * as awsx from "@pulumi/awsx";
-    
+
     // Create an elastic network listener to listen for requests and route them to the container.
     // See https://docs.aws.amazon.com/elasticloadbalancing/latest/network/introduction.html
     // for more details.

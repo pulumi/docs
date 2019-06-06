@@ -58,7 +58,7 @@ test                                      2 weeks ago              121
 
 To deploy your project to the currently selected stack, run `pulumi up`. The operation uses the latest [configuration values]({{< relref "config.md" >}}) for the active stack.
 
-> **Note:** Your stack can distinguish between execution for preview versus for update by using [pulumi.runtime.isDryRun()]({{< relref "/reference/pkg/nodejs/pulumi/pulumi/runtime#isDryRun" >}}).
+> **Note:** Your stack can distinguish between execution for preview versus for update by using [pulumi.runtime.isDryRun()]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi/runtime#isDryRun" >}}).
 
 ## View stack resources
 
@@ -137,12 +137,12 @@ To force the deletion of a stack that still contains resources --- potentially o
 
 ## Stack tags
 
-Stacks have associated metadata in the form of tags, with each tag consisting of a name and value. A set of built-in tags are automatically assigned and updated each time a stack is updated (such as `pulumi:project`, `pulumi:runtime`, `pulumi:description`, `gitHub:owner`, `gitHub:repo`, `vcs:owner`, `vcs:repo`, and `vcs:kind`). To view a stack's tags, run [`pulumi stack tag ls`]({{< relref "/reference/cli/pulumi_stack_tag_ls.md" >}}).
+Stacks have associated metadata in the form of tags, with each tag consisting of a name and value. A set of built-in tags are automatically assigned and updated each time a stack is updated (such as `pulumi:project`, `pulumi:runtime`, `pulumi:description`, `gitHub:owner`, `gitHub:repo`, `vcs:owner`, `vcs:repo`, and `vcs:kind`). To view a stack's tags, run [`pulumi stack tag ls`]({{< relref "/docs/reference/cli/pulumi_stack_tag_ls.md" >}}).
 
 > **Note:** Stack tags are only supported when logged into the [web backend]({{< relref "state.md" >}}).
 
-Custom tags can be assigned to a stack by running [`pulumi stack tag set <name> <value>`]({{< relref "/reference/cli/pulumi_stack_tag_set.md" >}}) and can be used to customize the grouping of stacks in the [Pulumi Cloud Console](https://app.pulumi.com). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom tag named `environment` to each stack. For example, running `pulumi stack tag set environment production` assigns a custom `environment` tag with a value of `production` to the active stack. Once you've assigned an `environment` tag to each stack, you'll be able to group by `Tag: environment` in the Pulumi Cloud Console.
+Custom tags can be assigned to a stack by running [`pulumi stack tag set <name> <value>`]({{< relref "/docs/reference/cli/pulumi_stack_tag_set.md" >}}) and can be used to customize the grouping of stacks in the [Pulumi Cloud Console](https://app.pulumi.com). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom tag named `environment` to each stack. For example, running `pulumi stack tag set environment production` assigns a custom `environment` tag with a value of `production` to the active stack. Once you've assigned an `environment` tag to each stack, you'll be able to group by `Tag: environment` in the Pulumi Cloud Console.
 
 > **Note:** As a best practice, custom tags should not be prefixed with `pulumi:`, `gitHub:`, or `vcs:` to avoid conflicting with built-in tags that are assigned and updated with fresh values each time a stack is updated.
 
-Tags can be deleted by running [`pulumi stack tag rm <name>`]({{< relref "/reference/cli/pulumi_stack_tag_rm.md" >}}).
+Tags can be deleted by running [`pulumi stack tag rm <name>`]({{< relref "/docs/reference/cli/pulumi_stack_tag_rm.md" >}}).

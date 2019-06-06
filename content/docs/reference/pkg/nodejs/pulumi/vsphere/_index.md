@@ -348,7 +348,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeCluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -358,7 +358,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeCluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -981,7 +981,7 @@ the hosts to put in the cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeCluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1098,7 +1098,7 @@ The IDs of any tags to attach to this resource. See
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeCluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1215,7 +1215,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterHostGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1225,7 +1225,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterHostGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1264,7 +1264,7 @@ the hosts to put in the cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterHostGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1288,7 +1288,7 @@ cluster. Forces a new resource if changed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterHostGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1420,7 +1420,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmAffinityRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1430,7 +1430,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmAffinityRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1468,7 +1468,7 @@ Enable this rule in the cluster. Default: `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmAffinityRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1503,7 +1503,7 @@ The name of the rule. This must be unique in the cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmAffinityRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1648,7 +1648,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmAntiAffinityRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1658,7 +1658,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmAntiAffinityRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1696,7 +1696,7 @@ Enable this rule in the cluster. Default: `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmAntiAffinityRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1731,7 +1731,7 @@ The name of the rule. This must be unique in the cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmAntiAffinityRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1892,7 +1892,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmDependencyRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1902,7 +1902,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmDependencyRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -1954,7 +1954,7 @@ Enable this rule in the cluster. Default: `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmDependencyRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1990,7 +1990,7 @@ cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmDependencyRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2130,7 +2130,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2140,7 +2140,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2167,7 +2167,7 @@ resource if changed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2191,7 +2191,7 @@ cluster. Forces a new resource if changed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2354,7 +2354,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmHostRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2364,7 +2364,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmHostRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2428,7 +2428,7 @@ Enable this rule in the cluster. Default: `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmHostRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2464,7 +2464,7 @@ cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmHostRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2591,7 +2591,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomAttribute-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2601,7 +2601,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomAttribute-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2615,7 +2615,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomAttribute-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2652,7 +2652,7 @@ The name of the custom attribute.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomAttribute-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2729,7 +2729,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Datacenter-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2739,7 +2739,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Datacenter-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2779,7 +2779,7 @@ Forces a new resource if changed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Datacenter-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2826,7 +2826,7 @@ The IDs of any tags to attach to this resource. See
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Datacenter-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2941,7 +2941,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatastoreCluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -2951,7 +2951,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatastoreCluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3009,7 +3009,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatastoreCluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3296,7 +3296,7 @@ The IDs of any tags to attach to this resource. See
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatastoreCluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3421,7 +3421,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatastoreClusterVmAntiAffinityRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3431,7 +3431,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatastoreClusterVmAntiAffinityRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3469,7 +3469,7 @@ Enable this rule in the cluster. Default: `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatastoreClusterVmAntiAffinityRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3504,7 +3504,7 @@ The name of the rule. This must be unique in the cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatastoreClusterVmAntiAffinityRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3698,7 +3698,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DistributedPortGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3708,7 +3708,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DistributedPortGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -3926,7 +3926,7 @@ If true, the teaming policy will re-activate failed interfaces higher in precede
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DistributedPortGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4255,7 +4255,7 @@ individual port.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DistributedPortGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -4463,7 +4463,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DistributedVirtualSwitch-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4473,7 +4473,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DistributedVirtualSwitch-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -4822,7 +4822,7 @@ options are:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DistributedVirtualSwitch-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -5338,7 +5338,7 @@ use this option.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DistributedVirtualSwitch-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -5673,7 +5673,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DpmHostOverride-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -5683,7 +5683,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DpmHostOverride-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -5746,7 +5746,7 @@ The managed object ID of the host.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DpmHostOverride-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -5758,7 +5758,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DpmHostOverride-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -5887,7 +5887,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DrsVmOverride-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -5897,7 +5897,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DrsVmOverride-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -5949,7 +5949,7 @@ machine. Can be either `true` or `false`. Default: `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DrsVmOverride-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -5961,7 +5961,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DrsVmOverride-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -6070,7 +6070,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="File-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -6080,7 +6080,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="File-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -6142,7 +6142,7 @@ or copied to on vSphere.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="File-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -6191,7 +6191,7 @@ changed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="File-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -6298,7 +6298,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Folder-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -6308,7 +6308,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Folder-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -6348,7 +6348,7 @@ resource if changed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Folder-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -6402,7 +6402,7 @@ The type of folder to create. Allowed options are
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Folder-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -6527,7 +6527,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HaVmOverride-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -6537,7 +6537,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HaVmOverride-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -6748,7 +6748,7 @@ specify the cluster default.  Default: `-1`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HaVmOverride-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -6760,7 +6760,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HaVmOverride-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -6900,7 +6900,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HostPortGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -6910,7 +6910,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HostPortGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -7017,7 +7017,7 @@ the host to set the port group up on. Forces a new resource if changed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HostPortGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -7145,7 +7145,7 @@ failover_explicit.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HostPortGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -7309,7 +7309,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitch-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -7319,7 +7319,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitch-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -7435,7 +7435,7 @@ the host to set the virtual switch up on. Forces a new resource if changed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitch-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -7604,7 +7604,7 @@ of `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitch-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -7673,7 +7673,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="License-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -7683,7 +7683,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="License-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -7708,7 +7708,7 @@ The product edition of the license key.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="License-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -7764,7 +7764,7 @@ Total number of units (example: CPUs) contained in the license.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="License-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -7871,7 +7871,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NasDatastore-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -7881,7 +7881,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NasDatastore-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -7999,7 +7999,7 @@ the hosts to mount the datastore on.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NasDatastore-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -8144,7 +8144,7 @@ The unique locator for the datastore.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NasDatastore-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -8187,7 +8187,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -8197,7 +8197,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -8211,7 +8211,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -8223,7 +8223,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -8309,7 +8309,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourcePool-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -8319,7 +8319,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourcePool-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -8410,7 +8410,7 @@ A list of custom attributes to set on this resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourcePool-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -8526,7 +8526,7 @@ The IDs of any tags to attach to this resource. See
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourcePool-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -8651,7 +8651,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageDrsVmOverride-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -8661,7 +8661,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageDrsVmOverride-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -8688,7 +8688,7 @@ Forces a new resource if changed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageDrsVmOverride-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -8742,7 +8742,7 @@ requirements. When not specified, the datastore cluster's settings are used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageDrsVmOverride-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -8846,7 +8846,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Tag-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -8856,7 +8856,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Tag-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -8893,7 +8893,7 @@ A description for the tag.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Tag-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -8917,7 +8917,7 @@ within its category.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Tag-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -9015,7 +9015,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TagCategory-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -9025,7 +9025,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TagCategory-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -9077,7 +9077,7 @@ A description for the category.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TagCategory-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -9100,7 +9100,7 @@ The name of the category.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TagCategory-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -9234,7 +9234,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VappContainer-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -9244,7 +9244,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VappContainer-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -9336,7 +9336,7 @@ A list of custom attributes to set on this resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VappContainer-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -9465,7 +9465,7 @@ The IDs of any tags to attach to this resource. See
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VappContainer-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -9593,7 +9593,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VappEntity-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -9603,7 +9603,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VappEntity-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -9640,7 +9640,7 @@ A list of custom attributes to set on this resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VappEntity-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -9737,7 +9737,7 @@ to power on or power off. This can be a virtual machine or a vApp.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VappEntity-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -9825,7 +9825,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualDisk-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -9835,7 +9835,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualDisk-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -9899,7 +9899,7 @@ disk.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualDisk-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -9936,7 +9936,7 @@ information on what each kind of disk provisioning policy means, click
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualDisk-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -10493,7 +10493,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10503,7 +10503,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -10997,7 +10997,7 @@ this virtual machine. Can be one of `hvAuto`, `hvOn`, or `hvOff`. Default:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -11401,7 +11401,7 @@ The IDs of any tags to attach to this resource. See
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -11606,7 +11606,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineSnapshot-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -11616,7 +11616,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineSnapshot-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -11654,7 +11654,7 @@ A description for the snapshot.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineSnapshot-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -11714,7 +11714,7 @@ The name of the snapshot.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineSnapshot-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -11882,7 +11882,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VmfsDatastore-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L19">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -11892,7 +11892,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VmfsDatastore-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L107">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L143">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{% md %}}
@@ -12010,7 +12010,7 @@ new resource if changed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VmfsDatastore-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L138">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -12092,7 +12092,7 @@ The unique locator for the datastore.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VmfsDatastore-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/43641413b52e75c9317d075e4a556d5e0eacf693/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>

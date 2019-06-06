@@ -18,7 +18,7 @@ First of all follow the instructions for creating a Pulumi stack. There are thre
 
 1. [Clone an Existing Example](https://github.com/pulumi/examples)
 2. [Use the New Project Wizard](https://app.pulumi.com/site/new-project)
-3. [Download the CLI]({{< relref "/quickstart/install.md" >}}) and run `pulumi new` to select a template.
+3. [Download the CLI]({{< relref "/docs/quickstart/install.md" >}}) and run `pulumi new` to select a template.
 
 Then [signup for a Codefresh account](https://codefresh.io/docs/docs/getting-started/create-a-codefresh-account/) and [create a pipeline](https://codefresh.io/docs/docs/configure-ci-cd-pipeline/pipelines/). There is no special setup needed on the Codefresh side (i.e. you can use Pulumi on both free and paid Codefresh accounts).
 
@@ -46,7 +46,7 @@ For example, if your stack is managing resources on AWS, `AWS_ACCESS_KEY_ID` and
 In your pipeline you need at least two steps.
 
 1. A step that downloads all Pulumi dependencies according to your programming language
-1. A step that performs the actual deployment 
+1. A step that performs the actual deployment
 
 In all cases you use a [Codefresh freestyle step](https://codefresh.io/docs/docs/codefresh-yaml/steps/freestyle/) with the Pulumi Docker image.
 
@@ -54,10 +54,10 @@ In all cases you use a [Codefresh freestyle step](https://codefresh.io/docs/docs
   RunMyPulumiStep:
     title: Running Pulumi inside Codefresh
     image: pulumi/pulumi
-    commands: 
+    commands:
       # run any pulumi command that you would run locally such as:
       - pulumi login
-      - pulumi stack 
+      - pulumi stack
 ```
 
 Pulumi will search for a login token named `PULUMI_ACCESS_TOKEN` so assuming that you have setup this variable in the pipeline, Pulumi will not ask for interactive login.
@@ -93,18 +93,18 @@ steps:
     title: Select K8s cluster
     stage: deploy
     image: codefresh/kubectl:1.13.3
-    commands: 
+    commands:
       - kubectl config get-contexts
       - kubectl config use-context "kostis-demo@FirstKubernetes"
   RunPulumi:
     title: Deploying
     stage: deploy
     image: pulumi/pulumi
-    commands: 
+    commands:
       - pulumi login
-      - pulumi stack select dev 
+      - pulumi stack select dev
       # (Optional) Use pulumi stack to get more information in CI/CD logs about the current stack
-      - pulumi stack 
+      - pulumi stack
       - pulumi up --non-interactive
 ```
 
@@ -121,4 +121,3 @@ You can find the full more details at the [full documentation page](https://code
 Codefresh has full support for [branch triggers](https://codefresh.io/docs/docs/configure-ci-cd-pipeline/triggers/git-triggers/) with specific expressions as well as [conditionals](https://codefresh.io/docs/docs/codefresh-yaml/conditional-execution-of-steps/).
 You can modify your existing pipeline or add another pipeline with a different trigger that runs `pulumi preview` or any other Pulumi command
 in a different scenario.
-
