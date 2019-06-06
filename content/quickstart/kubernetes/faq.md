@@ -26,7 +26,7 @@ In fact, Pulumi's Kubernetes SDK are manufactured by automatically wrapping our 
 the Kubernetes resource [OpenAPI spec][openapi] as soon as a new version is released!
 Ultimately, this means that Pulumi users do not have to learn a new
 Kubernetes API model, nor wait long to work with the latest versions available. See the [Kubernetes][api-reference] and
-[Pulumi](/reference/pkg/nodejs/@pulumi/kubernetes/index.html) API documentation for more
+[Pulumi]({{< relref "/reference/pkg/nodejs/pulumi/kubernetes" >}}) API documentation for more
 details.
 
 Notably, Pulumi also supports alpha and beta APIs.
@@ -49,14 +49,14 @@ examining cluster state (_e.g._, `describe`, `explain`, `get`, and so on).
 
 The differences between the two are:
 
- *  The Pulumi CLI presents information-rich status updates, giving a notion of progress as resources
+ *  The Pulumi CLI presents information-rich status updates, clearly showing progress as resources
     come online or fail within the cluster. `kubectl` users must manually
     retreive these updates from the cluster with repeated calls.
 
- *  Pulumi has a strong notion of a "plan" -- running `pulumi preview` allows you to see what effect
+ *  Pulumi allows you to preview the effects
     a change will have on your resource configuration.
 
- *  Pulumi provides explicit notions of creation, deletion, and replacement. If we must change an immutable
+ *  Pulumi provides full lifecycle management (creation, deletion, replacement) of resources. If we must change an immutable
     field in an API object, `pulumi preview` alerts the user the object must be replaced.
 
  *  The primary interface to `kubectl` is YAML. Pulumi exposes a rich, multi-language SDK to create
@@ -75,23 +75,23 @@ The differences between the two are:
 
 ## How does Pulumi compare to `Helm`?
 
-Helm v2 allows users to easily install a pre-packaged application *charts* into a Kubernetes
+Helm v2 allows users to easily install pre-packaged application *charts* into a Kubernetes
 cluster. Charts are parameterized by some number of values, which users can fill in to customize
 their application.
 
- *  Helm 2 Charts are managed by an in-cluster API server, called Tiller. 
+ *  By default, Helm 2 Charts are managed by an in-cluster API server, called Tiller. 
     This makes many things (_e.g._, RBAC) harder, because the API server is run
     with a single `ServiceAccount`, which typically has global read/write access to the cluster.
 
     Pulumi requires no server-side component.
 
- *  The Pulumi CLI presents information-rich status updates, giving a notion of progress as resources
+ *  The Pulumi CLI presents information-rich status updates, clearly showing progress as resources
     come online.
 
- *  Pulumi has a strong notion of a "plan" -- running `pulumi preview` allows you to see what effect
+ *  Pulumi allows you to preview the effects
     a change will have on your resource configuration.
 
- *  Explicit notions of creation, deletion, and replacement. If we must change an immutable field in
+ *  Pulumi provides full lifecycle management (creation, deletion, replacement) of resources. If we must change an immutable field in
     an API object, `pulumi preview` alerts the user the object must be replaced.
 
  *  Helm 2 parameterizes YAML templates using Go templates, a textual replacement engine. Go templates
@@ -102,8 +102,8 @@ their application.
 ## Can I use my existing YAML manifests and Helm Charts?
 
 Pulumi has integration support for Kubernetes YAML manifests and Helm Charts. This
-support affords users with facilities to jumpstart their Pulumi experience by
-bridging the gap between existing Kubernetes workloads, and net new Pulumi
+support allows users to jumpstart their Pulumi experience by
+easily integrating existing Kubernetes workloads with new Pulumi
 code.
 
 ### Examples
@@ -113,7 +113,7 @@ code.
 ```typescript
 import * as k8s as "@pulumi/kubernetes";
 
-const myapp = new k8s.yaml.ConfigFile("app.yaml");
+const myapp = new k8s.yaml.ConfigFile("app", {file: "app.yaml"});
 ```
 
 ##### Helm Chart:
@@ -143,14 +143,14 @@ possible to retrieve a kubeconfig file _for that cluster only_. In this case, th
 stored as part of the state history of rollouts -- but they are considered opaque state by the
 Pulumi service. The service **never** uses these values for any reason whatsoever.
 
-More over, the contents of the kubeconfig files are not sensitive for managed clusters
-on the major cloud providers, as they defer to their authentication mechanisms for their respective CLI.
+Additionally, the contents of the kubeconfig files are not sensitive for managed clusters
+on the major cloud providers, as they defer authentication to their local CLIs.
 
 ## Does the Pulumi Service see my cloud provider credentials?
 
 No. The `pulumi` CLI tool runs locally in the user's client. This allows
 Pulumi to transparently rely on the underlying cloud provider's CLI and authentication
-mechanisms. The service does not read, use, depend, or store any credentials.
+mechanisms. The service does not read, use, depend on, or store any credentials.
 
 ## Can I use Pulumi without the pulumi.com service?
 

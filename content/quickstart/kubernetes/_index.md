@@ -12,7 +12,7 @@ menu:
 [Kubernetes][k8s] is an open source project for running and managing containerized applications
 on a cluster of machines.
 
-[Pulumi](/quickstart) is an infrastructure-as-code tool that exposes the Kubernetes resource API as an
+[Pulumi]({{< relref "/quickstart" >}}) is an infrastructure-as-code tool that exposes the Kubernetes resource API as an
 SDK, alongside other SDKs which span common cloud native utilities, cloud
 provider IaaS offerings, and their catalog of services - managed Kubernetes included.
 
@@ -28,8 +28,8 @@ Kubernetes and Pulumi can:
 -  Create and orchestrate Kubernetes API resources for app workloads, in the programming language of their choice.
 -  Manage real code instead of YAML, JSON, DSL's, or tar archives of templates.
 -  Apply standard software development practices to Kubernetes applications, including the use of functions, classes, loops, conditionals, etc.
--  Employ the advantageous use of dev tools such as IDE auto-completion, type &
-   error checking, linting, and testing frameworks to validate Kubernetes clusters, app workloads, or both.
+-  Increase productivity using the power of dev tools such as IDE auto-completion, type &
+   error checking, linting, refactoring, and testing frameworks to validate Kubernetes clusters, app workloads, or both.
 
 ## Library Packages
 
@@ -47,7 +47,7 @@ The [`pulumi/kubernetes`](https://github.com/pulumi/pulumi-kubernetes) SDK is av
 
 -   JavaScript/TypeScript: [npm](https://www.npmjs.com/package/@pulumi/kubernetes)
 -   Python: [PyPI](https://pypi.org/project/pulumi-kubernetes/)
--   Go: Support for Go will eventually be available.
+-   Go: Planned
 
 ## Menu
 

@@ -1,6 +1,5 @@
 ---
 title: Tutorials - Clusters
-aliases: ["/reference/kubernetes-clusters.html"]
 menu:
   quickstart:
     identifier: kubernetes-clusters
