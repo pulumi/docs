@@ -27,20 +27,20 @@ hero_right_content: '<div class="code_container">
 
 <br>Previewing update of stack `mystack-dev`
 
-<br>     Type                                          
-<br> +   pulumi:pulumi:Stack                       
-<br> +   ├─ aws-infra:network:Network              
-<br> +   ├─ cloud:global:infrastructure            
-<br> +   │  ├─ aws:iam:Role                                                
-<br> +   │  ├─ aws:iam:RolePolicyAttachment             
-<br> +   ├─ cloud:bucket:Bucket                    
-<br> +   │  ├─ cloud:function:Function             
-<br> +   │  │  └─ aws:serverless:Function          
-<br> +   │  │     ├─ aws:iam:Role                  
-<br> +   │  │     ├─ aws:iam:RolePolicyAttachment  
-<br> +   │  │     └─ aws:lambda:Function                    
-<br> +   │  ├─ aws:s3:Bucket                       
-<br> +   ...             
+<br>     Type
+<br> +   pulumi:pulumi:Stack
+<br> +   ├─ aws-infra:network:Network
+<br> +   ├─ cloud:global:infrastructure
+<br> +   │  ├─ aws:iam:Role
+<br> +   │  ├─ aws:iam:RolePolicyAttachment
+<br> +   ├─ cloud:bucket:Bucket
+<br> +   │  ├─ cloud:function:Function
+<br> +   │  │  └─ aws:serverless:Function
+<br> +   │  │     ├─ aws:iam:Role
+<br> +   │  │     ├─ aws:iam:RolePolicyAttachment
+<br> +   │  │     └─ aws:lambda:Function
+<br> +   │  ├─ aws:s3:Bucket
+<br> +   ...
 
 <br>info: 33 changes previewed:
 <br>    + 33 resources to create</code></pre>
