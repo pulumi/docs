@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <ul class="utility-nav">
-                        {{ partial "utility-links.html" . }}
+                        {{ partial "docs/utility-links.html" . }}
                     </ul>
                 </div>
             </div>
@@ -24,7 +24,7 @@
                         <div class="mobile-menu-bg"></div>
                         <nav class="main-nav-wrapper dropdown-menu" aria-labelledby=".toggle-menu">
                             <div class="toc-in-nav visible-xs-block visible-sm-block" style="text-align: right">
-                                {{ partial "toc.html" . }}
+                                {{ partial "docs/toc.html" . }}
                             </div>
 
                             {{- $is_start := (hasPrefix .RelPermalink "/quickstart/") -}}
@@ -38,7 +38,7 @@
                             </ul>
 
                             <ul class="utility-nav visible-xs-block visible-sm-block">
-                                {{ partial "utility-links.html" . }}
+                                {{ partial "docs/utility-links.html" . }}
                             </ul>
                         </nav>
 
