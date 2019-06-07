@@ -4,7 +4,7 @@ noindex: true
 ---
 
 <div class="card-table" style="margin-top: 24px">
-    <a href="https://www.pulumi.com"><img src="/assets/images/docs/logo/logo.svg" alt="Pulumi" width="300"></a>
+    <a href="https://www.pulumi.com"><img src="/assets/images/logo/logo.svg" alt="Pulumi" width="300"></a>
     <h2 class="get-to-the-cloud no-anchor">
         Cloud Native Infrastructure as Code
     </h2>
