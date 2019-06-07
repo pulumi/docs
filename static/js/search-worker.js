@@ -6,7 +6,7 @@ var index;
 
 // Download the search index synchronously.
 var req = new XMLHttpRequest();
-req.open("GET", "/search-index.json", false /* async */);
+req.open("GET", "/docs/search-index.json", false /* async */);
 req.send();
 if (req.readyState === req.DONE && req.status === 200) {
     var data = JSON.parse(req.responseText);

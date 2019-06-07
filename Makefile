@@ -30,8 +30,8 @@ generate:
 build:
 	@echo -e "\033[0;32mBUILD:\033[0m"
 	hugo
-	node ./scripts/build-search-index.js < ./public/search-data/index.json > ./public/search-index.json
-	rm -rf ./public/search-data
+	node ./scripts/build-search-index.js < ./public/docs/search-data/index.json > ./public/docs/search-index.json
+	rm -rf ./public/docs/search-data
 
 .PHONY: test
 test:
