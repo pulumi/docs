@@ -76,13 +76,13 @@
         {
             name: "APIs",
             predicate: function (url) {
-                return url.startsWith("/reference/pkg/");
+                return url.startsWith("/docs/reference/pkg/");
             }
         },
         {
             name: "CLI",
             predicate: function (url) {
-                return url.startsWith("/reference/cli/") || url === "/reference/commands/";
+                return url.startsWith("/docs/reference/cli/") || url === "/docs/reference/commands/";
             }
         },
         {
@@ -124,8 +124,8 @@
                 break;
 
             case "CLI":
-                if (result.title.length === 0 && result.url.startsWith("/reference/cli/")) {
-                    var regex = /\/reference\/cli\/([a-z_]+)/gm;
+                if (result.title.length === 0 && result.url.startsWith("/docs/reference/cli/")) {
+                    var regex = /\/docs\/reference\/cli\/([a-z_]+)/gm;
                     var match = regex.exec(result.url)
                     if (match !== null) {
                         result.display = match[1].replace(/_/g, " ");

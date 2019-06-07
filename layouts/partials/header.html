@@ -17,7 +17,7 @@
                 <div class="col-sm-12">
 
                     <div class="wrapper dropdown main-nav-wrapper-wrapper">
-                        <a href="/">
+                        <a href="/docs/">
                             <img src="/images/logo/logo-inv.svg" class="logo hidden-xs hidden-sm">
                             <img src="/images/logo/logo-symbol-inv.svg" class="logo visible-xs-inline visible-sm-inline">
                         </a>
@@ -32,9 +32,9 @@
                             {{- $is_docs := (and (not $is_apis) (hasPrefix .RelPermalink "/reference/")) -}}
 
                             <ul class="main-nav">
-                                <li class="{{ if $is_start }}current-page{{ end }}"><a href="/quickstart">Get Started</a></li>
-                                <li class="{{ if $is_docs }}current-page{{ end }}"><a href="/reference">Documentation</a></li>
-                                <li class="{{ if $is_apis }}current-page{{ end }}"><a href="/reference/pkg">APIs</a></li>
+                                <li class="{{ if $is_start }}current-page{{ end }}"><a href="/docs/quickstart">Get Started</a></li>
+                                <li class="{{ if $is_docs }}current-page{{ end }}"><a href="/docs/reference">Documentation</a></li>
+                                <li class="{{ if $is_apis }}current-page{{ end }}"><a href="/docs/reference/pkg">APIs</a></li>
                             </ul>
 
                             <ul class="utility-nav visible-xs-block visible-sm-block">
