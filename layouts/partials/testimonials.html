@@ -1,0 +1,35 @@
+<section class="content-block">
+    <div class="content-header text-center">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-1">
+                    <div class="content">
+                        <h2>What They're Saying About Pulumi</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-xlg-8 col-xlg-offset-2">
+                <div class="testimonials-wrapper">
+                    <div class="testimonials-dots text-center margin-bottom-50"></div>
+                    <div class="testimonials row" data-slick='{"appendDots" : ".testimonials-dots", "autoplay": true, "autoplaySpeed": 4000, "arrows" : false, "slidesToShow": 1, "slidesToScroll": 1, "slidesPerRow" : 2, "dots" : true}'>
+                        {{ range $.Site.Data.testimonials.testimonial }}
+                            <div class="item col-md-6 testimonial">
+                                <div class="content">
+                                    <blockquote>
+                                        {{ .content }}
+                                    </blockquote>
+                                    <p>{{ .attr }}<br><a href="{{ .link }}" target="_blank">{{ .company }}</a></p>
+                                </div>
+                            </div>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

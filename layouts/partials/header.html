@@ -27,14 +27,16 @@
                                 {{ partial "docs/toc.html" . }}
                             </div>
 
+                            {{- $is_product := (hasPrefix .RelPermalink "/product/") -}}
+                            {{- $is_pricing := (hasPrefix .RelPermalink "/pricing/") -}}
                             {{- $is_start := (hasPrefix .RelPermalink "/quickstart/") -}}
                             {{- $is_apis := (hasPrefix .RelPermalink "/reference/pkg/") -}}
                             {{- $is_docs := (and (not $is_apis) (hasPrefix .RelPermalink "/reference/")) -}}
 
                             <ul class="main-nav">
-                                <li class="{{ if $is_start }}current-page{{ end }}"><a href="/docs/quickstart">Get Started</a></li>
-                                <li class="{{ if $is_docs }}current-page{{ end }}"><a href="/docs/reference">Documentation</a></li>
-                                <li class="{{ if $is_apis }}current-page{{ end }}"><a href="/docs/reference/pkg">APIs</a></li>
+                                <li class="{{ if $is_product }}current-page{{ end }}"><a href="/product">Products</a></li>
+                                <li class="{{ if $is_pricing }}current-page{{ end }}"><a href="/pricing">Pricing</a></li>
+                                <li class="{{ if $is_docs }}current-page{{ end }}"><a href="/docs/reference">Docs</a></li>
                             </ul>
 
                             <ul class="utility-nav visible-xs-block visible-sm-block">
