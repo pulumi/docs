@@ -1,6 +1,6 @@
 {{ define "main" }}
   {{ partial "hero.html" . }}
-  
+
     <section class="content-block content-block-anchors bg-black white-text">
         <div class="container-fluid">
             <div class="row">
@@ -14,7 +14,7 @@
             </div>
         </div>
     </section>
-    
+
     <section class="content-block text-center">
         <div class="container-fluid">
             <div class="row">
@@ -31,7 +31,7 @@
             </div>
         </div>
     </section>
-    
+
     <section id="for-developers" class="content-block bg-grey">
         <div class="content-content">
             <div class="container-fluid">
@@ -86,7 +86,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="content-footer text-center">
             <div class="container-fluid">
                 <div class="row">
@@ -99,7 +99,7 @@
             </div>
         </div>
     </section>
-    
+
     <section id="for-operators" class="content-block">
         <div class="content-content">
             <div class="container-fluid">
@@ -152,7 +152,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="content-footer text-center">
             <div class="container-fluid">
                 <div class="row">
@@ -165,7 +165,7 @@
             </div>
         </div>
     </section>
-    
+
     <section id="for-leaders" class="content-block bg-grey">
         <div class="content-content">
             <div class="container-fluid">
@@ -219,20 +219,20 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="content-footer text-center">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="content">
-                            <a href="{{ relref . "/pricing.md#contact" }}" class="button">Request a Demo</a>
+                            <a href="{{ relref . "/pricing/_index.md#contact" }}" class="button">Request a Demo</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-        
+
     <section class="content-block bg-purple white-text text-center">
         <div class="container-fluid">
             <div class="row">
@@ -247,8 +247,8 @@
             </div>
         </div>
     </section>
-    
+
     {{ partial "learnmore-contactus.html" . }}
     {{ partial "newsletter.html" (dict "classes" "bg-purple-dark white-text" )}}
-    
+
 {{ end }}
