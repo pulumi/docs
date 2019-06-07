@@ -1,0 +1,358 @@
+{{ define "main" }}
+    {{ partial "hero.html" . }}
+    
+    <section class="content-block content-block-anchors bg-black white-text">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 anchor-container" id="anchor-point">
+                    <ul class="anchor-list">
+                        <li class="anchor-item"><a href="#benefits">Benefits</a></li>
+                        <li class="anchor-item"><a href="#code1">Code</a></li>
+                        <li class="anchor-item"><a href="#how-it-works">How it Works</a></li>
+                        <li class="anchor-item"><a href="#case-study">Case Study</a></li>
+                        <li class="anchor-item"><a href="#get-started">Get Started</a></li>
+                        <li class="anchor-item"><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="content-block" id="benefits">
+        <div class="content-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1">
+                        <div class="row cols-are-spaced-md">
+                            <div class="col col-md-4">
+                                <div class="content">
+                                    <img src="{{ .Site.BaseURL }}assets/icons/realCode_icon.svg" width="65" alt="" class="margin-bottom-30">
+                                    <h3 class="h5">Real Code</h3>
+                                    <p>Pulumi is infrastructure as real code. This means you get all the benefits of your favorite language and tool for provisioning cloud infrastructure: code completion, error checking, versioning, IDE support, and general productivity gains - without the need to manage YAML and DSL syntax.</p>
+                                </div>
+                            </div>
+                            <div class="col col-md-4">
+                                <div class="content">
+                                    <img src="{{ .Site.BaseURL }}assets/icons/reusable-component.svg" width="88" alt="" class="margin-bottom-30">
+                                    <h3 class="h5">Reusable Components</h3>
+                                    <p>As Pulumi is code, you can build up a library of packages to further enhance efficiency. Build repeatable practices through versioned packages such as: standard policies, network best practices, architecture blueprints - and deploy them to your team. </p>
+                                </div>
+                            </div>
+                            <div class="col col-md-4">
+                                <div class="content">
+                                    <img src="{{ .Site.BaseURL }}assets/icons/immutable_infastrc_icon.svg" width="78" alt="" class="margin-bottom-30">
+                                    <h3 class="h5">Ephemeral Infrastructure</h3>
+                                    <p>Pulumi provides the computation of necessary cloud resources with a 'Cloud Resource DAG' ensuring successful deployment of cloud infrastructure - efficiently building, updating, and destroying cloud resources as required. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="content-block bg-grey" id="code1">
+            <div class="content-content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-10 col-lg-offset-1">
+                            <div class="row cols-are-spaced-md">
+                                <div class="col col-md-5">
+                                    <div class="content">
+                                        <sup>Kubernetes</sup>
+                                        <h2 class="h4 text-purple">Build and deploy a GKE cluster</h2>
+                                        <p>Pulumi supports programming against Kubernetes – Minikube, custom on-premises, or cloud-hosted custom clusters or in managed clusters such as Google GKE.</p>
+                                        <p>This code defines a GKE cluster with configurable settings which could be used in a module which could then be used to deploy an app to the cluster.</p>
+                                        <p><br/><a href="https://pulumi.io/quickstart/gcp/index.html" class="button">Get Started</a></p>
+                                        <p>Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.</p>
+                                    </div>
+                                </div>
+                                <div class="col col-md-7">
+                                    <div class="content">
+    <pre><code class="javascript hljs">// Define a GKE cluster with configurable settings
+import * as gcp from "@pulumi/gcp";
+import { nodeCount, nodeMachineType, password, username } from "./config";
+
+export const k8sCluster = new gcp.container.Cluster("gke-cluster", {
+    initialNodeCount: nodeCount,
+    nodeVersion: "latest",
+    minMasterVersion: "latest",
+    masterAuth: { username, password },
+    nodeConfig: {
+        machineType: nodeMachineType,
+        oauthScopes: [
+            "https://www.googleapis.com/auth/compute",
+            "https://www.googleapis.com/auth/devstorage.read_only",
+            "https://www.googleapis.com/auth/logging.write",
+            "https://www.googleapis.com/auth/monitoring"
+        ],
+    },
+});
+    </code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+<section class="content-block bg-grey" id="code2">
+                <div class="content-content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-10 col-lg-offset-1">
+                                <div class="row cols-are-spaced-md">
+                                    <div class="col col-md-5">
+                                        <div class="content">
+                                            <sup>Kubernetes</sup>
+                                            <h2 class="h4 text-purple">Build and deploy Kubernetes apps to GKE</h2>
+                                            <p>Pulumi supports deploying apps and services to Kubernetes clusters such as GKE. </p>
+                                            <p>This code makes use of our previously defined GKE cluster and deploys an nginx canary onto the cluster with 1 replica.</p>
+                                            <p><br/><a href="https://pulumi.io/quickstart/gcp/index.html" class="button">Get Started</a></p>
+                                            <p>Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col col-md-7">
+                                        <div class="content">
+        <pre><code class="javascript hljs">// Deploy an nginx canary to GKE
+import * as k8s from "@pulumi/kubernetes";
+import * as pulumi from "@pulumi/pulumi";
+import { k8sProvider, k8sConfig } from "./cluster";
+
+// Create a canary deployment to test that this cluster works.
+const name = `${pulumi.getProject()}-${pulumi.getStack()}`;
+const canaryLabels = { app: `canary-${name}` };
+const canary = new k8s.apps.v1beta1.Deployment("canary", {
+    spec: {
+        selector: { matchLabels: canaryLabels },
+        replicas: 1,
+        template: {
+            metadata: { labels: canaryLabels },
+            spec: { containers: [{ name, image: "nginx" }] },
+        },
+    },
+}, { provider: k8sProvider });
+
+// Export the Kubeconfig so that clients can easily access our cluster.
+export let kubeConfig = k8sConfig;
+
+        </code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        <section class="content-block bg-grey" id="code3">
+                <div class="content-content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-10 col-lg-offset-1">
+                                <div class="row cols-are-spaced-md">
+                                    <div class="col col-md-5">
+                                        <div class="content">
+                                            <sup>Infrastructure</sup>
+                                            <h2 class="h4 text-purple">Creating a Simple Web Server</h2>
+                                            <p>Pulumi gives you a way to express infrastructure configuration using your favorite programming language.</p>
+                                            <p>This code uses TypeScript on Node.js to define the necessary environment, defines a very simple web server, and then creates the instance, before exporting the IP and Hostname.</p>
+                                            <p><br/><a href="https://pulumi.io/quickstart/gcp/index.html" class="button">Get Started</a></p>
+                                            <p>Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col col-md-7">
+                                        <div class="content">
+        <pre><code class="javascript hljs">const gcp = require("@pulumi/gcp");
+
+const computeNetwork = new gcp.compute.Network("network", {
+    autoCreateSubnetworks: true,
+});
+
+const computeFirewall = new gcp.compute.Firewall("firewall", {
+    network: computeNetwork.selfLink,
+    allows: [{
+        protocol: "tcp",
+        ports: [ "22", "80" ],
+    }],
+});
+
+// Create a simple web server
+const startupScript = `#!/bin/bash
+echo "Hello, World!" > index.html
+nohup python -m SimpleHTTPServer 80 &`;
+
+const computeInstance = new gcp.compute.Instance("instance", {
+    machineType: "f1-micro",
+    metadataStartupScript: startupScript,
+    bootDisk: {
+        initializeParams: {
+            image: "debian-cloud/debian-8",
+        },
+    },
+    networkInterfaces: [{
+        network: computeNetwork.id,
+        accessConfigs: [{}], // must be empty 
+    }],
+    serviceAccount: {
+      scopes: ["https://www.googleapis.com/auth/cloud-platform"],
+    },
+}, { dependsOn: [computeFirewall] });
+
+exports.instanceName = computeInstance.name;
+exports.instanceIP = computeInstance.networkInterfaces.apply(ni => ni[0].accessConfigs[0].natIp);
+        </code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-block bg-grey" id="code4">
+                    <div class="content-content">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-10 col-lg-offset-1">
+                                    <div class="row cols-are-spaced-md">
+                                        <div class="col col-md-5">
+                                            <div class="content">
+                                                <sup>Serverless</sup>
+                                                <h2 class="h4 text-purple">Creating a Google Cloud Function</h2>
+                                                <p>With Pulumi, you can combine infrastructure definitions and application code in one program. The <code>@pulumi/cloud-gcp</code> library is a set of Pulumi components that provide a higher-level abstraction over Azure. You can use this library and define application code at the same time as the infrastructure it depends on.</p>
+                                                <p>This example shows how to create a simple Google Cloud Function that returns a message when invoked.</p>
+                                                <p><br/><a href="https://pulumi.io/quickstart/gcp/index.html" class="button">Get Started</a></p>
+                                                <p>Pulumi can be used on any resource covering serverless, containers, and infrastructure using JavaScript, TypeScript, Python, and Go.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col col-md-7">
+                                            <div class="content">
+            <pre><code class="javascript hljs">// Create a simple Function
+            import * as gcpFunction from "./gcpFunction";
+            
+            let greetingFunction = new gcpFunction.HttpFunction("greeting", (req, res) => {
+                res.send(`Greetings from ${req.body.name || 'Google Cloud Functions'}!`);
+            });
+            
+            export let url = greetingFunction.httpsTriggerUrl;
+            </code></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+    {{ partial "how-pulumi-works.html" . }}
+    
+    <section class="content-block" id="case-study">
+        
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <div class="content">
+                        <p class="intro text-uppercase text-blue-dark">Featured Customer</p>
+                        <div class="row">
+                            <div class="col-md-3 col-md-push-9 text-center">
+                                <div style="height: 17px;"><!--custom spacer--></div>
+                                <img src="{{ .Site.BaseURL }}assets/logos/customers/learning-machine_logo.svg" alt="Learning Machine" width="208" class="margin-bottom-30">
+                            </div>
+                            <div class="col-md-9 col-md-pull-3 content">
+                                <h2>Learning Machine</h2>
+                                <p><a href="https://www.learningmachine.com/" target="_blank">Learning Machine</a>, a blockchain SaaS company faced two challenges with their cloud infrastructure:</p>
+                                <ol>
+                                    <li>Skills gaps between Dev and DevOps creating silos, and fragility.</li>
+                                    <li>The need to more rapidly provision their expanding roster of new customers.</li>
+                                </ol>
+                            </div>
+                        </div>
+                        
+                        <hr>
+                        <p class="margin-bottom-50">By moving to Pulumi, Learning Machine were able to solve both challenges with significant increases in capability:</p>
+                        <div class="row cols-are-spaced-md">
+                            <div class="col col-sm-6 col-md-4 col-md-offset-2">
+                                <figure>
+                                    <img src="{{ .Site.BaseURL }}assets/images/customers/learning_machine_info-1.svg" width="210">
+                                    <figcaption> 25,000 Lines of CloudFormation reduced to 500 Lines of JavaScript </figcaption>
+                                </figure>
+                            </div>
+                            <div class="col col-sm-6 col-md-4">
+                                <figure>
+                                    <img src="{{ .Site.BaseURL }}assets/images/customers/learning_machine_info-2.svg" width="234">
+                                    <figcaption> New customer provisioning time reduced from 3 weeks to 1 hour </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <hr>
+                        <blockquote>
+                            <div class="content">
+                                <p>Pulumi has given our team the tools and framework to achieve a unified development and DevOps model, boosting productivity and taking our business to any cloud environment that our customers need. We retired 25,000 lines of complex code that few team members understood and replaced it with 100s of lines in a real programming language.</p>
+                            </div>
+                            <footer>
+                                <p class="attr-name">Kim Hamilton, CTO</p>
+                                <p class="attr-title"><a href="https://www.learningmachine.com/" target="_blank">Learning Machine</a></p>
+                            </footer>
+                            
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{ partial "get-started.html" . }}
+    
+    <section class="content-block bg-purple white-text" id="contact">
+        <div class="content-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1">
+                        <div class="row cols-are-spaced-md">
+                            <div class="col col-md-6">
+                                <div class="content">
+                                    <h2 class="h3">Let Pulumi assist with your cloud infrastructure</h2>
+                                    <p>Need help delivering Cloud Native Infrastructure as Code on GCP? Drop us a line.</p>
+                                </div>
+                            </div>
+                            <div class="col col-md-6">
+                                <div class="content">
+                                    <div class="hbspt-form-wrapper compact">
+                                        <!--[if lte IE 8]>
+                                        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+                                        <![endif]-->
+                                        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+                                        <script>
+                                          hbspt.forms.create({
+                                            portalId: "4429525",
+                                            formId: "3eee19cc-77d0-440a-85d9-8979e775b4e5"
+                                        });
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    {{ partial "more-on-pulumi.html" . }}
+    
+{{ end }}
