@@ -1,5 +1,9 @@
 ---
 title: "AWS Elastic Kubernetes Service (EKS)"
+menu:
+  reference:
+    parent: crosswalk-aws
+    name: Elastic Kubernetes Service (EKS)
 ---
 
 {{< mini-toc >}}

@@ -1,5 +1,9 @@
 ---
 title: "AWS Virtual Private Cloud (VPC)"
+menu:
+  reference:
+    parent: crosswalk-aws
+    name: Virtual Private Cloud (VPC)
 ---
 
 {{< mini-toc >}}

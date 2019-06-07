@@ -1,5 +1,9 @@
 ---
 title: "AWS Lambda Serverless"
+menu:
+  reference:
+    parent: crosswalk-aws
+    name: Lambda
 ---
 
 {{< mini-toc >}}

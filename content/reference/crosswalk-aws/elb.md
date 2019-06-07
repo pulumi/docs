@@ -1,5 +1,9 @@
 ---
 title: "AWS Elastic Load Balancing (ELB)"
+menu:
+  reference:
+    parent: crosswalk-aws
+    name: Elastic Load Balancing (ELB)
 ---
 
 {{< mini-toc >}}

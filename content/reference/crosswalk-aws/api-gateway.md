@@ -1,5 +1,9 @@
 ---
 title: "AWS API Gateway"
+menu:
+  reference:
+    parent: crosswalk-aws
+    name: API Gateway
 ---
 
 {{< mini-toc >}}

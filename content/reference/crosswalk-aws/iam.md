@@ -1,5 +1,9 @@
 ---
 title: "AWS Identity and Access Management (IAM)"
+menu:
+  reference:
+    parent: crosswalk-aws
+    name: Identity and Access Management (IAM)
 ---
 
 {{< mini-toc >}}

@@ -5,7 +5,7 @@ aliases:
     - /install/changelog.html
 menu:
   reference:
-    weight: 11
+    weight: 12
 ---
 
 <!-- Common links -->

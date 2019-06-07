@@ -3,7 +3,7 @@ title: "FAQ"
 aliases: ["faq.html"]
 menu:
   reference:
-    weight: 10
+    weight: 11
 ---
 
 ## How can I add support for my favorite cloud?

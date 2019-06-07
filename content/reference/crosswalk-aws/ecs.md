@@ -1,5 +1,9 @@
 ---
 title: "AWS Elastic Container Service (ECS)"
+menu:
+  reference:
+    parent: crosswalk-aws
+    name: Elastic Container Service (ECS)
 ---
 
 {{< mini-toc >}}

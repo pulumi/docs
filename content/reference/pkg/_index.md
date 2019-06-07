@@ -3,7 +3,7 @@ title: API Reference
 menu:
   reference:
     identifier: api
-    weight: 9
+    weight: 10
 ---
 
 {{< mini-toc >}}
