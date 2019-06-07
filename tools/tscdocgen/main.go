@@ -182,6 +182,7 @@ var gitHubBaseURLs = map[string]string{
 	"@pulumi/openstack":    "https://github.com/pulumi/pulumi-openstack/blob/{githash}/sdk/nodejs",
 	"@pulumi/packet":       "https://github.com/pulumi/pulumi-packet/blob/{githash}/sdk/nodejs",
 	"@pulumi/random":       "https://github.com/pulumi/pulumi-random/blob/{githash}/sdk/nodejs",
+	"@pulumi/terraform":    "https://github.com/pulumi/pulumi-terraform/blob/{githash}/sdk/nodejs",
 	"@pulumi/vsphere":      "https://github.com/pulumi/pulumi-vsphere/blob/{githash}/sdk/nodejs",
 }
 

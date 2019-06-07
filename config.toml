@@ -208,6 +208,11 @@ sectionPagesMenu = "main"
 
 [[menu.reference]]
     parent = "node"
+    name = "terraform"
+    url = "/reference/pkg/nodejs/pulumi/terraform/"
+
+[[menu.reference]]
+    parent = "node"
     name = "vsphere"
     url = "/reference/pkg/nodejs/pulumi/vsphere/"
 
