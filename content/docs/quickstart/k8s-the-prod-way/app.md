@@ -93,7 +93,7 @@ pulumi up
 
 On success, this should look something like the following.
 
-<img src="/images/k8s-the-prod-way/app.png">
+<img src="/assets/images/docs/k8s-the-prod-way/app.png">
 
 As we can see, we've deployed a `Deployment` containing the WordPress application, along with a
 `StatefulSet` for mariadb, `Secret`s for the passwords, and some `Pod`s that do end-to-end tests.

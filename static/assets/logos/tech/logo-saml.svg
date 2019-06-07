@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Logo by Nick A(with modifications) https://dribbble.com/shots/4041061-SAML-Logo -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 175 256" style="enable-background:new 0 0 175 256;" xml:space="preserve">
+<style type="text/css">
+	.bg{fill:#009CD9};
+</style>
+<g>
+	<path class="bg" d="M89.4,112H90l47.8,47.9L90,207.8H49.3L83.1,174H3.5c0.6,3.6,1.3,6.8,2,9.4C23.3,230.1,87.7,256,87.7,256
+		s63.3-27.5,82.2-72.5c3.9-12.6,5.1-42.4,5.2-72.1H88.9L89.4,112z"/>
+	<path class="bg" d="M82.6,145.2H82L34.2,97.3L82,49.3h40.6L88.9,83.1h85.9c-0.4-27.2-1.4-48.9-1.4-48.9S122.7,32.4,87.7,0
+		C50.8,32.4,2,34.3,2,34.3s-3.5,64.8-1.1,111.5h82.3L82.6,145.2z"/>
+</g>
+</svg>

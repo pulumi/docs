@@ -39,18 +39,18 @@ corrupt your infrastructure state when using Pulumi in a team environment. It al
 
 The app.pulumi.com architecture can be visualized as follows:
 
-<img src="/images/reference/state_saas.png" alt="Pulumi SaaS Architecture" class="img-bordered">
+<img src="/assets/images/docs/reference/state_saas.png" alt="Pulumi SaaS Architecture" class="img-bordered">
 
 The Pulumi Enterprise product offers self-hosting options for the web backend, if you wish to use these features
 without depending on app.pulumi.com. The Enterprise web architecture looks like the following:
 
-<img src="/images/reference/state_enterprise.png" alt="Pulumi Enterprise Architecture" class="img-bordered">
+<img src="/assets/images/docs/reference/state_enterprise.png" alt="Pulumi Enterprise Architecture" class="img-bordered">
 
 For more information on Pulumi Enterprise, please [contact us](https://www.pulumi.com/pricing/#contact).
 
 ## Logging In
 
-The `pulumi login` command lets you log into a backend. By default, anytime you try to do something that requires 
+The `pulumi login` command lets you log into a backend. By default, anytime you try to do something that requires
 stacks or state, you will be prompted to log in.
 
 ### To the Web Backend
@@ -71,7 +71,7 @@ access token. If this is your first time using the service, you will need to aut
 If you wish to get a token manually, or view your generated tokens, you may go to https://app.pulumi.com/account/tokens.
 This page will show you all past tokens, when they were last used, and allow you to revoke them:
 
-<img src="/images/reference/state_tokens.png" alt="Pulumi.com Tokens Page" class="img-bordered">
+<img src="/assets/images/docs/reference/state_tokens.png" alt="Pulumi.com Tokens Page" class="img-bordered">
 
 After logging in, state will automatically get persisted with the service, and from time to time, you will see
 a helpful URL to your update or stack pages. You can always go there to see a full history of updates.

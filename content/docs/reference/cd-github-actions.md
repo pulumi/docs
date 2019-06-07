@@ -108,7 +108,7 @@ Now you've got a workflow defined, but before you're ready to use it, you'll nee
 After committing the workflow file into your repo as `.github/main.workflow`, head on over to your
 repo's **Settings tab**, where you will find the new **Secrets area**:
 
-![Secrets](/images/reference/gh-actions-secrets.png)
+![Secrets](/assets/images/docs/reference/gh-actions-secrets.png)
 
 First, [create a Pulumi Access Token](https://app.pulumi.com/account/tokens), and enter it as `PULUMI_ACCESS_TOKEN`.
 This enables your GitHub Action to communicate with the Pulumi service.
@@ -130,16 +130,16 @@ Enter these as secrets, just like you did `PULUMI_ACCESS_TOKEN`, so that your Gi
 To try things out, simply create a Pull Request or commit, and you will see these new actions showing up in
 the usual GitHub Checks dialog, with a green checkmark if everything went as planned:
 
-![Action Checks](/images/reference/gh-actions-checks.png)
+![Action Checks](/assets/images/docs/reference/gh-actions-checks.png)
 
 Click the Logs pane to see the full output of the Pulumi CLI, along with a hyperlink to your deployment on
 Pulumi's Cloud Console with more details:
 
-![Action Logs](/images/reference/gh-actions-logs.png)
+![Action Logs](/assets/images/docs/reference/gh-actions-logs.png)
 
 For even better Pull Request integration, make sure to also [install our GitHub App]({{< relref "cd-github.md" >}})!
 
-![Action Pull Requests](/images/reference/gh-actions-prs.png)
+![Action Pull Requests](/assets/images/docs/reference/gh-actions-prs.png)
 
 # Using the Visual Editor
 
@@ -149,33 +149,33 @@ this UI will become available, and you may find it more convenient to edit thing
 
 1. Go to your repo on GitHub, and click on the new **Actions** tab:
 
-    ![Editor Actions Tab](/images/reference/gh-actions-editor-tab.png)
+    ![Editor Actions Tab](/assets/images/docs/reference/gh-actions-editor-tab.png)
 
 2. Click the **Create a new workflow** button:
 
-    ![Editor Create Workflow](/images/reference/gh-actions-editor-create.png)
+    ![Editor Create Workflow](/assets/images/docs/reference/gh-actions-editor-create.png)
 
 3. Click the **&lt;&gt; Edit new file** tab:
 
-    ![Editor New File](/images/reference/gh-actions-editor-newfile.png)
+    ![Editor New File](/assets/images/docs/reference/gh-actions-editor-newfile.png)
 
 4. Replace the default workflow with the suggested Pulumi workflow described above (
    [see here](https://github.com/pulumi/actions/blob/master/examples/main.workflow)):
 
-    ![Editor Workflow Edit](/images/reference/gh-actions-editor-edit.png)
+    ![Editor Workflow Edit](/assets/images/docs/reference/gh-actions-editor-edit.png)
 
 If you select the **Visual editor** tab, you'll see the resulting workflow actions, and all secrets may be edited:
 
-![Editor Visual Edit](/images/reference/gh-actions-editor-visual.png)
+![Editor Visual Edit](/assets/images/docs/reference/gh-actions-editor-visual.png)
 
 To edit your secrets, scroll down and select the first Pulumi action, and click **Edit**:
 
-![Editor Edit](/images/reference/gh-actions-editor-configure.png)
+![Editor Edit](/assets/images/docs/reference/gh-actions-editor-configure.png)
 
 This will open the action editor on the right-hand side, in which you'll enter your various credentials (for Pulumi and
 your cloud). After configuring these, you should see the green secrets with lock icons show up for your actions:
 
-![Editor Secrets](/images/reference/gh-actions-editor-secrets.png)
+![Editor Secrets](/assets/images/docs/reference/gh-actions-editor-secrets.png)
 
 # Pull Request Flow
 
@@ -204,7 +204,7 @@ or clicking the button below.
 
 Example comment when using the Pulumi GitHub App:
 
-<img src="/images/github-actions/pr-comment-gh-app.png" alt="Comment from the Pulumi GitHub App" width="600" class="img-bordered">
+<img src="/assets/images/docs/github-actions/pr-comment-gh-app.png" alt="Comment from the Pulumi GitHub App" width="600" class="img-bordered">
 
 ## Comments By GitHub Actions
 
@@ -232,7 +232,7 @@ action "Pulumi Preview (Merged Stack)" {
 
 Example comment when using GitHub Actions directly:
 
-<img src="/images/github-actions/pr-comment-actions.png" alt="Comment from GitHub Actions" width="600" class="img-bordered">
+<img src="/assets/images/docs/github-actions/pr-comment-actions.png" alt="Comment from GitHub Actions" width="600" class="img-bordered">
 
 # Configuration
 

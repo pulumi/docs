@@ -21,7 +21,7 @@ to private registries.
 
 These packages can be mixed to enable multi-cloud and a spectrum of control to productivity:
 
-![Pulumi Library Architecture](/images/reference/pkg-arch-layers.png)
+![Pulumi Library Architecture](/assets/images/docs/reference/pkg-arch-layers.png)
 
 You can read further documentation specific to each language here:
 

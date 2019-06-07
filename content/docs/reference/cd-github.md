@@ -33,12 +33,12 @@ This allows you to quickly see the changes caused by your Pulumi program without
 GitHub's Pull Request view, with a link to the richer details available on the
 [Pulumi Cloud Console](https://app.pulumi.com).
 
-<img src="/images/github-app/pr-comment.png" alt="Comment on Pull Request" class="img-bordered move-right">
+<img src="/assets/images/docs/github-app/pr-comment.png" alt="Comment on Pull Request" class="img-bordered move-right">
 
 Beyond Pull Request comments, the GitHub application also integrates with GitHub's [Checks API](https://blog.github.com/2018-05-07-introducing-checks-api/).
 This provides even more detail about any resource changes, including the full update log.
 
-<img src="/images/github-app/checks-detail.png" alt="Results on GitHub Check" width="600" class="img-bordered move-right">
+<img src="/assets/images/docs/github-app/checks-detail.png" alt="Results on GitHub Check" width="600" class="img-bordered move-right">
 
 ## Installation and Configuration
 
@@ -52,8 +52,8 @@ Pulumi's GitHub workflow integration is a GitHub application you can install by 
 The Pulumi GitHub application is installed into a specific GitHub organization, and you can
 configure it to only be used by certain repositories.
 
-<img src="/images/github-app/installation.png" alt="Installation Page" width="450" class="img-bordered move-right">
-<img src="/images/github-app/org-configuration.png" alt="Configuration Page" width="450" class="img-bordered move-right">
+<img src="/assets/images/docs/github-app/installation.png" alt="Installation Page" width="450" class="img-bordered move-right">
+<img src="/assets/images/docs/github-app/org-configuration.png" alt="Configuration Page" width="450" class="img-bordered move-right">
 
 The Pulumi GitHub application does not have access to your source code. It will only report
 status on pushes / pull requests that happen for repositories it is configured to access. You can
@@ -95,13 +95,13 @@ commit check by "Code" tab's "Commits" page, and then clicking the ✅ or ❌ ic
 
 For Pull Requests, you can see the checks on the "Checks" tab as well.
 
-<img src="/images/github-app/checks.png" alt="GitHub Checks Tab" width="600" class="img-bordered move-right">
+<img src="/assets/images/docs/github-app/checks.png" alt="GitHub Checks Tab" width="600" class="img-bordered move-right">
 
 Every stack that was impacted by the CI job is then listed in the left.
 
-<img src="/images/github-app/checks-detail.png" alt="GitHub Check Result" width="600" class="img-bordered move-right">
+<img src="/assets/images/docs/github-app/checks-detail.png" alt="GitHub Check Result" width="600" class="img-bordered move-right">
 
 If the CI build originated from a pull request, e.g. the Travis CI job had type `pull_request`,
 then the results will be placed as a comment on the Pull Request as well.
 
-<img src="/images/github-app/pr-comment.png" alt="Comment on Pull Request" width="600" class="img-bordered move-right">
+<img src="/assets/images/docs/github-app/pr-comment.png" alt="Comment on Pull Request" width="600" class="img-bordered move-right">

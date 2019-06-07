@@ -12,7 +12,7 @@ When a Pulumi program is deployed via `pulumi up`, there are a few processes inv
 
 During program execution, whenever there is a resource creation statement (via `new Resource()` in JavaScript or `Resource(...)` in Python), the resource is registered with the engine. This does not necessarily mean that a new resource should be created, it simply means that the program intends for the resource to exist. Using the last state in the checkpoint stored on pulumi.com, the engine determines which requests it should make to the underlying _provider_ in order to create, delete, or replace the resource. At the end the program execution, if a particular resource _R_ is never registered, the engine will make a delete request to the resource provider. The following diagram illustrates the interaction between these parts of the system.
 
-<img src="/images/reference/engine-block-diagram.png" alt="Pulumi engine and providers" width="600">
+<img src="/assets/images/docs/reference/engine-block-diagram.png" alt="Pulumi engine and providers" width="600">
 
 For instance, suppose we have the following Pulumi program, which creates two S3 buckets:
 

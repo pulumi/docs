@@ -14,11 +14,11 @@ In order to create new credentials to use with Pulumi, go to the `APIs and Servi
 and select the `Credentials` sub-menu. From here, select the `Create credentials` drop-down menu and click `Service account key`
 to create a new key for a service account.
 
-![Create new credentials](/images/gcp_configure/gcp_create_credentials.png)
+![Create new credentials](/assets/images/docs/gcp_configure/gcp_create_credentials.png)
 
 On the next screen, select `JSON` as the key type and select the service account to which this key will be associated.
 
-![Create new credentials](/images/gcp_configure/gcp_create_service_account_key.png)
+![Create new credentials](/assets/images/docs/gcp_configure/gcp_create_service_account_key.png)
 
 Pressing the `Create` button will download a JSON file. This file contains your
 new credentials.

@@ -25,7 +25,7 @@ to a group of users.
 You can add a new team by going to the organization's TEAMS tab, and then
 clicking the NEW button. Only organization administrators can create or update teams.
 
-![Adding a new team](/images/reference/service/new-team-card.png)
+![Adding a new team](/assets/images/docs/reference/service/new-team-card.png)
 
 #### GitHub-based Teams
 
@@ -35,7 +35,7 @@ GitHub teams into Pulumi.
 For these teams, membership is managed on GitHub, while the set of stack
 permissions granted to team members is managed on the Pulumi Cloud Console.
 
-![Importing a GitHub-based team](/images/reference/service/add-github-team-card.png)
+![Importing a GitHub-based team](/assets/images/docs/reference/service/add-github-team-card.png)
 
 ## Team / Stack Permissions
 
@@ -43,7 +43,7 @@ Membership within a team will grant a Pulumi user a specific permission level fo
 stack in the team. For example, members of `network-team` may have `WRITE` access to the
 `backend/production` stack, but only `READ` access to `datastore/production`.
 
-![Editing team stacks and permissions](/images/reference/service/editing-stack-permissions.png)
+![Editing team stacks and permissions](/assets/images/docs/reference/service/editing-stack-permissions.png)
 
 For more information about stack permissions see
 [Roles and Access Controls]({{< relref "roles-and-access-controls.md" >}}).

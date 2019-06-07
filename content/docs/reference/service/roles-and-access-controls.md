@@ -79,7 +79,7 @@ These stack permissions allow users to perform the following actions:
 Pulumi organizations that have been imported from GitHub can be configured by
 organization admins to change way organization members interact with stacks.
 
-![Organization settings](/images/reference/service/org-settings-card.png)
+![Organization settings](/assets/images/docs/reference/service/org-settings-card.png)
 
 ### Default Stack Permission
 

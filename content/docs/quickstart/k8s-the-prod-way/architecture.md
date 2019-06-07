@@ -58,7 +58,7 @@ this use case.
 An explanation of the 3 stacks follows the diagram. In the next section, we begin to provision and
 configure each of these stacks.
 
-<img src="/images/k8s-the-prod-way/kube-arch.png">
+<img src="/assets/images/docs/k8s-the-prod-way/kube-arch.png">
 
 ## 1. Identity
 

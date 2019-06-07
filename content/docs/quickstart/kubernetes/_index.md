@@ -7,7 +7,7 @@ menu:
     weight: 6
 ---
 
-<img src="/images/quickstart/k8s-purple.png" align="right">
+<img src="/assets/images/docs/quickstart/k8s-purple.png" align="right">
 
 [Kubernetes][k8s] is an open source platform for running containerized applications on a cluster of
 machines. Applications are managed through a RESTful API that exposes mechanisms to deploy, scale,

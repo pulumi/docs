@@ -53,7 +53,7 @@ In this tutorial, we'll show how you can use [@pulumi/aws] to provision raw reso
 
 1.  Create some files in `www`:
     - Create a subfolder of `s3website` called `www`.
-    - Download [favicon.png](/images/examples/favicon.png) and save it to `www`.
+    - Download [favicon.png](/assets/images/examples/favicon.png) and save it to `www`.
     - In `www`, save the following as `index.html`:
 
       ```html
@@ -172,7 +172,7 @@ In this section, we configure the S3 bucket to serve the files to a browser. To 
     s3-website-bucket-8533d8b.s3-website-us-west-2.amazonaws.com
     ```
 
-    <img src="/images/quickstart/s3-website.png" alt="Hello S3 example" width="700">
+    <img src="/assets/images/docs/quickstart/s3-website.png" alt="Hello S3 example" width="700">
 
 ## Clean up
 

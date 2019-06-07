@@ -5,39 +5,39 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
         <title>Page Not Found</title>
-        <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
         {{ $options := (dict "targetPath" "css/404.css" "outputStyle" "compressed" "enableSourceMap" true) }}
         {{ $style := resources.Get "sass/404.scss" | resources.ToCSS $options }}
         <link rel="stylesheet" href="{{ $style.RelPermalink }}">
     </head>
 
     <body>
-        <img src="/images/logo/logo-inv.svg" class="logo" alt="Pulumi">
+        <img src="/assets/images/docs/logo/logo-inv.svg" class="logo" alt="Pulumi">
 
         <div class="anim1">
-            <img src="/images/404/beam1.svg" class="beam1">
+            <img src="/assets/images/docs/404/beam1.svg" class="beam1">
         </div>
         <div class="anim2">
-            <img src="/images/404/beam2.svg" class="beam2">
+            <img src="/assets/images/docs/404/beam2.svg" class="beam2">
         </div>
         <div class="anim3">
-            <img src="/images/404/beam3.svg" class="beam3">
+            <img src="/assets/images/docs/404/beam3.svg" class="beam3">
         </div>
         <div class="anim4">
-            <img src="/images/404/beam4.svg" class="beam4">
+            <img src="/assets/images/docs/404/beam4.svg" class="beam4">
         </div>
 
         <div class="anim4">
-            <img src="/images/404/cloud4.svg" class="cloud4">
+            <img src="/assets/images/docs/404/cloud4.svg" class="cloud4">
         </div>
         <div class="anim2">
-            <img src="/images/404/cloud2.svg" class="cloud2">
+            <img src="/assets/images/docs/404/cloud2.svg" class="cloud2">
         </div>
         <div class="anim3">
-            <img src="/images/404/cloud3.svg" class="cloud3">
+            <img src="/assets/images/docs/404/cloud3.svg" class="cloud3">
         </div>
         <div class="anim1">
-            <img src="/images/404/cloud1.svg" class="cloud1">
+            <img src="/assets/images/docs/404/cloud1.svg" class="cloud1">
         </div>
 
         <div id="clouds-and-beams">

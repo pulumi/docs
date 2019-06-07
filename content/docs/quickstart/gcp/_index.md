@@ -7,7 +7,7 @@ menu:
     weight: 5
 ---
 
-<img src="/images/quickstart/gcp-purple.png" align="right">
+<img src="/assets/images/docs/quickstart/gcp-purple.png" align="right">
 
 The Google Cloud Platform (GCP) provider for Pulumi can be used to provision any of the cloud resources available in [GCP](https://cloud.google.com/).  The GCP provider must be configured with credentials to deploy and update resources in Google Cloud.
 

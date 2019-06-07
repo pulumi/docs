@@ -105,7 +105,7 @@ pulumi up
 On success, this should look something like the following. This example is for GCP, but similar
 output will be displayed for AWS and Azure.
 
-<img src="/images/k8s-the-prod-way/infrastructure.png">
+<img src="/assets/images/docs/k8s-the-prod-way/infrastructure.png">
 
 ## Stack Outputs: Kubernetes Credentials
 

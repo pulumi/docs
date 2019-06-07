@@ -4,7 +4,7 @@ noindex: true
 ---
 
 <div class="card-table" style="margin-top: 24px">
-    <a href="https://www.pulumi.com"><img src="/images/logo/logo.svg" alt="Pulumi" width="300"></a>
+    <a href="https://www.pulumi.com"><img src="/assets/images/docs/logo/logo.svg" alt="Pulumi" width="300"></a>
     <h2 class="get-to-the-cloud no-anchor">
         Cloud Native Infrastructure as Code
     </h2>
@@ -20,10 +20,10 @@ noindex: true
 
 <div class="card-table" style="background: #fafafa; margin: 64px 0 0 0; border-top: 1px solid #eee">
     <div class="mdl-card mdl-shadow--2dp get-started-card">
-        <a href="{{< relref "/docs/quickstart/aws" >}}"><img src="/images/quickstart/aws-purple.png" style="width: 250px"></a>
-        <a href="{{< relref "/docs/quickstart/azure" >}}"><img src="/images/quickstart/azure-purple.png" style="width: 250px"></a>
-        <a href="{{< relref "/docs/quickstart/gcp" >}}"><img src="/images/quickstart/gcp-purple.png" style="width: 250px"></a>
-        <a href="{{< relref "/docs/quickstart/kubernetes" >}}"><img src="/images/quickstart/k8s-purple.png" style="width: 250px"></a>
+        <a href="{{< relref "/docs/quickstart/aws" >}}"><img src="/assets/images/docs/quickstart/aws-purple.png" style="width: 250px"></a>
+        <a href="{{< relref "/docs/quickstart/azure" >}}"><img src="/assets/images/docs/quickstart/azure-purple.png" style="width: 250px"></a>
+        <a href="{{< relref "/docs/quickstart/gcp" >}}"><img src="/assets/images/docs/quickstart/gcp-purple.png" style="width: 250px"></a>
+        <a href="{{< relref "/docs/quickstart/kubernetes" >}}"><img src="/assets/images/docs/quickstart/k8s-purple.png" style="width: 250px"></a>
     </div>
 </div>
 
@@ -81,7 +81,7 @@ noindex: true
 <div class="card-table" style="background: #fafafa; border-top: 1px solid #eee; border-bottom: 1px solid #eee; margin-bottom: 64px">
     <div class="mdl-card mdl-shadow--2dp get-started-card">
         <a href="{{< relref "/docs/quickstart/aws/tutorial-service.md" >}}">
-          <img src="/images/icon-feature-containers.svg"
+          <img src="/assets/images/docs/icon-feature-containers.svg"
               style="margin-bottom: 30px" width="125">
         </a>
         <div class="mdl-card__title">
@@ -102,7 +102,7 @@ noindex: true
     </div>
     <div class="mdl-card mdl-shadow--2dp get-started-card">
         <a href="{{< relref "/docs/quickstart/aws/tutorial-rest-api.md" >}}">
-          <img src="/images/icon-feature-serverless.svg"
+          <img src="/assets/images/docs/icon-feature-serverless.svg"
               style="margin-bottom: 30px" width="125">
         </a>
         <div class="mdl-card__title">
@@ -123,7 +123,7 @@ noindex: true
     </div>
     <div class="mdl-card mdl-shadow--2dp get-started-card">
         <a href="{{< relref "/docs/quickstart/aws/tutorial-ec2-webserver.md" >}}">
-          <img src="/images/icon-feature-data.svg"
+          <img src="/assets/images/docs/icon-feature-data.svg"
               style="margin-bottom: 30px" width="125">
         </a>
         <div class="mdl-card__title">
@@ -144,7 +144,7 @@ noindex: true
     </div>
     <div class="mdl-card mdl-shadow--2dp get-started-card">
         <a href="{{< relref "/docs/quickstart/kubernetes" >}}">
-          <img src="/images/icon-feature-kubernetes.svg"
+          <img src="/assets/images/docs/icon-feature-kubernetes.svg"
               style="margin-bottom: 30px" width="125">
         </a>
         <div class="mdl-card__title">
