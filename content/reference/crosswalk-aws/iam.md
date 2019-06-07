@@ -2,7 +2,7 @@
 title: "AWS Identity and Access Management (IAM)"
 ---
 
-{% include mini-toc.html %}
+{{< mini-toc >}}
 
 ## Overview {#overview}
 

@@ -2,7 +2,7 @@
 title: "AWS Elastic Kubernetes Service (EKS)"
 ---
 
-{% include mini-toc.html %}
+{{< mini-toc >}}
 
 ## Overview {#overview}
 

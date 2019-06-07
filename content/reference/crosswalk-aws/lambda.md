@@ -2,7 +2,7 @@
 title: "AWS Lambda Serverless"
 ---
 
-{% include mini-toc.html %}
+{{< mini-toc >}}
 
 ## Overview {#overview}
 

@@ -2,7 +2,7 @@
 title: "AWS Virtual Private Cloud (VPC)"
 ---
 
-{% include mini-toc.html %}
+{{< mini-toc >}}
 
 ## Overview
 
@@ -24,11 +24,11 @@ without needing to recreate the same VPC templates for every new project you tac
 
 ## Managing VPCs
 
-The [aws.ec2.Vpc](https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/ec2/#Vpc) class provides full access to the
-AWS VPC API, and [aws.ec2](https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/ec2) the entire AWS EC2 API. Using
+The [aws.ec2.Vpc]({{< relref "/reference/pkg/nodejs/pulumi/aws/ec2#Vpc" >}}) class provides full access to the
+AWS VPC API, and [aws.ec2]({{< relref "/reference/pkg/nodejs/pulumi/aws/ec2" >}}) the entire AWS EC2 API. Using
 these packages, you can configure all aspects of AWS networks for your applications and infrastructure.
 
-The [awsx.ec2.Vpc](https://pulumi.io/reference/pkg/nodejs/@pulumi/awsx/ec2/#Vpc) class encapsulates a complete
+The [awsx.ec2.Vpc]({{< relref "/reference/pkg/nodejs/pulumi/awsx/ec2#Vpc" >}}) class encapsulates a complete
 configuration of an AWS network, including the actual VPC itself, in addition to public and/or private subnets, route
 tables, and gateways, across multiple availability zones. It is designed to be easier to use, with reasonable defaults,
 and follows AWS's own best practices, with configurability for advanced scenarios. The two can be used together.
@@ -470,11 +470,11 @@ raw resource so that you can code directly to the underlying AWS resource types,
 
 For information about configuring each of these resources, please refer to each type's API documentation:
 
-* [Vpc](https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/ec2/#Vpc)
-* [Subnet](https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/ec2/#Subnet)
-* [InternetGateway](https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/ec2/#InternetGateway)
-* [NatGateway](https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/ec2/#NatGateway)
-* [SecurityGroup](https://pulumi.io/reference/pkg/nodejs/@pulumi/aws/ec2/#SecurityGroup)
+* [Vpc]({{< relref "/reference/pkg/nodejs/pulumi/aws/ec2#Vpc" >}})
+* [Subnet]({{< relref "/reference/pkg/nodejs/pulumi/aws/ec2#Subnet" >}})
+* [InternetGateway]({{< relref "/reference/pkg/nodejs/pulumi/aws/ec2#InternetGateway" >}})
+* [NatGateway]({{< relref "/reference/pkg/nodejs/pulumi/aws/ec2#NatGateway" >}})
+* [SecurityGroup]({{< relref "/reference/pkg/nodejs/pulumi/aws/ec2#SecurityGroup" >}})
 
 These resources can be independently allocated, just as with the `Vpc` class shown above. They will need to be
 connected together manually, however, which can provide greater flexibility but at a greater implementation cost.

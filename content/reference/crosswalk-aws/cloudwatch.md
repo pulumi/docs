@@ -2,7 +2,7 @@
 title: "AWS CloudWatch Metrics, Alarms, and Dashboards"
 ---
 
-{% include mini-toc.html %}
+{{< mini-toc >}}
 
 ## Overview {#overview}
 

@@ -2,7 +2,7 @@
 title: "AWS Elastic Load Balancing (ELB)"
 ---
 
-{% include mini-toc.html %}
+{{< mini-toc >}}
 
 ## Overview {#overview}
 
@@ -28,8 +28,8 @@ scaling, and robust security necessary to make your applications fault tolerant:
   Private Cloud (Amazon VPC) based on the content of the request.
 
 Pulumi Crosswalk for AWS ELB provides easy APIs for provisioning Application and Network Load Balancers, and
-integrates with functionality for other services, including [API Gateway](./api-gateway.html),
-[Elastic Container Service (ECS)](./ecs.html), [Lambda](./lambda.html), and [VPC](./vpc.html), to provide
+integrates with functionality for other services, including [API Gateway]({{< relref "api-gateway.md" >}}),
+[Elastic Container Service (ECS)]({{< relref "ecs.md" >}}), [Lambda]({{< relref "lambda.md" >}}), and [VPC]({{< relref "vpc.md" >}}), to provide
 configurable network accessibility to the different kinds of compute you will run inside of AWS.
 
 ## Creating a Load Balancer
@@ -166,8 +166,8 @@ to configure the way that traffic is forwarded, health checks, and so on, see
 For more advanced cases, you will most likely want to use [EC2 Auto Scaling](
 https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html), rather than hard-coding
 the number of and placement of VMs. Please refer to the API docs for
-[LaunchConfiguration](https://pulumi.io/reference/pkg/nodejs/pulumi/aws/ec2/#LaunchConfiguration) and
-[AutoScalingGroup](https://pulumi.io/reference/pkg/nodejs/pulumi/aws/autoscaling/#Group) for details on how to do so.
+[LaunchConfiguration]({{< relref "/reference/pkg/nodejs/pulumi/aws/ec2#LaunchConfiguration" >}}) and
+[AutoScalingGroup]({{< relref "/reference/pkg/nodejs/pulumi/aws/autoscaling#Group" >}}) for details on how to do so.
 
 ## Load Balancing ECS Service Targets
 
@@ -205,7 +205,7 @@ const nginx = new awsx.ecs.FargateService("nginx-task", {
 export const endpoint = listener.endpoint.hostname;
 ```
 
-> [Pulumi Crosswalk for AWS ECS](./ecs.html) -- those classes in the `awsx.ecs` package -- will automatically create the
+> [Pulumi Crosswalk for AWS ECS]({{< relref "ecs.md" >}}) -- those classes in the `awsx.ecs` package -- will automatically create the
 > right ingress and egress rules. If you are using raw `aws.ecs`, you will need to manually manage the security group
 > ingress and egress rules, much like the [EC2 Instance](#load-balancing-ec2-instances) example earlier.
 
@@ -221,7 +221,7 @@ $ curl http://$(pulumi stack output endpoint)
 </html>
 ```
 
-This load balancer uses reasonable targeting defaults and health checks. If you'd like to customise these, please
+This load balancer uses reasonable targeting defaults and health checks. If you'd like to customize these, please
 see [Advanced NLB Target Group and Listener Configuration](#advanced-nlb-target-group-and-listener-configuration) below.
 
 Although ECS supports both NLB and ALB, ALB offer several features that make them more attractive for ECS:
@@ -280,7 +280,7 @@ const listener = alb.createListener("web-listener", { port: 80 });
 export const endpoint = listener.endpoint;
 ```
 
-For more information on creating and configuring VPCs, please refer to [Pulumi Crosswalk for AWS VPC](./vpc.html).
+For more information on creating and configuring VPCs, please refer to [Pulumi Crosswalk for AWS VPC]({{< relref "vpc.md" >}}).
 
 ## Advanced Load Balancer Listener and Target Group Configuration
 
@@ -300,7 +300,7 @@ Let's review the core concepts involved in both NLB and ALB style load balancers
   default rule for each listener, and you can add rules that specify different target groups based on the content of the
   request (also known as content-based routing).
 
-* Each [_target group_](//docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target) routes
+* Each [_target group_](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html) routes
   requests to one or more registered targets, such as EC2 instances, using the protocol and
   port number that you specify. You can register a target with multiple target groups. You can configure health checks
   on a per target group basis. Health checks are performed on all targets registered to a target group that is
@@ -428,4 +428,4 @@ https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balance
 ## Additional ELB Resources
 
 For detailed reference documentation, please visit [the API docs](
-https://pulumi.io/reference/pkg/nodejs/@pulumi/awsx/elasticloadbalancingv2/).
+{{< relref "/reference/pkg/nodejs/pulumi/awsx/elasticloadbalancingv2" >}}).
