@@ -1,0 +1,9 @@
+id = "erin-krengel"
+name = "Erin Krengel"
+title = "Software Engineer"
+weight = 1
+
+[social]
+github = "ekrengel"
+linkedin = "ekrengel"
+twitter = "eckrengel"

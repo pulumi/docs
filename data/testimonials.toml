@@ -1,0 +1,11 @@
+[[testimonial]]
+content = "We're excited to see Pulumi deliver a pure code multi-cloud cloud programming model. Combined with IOpipe, teams can deploy, test, and debug their code faster."
+attr = "Erica Windisch, Co-founder and CTO"
+company = "IOpipe"
+link = "https://www.iopipe.com"
+
+[[testimonial]]
+content = "With Pulumi, we have the tools to achieve a unified DevOps model. We retired 25,000 lines of complex config and replaced it with 100s of lines of real code with Pulumi."
+attr = "Kim Hamilton, CTO"
+company = "Learning Machine"
+link = "https://www.learningmachine.com"
