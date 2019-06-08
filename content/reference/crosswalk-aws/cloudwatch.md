@@ -19,11 +19,13 @@ unified view of AWS resources, applications and services.
 Pulumi Crosswalk for AWS CloudWatch help you operationally understand and manage your AWS resources and applications,
 including the following scenarios:
 
-* [Configure logging](#logging), for debugging and diagnosing problems after they have happened
-* [Collect and track metrics](#Metrics), which are variables you can measure, for health or performance
-* [Define custom dashboards](#Dashboards) to display these metrics or custom collections of metrics
-* [Create alarms](#Alarms) to watch metrics and send notifications or automatically make changes
+* [Configure logging](#configuring-cloudwatch-logging), for debugging and diagnosing problems after they have happened
+* [Collect and track metrics](#subscribing-to-cloudwatch-metrics), which are variables you can measure, for health or
+  performance
+* [Create alarms](#creating-cloudwatch-alarms) to watch metrics and send notifications or automatically make changes
   when a threshold is breached
+* [Define custom dashboards](#defining-cloudwatch-dashboards-in-code) to display these metrics or custom collections of
+  metrics
 
 For example, by setting up metrics to track the CPU usage and disk reads and writes of your Amazon EC2 instances,
 you can create dashboards that report on health and set up alerts to notify you when you need to launch additional
@@ -261,7 +263,7 @@ custom code in response to metric alarms being triggered.
 CloudWatch metrics may also be used to trigger changes to [Autoscaling Scaling Policies](
 {{< relref "autoscaling.md#scaling-policies" >}}) in response to events indicating that more or less capacity is desired.
 
-## Declaring CloudWatch Dashboards in Code
+## Defining CloudWatch Dashboards in Code
 
 Amazon CloudWatch dashboards are customizable home pages in the CloudWatch console that you can use to monitor your
 resources in a single view, even resources that are spread across different regions. You can use CloudWatch dashboards
