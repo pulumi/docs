@@ -5,17 +5,22 @@
         {{ partial "header.html" . }}
 
         <main id="main-content">
-            <section class="content-block bg-white">
-                <div class="content-content">
-                    <div class="container-fluid">
-                        <div class="row">
-                            {{ block "main" . }}
-
-                            {{ end }}
+            {{ if (eq .Type "blog") }}
+                {{/* Render the blog using an experimental "left nav" type layout" */}}
+                {{ block "main" . }}
+                {{ end }}
+            {{ else }}
+                <section class="content-block bg-white">
+                    <div class="content-content">
+                        <div class="container-fluid">
+                            <div class="row">
+                                {{ block "main" . }}
+                                {{ end }}
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            {{ end }}
         </main>
 
         {{ partial "footer.html" . }}

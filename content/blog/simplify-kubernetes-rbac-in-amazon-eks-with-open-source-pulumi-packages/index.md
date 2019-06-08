@@ -1,20 +1,25 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
-tags: ["todo"]
-date: "2017-01-01"
-draft: true
-description: "TODO: Put in a reasonable summary"
+title: "Simplify Kubernetes RBAC in Amazon EKS with open source Pulumi packages"
+authors: ["nishi-davidson"]
+tags: ["AWS", "kubernetes", "EKS", "TypeScript"]
+date: "2019-04-25"
+
+summary: "One of the most common areas Kubernetes operators struggle with in
+production involves creating and managing role-based access control
+(RBAC). This is so daunting that RBAC is often not implemented, or
+implemented halfway, or the configuration becomes impossible to
+maintain. In this post, we will contrast the traditional way of working
+with RBAC on EKS with using Pulumi --- Pulumi makes RBAC on Kubernetes
+so easy that you'll never create an insecure cluster again!"
 ---
 
-[One of the most common areas Kubernetes operators struggle with in
+One of the most common areas Kubernetes operators struggle with in
 production involves creating and managing role-based access control
 (RBAC). This is so daunting that RBAC is often not implemented, or
 implemented halfway, or the configuration becomes impossible to
 maintain. In this post, we will contrast the traditional way of working
 with RBAC on EKS with using Pulumi --- Pulumi makes RBAC on Kubernetes
 so easy that you'll never create an insecure cluster again!
-]{#hs_cos_wrapper_post_body .hs_cos_wrapper .hs_cos_wrapper_meta_field
 
 -   **NO MORE YAMLs!** Configuring YAMLs, operators or custom resources
     is now a thing in the past! You use TypeScript or JavaScript to

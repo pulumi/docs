@@ -18,37 +18,45 @@
 <meta name="twitter:site" content="@PulumiCorp">
 
 {{ if isset .Params "meta_twitter_creator" }}
-<meta name="twitter:creator" content="{{ .Params.meta_twitter_creator }}">
+    <meta name="twitter:creator" content="{{ .Params.meta_twitter_creator }}">
 {{ else if isset .Params "authors" }}
-  {{ range $idx, $authorName := .Param "authors" }}
+    {{ range $idx, $authorName := .Param "authors" }}
     {{ $authorData := index $.Site.Data.team.team $authorName }}
     {{ with $authorData.social }}
     {{ with .twitter }}
     <meta name="twitter:creator" content="@{{ . }}">
     {{ end }}
     {{ end }}
-  {{ end }}
+    {{ end }}
 {{ end }}
 
 {{ if isset .Params "meta_title" }}
-<meta property="og:title" content="{{ .Params.meta_title }}">
+    <meta property="og:title" content="{{ .Params.meta_title }}">
 {{ else if isset .Params "title" }}
-<meta property="og:title" content="{{ .Params.title }}">
+    <meta property="og:title" content="{{ .Params.title }}">
 {{ else }}
-<meta property="og:title" content="{{ .Site.Title }}">
+    <meta property="og:title" content="{{ .Site.Title }}">
 {{ end }}
 
 {{ if isset .Params "meta_desc" }}
-<meta name="description" content="{{ .Params.meta_desc }}">
-<meta property="og:description" content="{{ .Params.meta_desc }}">
+    <meta name="description" content="{{ .Params.meta_desc }}">
+    <meta property="og:description" content="{{ .Params.meta_desc }}">
+{{ else if isset .Params "summary" }}
+    <meta name="description" content="{{ .Params.summary }}">
+    <meta property="og:description" content="{{ .Params.summary }}">
 {{ else }}
-{{ $defaultDescription := "Pulumi provides a cloud development model for serverless functions, container apps, and data infrastructure for any cloud." }}
-<meta name="description" content="{{ $defaultDescription }}">
-<meta property="og:description" content="{{ $defaultDescription }}">
+    {{ $defaultDescription := "Pulumi provides a cloud development model for serverless functions, container apps, and data infrastructure for any cloud." }}
+    <meta name="description" content="{{ $defaultDescription }}">
+    <meta property="og:description" content="{{ $defaultDescription }}">
 {{ end }}
 
 {{ if isset .Params "meta_image" }}
-<meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.meta_image }}">
+    {{ if in .Params.meta_image "RELATIVE_TO_PAGE" }}
+        {{ $imagePath := replace .Params.meta_image "RELATIVE_TO_PAGE/" "" }}
+        <meta property="og:image" content="{{ .Page.Permalink }}{{ $imagePath }}">
+    {{ else }}
+        <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.meta_image }}">
+    {{ end }}
 {{ else }}
 <meta property="og:image" content="{{ .Site.BaseURL }}assets/social/pulumi.png">
 {{ end }}
@@ -73,13 +81,15 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function(event) {
-     anchors.add('h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)');
+     anchors.add("h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)");
   });
 </script>
 
 {{/* Tests to enforce required frontmatter for certain content types. */}}
 {{ if eq .Type "blog" }}
 {{ if not (isset .Params "authors") }}{{ errorf "Blog posts require authors: %s" .File.Path }}{{ end }}
-{{ if not (isset .Params "description") }}{{ errorf "Blog posts require a description: %s" .File.Path }}{{ end }}
+{{ if not (or (isset .Params "description") (isset .Params "summary")) }}
+    {{ errorf "Blog posts require a description: %s" .File.Path }}
+{{ end }}
 {{ end }}
 </head>

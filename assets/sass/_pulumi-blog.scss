@@ -1,14 +1,69 @@
+@import "pulumi-constants";
+
 // Styles for the Pulumi blog.
 #pul-blog {
     // Clear a broad style from the rest of our CSS.
+    // BUG: Bulleted lists in blog content isn't being displayed.
     li:before { display: none; }
     ul li { padding-left: 0; }
 
     // .post-list is used whenever the summaries of several blog posts are displayed.
     // Such as on the listing page for an author or tag.
     .posts-list {
+        // Separate each post summary.
         li {
-            border: 1px solid purple;
+            padding-bottom: 16px;
+        }
+        
+        .post-header {
+            padding-bottom: 4px;
+
+            small {
+                font-style: italic;
+                color: $light-gray;
+            }
+
+            // The blog header's title combines both the
+            // author images and the title all inside the h3.
+            h3 {
+                display: flex;
+                margin-top: 4px;
+                margin-bottom: 4px;
+                
+                align-items: flex-start;
+
+                img {
+                    border-radius: 36px;
+                    width: 36px;
+                    height: 36px;
+
+                    margin-right: 6px;
+                }
+
+                a.author {
+                    flex-basis: 36px;
+                    flex-shrink: 0;
+                }
+
+                a:not(.author) {
+                    margin-left: 6px;
+                }
+            }
+        }
+
+        // As part of the post summary, we display the "post's image" inline.
+        .post-image {
+            max-width: 150px;
+            float: right;
+            margin: 16px;
+        }
+    }
+
+    // Section at the end of an individual blog post.
+    .pul-post-ending {
+        small {
+            font-style: italic;
+            color: $light-gray;
         }
     }
 
@@ -16,6 +71,25 @@
     .authors {
         .author {
             display: flex;
+
+            // Don't show the link to the author's posts as a regular link.
+            a.author-link {
+                color: $primary;
+                font-weight: bold;
+                font-size: 150%;
+                text-decoration: none;
+            }
+
+            a.author-link:hover {
+                color: inherit;
+                text-decoration: none;
+            }
+
+            // When showing the social links under the author, customize
+            // the "logo-roll" defined elsewhere.
+            ul.logo-roll.inline-block {
+                margin-left: 0;
+            }
 
             img {
                 height: 90px;
@@ -46,23 +120,24 @@
         color: gray;
     }
 
-    // The tags listing at the bottom of a post.
-    .post-tags-list {
-        display: flex;
-
+    // Tag lists. Displayed on sidebar and bottom of posts.
+    .pul-tags-list {
         li {
-            padding: 4px;
-            margin: 4px;
-
-            background-color: orange;
-            border-radius: 6px;
-
-            a {
-                color: white;
-            }
-            a:link  { text-decoration: none; }
-            a:hover { text-decoration: none; }
+            display: inline-block;
+            margin: 0;
         }
+
+        a {
+            padding: 1px 4px;
+            border-radius: 4px;
+
+            color: white;
+            background-color: $primary4;
+
+            text-decoration: none;
+        }
+
+        a:hover { text-decoration: none; }
     }
 
     // The paginator widget.
@@ -70,10 +145,7 @@
         display: flex;
     }
 
-    // The sidebar for the blog and content.
-    .sidebar {
-        .tags-list {
-            border: 1px solid yellow;
-        }
+    .pul-sidebar {
+        padding-right: 24px;
     }
 }

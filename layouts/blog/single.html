@@ -1,38 +1,34 @@
 {{ define "main" }}
-<section class="content-block border-top">
+<section class="content-block">
     <div class="container-fluid">
         <div id="pul-blog" class="row">
 
             {{ partial "blog/sidebar.html" . }}
 
-            <div class="col-md-10">
+            <div class="col-md-7">
                 <article>
-                    <h1>{{ .Title }}</h1>
+                    <h1 class="no-anchor">{{ .Title }}</h1>
 
                     <div>
-                        Posted by
                         <ul class="authors">
                             {{ range $idx, $authorName := .Param "authors" }}
-                                {{ with $authorPage := $.Site.GetPage (printf "/authors/%s" ($authorName | urlize)) }}
+                                {{ $authorPage := $.Site.GetPage (printf "/authors/%s" ($authorName | urlize)) }}
                                 {{ $authorData := index $.Site.Data.team.team $authorName }}
                                 <li class="author">
-                                    <img src="{{ $.Site.BaseURL }}assets/images/team/{{ $authorData.id }}.jpg" alt="{{ $authorData.name }}">
+                                    <img
+                                            src="{{ $.Site.BaseURL }}assets/images/team/{{ $authorData.id }}.jpg"
+                                            alt="{{ $authorData.name }}">
                                     <div>
                                         <div>
-                                            <a href="{{ $authorPage.Permalink }}">{{ $authorData.name }}</a>
+                                            <a class="author-link" href="{{ $authorPage.Permalink }}">{{ $authorData.name }}</a>
                                         </div>
                                         <div>
-                                            {{ if $authorData.links }}
-                                            <ul class="logo-roll">
-                                                {{ range $authorData.links }}
-                                                <li><a href="{{ .link }}" class="text-blue" target="_blank">{{ .title | safeHTML }}</a></li>
-                                                {{ end }}
-                                            </ul>
+                                            {{ if $authorData.social }}
+                                                {{ partial "widgets/social-icons.html" (dict "social" $authorData.social)}}
                                             {{ end }}
                                         </div>
                                     </div>
                                 </li>
-                                {{ end }}
                             {{ end }}
                             </li>
                         </ul>
@@ -42,23 +38,24 @@
                         {{ .Content }}
                     </div>
 
-                    <small>
-                        Posted <time>{{ .Date.Format "Jan 2, 2006" }}</time>
-                    </small>
+                    <div class="pul-post-ending">
+                        <small>
+                            Posted <time>{{ .Date.Format "Monday, Jan 2, 2006" }}</time>
+                        </small>
+                    </div>
                 </article>
 
-                <section>
-                    <h2>Tags</h2>
-                    <ul class="post-tags-list">
+                <aside>
+                    <ul class="pul-tags-list">
                         {{ range $tag := .Param "tags" }}
-                            {{ with $tagPAge := $.Site.GetPage (printf "/tags/%s" ($tag | urlize)) }}
-                            <li>
-                                <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
-                            </li>
-                            {{ end }}
+                        {{ with $tagPAge := $.Site.GetPage (printf "/tags/%s" ($tag | urlize)) }}
+                        <li>
+                            <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+                        </li>
+                        {{ end }}
                         {{ end }}
                     </ul>
-                </section>
+                </aside>
             </div>
 
         </div>

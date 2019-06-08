@@ -30,11 +30,13 @@
                             {{- $is_product := (hasPrefix .RelPermalink "/product/") -}}
                             {{- $is_pricing := (hasPrefix .RelPermalink "/pricing/") -}}
                             {{- $is_docs := (hasPrefix .RelPermalink "/docs/") -}}
+                            {{- $is_blog := (hasPrefix .RelPermalink "/blog/") -}}
 
                             <ul class="main-nav">
                                 <li class="{{ if $is_product }}current-page{{ end }}"><a href="/product">Products</a></li>
                                 <li class="{{ if $is_pricing }}current-page{{ end }}"><a href="/pricing">Pricing</a></li>
                                 <li class="{{ if $is_docs }}current-page{{ end }}"><a href="/docs">Docs</a></li>
+                                <li class="{{ if $is_blog }}current-page{{ end }}"><a href="/blog">Blog</a></li>
                             </ul>
 
                             <ul class="utility-nav visible-xs-block visible-sm-block">

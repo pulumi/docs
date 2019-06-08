@@ -1,19 +1,18 @@
 <!--
     Blog sidebar, showing a list of tags, and a quick intro for context.
 -->
-<div class="col-md-2 sidebar">
-    <h3>Pulumi Blog<h3>
-    <p>Program the Cloud. Create, deploy, and manage modern cloud apps and infrastructure, using your favorite languages and
-    tools.</p>
+<aside>
+    <div class="pul-sidebar col-md-3">
+        <h3 class="no-anchor">Pulumi Blog</h3>
+        <p>🍹Program the Cloud 🍹</p>
+        <p>Create, deploy, and manage cloud infrastructure using your favorite language.</p>
 
-    <section>
-        <h2>Tags</h2>
-        <ul class="tags-list">
+        <ul class="pul-tags-list">
             {{ range .Site.Taxonomies.tags }}
             <li>
-                <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> ({{ .Count }})
+                <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
             </li>
             {{ end }}
         </ul>
-    </section>
-</div>
+    </div>
+</aside>

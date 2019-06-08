@@ -1,5 +1,5 @@
 {{ define "main" }}
-<section class="content-block border-top">
+<section class="content-block">
     <div class="container-fluid">
         <div id="pul-blog" class="row">
 
@@ -8,35 +8,44 @@
 
             {{ partial "blog/sidebar.html" . }}
 
-            <div class="col-md-10">
+            <div class="col-md-7">
                 <ul class="posts-list">
                     {{ $paginator := .Paginate (where .Pages "Type" "blog").ByDate.Reverse }}
                     {{ range $paginator.Pages }}
                     <li>
-                        <h3>
-                            <a href="{{ .Permalink }}">{{ .Title }}</a>
-                        </h3>
-                        <div>
+                        <div class="post-header">
                             <small>
-                                Posted <time>{{ .Date.Format "Jan 2, 2006" }}</time>
+                                <time>{{ .Date.Format "Monday, Jan 2, 2006" }}</time>
                             </small>
-
-                            {{/* List post authors. Each with a comma prefix, except first. */}}
-                            <small>
-                                By
+                            <h3 class="no-anchor">
                                 {{ range $idx, $authorName := .Param "authors" }}
-                                    {{ with $authorPage := $.Site.GetPage (printf "/authors/%s" ($authorName | urlize)) }}
-                                        {{ if $idx }}, {{ end }}
-                                        <a href="{{ $authorPage.Permalink }}">
-                                            {{ $authorData := index $.Site.Data.team.team $authorName }}
-                                            {{ $authorData.name }}
-                                        </a>
-                                    {{ end }}
+                                    {{ $authorPage := $.Site.GetPage (printf "/authors/%s" ($authorName | urlize)) }}
+                                    {{ $authorData := index $.Site.Data.team.team $authorName }}
+                                    <a class="author" href="{{ $authorPage.Permalink }}">
+                                        <img
+                                            src="{{ $.Site.BaseURL }}assets/images/team/{{ $authorData.id }}.jpg"
+                                            alt="{{ $authorData.name }}" title="{{ $authorData.name }}">
+                                    </a>
                                 {{ end }}
-                            </small>
+                                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                            </h3>
                         </div>
                         <div>
+                            {{/*
+                                If a general image is associated with the post, display it in-line.
+                                Though we need to do some work to convert a relative image path.
+                            */}}
+                            {{ if .Param "meta_image" }}
+                                {{ if in .Params.meta_image "RELATIVE_TO_PAGE" }}
+                                    {{ $imagePath := replace .Params.meta_image "RELATIVE_TO_PAGE/" "" }}
+                                    <img class="post-image" src="{{ .Page.Permalink }}{{ $imagePath }}" alt="{{ .Title }}">
+                                {{ else }}
+                                    <img class="post-image" src="{{ .Site.BaseURL }}{{ .Params.meta_image }}" alt="{{ .Title }}">
+                                {{ end }}
+                            {{ end }}
+
                             {{ .Render "post-summary" }}
+                            <div class="clearfix"></div>
                         </div>
                     </li>
                     {{ end }}
