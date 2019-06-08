@@ -1,9 +1,9 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
+title: "From Terraform to Infrastructure as Software"
+authors: ["pat-gavlin"]
 tags: ["todo"]
-date: "2017-01-01"
-draft: true
+date: "2018-11-02"
+
 description: "TODO: Put in a reasonable summary"
 ---
 

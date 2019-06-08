@@ -1,12 +1,13 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
-tags: ["todo"]
-date: "2017-01-01"
-draft: true
-description: "TODO: Put in a reasonable summary"
+title: "Data science on demand: spinning up a Wallaroo cluster is easy with Pulumi"
+authors: ["marc-holmes", "simon-zelazny"]
+tags: ["infrastructure", "TODO"]
+date: "2018-11-02"
+
+description: "Spinning up Wallaroo labs infrastructure on-demand"
 ---
 
+TODO: Need to hook up author information bio for guest posts.
 
 *This guest post is from Simon Zelazny of [Wallaroo
 Labs](https://www.wallaroolabs.com/), and previously appeared on the

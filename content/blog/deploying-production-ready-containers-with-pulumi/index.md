@@ -1,15 +1,11 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
+title: "Deploying production-ready containers with Pulumi"
+authors: ["donna-malayeri"]
 tags: ["todo"]
-date: "2017-01-01"
-draft: true
+date: "2018-06-18"
+
 description: "TODO: Put in a reasonable summary"
 ---
-
-
- 
-=
 
 Containers are a great way to deploy applications to the cloud,
 especially with new execution models like [AWS

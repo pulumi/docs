@@ -1,10 +1,10 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
-tags: ["todo"]
-date: "2017-01-01"
-draft: true
-description: "TODO: Put in a reasonable summary"
+title: "Code, Deploy, and Manage a Serverless REST API on AWS with Pulumi"
+authors: ["donna-malayeri"]
+tags: ["JavaScript", "serverless", "AWS"]
+date: "2018-06-18"
+
+description: "We'll create a REST API using Pulumi to define the infrastructure."
 ---
 
 

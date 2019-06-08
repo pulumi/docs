@@ -1,9 +1,9 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
+title: "Delivering Cloud Native Infrastructure as Code, a Pulumi white paper"
+authors: ["marc-holmes"]
 tags: ["todo"]
-date: "2017-01-01"
-draft: true
+date: "2018-12-05"
+
 description: "TODO: Put in a reasonable summary"
 ---
 

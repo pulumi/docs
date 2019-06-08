@@ -1,13 +1,13 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
-tags: ["todo"]
-date: "2017-01-01"
-draft: true
-description: "TODO: Put in a reasonable summary"
+title: "Create Secure Jupyter Notebooks on Kubernetes using Pulumi"
+authors: ["nishi-davidson"]
+tags: ["kubernetes", "gcp", "jupyter", "TODO"]
+date: "2019-05-30"
+
+description: "we will work through an example that shows how to use
+Pulumi to create Jupyter Notebooks on Kubernetes"
 ---
-Need to port formatting. Origionally from:
-https://blog.pulumi.com/create-secure-jupyter-notebooks-on-kubernetes-using-pulumi
+
 In this post, we will work through an example that shows how to use
 Pulumi to create Jupyter Notebooks on Kubernetes. Having worked on
 Kubernetes since 2015, a couple of critical benefits jump out that may
@@ -122,5 +122,4 @@ worked through a simple example of creating a GKE cluster, an NGINX
 ingress controller and stood up our password protected Jupyter notebook
 Ingress, Service and Deployment with a simple secret. For more solutions
 on Kubernetes, visit our blog site and get started today with more
-examples from in our GitHub repository. Topics: Kubernetes,
-Applications, GKE, Jupyter Posted on May 30, 2019 2:05:38 PM
+examples from in our GitHub repository.

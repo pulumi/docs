@@ -1,9 +1,9 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
+title: "How we use Pulumi to build Pulumi"
+authors: ["luke-hoban"]
 tags: ["todo"]
-date: "2017-01-01"
-draft: true
+date: "2018-06-26"
+
 description: "TODO: Put in a reasonable summary"
 ---
 

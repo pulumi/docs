@@ -1,10 +1,10 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
-tags: ["todo"]
-date: "2017-01-01"
-draft: true
-description: "TODO: Put in a reasonable summary"
+title: "Create AKS Clusters with monitoring and logging using Pulumi-Azure open source SDKs"
+authors: ["nishi-davidson"]
+tags: ["kubernetes", "azure"]
+date: "2019-05-08"
+
+description: "Show how to create Azure Kubernetes Service (AKS) clusters with AD service principles using Pulumi."
 ---
 
 

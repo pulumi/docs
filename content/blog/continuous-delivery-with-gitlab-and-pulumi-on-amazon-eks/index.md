@@ -1,10 +1,12 @@
 ---
-title: "TODO Port frontmatter"
+title: "Continuous Delivery with GitLab and Pulumi on Amazon EKS"
 authors: ["chris-smith"]
-tags: ["todo"]
-date: "2017-01-01"
-draft: true
-description: "TODO: Put in a reasonable summary"
+tags: ["aws", "kubernetes", "CICD"]
+date: "2019-05-22"
+
+description: "we will work through an example that shows how to use
+Pulumi to enable GitLab-based continuous delivery with your Kubernetes
+workloads on Amazon EKS"
 ---
 
 

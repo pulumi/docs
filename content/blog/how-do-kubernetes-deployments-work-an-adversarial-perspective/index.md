@@ -1,9 +1,9 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
+title: "How do Kubernetes Deployments work? An adversarial perspective"
+authors: ["alex-clemmer"]
 tags: ["todo"]
-date: "2017-01-01"
-draft: true
+date: "2018-10-03"
+
 description: "TODO: Put in a reasonable summary"
 ---
 

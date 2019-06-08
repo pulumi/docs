@@ -1,10 +1,10 @@
 ---
-title: "TODO Port frontmatter"
+title: "Creating and Reusing Cloud Components using Package Managers"
 authors: ["chris-smith"]
-tags: ["todo"]
-date: "2017-01-01"
-draft: true
-description: "TODO: Put in a reasonable summary"
+tags: ["infrastructure"]
+date: "2018-08-09"
+
+description: "Walkthrough for creating reusable components using Pulumi and Package Managers."
 ---
 
 

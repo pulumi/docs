@@ -1,12 +1,11 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
+title: "How to deploy Jenkins to Kubernetes with Pulumi"
+authors: ["sean-gillespie"]
 tags: ["todo"]
-date: "2017-01-01"
-draft: true
+date: "2018-06-27"
+
 description: "TODO: Put in a reasonable summary"
 ---
-
 
 In this blog post, we'll see how to run [Jenkins on Kubernetes with
 Pulumi](https://github.com/pulumi/examples/tree/master/kubernetes-ts-jenkins).

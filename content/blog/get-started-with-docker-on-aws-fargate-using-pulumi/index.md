@@ -1,9 +1,9 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
+title: "Get Started with Docker on AWS Fargate using Pulumi"
+authors: ["joe-duffy"]
 tags: ["todo"]
-date: "2017-01-01"
-draft: true
+date: "2019-04-30"
+
 description: "TODO: Put in a reasonable summary"
 ---
 

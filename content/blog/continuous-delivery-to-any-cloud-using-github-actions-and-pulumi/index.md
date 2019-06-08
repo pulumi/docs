@@ -1,10 +1,10 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
-tags: ["todo"]
-date: "2017-01-01"
-draft: true
-description: "TODO: Put in a reasonable summary"
+title: "Continuous Delivery to Any Cloud using GitHub Actions and Pulumi"
+authors: ["joe-duffy"]
+tags: ["news"]
+date: "2018-10-17"
+
+description: "Announcing our partnership with GitHub on GitHub Actions feature, allowing you to use Pulumi in your CI/CD more broadly."
 ---
 
 
