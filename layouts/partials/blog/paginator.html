@@ -1,0 +1,43 @@
+<!--
+    Pagination widget.
+-->
+{{ $page := $.Paginator }}
+{{ if gt $page.TotalPages 1 }}
+<ul class="paginator">
+    {{ if ne $page.PageNumber $page.First.PageNumber }}
+    <li class="first">
+        <a href="{{ $page.First.URL }}">
+            <span>&laquo;&laquo;</span>
+        </a>
+    </li>
+    {{ end }}
+
+    {{ if $page.HasPrev }}
+    <li class="previous">
+        <a href="{{ $page.Prev.URL }}">
+            <span>&laquo;</span>
+        </a>
+    </li>
+    {{ end }}
+
+    <li class="active">
+        {{ $page.PageNumber }}
+    </li>
+
+    {{ if $page.HasNext }}
+    <li class="next">
+        <a href="{{ $page.Next.URL }}">
+            <span>&raquo;</span>
+        </a>
+    </li>
+    {{ end }}
+
+    {{ if ne $page.PageNumber $page.Last.PageNumber }}
+    <li class="last">
+        <a href="{{ $page.Last.URL }}">
+            <span>&raquo;&raquo;</span>
+        </a>
+    </li>
+    {{ end }}
+</ul>
+{{ end }}

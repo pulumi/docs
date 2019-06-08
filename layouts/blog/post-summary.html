@@ -1,0 +1,10 @@
+<!--
+    Renders a summary of a blog post, assumed to be the current
+    template context.
+-->
+<article>
+    {{ .Summary }}
+    <a class="summary-read-more" href="{{ .Permalink }}">
+        Read more
+    </a>
+</article>

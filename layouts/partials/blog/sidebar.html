@@ -1,0 +1,19 @@
+<!--
+    Blog sidebar, showing a list of tags, and a quick intro for context.
+-->
+<div class="col-md-2 sidebar">
+    <h3>Pulumi Blog<h3>
+    <p>Program the Cloud. Create, deploy, and manage modern cloud apps and infrastructure, using your favorite languages and
+    tools.</p>
+
+    <section>
+        <h2>Tags</h2>
+        <ul class="tags-list">
+            {{ range .Site.Taxonomies.tags }}
+            <li>
+                <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> ({{ .Count }})
+            </li>
+            {{ end }}
+        </ul>
+    </section>
+</div>

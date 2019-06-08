@@ -1,0 +1,49 @@
+{{ define "main" }}
+<section class="content-block border-top">
+    <div class="container-fluid">
+        <div id="pul-blog" class="row">
+
+            {{ partial "blog/sidebar.html" . }}
+            
+            <div class="col-md-10">
+
+                <h2>Posts with this tag '{{ .Data.Term }}'</h2>
+            
+                <ul class="posts-list">
+                    {{ $paginator := .Paginate .Data.Pages.Reverse }}
+                    {{ range $paginator.Pages }}
+                    <li>
+                        <h3>
+                            <a href="{{ .Permalink }}"> {{ .Title }}</a>
+                        </h3>
+                        <small>
+                            Posted <time>{{ .Date.Format "Jan 2, 2006" }}</time>
+                        </small>
+            
+                        {{/* List post authors. Each with a comma prefix, except first. */}}
+                        <small>
+                            By
+                            {{ range $idx, $authorName := .Param "authors" }}
+                                {{ with $authorPage := $.Site.GetPage (printf "/authors/%s" ($authorName | urlize)) }}
+                                {{ if $idx }}, {{ end }}
+                                <a href="{{ $authorPage.Permalink }}">
+                                    {{ $authorData := index $.Site.Data.team.team $authorName }}
+                                    {{ $authorData.name }}
+                                </a>
+                                {{ end }}
+                            {{ end }}
+                        </small>
+
+                        <div>
+                            {{ .Render "post-summary" }}
+                        </div>
+                    </li>
+                    {{ end }}
+                </ul>
+
+                {{ partial "blog/paginator.html" . }}
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

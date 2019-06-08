@@ -1,0 +1,50 @@
+{{ define "main" }}
+<section class="content-block border-top">
+    <div class="container-fluid">
+        <div id="pul-blog" class="row">
+
+            {{/* The content of /content/blog/_index.md, if any. */}}
+            {{ .Content }}
+
+            {{ partial "blog/sidebar.html" . }}
+
+            <div class="col-md-10">
+                <ul class="posts-list">
+                    {{ $paginator := .Paginate (where .Pages "Type" "blog").ByDate.Reverse }}
+                    {{ range $paginator.Pages }}
+                    <li>
+                        <h3>
+                            <a href="{{ .Permalink }}">{{ .Title }}</a>
+                        </h3>
+                        <div>
+                            <small>
+                                Posted <time>{{ .Date.Format "Jan 2, 2006" }}</time>
+                            </small>
+
+                            {{/* List post authors. Each with a comma prefix, except first. */}}
+                            <small>
+                                By
+                                {{ range $idx, $authorName := .Param "authors" }}
+                                    {{ with $authorPage := $.Site.GetPage (printf "/authors/%s" ($authorName | urlize)) }}
+                                        {{ if $idx }}, {{ end }}
+                                        <a href="{{ $authorPage.Permalink }}">
+                                            {{ $authorData := index $.Site.Data.team.team $authorName }}
+                                            {{ $authorData.name }}
+                                        </a>
+                                    {{ end }}
+                                {{ end }}
+                            </small>
+                        </div>
+                        <div>
+                            {{ .Render "post-summary" }}
+                        </div>
+                    </li>
+                    {{ end }}
+                </ul>
+
+                {{ partial "blog/paginator.html" . }}
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

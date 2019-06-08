@@ -1,0 +1,48 @@
+{{ define "main" }}
+<section class="content-block border-top">
+    <div class="container-fluid">
+        <div id="pul-blog" class="row">
+
+            {{ partial "blog/sidebar.html" . }}
+
+             <div class="col-md-10">
+
+                {{ $authorData := index $.Site.Data.team.team .Data.Term }}
+                <h2>Posts by {{ $authorData.name }}</h2>
+                
+                <div class="author-details">
+                    <img src="{{ $.Site.BaseURL }}assets/images/team/{{ $authorData.id }}.jpg" alt="{{ $authorData.name }}">
+                    <div>
+                        <p>{{ $authorData.title }}</p>
+                    </div>
+                </div>
+                
+                {{ if $authorData.bio }}
+                <div class="author-bio">
+                    {{ $authorData.bio | safeHTML }}
+                </div>
+                {{ end }}
+
+                <ul class="posts-list">
+                    {{ $paginator := .Paginate .Data.Pages.Reverse }}
+                    {{ range $paginator.Pages }}
+                    <li>
+                        <h3>
+                            <a href="{{ .Permalink }}"> {{ .Title }}</a>
+                        </h3>
+                        <small>
+                            Posted <time>{{ .Date.Format "Jan 2, 2006" }}</time>
+                        </small>
+                        <div>
+                            {{ .Render "post-summary" }}
+                        </div>
+                    </li>
+                    {{ end }}
+                </ul>
+
+                {{ partial "blog/paginator.html" . }}
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
