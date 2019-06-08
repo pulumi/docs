@@ -8,7 +8,7 @@ menu:
 
 {{< mini-toc >}}
 
-## Overview {#overview}
+## Overview
 
 ## Provisioning a New EKS Cluster
 

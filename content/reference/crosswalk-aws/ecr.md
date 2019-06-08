@@ -6,17 +6,15 @@ menu:
     name: Elastic Container Registry (ECR)
 ---
 
-{{< mini-toc >}}
-
-## Overview {#overview}
-
 [Amazon Elastic Container Registry (ECR)](https://aws.amazon.com/ecr/) is a managed Docker container registry that
 makes it easy to store, manage, and deploy Docker container images. ECR supports private Docker registries with
-resource-based permissions using AWS IAM, so specific users and instances can access images.
+resource-based permissions using AWS IAM, so specific users and instances can access images. Using ECR simplifies
+going from development to production, and eliminates the need to operate your own container repositories or worry
+about scaling the underlying infrastructure, while hosting your images in a highly available and scalable architecture.
 
-ECR is integrated with [Amazon Elastic Container Service (ECS)](https://aws.amazon.com/ecs) to simplify going from
-development to production, and eliminates the need to operate your own container repositories or worry about scaling
-the underlying infrastructure, and hosts your images in a highly available and scalable architecture.
+{{< mini-toc >}}
+
+## Overview
 
 Pulumi Crosswalk for AWS ECR makes the provisioning of new ECR repositories as simple as one line of code,
 integrates with Pulumi Crosswalk for AWS [ECS]({{< relref "ecs.md" >}}) and [EKS]({{< relref "eks.md" >}}) to ease

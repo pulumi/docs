@@ -6,14 +6,19 @@ menu:
     name: Elastic Load Balancing (ELB)
 ---
 
-{{< mini-toc >}}
-
-## Overview {#overview}
-
 [Elastic Load Balancing](https://aws.amazon.com/elasticloadbalancing/) (ELB) automatically distributes incoming
 application traffic across multiple targets, such as Amazon EC2 instances, containers, IP addresses, and Lambda
 Functions. It can handle the varying load of your application traffic in a single Availability Zone or across multiple
 Availability Zones.
+
+{{< mini-toc >}}
+
+## Overview
+
+Pulumi Crosswalk for AWS ELB provides easy APIs for provisioning Application and Network Load Balancers, and
+integrates with functionality for other services, including [API Gateway]({{< relref "api-gateway.md" >}}),
+[Elastic Container Service (ECS)]({{< relref "ecs.md" >}}), [Lambda]({{< relref "lambda.md" >}}), and [VPC]({{< relref "vpc.md" >}}), to provide
+configurable network accessibility to the different kinds of compute you will run inside of AWS.
 
 Elastic Load Balancing offers multiple types of load balancers that all feature the high availability, automatic
 scaling, and robust security necessary to make your applications fault tolerant:
@@ -31,13 +36,6 @@ scaling, and robust security necessary to make your applications fault tolerant:
   the individual request level (Layer 7), Application Load Balancer routes traffic to targets within Amazon Virtual
   Private Cloud (Amazon VPC) based on the content of the request.
 
-Pulumi Crosswalk for AWS ELB provides easy APIs for provisioning Application and Network Load Balancers, and
-integrates with functionality for other services, including [API Gateway]({{< relref "api-gateway.md" >}}),
-[Elastic Container Service (ECS)]({{< relref "ecs.md" >}}), [Lambda]({{< relref "lambda.md" >}}), and [VPC]({{< relref "vpc.md" >}}), to provide
-configurable network accessibility to the different kinds of compute you will run inside of AWS.
-
-## Creating a Load Balancer
-
 Each kind of load balancer is represented by a class in the `awsx.elasticloadbalancingv2` module:
 
 * `NetworkLoadBalancer` is used for NLBs
@@ -45,6 +43,8 @@ Each kind of load balancer is represented by a class in the `awsx.elasticloadbal
 
 > These types are similar and support many of the same scenarios. Most examples show using ALBs, however changing
 > to an NLB is usually as simple as swapping out this class. Any differences will be noted below.
+
+## Creating a Load Balancer
 
 To create a new load balancer, allocate an instance of its class. In addition to creating the load balancer itself, we
 must also create a _listener_ to let traffic reach it:

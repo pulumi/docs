@@ -14,7 +14,7 @@ unified view of AWS resources, applications and services.
 
 {{< mini-toc >}}
 
-## Pulumi Crosswalk for AWS CloudWatch
+## Overview
 
 Pulumi Crosswalk for AWS CloudWatch help you operationally understand and manage your AWS resources and applications,
 including the following scenarios:

@@ -8,7 +8,7 @@ menu:
 
 {{< mini-toc >}}
 
-## Overview {#overview}
+## Overview
 
 ## Creating IAM Users, Groups, and Roles
 

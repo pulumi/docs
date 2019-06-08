@@ -1,5 +1,5 @@
 ---
-title: "AWS Lambda Serverless"
+title: "AWS Lambda"
 menu:
   reference:
     parent: crosswalk-aws
@@ -8,7 +8,7 @@ menu:
 
 {{< mini-toc >}}
 
-## Overview {#overview}
+## Overview
 
 ## Register an Event Handler Using a Magic Lambda Function
 

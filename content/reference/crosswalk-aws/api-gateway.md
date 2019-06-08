@@ -6,15 +6,15 @@ menu:
     name: API Gateway
 ---
 
-{{< mini-toc >}}
-
-## Overview
-
 [Amazon API Gateway](https://aws.amazon.com/api-gateway/) is a fully managed service for creating, monitoring, and
 securing APIs at scale. It acts as a "front door" for REST and WebSocket applications that use backend services,
 and handles all the tasks necessary to accept and process up to hundreds of thousands of concurrent API calls,
 including traffic management, authorization and access control, monitoring, and API version management. API Gateway
 is inexpensive, has no minimum fees, and you only pay for the API calls you receive and the data transferred out.
+
+{{< mini-toc >}}
+
+## Overview
 
 Pulumi Crosswalk for AWS provides significantly easier ways of programming API Gateway. This includes using
 infrastructure as code techniques for simple, declarative APIs, including easy Lambda-based handlers.

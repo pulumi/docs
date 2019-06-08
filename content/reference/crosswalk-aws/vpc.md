@@ -6,13 +6,17 @@ menu:
     name: Virtual Private Cloud (VPC)
 ---
 
+Amazon Elastic Cloud (EC2) provides a wide range of options for your cloud applications and infrastructure networking.
+This includes [Virtual Private Cloud (VPC)](https://aws.amazon.com/vpc/) for logical isolation of networks, public and
+private subnets, route tables, security groups to permit or reject certain classes of traffic, and gateways.
+
 {{< mini-toc >}}
 
 ## Overview
 
-Amazon Elastic Cloud (EC2) provides a wide range of options for your cloud applications and infrastructure networking.
-This includes [Virtual Private Cloud (VPC)](https://aws.amazon.com/vpc/) for logical isolation of networks, public and
-private subnets, route tables, security groups to permit or reject certain classes of traffic, and gateways.
+Pulumi Crosswalk for AWS provides simple, out of the box VPC functionality that follows widely accepted best
+practices. This ensures you can provision and evolve your VPCs across many environments productively and safely,
+without needing to recreate the same VPC templates for every new project you tackle.
 
 Using these capabilities, you can control the entire virtual network and restrict access to just those network
 endpoints that require it. These network resources are essential to configuring many of the other Crosswalk AWS
@@ -21,10 +25,6 @@ components, including ECS and EKS clusters, API gateways, and various network lo
 Each account has a default regional network and VPC to make it easy to get up and running. Most production
 circumstances call for dedicated VPCs and network isolation. This includes multi-tenanted scenarios where VPCs can be
 used for strong network isolation between endpoints and resources that are otherwise sharing an AWS account.
-
-Pulumi Crosswalk for AWS provides simple, out of the box VPC functionality that follows widely accepted best
-practices. This ensures you can provision and evolve your VPCs across many environments productively and safely,
-without needing to recreate the same VPC templates for every new project you tackle.
 
 ## Managing VPCs
 
