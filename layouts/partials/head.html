@@ -1,62 +1,85 @@
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <meta name="google-site-verification" content="j-Opn93zR4YQcV5bbYN99BmNc48BT5mzd2VpzKaW9YY" />
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="google-site-verification" content="j-Opn93zR4YQcV5bbYN99BmNc48BT5mzd2VpzKaW9YY" />
+{{ if isset .Params "redirect_to" }}
+<meta http-equiv="refresh" content="0; url={{ .Params.redirect_to }}" />
+{{ end }}
 
-    {{ if isset .Params "redirect_to" }}
-    <meta http-equiv="refresh" content="0; url={{ .Params.redirect_to }}" />
+<!--
+    Metadata tags for OpenGraph and Twitter.
+-->
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="pulumi">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@PulumiCorp">
+
+{{ if isset .Params "meta_twitter_creator" }}
+<meta name="twitter:creator" content="{{ .Params.meta_twitter_creator }}">
+{{ else if isset .Params "authors" }}
+  {{ range $idx, $authorName := .Param "authors" }}
+    {{ $authorData := index $.Site.Data.team.team $authorName }}
+    {{ with $authorData.social }}
+    {{ with .twitter }}
+    <meta name="twitter:creator" content="@{{ . }}">
     {{ end }}
-
-    <title>{{ .Title }}{{ if not .IsHome }} - {{ end }}{{ .Site.Title }}</title>
-
-    {{ if isset .Params "meta_title" }}
-    <meta property="og:title" content="{{ .Params.meta_title }}">
-    <meta name="twitter:title" content="{{ .Params.meta_title }}">
-    {{ else if isset .Params "title" }}
-    <meta property="og:title" content="{{ .Params.title }}">
-    <meta name="twitter:title" content="{{ .Params.title }}">
-    {{ else }}
-    <meta property="og:title" content="{{ .Site.Title }}">
-    <meta name="twitter:title" content="{{ .Site.Title }}">
     {{ end }}
+  {{ end }}
+{{ end }}
 
-    {{ if isset .Params "meta_desc" }}
-    <meta name="description" content="{{ .Params.meta_desc }}">
-    <meta property="og:description" content="{{ .Params.meta_desc }}">
-    <meta name="twitter:description" content="{{ .Params.meta_desc }}">
-    {{ else }}
-    <meta name="description" content="Pulumi provides a cloud development model for serverless functions, container apps, and data infrastructure for any cloud.">
-    <meta property="og:description" content="Pulumi provides a cloud development model for serverless functions, container apps, and data infrastructure for any cloud.">
-    <meta name="twitter:description" content="Pulumi provides a cloud development model for serverless functions, container apps, and data infrastructure for any cloud.">
-    {{ end }}
+{{ if isset .Params "meta_title" }}
+<meta property="og:title" content="{{ .Params.meta_title }}">
+{{ else if isset .Params "title" }}
+<meta property="og:title" content="{{ .Params.title }}">
+{{ else }}
+<meta property="og:title" content="{{ .Site.Title }}">
+{{ end }}
 
-    {{ if isset .Params "meta_image" }}
-    <meta property="og:image" content="{{ strings.TrimSuffix "/" .Site.BaseURL }}{{ .Params.meta_image }}">
-    <meta name="twitter:image" content="{{ strings.TrimSuffix "/" .Site.BaseURL }}{{ .Params.meta_image }}">
-    {{ end }}
+{{ if isset .Params "meta_desc" }}
+<meta name="description" content="{{ .Params.meta_desc }}">
+<meta property="og:description" content="{{ .Params.meta_desc }}">
+{{ else }}
+{{ $defaultDescription := "Pulumi provides a cloud development model for serverless functions, container apps, and data infrastructure for any cloud." }}
+<meta name="description" content="{{ $defaultDescription }}">
+<meta property="og:description" content="{{ $defaultDescription }}">
+{{ end }}
 
-    <meta property="og:locale" content="en-US">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="{{ .Site.Title }}">
+{{ if isset .Params "meta_image" }}
+<meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.meta_image }}">
+{{ else }}
+<meta property="og:image" content="{{ .Site.BaseURL }}assets/social/pulumi.png">
+{{ end }}
 
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@PulumiCorp">
+<title>{{ .Title }}{{if not .IsHome}} - {{ end }}{{ .Site.Title }}</title>
 
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+<link rel="alternate" type="application/rss+xml" href="https://blog.pulumi.com/rss.xml" title="Pulumi Blog">
 
-    {{ $options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed" "enableSourceMap" true) }}
-    {{ $style := resources.Get "sass/styles.scss" | resources.ToCSS $options }}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
-    <link href="https://blog.pulumi.com/rss.xml" rel="alternate" type="application/rss+xml" title="Pulumi Blog">
+<!--
+    Build Sass. Generated file will contain content hash in filename,
+    so no need to add query param to cache bust.
+-->
+{{ $toCSS := (dict "targetPath" "css/styles.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+{{ $postCSS := (dict "config" "assets/sass/postcss.config.js") }}
+{{ $styles := resources.Get "sass/styles.scss" | resources.ToCSS $toCSS | resources.PostCSS $postCSS | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}">
 
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <script> !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(n,o);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0"; analytics.load("mNROzbfcr6gi80tV37QuBcL0tK1DWvte"); analytics.page(); }}();</script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function(event) {
-         anchors.add('h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)');
-      });
-    </script>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<script> !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(n,o);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0"; analytics.load("mNROzbfcr6gi80tV37QuBcL0tK1DWvte"); analytics.page(); }}();</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+     anchors.add('h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)');
+  });
+</script>
+
+{{/* Tests to enforce required frontmatter for certain content types. */}}
+{{ if eq .Type "blog" }}
+{{ if not (isset .Params "authors") }}{{ errorf "Blog posts require authors: %s" .File.Path }}{{ end }}
+{{ if not (isset .Params "description") }}{{ errorf "Blog posts require a description: %s" .File.Path }}{{ end }}
+{{ end }}
 </head>
