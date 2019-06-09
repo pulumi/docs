@@ -81,6 +81,10 @@ one of the relevant User Guides to get started:
 * [Identity and Access Management (IAM)]({{< relref "iam.md" >}})
 * [Virtual Private Cloud (VPC)]({{< relref "vpc.md" >}})
 
+### Continuous Deployment
+
+* [Using Pulumi from AWS Code Services](/reference/cd-aws-code-services)
+
 ### Other AWS Services
 
 Pulumi supports the entirety of the AWS platform. If your favorite service isn't listed above, check out:
