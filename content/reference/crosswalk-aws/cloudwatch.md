@@ -357,9 +357,7 @@ export const dashboardUrl =
         `region=${aws.config.region}#dashboards:name=${dashboardName}`;
 ```
 
-After deploying this with `pulumi up`, the dashboard's URL will be printed, which will display the dashboard:
-
-// TODO(joe): add a screenshot.
+After deploying this with `pulumi up`, the dashboard's URL will be printed, at which the dashboard is available.
 
 Graph widgets can also have a line on them showing the breaching threshold for a specific alarm using `annotations`.
 This can be done like so:
