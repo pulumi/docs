@@ -7,6 +7,10 @@ menu:
     weight: 11
 ---
 
+<a href="{{< relref "_index.md" >}}">
+    <img src="/images/reference/crosswalk-aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
+</a>
+
 Pulumi Crosswalk for AWS supports all AWS services, not just those with dedicated articles in this User Guide.
 This includes services like DynamoDB, EC2, S3, and RDS, to name a few, and includes support for all of their features.
 If your favorite service isn't listed here, please contact us by [filing an issue in the docs repo](

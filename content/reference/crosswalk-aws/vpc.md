@@ -7,6 +7,10 @@ menu:
     weight: 10
 ---
 
+<a href="{{< relref "_index.md" >}}">
+    <img src="/images/reference/crosswalk-aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
+</a>
+
 [Amazon Virtual Private Cloud (Amazon VPC)](https://aws.amazon.com/vpc) lets you provision a logically isolated section
 of the AWS Cloud where you can launch AWS resources in a virtual network that you define. You have complete control
 over your virtual networking environment, including selection of your own IP address range, creation of subnets, and

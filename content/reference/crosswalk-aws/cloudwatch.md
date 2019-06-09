@@ -7,6 +7,10 @@ menu:
     weight: 3
 ---
 
+<a href="{{< relref "_index.md" >}}">
+    <img src="/images/reference/crosswalk-aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
+</a>
+
 [Amazon CloudWatch](https://aws.amazon.com/cloudwatch/) is a monitoring and management service built for developers,
 system operators, site reliability engineers (SRE), and IT managers. CloudWatch provides data and actionable insights
 to monitor applications, understand and respond to system-wide performance changes, optimize resource utilization, and

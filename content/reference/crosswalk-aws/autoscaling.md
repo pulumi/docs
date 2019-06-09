@@ -7,6 +7,10 @@ menu:
     weight: 2
 ---
 
+<a href="{{< relref "_index.md" >}}">
+    <img src="/images/reference/crosswalk-aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
+</a>
+
 [AWS Auto Scaling](https://aws.amazon.com/autoscaling) monitors your applications and automatically adjusts capacity to
 maintain steady, predictable performance at the lowest possible cost. Using AWS Auto Scaling, it’s easy to setup
 application scaling for multiple resources across multiple services in minutes. AWS Auto Scaling can be used to build

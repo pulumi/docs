@@ -7,6 +7,10 @@ menu:
     weight: 5
 ---
 
+<a href="{{< relref "_index.md" >}}">
+    <img src="/images/reference/crosswalk-aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
+</a>
+
 [Amazon Elastic Container Service (Amazon ECS)](https://aws.amazon.com/ecs) is a scalable, high-performance container
 orchestration service that supports Docker containers and allows you to easily run and scale containerized applications
 on AWS. ECS eliminates the need for you to install and operate your own container orchestration software, manage and

@@ -7,6 +7,10 @@ menu:
     weight: 7
 ---
 
+<a href="{{< relref "_index.md" >}}">
+    <img src="/images/reference/crosswalk-aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
+</a>
+
 [Elastic Load Balancing](https://aws.amazon.com/elasticloadbalancing/) (ELB) automatically distributes incoming
 application traffic across multiple targets, such as Amazon EC2 instances, containers, IP addresses, and Lambda
 Functions. It can handle the varying load of your application traffic in a single Availability Zone or across multiple

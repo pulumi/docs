@@ -7,6 +7,10 @@ menu:
     weight: 4
 ---
 
+<a href="{{< relref "_index.md" >}}">
+    <img src="/images/reference/crosswalk-aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
+</a>
+
 [Amazon Elastic Container Registry (ECR)](https://aws.amazon.com/ecr/) is a managed Docker container registry that
 makes it easy to store, manage, and deploy Docker container images. ECR supports private Docker registries with
 resource-based permissions using AWS IAM, so specific users and instances can access images. Using ECR simplifies

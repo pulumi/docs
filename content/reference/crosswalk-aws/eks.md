@@ -7,6 +7,10 @@ menu:
     weight: 6
 ---
 
+<a href="{{< relref "_index.md" >}}">
+    <img src="/images/reference/crosswalk-aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
+</a>
+
 [Amazon Elastic Container Service for Kubernetes (Amazon EKS)](https://aws.amazon.com/eks) makes it easy to deploy,
 manage, and scale containerized applications using Kubernetes on AWS. Amazon EKS runs the Kubernetes management
 infrastructure for you across multiple AWS availability zones to eliminate a single point of failure. Amazon EKS is

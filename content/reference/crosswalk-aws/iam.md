@@ -7,6 +7,10 @@ menu:
     weight: 8
 ---
 
+<a href="{{< relref "_index.md" >}}">
+    <img src="/images/reference/crosswalk-aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
+</a>
+
 [AWS Identity and Access Management (IAM)](https://aws.amazon.com/iam/) enables you to manage access to AWS services
 and resources securely. Using IAM, you can create and manage AWS users and groups, and use permissions to allow and
 deny their access to AWS resources.

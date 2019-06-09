@@ -7,6 +7,10 @@ menu:
     weight: 1
 ---
 
+<a href="{{< relref "_index.md" >}}">
+    <img src="/images/reference/crosswalk-aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
+</a>
+
 [Amazon API Gateway](https://aws.amazon.com/api-gateway/) is a fully managed service for creating, monitoring, and
 securing APIs at scale. It acts as a "front door" for REST and WebSocket applications that use backend services,
 and handles all the tasks necessary to accept and process up to hundreds of thousands of concurrent API calls,
