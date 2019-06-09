@@ -4,6 +4,7 @@ menu:
   reference:
     parent: crosswalk-aws
     name: Elastic Container Registry (ECR)
+    weight: 4
 ---
 
 [Amazon Elastic Container Registry (ECR)](https://aws.amazon.com/ecr/) is a managed Docker container registry that

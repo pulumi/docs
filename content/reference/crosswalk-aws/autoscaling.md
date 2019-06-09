@@ -4,6 +4,7 @@ menu:
   reference:
     parent: crosswalk-aws
     name: Auto Scaling
+    weight: 2
 ---
 
 [AWS Auto Scaling](https://aws.amazon.com/autoscaling) monitors your applications and automatically adjusts capacity to

@@ -4,6 +4,7 @@ menu:
   reference:
     parent: crosswalk-aws
     name: Elastic Kubernetes Service (EKS)
+    weight: 6
 ---
 
 [Amazon Elastic Container Service for Kubernetes (Amazon EKS)](https://aws.amazon.com/eks) makes it easy to deploy,

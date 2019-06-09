@@ -4,6 +4,7 @@ menu:
   reference:
     parent: crosswalk-aws
     name: Elastic Load Balancing (ELB)
+    weight: 7
 ---
 
 [Elastic Load Balancing](https://aws.amazon.com/elasticloadbalancing/) (ELB) automatically distributes incoming

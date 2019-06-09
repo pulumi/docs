@@ -4,6 +4,7 @@ menu:
   reference:
     parent: crosswalk-aws
     name: Lambda
+    weight: 9
 ---
 
 [AWS Lambda](https://aws.amazon.com/lambda/) lets you run code without provisioning or managing servers. You pay only

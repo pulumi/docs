@@ -4,6 +4,7 @@ menu:
   reference:
     parent: crosswalk-aws
     name: API Gateway
+    weight: 1
 ---
 
 [Amazon API Gateway](https://aws.amazon.com/api-gateway/) is a fully managed service for creating, monitoring, and

@@ -4,6 +4,7 @@ menu:
   reference:
     parent: crosswalk-aws
     name: Virtual Private Cloud (VPC)
+    weight: 10
 ---
 
 [Amazon Virtual Private Cloud (Amazon VPC)](https://aws.amazon.com/vpc) lets you provision a logically isolated section

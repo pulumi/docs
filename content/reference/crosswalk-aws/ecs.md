@@ -4,6 +4,7 @@ menu:
   reference:
     parent: crosswalk-aws
     name: Elastic Container Service (ECS)
+    weight: 5
 ---
 
 [Amazon Elastic Container Service (Amazon ECS)](https://aws.amazon.com/ecs) is a scalable, high-performance container

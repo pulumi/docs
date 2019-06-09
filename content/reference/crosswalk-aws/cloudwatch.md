@@ -4,6 +4,7 @@ menu:
   reference:
     parent: crosswalk-aws
     name: CloudWatch
+    weight: 3
 ---
 
 [Amazon CloudWatch](https://aws.amazon.com/cloudwatch/) is a monitoring and management service built for developers,

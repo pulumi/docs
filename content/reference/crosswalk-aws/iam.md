@@ -4,6 +4,7 @@ menu:
   reference:
     parent: crosswalk-aws
     name: Identity and Access Management (IAM)
+    weight: 8
 ---
 
 [AWS Identity and Access Management (IAM)](https://aws.amazon.com/iam/) enables you to manage access to AWS services
