@@ -6,12 +6,12 @@ menu:
     name: Auto Scaling
 ---
 
-AWS Auto Scaling monitors your applications and automatically adjusts capacity to maintain steady, predictable
-performance at the lowest possible cost. Using AWS Auto Scaling, it’s easy to setup application scaling for multiple
-resources across multiple services in minutes. AWS Auto Scaling can be used to build scaling plans for resources
-including Amazon EC2 instances and Spot Fleets, and Amazon ECS clusters and tasks. With AWS Auto Scaling, your
-applications always have the right resources at the right time, and you pay only for the AWS resources needed to run
-your applications and any associated Amazon CloudWatch monitoring fees.
+[AWS Auto Scaling](https://aws.amazon.com/autoscaling) monitors your applications and automatically adjusts capacity to
+maintain steady, predictable performance at the lowest possible cost. Using AWS Auto Scaling, it’s easy to setup
+application scaling for multiple resources across multiple services in minutes. AWS Auto Scaling can be used to build
+scaling plans for resources including Amazon EC2 instances and Spot Fleets, and Amazon ECS clusters and tasks. With AWS
+Auto Scaling, your applications always have the right resources at the right time, and you pay only for the AWS
+resources needed to run your applications and any associated Amazon CloudWatch monitoring fees.
 
 {{< mini-toc >}}
 
