@@ -40,13 +40,20 @@
                     margin-right: 6px;
                 }
 
+                // The first N links are to the post's authors, with each
+                // image overlapping slightly via negative margins.
                 a.author {
-                    flex-basis: 36px;
                     flex-shrink: 0;
+                    position: relative;
+                    overflow: hidden;
+                    margin-left: -18px;
                 }
-
-                a:not(.author) {
-                    margin-left: 6px;
+                a.author:first-of-type {
+                    margin-left: 0;
+                }
+                // The last link, which is to the blog post.
+                a.author:last-of-type {
+                    margin-left: 4px;
                 }
             }
         }
@@ -56,6 +63,7 @@
             max-width: 150px;
             float: right;
             margin: 16px;
+            margin-top: 0;
         }
     }
 
@@ -67,10 +75,15 @@
         }
     }
 
+    .taxonomy-page-header  {
+        margin-top: 0;
+    }
+
     // Authors list for a single post. Shows an avatar, title, etc.
     .authors {
         .author {
-            display: flex;
+            display: inline-flex;
+            margin-right: 16px;
 
             // Don't show the link to the author's posts as a regular link.
             a.author-link {
@@ -88,7 +101,7 @@
             // When showing the social links under the author, customize
             // the "logo-roll" defined elsewhere.
             ul.logo-roll.inline-block {
-                margin-left: 0;
+                margin-left: 6px;
             }
 
             img {
@@ -104,20 +117,32 @@
     // Author details, the large widget we use on the author-specific listing page.
     .author-details {
         display: flex;
+        margin-bottom: 24px;
 
         img {
+            flex-basis: 180;
+
             height: 180px;
             width: 180px;
             border-radius: 180px;
-
-            margin-right: 16px;
         }
-    }
 
-    // The author may provide a free-form bio in HTML.
-    .author-bio {
-        font-size: 70%;
-        color: gray;
+        .profile {
+            margin-left: 16px;
+
+            h2 {
+                margin-top: 0;
+            }
+            p {
+                margin-bottom: 0;
+            }
+
+            // When showing the social links under the author, customize
+            // the "logo-roll" defined elsewhere.
+            ul.logo-roll.inline-block {
+                margin-left: 6px;
+            }
+        }
     }
 
     // Tag lists. Displayed on sidebar and bottom of posts.
@@ -147,5 +172,9 @@
 
     .pul-sidebar {
         padding-right: 24px;
+
+        h3 {
+            margin-top: 0;
+        }
     }
 }

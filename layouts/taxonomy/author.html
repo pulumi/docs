@@ -6,35 +6,49 @@
             {{ partial "blog/sidebar.html" . }}
 
              <div class="col-md-7">
-
-                {{ $authorData := index $.Site.Data.team.team .Data.Term }}
-                <h2>Posts by {{ $authorData.name }}</h2>
-                
-                <div class="author-details">
+                 {{ $authorData := index $.Site.Data.team.team .Data.Term }}
+                 <div class="author-details">
                     <img src="{{ $.Site.BaseURL }}assets/images/team/{{ $authorData.id }}.jpg" alt="{{ $authorData.name }}">
-                    <div>
+                    <div class="profile">
+                        <h2 class="taxonomy-page-header no-anchor">{{ $authorData.name }}</h2>
                         <p>{{ $authorData.title }}</p>
+
+                        <div>
+                            {{ if $authorData.social }}
+                                {{ partial "widgets/social-icons.html" (dict "social" $authorData.social)}}
+                            {{ end }}
+                        </div>
                     </div>
                 </div>
-                
-                {{ if $authorData.bio }}
-                <div class="author-bio">
-                    {{ $authorData.bio | safeHTML }}
-                </div>
-                {{ end }}
 
                 <ul class="posts-list">
                     {{ $paginator := .Paginate .Data.Pages.Reverse }}
                     {{ range $paginator.Pages }}
                     <li>
-                        <h3>
-                            <a href="{{ .Permalink }}"> {{ .Title }}</a>
-                        </h3>
-                        <small>
-                            Posted <time>{{ .Date.Format "Jan 2, 2006" }}</time>
-                        </small>
+                        <div class="post-header">
+                            <small>
+                                <time>{{ .Date.Format "Monday, Jan 2, 2006" }}</time>
+                            </small>
+                            <h3 class="no-anchor">
+                                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                            </h3>
+                        </div>
                         <div>
+                            {{/*
+                                If a general image is associated with the post, display it in-line.
+                                Though we need to do some work to convert a relative image path.
+                            */}}
+                            {{ if .Param "meta_image" }}
+                                {{ if in .Params.meta_image "RELATIVE_TO_PAGE" }}
+                                    {{ $imagePath := replace .Params.meta_image "RELATIVE_TO_PAGE/" "" }}
+                                    <img class="post-image" src="{{ .Page.Permalink }}{{ $imagePath }}" alt="{{ .Title }}">
+                                {{ else }}
+                                    <img class="post-image" src="{{ .Site.BaseURL }}{{ .Params.meta_image }}" alt="{{ .Title }}">
+                                {{ end }}
+                            {{ end }}
+
                             {{ .Render "post-summary" }}
+                            <div class="clearfix"></div>
                         </div>
                     </li>
                     {{ end }}

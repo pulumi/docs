@@ -49,8 +49,7 @@ $ npm install --save @pulumi/kubernetes @pulumi/gcp
 
 To create a GKE cluster, simply update the following code in `index.ts` file and run `pulumi up`.
 
-```typescript
-import * as k8s from "@pulumi/kubernetes";
+{{< highlight typescript >}}import * as k8s from "@pulumi/kubernetes";
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 import { readFileSync, fstat } from "fs";
@@ -112,7 +111,7 @@ users:
 
 // Create a Kubernetes provider instance that uses our cluster from above.
 const clusterProvider = new k8s.Provider(name, { kubeconfig: kubeconfig });
-```
+{{< /highlight >}}
 
 ## Step 3: Create a NGINX-Ingress-Controller to Generate Ingresses
 
@@ -123,8 +122,7 @@ map all running within seconds.
 
 Add the following lines of code in `index.ts` file and run `pulumi up` once again.
 
-```typescript
-/*
+{{< highlight typescript >}}/*
  * STEP 3: Create NGINX Ingress Controller in GKE
  */
 
@@ -134,15 +132,14 @@ const nginxingresscntlr = new k8s.helm.v2.Chart("nginxingresscontroller", {
     version: "0.24.1",
     values: {},
 }, { providers: { kubernetes: clusterProvider } }); 
-```
+{{< /highlight >}}
 
 ## Step 4: Create a Jupyter Notebook Deployment and Service with Type NodePort
 
 Bringing up Jupyter notebook deployment and service requires adding the following lines of code in
 `index.ts` file and running `pulumi up` to apply the changes.
 
-```typescript
-/*
+{{< highlight typescript >}}/*
  * STEP 4: Create Jupyter notebook deployment and service in the GKE cluster
  */
 
@@ -180,7 +177,7 @@ const jupyterService = new k8s.core.v1.Service(appName, {
       ports: [{ protocol: "TCP", nodePort: 30040, port: 8888, targetPort: 8888 }], 
     }
 }, { provider: clusterProvider });
-```
+{{< / highlight >}}
 
 ## Step 5: Create a Secret that is used with your Jupyter Notebook Domain Name
 
@@ -192,9 +189,10 @@ cluster. We use this secret as the TLS password to access the Jupyter notebook i
 accessible from the domain name defined in the host section of the ingress declaration. The
 annotations in the ingress declarations are required to enable this behavior on the ingress object.
 
-```typescript
-/*
- * STEP 5: Create a secret to enable "basic-auth" for your Jupyter notebook ingress and add it to the ingress declaration in the GKE cluster
+{{< highlight typescript >}}/*
+ * STEP 5: Create a secret to enable "basic-auth" for your Jupyter
+ * notebook ingress and add it to the ingress declaration in the
+ * GKE cluster
  */
 
 const authContents = (readFileSync("<path-to-auth.txt-file>")).toString()
@@ -241,7 +239,7 @@ export const jupyternotebookingress = new k8s.extensions.v1beta1.Ingress(appName
         }],
     }
 }, { provider: clusterProvider });
-```
+{{< /highlight >}}
 
 Once complete, you will see the GKE cluster components show up as follows:
 

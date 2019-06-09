@@ -1,6 +1,6 @@
 ---
 title: "Continuous Delivery with GitLab and Pulumi on Amazon EKS"
-authors: ["nishi-davidson", "chris-smith"]
+authors: ["nishi-davidson"]
 tags: ["aws", "kubernetes", "CI/CD"]
 date: "2019-05-22"
 

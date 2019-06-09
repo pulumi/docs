@@ -21,7 +21,7 @@
                                 {{ range $idx, $authorName := .Param "authors" }}
                                     {{ $authorPage := $.Site.GetPage (printf "/authors/%s" ($authorName | urlize)) }}
                                     {{ $authorData := index $.Site.Data.team.team $authorName }}
-                                    <a class="author" href="{{ $authorPage.Permalink }}">
+                                    <a class="author author-{{ $idx }}" href="{{ $authorPage.Permalink }}">
                                         <img
                                             src="{{ $.Site.BaseURL }}assets/images/team/{{ $authorData.id }}.jpg"
                                             alt="{{ $authorData.name }}" title="{{ $authorData.name }}">

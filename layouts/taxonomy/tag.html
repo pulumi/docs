@@ -6,36 +6,45 @@
             {{ partial "blog/sidebar.html" . }}
             
             <div class="col-md-7">
-
-                <h2>Posts with this tag '{{ .Data.Term }}'</h2>
+                <h2 class="taxonomy-page-header no-anchor">{{ .Data.Term }}</h2>
             
                 <ul class="posts-list">
                     {{ $paginator := .Paginate .Data.Pages.Reverse }}
                     {{ range $paginator.Pages }}
                     <li>
-                        <h3>
-                            <a href="{{ .Permalink }}"> {{ .Title }}</a>
-                        </h3>
-                        <small>
-                            Posted <time>{{ .Date.Format "Jan 2, 2006" }}</time>
-                        </small>
-            
-                        {{/* List post authors. Each with a comma prefix, except first. */}}
-                        <small>
-                            By
-                            {{ range $idx, $authorName := .Param "authors" }}
-                                {{ with $authorPage := $.Site.GetPage (printf "/authors/%s" ($authorName | urlize)) }}
-                                {{ if $idx }}, {{ end }}
-                                <a href="{{ $authorPage.Permalink }}">
+                        <div class="post-header">
+                            <small>
+                                <time>{{ .Date.Format "Monday, Jan 2, 2006" }}</time>
+                            </small>
+                            <h3 class="no-anchor">
+                                {{ range $idx, $authorName := .Param "authors" }}
+                                    {{ $authorPage := $.Site.GetPage (printf "/authors/%s" ($authorName | urlize)) }}
                                     {{ $authorData := index $.Site.Data.team.team $authorName }}
-                                    {{ $authorData.name }}
-                                </a>
+                                    <a class="author author-{{ $idx }}" href="{{ $authorPage.Permalink }}">
+                                        <img
+                                            src="{{ $.Site.BaseURL }}assets/images/team/{{ $authorData.id }}.jpg"
+                                            alt="{{ $authorData.name }}" title="{{ $authorData.name }}">
+                                    </a>
+                                {{ end }}
+                                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                            </h3>
+                        </div>
+                        <div>
+                            {{/*
+                                If a general image is associated with the post, display it in-line.
+                                Though we need to do some work to convert a relative image path.
+                            */}}
+                            {{ if .Param "meta_image" }}
+                                {{ if in .Params.meta_image "RELATIVE_TO_PAGE" }}
+                                    {{ $imagePath := replace .Params.meta_image "RELATIVE_TO_PAGE/" "" }}
+                                    <img class="post-image" src="{{ .Page.Permalink }}{{ $imagePath }}" alt="{{ .Title }}">
+                                {{ else }}
+                                    <img class="post-image" src="{{ .Site.BaseURL }}{{ .Params.meta_image }}" alt="{{ .Title }}">
                                 {{ end }}
                             {{ end }}
-                        </small>
 
-                        <div>
                             {{ .Render "post-summary" }}
+                            <div class="clearfix"></div>
                         </div>
                     </li>
                     {{ end }}
