@@ -26,7 +26,7 @@ related AWS services. This includes
 * [ELB]({{< relref "elb.md" >}}) for load balancing
 * [IAM]({{< relref "iam.md" >}}) for security
 * [VPC]({{< relref "vpc.md" >}}) for network isolation
-* [CloudWatch]({{< relref "cloudwatch.md" >}} for monitoring
+* [CloudWatch]({{< relref "cloudwatch.md" >}}) for monitoring
 
 Amazon EKS runs up-to-date versions of the open-source Kubernetes software, so you can use all the existing plugins and
 tooling from the Kubernetes community, including Pulumi's support for deploying Helm charts. Applications running on
