@@ -268,7 +268,7 @@ const cluster = new eks.Cluster("cluster");
 // Create a NGINX Deployment and load balanced Service, running our app.
 const appName = "my-app";
 const appLabels = { appClass: appName };
-const deployment = new k8s.apps.v1.Deployment(`${appName}-de`, {
+const deployment = new k8s.apps.v1.Deployment(`${appName}-dep`, {
     metadata: { labels: appLabels },
     spec: {
         replicas: 2,
@@ -295,7 +295,7 @@ const service = new k8s.core.v1.Service(`${appName}-svc`, {
 }, { provider: cluster.provider });
 
 // Export the URL for the load balanced service.
-export const url = service.status.apply(s => s.loadBalancer.ingress[0].hostname);
+export const url = service.status.loadBalancer.ingress[0].hostname;
 ```
 
 In the case where you don't really need to use the repository (except as a place to store the built image), the above
@@ -312,7 +312,7 @@ const cluster = new eks.Cluster("cluster");
 // Create a NGINX Deployment and load balanced Service, running our app.
 const appName = "my-app";
 const appLabels = { appClass: appName };
-const deployment = new k8s.apps.v1.Deployment(`${appName}-de`, {
+const deployment = new k8s.apps.v1.Deployment(`${appName}-dep`, {
     metadata: { labels: appLabels },
     spec: {
         replicas: 2,
@@ -339,7 +339,7 @@ const service = new k8s.core.v1.Service(`${appName}-svc`, {
 }, { provider: cluster.provider });
 
 // Export the URL for the load balanced service.
-export const url = service.status.apply(s => s.loadBalancer.ingress[0].hostname);
+export const url = service.status.loadBalancer.ingress[0].hostname;
 ```
 
 For information about EKS, refer to the [Pulumi Crosswalk for AWS EKS documentation]({{< relref "eks.md" >}}).
