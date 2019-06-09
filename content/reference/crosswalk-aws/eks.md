@@ -3,7 +3,7 @@ title: "AWS Elastic Container Service for Kubernetes (EKS)"
 menu:
   reference:
     parent: crosswalk-aws
-    name: Elastic Container Service for Kubernetes (EKS)
+    name: Elastic Kubernetes Service (EKS)
 ---
 
 [Amazon Elastic Container Service for Kubernetes (Amazon EKS)](https://aws.amazon.com/eks) makes it easy to deploy,
