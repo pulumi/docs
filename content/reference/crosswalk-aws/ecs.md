@@ -115,8 +115,8 @@ In this example, we simply specify the tags for our cluster. Below we will see e
 ## Creating an ECS Cluster in a VPC
 
 To create an ECS cluster inside of a VPC, we will first create or use an existing VPC using any of the techniques
-described in the [Pulumi Crosswalk for AWS VPC documentation](./vpc.html). Then we simply pass that as the `vpc`
-argument for our cluster's constructor:
+described in the [Pulumi Crosswalk for AWS VPC documentation]({{< relref "vpc.md" >}}). Then we simply pass that
+as the `vpc` argument for our cluster's constructor:
 
 ```typescript
 import * as awsx from "@pulumi/awsx";
