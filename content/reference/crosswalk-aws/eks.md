@@ -606,6 +606,23 @@ repository (over the Internet or on-premises), or from a tarball directly.
 This program installs the stable Wordpress chart into our EKS cluster:
 
 ```typescript
+import * as eks from "@pulumi/eks";
+import * as k8s from "@pulumi/kubernetes";
+
+// Create an EKS cluster.
+const cluster = new eks.Cluster("my-cluster");
+
+// Deploy Wordpress into our cluster.
+const wordpress = new k8s.helm.v2.Chart("wordpress", {
+    repo: "stable",
+    chart: "wordpress",
+    values: {
+        wordpressBlogName: "My Cool Kubernetes Blog!",
+    },
+}, { providers: { "kubernetes": cluster.provider } });
+
+// Export the cluster's kubeconfig.
+export const kubeconfig = cluster.kubeconfig;
 ```
 
 The `values` array provides the configurable parameters for the chart. If we leave off the `version`, the latest
