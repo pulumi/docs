@@ -16,7 +16,7 @@ on a cluster of machines.
 SDK, alongside other SDKs which span common cloud native utilities, cloud
 provider IaaS offerings, and their catalog of services - managed Kubernetes included.
 
-<center><img src="/images/quickstart/kubernetes/cake.svg?sanitize=true" width="670"></center>
+<center><img src="/images/quickstart/kubernetes/cake.svg" width="670"></center>
 
 The various SDK's allow Kubernetes users to leverage Pulumi for novel forms of cluster
 management, and deployment of app workloads to clusters. Users of
