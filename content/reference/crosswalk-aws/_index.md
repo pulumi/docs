@@ -6,6 +6,8 @@ menu:
     weight: 8
 ---
 
+<img src="/images/reference/crosswalk-aws/logo.svg" align="right" width="280" style="margin-left: 8px;">
+
 Pulumi Crosswalk for AWS is a collection of libraries to make common infrastructure as code tasks in AWS easier and
 more secure, using automatic well-architected best practices.
 
@@ -93,7 +95,7 @@ Pulumi supports the entirety of the AWS platform. If your favorite service isn't
 
 ## Frequently Asked Questions (FAQ)
 
-### What Clouds are Supported?
+### What Clouds Does Pulumi Crosswalk Support?
 
 Pulumi Crosswalk supports AWS only at the moment. Support for additional clouds is on the roadmap
 ([Azure](https://github.com/pulumi/pulumi-azure/issues/277), [GCP](https://github.com/pulumi/pulumi-gcp/issues/165),
@@ -102,8 +104,8 @@ and [Kubernetes](https://github.com/pulumi/pulumi-kubernetes/issues/589)).
 ### What Languages are Supported?
 
 Pulumi Crosswalk for AWS is currently supported only in
-[Node.js (JavaScript or TypeScript) languages](/reference/javascript/). Support for Python is [on the roadmap](
-https://github.com/pulumi/pulumi-awsx/issues/308).
+[Node.js (JavaScript or TypeScript) languages](/reference/javascript/). Support for other languages,
+[including Python](https://github.com/pulumi/pulumi-awsx/issues/308), is on the future roadmap.
 
 ### What Packages Define Pulumi Crosswalk for AWS?
 
