@@ -6,9 +6,12 @@ menu:
     name: Virtual Private Cloud (VPC)
 ---
 
-Amazon Elastic Cloud (EC2) provides a wide range of options for your cloud applications and infrastructure networking.
-This includes [Virtual Private Cloud (VPC)](https://aws.amazon.com/vpc/) for logical isolation of networks, public and
-private subnets, route tables, security groups to permit or reject certain classes of traffic, and gateways.
+[Amazon Virtual Private Cloud (Amazon VPC)](https://aws.amazon.com/vpc) lets you provision a logically isolated section
+of the AWS Cloud where you can launch AWS resources in a virtual network that you define. You have complete control
+over your virtual networking environment, including selection of your own IP address range, creation of subnets, and
+configuration of route tables and network gateways. You can use both IPv4 and IPv6 in your VPC for secure and easy
+access to resources and applications, and use multiple layers of security, including security groups and network
+access control lists, to limit network access to and from resources.
 
 {{< mini-toc >}}
 
