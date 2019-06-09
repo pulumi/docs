@@ -15,10 +15,6 @@ Create, share, and reuse powerful cloud packages.
 
 Pulumi is [open source on GitHub](https://github.com/pulumi/pulumi) and is free to use.
 
-| | | 
-:-------------------------:|:-------------------------:|:-------------------------:
-<img src="/images/quickstart/hourglass.svg" width="450"/>|                      |<img src="/images/quickstart/general-architecture.svg" width="400"/>
-
 ## Download and Install
 
 To get started, first download and install the CLI:
@@ -31,4 +27,14 @@ If you've already installed Pulumi, simply choose your cloud provider:
 
 {{< quickstart-clouds >}}
 
+## Learning Pulumi
+
+Learn [more]({{< relref "/reference#learning-pulumi" >}}) about Pulumi, and join our [Community Slack](https://slack.pulumi.io/) channel!
+
+| | | 
+:-------------------------:|:-------------------------:|:-------------------------:
+<img src="/images/quickstart/hourglass.svg" width="450"/>|                      |<img src="/images/quickstart/general-architecture.svg" width="400"/>
+
 <!--TODO: use cases, competition -->
+
+
