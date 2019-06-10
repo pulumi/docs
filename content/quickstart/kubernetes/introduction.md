@@ -28,7 +28,7 @@ Kubernetes [upstream][upstream].
 In addition to being compatible with all existing Kubernetes workflows, Pulumi provides several
 advantages:
 
--   **A great complement to kubectl.** `kubectl` is the standard for proactive interaction and ops in Kubernetes. However, `kubectl` is user-driven in certain uses (e.g. `get`, `describe`), and server-driven in others (e.g. `apply`). Pulumi is ideal for intuitive workload orchestration and API resource lifecycle management, in addition to [cluster management][cluster-management], as it leverages an API-driven approach for Kubernetes, on top of Pulumi's rich diffs and deterministic Infrastructure-as-Code primitives. It also directly informs the user of resource changes and updates up-front, and rolls out changes in a [create-before-replace][create-before-replace] / blue-green deployment strategy for better, standardized workflows. See the Kubernetes [FAQ][faq], and the Pulumi [Programming Model][programming-model] for more detail.
+-   **A great complement to kubectl.** `kubectl` is the standard for cluster operations in Kubernetes. However, `kubectl` is user-driven in certain uses (e.g. `get`, `describe`), and server-driven in others (e.g. `apply`). Pulumi excels at workload orchestration, API resource lifecycle management, and [cluster management][cluster-management] by providing rich diffs and deterministic Infrastructure-as-Code primitives. Pulumi takes the guesswork out of updates with comprehensive previews of planned changes, and controlled rollouts that use a [create-before-replace][create-before-replace] / blue-green deployment strategy. See the Kubernetes [FAQ][faq], and the Pulumi [Programming Model][programming-model] for more detail.
 -   **Proactive reports of errors if resource initialization fails.** If Pulumi understands why a
     resource failed to become healthy, it will tell you at provisioning time -- no more guesswork
     with `kubectl get`.
@@ -63,6 +63,6 @@ Check out [Pulumi: A Better Way to Kubernetes][better-way-to-k8s] for details!
 [aurora]: https://aws.amazon.com/rds/aurora/
 [pulumi-k8s]: https://github.com/pulumi/pulumi-kubernetes
 [better-way-to-k8s]: https://blog.pulumi.com/pulumi-a-better-way-to-kubernetes
-[create-before-replace]: https://pulumi.io/reference/programming-model/#autonaming
-[programming-model]: https://pulumi.io/reference/programming-model
+[create-before-replace]: {{< relref "/reference/programming-model.md#autonaming" >}}
+[programming-model]: {{< relref "/reference/programming-model.md" >}}
 [cluster-management]: {{< relref "/quickstart/kubernetes/tutorial-clusters" >}}
