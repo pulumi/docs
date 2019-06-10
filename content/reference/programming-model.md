@@ -1004,7 +1004,7 @@ class MyResource extends pulumi.dynamic.Resource {
 
 Implementing the `pulumi.dynamic.ResourceProvider` interface requires implementing a subset of the methods below. Each of these methods may be asynchronous, and most implementations of these methods will perform network I/O to provision resources in a backing cloud provider or other resource model. There are several important contracts between a dynamic provider and the Pulumi CLI that inform when these methods are called and with what data.
 
-Since the inputs to the custom resource are of type `pulumi.Input<T>`, when the functions below are called with those inputs they will be passed the resolved version of the same inputs. To get strong typing for your inputs in the provider functions, you should have another type that contains the same properties but with unwrapped-types as their types.
+Though the input properties passed to a `pulumi.dynamic.Resource` instance will usually be of type `pulumi.Input<T>` in order to compose well with other Pulumi resources, the dynamic provider's functions are invoked with the fully resolved input values. Strong typing for the inputs to your provider's functions can help clarify this; you can achieve this by creating a second interface with the same properties as your resource's inputs, but with fully unwrapped types.
 
 {{< langchoose >}}
 
