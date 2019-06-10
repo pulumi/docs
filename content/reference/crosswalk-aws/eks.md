@@ -293,14 +293,15 @@ Nodes exist in groups and you can create multiple groups for workloads that requ
 is given a default node group, with the instance sizes and counts that you specify (or the defaults of two `t2.medium`
 instances otherwise). The latest version of Kubernetes available is used by default.
 
-If you would like to disable the creation of a default node group, and instead rely on creating your own, simply
-pass [`skipDefaultNodeGroup`](/reference/pkg/nodejs/pulumi/eks/#ClusterOptions-skipDefaultNodeGroup) as `true` to the
-`eks.Cluster` constructor. Additional node groups may then be created by calling
-[the `createNodeGroup` function](/reference/pkg/pulumi/eks/#Cluster-createNodeGroup) on your EKS cluster, or by
-[creating an `eks.NodeGroup`](/reference/pkg/pulumi/eks/#NodeGroup) explicitly. In both cases, you are likely to
-want to configure IAM roles for your worker nodes explicitly, which can be supplied to your EKS cluster using
-the [`instanceRole`](/reference/pkg/nodejs/pulumi/eks/#ClusterOptions-instanceRole) or
-[`instanceRoles`](/reference/pkg/nodejs/pulumi/eks/#ClusterOptions-instanceRoles) properties.
+If you would like to disable the creation of a default node group, and instead rely on creating your own, simply pass
+[`skipDefaultNodeGroup`]({{< relref "/reference/pkg/nodejs/pulumi/eks/_index.md#ClusterOptions-skipDefaultNodeGroup" >}})
+as `true` to the `eks.Cluster` constructor. Additional node groups may then be created by calling
+[the `createNodeGroup` function]({{< relref "/reference/pkg/nodejs/pulumi/eks/_index.md#Cluster-createNodeGroup" >}}) on
+your EKS cluster, or by [creating an `eks.NodeGroup`]({{< relref "/reference/pkg/nodejs/pulumi/eks/_index.md#NodeGroup" >}})
+explicitly. In both cases, you are likely to want to configure IAM roles for your worker nodes explicitly, which can be
+supplied to your EKS cluster using the
+[`instanceRole`]({{< relref "/reference/pkg/nodejs/pulumi/eks/_index.md#ClusterOptions-instanceRole" >}}) or
+[`instanceRoles`]({{< relref "/reference/pkg/nodejs/pulumi/eks/_index.md#ClusterOptions-instanceRoles" >}}) properties.
 
 For instance, let's say we want to have two node groups: one for our fixed, known workloads, and another that is
 burstable and might use more expensive compute, but which can be scaled down when possible (possibly to zero).
@@ -399,18 +400,18 @@ When you create an Amazon EKS cluster, the IAM entity user or role (for example,
 cluster is automatically granted `system:masters` permissions in the cluster's RBAC configuration. To grant additional
 AWS users or roles the ability to interact with your cluster, you must edit the `aws-auth` ConfigMap within Kubernetes.
 
-The [`roleMappings` property](/reference/pkg/nodejs/pulumi/eks/#ClusterOptions-roleMappings) for your EKS cluster lets
-you configure custom IAM roles. For example, you can create different IAM roles for cluster admins, automation
-accounts (for CI/CD), and production roles, and supply them to `roleMappings`; this has the effect of placing them
-in the `aws-auth` ConfigMap for your cluster automatically. Pulumi also lets you configure Kubernetes objects, so that
-can also then create the RBAC cluster role bindings in your cluster to tie everything together.
+The [`roleMappings` property]({{< relref "/reference/pkg/nodejs/pulumi/eks/_index.md#ClusterOptions-roleMappings" >}})
+for your EKS cluster lets you configure custom IAM roles. For example, you can create different IAM roles for cluster
+admins, automation accounts (for CI/CD), and production roles, and supply them to `roleMappings`; this has the effect of
+placing them in the `aws-auth` ConfigMap for your cluster automatically. Pulumi also lets you configure Kubernetes
+objects, so that can also then create the RBAC cluster role bindings in your cluster to tie everything together.
 
 For a complete example of this in action, please see [Simplifying Kubernetes RBAC in Amazon EKS](
 https://blog.pulumi.com/simplify-kubernetes-rbac-in-amazon-eks-with-open-source-pulumi-packages).
 
 ## Deploying Kubernetes Apps to Your EKS Cluster
 
-Pulumi supports the entire Kubernetes object model in the [@pulumi/kubernetes](/reference/pkg/nodejs/pulumi/kubernetes)
+Pulumi supports the entire Kubernetes object model in the [@pulumi/kubernetes]({{< relref "/reference/pkg/nodejs/pulumi/kubernetes" >}})
 package. For more information on these object types, including Deployments, Services, and Pods, please see
 [Understanding Kubernetes Objects](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/).
 
@@ -537,8 +538,9 @@ Specifying your Kubernetes object configurations in Pulumi lets you take advanta
 like variables, loops, conditionals, functions, and classes. It is possible, however, to deploy existing Kubernetes
 YAML. The two approaches can be mixed, which is useful when converting an existing project.
 
-The [`ConfigFile` class](/reference/pkg/nodejs/pulumi/kubernetes/yaml/#ConfigFile) can be used to deploy a single
-YAML file, whereas the [`ConfigGroup` class](/reference/pkg/nodejs/pulumi/kubernetes/yaml/#ConfigFile) can deploy
+The [`ConfigFile` class]({{< relref "/reference/pkg/nodejs/pulumi/kubernetes/yaml/_index.md#ConfigFile" >}}) can be
+used to deploy a single YAML file, whereas the [`ConfigGroup` class](
+{{< relref "/reference/pkg/nodejs/pulumi/kubernetes/yaml/_index.md#ConfigFile" >}}) can deploy
 a collection of files, either from a set of files or in-memory representations.
 
 For example, imagine we have a directory, `yaml/`, containing the full YAML for the [Kubernetes Guestbook application](
@@ -727,7 +729,7 @@ For more information about ECR, please see [the Pulumi Crosswalk for AWS ECR doc
 
 For more information about Kubernetes and EKS, please see the following:
 
-* [Pulumi Kubernetes API Documentation](/reference/pkg/nodejs/pulumi/kubernetes)
-* [Pulumi EKS API Documentation](/reference/pkg/nodejs/pulumi/eks)
+* [Pulumi Kubernetes API Documentation]({{< relref "/reference/pkg/nodejs/pulumi/kubernetes" >}})
+* [Pulumi EKS API Documentation]({{< relref "/reference/pkg/nodejs/pulumi/eks/_index.md" >}})
 * [Amazon Elastic Container Service for Kubernetes homepage](https://aws.amazon.com/eks/)
 * [Kubernetes Documentation](https://kubernetes.io)

@@ -87,7 +87,7 @@ one of the relevant User Guides to get started:
 
 ### Continuous Deployment
 
-* [Using Pulumi from AWS Code Services](/reference/cd-aws-code-services)
+* [Using Pulumi from AWS Code Services]({{< relref "/reference/cd-aws-code-services" >}})
 
 ### Other AWS Services
 
@@ -106,15 +106,15 @@ and [Kubernetes](https://github.com/pulumi/pulumi-kubernetes/issues/589)).
 ### What Languages are Supported?
 
 Pulumi Crosswalk for AWS is currently supported only in
-[Node.js (JavaScript or TypeScript) languages](/reference/javascript/). Support for other languages,
+[Node.js (JavaScript or TypeScript) languages]({{< relref "/reference/javascript.md" >}}). Support for other languages,
 [including Python](https://github.com/pulumi/pulumi-awsx/issues/308), is on the future roadmap.
 
 ### What Packages Define Pulumi Crosswalk for AWS?
 
 Because Pulumi Crosswalk for AWS is a broader "brand" for our framework spanning multiple packages, there isn't
-a single package that contains everything. The [`@pulumi/aws`](/reference/pkg/nodejs/pulumi/aws),
-[`@pulumi/awsx`](/reference/pkg/nodejs/pulumi/awsx), and [`@pulumi/eks`](/reference/pkg/nodejs/pulumi/eks)
-packages each has an important role to play.
+a single package that contains everything. The [`@pulumi/aws`]({{< relref "/reference/pkg/nodejs/pulumi/aws" >}}),
+[`@pulumi/awsx`]({{< relref "/reference/pkg/nodejs/pulumi/awsx" >}}), and
+[`@pulumi/eks`]({{< relref "/reference/pkg/nodejs/pulumi/eks" >}}) packages each has an important role to play.
 
 ### Is Pulumi Crosswalk for AWS Free to Use?
 

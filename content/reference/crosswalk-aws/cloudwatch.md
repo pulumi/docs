@@ -53,8 +53,8 @@ Pulumi Crosswalk for AWS supports configuring CloudWatch logging in the followin
 
 * _Creating Log Groups_: A log group is a collection of logs with certain policies around retention and archival,
   to which logs may be sent from numerous AWS services. The
-  [`aws.cloudwatch.LogGroup` class](/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#LogGroup) may be used to create
-  and configure new log groups.
+  [`aws.cloudwatch.LogGroup` class]({{< relref "/reference/pkg/nodejs/pulumi/awsx/cloudwatch/_index.md#LogGroup" >}})
+  may be used to create and configure new log groups.
 
 * _Forwarding to Log Groups_: From any of the supported services, a CloudWatch log group may be supplied to configure
   said service to forward logs to that log group. Many services support doing so. For example,
@@ -94,7 +94,7 @@ const nginx = new awsx.ecs.FargateService("nginx", {
 
 For details on all the capabilities of CloudWatch log groups, please refer to the [Amazon CloudWatch Logs documentation](
 https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html), in addition to the
-[Pulumi CloudWatch API documentation](/reference/pkg/nodejs/pulumi/awsx/cloudwatch).
+[Pulumi CloudWatch API documentation]({{< relref "/reference/pkg/nodejs/pulumi/awsx/cloudwatch" >}}).
 
 ## Subscribing to CloudWatch Metrics
 
@@ -146,8 +146,8 @@ const funcMetric = new awsx.cloudwatch.Metric({
 
 More commonly, applications will want to work with existing metrics produced by AWS services, using
 [pre-defined metrics](#using-a-pre-defined-metric). In the event that you'd like to create a custom metric, or use a
-service not already pre-defined, however, refer to the [API documentation for
-properties used when creating a new `Metric` object](/reference/pkg/nodejs/pulumi/awsx/cloudwatch/#MetricArgs).
+service not already pre-defined, however, refer to the [API documentation for properties used when creating a new
+`Metric` object]({{< relref "/reference/pkg/nodejs/pulumi/awsx/cloudwatch/_index.md#MetricArgs" >}}).
 
 ### Using a Pre-Defined Metric
 
@@ -183,23 +183,23 @@ event in question for information about what is available.
 For details about all available CloudWatch Metrics in Pulumi Crosswalk for AWS, refer to the API documentation.
 Here is a list of the AWS services that export metrics:
 
-* [AWS Certificate Manager Private Certificate Authority (ACM PCA) CloudWatch Metrics](/reference/pkg/nodejs/pulumi/awsx/acmpca/#metrics)
-* [AWS API Gateway CloudWatch Metrics](/reference/pkg/nodejs/pulumi/awsx/apigateway/#metrics)
-* [AWS Autoscaling CloudWatch Metrics](/reference/pkg/nodejs/pulumi/awsx/autoscaling/#metrics)
-* [AWS CloudFront CloudWatch Metrics](/reference/pkg/nodejs/pulumi/awsx/cloudfront/#metrics)
-* [AWS CodeBuild CloudWatch Metrics](/reference/pkg/nodejs/pulumi/awsx/codebuild/#metrics)
-* [AWS Cognito CloudWatch Metrics](/reference/pkg/nodejs/pulumi/awsx/cognito/#metrics)
-* [AWS DynamoDB CloudWatch Metrics](/reference/pkg/nodejs/pulumi/awsx/dynamodb/#metrics)
-* [AWS Elastic Block Store (EBS) CloudWatch Metrics](/reference/pkg/nodejs/pulumi/awsx/ebs/#metrics)
-* [AWS Elastic Compute Cloud (EC2) CloudWatch Metrics](/reference/pkg/nodejs/pulumi/awsx/ec2/#metrics)
-* [AWS Elastic Container Service (ECS) CloudWatch Metrics](/reference/pkg/nodejs/pulumi/awsx/ecs/#metrics)
-* [AWS Elastic File System (EFS) CloudWatch Metrics](/reference/pkg/nodejs/pulumi/awsx/efs/#metrics)
-* [AWS Elastic Load Balancing (ELB) CloudWatch Metrics](/reference/pkg/nodejs/pulumi/awsx/elasticloadbalancingv2/#metrics)
-* [AWS Lambda CloudWatch Metrics](/reference/pkg/nodejs/pulumi/awsx/lambda/#metrics)
-* [AWS Relational Database Service (RDS) CloudWatch Metrics](/reference/pkg/nodejs/pulumi/awsx/rds/#metrics)
-* [AWS Simple Storage Service (S3) CloudWatch Metrics](/reference/pkg/nodejs/pulumi/awsx/s3/#metrics)
-* [AWS Simple Notification Service (SNS) CloudWatch Metrics](/reference/pkg/nodejs/pulumi/awsx/sns/#metrics)
-* [AWS Simple Queue Service (SQS) CloudWatch Metrics](/reference/pkg/nodejs/pulumi/awsx/sqs/#metrics)
+* [AWS Certificate Manager Private Certificate Authority (ACM PCA) CloudWatch Metrics]({{< relref "/reference/pkg/nodejs/pulumi/awsx/acmpca/_index.md#metrics" >}})
+* [AWS API Gateway CloudWatch Metrics]({{< relref "/reference/pkg/nodejs/pulumi/awsx/apigateway/_index.md#metrics" >}})
+* [AWS Autoscaling CloudWatch Metrics]({{< relref "/reference/pkg/nodejs/pulumi/awsx/autoscaling/_index.md#metrics" >}})
+* [AWS CloudFront CloudWatch Metrics]({{< relref "/reference/pkg/nodejs/pulumi/awsx/cloudfront/_index.md#metrics" >}})
+* [AWS CodeBuild CloudWatch Metrics]({{< relref "/reference/pkg/nodejs/pulumi/awsx/codebuild/_index.md#metrics" >}})
+* [AWS Cognito CloudWatch Metrics]({{< relref "/reference/pkg/nodejs/pulumi/awsx/cognito/_index.md#metrics" >}})
+* [AWS DynamoDB CloudWatch Metrics]({{< relref "/reference/pkg/nodejs/pulumi/awsx/dynamodb/_index.md#metrics" >}})
+* [AWS Elastic Block Store (EBS) CloudWatch Metrics]({{< relref "/reference/pkg/nodejs/pulumi/awsx/ebs/_index.md#metrics" >}})
+* [AWS Elastic Compute Cloud (EC2) CloudWatch Metrics]({{< relref "/reference/pkg/nodejs/pulumi/awsx/ec2/_index.md#metrics" >}})
+* [AWS Elastic Container Service (ECS) CloudWatch Metrics]({{< relref "/reference/pkg/nodejs/pulumi/awsx/ecs/_index.md#metrics" >}})
+* [AWS Elastic File System (EFS) CloudWatch Metrics]({{< relref "/reference/pkg/nodejs/pulumi/awsx/efs/_index.md#metrics" >}})
+* [AWS Elastic Load Balancing (ELB) CloudWatch Metrics]({{< relref "/reference/pkg/nodejs/pulumi/awsx/elasticloadbalancingv2/_index.md#metrics" >}})
+* [AWS Lambda CloudWatch Metrics]({{< relref "/reference/pkg/nodejs/pulumi/awsx/lambda/_index.md#metrics" >}})
+* [AWS Relational Database Service (RDS) CloudWatch Metrics]({{< relref "/reference/pkg/nodejs/pulumi/awsx/rds/_index.md#metrics" >}})
+* [AWS Simple Storage Service (S3) CloudWatch Metrics]({{< relref "/reference/pkg/nodejs/pulumi/awsx/s3/_index.md#metrics" >}})
+* [AWS Simple Notification Service (SNS) CloudWatch Metrics]({{< relref "/reference/pkg/nodejs/pulumi/awsx/sns/_index.md#metrics" >}})
+* [AWS Simple Queue Service (SQS) CloudWatch Metrics]({{< relref "/reference/pkg/nodejs/pulumi/awsx/sqs/_index.md#metrics" >}})
 
 If certain metrics or services are missing from the list, please refer to [this list](
 https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html) for names
@@ -395,7 +395,7 @@ const dashboard = new awsx.cloudwatch.Dashboard("TopicData", {
 ```
 
 More complex widget customization is possible. See the individual types and arguments in the
-[Cloudwatch API](/reference/pkg/nodejs/pulumi/awsx/cloudwatch/) for more details.
+[Cloudwatch API]({{< relref "/reference/pkg/nodejs/pulumi/awsx/cloudwatch/_index.md" >}}) for more details.
 
 ## Additional CloudWatch Resources
 
