@@ -1118,7 +1118,7 @@ export class MyResource extends pulumi.dynamic.Resource {
 ```
 
 ```python
-# Dynamic Providers are not supported in Python currently.
+# Dynamic Providers are not yet supported in Python.
 ```
 
 ```go
