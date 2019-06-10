@@ -1,0 +1,224 @@
+{{ define "main" }}
+  {{ partial "hero.html" . }}
+
+    <section class="content-block content-block-anchors bg-black white-text">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 anchor-container" id="anchor-point">
+                    <ul class="anchor-list">
+                        <li class="anchor-item"><a href="#continuous-delivery">Continuous Delivery</a></li>
+                        <li class="anchor-item"><a href="#security">Security</a></li>
+                        <li class="anchor-item"><a href="#support">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-block text-center-xs text-center-sm">
+
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <div class="content">
+                            <h2>Platform Features</h2>
+                            <p class="intro">Unify development and devops practices to define, deploy, and manage cloud apps and infrastructure</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <div class="row cols-are-spaced-md">
+                            <div class="col col-md-4">
+                                <div class="content">
+                                    <div class="eqh margin-bottom-10" data-mh="copy">
+                                        <h3 class="h5 text-uppercase">Any code</h3>
+                                        <p>Work with preferred languages for maximum productivity.</p>
+                                    </div>
+                                    <ul class="logo-roll text-center-xs text-center-sm">
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-js.png?v1" alt="js" width="36"></li>
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-python.png?v1" alt="python" width="34"></li>
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-golang.png?v1" alt="golang" width="63"></li>
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-ts.png?v1" alt="typescript" width="36"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col col-md-4">
+                                <div class="content">
+                                    <div class="eqh margin-bottom-10" data-mh="copy">
+                                        <h3 class="h5 text-uppercase">Any cloud</h3>
+                                        <p>Deploy apps and infrastructure to any cloud.</p>
+                                    </div>
+                                    <ul class="logo-roll text-center-xs text-center-sm">
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-aws.png?v1" alt="aws" width="37"></li>
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-azure.png?v1" alt="azure" width="39"></li>
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-gd.png?v1" alt="gd" width="38"></li>
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-kubernetes.png?v1" alt="kubernetes" width="39"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col col-md-4">
+                                <div class="content">
+                                    <div class="eqh margin-bottom-10" data-mh="copy">
+                                        <h3 class="h5 text-uppercase">Any team</h3>
+                                        <p>Implement workflows with familiar tools and workflows. </p>
+                                    </div>
+                                    <ul class="logo-roll text-center-xs text-center-sm">
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-github.png" alt="github"></li>
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-vs.png" alt="vs"></li>
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-npm.png" alt="npm"></li>
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-travisci.png" alt="travisci"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="continuous-delivery" class="content-block border-top">
+
+        <div class="content-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="content">
+                            <div class="row valign-center-md cols-are-spaced-md">
+                                <div class="col col-md-9 content">
+                                    <h2>Continuous Delivery</h2>
+                                    <p class="intro">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque.</p>
+                                </div>
+                                <div class="col col-md-3 content">
+                                    <a href="#" class="button width-100-md width-100-lg width-100-xlg">Call to Action</a>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row margin-bottom-45">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <img src="http://placehold.it/1000x500?text=FPO">
+                                </div>
+                            </div>
+                            <div class="row cols-are-spaced-md">
+                                <div class="col-md-4 col">
+                                    <h3 class="h6">Nullam sit amet enim</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida.</p>
+                                </div>
+                                <div class="col-md-4 col">
+                                    <h3 class="h6">Nullam sit amet enim</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida.</p>
+                                </div>
+                                <div class="col-md-4 col">
+                                    <h3 class="h6">Nullam sit amet enim</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="security" class="content-block bg-grey">
+
+        <div class="content-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="content">
+                            <div class="row valign-center-md cols-are-spaced-md">
+                                <div class="col col-md-9 content">
+                                    <h2>Security</h2>
+                                    <p class="intro">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque.</p>
+                                </div>
+                                <div class="col col-md-3 content">
+                                    <a href="#" class="button width-100-md width-100-lg width-100-xlg">Call to Action</a>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row margin-bottom-45">
+                                <div class="col-lg-5 col-xlg-3">
+                                    <div class="content margin-bottom-30">
+                                        <h3 class="h6">Nullam sit amet enim</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida.</p>
+                                    </div>
+                                    <div class="content margin-bottom-30">
+                                        <h3 class="h6">Nullam sit amet enim</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida.</p>
+                                    </div>
+                                    <div class="content margin-bottom-30">
+                                        <h3 class="h6">Nullam sit amet enim</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-lg-offset-1 col-xlg-8">
+                                    <img src="http://placehold.it/1000x500?text=FPO">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="support" class="content-block ">
+
+        <div class="content-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="content">
+                            <div class="row valign-center-md cols-are-spaced-md">
+                                <div class="col col-md-9 content">
+                                    <h2>Support</h2>
+                                    <p class="intro">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque.</p>
+                                </div>
+                                <div class="col col-md-3 content">
+                                    <a href="#" class="button width-100-md width-100-lg width-100-xlg">Call to Action</a>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row margin-bottom-45">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <img src="http://placehold.it/1000x500?text=FPO">
+                                </div>
+                            </div>
+                            <div class="row cols-are-spaced-md">
+                                <div class="col-md-4 col">
+                                    <h3 class="h6">Nullam sit amet enim</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida.</p>
+                                </div>
+                                <div class="col-md-4 col">
+                                    <h3 class="h6">Nullam sit amet enim</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida.</p>
+                                </div>
+                                <div class="col-md-4 col">
+                                    <h3 class="h6">Nullam sit amet enim</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    {{ partial "learnmore-contactus.html" . }}
+    {{ partial "newsletter.html" (dict "classes" "bg-purple-dark white-text" )}}
+
+{{ end }}

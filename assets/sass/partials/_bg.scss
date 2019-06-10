@@ -31,7 +31,7 @@
 .with-glare-grey {
 	&:before {
 		content: "";
-		background-image: url(../assets/images/glare2.png);
+		background-image: url(../images/glare2.png);
 		width: 505px;
 		height: 505px;
 		position: absolute;
@@ -42,7 +42,7 @@
 		background-size: 100%;
 		background-position: center center;
 	}
-	
+
 	> * {
 		position: relative;
 	}

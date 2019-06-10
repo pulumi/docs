@@ -22,7 +22,7 @@ The detection of metadata in a CI environment depends on some key environment va
 
 The above metadata about your CI environment is then used to provide an enhanced experience in the [Pulumi Console](https://app.pulumi.com) when you look at your stack activity log. The metadata from your CI environment combined with the information about your Git repository allows us to provide links to things such as the Pull Request on github.com or the commit that triggered a PR build.
 
-![A Stack update entry in the Pulumi Console](/images/reference/supporting-new-ci/stack-update.png)
+![A Stack update entry in the Pulumi Console](/images/docs/reference/supporting-new-ci/stack-update.png)
 
 In order to add support for your CI system, you should be somewhat familiar in working with [Go](https://golang.org/).
 
@@ -49,7 +49,7 @@ AppVeyor: baseCI{
 },
 ```
 
-The `EnvVarsToDetect` is used by the `IsCI()` in [`systems.go`](https://github.com/pulumi/pulumi/blob/master/pkg/util/ciutil/systems.go), which iterates through the environment variables that a certain CI system is known to set in its build agents. Some CI systems set specific _values_ in certain environment variables, and in such cases you should use `EnvValuesToDetect`. An example for the latter is `Codeship`. See its entry in the `detectors` map.  
+The `EnvVarsToDetect` is used by the `IsCI()` in [`systems.go`](https://github.com/pulumi/pulumi/blob/master/pkg/util/ciutil/systems.go), which iterates through the environment variables that a certain CI system is known to set in its build agents. Some CI systems set specific _values_ in certain environment variables, and in such cases you should use `EnvValuesToDetect`. An example for the latter is `Codeship`. See its entry in the `detectors` map.
 
 ### Detecting Additional Metadata About A CI Build
 
@@ -60,7 +60,7 @@ A CI build could have been triggered by a PR or a push build. In the case of the
 - GitHub
 - GitLab
 
-All of the above source control systems have a concept of a PR, and PR builds, as well as push builds. 
+All of the above source control systems have a concept of a PR, and PR builds, as well as push builds.
 
 - Add a new file to the [`pkg/util/ciutil`](https://github.com/pulumi/pulumi/tree/master/pkg/util/ciutil) folder with the name of the CI system for which you are adding support.
 - Define a new struct for the CI system and add `baseCI` to its definition. Refer to any of other pre-existing implementations, such as the [`travis.go`](https://github.com/pulumi/pulumi/blob/master/pkg/util/ciutil/travis.go) file.

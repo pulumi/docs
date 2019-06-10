@@ -1,0 +1,9 @@
+id = "levi-blackstone"
+name = "Levi Blackstone"
+title = "Software Engineer"
+weight = 1
+
+[social]
+github = "lblackstone"
+linkedin = "levi-blackstone"
+twitter = "levi_blackstone"

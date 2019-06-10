@@ -1,0 +1,79 @@
+// Styles for the Pulumi blog.
+#pul-blog {
+    // Clear a broad style from the rest of our CSS.
+    li:before { display: none; }
+    ul li { padding-left: 0; }
+
+    // .post-list is used whenever the summaries of several blog posts are displayed.
+    // Such as on the listing page for an author or tag.
+    .posts-list {
+        li {
+            border: 1px solid purple;
+        }
+    }
+
+    // Authors list for a single post. Shows an avatar, title, etc.
+    .authors {
+        .author {
+            display: flex;
+
+            img {
+                height: 90px;
+                width: 90px;
+                border-radius: 90px;
+
+                margin-right: 16px;
+            }
+        }
+    }
+
+    // Author details, the large widget we use on the author-specific listing page.
+    .author-details {
+        display: flex;
+
+        img {
+            height: 180px;
+            width: 180px;
+            border-radius: 180px;
+
+            margin-right: 16px;
+        }
+    }
+
+    // The author may provide a free-form bio in HTML.
+    .author-bio {
+        font-size: 70%;
+        color: gray;
+    }
+
+    // The tags listing at the bottom of a post.
+    .post-tags-list {
+        display: flex;
+
+        li {
+            padding: 4px;
+            margin: 4px;
+
+            background-color: orange;
+            border-radius: 6px;
+
+            a {
+                color: white;
+            }
+            a:link  { text-decoration: none; }
+            a:hover { text-decoration: none; }
+        }
+    }
+
+    // The paginator widget.
+    .paginator {
+        display: flex;
+    }
+
+    // The sidebar for the blog and content.
+    .sidebar {
+        .tags-list {
+            border: 1px solid yellow;
+        }
+    }
+}

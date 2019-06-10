@@ -7,7 +7,7 @@ menu:
     weight: 8
 ---
 
-<img src="/images/quickstart/openstack-purple.png" align="right">
+<img src="/images/docs/quickstart/openstack-purple.png" align="right">
 
 The OpenStack provider for Pulumi can be used to provision any of the cloud resources available in [OpenStack](https://www.openstack.org/).  The OpenStack provider must be configured with credentials to deploy and update resources in an OpenStack cloud.
 

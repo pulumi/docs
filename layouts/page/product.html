@@ -1,0 +1,417 @@
+{{ define "main" }}
+  {{ partial "hero.html" . }}
+
+    <!-- {{ partial "anchor-menu.html" . }} -->
+    <section class="content-block content-block-anchors bg-black white-text" >
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 anchor-container" id="anchor-point">
+                    <ul class="anchor-list">
+                        <li class="anchor-item"><a href="#pulumi-sdk">Pulumi SDK</a></li>
+                        <li class="anchor-item"><a href="#pulumi-saas">Pulumi SaaS</a></li>
+                        <li class="anchor-item"><a href="#multi-cloud-subscription">Multi-Cloud Subscription</a></li>
+                        <li class="anchor-item"><a href="#how-it-works">How It Works</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-block text-center-xs text-center-sm">
+
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <div class="content">
+                            <h2>Create, deploy, and manage cloud software</h2>
+                            <p class="intro">
+                                A single workflow for provisioning cloud apps and infrastructure, in
+                                any cloud environment, public, private, or hybrid.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <div class="row cols-are-spaced-md">
+                            <div class="col col-md-4">
+                                <div class="content">
+                                    <div class="eqh margin-bottom-10" data-mh="copy">
+                                        <h3 class="h5 text-uppercase">Any Code</h3>
+                                        <p>
+                                            Familiar languages like JavaScript, Python, and Go. Benefit
+                                            from abstraction and reuse. Use your favorite IDE, linters,
+                                            and test frameworks.
+                                        </p>
+                                    </div>
+                                    <ul class="logo-roll text-center-xs text-center-sm">
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-js.png?v1" alt="js" width="36"></li>
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-python.png?v1" alt="python" width="34"></li>
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-golang.png?v1" alt="golang" width="63"></li>
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-ts.png?v1" alt="typescript" width="36"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col col-md-4">
+                                <div class="content">
+                                    <div class="eqh margin-bottom-10" data-mh="copy">
+                                        <h3 class="h5 text-uppercase">Any Cloud</h3>
+                                        <p>
+                                            Deploy apps and infrastructure to any cloud with one
+                                            consistent approach. Unlearn those YAML/DSL
+                                            dialects and disjoint workflows.
+                                        </p>
+                                    </div>
+                                    <ul class="logo-roll text-center-xs text-center-sm">
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-aws.png?v1" alt="aws" width="37"></li>
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-azure.png?v1" alt="azure" width="39"></li>
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-gd.png?v1" alt="gd" width="38"></li>
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-kubernetes.png?v1" alt="kubernetes" width="39"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col col-md-4">
+                                <div class="content">
+                                    <div class="eqh margin-bottom-10" data-mh="copy">
+                                        <h3 class="h5 text-uppercase">Any Team</h3>
+                                        <p>
+                                            Unlock collaboration across your team with package
+                                            sharing and reuse, and Dev and DevOps
+                                            policies and management features.
+                                        </p>
+                                    </div>
+                                    <ul class="logo-roll text-center-xs text-center-sm">
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-github.png" alt="github"></li>
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-vs.png" alt="vs"></li>
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-npm.png" alt="npm"></li>
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-travisci.png" alt="travisci"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pulumi-sdk" class="content-block bg-grey text-center-xs text-center-sm">
+
+        <div class="content-content">
+            <div class="container-fluid">
+                <div class="row cols-are-spaced-xlg">
+                            <div class="col col-lg col-lg-4 col-lg-offset-1">
+                                <div class="content">
+                                    <h2>Pulumi SDK</h3>
+                                    <p class="intro">
+                                        The SDK is an open source tool and framework for defining and deploying
+                                        cloud apps and infrastructure in code.
+                                    </p>
+                                    <a href="https://pulumi.io/quickstart/" class="button">Try Pulumi for Free</a>
+                                </div>
+                            </div>
+                            <div class="col col-lg col-lg-6">
+                                <div class="row cols-are-spaced-sm">
+                                    <div class="col col-sm-6 col-lg-12 col-xlg-6" data-mh="col">
+                                        <div class="row margin-bottom-40">
+                                            <div class="col col-md-2 col-lg-4">
+                                                <div class="content text-center">
+                                                    <img src="{{ .Site.BaseURL }}/icons/icon-core-1.svg" width="47">
+                                                </div>
+                                            </div>
+                                            <div class="col col-md-10 col-lg-8">
+                                                <div class="content">
+                                                    <h3 class="h6">Language Bindings</h3>
+                                                    <p>
+                                                        Code in JavaScript, Python, and Go instead of YAML
+                                                        or vendor-specific DSLs.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col col-sm-6 col-lg-12 col-xlg-6" data-mh="col">
+                                        <div class="row margin-bottom-40">
+                                            <div class="col col-md-2 col-lg-4">
+                                                <div class="content text-center">
+                                                    <img src="{{ .Site.BaseURL }}/icons/icon-core2.svg" width="47">
+                                                </div>
+                                            </div>
+                                            <div class="col col-md-10 col-lg-8">
+                                                <div class="content">
+                                                    <h3 class="h6">Open Source</h3>
+                                                    <p>
+                                                        Everything is designed in the open and
+                                                        <a href="https://github.com/pulumi/pulumi">
+                                                            available on GitHub</a>.
+                                                        Pull Requests welcome!
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col col-sm-6 col-lg-12 col-xlg-6" data-mh="col">
+                                        <div class="row margin-bottom-40">
+                                            <div class="col col-md-2 col-lg-4">
+                                                <div class="content text-center">
+                                                    <img src="{{ .Site.BaseURL }}/icons/icon-core3.svg" width="47">
+                                                </div>
+                                            </div>
+                                            <div class="col col-md-10 col-lg-8">
+                                                <div class="content">
+                                                    <h3 class="h6">Component Model</h3>
+                                                    <p>
+                                                        Share and reuse components
+                                                        using familiar package managers.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col col-sm-6 col-lg-12 col-xlg-6" data-mh="col">
+                                        <div class="row">
+                                            <div class="col col-md-2 col-lg-4">
+                                                <div class="content text-center">
+                                                    <img src="{{ .Site.BaseURL }}/icons/icon-core4.svg" width="47">
+                                                </div>
+                                            </div>
+                                            <div class="col col-md-10 col-lg-8">
+                                                <div class="content">
+                                                    <h3 class="h6">Cloud Engineering</h3>
+                                                    <p>
+                                                        Be productive with IDEs, syntax highlighting, error checking,
+                                                        and testing.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pulumi-saas" class="content-block text-center-xs text-center-sm">
+
+        <div class="content-content">
+            <div class="container-fluid">
+                <div class="row">
+                            <div class="col col-lg col-lg-4 col-lg-offset-1">
+                                <div class="content">
+                                    <h2>Pulumi SaaS</h3>
+                                    <p class="intro">
+                                        The SaaS helps teams of all sizes a reliable way to continuously deliver
+                                        and manage cloud apps and infrastructure.
+                                    </p>
+                                    <a href="https://pulumi.io/quickstart/" class="button">Try Pulumi for Free</a>
+                                </div>
+                            </div>
+                            <div class="col col-lg col-lg-6">
+                                <div class="row cols-are-spaced-sm">
+                                    <div class="col col-sm-6 col-lg-12 col-xlg-6" data-mh="col">
+                                        <div class="row margin-bottom-40">
+                                            <div class="col col-md-2 col-lg-4">
+                                                <div class="content text-center">
+                                                    <img src="{{ .Site.BaseURL }}/icons/icon-service1.svg" width="47">
+                                                </div>
+                                            </div>
+                                            <div class="col col-md-10 col-lg-8">
+                                                <div class="content">
+                                                    <h3 class="h6">CI/CD Workflow</h3>
+                                                    <p>
+                                                        Continuously deliver code from your favorite SCM,
+                                                        using your favorite CI system, to the cloud.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col col-sm-6 col-lg-12 col-xlg-6" data-mh="col">
+                                        <div class="row margin-bottom-40">
+                                            <div class="col col-md-2 col-lg-4">
+                                                <div class="content text-center">
+                                                    <img src="{{ .Site.BaseURL }}/icons/icon-service2.svg" width="47">
+                                                </div>
+                                            </div>
+                                            <div class="col col-md-10 col-lg-8">
+                                                <div class="content">
+                                                    <h3 class="h6">History & Auditing</h3>
+                                                    <p>
+                                                        Full history of cloud resource deployments, so you
+                                                        always who changed what, when, and why.
+                                                    </p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col col-sm-6 col-lg-12 col-xlg-6" data-mh="col">
+                                        <div class="row margin-bottom-40">
+                                            <div class="col col-md-2 col-lg-4">
+                                                <div class="content text-center">
+                                                    <img src="{{ .Site.BaseURL }}/icons/icon-service3.svg" width="47">
+                                                </div>
+                                            </div>
+                                            <div class="col col-md-10 col-lg-8">
+                                                <div class="content">
+                                                    <h3 class="h6">Secrets & Configuration</h3>
+                                                    <p>
+                                                        Manage configuration and secrets reliably in the cloud,
+                                                        with security, auditing, and ACLs.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col col-sm-6 col-lg-12 col-xlg-6" data-mh="col">
+                                        <div class="row">
+                                            <div class="col col-md-2 col-lg-4">
+                                                <div class="content text-center">
+                                                    <img src="{{ .Site.BaseURL }}/icons/icon-service4.svg" width="47">
+                                                </div>
+                                            </div>
+                                            <div class="col col-md-10 col-lg-8">
+                                                <div class="content">
+                                                    <h3 class="h6">Organizations & Teams</h3>
+                                                    <p>
+                                                        Collaborate using organizations, projects, and stacks,
+                                                        with full RBAC and policy management.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="multi-cloud-subscription" class="content-block bg-grey text-center-xs text-center-sm">
+
+        <div class="content-content">
+            <div class="container-fluid">
+                <div class="row cols-are-spaced-xlg">
+                            <div class="col col-lg col-lg-4 col-lg-offset-1">
+                                <div class="content">
+                                    <h2>Multi-Cloud Subscription</h3>
+                                    <p class="intro">
+                                        An end-to-end solution for running Kubernetes in production
+                                        on multiple clouds, public or private.
+                                    </p>
+                                    <a href="/pricing/#contact" class="button">Contact Us</a>
+                                </div>
+                            </div>
+                            <div class="col col-lg col-lg-6">
+                                <div class="row cols-are-spaced-sm">
+                                    <div class="col col-sm-6 col-lg-12 col-xlg-6" data-mh="col">
+                                        <div class="row margin-bottom-40">
+                                            <div class="col col-md-2 col-lg-4">
+                                                <div class="content text-center">
+                                                    <img src="{{ .Site.BaseURL }}/icons/icon-core4.svg" width="47">
+                                                </div>
+                                            </div>
+                                            <div class="col col-md-10 col-lg-8">
+                                                <div class="content">
+                                                    <h3 class="h6">Kubernetes First</h3>
+                                                    <p>
+                                                        Leverage hosted Kubernetes to
+                                                        get up and running faster than any
+                                                        alternative.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col col-sm-6 col-lg-12 col-xlg-6" data-mh="col">
+                                        <div class="row margin-bottom-40">
+                                            <div class="col col-md-2 col-lg-4">
+                                                <div class="content text-center">
+                                                    <img src="{{ .Site.BaseURL }}/icons/icon-core-1.svg" width="47">
+                                                </div>
+                                            </div>
+                                            <div class="col col-md-10 col-lg-8">
+                                                <div class="content">
+                                                    <h3 class="h6">Solution Oriented</h3>
+                                                    <p>
+                                                        The CNCF landscape is complex. We'll
+                                                        help you navigate it with complete
+                                                        solutions.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col col-sm-6 col-lg-12 col-xlg-6" data-mh="col">
+                                        <div class="row margin-bottom-40">
+                                            <div class="col col-md-2 col-lg-4">
+                                                <div class="content text-center">
+                                                    <img src="{{ .Site.BaseURL }}/icons/icon-core3.svg" width="47">
+                                                </div>
+                                            </div>
+                                            <div class="col col-md-10 col-lg-8">
+                                                <div class="content">
+                                                    <h3 class="h6">Batteries Included</h3>
+                                                    <p>
+                                                        Use best practices that have been battle
+                                                        tested at scale, with customizability built-in.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col col-sm-6 col-lg-12 col-xlg-6" data-mh="col">
+                                        <div class="row">
+                                            <div class="col col-md-2 col-lg-4">
+                                                <div class="content text-center">
+                                                    <img src="{{ .Site.BaseURL }}/icons/icon-core2.svg" width="47">
+                                                </div>
+                                            </div>
+                                            <div class="col col-md-10 col-lg-8">
+                                                <div class="content">
+                                                    <h3 class="h6">Enterprise Grade</h3>
+                                                    <p>
+                                                        Use Pulumi Enterprise and
+                                                        open source packages and tools
+                                                        for Dev and DevOps alike.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="content-block bg-purple text-center white-text">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <div class="content">
+                        <h2 class="margin-bottom-50">How Pulumi Works</h2>
+                        <img src="{{ .Site.BaseURL }}/images/infographics@2x.jpg" width="895">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    {{ partial "learnmore-contactus.html" . }}
+    {{ partial "newsletter.html" (dict "classes" "bg-purple-dark white-text" )}}
+
+{{ end }}

@@ -1,0 +1,18 @@
+<ol class="breadcrumbs">
+  {{ template "breadcrumb" dict "currentPage" .Page "id" .File.UniqueID }}
+</ol>
+
+<!-- templates -->
+{{ define "breadcrumb" }}
+  {{ if .currentPage.Parent }}
+    {{ template "breadcrumb" dict "currentPage" .currentPage.Parent }}
+    
+    {{ if eq .id .currentPage.File.UniqueID }}
+      <!--current page-->
+    {{ else }}
+    <li>
+      <a href="{{ .currentPage.RelPermalink }}">{{ .currentPage.Title }} /</a>
+    </li>
+    {{ end }}
+  {{ end }}
+{{ end }}

@@ -34,7 +34,7 @@ CI/CD job on your [Pulumi Account page](https://app.pulumi.com/account/tokens).
 
 You can either add the token on the pipeline itself as a variable, or store it globally using [Codefresh shared configuration](https://codefresh.io/docs/docs/configure-ci-cd-pipeline/shared-configuration/).
 
-![Pulumi token in Codefresh](/images/reference/codefresh/codefresh-pulumi-token.png)
+![Pulumi token in Codefresh](/images/docs/reference/codefresh/codefresh-pulumi-token.png)
 
 Next, you will also need to set environment variables specific to your cloud resource provider.
 For example, if your stack is managing resources on AWS, `AWS_ACCESS_KEY_ID` and
@@ -112,7 +112,7 @@ steps:
 
 This pipeline uses a Kubernetes/Typescript Pulumi stack. Once you run it you should see a new entry in your Pulumi history as well as the deployment in the Codefresh Kubernetes Dashboard.
 
-![Pulumi in Codefresh pipeline](/images/reference/codefresh/pulumi-pipeline.png)
+![Pulumi in Codefresh pipeline](/images/docs/reference/codefresh/pulumi-pipeline.png)
 
 You can find the full more details at the [full documentation page](https://codefresh.io/docs/docs/yaml-examples/examples/pulumi/).
 

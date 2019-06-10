@@ -1,0 +1,8 @@
+id = "paul-stack"
+name = "Paul Stack"
+title = "Software Engineer"
+weight = 1
+
+[social]
+github = "stack72"
+twitter = "stack72"

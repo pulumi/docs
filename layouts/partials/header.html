@@ -17,24 +17,26 @@
                 <div class="col-sm-12">
 
                     <div class="wrapper dropdown main-nav-wrapper-wrapper">
-                        <a href="/docs/">
+                        <a href="/">
                             <img src="/images/logo/logo-inv.svg" class="logo hidden-xs hidden-sm">
                             <img src="/images/logo/logo-symbol-inv.svg" class="logo visible-xs-inline visible-sm-inline">
                         </a>
                         <div class="mobile-menu-bg"></div>
                         <nav class="main-nav-wrapper dropdown-menu" aria-labelledby=".toggle-menu">
                             <div class="toc-in-nav visible-xs-block visible-sm-block" style="text-align: right">
-                                {{ partial "toc.html" . }}
+                                {{ partial "docs/toc.html" . }}
                             </div>
 
-                            {{- $is_start := (hasPrefix .RelPermalink "/quickstart/") -}}
-                            {{- $is_apis := (hasPrefix .RelPermalink "/reference/pkg/") -}}
-                            {{- $is_docs := (and (not $is_apis) (hasPrefix .RelPermalink "/reference/")) -}}
+                            {{- $is_product := (hasPrefix .RelPermalink "/product/") -}}
+                            {{- $is_pricing := (hasPrefix .RelPermalink "/pricing/") -}}
+                            {{- $is_docs := (hasPrefix .RelPermalink "/docs/") -}}
+                            {{- $is_blog := (hasPrefix .RelPermalink "/blog/") -}}
 
                             <ul class="main-nav">
-                                <li class="{{ if $is_start }}current-page{{ end }}"><a href="/docs/quickstart">Get Started</a></li>
-                                <li class="{{ if $is_docs }}current-page{{ end }}"><a href="/docs/reference">Documentation</a></li>
-                                <li class="{{ if $is_apis }}current-page{{ end }}"><a href="/docs/reference/pkg">APIs</a></li>
+                                <li class="{{ if $is_product }}current-page{{ end }}"><a href="/product">Products</a></li>
+                                <li class="{{ if $is_pricing }}current-page{{ end }}"><a href="/pricing">Pricing</a></li>
+                                <li class="{{ if $is_docs }}current-page{{ end }}"><a href="/docs">Docs</a></li>
+                                <li class="{{ if $is_blog }}current-page{{ end }}"><a href="/blog">Blog</a></li>
                             </ul>
 
                             <ul class="utility-nav visible-xs-block visible-sm-block">
@@ -56,7 +58,8 @@
                                 <input type="search" id="search-box" name="q" placeholder="Search..." autocomplete="off">
                                 <button class="button" type="submit"><i class="fas fa-search"></i></button>
                             </form>
-                            <a href="https://app.pulumi.com/signup" class="button" id="sign-in-button">SIGN UP</a>
+                            <a href="https://app.pulumi.com" class="button orange borderless white-text" id="sign-in-button">SIGN IN</a>
+                            <a href="https://app.pulumi.com/signup" class="button" id="sign-up-button">SIGN UP</a>
                         </div>
                     </div>
                 </div>

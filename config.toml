@@ -2,7 +2,15 @@ baseURL = "https://pulumi.io/"
 languageCode = "en-us"
 title = "Pulumi"
 
-disableKinds = ["taxonomy", "taxonomyTerm", "category", "RSS"]
+disableKinds = ["category", "RSS"]
+
+[taxonomies]
+  author = "authors"
+  tag    = "tags"
+
+[permalinks]
+  authors = "/blog/author/:slug/"
+  tags    = "/blog/tag/:slug/"
 
 pygmentsCodefences = true
 pygmentsUseClasses = true
@@ -15,7 +23,6 @@ sectionPagesMenu = "main"
 [params]
     repositoryURL = "https://github.com/pulumi/docs"
     repositoryBranch = "master"
-
 
 # Command Line Menu
 

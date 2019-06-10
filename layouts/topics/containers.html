@@ -1,0 +1,372 @@
+{{ define "main" }}
+    {{ partial "hero.html" . }}
+    
+    <section class="content-block content-block-anchors bg-black white-text">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 anchor-container" id="anchor-point">
+                    <ul class="anchor-list">
+                        <li class="anchor-item"><a href="#what-is-container-management">What is Container Management?</a></li>
+                        <li class="anchor-item"><a href="#deploying-containers">Deploying Containers</a></li>
+                        <li class="anchor-item"><a href="#code-simple">Code</a></li>
+                        <li class="anchor-item"><a href="#get-started">Get Started</a></li>
+                        <li class="anchor-item"><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="content-block bg-grey" id="what-is-container-management">
+        <div class="content-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h2 class="h4 text-purple">What is Container Management?</h2>
+                                <p>Docker, and containers more generally, transformed the way that developers could build, ship, and run applications. As a standardized unit of delivery, containers have all of the libraries, code, and runtime knowledge they need to work, and so can be deployed and scaled into any environment.</p>
+                                <p>For DevOps teams, container management is an important capability whether delivering containers into bespoke environments, or more likely through a managed cloud offering such as AWS Fargate, AWS ECS, and Microsoft ACI, or through Kubernetes - either on-premises or AWS EKS, Microsoft AKS, or Google GKE.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="content-block" id="deploying-containers">
+            <div class="content-content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-10 col-lg-offset-1">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h2 class="h4 text-purple">Deploying containers with Pulumi</h2>
+                                    <p>Container management solutions are broadly split into two options: low-management solutions for ease of deployment, and Kubernetes-based solutions for complete control.</p>
+                                    
+                                    <h2 class="h6 text-purple">Low Cluster Management</h2>
+                                    <p>AWS Fargate, and Microsoft ACI are examples of services that enable the deployment of containers without having to manage servers or clusters. This means teams can very easily build container applications and deploy them into production without worrying about infrastructure, but gaining the benefits of seamless scaling. </p>
+
+                                    <h2 class="h6 text-purple">Kubernetes Management</h2>
+                                    <p>While running Kubernetes on-premises is a viable, and well-used solution, the major cloud vendors also offer Kubernetes sevices: Amazon EKS, Microsoft AKS, and Google GKE.</p>
+
+                                    <br/>
+                                    <p>Pulumi makes it simple to interact with any of the services available from the major cloud vendors, and with Kubernetes.</p>
+
+                                    <p>The <code><a href="https://github.com/pulumi/pulumi-cloud">@pulumi/cloud</a></code> library provides very high level, multi cloud access for deploying container applications, while the specialized <code><a href="https://github.com/pulumi/pulumi-aws">@pulumi/cloud-aws</a></code>, <code><a href="https://github.com/pulumi/pulumi-azure">@pulumi/cloud-azure</a></code>, <code><a href="https://github.com/pulumi/pulumi-gcp">@pulumi/cloud-gcp</a></code>, and <code><a href="https://github.com/pulumi/pulumi-kubernetes">@pulumi/kubernetes</a></code> libraries offer fine grained control of the individual cloud vendor services. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    <section class="content-block bg-grey" id="code-simple">
+        <div class="content-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1">
+                        <div class="row cols-are-spaced-md">
+                            <div class="col col-md-5">
+                                <div class="content">
+                                    <h2 class="h4 text-purple">Deploy Nginx to AWS Fargate</h2>
+                                    <p>In this example, Pulumi uses a multi-cloud <code>cloud.Service</code> object to pull the nginx image from Docker Hub, and deploy it in a load-balanced way to AWS Fargate. Pulumi can pull from any container registry.</p>
+                                    <p><br/><a href="https://pulumi.io/quickstart/aws-containers.html" class="button">Get Started</a></p>
+                                </div>
+                            </div>
+                            <div class="col col-md-7">
+                                <div class="content">
+<pre><code class="javascript hljs">// In Pulumi configuration
+
+pulumi config set cloud-aws:useFargate true
+
+// Deploy Nginx to AWS Fargate
+
+import * as cloud from "@pulumi/cloud";
+
+let nginx = new cloud.Service("nginx", {
+    image: "nginx",
+    ports: [{ port: 80 }],
+    replicas: 2,
+});
+
+export let url = nginx.defaultEndpoint;
+</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-block bg-grey" id="code-custom">
+            <div class="content-content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-10 col-lg-offset-1">
+                            <div class="row cols-are-spaced-md">
+
+                                <div class="col col-md-5">
+
+                                    <div class="content">
+                                        <h2 class="h4 text-purple">Deploying with a custom build</h2>
+                                        <p>This example uses a trivial Dockerfile that derives from the nginx base image and copies the ./www directory into the nginx HTML target so that it will be served up. </p>
+                                        <p><br/><a href="https://pulumi.io/quickstart/aws-containers.html" class="button">Get Started</a></p>
+                                    </div>
+                                </div>
+
+                                <div class="col col-md-7">
+
+                                    <div class="content">
+    <pre><code class="javascript hljs">// Using a custom build based on Nginx
+        
+import * as cloud from "@pulumi/cloud";
+
+let nginx = new cloud.Service("nginx", {
+    build: ".",
+    ports: [{ port: 80 }],
+    replicas: 2,
+});
+
+export let url = nginx.defaultEndpoint;
+
+
+// Dockerfile
+FROM nginx
+COPY ./www /usr/share/nginx/html
+    </code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="content-block bg-grey" id="code-connect">
+            <div class="content-content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-10 col-lg-offset-1">
+                            <div class="row cols-are-spaced-md">
+
+                                <div class="col col-md-5">
+
+                                    <div class="content">
+                                        <h2 class="h4 text-purple">Connecting containers</h2>
+                                        <p>This example shows how we can connect containers using Pulumi - in this case Redis for a data store, and a Python flask app for a front end. Using Pulumi, it is easy to obtain a reference to the container objects, and connect them using code.</p>
+                                        <p><br/><a href="https://pulumi.io/quickstart/aws-containers.html" class="button">Get Started</a></p>
+                                    </div>
+                                </div>
+
+                                <div class="col col-md-7">
+
+                                    <div class="content">
+    <pre><code class="javascript hljs">import * as pulumi from "@pulumi/pulumi";
+import * as cloud from "@pulumi/cloud";
+
+// The data layer for the application
+let redisCache = new cloud.Service("voting-app-cache", {
+    containers: {
+        redis: {
+            image: "redis:alpine",
+            memory: 512,
+            ports: [{ port: redisPort }],
+            command: ["redis-server", "--requirepass", redisPassword],
+        },
+    },
+});
+
+let redisEndpoint = redisCache.endpoints.apply(endpoints => 
+                                    endpoints.redis[redisPort]);
+
+// A custom container for the frontend, which is a Python Flask app
+let frontend = new cloud.Service("voting-app-frontend", {
+    containers: {
+        votingAppFrontend: {
+            build: "./frontend",   // path to Dockerfile folder
+            memory: 512,
+            ports: [{ port: 80 }],            
+            environment: { 
+                // pass the Redis container info in environment variables
+                "REDIS":      redisEndpoint.apply(e => e.hostname),
+                "REDIS_PORT": redisEndpoint.apply(e => e.port.toString()),
+                "REDIS_PWD":  redisPassword
+            }
+        },
+    },
+});
+
+export let frontendURL = frontend.endpoints.apply(e => e["votingAppFrontend"][80].hostname);
+    </code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="content-block bg-grey" id="code-timer">
+            <div class="content-content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-10 col-lg-offset-1">
+                            <div class="row cols-are-spaced-md">
+
+                                <div class="col col-md-5">
+
+                                    <div class="content">
+                                        <h2 class="h4 text-purple">Deploy containers to Microsoft ACI</h2>
+                                        <p>The <code>@pulumi/azure</code> library provides fine-grained control of Azure resources. In this example, we deploy a simple linux container to Microsoft ACI, in the West US zone.</p>
+                                        <p><br/><a href="https://pulumi.io/quickstart/aws-containers.html" class="button">Get Started</a></p>
+                                    </div>
+                                </div>
+
+                                <div class="col col-md-7">
+
+                                    <div class="content">
+    <pre><code class="javascript hljs">import * as azure from "@pulumi/azure";
+
+const resourceGroup = new azure.core.ResourceGroup("resourcegroup", {
+    location: "West US",
+});
+
+const containerGroup = new azure.containerservice.Group("containergroup", {
+    location: resourceGroup.location,
+    resourceGroupName: resourceGroup.name,
+    ipAddressType: "public",
+    osType: "linux",
+    containers: [
+        {
+            name: "hw",
+            image: "microsoft/aci-helloworld:latest",
+            cpu: 0.5,
+            memory: 1.5,
+            port: 80
+        },
+    ],
+    tags: {
+        "environment": "testing",
+    },
+});
+    </code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="content-block bg-grey" id="code-queue">
+            <div class="content-content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-10 col-lg-offset-1">
+                            <div class="row cols-are-spaced-md">
+
+                                <div class="col col-md-5">
+
+                                    <div class="content">
+                                        <h2 class="h4 text-purple">Invoke a long-running container as a task</h2>
+                                        <p>This example shows a container used for executing a long-running task. Here, we use a container to perform a thumbnail extraction on a piece of video uploaded to an S3 bucket.
+                                                </p>
+                                        <p><br/><a href="https://pulumi.io/quickstart/aws-containers.html" class="button">Get Started</a></p>
+                                    </div>
+                                </div>
+
+                                <div class="col col-md-7">
+
+                                    <div class="content">
+    <pre><code class="javascript hljs">let cloud = require("@pulumi/cloud-aws");
+
+// A bucket to store videos and thumbnails.
+let videos = new cloud.Bucket("bucket");
+
+// A task which runs an FFMPEG transform to extract a thumbnail image.
+let ffmpegThumbnailTask = new cloud.Task("ffmpegThumbTask", {
+    build: ".",
+    memoryReservation: 512,
+});
+
+// When a new video is uploaded, run the FFMPEG task on the video file.
+videos.onPut("onNewVideo", args => {
+    let file = args.key;
+    ffmpegThumbnailTask.run({
+        environment: {
+            "S3_BUCKET":   videos.bucket.name.get(),
+            "INPUT_VIDEO": file,
+            "TIME_OFFSET": file.substring(file.indexOf('_')+1, file.indexOf('.')).replace('-',':'),
+            "OUTPUT_FILE": file.substring(0, file.indexOf('_')) + '.jpg',
+        },
+    });
+}, { keySuffix: ".mp4" });
+
+exports.bucketName = videos.bucket.name;
+    </code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    {{ partial "how-pulumi-works.html" . }}
+
+    {{ partial "get-started.html" . }}
+    
+    <section class="content-block bg-purple white-text" id="contact">
+        <div class="content-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1">
+                        <div class="row cols-are-spaced-md">
+                            <div class="col col-md-6">
+                                <div class="content">
+                                    <h4>Need help with container management? Drop us a line.</h4>
+                                </div>
+                            </div>
+                            <div class="col col-md-6">
+                                <div class="content">
+                                    <div class="hbspt-form-wrapper compact">
+<!--[if lte IE 8]>
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+<![endif]-->
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+<script>
+  hbspt.forms.create({
+	portalId: "4429525",
+	formId: "abf0bd4b-5e71-44a9-aad1-b55b5cce561d"
+});
+</script>
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    {{ partial "more-on-pulumi.html" . }}
+    
+{{ end }}

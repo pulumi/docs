@@ -1,7 +1,173 @@
 {{ define "main" }}
-    <div>
-        <div class="content">
-            {{ .Content }}
+
+    {{ partial "hero.html" . }}
+
+    {{ partial "cloud-lang-logos.html" . }}
+
+    {{ partial "testimonials-top.html" . }}
+
+    <section id="spin-up-colada" class="content-block content-block-shadow-boxed bg-purple-dark white-text has-footer-waves">
+        <div class="content-header text-center">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <div class="content">
+                            <h2>Go Multi-Cloud</h2>
+                            <p class="intro">Use the best of your chosen cloud -- containers, serverless, and
+                            managed infrastructure -- while also unleashing one consistent approach to software
+                            delivery no matter your cloud provider.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+        <div class="content-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col col-md-6 col-lg-3" data-mh="col">
+                        <div class="shadow-boxed bg-purple-dark">
+                            <div class="content text-center">
+                                <div class="eqh margin-bottom-20" data-mh="copy"> <!--put in equal heights to align buttons-->
+                                    <img src="{{ .Site.BaseURL }}/icons/icon-feature-containers.svg" alt="" class="margin-bottom-30" width="125">
+                                    <h3 class="h4">Containers</h3>
+                                    <p>Rapidly deploy container-based apps into any cloud or cloud-native infrastructure from AWS Fargate to Kubernetes</p>
+                                </div>
+                                <a href="/containers" class="button orange smaller">More containers</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-md-6 col-lg-3" data-mh="col">
+                        <div class="shadow-boxed bg-purple-dark">
+                            <div class="content text-center">
+                                <div class="eqh margin-bottom-20"  data-mh="copy"> <!--put in equal heights to align buttons-->
+                                    <img src="{{ .Site.BaseURL }}/icons/icon-feature-serverless.svg" alt="" class="margin-bottom-30" width="125">
+                                    <h3 class="h4">Serverless</h3>
+                                    <p>Flexibly solve a wide variety of tasks including scalable websites and APIs, event streaming and processing, all through multi-cloud and multi-language microservices.</p>
+                                </div>
+                                <a href="/serverless" class="button orange smaller">More serverless</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-md-6 col-lg-3" data-mh="col">
+                        <div class="shadow-boxed bg-purple-dark">
+                            <div class="content text-center">
+                                <div class="eqh margin-bottom-20"  data-mh="copy"> <!--put in equal heights to align buttons-->
+                                    <img src="{{ .Site.BaseURL }}/icons/icon-feature-data.svg" alt="" class="margin-bottom-30" width="125">
+                                    <h3 class="h4">Infrastructure</h3>
+                                    <p>Define cloud services and infrastructure in code, then continuously deploy. Correct issues in infrastructure automatically to return to the desired state.</p>
+                                </div>
+                                <a href="https://pulumi.io/quickstart/aws-ec2.html" class="button orange smaller">More infrastructure</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-md-6 col-lg-3" data-mh="col">
+                        <div class="shadow-boxed bg-purple-dark">
+                            <div class="content text-center">
+                                <div class="eqh margin-bottom-20"  data-mh="copy"> <!--put in equal heights to align buttons-->
+                                    <img src="{{ .Site.BaseURL }}/icons/icon-feature-kubernetes.svg" alt="" class="margin-bottom-30" width="125">
+                                    <h3 class="h4">Kubernetes</h3>
+                                    <p>Deploy and orchestrate cloud native container-based apps on Kubernetes, either on-premises or in the cloud. Use real code to define and deploy Kubernetes services.</p>
+                                </div>
+                                <a href="/kubernetes" class="button orange smaller">More Kubernetes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-footer text-center">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="content">
+                            <a href="https://pulumi.io/quickstart/" class="button" target="_blank">Try Pulumi for Free</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-waves"></div>
+    </section>
+
+    {{ partial "testimonials.html" . }}
+
+    <section class="content-block bg-grey text-center-xs text-center-sm">
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <div class="content">
+                            <h2>Any Code. Any Cloud. Any Team. </h2>
+                            <p class="intro">Unify development and devops practices to define, deploy, and manage cloud apps and infrastructure</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <div class="row cols-are-spaced-md">
+                            <div class="col col-md-4">
+                                <div class="content">
+                                    <img src="{{ .Site.BaseURL }}/icons/icon-audience-dev.svg" alt="" class="margin-bottom-30" width="134">
+                                    <sup>For Developers</sup>
+                                    <h3 class="h5">Any Code.</h3>
+                                    <p>Maximize your productivity by defining cloud apps and resources as code in familiar languages.</p>
+                                    <a href="/why-pulumi#for-developers" class="cta">Learn More</a>
+                                </div>
+                            </div>
+                            <div class="col col-md-4">
+                                <div class="content">
+                                    <img src="{{ .Site.BaseURL }}/icons/icon-audience-devops.svg" alt="" class="margin-bottom-30" width="134">
+                                    <sup>For DevOps</sup>
+                                    <h3 class="h5">Any Cloud.</h3>
+                                    <p>Deploy cloud apps and infrastructure anywhere. Eliminate cloud specific DSLs to simplify multi cloud management.</p>
+                                    <a href="/why-pulumi#for-devops" class="cta">Learn More</a>
+                                </div>
+                            </div>
+                            <div class="col col-md-4">
+                                <div class="content">
+                                    <img src="{{ .Site.BaseURL }}/icons/icon-audience-enterprise.svg" alt="" class="margin-bottom-30" width="134">
+                                    <sup>For Enterprises</sup>
+                                    <h3 class="h5">Any Team.</h3>
+                                    <p>Make use of preferred practices to deliver cloud native apps and infrastructure with enterprise-grade workflows.</p>
+                                    <a href="/why-pulumi#for-enterprise/" class="cta">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-block bg-grey">
+            <div class="content-header text-center">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-10 col-sm-offset-1">
+                            <div class="content">
+                                <h2>Find Pulumi at</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                                {{ partial "social.html" (dict "classes" "expanded" ) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    {{ partial "learnmore-contactus.html" . }}
+
 {{ end }}

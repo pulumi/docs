@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 131.7884216 92.0572739" style="enable-background:new 0 0 131.7884216 92.0572739;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#EE985C;stroke-width:2;}
+	.st1{fill:none;stroke:#EE985C;stroke-width:2;stroke-linecap:round;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#EE985C;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#EE985C;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+<g>
+	<g id="Group-5_2_" transform="translate(0.000000, 12.000000)">
+		<g id="Group-8">
+			<path id="Rectangle-14" class="st0" d="M4.973115-11h121.8421936c2.1942902,0,3.973114,1.7788239,3.973114,3.973115v82.1110458
+				c0,2.1942902-1.7788239,3.973114-3.973114,3.973114H4.973115C2.7788241,79.0572739,1,77.27845,1,75.0841599V-7.026885
+				C1-9.2211761,2.7788241-11,4.973115-11z"/>
+			<path id="Line-4" class="st1" d="M3.8779614,13.5008764h91.2024384"/>
+			<path id="Line-5" class="st1" d="M112.4880142,13.5008764h18.0596237"/>
+			<circle id="Oval" class="st2" cx="12.9193449" cy="0.9193453" r="3.3109293"/>
+			<circle class="st2" cx="26.163063" cy="0.9193453" r="3.3109293"/>
+			<circle class="st2" cx="36.7580376" cy="0.9193453" r="3.3109293"/>
+		</g>
+		<g id="Group-3_1_" transform="translate(44.000000, 31.000000)">
+			<polyline id="Rectangle-2_1_" class="st3" points="14.6101685,34.151371 14.6101685,6.3395672 14.6101685,6.3395672 
+				51.6925774,6.3395672 51.6925774,34.151371 29.178257,34.151371 			"/>
+			<path id="Line-3" class="st1" d="M60.499649-1.165206l-0.198658,26.7081642"/>
+			<path id="Line_1_" class="st1" d="M51.6925774,34.151371l8.6084137-8.6084137"/>
+			<path class="st1" d="M52.1561089,5.8981094L60.499649-1.165206"/>
+			<path class="st1" d="M14.6101685,6.3395672l7.2840443-7.2840443"/>
+			<path id="Line-2_1_" class="st1" d="M21.8942127-0.9444773h19.8655758"/>
+		</g>
+		<g transform="translate(21.000000, 29.000000)">
+			<polyline id="Path-6" class="st0" points="7.1496201,1.864861 11.965517,7.0151954 17.7445927,-2.2554066 			"/>
+		</g>
+		<g transform="translate(21.000000, 40.000000)">
+			<polyline class="st0" points="7.1496201,5.4329495 11.965517,10.5832844 17.7445927,1.3126822 			"/>
+		</g>
+		<g transform="translate(21.000000, 51.000000)">
+			<polyline class="st0" points="7.1496201,9.0010386 11.965517,14.1513729 17.7445927,4.8807707 			"/>
+		</g>
+	</g>
+</g>
+</svg>

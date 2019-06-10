@@ -2,17 +2,17 @@
 	padding: 32px 0;
 	background-color: $purple;
 	overflow: hidden;
-	
+
 	@media(min-width: $screen-md){
 		padding: 102px 0;
 	}
-	
+
 	@media(min-width: $screen-lg){
 		padding: 120px 0;
 	}
-	
+
 	.col-left {
-		
+
 		@media(max-width: $screen-sm-max){
 			margin-bottom: 0;
 		}
@@ -22,13 +22,13 @@
 			// }
 		}
 	}
-	
+
 	.col-img {
-		
+
 		.content {
 			&:before {
 				content: "";
-				background-image: url(../assets/images/glare.png);
+				background-image: url(../images/glare.png);
 				display: block;
 				width: 1543px;
 				height: 1543px;
@@ -39,7 +39,7 @@
 				background-size: 100%;
 				background-repeat: no-repeat;
 			}
-			
+
 			> * {
 				position: relative;
 			}

@@ -1,20 +1,16 @@
 {{ define "main" }}
-    <div class="col-md-3 hidden-xs hidden-sm">
-        {{ partial "toc.html" . }}
-    </div>
-    <div class="col-md-9">
-        {{ with .File }}
-        <div class="edit-this-page">
-            <a href="{{ $.Site.Params.repositoryURL }}/edit/{{ $.Site.Params.repositoryBranch }}/content/{{ .Path }}" target="_blank">
-                <i class="fab fa-github"></i>
-                Edit This Page
-            </a>
+    {{ partial "hero.html" . }}
+    
+    <section class="content-block border-top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                    <div class="content">
+                        {{ .Content }}
+                    </div>
+                </div>
+            </div>
         </div>
-        {{ end }}
-
-        <!-- TODO: Check for nil or empty title? -->
-        <h1>{{ .Title }}</h1>
-
-        {{ .Content }}
-    </div>
+    </section>
+    {{ partial "learnmore-contactus.html" . }}
 {{ end }}

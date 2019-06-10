@@ -16,10 +16,10 @@ menu:
   - Cloud Functions API (and/or any other relevant resource that will be deployed).
 - Add `Cloud Functions Developer` role (and/or any other relevant resource that will be deployed) and the `Service Account User` role to the Cloud Build's service account. You can do this by navigating to the IAM tab in the GCP Console.
 
-![Cloud Build service account](/images/reference/google-cloud-build/cloud-build-service-account.png)
+![Cloud Build service account](/images/docs/reference/google-cloud-build/cloud-build-service-account.png)
 
   - If you do not grant the necessary permissions to the Cloud Build service account, you may see an error like this while deploying Cloud Functions (or whichever resource you are deploying.)
-  
+
   ```
   error: Plan apply failed: googleapi: Error 403: Missing necessary permission iam.serviceAccounts.actAs for  on resource cloud-build-samples@appspot.gserviceaccount.com. Please grant  the roles/iam.serviceAccountUser role. You can do that by running 'gcloud iam service-accounts add-iam-policy-binding cloud-build-samples@appspot.gserviceaccount.com --member= --role=roles/iam.serviceAccountUser', forbidden
   ```

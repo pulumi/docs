@@ -1,0 +1,20 @@
+<!--
+    Render a list of social media icons based on a mapping of accounts to handles.
+    e.g. { "social": { "github": "chrsmith", "twitter": "aChrisSmith" } }
+-->
+{{ if .social }}
+{{ $socialIdentities := .social }}
+{{ $platforms := slice "github" "linkedin" "twitter" }}
+{{ $platformUrlPrefixes := slice "https://github.com" "https://www.linkedin.com/in" "https://twitter.com" }}
+<ul class="logo-roll inline-block">
+    {{ range $idx, $platform := $platforms }}
+        {{ if (index $socialIdentities $platform) }}
+        <li>
+            <a href="{{ index $platformUrlPrefixes $idx }}/{{ index $socialIdentities $platform }}">
+                <i class="fab fa-{{ $platform }}"></i>
+            </a>
+        </li>
+        {{ end }}
+    {{ end }}
+</ul>
+{{ end }}

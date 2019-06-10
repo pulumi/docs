@@ -1,7 +1,7 @@
 ---
 title: "How to create an AWS Athena data service with Pulumi"
 meta_desc: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
-meta_image: "/images/service/aws-athena.png"
+meta_image: "/images/docs/service/aws-athena.png"
 
 aliases: ["athena.html"]
 

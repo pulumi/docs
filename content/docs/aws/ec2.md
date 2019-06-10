@@ -1,7 +1,7 @@
 ---
 title: "How to create AWS EC2 instances with Pulumi"
 meta_desc: "Use Pulumi to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
-meta_image: "/images/service/aws-ec2.png"
+meta_image: "/images/docs/service/aws-ec2.png"
 
 aliases: ["ec2.html"]
 

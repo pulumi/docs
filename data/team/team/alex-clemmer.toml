@@ -1,0 +1,8 @@
+id = "alex-clemmer"
+name = "Alex Clemmer"
+title = "Software Engineer"
+weight = 1
+
+[social]
+github = "hausdorff"
+twitter = "hausdorff_space"
