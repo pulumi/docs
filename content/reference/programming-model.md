@@ -1122,7 +1122,7 @@ export class MyResource extends pulumi.dynamic.Resource {
 ```
 
 ```go
-// Dynamic Providers are not supported in Go currently.
+// Dynamic Providers are not yet supported in Go.
 ```
 
 ### Dynamic Provider Examples
