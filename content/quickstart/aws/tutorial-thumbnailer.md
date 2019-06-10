@@ -50,7 +50,7 @@ and a video walkthrough of this example is [available on YouTube](https://www.yo
     // A task which runs a containerized FFMPEG job to extract a thumbnail image.
     const ffmpegThumbnailTask = new awsx.ecs.FargateTaskDefinition("ffmpegThumbTask", {
         container: {
-            image: awsx.ecs.Image.fromPath("./docker-ffmpeg-thumb"),
+            image: awsx.ecs.Image.fromPath("ffmpegThumbTask", "./docker-ffmpeg-thumb"),
             memoryReservation: 512,
         },
     });
@@ -117,26 +117,32 @@ and a video walkthrough of this example is [available on YouTube](https://www.yo
       - The Lambda function `onNewVideo` is triggered whenever a new `.mp4` video file is uploaded to the S3 bucket. The Lambda extracts the time index that is encoded in the video filename (in the form `file_mm-ss`) and launches the container task.
       - The Lambda function `onNewThumbnail` is triggered when a new `.jpg` thumbnail file is uploaded to the S3 bucket, and prints a message to the log file.
 
-1.  In the same directory, create a `Dockerfile` with the following contents. For the container setup, it uses an existing container for FFmpeg ad installs Python and the AWS CLI. When the container is started, it copies the video file from S3, runs `ffmpeg`, and copies the output back to S3.
+1.  Create a directory named `docker-ffmpeg-thumb`.
+
+    ```bash
+    $ mkdir docker-ffmpeg-thumb
+    ```
+
+1.  Create a file named `Dockerfile` in the `docker-ffmpeg-thumb` folder with the following contents. For the container setup, it uses an existing container for FFmpeg and installs Python and the AWS CLI. When the container is started, it copies the video file from S3, runs `ffmpeg`, and copies the output back to S3.
 
     ```docker
     FROM jrottenberg/ffmpeg
 
     RUN apt-get update && \
         apt-get install python-dev python-pip -y && \
-        apt-get clean
+        apt-get clean && pip install --upgrade pip
 
     RUN pip install awscli
 
     WORKDIR /tmp/workdir
 
     ENTRYPOINT \
-      echo "Starting ffmpeg task..." && \
-      echo "Copying video from S3" && \
-      aws s3 cp s3://${S3_BUCKET}/${INPUT_VIDEO} ./${INPUT_VIDEO} && \
-      ffmpeg -v error -i ./${INPUT_VIDEO} -ss ${TIME_OFFSET} -vframes 1 -f image2 -an -y ${OUTPUT_FILE} && \
-      echo "Copying thumbnail to S3" && \
-      aws s3 cp ./${OUTPUT_FILE} s3://${S3_BUCKET}/${OUTPUT_FILE}
+        echo "Starting ffmpeg task..." && \
+        echo "Copying video from s3://${S3_BUCKET}/${INPUT_VIDEO} to ${INPUT_VIDEO}..." && \
+        aws s3 cp s3://${S3_BUCKET}/${INPUT_VIDEO} ./${INPUT_VIDEO} && \
+        ffmpeg -v error -i ./${INPUT_VIDEO} -ss ${TIME_OFFSET} -vframes 1 -f image2 -an -y ${OUTPUT_FILE} && \
+        echo "Copying thumbnail to S3://${S3_BUCKET}/${OUTPUT_FILE} ..." && \
+        aws s3 cp ./${OUTPUT_FILE} s3://${S3_BUCKET}/${OUTPUT_FILE}
     ```
 
 1.  Configure Pulumi to use an AWS region that supports Fargate. (Note: Fargate is currently available only in `us-east-1`, `us-east-2`, `us-west-2`, and `eu-west-1`).
