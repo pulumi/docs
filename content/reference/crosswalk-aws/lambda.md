@@ -271,7 +271,7 @@ docsBucket.onObjectCreated("docsHandler", (e) => {
 });
 ```
 
-Wn you run `pulumi up`, you'll still see this bucket resource but notice it says `read` instead of `create` or `update`.
+When you run `pulumi up`, you'll still see this bucket resource but notice it says `read` instead of `create` or `update`.
 This just means that the resource is read from your account. No matter what you do, the bucket itself will not be
 modified by Pulumi, other than to subscribe an event.
 

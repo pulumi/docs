@@ -219,7 +219,7 @@ Let's say we have a directory `www` containing a single `index.html` file:
 <h1>Hello, API Gateway + S3!</h1>
 ```
 
-The following program will create an API Gateway that serves this content at the `/www` URL:
+The following program will create an API Gateway that serves this content at the `/` URL:
 
 ```typescript
 import * as awsx from "@pulumi/awsx";
