@@ -16,7 +16,7 @@ We'll build an application that extracts a thumbnail from a video using AWS Lamb
 code for this tutorial is [available on GitHub](https://github.com/pulumi/examples/tree/master/cloud-js-thumbnailer),
 and a video walkthrough of this example is [available on YouTube](https://www.youtube.com/watch?v=Bofmh1qnNSE).
 
-<img src="/assets/images/docs/quickstart/video-thumbnail-diagram.png" alt="Video thumbnail diagram" width="600">
+<img src="/images/docs/quickstart/video-thumbnail-diagram.png" alt="Video thumbnail diagram" width="600">
 
 {{< aws-js-prereqs >}}
 

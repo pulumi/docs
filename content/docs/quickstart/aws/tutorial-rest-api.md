@@ -34,11 +34,11 @@ pulumi new hello-aws-javascript
 
 You can accept the defaults for this command. For instance, you can change the AWS region to `us-west-2`.
 
-<img src="/assets/images/docs/quickstart/hello/Quickstart1.png" alt="Run Pulumi new" width="700">
+<img src="/images/docs/quickstart/hello/Quickstart1.png" alt="Run Pulumi new" width="700">
 
 After some dependency installations from NPM, you'll see a few files have been generated from this initialization process.
 
-<img src="/assets/images/docs/quickstart/hello/Quickstart2.png" alt="View files" width="700">
+<img src="/images/docs/quickstart/hello/Quickstart2.png" alt="View files" width="700">
 
 Let's look at some of those.
 
@@ -111,13 +111,13 @@ curl $(pulumi stack output url)
 
 For a more interesting view that shows the result of calling a Lambda function, open the page in a browser:
 
-<img src="/assets/images/docs/quickstart/hello/Quickstart5.png" alt="Stack page in browser" width="600">
+<img src="/images/docs/quickstart/hello/Quickstart5.png" alt="Stack page in browser" width="600">
 
 ## Manage the stack
 
 Our output also contained a permalink to the Pulumi dashboard. We can review the stack in the UI, and examine logs and resource usage, along with inviting friends and co-workers to collaborate on stacks.
 
-<img src="/assets/images/docs/quickstart/hello/Quickstart6.png" width="600">
+<img src="/images/docs/quickstart/hello/Quickstart6.png" width="600">
 
 ## Tear Down
 

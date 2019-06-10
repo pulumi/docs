@@ -1,6 +1,6 @@
 {{ define "main" }}
     {{ partial "hero.html" . }}
-    
+
     <section class="content-block content-block-anchors bg-black white-text">
         <div class="container-fluid">
             <div class="row">
@@ -15,7 +15,7 @@
             </div>
         </div>
     </section>
-    
+
     <section class="content-block" id="benefits">
         <div class="content-content">
             <div class="container-fluid">
@@ -29,28 +29,28 @@
                         <div class="row cols-are-spaced-md">
                             <div class="col col-md-3">
                                 <div class="content">
-                                    <img src="{{ .Site.BaseURL }}assets/icons/realCode_icon.svg" width="65" alt="" class="margin-bottom-30">
+                                    <img src="{{ .Site.BaseURL }}/icons/realCode_icon.svg" width="65" alt="" class="margin-bottom-30">
                                     <h3 class="h6">Real Code</h3>
                                     <p>Pulumi is infrastructure as real code. This means you get all the benefits of your favorite language and tool for provisioning infrastructure: code completion, error checking, versioning, IDE support, etc. - without the need to manage limited DSL syntax.</p>
                                 </div>
                             </div>
                             <div class="col col-md-3">
                                 <div class="content">
-                                    <img src="{{ .Site.BaseURL }}assets/icons/reusable-component.svg" width="88" alt="" class="margin-bottom-30">
+                                    <img src="{{ .Site.BaseURL }}/icons/reusable-component.svg" width="88" alt="" class="margin-bottom-30">
                                     <h3 class="h6">Familiar Constructs</h3>
                                     <p>Real languages means you get familiar constructs like for loops, functions, and classes - cutting boilerplate and enforcing best practices. Pulumi lets you leverage existing package management tools and techniques. </p>
                                 </div>
                             </div>
                             <div class="col col-md-3">
                                 <div class="content">
-                                    <img src="{{ .Site.BaseURL }}assets/icons/immutable_infastrc_icon.svg" width="78" alt="" class="margin-bottom-30">
+                                    <img src="{{ .Site.BaseURL }}/icons/immutable_infastrc_icon.svg" width="78" alt="" class="margin-bottom-30">
                                     <h3 class="h6">Ephemeral Infrastructure</h3>
                                     <p>Pulumi has deep support for cloud native technologies, like Kubernetes, and supports advanced deployment scenarios that cannot be expressed with Terraform. Pulumi is a proud member of the Cloud Native Computing Foundation (CNCF).</p>
                                 </div>
                             </div>
                             <div class="col col-md-3">
                                 <div class="content">
-                                    <img src="{{ .Site.BaseURL }}assets/icons/icon-core3.svg" width="45" alt="" class="margin-bottom-30">
+                                    <img src="{{ .Site.BaseURL }}/icons/icon-core3.svg" width="45" alt="" class="margin-bottom-30">
                                     <h3 class="h6">TF Provider Integration</h3>
                                     <p>Pulumi is able to adapt any Terraform Provider for use with Pulumi, enabling management of any infrastructure supported by the Terraform Providers ecosystem using Pulumi programs. <a href="https://github.com/pulumi/pulumi-terraform">Find out more here.</a></p>
                                 </div>
@@ -61,7 +61,7 @@
             </div>
         </div>
     </section>
-    
+
     <section class="content-block bg-grey" id="code">
         <div class="content-content">
             <div class="container-fluid">
@@ -71,7 +71,7 @@
                             <div class="col col-md-6">
                                 <div class="content">
                                     <h2 class="h4 text-purple">Take advantage of real coding features with Pulumi</h2>
-                                    <p>Pulumi provides a more expressive and efficient way to define cloud resources: 
+                                    <p>Pulumi provides a more expressive and efficient way to define cloud resources:
                                         <ul>
                                             <li>Use variable loops, not copy/paste</li>
                                             <li>Use any Node libaries (or Python/Go)</li>
@@ -95,9 +95,9 @@ for (let file of files) {
     });
 }
 
-export const bucketname = bucket.id;    
+export const bucketname = bucket.id;
 </code></pre>
-                                
+
                                 </div>
                             </div>
                             <div class="col col-md-6">
@@ -144,7 +144,7 @@ output "bucketname" {
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -160,7 +160,7 @@ output "bucketname" {
                             <div class="col col-md-6">
                                 <div class="content">
                                     <h2 class="h4 text-purple">Productive cloud native programming</h2>
-                                    <p>Pulumi is designed with cloud native computing in mind - from containers to serverless, providing a productive model for quickly building and deploying apps: 
+                                    <p>Pulumi is designed with cloud native computing in mind - from containers to serverless, providing a productive model for quickly building and deploying apps:
                                         <ul>
                                             <li>Rich, built in support for event handlers</li>
                                             <li>Easy-to-use in-line Lambdas for simple functions</li>
@@ -181,9 +181,9 @@ bucket.onObjectCreated("newObj", async (ev, ctx) => {
 });
 
 // Export the bucket name for easy scripting
-export const bucketName = bucket.id;  
+export const bucketName = bucket.id;
 </code></pre>
-                                
+
                                 </div>
                             </div>
                             <div class="col col-md-6">
@@ -199,8 +199,8 @@ data "archive_file" "lambda_zip" {
     source {
     filename = "index.js"
     content = <<EOF
-exports.handler = async(ev, ctx) => { 
-    console.log(JSON.stringify(ev)) 
+exports.handler = async(ev, ctx) => {
+    console.log(JSON.stringify(ev))
 }
 EOF
     }
@@ -255,16 +255,16 @@ output "bucket_name" {
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
     </section>
-    
+
     {{ partial "how-pulumi-works.html" . }}
-    
+
     {{ partial "get-started.html" . }}
-    
+
     <section class="content-block bg-purple white-text" id="contact">
         <div class="content-content">
             <div class="container-fluid">
@@ -295,10 +295,10 @@ output "bucket_name" {
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
     </section>
-    
+
 {{ end }}

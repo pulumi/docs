@@ -7,7 +7,7 @@ date: 2018-06-05T15:48:28-07:00
 
 meta_title: "Toward a Cloud Native Programming Model"
 meta_desc: "Pulumi provides a Cloud Native Programming Model for Containers, Lambdas, and Infrastructure, to get code to the cloud faster than ever before."
-meta_image: "assets/images/pulumi.png"
+meta_image: "/images/pulumi.png"
 
 hero_title: "Toward a Cloud Native Programming Model"
 hero_description: "Cloud innovation has delivered limitless capabilities that promise to transform all aspects of software development."

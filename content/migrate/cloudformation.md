@@ -8,7 +8,7 @@ url: "/cloudformation"
 
 meta_title: "Migrate to Pulumi from CloudFormation"
 meta_desc: "How to migrate to Pulumi from CloudFormation for huge productivity gains, and a unified programming model for Devs and DevOps."
-meta_image: "assets/images/pulumi.png"
+meta_image: "/images/pulumi.png"
 
 topic: "Cloud Infrastructure Automation"
 hero_title: "Migrating to Pulumi from CloudFormation"

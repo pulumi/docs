@@ -95,7 +95,7 @@ This will provision the service accounts for CI/CD and the roles for teams (if n
 should see something like the following. This output is for GCP, but something similar will happen
 for Azure and AWS.
 
-<img src="/assets/images/docs/k8s-the-prod-way/identity.png">
+<img src="/images/docs/k8s-the-prod-way/identity.png">
 
 ## Stack Outputs: Identity Credentials
 

@@ -8,7 +8,7 @@ menu:
 
 meta_title: "GitHub Actions with Pulumi"
 meta_desc: "Pulumi and GitHub Actions combine to provide the easiest way to achieve continuous delivery of cloud applications and infrastructure."
-meta_image: "assets/images/pulumi.png"
+meta_image: "/images/pulumi.png"
 
 hero_title: "GitHub Actions with Pulumi"
 hero_description: "Pulumi and GitHub Actions combine to provide the easiest, most capable, and friction-free way to achieve continuous delivery of cloud applications and infrastructure."

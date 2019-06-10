@@ -3,31 +3,31 @@
 .content-block {
     padding-top: 50px;
     padding-bottom: 50px;
-    
+
     @media(min-width: $screen-md){
         padding-top: 90px;
         padding-bottom: 90px;
     }
-    
+
     &.no-padding-top {
         padding-top: 0;
     }
-    
+
     &.no-padding-bottom {
         padding-bottom: 0;
     }
-    
+
     &.border-top {
         border-top: 1px solid #E3E3E3;
     }
-    
+
     &.border-bottom {
         border-bottom: 1px solid #E3E3E3;
     }
-    
+
     .content-header {
         margin-bottom: 40px;
-        
+
         &.mb-2x {
             margin-bottom: 80px;
         }
@@ -36,37 +36,37 @@
     .padding-top-30 {
     	padding-top: 30px;
     }
-    
+
     .content-footer {
         margin-top: 50px;
-        
+
         &.mt-2x {
             margin-top: 100px;
         }
     }
-    
+
     &.bg-purple-dark.has-footer-waves {
-        
+
         position: relative;
-        
+
         @media(min-width: $screen-md){
             padding-bottom: 0;
         }
-            
+
         .footer-waves {
-            background-image: url(../assets/images/waves.svg);
+            background-image: url(../images/waves.svg);
             height: 210px;
             background-size: 100% 100%;
             background-repeat: no-repeat;
             position: absolute;
             top: 100%;
             width: 100%;
-            
+
             @media(max-width: $screen-sm-max){
                 display: none;
             }
         }
-        
+
         + .content-block {
             @media(min-width: $screen-md){
                 padding-top: 300px; // .footer-waves height + .content-block padding-top
@@ -78,22 +78,22 @@
 .col {
     &:not(:last-child){
         @media(max-width: $screen-sm-max){
-            margin-bottom: 30px; //all cols should stack on sm and smaller, so space them out 
+            margin-bottom: 30px; //all cols should stack on sm and smaller, so space them out
         }
     }
-    
+
     &-md {
         &:not(:last-child){
             @media(max-width: $screen-sm-max){
-                margin-bottom: 30px; //all cols should stack on sm and smaller, so space them out 
+                margin-bottom: 30px; //all cols should stack on sm and smaller, so space them out
             }
         }
     }
-    
+
     &-lg {
         &:not(:last-child){
             @media(max-width: $screen-md-max){
-                margin-bottom: 30px; //all cols should stack on md and smaller, so space them out 
+                margin-bottom: 30px; //all cols should stack on md and smaller, so space them out
             }
         }
     }
@@ -105,68 +105,68 @@
 	@media(min-width: $screen-sm){
 		margin-left: -2.9%;
 		margin-right: -2.9%;
-		
+
 		> .col {
 			padding-left: 2.9%;
 			padding-right: 2.9%;
-            
+
             > .row {
                 margin-left: 0;
                 margin-right: 0;
             }
 		}
-	} 
+	}
 }
 
 .cols-are-spaced-md {
 	@media(min-width: $screen-md){
 		margin-left: -2.9%;
 		margin-right: -2.9%;
-		
+
 		> .col {
 			padding-left: 2.9%;
 			padding-right: 2.9%;
-            
+
             > .row {
                 margin-left: 0;
                 margin-right: 0;
             }
 		}
-	} 
+	}
 }
 
 .cols-are-spaced-lg {
 	@media(min-width: $screen-lg){
 		margin-left: -2.9%;
 		margin-right: -2.9%;
-		
+
 		> .col {
 			padding-left: 2.9%;
 			padding-right: 2.9%;
-            
+
             > .row {
                 margin-left: 0;
                 margin-right: 0;
             }
 		}
-	} 
+	}
 }
 
 .cols-are-spaced-xlg {
 	@media(min-width: $screen-xlg){
 		margin-left: -2.9%;
 		margin-right: -2.9%;
-		
+
 		> .col {
 			padding-left: 2.9%;
 			padding-right: 2.9%;
-            
+
             > .row {
                 margin-left: 0;
                 margin-right: 0;
             }
 		}
-	} 
+	}
 }
 
 //extra vertical space for cols
@@ -175,7 +175,7 @@
     > .col {
         margin-bottom: 70px;
     }
-    
+
     &-sm {
         @media(min-width: $screen-sm){
             margin-bottom: -70px; //remove extra space
@@ -184,7 +184,7 @@
             }
         }
     }
-    
+
     &-md {
         @media(min-width: $screen-md){
             margin-bottom: -70px; //remove extra space
@@ -193,7 +193,7 @@
             }
         }
     }
-    
+
     &-lg {
         @media(min-width: $screen-lg){
             margin-bottom: -70px; //remove extra space
@@ -216,59 +216,59 @@ ul.logo-roll {
     vertical-align: top;
     display: flex;
     align-items: center;
-    
+
     li {
         padding-left: 0;
         display: inline-block;
         margin-bottom: 15px;
         margin-right: 15px;
-        
+
         &:before {
             display: none;
         }
-        
+
         img {
             display: block;
         }
     }
-    
+
     &.small {
         margin-left: 9px;
-        
+
         li {
             margin-right: 9px;
             margin-bottom: 9px;
         }
-        
+
         img {
             max-width: 22px;
         }
     }
-    
+
     &.inline-block {
         margin-top: 0;
         margin-bottom: 0;
         display: inline-block;
         margin-left: 15px;
-        
+
         &.small {
             margin-left: 9px;
         }
-        
+
         li {
             margin-bottom: 0;
         }
     }
-    
+
     &.text-center {
         display: block;
-        
+
         &-xs {
             @media(max-width: $screen-xs-max){
                 display: block;
             }
         }
-        
+
         &-sm {
             @media(min-width: $screen-sm) and (max-width: $screen-sm-max){
                 display: block;

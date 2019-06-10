@@ -1213,7 +1213,7 @@ import * as gcp from "@pulumi/gcp";
 
 const picture = new gcp.storage.BucketObject("picture", {
     bucket: "image-store",
-    source: new pulumi.asset.FileArchive("/assets/images/docs/nature/garden-tiger-moth.jpg"),
+    source: new pulumi.asset.FileArchive("/images/docs/nature/garden-tiger-moth.jpg"),
 });
 ```
 

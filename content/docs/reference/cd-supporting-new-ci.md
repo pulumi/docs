@@ -22,7 +22,7 @@ The detection of metadata in a CI environment depends on some key environment va
 
 The above metadata about your CI environment is then used to provide an enhanced experience in the [Pulumi Console](https://app.pulumi.com) when you look at your stack activity log. The metadata from your CI environment combined with the information about your Git repository allows us to provide links to things such as the Pull Request on github.com or the commit that triggered a PR build.
 
-![A Stack update entry in the Pulumi Console](/assets/images/docs/reference/supporting-new-ci/stack-update.png)
+![A Stack update entry in the Pulumi Console](/images/docs/reference/supporting-new-ci/stack-update.png)
 
 In order to add support for your CI system, you should be somewhat familiar in working with [Go](https://golang.org/).
 

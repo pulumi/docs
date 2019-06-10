@@ -8,7 +8,7 @@ url: "/serverless"
 
 meta_title: "Serverless Programming with Pulumi"
 meta_desc: "Pulumi provides a cloud native programming model for serverless applications. Any code, any cloud, any app."
-meta_image: "assets/images/pulumi.png"
+meta_image: "/images/pulumi.png"
 
 topic: "Cloud Native Infrastructure as Code"
 hero_title: "Serverless Programming with Pulumi"

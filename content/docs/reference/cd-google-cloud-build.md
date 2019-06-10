@@ -16,7 +16,7 @@ menu:
   - Cloud Functions API (and/or any other relevant resource that will be deployed).
 - Add `Cloud Functions Developer` role (and/or any other relevant resource that will be deployed) and the `Service Account User` role to the Cloud Build's service account. You can do this by navigating to the IAM tab in the GCP Console.
 
-![Cloud Build service account](/assets/images/docs/reference/google-cloud-build/cloud-build-service-account.png)
+![Cloud Build service account](/images/docs/reference/google-cloud-build/cloud-build-service-account.png)
 
   - If you do not grant the necessary permissions to the Cloud Build service account, you may see an error like this while deploying Cloud Functions (or whichever resource you are deploying.)
 

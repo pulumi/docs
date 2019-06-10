@@ -1,6 +1,6 @@
 {{ define "main" }}
-  {{ partial "hero.html" . }} 
-  
+  {{ partial "hero.html" . }}
+
     <section class="content-block content-block-anchors bg-black white-text">
         <div class="container-fluid">
             <div class="row">
@@ -12,11 +12,11 @@
                     </ul>
                 </div>
             </div>
-        </div> 
+        </div>
     </section>
-    
+
     <section class="content-block text-center-xs text-center-sm">
-        
+
         <div class="content-header">
             <div class="container-fluid">
                 <div class="row">
@@ -29,7 +29,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="content-content">
             <div class="container-fluid">
                 <div class="row">
@@ -42,10 +42,10 @@
                                         <p>Work with preferred languages for maximum productivity.</p>
                                     </div>
                                     <ul class="logo-roll text-center-xs text-center-sm">
-                                        <li><img src="{{ .Site.BaseURL }}assets/logos/tech/logo-js.png?v1" alt="js" width="36"></li>
-                                        <li><img src="{{ .Site.BaseURL }}assets/logos/tech/logo-python.png?v1" alt="python" width="34"></li>
-                                        <li><img src="{{ .Site.BaseURL }}assets/logos/tech/logo-golang.png?v1" alt="golang" width="63"></li>
-                                        <li><img src="{{ .Site.BaseURL }}assets/logos/tech/logo-ts.png?v1" alt="typescript" width="36"></li>
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-js.png?v1" alt="js" width="36"></li>
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-python.png?v1" alt="python" width="34"></li>
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-golang.png?v1" alt="golang" width="63"></li>
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-ts.png?v1" alt="typescript" width="36"></li>
                                     </ul>
                                 </div>
                             </div>
@@ -56,10 +56,10 @@
                                         <p>Deploy apps and infrastructure to any cloud.</p>
                                     </div>
                                     <ul class="logo-roll text-center-xs text-center-sm">
-                                        <li><img src="{{ .Site.BaseURL }}assets/logos/tech/logo-aws.png?v1" alt="aws" width="37"></li>
-                                        <li><img src="{{ .Site.BaseURL }}assets/logos/tech/logo-azure.png?v1" alt="azure" width="39"></li>
-                                        <li><img src="{{ .Site.BaseURL }}assets/logos/tech/logo-gd.png?v1" alt="gd" width="38"></li>
-                                        <li><img src="{{ .Site.BaseURL }}assets/logos/tech/logo-kubernetes.png?v1" alt="kubernetes" width="39"></li>
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-aws.png?v1" alt="aws" width="37"></li>
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-azure.png?v1" alt="azure" width="39"></li>
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-gd.png?v1" alt="gd" width="38"></li>
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-kubernetes.png?v1" alt="kubernetes" width="39"></li>
                                     </ul>
                                 </div>
                             </div>
@@ -70,10 +70,10 @@
                                         <p>Implement workflows with familiar tools and workflows. </p>
                                     </div>
                                     <ul class="logo-roll text-center-xs text-center-sm">
-                                        <li><img src="{{ .Site.BaseURL }}assets/logos/tech/logo-github.png" alt="github"></li>
-                                        <li><img src="{{ .Site.BaseURL }}assets/logos/tech/logo-vs.png" alt="vs"></li>
-                                        <li><img src="{{ .Site.BaseURL }}assets/logos/tech/logo-npm.png" alt="npm"></li>
-                                        <li><img src="{{ .Site.BaseURL }}assets/logos/tech/logo-travisci.png" alt="travisci"></li>
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-github.png" alt="github"></li>
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-vs.png" alt="vs"></li>
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-npm.png" alt="npm"></li>
+                                        <li><img src="{{ .Site.BaseURL }}/logos/tech/logo-travisci.png" alt="travisci"></li>
                                     </ul>
                                 </div>
                             </div>
@@ -83,9 +83,9 @@
             </div>
         </div>
     </section>
-    
-    <section id="continuous-delivery" class="content-block border-top"> 
-        
+
+    <section id="continuous-delivery" class="content-block border-top">
+
         <div class="content-content">
             <div class="container-fluid">
                 <div class="row">
@@ -125,11 +125,11 @@
                 </div>
             </div>
         </div>
-        
+
     </section>
-    
+
     <section id="security" class="content-block bg-grey">
-        
+
         <div class="content-content">
             <div class="container-fluid">
                 <div class="row">
@@ -169,11 +169,11 @@
                 </div>
             </div>
         </div>
-        
+
     </section>
-    
+
     <section id="support" class="content-block ">
-        
+
         <div class="content-content">
             <div class="container-fluid">
                 <div class="row">
@@ -213,12 +213,12 @@
                 </div>
             </div>
         </div>
-        
+
     </section>
-    
-    
-    
+
+
+
     {{ partial "learnmore-contactus.html" . }}
     {{ partial "newsletter.html" (dict "classes" "bg-purple-dark white-text" )}}
-    
+
 {{ end }}

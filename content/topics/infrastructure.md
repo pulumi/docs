@@ -9,7 +9,7 @@ url: "/infrastructure-as-code"
 
 meta_title: "Infrastructure as Code with Pulumi"
 meta_desc: "Pulumi provides a cloud native programming model for infrastructure as code. Any code, any cloud, any app."
-meta_image: "assets/images/pulumi.png"
+meta_image: "/images/pulumi.png"
 
 topic: "Cloud Native Programming"
 hero_title: "Serverless Programming with Pulumi"

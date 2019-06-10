@@ -7,7 +7,7 @@ menu:
     weight: 3
 ---
 
-<img src="/assets/images/docs/quickstart/aws-purple.png" align="right">
+<img src="/images/docs/quickstart/aws-purple.png" align="right">
 
 The Amazon Web Services (AWS) provider for Pulumi can be used to provision any of the cloud resources available in [AWS](https://aws.amazon.com/).  The AWS provider must be configured with credentials to deploy and update resources in AWS.
 

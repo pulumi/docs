@@ -8,7 +8,7 @@ url: "/gcp"
 
 meta_title: "Cloud Native Infrastructure as Code for Google Cloud with Pulumi"
 meta_desc: "Programming Google Cloud with Pulumi for huge productivity gains, and a unified programming model for Devs and DevOps."
-meta_image: "assets/images/pulumi.png"
+meta_image: "/images/pulumi.png"
 
 topic: "Cloud Native Infrastructure as Code"
 hero_title: "Program the cloud with Pulumi and Google Cloud"

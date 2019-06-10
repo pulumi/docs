@@ -45,7 +45,7 @@ When the program is run, it will look something like the following (although thi
 The majority of the time is taken up by deploying Prometheus. Towards the end, at the bottom, you
 can see `canary-example-app` and `canary-staging-app` created.
 
-![gatedDeployment](/assets/images/docs/quickstart/kubernetes/gatedDeployment.gif "Deployment gated by Prometheus check")
+![gatedDeployment](/images/docs/quickstart/kubernetes/gatedDeployment.gif "Deployment gated by Prometheus check")
 
 ## Running the App
 

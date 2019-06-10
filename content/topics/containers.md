@@ -8,7 +8,7 @@ url: "/containers"
 
 meta_title: "Container Management with Pulumi"
 meta_desc: "Pulumi provides a cloud native programming model for container management. Any code, any cloud, any app."
-meta_image: "assets/images/pulumi.png"
+meta_image: "/images/pulumi.png"
 
 topic: "Cloud Native Infrastructure as Code"
 hero_title: "Container Management with Pulumi"

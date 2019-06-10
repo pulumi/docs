@@ -58,7 +58,7 @@ Browser:
 https://app.pulumi.com/new?template=https://github.com/pulumi/examples/aws-js-s3-folder
 ```
 
-![New Project](/assets/images/docs/reference/service/new-project.png)
+![New Project](/images/docs/reference/service/new-project.png)
 
 ## Creating a Pulumi Button
 

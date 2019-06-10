@@ -8,7 +8,7 @@ url: "/azure"
 
 meta_title: "Cloud Native Infrastructure as Code for Microsoft Azure with Pulumi"
 meta_desc: "Programming the Azure cloud with Pulumi for huge productivity gains, and a unified programming model for Devs and DevOps."
-meta_image: "assets/images/pulumi.png"
+meta_image: "/images/pulumi.png"
 
 topic: "Cloud Native Infrastructure as Code"
 hero_title: "Program the cloud with Pulumi and Azure"
@@ -37,7 +37,7 @@ hero_right_content: '<div class="code_container">
 <br>export let cluster = k8sCluster.name;
 <br>export let kubeConfig = k8sCluster.kubeConfigRaw;
 <br>export let serviceIP =
-    <br>&nbsp;&nbsp;(apache.resources["v1/Service::default/apache-apache"] 
+    <br>&nbsp;&nbsp;(apache.resources["v1/Service::default/apache-apache"]
     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;as k8s.core.v1.Service).
         <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;spec.apply(s => s.clusterIP);<br/><br/></code></pre>
         </div>
