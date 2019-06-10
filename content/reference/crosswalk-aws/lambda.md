@@ -63,17 +63,17 @@ tbody tr td:first-child {
 
 | AWS Service | Event | Description |
 |-------------|-------|-------------|
-| API Gateway | [awsx.apigateway.API](/reference/pkg/nodejs/@pulumi/awsx/apigateway/#API) | create serverless APIs using a simple approach |
-| CloudWatch  | [aws.cloudwatch.onSchedule](/reference/pkg/nodejs/@pulumi/aws/cloudwatch/#onSchedule) | fire a CloudWatch event on a particular schedule, e.g. a cron expression |
-| CloudWatch  | [aws.cloudwatch.EventRule.onEvent](/reference/pkg/nodejs/@pulumi/aws/cloudwatch/#EventRule-onEvent) | fire an event when a particular CloudWatch event occurs |
-| CloudWatch  | [aws.cloudwatch.LogGroup.onEvent](/reference/pkg/nodejs/@pulumi/aws/cloudwatch/#LogGroup-onEvent) | fire an event when a CloudWatch logs event occurs |
-| DynamoDB    | [aws.dynamodb.Table.onEvent](/reference/pkg/nodejs/@pulumi/aws/dynamodb/#Table-onEvent) | fire events for DynamoDB insert, modify, or remove operations |
-| Kinesis     | [aws.kinesis.Stream.onEvent](/reference/pkg/nodejs/@pulumi/aws/kinesis/#Stream-onEvent) | fire Kinesis Stream events at particular times or batch sizes |
-| S3          | [aws.s3.Bucket.onObjectCreated](/reference/pkg/nodejs/@pulumi/aws/s3/#Bucket-onObjectCreated) | trigger a function anytime an object is created in an S3 Bucket |
-| S3          | [aws.s3.Bucket.onObjectRemoved](/reference/pkg/nodejs/@pulumi/aws/s3/#Bucket-onObjectRemoved) | trigger a function anytime an object is removed from an S3 Bucket |
-| S3          | [aws.s3.Bucket.onEvent](/reference/pkg/nodejs/@pulumi/aws/s3/#Bucket-onEvent) | trigger a function for a wide range of S3 Bucket events |
-| SNS         | [aws.sns.Topic.onEvent](/reference/pkg/nodejs/@pulumi/aws/sns/#Topic-onEvent) | fire SNS Topic events when new messages arrive |
-| SQS         | [aws.sqs.Queue.onEvent](/reference/pkg/nodejs/@pulumi/aws/sqs/#Queue-onEvent) | fire SQS Queue events when new messages are enqueued (or on DLQ events, etc) |
+| API Gateway | [awsx.apigateway.API](/reference/pkg/nodejs/pulumi/awsx/apigateway/#API) | create serverless APIs using a simple approach |
+| CloudWatch  | [aws.cloudwatch.onSchedule](/reference/pkg/nodejs/pulumi/aws/cloudwatch/#onSchedule) | fire a CloudWatch event on a particular schedule, e.g. a cron expression |
+| CloudWatch  | [aws.cloudwatch.EventRule.onEvent](/reference/pkg/nodejs/pulumi/aws/cloudwatch/#EventRule-onEvent) | fire an event when a particular CloudWatch event occurs |
+| CloudWatch  | [aws.cloudwatch.LogGroup.onEvent](/reference/pkg/nodejs/pulumi/aws/cloudwatch/#LogGroup-onEvent) | fire an event when a CloudWatch logs event occurs |
+| DynamoDB    | [aws.dynamodb.Table.onEvent](/reference/pkg/nodejs/pulumi/aws/dynamodb/#Table-onEvent) | fire events for DynamoDB insert, modify, or remove operations |
+| Kinesis     | [aws.kinesis.Stream.onEvent](/reference/pkg/nodejs/pulumi/aws/kinesis/#Stream-onEvent) | fire Kinesis Stream events at particular times or batch sizes |
+| S3          | [aws.s3.Bucket.onObjectCreated](/reference/pkg/nodejs/pulumi/aws/s3/#Bucket-onObjectCreated) | trigger a function anytime an object is created in an S3 Bucket |
+| S3          | [aws.s3.Bucket.onObjectRemoved](/reference/pkg/nodejs/pulumi/aws/s3/#Bucket-onObjectRemoved) | trigger a function anytime an object is removed from an S3 Bucket |
+| S3          | [aws.s3.Bucket.onEvent](/reference/pkg/nodejs/pulumi/aws/s3/#Bucket-onEvent) | trigger a function for a wide range of S3 Bucket events |
+| SNS         | [aws.sns.Topic.onEvent](/reference/pkg/nodejs/pulumi/aws/sns/#Topic-onEvent) | fire SNS Topic events when new messages arrive |
+| SQS         | [aws.sqs.Queue.onEvent](/reference/pkg/nodejs/pulumi/aws/sqs/#Queue-onEvent) | fire SQS Queue events when new messages are enqueued (or on DLQ events, etc) |
 
 There are multiple approaches to creating a Lambda function. For these examples, we will trigger the Lambda's
 execution when an S3 Bucket receives a new Object, however the manner of registering a handler is the same across
@@ -217,7 +217,7 @@ instead wanted to use a zipfile we've already packaged, just change code as foll
 // ...
 ```
 
-Using [Pulumi's Asset and Archive classes](/reference/pkg/nodejs/@pulumi/pulumi/asset/), we can
+Using [Pulumi's Asset and Archive classes](/reference/pkg/nodejs/pulumi/pulumi/asset/), we can
 fetch code from anywhere -- in-memory, on disk, or even over the network. Pulumi will detect changes in the contents
 of these assets and archives so that when you run `pulumi up`, diffs will be detected and updated.
 

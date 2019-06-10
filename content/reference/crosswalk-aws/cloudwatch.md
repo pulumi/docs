@@ -395,7 +395,7 @@ const dashboard = new awsx.cloudwatch.Dashboard("TopicData", {
 ```
 
 More complex widget customization is possible. See the individual types and arguments in the
-[Cloudwatch API](/reference/pkg/nodejs/@pulumi/awsx/cloudwatch/) for more details.
+[Cloudwatch API](/reference/pkg/nodejs/pulumi/awsx/cloudwatch/) for more details.
 
 ## Additional CloudWatch Resources
 
