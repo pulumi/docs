@@ -17,6 +17,8 @@ more secure, using automatic well-architected best practices.
 
 {{< mini-toc >}}
 
+<img src="/images/reference/crosswalk/aws/arch.png">
+
 ## Overview
 
 Pulumi Crosswalk for AWS supports "day one" tasks, such as creating your initial container-based workloads using
