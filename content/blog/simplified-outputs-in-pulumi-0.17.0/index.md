@@ -1,12 +1,12 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
-tags: ["todo"]
-date: "2017-01-01"
-draft: true
-description: "TODO: Put in a reasonable summary"
----
+title: "Simplified Outputs in Pulumi 0.17"
+authors: ["cyrus-najmabadi"]
+tags: ["features"]
+date: "2019-03-17"
 
+description: "Based on much feedback from cloud developers, Pulumi Outputs have been simplified for JavaScript and TypeScript making the user experience simpler while maintaining the rich dependency tracking and type checking that Pulumi has always provided for cloud infrastructure."
+meta_image: "RELATIVE_TO_PAGE/comp-list.png"
+---
 
 Pulumi allows cloud developers to use programming languages like
 JavaScript, TypeScript and Python to define and deploy cloud
@@ -37,24 +37,28 @@ patterns for working with Outputs much simpler.
 Prior to this release of `@pulumi/pulumi` package, it was fairly common
 to have to write code like the following:
 
-    const cert = new aws.acm.Certificate("cert", {
-        domainName: "example.com",
-        validationMethod: "DNS",
-    });
+{{< highlight JavaScript >}}
+const cert = new aws.acm.Certificate("cert", {
+    domainName: "example.com",
+    validationMethod: "DNS",
+});
 
-    const certValidation = new aws.route53.Record("cert_validation", {
-        records: [cert.domainValidationOptions.apply(domainValidationOptions => domainValidationOptions[0].resourceRecordValue)],
-        ttl: 60,
-        type: cert.domainValidationOptions.apply(domainValidationOptions => domainValidationOptions[0].resourceRecordType),
-    });
+const certValidation = new aws.route53.Record("cert_validation", {
+    records: [cert.domainValidationOptions.apply(domainValidationOptions => domainValidationOptions[0].resourceRecordValue)],
+    ttl: 60,
+    type: cert.domainValidationOptions.apply(domainValidationOptions => domainValidationOptions[0].resourceRecordType),
+});
+{{< /highlight >}}
 
 In particular, creating the aws.route53.Record involves a fair amount of
 complexity with those arrow functions. i.e.:
 
-        records: [cert.domainValidationOptions.apply(domainValidationOptions => domainValidationOptions[0].resourceRecordValue)],
-        ttl: 60,
-        type: cert.domainValidationOptions.apply(domainValidationOptions => domainValidationOptions[0].resourceRecordType),
-        zoneId: zone.apply(zone => zone.id),
+{{< highlight JavaScript >}}
+    records: [cert.domainValidationOptions.apply(domainValidationOptions => domainValidationOptions[0].resourceRecordValue)],
+    ttl: 60,
+    type: cert.domainValidationOptions.apply(domainValidationOptions => domainValidationOptions[0].resourceRecordType),
+    zoneId: zone.apply(zone => zone.id),
+{{< /highlight >}}
 
 Yikes! This is so verbose, it doesn't even fit on the width of the page!
 
@@ -75,12 +79,14 @@ This realization came about from great work done in our Python package.
 First, before diving into the low level details, let's first see what
 the above code would now look like in 0.17.0:
 
-    const certValidation = new aws.route53.Record("cert_validation", {
-        records: [cert.domainValidationOptions[0].resourceRecordValue],
-        ttl: 60,
-        type: cert.domainValidationOptions[0].resourceRecordType,
-        zoneId: zone.id,
-    });
+{{< highlight JavaScript >}}
+const certValidation = new aws.route53.Record("cert_validation", {
+    records: [cert.domainValidationOptions[0].resourceRecordValue],
+    ttl: 60,
+    type: cert.domainValidationOptions[0].resourceRecordType,
+    zoneId: zone.id,
+});
+{{< /highlight >}}
 
 That's a lot nicer than before! The following improvements happened:
 
@@ -128,11 +134,13 @@ JavaScript perspective, it was a little more challenging to figure out
 how to make this work in TypeScript's typing system. For example, if you
 had a value like so:
 
-    const cert: Output<{ domainValidationOptions: pulumi.Output<{ domainName: string, resourceRecordName: string, resourceRecordType: string, resourceRecordValue: string }[]> }>;
-    const firstOption: Output<{ domainName: string, resourceRecordName: string, resourceRecordType: string, resourceRecordValue: string }> = cert[0];
-    const domainName = firstOption.domainName;
+{{< highlight JavaScript >}}
+const cert: Output<{ domainValidationOptions: pulumi.Output<{ domainName: string, resourceRecordName: string, resourceRecordType: string, resourceRecordValue: string }[]> }>;
+const firstOption: Output<{ domainName: string, resourceRecordName: string, resourceRecordType: string, resourceRecordValue: string }> = cert[0];
+const domainName = firstOption.domainName;
+{{< /highlight >}}
 
-then how does TypeScript know that `cert` should have a property on it
+Then how does TypeScript know that `cert` should have a property on it
 called `domainValidationOptions`? And how can it know that
 `domainValidationOptions` can be indexed into? And how would it know
 that once indexed, that `Output` would have a `domainName` property?
@@ -152,13 +160,12 @@ expressed and the entire tooling ecosystem understands them. For
 example, in VSCode, if you try to write code like the above, you'll see
 all the expected properties with the expected types:
 
-![image](https://user-images.githubusercontent.com/4564579/54156772-29999600-4404-11e9-9419-95b9b44bad08.png)
+![Completion Lists](./comp-list.png)
 
-#### Conclusion
+## Conclusion
 
 We definitely hope these changes to `@pulumi/pulumi` in 0.17.0 will make
 the programming experience simpler and smoother for many common use
 cases. And, if you've ever wanted to do some fancy tricks like what
 we're doing here, these updates can show you how you too can approach
 some of these advanced techniques for both JavaScript and TypeScript!
-

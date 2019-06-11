@@ -1,12 +1,12 @@
 ---
 title: "TODO Port frontmatter"
-authors: ["chris-smith"]
-tags: ["todo"]
-date: "2017-01-01"
-draft: true
-description: "TODO: Put in a reasonable summary"
----
+authors: ["joe-duffy"]
+tags: ["JavaScript", "TypeScript", "Python", "testing", "CI/CD"]
+date: "2019-04-17"
 
+summary: "Using JavaScript and Python for infrastructure as code delivers great productivity. Did you know that it also lets you test your infrastructure too?"
+meta_image: "RELATIVE_TO_PAGE/InfraTesting.png"
+---
 
 Using Pulumi and general purpose languages for infrastructure as code
 comes with many benefits: leveraging existing skills and knowledge,
@@ -21,35 +21,31 @@ languages unlocks another important software engineering practice:
 In this article, we will see the many ways in which Pulumi lets us test
 our infrastructure as code.
 
-![InfraTesting](https://blog.pulumi.com/hs-fs/hubfs/InfraTesting.png?width=800&name=InfraTesting.png){width="800"
-sizes="(max-width: 800px) 100vw, 800px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/InfraTesting.png?width=400&name=InfraTesting.png 400w, https://blog.pulumi.com/hs-fs/hubfs/InfraTesting.png?width=800&name=InfraTesting.png 800w, https://blog.pulumi.com/hs-fs/hubfs/InfraTesting.png?width=1200&name=InfraTesting.png 1200w, https://blog.pulumi.com/hs-fs/hubfs/InfraTesting.png?width=1600&name=InfraTesting.png 1600w, https://blog.pulumi.com/hs-fs/hubfs/InfraTesting.png?width=2000&name=InfraTesting.png 2000w, https://blog.pulumi.com/hs-fs/hubfs/InfraTesting.png?width=2400&name=InfraTesting.png 2400w"}
+![Testing Infrastructure](./InfraTesting.png)
 
-Why Test Your Infrastructure?
------------------------------
+## Why Test Your Infrastructure?
 
 Before jumping into the details, it's worth asking: Why test your
 infrastructure, anyway? There are many reasons to do this, however here
 are a few examples:
 
--   Unit testing individual functions or pieces of logic in your program
--   Ensuring that the program's desired infrastructure state meets
-    certain constraints
--   Catching common mistakes, like forgetting to encrypt your storage
-    buckets, or exposing virtual machines unprotected to the open
-    Internet
--   Ensuring that the provisioned infrastructure has certain desired
-    attributes
--   Doing runtime testing of the application logic that is running
-    inside of your compute infrastructure, to ensure that it is healthy
-    after your infrastructure has been provisioned
+- Unit testing individual functions or pieces of logic in your program
+- Ensuring that the program's desired infrastructure state meets
+  certain constraints
+- Catching common mistakes, like forgetting to encrypt your storage
+  buckets, or exposing virtual machines unprotected to the open
+  Internet
+- Ensuring that the provisioned infrastructure has certain desired
+  attributes
+- Doing runtime testing of the application logic that is running
+  inside of your compute infrastructure, to ensure that it is healthy
+  after your infrastructure has been provisioned
 
 As we see, there's a broad spectrum of infrastructure testing options
 available. Pulumi has mechanisms available for testing at each point
 along this spectrum. Let's dig in and see how.
 
-Unit Testing
-------------
+## Unit Testing
 
 Pulumi programs are authored in a general purpose language like
 JavaScript, Python, TypeScript, or Go. The full power of each language
@@ -76,41 +72,40 @@ Going one step further, you may want to test the way your program
 allocates resources. To illustrate, let's imagine we want to create a
 simple EC2-based webserver, but want to ensure:
 
--   Instances have a `Name` tag.
--   Instances must not use an inline `userData` script -- we must use
-    an AMI (image).
--   Instances must not have SSH open to the Internet.
+- Instances have a `Name` tag.
+- Instances must not use an inline `userData` script -- we must use
+  an AMI (image).
+- Instances must not have SSH open to the Internet.
 
 Our running example is loosely based on [our aws-js-webserver
 example](https://github.com/pulumi/examples/tree/master/aws-js-webserver):
 
 **index.js:**
-
-    "use strict";
-     
-    let aws = require("@pulumi/aws");
-     
-    let group = new aws.ec2.SecurityGroup("web-secgrp", {
-        ingress: [
-            { protocol: "tcp", fromPort: 22, toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
-            { protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
-        ],
-    });
-     
-    let userData =
-    `#!/bin/bash echo "Hello, World!" > index.html nohup python -m SimpleHTTPServer 80 &`;
-     
-    let server = new aws.ec2.Instance("web-server-www", {
-        instanceType: "t2.micro",
-        securityGroups: [ group.name ], // reference the group object above
-        ami: "ami-c55673a0"             // AMI for us-east-2 (Ohio),
-        userData: userData              // start a simple web server
-    });
-     
-    exports.group = group;
-    exports.server = server;
-    exports.publicIp = server.publicIp;
-    exports.publicHostName = server.publicDns;
+{{< highlight JavaScript >}}"use strict";
+let aws = require("@pulumi/aws");
+ 
+let group = new aws.ec2.SecurityGroup("web-secgrp", {
+    ingress: [
+    { protocol: "tcp", fromPort: 22, toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
+    { protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
+    ],
+});
+ 
+let userData =
+`#!/bin/bash echo "Hello, World!" > index.html nohup python -m SimpleHTTPServer 80 &`;
+ 
+let server = new aws.ec2.Instance("web-server-www", {
+    instanceType: "t2.micro",
+    securityGroups: [ group.name ], // reference the group object above
+    ami: "ami-c55673a0"             // AMI for us-east-2 (Ohio),
+    userData: userData              // start a simple web server
+});
+ 
+exports.group = group;
+exports.server = server;
+exports.publicIp = server.publicIp;
+exports.publicHostName = server.publicDns;
+{{< /highlight >}}
 
 This is a basic Pulumi program: it simply allocates an EC2 security
 group and instance. Notice, however, that we are violating all three of
@@ -122,59 +117,61 @@ The overall structure and scaffolding of our tests will look like any
 ordinary Mocha testing:
 
 **ec2tests.js**
-
-    test.js:
-    let assert = require("assert");
-    let mocha = require("mocha");
-    let pulumi = require("@pulumi/pulumi");
-    let infra = require("./index");
-     
-    describe("Infrastructure", function() {
-        let server = infra.server;
-        describe("#server", function() {
-            // TODO(check 1): Instances have a Name tag.
-            // TODO(check 2): Instances must not use an inline userData script.
-        });
-        let group = infra.group;
-        describe("#group", function() {
-            // TODO(check 3): Instances must not have SSH open to the Internet.
-        });
-    });
+{{< highlight JavaScript >}}
+let assert = require("assert");
+let mocha = require("mocha");
+let pulumi = require("@pulumi/pulumi");
+let infra = require("./index");
+ 
+describe("Infrastructure", function() {
+    let server = infra.server;
+    describe("#server", function() {
+    // TODO(check 1): Instances have a Name tag.
+    // TODO(check 2): Instances must not use an inline userData script.
+    });
+    let group = infra.group;
+    describe("#group", function() {
+    // TODO(check 3): Instances must not have SSH open to the Internet.
+    });
+});
+{{< /highlight >}}
 
 Now let's implement our first test: ensuring that instances have a
 `Name` tag. To verify this we simply need to grab hold of the EC2
 instance object, and check the relevant `tags` property:
 
-            // check 1: Instances have a Name tag.
-            it("must have a name tag", function(done) {
-                pulumi.all([server.urn, server.tags]).apply(([urn, tags]) => {
-                    if (!tags || !tags["Name"]) {
-                        done(new Error(`Missing a name tag on server ${urn}`));
-                    } else {
-                        done();
-                    }
-                });
-            });
+{{< highlight JavaScript >}}
+// check 1: Instances have a Name tag.
+it("must have a name tag", function(done) {
+    pulumi.all([server.urn, server.tags]).apply(([urn, tags]) => {
+        if (!tags || !tags["Name"]) {
+            done(new Error(`Missing a name tag on server ${urn}`));
+        } else {
+            done();
+        }
+    });
+});
+{{< /highlight >}}
 
 This looks like a normal test, with a few noteworthy pieces:
 
--   Since we're querying resource state before we've done a deployment,
-    our tests are always effectively running in "plan" (or "preview")
-    mode. Thus, there are many properties whose values will simply not
-    resolve yet or will be undefined. This includes any output
-    properties computed by your cloud provider. That's fine for these
-    tests -- we're checking for valid inputs anyway. We'll revisit this
-    later when it comes to integration testing.
--   Because all Pulumi resource properties are "outputs" -- since many
-    of them are computed asynchronously -- we need to use the apply
-    method to get access to the values. This is a lot like promises and
-    the `then` function.
--   Because we are using multiple properties, mostly just so we can show
-    the resource URN in the error message, we need to use the
-    `pulumi.all` function to join all of them.
--   Finally, since these outputs are resolved asynchronously, we need to
-    use Mocha's built-in asynchronous test capability, with the `done`
-    callback, or by returning a promise.
+- Since we're querying resource state before we've done a deployment,
+  our tests are always effectively running in "plan" (or "preview")
+  mode. Thus, there are many properties whose values will simply not
+  resolve yet or will be undefined. This includes any output
+  properties computed by your cloud provider. That's fine for these
+  tests -- we're checking for valid inputs anyway. We'll revisit this
+  later when it comes to integration testing.
+- Because all Pulumi resource properties are "outputs" -- since many
+  of them are computed asynchronously -- we need to use the apply
+  method to get access to the values. This is a lot like promises and
+  the `then` function.
+- Because we are using multiple properties, mostly just so we can show
+  the resource URN in the error message, we need to use the
+  `pulumi.all` function to join all of them.
+- Finally, since these outputs are resolved asynchronously, we need to
+  use Mocha's built-in asynchronous test capability, with the `done`
+  callback, or by returning a promise.
 
 After we've gotten through that setup, we get access to the raw inputs
 as plain JavaScript values. The `tags` property is a map, so we just
@@ -183,34 +180,35 @@ make sure it is (1) not falsey, and (2) not missing an entry for the
 
 Now let's write our second check. It's even easier:
 
-            // check 2: Instances must not use an inline userData script.
-            it("must not use userData (use an AMI instead)", function(done) {
-                pulumi.all([server.urn, server.userData]).apply(([urn, userData]) => {
-                    if (userData) {
-                        done(new Error(`Illegal use of userData on server ${urn}`));
-                    } else {
-                        done();
-                    }
-                });
-            });
+{{< highlight JavaScript >}}// check 2: Instances must not use an inline userData script.
+    it("must not use userData (use an AMI instead)", function(done) {
+        pulumi.all([server.urn, server.userData]).apply(([urn, userData]) => {
+            if (userData) {
+                done(new Error(`Illegal use of userData on server ${urn}`));
+            } else {
+                done();
+            }
+    });
+});
+{{< /highlight >}}
 
 And finally, let's write our third check. It's a bit more complex
 because we're searching for ingress rules associated with a security
 group -- of which there may be many -- and CIDR blocks within those
 ingress rules -- of which there may also be many. But it's still easy:
 
-            // check 3: Instances must not have SSH open to the Internet.
-            it("must not open port 22 (SSH) to the Internet", function(done) {
-                pulumi.all([ group.urn, group.ingress ]).apply(([ urn, ingress ]) => {
-                    if (ingress.find(rule =>
-                            rule.fromPort == 22 && rule.cidrBlocks.find(block =>
-                                block === "0.0.0.0/0"))) {
-                        done(new Error(`Illegal SSH port 22 open to the Internet (CIDR 0.0.0.0/0) on group ${urn}`));
-                    } else {
-                        done();
-                    }
-                });
-            });
+{{< highlight JavaScript >}}// check 3: Instances must not have SSH open to the Internet.
+it("must not open port 22 (SSH) to the Internet", function(done) {
+    pulumi.all([ group.urn, group.ingress ]).apply(([ urn, ingress ]) => {
+        if (ingress.find(rule =>
+            rule.fromPort == 22 && rule.cidrBlocks.find(block => block === "0.0.0.0/0"))) {
+                done(new Error(`Illegal SSH port 22 open to the Internet (CIDR 0.0.0.0/0) on group ${urn}`));
+        } else {
+            done();
+        }
+    });
+});
+{{< /highlight >}}
 
 That's it -- now let's actually run the tests!
 
@@ -230,15 +228,15 @@ will not exist.
 To work around this problem, we simply have to mock three pieces of
 information:
 
--   Your project name, which can be supplied with the
-    `PULUMI_NODEJS_PROJECT` environment variable (or more generally
-    `PULUMI_<LANGUAGE>_PROJECT` in other languages).
--   Your stack name, which can be supplied with the
-    `PULUMI_NODEJS_STACK` environment variable (or more generally
-    `PULUMI_<LANGUAGE>_STACK` in other languages).
--   Your stack configuration variables. These can be supplied using the
-    `PULUMI_CONFIG` environment variable, and its format is a JSON map
-    of configuration key/value pairs.
+- Your project name, which can be supplied with the
+  `PULUMI_NODEJS_PROJECT` environment variable (or more generally
+  `PULUMI_<LANGUAGE>_PROJECT` in other languages).
+- Your stack name, which can be supplied with the
+  `PULUMI_NODEJS_STACK` environment variable (or more generally
+  `PULUMI_<LANGUAGE>_STACK` in other languages).
+- Your stack configuration variables. These can be supplied using the
+  `PULUMI_CONFIG` environment variable, and its format is a JSON map
+  of configuration key/value pairs.
 
 The program will emit some warning messages indicating the connection to
 the CLI/engine is not available at runtime. This is important to know,
@@ -250,15 +248,18 @@ Imagine we want a project name of `my-ws`, stack name of `dev`, and AWS
 region of `us-west-2`. The command line to run your Mocha tests would
 therefore be:
 
-    $ PULUMI_TEST_MODE=true 
-        PULUMI_NODEJS_STACK="my-ws" 
-        PULUMI_NODEJS_PROJECT="dev" 
-        PULUMI_CONFIG='{ "aws:region": "us-west-2" }' 
-        mocha tests.js
+```
+$ PULUMI_TEST_MODE=true  \
+  PULUMI_NODEJS_STACK="my-ws" \
+  PULUMI_NODEJS_PROJECT="dev" \
+  PULUMI_CONFIG='{ "aws:region": "us-west-2" }'  \
+  mocha tests.js
+```
 
 Running this will tell us that we have three failing tests, as we had
 hoped!
 
+```
       Infrastructure
         #server
      1) must have a name tag      2) must not use userData (use an AMI instead)
@@ -269,45 +270,49 @@ hoped!
      
      1) Infrastructure
            #server
-             must have a name tag:
+         must have a name tag:
      Error: Missing a name tag on server
      urn:pulumi:my-ws::my-dev::aws:ec2/instance:Instance::web-server-www 
      2) Infrastructure
            #server
-             must not use userData (use an AMI instead):
+         must not use userData (use an AMI instead):
      Error: Illegal use of userData on server
      urn:pulumi:my-ws::my-dev::aws:ec2/instance:Instance::web-server-www 
      3) Infrastructure
            #group
-             must not open port 22 (SSH) to the Internet:
+         must not open port 22 (SSH) to the Internet:
      Error: Illegal SSH port 22 open to the Internet (CIDR 0.0.0.0/0) on group   
+```
 
 Let's fix our program to comply:
 
-    "use strict";
-     
-    let aws = require("@pulumi/aws");
-     
-    let group = new aws.ec2.SecurityGroup("web-secgrp", {
-        ingress: [
-            { protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
-        ],
-    });
-     
-    let server = new aws.ec2.Instance("web-server-www", {
-        tags: { "Name": "web-server-www" },
-        instanceType: "t2.micro",
-        securityGroups: [ group.name ], // reference the group object above
-        ami: "ami-c55673a0"             // AMI for us-east-2 (Ohio),
-    });
-     
-    exports.group = group;
-    exports.server = server;
-    exports.publicIp = server.publicIp;
-    exports.publicHostName = server.publicDns;
+{{< highlight JavaScript >}}
+"use strict";
+ 
+let aws = require("@pulumi/aws");
+ 
+let group = new aws.ec2.SecurityGroup("web-secgrp", {
+    ingress: [
+    { protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
+    ],
+});
+ 
+let server = new aws.ec2.Instance("web-server-www", {
+    tags: { "Name": "web-server-www" },
+    instanceType: "t2.micro",
+    securityGroups: [ group.name ], // reference the group object above
+    ami: "ami-c55673a0"             // AMI for us-east-2 (Ohio),
+});
+ 
+exports.group = group;
+exports.server = server;
+exports.publicIp = server.publicIp;
+exports.publicHostName = server.publicDns;
+{{< /highlight >}}
 
 And then rerun our tests:
 
+```
       Infrastructure
         #server
           ✓ must have a name tag
@@ -317,11 +322,11 @@ And then rerun our tests:
      
      
      3 passing (16ms)
+```
 
-They all passed -- huzzah! [**✓✓✓**]{style="color: #34bf36;"}
+They all passed -- huzzah! **✓✓✓**
 
-Deployment Testing
-------------------
+## Deployment Testing
 
 This style of testing is powerful and lets us do white box testing of
 the innards of how our infrastructure code works. This style of testing
@@ -351,16 +356,16 @@ your Pulumi program is written in, however.)
 By running a program through this integration test framework, you can
 ensure:
 
--   Your project's code is syntactically well formed and runs without
-    errors.
--   Your stack's configuration and secrets settings work and are
-    interpreted correctly.
--   Your project can be successfully deployed to your cloud provider of
-    choice.
--   Your project can be successfully updated from its starting state to
-    N other states.
--   Your project can be successfully destroyed and removed from your
-    cloud provider.
+- Your project's code is syntactically well formed and runs without
+  errors.
+- Your stack's configuration and secrets settings work and are
+  interpreted correctly.
+- Your project can be successfully deployed to your cloud provider of
+  choice.
+- Your project can be successfully updated from its starting state to
+  N other states.
+- Your project can be successfully destroyed and removed from your
+  cloud provider.
 
 As we will see soon, you can also leverage this framework to perform
 runtime validation.
@@ -377,39 +382,42 @@ objects](https://github.com/pulumi/examples/tree/master/aws-js-s3-folder):
 
 **example_test.go:**
 
-    package test
-     
-    import (
-        "os"
-        "path"
-        "testing"
-     
-        "github.com/pulumi/pulumi/pkg/testing/integration"
-    )
-     
-    func TestExamples(t *testing.T) {
-        awsRegion := os.Getenv("AWS_REGION")
-        if awsRegion == "" {
-            awsRegion = "us-west-1"
-        }
-        cwd, _ := os.Getwd()
-        integration.ProgramTest(t, &integration.ProgramTestOptions{
-            Quick:       true,
-            SkipRefresh: true,
-            Dir:         path.Join(cwd, "..", "..", "aws-js-s3-folder"),
-            Config: map[string]string{
-                "aws:region": awsRegion,
-            },
-        })
-    }
+{{< highlight GO >}}package test
+
+import (
+    "os"
+    "path"
+    "testing"
+ 
+    "github.com/pulumi/pulumi/pkg/testing/integration"
+)
+ 
+func TestExamples(t *testing.T) {
+    awsRegion := os.Getenv("AWS_REGION")
+    if awsRegion == "" {
+    awsRegion = "us-west-1"
+    }
+    cwd, _ := os.Getwd()
+    integration.ProgramTest(t, &integration.ProgramTestOptions{
+    Quick:       true,
+    SkipRefresh: true,
+    Dir:         path.Join(cwd, "..", "..", "aws-js-s3-folder"),
+    Config: map[string]string{
+        "aws:region": awsRegion,
+    },
+    })
+}
+{{< /highlight >}}
 
 This test runs through a basic lifecycle of stack creation, updating,
 and destruction, for the `aws-js-s3-folder` example. It takes about a
 minute or so to report success:
 
-    $ go test .
-    PASS
-    ok      ... 43.993s
+```
+$ go test .
+PASS
+ok      ... 43.993s
+```
 
 There are many, many options to control the behavior of these tests. For
 a full set of options, see [the `ProgramTestOptions` data
@@ -437,25 +445,26 @@ dependencies.
 To see a basic example of this, let's check that our program creates a
 single S3 Bucket:
 
-        integration.ProgramTest(t, &integration.ProgramTestOptions{
-            // as before...
-            ExtraRuntimeValidation: func(t *testing.T, stack integration.RuntimeValidationStackInfo) {
-                var foundBuckets int
-                for _, res := range stack.Deployment.Resources {
-                    if res.Type == "aws:s3/bucket:Bucket" {
-                        foundBuckets++
-                    }
-                }
-                assert.Equal(t, 1, foundBuckets, "Expected to find a single AWS S3 Bucket")
-            },
-        })
+{{< highlight GO >}}
+integration.ProgramTest(t, &integration.ProgramTestOptions{
+    // as before...
+    ExtraRuntimeValidation: func(t *testing.T, stack integration.RuntimeValidationStackInfo) {
+        var foundBuckets int
+        for _, res := range stack.Deployment.Resources {
+            if res.Type == "aws:s3/bucket:Bucket" {
+                foundBuckets++
+            }
+        }
+        assert.Equal(t, 1, foundBuckets, "Expected to find a single AWS S3 Bucket")
+    },
+})
+{{< /highlight >}}
 
 Now when we run `go test`, it will not only run through the battery of
 lifecycle tests but will also, after successfully standing up the stack,
 perform the extra validation against the resulting state.
 
-Runtime Testing
----------------
+## Runtime Testing
 
 All of the testing thus far has been exclusively about deployment
 behavior and the Pulumi resource model. What if you want to test that
@@ -479,25 +488,27 @@ state file to find the bucket and read this property directly, many
 times our stacks will export useful properties like this that we can use
 conveniently for verification:
 
-        integration.ProgramTest(t, &integration.ProgramTestOptions{
-                // as before ...
-            ExtraRuntimeValidation: func(t *testing.T, stack integration.RuntimeValidationStackInfo) {
-                url := "http://" + stack.Outputs["websiteUrl"].(string)
-                resp, err := http.Get(url)
-                if !assert.NoError(t, err) {
-                    return
-                }
-                if !assert.Equal(t, 200, resp.StatusCode) {
-                    return
-                }
-                defer resp.Body.Close()
-                body, err := ioutil.ReadAll(resp.Body)
-                if !assert.NoError(t, err) {
-                    return
-                }
-                assert.Contains(t, string(body), "Hello, Pulumi!")
-            },
-        })
+{{< highlight GO >}}
+    integration.ProgramTest(t, &integration.ProgramTestOptions{
+        // as before ...
+    ExtraRuntimeValidation: func(t *testing.T, stack integration.RuntimeValidationStackInfo) {
+        url := "http://" + stack.Outputs["websiteUrl"].(string)
+        resp, err := http.Get(url)
+        if !assert.NoError(t, err) {
+        return
+        }
+        if !assert.Equal(t, 200, resp.StatusCode) {
+        return
+        }
+        defer resp.Body.Close()
+        body, err := ioutil.ReadAll(resp.Body)
+        if !assert.NoError(t, err) {
+        return
+        }
+        assert.Contains(t, string(body), "Hello, Pulumi!")
+    },
+})
+{{< /highlight >}}
 
 Like our previous runtime validation checks, this will run in the
 harness right after the stack is stood up, all in response to a simple
@@ -505,23 +516,22 @@ harness right after the stack is stood up, all in response to a simple
 -- anything you can write in code using Go's test capabilities is
 within reach!
 
-Continuous Infrastructure Integration
--------------------------------------
+## Continuous Infrastructure Integration
 
 It's wonderful to be able to easily run these on demand, on a laptop,
 when you're iterating on infrastructure changes and want to verify them
 before submitting for code review. But we and many of our customers run
 infrastructure testing at various points in the development lifecycle:
 
--   In each pull request opened, to validate before allowing it to be
-    merged.
--   In response to each commit, to double check it was merged correctly.
--   On a recurring basis, such as nighty or even weekly for extended
-    testing.
--   As part of more exotic and thorough test programs, such as
-    performance or stress testing, which typically run over a longer
-    period of time, execute many things in parallel, and/or deploy the
-    same program multiple times.
+- In each pull request opened, to validate before allowing it to be
+  merged.
+- In response to each commit, to double check it was merged correctly.
+- On a recurring basis, such as nighty or even weekly for extended
+  testing.
+- As part of more exotic and thorough test programs, such as
+  performance or stress testing, which typically run over a longer
+  period of time, execute many things in parallel, and/or deploy the
+  same program multiple times.
 
 For each of these, Pulumi supports integration with your favorite
 continuous integration system. This gives you similar continuous
@@ -532,22 +542,19 @@ domains.
 Pulumi supports your existing CI systems. Here are a few of those
 supported:
 
--   [AWS Code
-    Services](https://pulumi.io/reference/cd-aws-code-services.html)
--   [Azure DevOps](https://pulumi.io/reference/cd-azure-devops.html)
--   [CircleCI](https://pulumi.io/reference/cd-circleci.html)
--   [GitHub Actions](https://pulumi.io/reference/cd-github-actions.html)
--   [GitLab CI](https://pulumi.io/reference/cd-gitlab-ci.html)
--   [Google Cloud
-    Build](https://pulumi.io/reference/cd-google-cloud-build.html)
--   [Travis](https://pulumi.io/reference/cd-travis.html)
+- [AWS Code Services](https://pulumi.io/reference/cd-aws-code-services.html)
+- [Azure DevOps](https://pulumi.io/reference/cd-azure-devops.html)
+- [CircleCI](https://pulumi.io/reference/cd-circleci.html)
+- [GitHub Actions](https://pulumi.io/reference/cd-github-actions.html)
+- [GitLab CI](https://pulumi.io/reference/cd-gitlab-ci.html)
+- [Google Cloud Build](https://pulumi.io/reference/cd-google-cloud-build.html)
+- [Travis](https://pulumi.io/reference/cd-travis.html)
 
 Please refer to the [Continuous Delivery
 documentation](https://pulumi.io/reference/cd.html) for a more
 comprehensive guide.
 
-Ephemeral Environments
-----------------------
+## Ephemeral Environments
 
 A very powerful capability this unlocks is the ability to spin up
 ephemeral environments solely for purposes of acceptance testing.
@@ -564,16 +571,13 @@ run inside of your CI pipelines. Simply install the App into your GitHub
 repos, and Pulumi in your CI, and your Pull Requests will light up with
 infrastructure previews, updates, and test results seamlessly:
 
-![pr-comment](https://blog.pulumi.com/hs-fs/hubfs/pr-comment.png?width=1552&name=pr-comment.png){width="1552"
-sizes="(max-width: 1552px) 100vw, 1552px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/pr-comment.png?width=776&name=pr-comment.png 776w, https://blog.pulumi.com/hs-fs/hubfs/pr-comment.png?width=1552&name=pr-comment.png 1552w, https://blog.pulumi.com/hs-fs/hubfs/pr-comment.png?width=2328&name=pr-comment.png 2328w, https://blog.pulumi.com/hs-fs/hubfs/pr-comment.png?width=3104&name=pr-comment.png 3104w, https://blog.pulumi.com/hs-fs/hubfs/pr-comment.png?width=3880&name=pr-comment.png 3880w, https://blog.pulumi.com/hs-fs/hubfs/pr-comment.png?width=4656&name=pr-comment.png 4656w"}
+![pr-comment](./pr-comment.png)
 
 By leveraging Pulumi for your core acceptance test workflow, you'll
 unlock new automation capabilities that improve your team's productivity
 and confidence in the quality of changes.
 
-In Summary
-----------
+## In Summary
 
 In this post, we saw that by using general purpose programming
 languages, we unlock many software engineering practices we've benefited
@@ -584,4 +588,3 @@ your CI system of choice.
 
 Pulumi is open source, free to use, and works with your favorite
 languages and clouds -- [give it a try today](https://pulumi.io/)!
-
