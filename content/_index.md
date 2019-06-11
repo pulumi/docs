@@ -15,6 +15,12 @@ noindex: true
         <a href="{{< relref "/quickstart" >}}"><button class="button primary">GET STARTED</button></a>
         <a href="{{< relref "/reference" >}}"><button class="button primary">LEARN</button></a>
     </p>
+    <p style="margin-top: 32px;">
+        <span style="font-weight: 600; background-color: #ee975c; border-radius: 4px; color: #fff; padding: 8px 16px; font-size: 16px">
+            Announcing Pulumi Crosswalk for AWS -- the easiest way to AWS.
+            <a href="{{< relref "/reference/crosswalk/aws/_index.md" >}}" style="color: #fff"><b>Learn more.</a>
+        </span>
+    </p>
 </div>
 
 <div class="card-table" style="background: #fafafa; margin: 64px 0 0 0; border-top: 1px solid #eee">
