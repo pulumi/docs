@@ -61,8 +61,9 @@ This example uses the default VPC and reasonable security defaults, but supports
 ## Getting Started
 
 To get started with Pulumi Crosswalk for AWS, ensure that you have [downloaded and installed Pulumi](
-/quickstart/install), and [configured it to work with your AWS account](/quickstart/aws/setup). Afterwards, select
-one of the relevant User Guides to get started:
+/quickstart/install), and [configured it to work with your AWS account](/quickstart/aws/setup). Afterwards,
+[try the Getting Started tutorial]({{< relref "/quickstart/aws/tutorial-service.md" >}}) or select one of the
+relevant User Guides to get started:
 
 ### Containers
 

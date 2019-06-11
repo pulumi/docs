@@ -7,6 +7,7 @@ aliases:
 menu:
   quickstart:
     parent: aws
+    weight: 2
 ---
 
 In this tutorial, we'll use JavaScript to deploy a simple webserver EC2 instance in AWS. The [code for this tutorial](https://github.com/pulumi/examples/tree/master/aws-js-webserver) is available on GitHub. 
