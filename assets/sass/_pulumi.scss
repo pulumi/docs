@@ -1,22 +1,14 @@
 @import "pulumi-constants";
 @import "pulumi-toc";
 
-// Drop the rounded corners for code snippets. Ideally we would just do this
-// for the code associated with our language chooser. However, there isn't a
-// way to associate the two. (Since the N language code blocks are siblings
-// to the lang chooser tabs.)
-pre.highlight {
-    border-radius: 0 !important;
-}
-
 // Force code snippets to scroll horizontally rather than word wrapping.
-pre.highlight code {
+pre.chroma code {
     white-space: pre;
 }
 
 // On MacOS the scrollbar is hidden by default. But without it there
 // isn't any clear indication that you can/should scroll.
-pre.highlight {
+pre.chroma {
     &::-webkit-scrollbar {
         -webkit-appearance: none;
         height: 7px;
@@ -321,10 +313,6 @@ pre {
     font-size: 14px;
     line-height: 1.5;
     margin-bottom: 24px;
-}
-
-pre.highlight {
-    border-radius: 2px !important;
 }
 
 h2, h3, h4 {
