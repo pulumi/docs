@@ -1,14 +1,26 @@
 ---
-title: "How to use Pulumi with AWS"
-meta_desc: "Use Pulumi and AWS to code, deploy, and manage cloud, serverless, and container apps and infrastructure"
+title: "Other AWS Services"
 menu:
-  aws:
-    name: AWS
-    identifier: aws
-    weight: 1
+  reference:
+    parent: crosswalk-aws
+    name: Other AWS Services
+    weight: 11
 ---
 
+<a href="{{< relref "_index.md" >}}">
+    <img src="/images/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
+</a>
+
+Pulumi Crosswalk for AWS supports all AWS services, not just those with dedicated articles in this User Guide.
+This includes services like DynamoDB, EC2, S3, and RDS, to name a few, and includes support for all of their features.
+If your favorite service isn't listed here, please contact us by [filing an issue in the docs repo](
+https://github.com/pulumi/docs) or by [joining the Pulumi Community Slack channel](https://slack.pulumi.io).
+
 ## Index of Services
+
+Here is a complete list of services supported by Pulumi Crosswalk for AWS, with a user guide link where available.
+The Pulumi API documentation includes a full list of classes, their properties, and typically one or more examples, for each
+service.
 
 <style>
 table {

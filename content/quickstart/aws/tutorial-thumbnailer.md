@@ -1,14 +1,16 @@
 ---
-title: "Tutorial: AWS Containers and Serverless"
+title: "Tutorial: Video Thumbnailer"
 aliases:
     - tutorial-thumbnailer.html
     - /quickstart/aws-extract-thumbnail.html
 menu:
   quickstart:
     parent: aws
+    weight: 5
 ---
 
-In this tutorial, we'll use TypeScript to combine serverless, containers and cloud infrastructure together into a "Colada" application. We use serverless functions as event triggers and containers for longer-running tasks.
+In this tutorial, we'll use combine serverless, containers and cloud infrastructure together into a fully functioning
+distributed application. We use serverless functions as event triggers and containers for longer-running tasks.
 
 We'll build an application that extracts a thumbnail from a video using AWS Lambda and
 [Fargate](https://aws.amazon.com/fargate/). Below is the architecture of the Pulumi application. The
