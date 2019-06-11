@@ -1,12 +1,12 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
-tags: ["todo"]
-date: "2017-01-01"
-draft: true
-description: "TODO: Put in a reasonable summary"
----
+title: "Upcoming AWS + Pulumi Webinar on Feb 5"
+authors: ["erin-xue"]
+tags: ["AWS", "CI/CD", "cloud-native-infrastructure"]
+date: "2019-01-09"
 
+summary: "Join our February 5th webinar to learn how to implement cloud native infrastructure across your organization."
+meta_image: RELATIVE_TO_PAGE/code-comparison.png
+---
 
 Pulumi is hosting [a webinar with AWS
 Fargate](https://www.pulumi.com/webinar/aws-fargate-and-pulumi/) **on
@@ -21,15 +21,15 @@ languages to deliver everything from VMs to Kubernetes to Serverless.
 
 Specifically, you will learn:
 
--   How using general-purpose programming languages provides familiar
-    and powerful programming concepts to infrastructure-as-code
-    challenges
--   How Pulumi can help build a library of code packages to enhance
-    efficiency when implementing standard policies, network best
-    practices, and more
--   Best practices for becoming a deployment-focused organization,
-    rather than configuration-focused, to continuously deliver new
-    cloud-native infrastructure with containerization
+- How using general-purpose programming languages provides familiar
+  and powerful programming concepts to infrastructure-as-code
+  challenges
+- How Pulumi can help build a library of code packages to enhance
+  efficiency when implementing standard policies, network best
+  practices, and more
+- Best practices for becoming a deployment-focused organization,
+  rather than configuration-focused, to continuously deliver new
+  cloud-native infrastructure with containerization
 
 Joining us is Pulumi customer [Learning
 Machine](https://www.learningmachine.com/). Adopting Pulumi helped
@@ -38,13 +38,9 @@ of JavaScript, improving time to ship code, time to provision and
 onboard new customers, and unify their Development and DevOps teams and
 techniques.
 
-<div>
+![code comparision](./code-comparison.png)
 
-[![null](https://lh4.googleusercontent.com/EMdcVi4iLa6gZjBJ7rZhScIkpGK71rLVB2YZ5n9oGj95EKT-I1ThwuS_oZGjVljuDzRdhFvW468g4fbIssrU47ANvy1fRuCWm47yA9i-Qb0t-wN2j7Am005c2mg4t9KImfA_zfk){width="600"}](https://cdn2.hubspot.net/hubfs/4429525/Content/AWS-Pulumi-CaseStudy.pdf)
-
-</div>
-
- 
+[Download the case study](./AWS-Pulumi-CaseStudy.pdf)
 
 This webinar will be useful to developers, System Architects, IT
 managers and DevOps managers. (register
@@ -55,9 +51,4 @@ Partner Solutions Architect), Luke Hoban (CTO, Pulumi), and Kim Hamilton
 Duffy (CTO & Principal Architect, Learning Machine).
 
 To learn more about the webinar, check out our
-[e-book](https://cdn2.hubspot.net/hubfs/4429525/Content/AWS-Ebook.pdf)
-and [case
-study](https://cdn2.hubspot.net/hubfs/4429525/Content/AWS-Pulumi-CaseStudy.pdf).
-
- 
-
+[e-book](./AWS-Ebook.pdf) and [case study](./AWS-Pulumi-CaseStudy.pdf).

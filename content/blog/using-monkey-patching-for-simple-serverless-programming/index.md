@@ -1,12 +1,11 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
-tags: ["todo"]
-date: "2017-01-01"
-draft: true
-description: "TODO: Put in a reasonable summary"
----
+title: "Serverless on AWS with Pulumi: simple, event-based functions"
+authors: ["cyrus-najmabadi"]
+tags: ["JavaScript", "serverless", "AWS"]
+date: "2019-01-14"
 
+summary: "How to make serverless programming on AWS simple with Pulumi using the regular programming languages. "
+---
 
 One of [Pulumi's](https://pulumi.io) goals from the very beginning was
 to be able to deliver a way to create cloud infrastructure with the real
@@ -21,44 +20,46 @@ api surface area into classes corresponding to resources you could
 create. Using the earliest version of the "@pulumi/aws" api, you could
 then create those resources using normal program flow logic like so:
 
-    // simplified for brevity
+{{< highlight javascript >}}
+// simplified for brevity
 
-    import * as aws from "@pulumi/aws";
-    import * as slack from "@slack/client";
+import * as aws from "@pulumi/aws";
+import * as slack from "@slack/client";
 
-    // Create a simple bucket.
-    const bucket = new aws.s3.Bucket("testbucket", {
-        serverSideEncryptionConfiguration: ...,
-        forceDestroy: true,
-    });
+// Create a simple bucket.
+const bucket = new aws.s3.Bucket("testbucket", {
+    serverSideEncryptionConfiguration: ...,
+    forceDestroy: true,
+});
 
-    // Create a lambda that will post a message to slack when the bucket changes.
-    // Note that we can pass a simple JavaScript/TypeScript lambda here thanks to the magic of Lambdas as Lambdas:
-    // https://blog.pulumi.com/lambdas-as-lambdas-the-magic-of-simple-serverless-functions
-    const lambda = new aws.lambda.CallbackFunction("postToSlack", { 
-        callback: async (e) => {
-          const client = new slack.WebClient(...);
-          for (const rec of e.Records) {
-            await client.chat.postMessage({ ... });
-          }
-        },
-        ...
-    });
+// Create a lambda that will post a message to slack when the bucket changes.
+// Note that we can pass a simple JavaScript/TypeScript lambda here thanks to the magic of Lambdas as Lambdas:
+// https://blog.pulumi.com/lambdas-as-lambdas-the-magic-of-simple-serverless-functions
+const lambda = new aws.lambda.CallbackFunction("postToSlack", { 
+    callback: async (e) => {
+        const client = new slack.WebClient(...);
+        for (const rec of e.Records) {
+        await client.chat.postMessage({ ... });
+        }
+    },
+    ...
+});
 
-    // Give the bucket permission to invoke the lambda.
-    const permission = new aws.lambda.Permission("invokelambda", {
-        function: lambda, action: "lambda:InvokeFunction", principal: "s3.amazonaws.com",
-        sourceArn: bucket.id.apply(bucketName => `arn:aws:s3:::${bucketName}`),
-    }));
+// Give the bucket permission to invoke the lambda.
+const permission = new aws.lambda.Permission("invokelambda", {
+    function: lambda, action: "lambda:InvokeFunction", principal: "s3.amazonaws.com",
+    sourceArn: bucket.id.apply(bucketName => `arn:aws:s3:::${bucketName}`),
+}));
 
-    // now hookup a notification that will trigger the lambda when any object is created in the bucket.
-    const notification = new aws.s3.BucketNotification("onAnyObjectCreated", {
-        bucket: bucket.id,
-        lambdaFunctions: [{
-            events: ["s3:ObjectCreated:*],
-            lambdaFunctionArn: lambda.arn,
-        }],
-    })
+// now hookup a notification that will trigger the lambda when any object is created in the bucket.
+const notification = new aws.s3.BucketNotification("onAnyObjectCreated", {
+    bucket: bucket.id,
+    lambdaFunctions: [{
+        events: ["s3:ObjectCreated:*],
+        lambdaFunctionArn: lambda.arn,
+    }],
+})
+{{< /highlight >}}
 
 Phew... that's a lot of code :-/ But it accurately conveys all the real
 AWS resources that need to be created in order to get this all working.
@@ -73,22 +74,24 @@ intuitive functionality to these Resource classes to make them easier to
 use. Before discussing how that was done, let's first see what the
 result of that patching now allows you to write instead:
 
-    import * as aws from "@pulumi/aws";
-    import * as slack from "@slack/client";
+{{< highlight javascript >}}
+import * as aws from "@pulumi/aws";
+import * as slack from "@slack/client";
 
-    // Create a simple bucket.
-    const bucket = new aws.s3.Bucket("testbucket", {
-        serverSideEncryptionConfiguration: ...,
-        forceDestroy: true,
-    });
+// Create a simple bucket.
+const bucket = new aws.s3.Bucket("testbucket", {
+    serverSideEncryptionConfiguration: ...,
+    forceDestroy: true,
+});
 
-    // Create a lambda that will post a message to slack when the bucket changes.
-    bucket.onObjectCreated("postToSlack", async (e) => {
-      const client = new slack.WebClient(...);
-      for (const rec of e.Records) {
-        await client.chat.postMessage({ ... });
-      }
-    });
+// Create a lambda that will post a message to slack when the bucket changes.
+bucket.onObjectCreated("postToSlack", async (e) => {
+    const client = new slack.WebClient(...);
+    for (const rec of e.Records) {
+    await client.chat.postMessage({ ... });
+    }
+});
+{{< /highlight >}}
 
 That's it! :-) No need to manually create Lamdbas or Permissions or
 BucketNotification. No need to explicitly configure settings for common
@@ -109,18 +112,20 @@ level, adding more functionality to a type is trivial, just by
 augmenting the `prototype` chain. We do that simply just with code like
 so:
 
-    Bucket.prototype.onObjectCreated = function (this: Bucket, name, handler, args, opts) {
-        args = args || {};
-        args.event = args.event || "*";
+{{< highlight javascript >}}
+Bucket.prototype.onObjectCreated = function (this: Bucket, name, handler, args, opts) {
+    args = args || {};
+    args.event = args.event || "*";
 
-        const argsCopy = {
-            filterPrefix: args.filterPrefix,
-            filterSuffix: args.filterSuffix,
-            events: ["s3:ObjectCreated:" + args.event],
-        };
+    const argsCopy = {
+        filterPrefix: args.filterPrefix,
+        filterSuffix: args.filterSuffix,
+        events: ["s3:ObjectCreated:" + args.event],
+    };
 
-        return this.onEvent(name, handler, argsCopy, opts);
-    }
+    return this.onEvent(name, handler, argsCopy, opts);
+}
+{{< /highlight >}}
 
 Here you can see how we've added the `onObjectCreated` method to
 `Bucket`'s `prototype` so that it will be available on all instances of
@@ -132,14 +137,16 @@ available at runtime. We also need to update the type-definition for
 function is now available. This fortunately also simple, and all we have
 to do is the following:
 
-    declare module "./bucket" {
-        interface Bucket {
-            /** * Creates a new subscription to events fired from this Bucket to the handler provided, * along with options to control the behavior of the subscription. The handler will be * called whenever a matching [s3.Object] is created. */
-            onObjectCreated(
-                name: string, handler: BucketEventHandler,
-                args?: ObjectCreatedSubscriptionArgs,
-                opts?: pulumi.ComponentResourceOptions): BucketEventSubscription;
-         // ...
+{{< highlight typescript >}}
+declare module "./bucket" {
+    interface Bucket {
+        /** * Creates a new subscription to events fired from this Bucket to the handler provided, * along with options to control the behavior of the subscription. The handler will be * called whenever a matching [s3.Object] is created. */
+        onObjectCreated(
+            name: string, handler: BucketEventHandler,
+            args?: ObjectCreatedSubscriptionArgs,
+            opts?: pulumi.ComponentResourceOptions): BucketEventSubscription;
+        // ...
+{{< /highlight >}}
 
 You can see the [full patching
 here](https://github.com/pulumi/pulumi-aws/blob/71f11fdea5c7224dd93b774c450d6fc7f0d44b88/sdk/nodejs/s3/s3Mixins.ts#L210-L253).
@@ -159,4 +166,3 @@ more natural and intuitive. Hopefully this gives a good taste of [what's
 possible with Pulumi](https://pulumi.io) and why we feel like this is
 the best way for people to create and update their cloud infrastructure
 using real programming languages!
-
