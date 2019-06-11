@@ -5,10 +5,10 @@ noindex: true
 <div class="card-table" style="margin-top: 24px">
     <a href="https://www.pulumi.com"><img src="/images/logo/logo.svg" alt="Pulumi" width="300"></a>
     <h2 class="get-to-the-cloud no-anchor">
-        Cloud Native Infrastructure as Code
+        Modern Infrastructure as Code
     </h2>
     <h3 class="get-to-the-cloud-sub no-anchor">
-        Provision infrastructure on any cloud using your favorite language.
+        Create, deploy, and manage infrastructure on any cloud using your favorite language.
     </h3>
     <p style="text-align: center; margin-bottom: 0">
         <a href="{{< relref "/quickstart/install.md" >}}"><button class="button primary">INSTALL</button></a>
