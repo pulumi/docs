@@ -4,7 +4,7 @@ aliases: ["cd.html"]
 menu:
   reference:
     identifier: cd
-    weight: 5
+    weight: 8
 ---
 
 Pulumi is great for continuous deployment and supports a range of workflows.  In fact, our team uses Pulumi

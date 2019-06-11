@@ -3,8 +3,8 @@ title: "Pulumi Crosswalk for AWS"
 menu:
   reference:
     identifier: crosswalk-aws
-    name: Crosswalk for AWS
-    weight: 8
+    name: Crosswalk for AWS 🆕
+    weight: 5
 ---
 
 <a href="{{< relref "_index.md" >}}">

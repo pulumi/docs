@@ -4,7 +4,7 @@ aliases: ["languages.html"]
 menu:
   reference:
     identifier: languages
-    weight: 7
+    weight: 6
 ---
 
 Pulumi is a multi-language runtime. Your choice of language does not affect which [clouds]({{< relref "clouds.md" >}}) may be

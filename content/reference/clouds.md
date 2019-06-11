@@ -6,7 +6,7 @@ aliases:
 menu:
   reference:
     identifier: clouds
-    weight: 6
+    weight: 4
 ---
 
 Pulumi supports many clouds using the same languages, CLI, and deployment workflow. Tutorials are available below.
