@@ -1,105 +1,99 @@
 <footer class="main-footer">
-    <div class="footer-nav-block">
-        <div class="container-fluid">
-            <div class="row">
-
-                <div class="col-md-4">
-                    <div class="footer-info">
-                        <a href="https://www.pulumi.com" class="hidden-xs hidden-sm">
-                            <img src="/images/logo/logo-white.svg" alt="Pulumi" class="logo">
-                        </a>
-                        <ul class="social-channels">
-                            <li><a href="https://twitter.com/pulumicorp" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="https://www.linkedin.com/company/pulumi/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                            <li><a href="https://github.com/pulumi/" target="_blank"><i class="fab fa-github"></i></a></li>
-                            <li><a href="https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw" target="_blank"><i class="fab fa-youtube"></i></a></li>
-                            <li><a href="https://slack.pulumi.io/" target="_blank"><i class="fab fa-slack-hash"></i></a></li>
-                        </ul>
-                        {{/* Note: The "2006" is just how dates are formatted; it will be replaced with the current year. */}}
-                        <p class="legal">&copy; {{ now.Format "2006" }} Pulumi. All rights reserved.</p>
-                    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="footer-info">
+                    <a href="https://www.pulumi.com" class="hidden-xs hidden-sm">
+                        <img src="/images/logo/logo-white.svg" alt="Pulumi" class="logo">
+                    </a>
+                    <ul class="social">
+                        <li><a href="https://twitter.com/pulumicorp" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.linkedin.com/company/pulumi/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://github.com/pulumi/" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="https://slack.pulumi.io/" target="_blank"><i class="fab fa-slack-hash"></i></a></li>
+                    </ul>
                 </div>
+            </div>
 
-                <div class="col-md-8">
-                    <div class="row">
-                        <nav class="footer-nav-wrapper">
-                            <div class="col-xs-6 col-sm-3 col-md-6 col-lg-3" data-mh="col">
-                                <ul class="footer-nav">
-                                    <li>
-                                        <a href="/docs/quickstart/aws/tutorial-service/">Containers</a>
-                                    </li>
-                                    <li>
-                                        <a href="/docs/quickstart/aws/tutorial-rest-api/">Serverless</a>
-                                    </li>
-                                    <li>
-                                        <a href="/docs/quickstart/aws/tutorial-ec2-webserver/">Infrastructure</a>
-                                    </li>
-                                    <li>
-                                        <a href="/docs/quickstart/kubernetes/">Kubernetes</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
+            <div class="col-md-8">
+                <div class="row">
+                    <nav class="footer-nav-wrapper">
+                        <div class="col-xs-6 col-sm-4" data-mh="col">
+                            <ul class="footer-nav">
+                                <li>
+                                    <a href="/docs/quickstart/aws/tutorial-service/">Containers</a>
+                                </li>
+                                <li>
+                                    <a href="/docs/quickstart/aws/tutorial-rest-api/">Serverless</a>
+                                </li>
+                                <li>
+                                    <a href="/docs/quickstart/aws/tutorial-ec2-webserver/">Infrastructure</a>
+                                </li>
+                                <li>
+                                    <a href="/docs/quickstart/kubernetes/">Kubernetes</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
 
-                        <nav class="footer-nav-wrapper">
-                            <div class="col-xs-6 col-sm-3 col-md-6 col-lg-3" data-mh="col">
-                                <ul class="footer-nav">
-                                    <li>
-                                        <a href="/docs/install/">Install</a>
-                                    </li>
-                                    <li>
-                                        <a href="/docs/quickstart/">Get Started</a>
-                                    </li>
-                                    <li>
-                                        <a href="/docs/reference/">Documentation</a>
-                                    </li>
-                                    <li>
-                                        <a href="/docs/reference/pkg">APIs</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
+                    <nav class="footer-nav-wrapper">
+                        <div class="col-xs-6 col-sm-4" data-mh="col">
+                            <ul class="footer-nav">
+                                <li>
+                                    <a href="/docs/quickstart/aws/">AWS</a>
+                                </li>
+                                <li>
+                                    <a href="/docs/quickstart/azure/">Azure</a>
+                                </li>
+                                <li>
+                                    <a href="/docs/quickstart/gcp/">Google Cloud</a>
+                                </li>
+                                <li>
+                                    <a href="/docs/quickstart/kubernetes/">Kubernetes</a>
+                                </li>
+                                <li>
+                                    <a href="/docs/quickstart/openstack/">OpenStack</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
 
-                        <nav class="footer-nav-wrapper">
-                            <div class="col-xs-6 col-sm-3 col-md-6 col-lg-3" data-mh="col">
-                                <ul class="footer-nav">
-                                    <li>
-                                        <a href="/docs/quickstart/aws/">AWS</a>
-                                    </li>
-                                    <li>
-                                        <a href="/docs/quickstart/azure/">Azure</a>
-                                    </li>
-                                    <li>
-                                        <a href="/docs/quickstart/gcp/">Google Cloud</a>
-                                    </li>
-                                    <li>
-                                        <a href="/docs/quickstart/kubernetes/">Kubernetes</a>
-                                    </li>
-                                    <li>
-                                        <a href="/docs/quickstart/cloudfx/">Cloud Framework</a>
-                                    </li>
-                                    <li>
-                                        <a href="/docs/quickstart/openstack/">OpenStack</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
-
-                        <nav class="footer-nav-wrapper">
-                            <div class="col-xs-6 col-sm-3 col-md-6 col-lg-3" data-mh="col">
-                                <ul class="footer-nav">
-                                    <li>
-                                        <a href="https://github.com/pulumi" target="_blank">GitHub</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://blog.pulumi.com/">Blog</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
+                    <nav class="footer-nav-wrapper">
+                        <div class="col-xs-6 col-sm-4" data-mh="col">
+                            <ul class="footer-nav">
+                                <li>
+                                    <a href="/about/">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="/careers/">Careers</a>
+                                </li>
+                                <li>
+                                    <a href="/support/">Support</a>
+                                </li>
+                                <li>
+                                    <a href="/contact/">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
                 </div>
+            </div>
+        </div>
 
+        <div class="row legal">
+            <div class="col-md-4">
+                {{/* Note: The "2006" is just how dates are formatted; it will be replaced with the current year. */}}
+                <p>&copy; {{ now.Format "2006" }} Pulumi. All rights reserved.</p>
+            </div>
+            <div class="col-md-8">
+                <ul>
+                    <li><a href="/trademark/">Trademark</a></li>
+                    <li><a href="/acceptable-use/">Acceptable Use</a></li>
+                    <li><a href="/terms-and-conditions/">Terms and Conditions</a></li>
+                    <li><a href="/privacy/">Privacy</a></li>
+                    <li><a href="/professional-services-agreement/">Professional Services Agreement</a></li>
+                </ul>
             </div>
         </div>
     </div>
