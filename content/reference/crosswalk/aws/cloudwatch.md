@@ -8,7 +8,7 @@ menu:
 ---
 
 <a href="{{< relref "_index.md" >}}">
-    <img src="/images/reference/crosswalk-aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
+    <img src="/images/reference/crosswalk/aws/logo.svg" align="right" width="280" style="margin: 0 0 32px 16px;">
 </a>
 
 [Amazon CloudWatch](https://aws.amazon.com/cloudwatch/) is a monitoring and management service built for developers,
