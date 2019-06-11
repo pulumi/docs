@@ -183,7 +183,7 @@ $code-font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
         background-color: $primary2;
         border: none;
 
-        :hover {
+        &:hover {
             background-color: #66deff;
         }
     }
