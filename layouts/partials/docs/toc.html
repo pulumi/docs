@@ -15,7 +15,7 @@
 {{ end }}
 
 {{ if $has_toc }}
-<div class="toc pr-4">
+<div class="toc">
     {{ $page := . }}
     {{ $lastindex := (sub (len $menu) 1) }}
 
@@ -25,7 +25,7 @@
 
         {{ if eq $page.RelPermalink .URL }}
             {{ $toggle_state = "toggleVisible" }}
-            {{ $sidenav_selected = "sidenav-selected" }}
+            {{ $sidenav_selected = "active" }}
         {{ else if isset $page.Params "expanded_url" }}
             {{ if eq $page.Params.expanded_url .URL }}
                 {{ $toggle_state = "toggleVisible" }}
@@ -45,14 +45,14 @@
                     </div>
                 </div>
                 <div class="expanded">
-                    <div class="sidenav-topic {{ $sidenav_selected }}">
+                    <div class="sidenav-topic {{ if .HasChildren }} sidenav-parent {{ end }} {{ $sidenav_selected }}">
                         <a data-title="{{ .Name }}" href="{{ .URL }}">{{ .Name }}</a>
                         {{- if .HasChildren -}}
                             &nbsp;<span class="toggleButton">▾</span>
                         {{- end -}}
                     </div>
                     {{ if .HasChildren }}
-                        <div class="sidenav-subsection">
+                        <div class="sidenav-subsection text-sm">
                             {{ template "tocsub" (dict "page" $page "menu" . "prefix_selection" false) }}
                         </div>
                     {{ end }}
@@ -70,7 +70,7 @@
     {{ range .menu.Children }}
         {{ $sidenav_selected := "" }}
         {{ if or (eq $page.RelPermalink .URL) (and $prefix_selection (hasPrefix $page.RelPermalink .URL)) }}
-            {{ $sidenav_selected = "sidenav-selected" }}
+            {{ $sidenav_selected = "text-purple" }}
         {{ end }}
 
         {{ if .HasChildren }}
@@ -83,7 +83,7 @@
                 </div>
             </div>
         {{ else }}
-            <div class="sidenav-topic {{ $sidenav_selected }}">
+            <div class="sidenav-topic mb-2 {{ $sidenav_selected }}">
                 <a data-title="{{ .Name }}" href="{{ .URL }}">{{ .Name }}</a>
             </div>
         {{ end }}
