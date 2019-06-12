@@ -4,6 +4,11 @@ title = "Pulumi"
 
 disableKinds = ["category", "RSS"]
 
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+sectionPagesMenu = "main"
+
 [taxonomies]
   author = "authors"
   tag    = "tags"
@@ -11,11 +16,6 @@ disableKinds = ["category", "RSS"]
 [permalinks]
   authors = "/blog/author/:slug/"
   tags    = "/blog/tag/:slug/"
-
-pygmentsCodefences = true
-pygmentsUseClasses = true
-
-sectionPagesMenu = "main"
 
 [blackfriday]
     fractions = false
