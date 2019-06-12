@@ -16,13 +16,20 @@
 
             <h2>What is AWS {{ .Params.service }}?</h2>
 
-            <img class="how-to-logo" src="/images/docs/brand/aws.png" alt="AWS" width="100">
 
-            <p>
-                AWS {{ .Params.service }} {{ .Params.description }}. Find out more at <a href="{{ .Params.aws_here }}">AWS here</a>.
-            </p>
+            <div class="md:flex">
+                <div class="flex-1">
+                    <img class="m-0 p-0" src="/images/docs/brand/aws.png" alt="AWS">
+                </div>
 
-            {{ partial "docs/aws/find-out-more.html" . }}
+                <p class="flex-1 mx-8 mt-0">
+                    AWS {{ .Params.service }} {{ .Params.description }}. Find out more at <a href="{{ .Params.aws_here }}">AWS here</a>.
+                </p>
+
+                <div class="flex-1">
+                    {{ partial "docs/aws/find-out-more.html" . }}
+                </div>
+            </div>
 
             {{ .Content }}
         </div>
