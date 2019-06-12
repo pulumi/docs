@@ -1,12 +1,11 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
-tags: ["todo"]
-date: "2017-01-01"
-draft: true
-description: "TODO: Put in a reasonable summary"
----
+title: "Running a Serverless Node.js HTTP Server on AWS and Azure"
+authors: ["cyrus-najmabadi"]
+tags: ["serverless"]
+date: "2018-10-02"
 
+description: "The newly introduced cloud.HttpServer in Pulumi makes it easy to serve a standard Node.js HTTP server as a serverless API on any cloud platform. In this post, we walk through some of the background on why we introduced this new API and how it fits into the Node.js HTTP ecosystem."
+---
 
 The newly
 introduced [cloud.HttpServer](https://github.com/pulumi/pulumi-cloud/blob/master/api/httpServer.ts) in
@@ -244,4 +243,3 @@ here](https://pulumi.io/quickstart/cloudfx/tutorial-rest-api.html), and
 join us on Wednesday 3rd October at 11am PDT to hear more about
 [serverless programming with Pulumi on our YouTube live
 stream](https://www.youtube.com/watch?v=k8ceyQuJiVM). 
-
