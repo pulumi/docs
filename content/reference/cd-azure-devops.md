@@ -328,7 +328,7 @@ In your pipeline configuration, you need to then call these scripts when appropr
 set -e -x
 # Download and install required tools.
 # pulumi
-curl -L https://get.pulumi.com/ | bash
+curl -fsSL https://get.pulumi.com/ | bash
 export PATH=$PATH:$HOME/.pulumi/bin
 # Login into pulumi. This will require the PULUMI_ACCESS_TOKEN environment variable
 pulumi login

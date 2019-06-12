@@ -74,7 +74,7 @@ to run Pulumi to that.
 ```yaml
 language: generic
 before_install:
-  - curl -L https://get.pulumi.com/ | bash -s -- --version 0.14.3
+  - curl -fsSL https://get.pulumi.com/ | sh
   - export PATH=$PATH:$HOME/.pulumi/bin
 script:
   - ./scripts/travis_${TRAVIS_EVENT_TYPE}.sh
