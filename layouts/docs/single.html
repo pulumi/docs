@@ -5,14 +5,14 @@
             {{ partial "docs/toc.html" . }}
         </div>
 
-        <div class="md:w-6/12">
+        <div class="md:w-7/12">
             <h1>{{ .Title }}</h1>
             {{ .Content }}
         </div>
 
-        <div class="md:w-3/12">
+        <div class="md:w-2/12">
             {{ with .File }}
-                <a href="{{ $.Site.Params.repositoryURL }}/edit/{{ $.Site.Params.repositoryBranch }}/content/{{ .Path }}" target="_blank">
+                <a class="link" href="{{ $.Site.Params.repositoryURL }}/edit/{{ $.Site.Params.repositoryBranch }}/content/{{ .Path }}" target="_blank">
                     <i class="fab fa-github"></i>
                     Edit This Page
                 </a>
