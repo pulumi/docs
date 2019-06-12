@@ -1,12 +1,11 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
-tags: ["todo"]
-date: "2017-01-01"
-draft: true
-description: "TODO: Put in a reasonable summary"
----
+title: "Simple Serverless programming with Google Cloud Functions and Pulumi"
+authors: ["cyrus-najmabadi"]
+tags: ["serverless", "GCP"]
+date: "2019-04-10"
 
+description: "Serverless has never been simpler than it is with Pulumi + Google Cloud Functions. In just a few lines of code, you can serve a simple HTTP API, respond to a pubsub topic or uploads of new objects to a storage bucket, and more. Learn how to fit these together to make a real-world cloud application."
+---
 
 Pulumi lets you create, deploy, and manage Google Cloud applications and
 infrastructure in familiar languages like JavaScript, TypeScript, and
@@ -16,8 +15,7 @@ already know and love. Since serverless is all about focusing more on
 your application code, and less on infrastructure and configuration
 toil, we absolutely love Google Functions.
 
-The Simplest Way to Serverlesss
--------------------------------
+## The Simplest Way to Serverlesss
 
 In fact, serverless has never been simpler than it is when you combine
 Pulumi with Google Cloud Functions. Want to serve a simple HTTP API with
@@ -66,8 +64,7 @@ objects to your [storage](https://cloud.google.com/storage/) bucket:
         console.log(`New file uploaded: ${data.name}`);
     });
 
-A Complete Google Functions Slack Bot
--------------------------------------
+## A Complete Google Functions Slack Bot
 
 For an idea of how you might fit these together to make a real-world
 cloud application, let's look a simple skeleton structure for a [Slack
@@ -176,8 +173,7 @@ Not to mention that by doing all of that, you can [achieve continuous
 deployment using GitOps and Cloud
 Build](https://pulumi.io/reference/cd-google-cloud-build.html).
 
-Updating Your Google Functions Code
------------------------------------
+## Updating Your Google Functions Code
 
 This is a lot to figure out to manage cloud applications and
 infrastructure. If you want to tweak things even slightly you might need
@@ -212,8 +208,7 @@ in the program:
 
 One command later, and your entire stack is updated properly!
 
-Winding Down
-------------
+## Winding Down
 
 The cloud provides tremendous potential, and we want to make it easy for
 developers to tap into that potential. Using Pulumi, it's easy to blur
@@ -234,4 +229,3 @@ this topic here: [Lambdas as Lambdas: The magic of simple serverless
 Functions](../../../com/pulumi/blog/lambdas-as-lambdas-the-magic-of-simple-serverless-functions.html).
 We're leveraging the same great programming language and analysis
 framework to power our GCP solution here.
-

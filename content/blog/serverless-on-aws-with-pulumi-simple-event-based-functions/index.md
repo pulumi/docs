@@ -1,12 +1,11 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
+title: "Serverless on AWS with Pulumi: simple, event-based functions"
+authors: ["cyrus-najmabadi"]
 tags: ["todo"]
-date: "2017-01-01"
-draft: true
+date: "2019-01-14"
+
 description: "TODO: Put in a reasonable summary"
 ---
-
 
 One of Pulumi's goals is to provide the simplest way possible to do
 serverless programming on AWS by enabling you to create cloud
@@ -16,8 +15,7 @@ these languages, like flow control, inheritance, composition, and so on,
 provide the right abstractions to effectively build up infrastructure in
 a simple and familiar way.
 
-In a [previous
-post](../../../com/pulumi/blog/lambdas-as-lambdas-the-magic-of-simple-serverless-functions.html)
+In a [previous post](../lambdas-as-lambdas-the-magic-of-simple-serverless-functions/)
 we focused on how Pulumi could allow you to simply create an AWS Lambda
 out of your own JavaScript function. While this was much easier than
 having to manually create a [Lambda Deployment
@@ -121,8 +119,7 @@ look for that post!
 Now, while it's how the above examples worked, it's also worth noting
 that the use of a JavaScript function for the AWS Lambda is not
 required. You can hook up a serverless event to call an AWS Lambda you
-create just by using [new
-aws.lambda.Function](https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L14).
+create just by using [new aws.lambda.Function](https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L14).
 Or, you can get a reference to an existing AWS Lambda created outside of
 Pulumi and have that be the receiver of your serverless event. Here's
 how that would look:
@@ -145,16 +142,11 @@ how that would look:
 We've tried to make it this simple to hook up many interesting AWS
 serverless events. For example, you can register to hear about events on
 [S3 Buckets](https://docs.aws.amazon.com/lambda/latest/dg/with-s3.html),
-[SNS
-Topics](https://docs.aws.amazon.com/sns/latest/dg/sns-lambda-as-subscriber.html),
-[SQS
-Queues](https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html),
-[Kinesis
-Streams](https://docs.aws.amazon.com/lambda/latest/dg/with-kinesis.html),
-[DynamoDB
-Tables](https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html),
-[Cloudwatch
-Events](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/RunLambdaSchedule.html),
+[SNS Topics](https://docs.aws.amazon.com/sns/latest/dg/sns-lambda-as-subscriber.html),
+[SQS Queues](https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html),
+[Kinesis Streams](https://docs.aws.amazon.com/lambda/latest/dg/with-kinesis.html),
+[DynamoDB Tables](https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html),
+[Cloudwatch Events](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/RunLambdaSchedule.html),
 and more. We've tried to provide these prebuilt components for the most
 common and interesting cases. If there's some serverless event we
 haven't added support for that you want to use, definitely let us know!
@@ -202,4 +194,3 @@ resources). It's then simple to add code to respond to events and call
 new or existing Lambdas. And, if you use a JavaScript function to create
 your Lambda, you can reference those resources along with the AWS SDK
 easily, all within the same application code!
-

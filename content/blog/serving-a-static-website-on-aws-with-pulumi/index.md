@@ -1,12 +1,11 @@
 ---
-title: "TODO Port frontmatter"
+title: "Serving a Static Website on AWS with Pulumi"
 authors: ["chris-smith"]
 tags: ["todo"]
-date: "2017-01-01"
-draft: true
-description: "TODO: Put in a reasonable summary"
----
+date: "2018-07-17"
 
+description: "This post covers using Pulumi to create the infrastructure for serving a static website on AWS including the fun parts such as HTTPS certificates, content distribution networks, and attaching it to a custom domain."
+---
 
 Hello! This post covers using [Pulumi](https://pulumi.io) to create the
 infrastructure for serving a static website on AWS. The full source code
@@ -28,7 +27,7 @@ We use a setup similar to the one described in this post for powering
 our own static websites, like [www.pulumi.com](http://www.pulumi.com/)
 and [pulumi.io](http://pulumi.io/).
 
-### Overview
+## Overview
 
 The architecture we will use for the website is to follow AWS "[Web
 Application Hosting](https://aws.amazon.com/architecture/)" reference
@@ -45,7 +44,7 @@ This integrates several AWS products: 
     Manager](https://aws.amazon.com/certificate-manager/), for serving
     content over HTTPS
 
-### How it Works
+## How it Works
 
 If you are already familiar with static hosting on AWS, feel free to go
 directly to our [examples
@@ -55,7 +54,7 @@ aws-ts-static-website folder. 
 If you are new to AWS, we'll break down how to configure each component
 using Pulumi.
 
-#### Uploading static content to S3
+## Uploading static content to S3
 
 Amazon S3 is a service for storing and retrieving files. This is where
 we will store the website's contents, and it is done by just creating an
@@ -110,7 +109,7 @@ content can be served much faster by caching resources across the world.
 Rather than requiring every web request to go directly to the source S3
 bucket.
 
-#### Setting up a CloudFront CDN backed by S3
+## Setting up a CloudFront CDN backed by S3
 
 There are a lot of details to configuring a CloudFront distribution,
 from caching policies to rendering custom error pages. While some of
@@ -145,7 +144,7 @@ for using using constants like tenMinutes rather than the number 600.
         ...
     };
 
-#### Attaching it to a domain via Route53
+## Attaching it to a domain via Route53
 
 Finally, we hook up our domain to the CloudFront distribution. We just
 create an alias (A) record that aliases our own domain (e.g.
@@ -186,7 +185,7 @@ need to manually log into the AWS console, enter various DNS records,
 etc. You can create and populate the S3 bucket, setup the CloudFront
 CDN, and attach it to Route53 all within the same Pulumi program.
 
-### Wrapping Up
+## Wrapping Up
 
 With around [200 lines of
 code](https://github.com/pulumi/examples/blob/master/aws-ts-static-website/index.ts)

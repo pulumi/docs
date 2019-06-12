@@ -1,10 +1,10 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
-tags: ["todo"]
-date: "2017-01-01"
-draft: true
-description: "TODO: Put in a reasonable summary"
+title: "Simple, Reproducible Kubernetes Deployments"
+authors: ["alex-clemmer"]
+tags: ["kubernetes", "infrastructure"]
+date: "2018-08-24"
+
+description: "In this post, we’ll see how Pulumi, an open source cloud native development platform, lets you express Kubernetes programs in real programming languages, like TypeScript, instead of endless YAML templates, in addition to delivering simple and reproducible, yet powerful Kubernetes, deployment workflows."
 ---
 
 
@@ -22,11 +22,9 @@ in real programming languages, like TypeScript, instead of endless YAML
 templates, but also how Pulumi delivers simple and reproducible, yet
 powerful, Kubernetes deployment workflows.
 
-[Less YAML, More
-Robustness]{style="font-family: Ubuntu, sans-serif; font-size: 30px;"}
+## Less YAML, More Robustness
 
-[Pulumi
-0.15](https://blog.pulumi.com/announcing-pulumi-0.15-kubernetes-cicd-openstack-and-more)
+[Pulumi 0.15](https://blog.pulumi.com/announcing-pulumi-0.15-kubernetes-cicd-openstack-and-more)
 introduced Kubernetes support to Pulumi. When we started working on
 this, we already loved being able to write in our favorite languages --
 with the benefits of IDEs, classes and functions, and reuse through
@@ -50,9 +48,7 @@ know what's up with a deployment? Did something fail, or get stuck?
 The vision in our heads, which we set out to build, was something more
 like this:
 
-![error](https://blog.pulumi.com/hs-fs/hubfs/error.gif?width=2190&name=error.gif){width="2190"
-sizes="(max-width: 2190px) 100vw, 2190px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/error.gif?width=1095&name=error.gif 1095w, https://blog.pulumi.com/hs-fs/hubfs/error.gif?width=2190&name=error.gif 2190w, https://blog.pulumi.com/hs-fs/hubfs/error.gif?width=3285&name=error.gif 3285w, https://blog.pulumi.com/hs-fs/hubfs/error.gif?width=4380&name=error.gif 4380w, https://blog.pulumi.com/hs-fs/hubfs/error.gif?width=5475&name=error.gif 5475w, https://blog.pulumi.com/hs-fs/hubfs/error.gif?width=6570&name=error.gif 6570w"}
+![Oh no, an error!](./error.gif)
 
 In this example, we can clearly see the entire set of resource objects
 being created, their ongoing status, and when and why something might
@@ -62,13 +58,9 @@ screengrab of our CLI.
 The service works in tandem with the CLI, so we always have a history
 and record of successful or failed deployments:
 
-![Screen Shot 2018-08-24 at 4.26.16
-PM](https://blog.pulumi.com/hs-fs/hubfs/Screen%20Shot%202018-08-24%20at%204.26.16%20PM.png?width=882&name=Screen%20Shot%202018-08-24%20at%204.26.16%20PM.png){width="882"
-sizes="(max-width: 882px) 100vw, 882px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Screen%20Shot%202018-08-24%20at%204.26.16%20PM.png?width=441&name=Screen%20Shot%202018-08-24%20at%204.26.16%20PM.png 441w, https://blog.pulumi.com/hs-fs/hubfs/Screen%20Shot%202018-08-24%20at%204.26.16%20PM.png?width=882&name=Screen%20Shot%202018-08-24%20at%204.26.16%20PM.png 882w, https://blog.pulumi.com/hs-fs/hubfs/Screen%20Shot%202018-08-24%20at%204.26.16%20PM.png?width=1323&name=Screen%20Shot%202018-08-24%20at%204.26.16%20PM.png 1323w, https://blog.pulumi.com/hs-fs/hubfs/Screen%20Shot%202018-08-24%20at%204.26.16%20PM.png?width=1764&name=Screen%20Shot%202018-08-24%20at%204.26.16%20PM.png 1764w, https://blog.pulumi.com/hs-fs/hubfs/Screen%20Shot%202018-08-24%20at%204.26.16%20PM.png?width=2205&name=Screen%20Shot%202018-08-24%20at%204.26.16%20PM.png 2205w, https://blog.pulumi.com/hs-fs/hubfs/Screen%20Shot%202018-08-24%20at%204.26.16%20PM.png?width=2646&name=Screen%20Shot%202018-08-24%20at%204.26.16%20PM.png 2646w"}
+![deployments](./screenshot.png)
 
-Let's Deploy Some Code!
---------------------------------------------------------
+## Let's Deploy Some Code!
 
 In this post, we'll get a taste of this and several other aspects of the
 Pulumi workflow by deploying a very simple app -- an
@@ -89,8 +81,7 @@ In the
 you'll find instructions for the prerequisites -- installing Pulumi,
 setting up a local or remote Kubernetes cluster, etc.
 
-Application Config-as-Code
-----------------------------------------------------------
+## Application Config-as-Code
 
 Our first task in our journey is to write a Kubernetes application that
 deploys nginx to the cluster and exposes it publicly to the Internet.
@@ -99,8 +90,7 @@ applications, managing incremental rollouts of changes, and specifying
 how traffic is directed, all of which we will use in this example.
 
 The code below as a slightly modified version of [the "Hello World"
-Deployment
-example](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#creating-a-deployment)
+Deployment example](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#creating-a-deployment)
 from the Kubernetes docs. We have chosen to write this Pulumi program in
 [TypeScript](https://www.typescriptlang.org/), an excellent choice for a
 mix of dynamic productivity, static typing (meaning we will find errors
@@ -178,8 +168,7 @@ Right away, we notice:
     [as can be seen in our port of the ever-familiar guestbook
     application](https://github.com/pulumi/examples/blob/56ab0ab0c16f7cb1d09d748e93ef1b031a94c1c1/kubernetes-ts-guestbook/index.ts#L16).
 
-Deploying the Application
-----------------------------------------------------------
+## Deploying the Application
 
 If we were deploying normal Kubernetes YAML, we'd run `kubectl apply`.
 This would return instantly, and it would be up to us to use ancillary
@@ -196,9 +185,7 @@ deployment process is subsumed by `pulumi`.
 Indeed, if we take our project and simply run `pulumi up` we'll see
 something like the following:
 
-![deploy](https://blog.pulumi.com/hs-fs/hubfs/deploy.gif?width=2190&name=deploy.gif){width="2190"
-sizes="(max-width: 2190px) 100vw, 2190px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/deploy.gif?width=1095&name=deploy.gif 1095w, https://blog.pulumi.com/hs-fs/hubfs/deploy.gif?width=2190&name=deploy.gif 2190w, https://blog.pulumi.com/hs-fs/hubfs/deploy.gif?width=3285&name=deploy.gif 3285w, https://blog.pulumi.com/hs-fs/hubfs/deploy.gif?width=4380&name=deploy.gif 4380w, https://blog.pulumi.com/hs-fs/hubfs/deploy.gif?width=5475&name=deploy.gif 5475w, https://blog.pulumi.com/hs-fs/hubfs/deploy.gif?width=6570&name=deploy.gif 6570w"}
+![deploy](./deploy.gif)
 
 Compared to `kubectl apply`, many things are happening:
 
@@ -228,8 +215,7 @@ Compared to `kubectl apply`, many things are happening:
     with the `pulumi stack output frontendIp` command, you will actually
     see the nginx landing page.
 
-Using Stack Outputs
-----------------------------------------------
+## Using Stack Outputs
 
 As a brief aside, you might have wondered: how did this IP address get
 here?
@@ -263,8 +249,7 @@ of the nginx landing page that `frontendIp` points at.
     $ curl -sL $(pulumi stack output frontendIp) | grep "<title>"
     <title>Welcome to nginx!</title>
 
-Updating our Application
----------------------------------------------------------
+## Updating our Application
 
 Pulumi makes it easy to incrementally update our application too, after
 the initial creation. `pulumi up` just handles this automatically for
@@ -285,9 +270,7 @@ changing the container image from `nginx:1.15-alpine` to
 [index.ts](https://github.com/pulumi/examples/blob/master/kubernetes-ts-exposed-deployment/index.ts),
 and then run `pulumi preview --diff`. You will see something like this:
 
-![diff](https://blog.pulumi.com/hs-fs/hubfs/diff.gif?width=2190&name=diff.gif){width="2190"
-sizes="(max-width: 2190px) 100vw, 2190px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/diff.gif?width=1095&name=diff.gif 1095w, https://blog.pulumi.com/hs-fs/hubfs/diff.gif?width=2190&name=diff.gif 2190w, https://blog.pulumi.com/hs-fs/hubfs/diff.gif?width=3285&name=diff.gif 3285w, https://blog.pulumi.com/hs-fs/hubfs/diff.gif?width=4380&name=diff.gif 4380w, https://blog.pulumi.com/hs-fs/hubfs/diff.gif?width=5475&name=diff.gif 5475w, https://blog.pulumi.com/hs-fs/hubfs/diff.gif?width=6570&name=diff.gif 6570w"}
+![diff](./diff.gif)
 
 You can see several things happening here:
 
@@ -312,8 +295,7 @@ GitHub Pull Requests with potential update impacts, while your team
 still has a chance to discuss changes inside the usual PR workflow,
 enabling powerful GitOps scenarios.
 
-Conclusion
------------------------------
+## Conclusion
 
 In this article, you've seen that you can express Kubernetes apps in
 real code, instead of YAML, and you've gotten a taste of the `pulumi up`

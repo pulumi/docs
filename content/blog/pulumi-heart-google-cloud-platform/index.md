@@ -1,16 +1,17 @@
 ---
-title: "TODO Port frontmatter"
-authors: ["chris-smith"]
-tags: ["todo"]
-date: "2017-01-01"
-draft: true
-description: "TODO: Put in a reasonable summary"
+title: "Pulumi ❤️ Google Cloud Platform"
+authors: ["luke-hoban"]
+tags: ["GCP", "CI/CD", "Kubernetes", "Serverless"]
+date: "2019-04-09"
+
+description: "Pulumi helps you to take maximum advantage of Google Cloud Platform's full breadth of infrastructure and applications capabilities, in your language of choice. In this article, see how."
+meta_image: "RELATIVE_TO_PAGE/exposed-deploy.gif"
 ---
 
-[Google Cloud is one of the most exciting cloud platforms available
+Google Cloud is one of the most exciting cloud platforms available
 today, with a breadth of powerful infrastructure services from Google
 Container Engine (GKE) and Google Cloud Functions to Cloud Firestore and
-Cloud Spanner. ]{#hs_cos_wrapper_post_body .hs_cos_wrapper
+Cloud Spanner.
 
 [Pulumi](https://pulumi.io/) is the most productive tooling available
 today for teams building cloud applications and infrastructure, in your
@@ -21,8 +22,7 @@ a combined platform that makes it easy to collaborate, share, and reuse.
 In this post, we'll highlight some of the top features of Pulumi that
 make it a joy to work with Pulumi + Google Cloud.
 
-Infrastructure as Code for the Full Google Cloud Platform
--------------------------------------------------------------------------------------------------------------------------
+## Infrastructure as Code for the Full Google Cloud Platform
 
 Pulumi lets you define and deploy infrastructure as code using your
 favorite programming languages, including JavaScript, Python, and Go.
@@ -91,8 +91,7 @@ this [GCE Web
 Server](https://pulumi.io/quickstart/gcp/tutorial-gce-webserver.html)
 tutorial.
 
-Working with Kubernetes and Google Container Engine (GKE)
-------------------------------------------------------------------------------------------------------------------------
+## Working with Kubernetes and Google Container Engine (GKE)
 
 Pulumi also makes it easy to deploy resources to Kubernetes with access
 to the full Kuberentes API, across all object types and versions, using
@@ -104,7 +103,7 @@ In addition to the preview and auditing mentioned above, the Pulumi CLI
 also provides rich status and repeatable deployments to Kubernetes
 through its support for dependency-based orchestration of deployments:
 
-![exposed-deploy](https://pulumi.io/images/quickstart/kubernetes/exposed-deploy.gif){width="2190"}
+![exposed-deploy](./exposed-deploy.gif)
 
 And if you need a Kubernetes cluster, spinning one up with GKE using
 Pulumi is a breeze. Best of all you have easy access to the full breadth
@@ -153,8 +152,7 @@ system for easy parameterization:
 Learn more about using Pulumi with Kubernetes and GKE in this [Hello
 GKE](https://pulumi.io/quickstart/gcp/tutorial-gke.html) tutorial.
 
-Super Simple Serverless with Google Cloud Functions
----------------------------------------------------------------------------------------------------------------
+## Super Simple Serverless with Google Cloud Functions
 
 Serverless has never been simpler than it is with Pulumi + Google Cloud
 Functions. Thanks to Pulumi's ["magic
@@ -201,8 +199,7 @@ Learn more about Pulumi support for Google Cloud Functions in this
 Slackbot](https://github.com/pulumi/examples/tree/master/gcp-ts-slackbot)
 example.
 
-Continuous Delivery with Google Cloud Build
------------------------------------------------------------------------------------------------
+## Continuous Delivery with Google Cloud Build
 
 Because Pulumi is infrastructure-as-code, the projects you deploy with
 Pulumi are robust and repeatable. Spinning up a testing or staging
@@ -217,17 +214,13 @@ for teams working with GitHub, Pulumi's GitHub App gives you rich
 feedback on what changes will be deployed as part of a Pull Request, so
 you can see and approve infrastructure changes before they happen:
 
-![Pulumi in a Pull
-Request](https://blog.pulumi.com/hs-fs/hubfs/pulumi_pr.png?width=512&name=pulumi_pr.png){width="512"
-sizes="(max-width: 512px) 100vw, 512px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/pulumi_pr.png?width=256&name=pulumi_pr.png 256w, https://blog.pulumi.com/hs-fs/hubfs/pulumi_pr.png?width=512&name=pulumi_pr.png 512w, https://blog.pulumi.com/hs-fs/hubfs/pulumi_pr.png?width=768&name=pulumi_pr.png 768w, https://blog.pulumi.com/hs-fs/hubfs/pulumi_pr.png?width=1024&name=pulumi_pr.png 1024w, https://blog.pulumi.com/hs-fs/hubfs/pulumi_pr.png?width=1280&name=pulumi_pr.png 1280w, https://blog.pulumi.com/hs-fs/hubfs/pulumi_pr.png?width=1536&name=pulumi_pr.png 1536w"}
+![Pulumi in a Pull Request](./pulumi_pr.png)
 
 Learn more about integrating Pulumi with CI/CD in the [continuous
 delivery](https://pulumi.io/reference/cd.html) documentation on
 <https://pulumi.io>.
 
-Managing Deployment with the Pulumi Console
------------------------------------------------------------------------------------------------
+## Managing Deployment with the Pulumi Console
 
 In addition to the `pulumi` CLI for deploying and updating GCP
 infrastructure, Pulumi is always connected to the [Pulumi
@@ -238,10 +231,7 @@ controls for teams, and details of all resources under management.
 With deep links into the Google Cloud Console, Pulumi provides quick
 access to all resources in your project.
 
-![Pulumi
-Console](https://blog.pulumi.com/hs-fs/hubfs/pulumi_console.png?width=1600&name=pulumi_console.png){width="1600"
-sizes="(max-width: 1600px) 100vw, 1600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/pulumi_console.png?width=800&name=pulumi_console.png 800w, https://blog.pulumi.com/hs-fs/hubfs/pulumi_console.png?width=1600&name=pulumi_console.png 1600w, https://blog.pulumi.com/hs-fs/hubfs/pulumi_console.png?width=2400&name=pulumi_console.png 2400w, https://blog.pulumi.com/hs-fs/hubfs/pulumi_console.png?width=3200&name=pulumi_console.png 3200w, https://blog.pulumi.com/hs-fs/hubfs/pulumi_console.png?width=4000&name=pulumi_console.png 4000w, https://blog.pulumi.com/hs-fs/hubfs/pulumi_console.png?width=4800&name=pulumi_console.png 4800w"}
+![Pulumi Console](./pulumi_console.png)
 
 And because Pulumi works with both Google Cloud and Kubernetes resources
 at the same time, it's just as easy to deep link into resources in the
@@ -251,8 +241,7 @@ You can check out the Pulumi Console at <https://app.pulumi.com> and
 create your first Pulumi GCP project with just a few clicks, with an
 array of New Project options to get you up and running quickly.
 
-Next Steps
------------------------------
+## Next Steps
 
 Here at Pulumi, we love working with GCP and Kubernetes, and we are
 constantly working on ways to make Pulumi the most productive (and most
@@ -274,4 +263,3 @@ GCP:
 -   Example: [GKE + Kubernetes Pod Deployment in
     Python](https://github.com/pulumi/examples/tree/master/gcp-py-gke)
 -   [Pulumi Community Slack](https://slack.pulumi.io/)
-

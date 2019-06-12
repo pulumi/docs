@@ -1,10 +1,11 @@
 ---
-title: "TODO Port frontmatter"
+title: "Reusable CI/CD components with CircleCI Orbs for Pulumi"
 authors: ["chris-smith"]
-tags: ["todo"]
-date: "2017-01-01"
-draft: true
-description: "TODO: Put in a reasonable summary"
+tags: ["CI/CD"]
+date: "2018-11-07"
+
+description: "How to use Circle CI Orbs for Pulumi as reusable CI/CD components for easy deployment."
+meta_image: "RELATIVE_TO_PAGE/circleci-ui.png"
 ---
 
 
@@ -25,8 +26,7 @@ production within CircleCI. The [Pulumi Orbs for
 CircleCI](https://circleci.com/orbs/registry/orb/pulumi/pulumi) are
 available *today* for you to start using.
 
-Pulumi Orbs
------------------------------
+## Pulumi Orbs
 
 You can see the Pulumi orbs in-action in the following CircleCI
 `config.yml`. It's a simple job to build and update a JavaScript-based
@@ -59,9 +59,7 @@ Pulumi client to download, whether the update should skip its preview,
 and so on. ([Full orb
 reference](https://github.com/pulumi/circleci#orb-reference))
 
-![circleciui](https://blog.pulumi.com/hs-fs/hubfs/Blog/circleciui.png?width=600&name=circleciui.png){width="600"
-sizes="(max-width: 600px) 100vw, 600px"
-srcset="https://blog.pulumi.com/hs-fs/hubfs/Blog/circleciui.png?width=300&name=circleciui.png 300w, https://blog.pulumi.com/hs-fs/hubfs/Blog/circleciui.png?width=600&name=circleciui.png 600w, https://blog.pulumi.com/hs-fs/hubfs/Blog/circleciui.png?width=900&name=circleciui.png 900w, https://blog.pulumi.com/hs-fs/hubfs/Blog/circleciui.png?width=1200&name=circleciui.png 1200w, https://blog.pulumi.com/hs-fs/hubfs/Blog/circleciui.png?width=1500&name=circleciui.png 1500w, https://blog.pulumi.com/hs-fs/hubfs/Blog/circleciui.png?width=1800&name=circleciui.png 1800w"}
+![circleci ui](./circleci-ui.png?width=600&name=circleciui.png)
 
 With other CI/CD systems, you'd typically need to write one-off Bash
 scripts to download the client from <https://get.pulumi.com>, add it to
@@ -72,8 +70,7 @@ The source code for the Pulumi orbs is available [on
 GitHub](https://github.com/pulumi/circleci), if you have any suggestions
 or feedback.
 
-Other Integrations
---------------------------------------------
+## Other Integrations
 
 Of course Pulumi's integration with CircleCI doesn't end with orbs.
 
@@ -97,4 +94,3 @@ Links:
 
 -   [Get Started with Circle CI Orbs](https://circleci.com/orbs/)
 -   [Get Started with Pulumi](https://pulumi.io)
-
