@@ -612,9 +612,9 @@ class MyResource extends pulumi.ComponentResource {
 ```
 
 ```python
-class MyResource(ComponentResource):
+class MyResource(pulumi.ComponentResource):
     def __init__(self, name, opts = None):
-        super(MyResource, self).__init__('pkg:MyResource', name, None, opts)
+        super().__init__('pkg:MyResource', name, None, opts)
 ```
 
 ```go
@@ -640,7 +640,7 @@ let bucket = new aws.s3.Bucket(`${name}-bucket`, {}, { parent: this });
 ```
 
 ```python
-bucket = s3.Bucket(f"{name}-bucket", __opts__=ResourceOptions(parent=self))
+bucket = s3.Bucket(f"{name}-bucket", opts=pulumi.ResourceOptions(parent=self))
 ```
 
 ```go
