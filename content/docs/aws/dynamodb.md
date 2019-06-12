@@ -9,6 +9,7 @@ service: "DynamoDB"
 description: "is a fast and flexible nonrelational database service for all applications that need consistent, single-digit millisecond latency at any scale"
 aws_here: "https://aws.amazon.com/dynamodb/"
 
+layout: aws-single
 menu:
   aws:
     parent: aws

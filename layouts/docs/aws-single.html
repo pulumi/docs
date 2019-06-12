@@ -1,0 +1,39 @@
+{{ define "main" }}
+    <div class="md:flex">
+
+        <div class="md:w-3/12 pr-8">
+            {{ partial "docs/toc.html" . }}
+        </div>
+
+        <div class="md:w-7/12">
+            <h1>{{ .Title }}</h1>
+
+            <p>
+                This reference shows how to use Pulumi to define an AWS {{ .Params.service }}
+                resource using pure code which can then be deployed to AWS and managed as
+                infrastructure as code.
+            </p>
+
+            <h2>What is AWS {{ .Params.service }}?</h2>
+
+            <img class="how-to-logo" src="/images/docs/brand/aws.png" alt="AWS" width="100">
+
+            <p>
+                AWS {{ .Params.service }} {{ .Params.description }}. Find out more at <a href="{{ .Params.aws_here }}">AWS here</a>.
+            </p>
+
+            {{ partial "docs/aws/find-out-more.html" . }}
+
+            {{ .Content }}
+        </div>
+
+        <div class="md:w-2/12 pl-8">
+            {{ with .File }}
+                <a class="link" href="{{ $.Site.Params.repositoryURL }}/edit/{{ $.Site.Params.repositoryBranch }}/content/{{ .Path }}" target="_blank">
+                    <i class="fab fa-github"></i>
+                    Edit This Page
+                </a>
+            {{ end }}
+        </div>
+    </div>
+{{ end }}

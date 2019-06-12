@@ -9,6 +9,7 @@ service: "CloudWatch"
 description: "is a monitoring service for AWS cloud resources and the applications you run on Amazon Web Services."
 aws_here: "https://aws.amazon.com/cloudwatch/"
 
+layout: aws-single
 menu:
   aws:
     parent: aws
