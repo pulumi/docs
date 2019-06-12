@@ -1,0 +1,3 @@
+@mixin transition($scope: all, $duration: 100ms, $fn: linear) {
+    transition: $scope $duration $fn;
+}

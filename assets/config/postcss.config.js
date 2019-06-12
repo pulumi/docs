@@ -4,17 +4,21 @@
  * at the end to do more transformations.
  */
 module.exports = {
-    plugins: {
+    plugins: [
+        // TailwindCSS
+        require("tailwindcss")("./assets/config/tailwind.config.js"),
+
         // Apply vendor prefixes for CSS features that aren't
         // fully supported yet.
-        autoprefixer: {
+        require("autoprefixer")({
             overrideBrowserslist: [
                 "last 2 versions"
             ]
-        },
+        }),
+
         // Minify the CSS even further. (It works!)
-        cssnano: {
-            preset: "default"
-        }
-    }
+        require('cssnano')({
+            preset: 'default',
+        })
+    ]
 };

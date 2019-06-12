@@ -1,0 +1,13 @@
+.toggleButton {
+    cursor: pointer;
+}
+
+.toggle > .collapsed,
+.toggleVisible > .expanded {
+    display: block;
+}
+
+.toggle > .expanded,
+.toggleVisible > .collapsed {
+    display: none;
+}

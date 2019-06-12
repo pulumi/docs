@@ -1,24 +1,63 @@
-@import "bootstrap-variables-override";
-@import "bootstrap-override";
+@import "fonts";
+@import "icons";
+@import "mixins";
+@import "toc";
 
-@import "utils/mixins";
-@import "utils/variables";
-@import "utils/fonts";
+@tailwind base;
+@tailwind components;
 
-@import "partials/container";
-@import "partials/typography";
-@import "partials/buttons-cta";
-@import "partials/forms";
-@import "partials/bg";
-@import "partials/modal";
-@import "partials/social";
-@import "partials/header";
-@import "partials/footer";
-@import "partials/hero";
-@import "partials/breadcrumbs";
-@import "partials/content-blocks";
+h1, h2, h3, h4, h5, h6 {
+    @apply font-display text-gray-dark;
+}
 
-@import "pulumi";
-@import "pulumi-blog";
+h1 {
+    @apply text-3xl;
+}
 
-@import "pygments";
+h2 {
+    @apply text-2xl;
+}
+
+h3 {
+    @apply text-xl;
+}
+
+p {
+    @apply mb-4 leading-normal;
+}
+
+main {
+    @apply text-gray;
+}
+
+pre {
+    @apply bg-purple-darkest text-gray-light p-4 rounded shadow-inner scrolling-auto overflow-scroll text-sm my-4 leading-relaxed;
+}
+
+footer {
+    a {
+        @include transition();
+
+        &:hover {
+            @apply text-gray-light;
+        };
+    }
+}
+
+.btn {
+    @apply py-2 px-4 rounded text-white uppercase bg-blue;
+
+    &:hover {
+        @apply bg-blue-bright;
+    }
+
+    &:active {
+        @apply bg-blue;
+    }
+}
+
+.btn-cta {
+    @apply bg-orange;
+}
+
+@tailwind utilities;
