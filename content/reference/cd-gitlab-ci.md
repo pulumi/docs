@@ -153,7 +153,7 @@ It also installs `yarn` and `nodejs` since that's the runtime for this sample pr
 set -e -x
 # Download and install required tools.
 # pulumi
-curl -L https://get.pulumi.com/ | bash
+curl -fsSL https://get.pulumi.com/ | bash
 export PATH=$PATH:$HOME/.pulumi/bin
 # Login into pulumi. This will require the PULUMI_ACCESS_TOKEN environment variable
 pulumi login
