@@ -1,10 +1,10 @@
 ---
-title: Google Cloud Platform
+title: Google Cloud
 aliases: ["/reference/gcp.html"]
 menu:
-  quickstart:
-    identifier: gcp
-    weight: 5
+  reference:
+    parent: clouds
+    identifier: clouds-gcp
 ---
 
 <img src="/images/quickstart/gcp-purple.png" align="right">

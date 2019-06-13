@@ -2,9 +2,9 @@
 title: Kubernetes
 aliases: ["/reference/kubernetes.html"]
 menu:
-  quickstart:
-    identifier: kubernetes
-    weight: 6
+  reference:
+    parent: clouds
+    identifier: clouds-kubernetes
 ---
 
 <img src="/images/quickstart/k8s-purple.png" align="right">

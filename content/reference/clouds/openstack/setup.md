@@ -5,10 +5,9 @@ aliases:
     - /quickstart/openstack/setup.html
     - /install/openstack.html
 menu:
-  quickstart:
-    identifier: openstack-setup
-    parent: openstack
-    weight: 1
+  reference:
+    parent: clouds-openstack
+    identifier: clouds-openstack-setup
 ---
 
 [Pulumi OpenStack Provider]: {{< relref "./" >}}

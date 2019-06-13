@@ -4,9 +4,9 @@ aliases:
   - /quickstart/openstack/
   - /reference/openstack.html
 menu:
-  quickstart:
-    identifier: openstack
-    weight: 8
+  reference:
+    parent: clouds
+    identifier: clouds-openstack
 ---
 
 <img src="/images/quickstart/openstack-purple.png" align="right">

@@ -4,9 +4,9 @@ aliases:
   - /quickstart/kubernetes/faq/
   - /quickstart/kubernetes/faq.html
 menu:
-  quickstart:
-    identifier: kubernetes-faq
-    parent: kubernetes
+  reference:
+    parent: clouds-kubernetes
+    identifier: clouds-kubernetes-faq
     weight: 3
 ---
 

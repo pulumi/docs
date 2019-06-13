@@ -5,10 +5,9 @@ aliases:
     - /quickstart/aws/setup.html
     - /install/aws.html
 menu:
-  quickstart:
-    identifier: aws-setup
-    parent: aws
-    weight: 1
+  reference:
+    parent: clouds-aws
+    identifier: clouds-aws-setup
 ---
 
 <!-- LINKS -->

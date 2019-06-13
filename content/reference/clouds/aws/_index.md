@@ -2,9 +2,9 @@
 title: AWS
 aliases: ["/reference/aws.html"]
 menu:
-  quickstart:
-    identifier: aws
-    weight: 3
+  reference:
+    parent: clouds
+    identifier: clouds-aws
 ---
 
 <img src="/images/quickstart/aws-purple.png" align="right">
