@@ -1,5 +1,7 @@
 ---
 title: Introduction
+aliases:
+  - /quickstart/kubernetes/introduction/
 menu:
   quickstart:
     parent: kubernetes

@@ -1,6 +1,8 @@
 ---
 title: "Tutorial #1: Hello, World!"
-aliases: ["tutorial-exposed-deployment.html"]
+aliases:
+  - /quickstart/kubernetes/tutorial-exposed-deployment/
+  - /quickstart/kubernetes/tutorial-exposed-deployment.html
 menu:
   quickstart:
     parent: kubernetes-workloads

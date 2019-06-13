@@ -1,7 +1,8 @@
 ---
 title: Setup
 aliases:
-  - setup.html
+  - /quickstart/azure/setup/
+  - /quickstart/azure/setup.html
   - /install/azure.html
 menu:
   quickstart:

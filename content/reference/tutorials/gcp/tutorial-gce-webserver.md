@@ -1,6 +1,8 @@
 ---
 title: "Tutorial: Web Server Virtual Machine Instance"
-aliases: ["tutorial-gce-webserver.html"]
+aliases:
+  - /quickstart/gcp/tutorial-gce-webserver/
+  - /quickstart/gcp/tutorial-gce-webserver.html
 menu:
   quickstart:
     parent: gcp

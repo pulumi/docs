@@ -1,6 +1,8 @@
 ---
 title: OpenStack
-aliases: ["/reference/openstack.html"]
+aliases:
+  - /quickstart/openstack/
+  - /reference/openstack.html
 menu:
   quickstart:
     identifier: openstack

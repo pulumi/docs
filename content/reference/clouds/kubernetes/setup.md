@@ -1,7 +1,8 @@
 ---
 title: Setup
 aliases:
-    - setup.html
+    - /quickstart/kubernetes/setup/
+    - /quickstart/kubernetes/setup.html
     - /install/kubernetes.html
 menu:
   quickstart:

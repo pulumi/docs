@@ -1,7 +1,8 @@
 ---
 title: "Tutorial: API Gateways and Lambda"
 aliases:
-    - tutorial-rest-api.html
+    - /quickstart/aws/tutorial-rest-api/
+    - /quickstart/aws/tutorial-rest-api.html
     - /quickstart/aws-hello-world.html
 menu:
   quickstart:

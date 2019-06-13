@@ -1,6 +1,7 @@
 ---
 title: "Tutorial: GKE - Hello World!"
 aliases:
+    - /quickstart/kubernetes/tutorial-gke/
     - /quickstart/gcp/tutorial-gke.html
     - /quickstart/gcp/tutorial-gke/
     - /quickstart/gke-hello-world.html

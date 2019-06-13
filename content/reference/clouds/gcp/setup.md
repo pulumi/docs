@@ -1,7 +1,8 @@
 ---
 title: Setup
 aliases:
-    - setup.html
+    - /quickstart/gcp/setup/
+    - /quickstart/gcp/setup.html
     - /install/gcp.html
 menu:
   quickstart:
