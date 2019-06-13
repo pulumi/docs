@@ -34,35 +34,9 @@ permissions, see [Teams]({{< relref "teams.md" >}}).
 - `WRITE`
 - `ADMIN`
 
-<style>
-td, th {
-    padding: 8px 8px;
-    text-align: center;
-    border: 1px solid rgba(0,0,0,0.13);
-}
-
-thead tr th {
-    color: #00acf2;  /* $primary2, blue */
-    font-weight: 800;
-}
-
-thead tr th:first-child {
-    text-align: left;
-}
-
-tbody tr td {
-    width: 30px;
-}
-
-tbody tr td:first-child {
-    text-align: left;
-    width: 500px;
-}
-</style>
-
 These stack permissions allow users to perform the following actions:
 
-| Action | `READ` | `WRITE` | `ADMIN` |
+| Action | READ | WRITE | ADMIN |
 |--------|--------|---------|---------|
 | View update history | ✅ | ✅ | ✅ |
 | Decrypt secret configuration | ✅ | ✅ | ✅ |
