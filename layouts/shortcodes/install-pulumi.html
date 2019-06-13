@@ -1,0 +1,88 @@
+<div class="install_macos">
+    <p>Install Pulumi on macOS through <a href="https://brew.sh/" target="_blank">Homebrew</a>:</p>
+
+    <div class="highlight">
+        <pre class="chroma"><code class="language-bash" data-lang="bash">$ brew install pulumi</code></pre>
+    </div>
+</div>
+
+<div class="install_linux">
+    <p>Install Pulumi on Linux by running the installation script:</p>
+    <div class="highlight">
+        <pre class="chroma"><code class="language-bash" data-lang="bash">$ curl -fsSL https://get.pulumi.com | sh</code></pre>
+    </div>
+</div>
+
+<div class="install_windows">
+    <p>Install Pulumi on Windows by running the installation script from a <code>cmd.exe</code> window:</p>
+    <div class="highlight">
+        <pre class="chroma"><code class="language-batch" data-lang="batch">@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1'))" && SET "PATH=%PATH%;%USERPROFILE%\.pulumi\bin"</code></pre>
+    </div>
+</div>
+
+<blockquote>
+    <p>
+        For manual installation instructions, other platforms, or troubleshooting, see the
+        <a href="{{ relref . "/reference/install.md" }}" target="_blank">detailed installation documentation</a>.
+    </p>
+</blockquote>
+
+<p>Verify your install:</p>
+<div class="highlight">
+    <pre class="chroma"><code class="language-bash" data-lang="bash">$ pulumi version
+v{{- readFile "/static/latest-version" -}}</code></pre>
+</div>
+
+<script>
+    function showHelper(id, value) {
+        var e = document.getElementsByClassName(id + "_" + value)
+        for (var i = 0; i < e.length; i++) {
+            e[i].style.display = "block";
+        }
+
+        var s = document.getElementById(id);
+        if (s) {
+            for (var i = 0; i < s.options.length; i++) {
+                if (s.options[i].value === value) {
+                    s.selectedIndex = i;
+                    break;
+                }
+            }
+        }
+    }
+
+    function hideHelper(id, value) {
+        var e = document.getElementsByClassName(id + "_" + value)
+        for (var i = 0; i < e.length; i++) {
+            e[i].style.display = "none";
+        }
+    }
+
+    function selectHelper(id, values, value) {
+        var found;
+        for (var i = 0; i < values.length; i++) {
+            if (value === values[i]) {
+                showHelper(id, values[i]);
+                found = true;
+            } else {
+                hideHelper(id, values[i]);
+            }
+        }
+        if (!found) {
+            showHelper(id, values[0]);
+        }
+    }
+
+    var oses = ["linux", "macos", "windows"];
+    if (navigator.appVersion.indexOf("Win") !== -1) {
+        selectHelper("install", oses, "windows");
+    } else if (navigator.appVersion.indexOf("Mac") !== -1) {
+        selectHelper("install", oses, "macos");
+    } else {
+        // Otherwise, just show the command for Linux.
+        selectHelper("install", oses, "linux");
+    }
+
+    var languages = ["typescript", "javascript", "python"];
+    selectHelper("language", languages, "typescript");
+</script>
