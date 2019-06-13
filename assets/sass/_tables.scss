@@ -1,12 +1,12 @@
 table {
-    @apply border border-gray-lightest;
+    @apply border border-gray-100;
 
     thead {
-        @apply bg-gray-lightest;
+        @apply bg-gray-100;
     }
 
     tr {
-        @apply border-b border-gray-lightest;
+        @apply border-b border-gray-100;
     }
 
     th {

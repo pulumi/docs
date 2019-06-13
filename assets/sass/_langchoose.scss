@@ -1,11 +1,10 @@
 @import "colors";
 
-
 $tab-group-height: 60px;
-$tab-highlight-color: unquote("rgb(#{$primary})") !default;
-$tab-text-color: unquote("rgba(#{$black}, 0.54)") !default;
-$tab-active-text-color: unquote("rgba(#{$black}, 0.87)") !default;
-$tab-border-color: unquote("rgb(#{$palette-grey-300})") !default;
+$tab-highlight-color: $brand-purple;
+$tab-text-color: $black;
+$tab-active-text-color: $black;
+$tab-border-color: $border-gray;
 $tab-font-size: 14px !default;
 
 .mdl-tabs {
@@ -110,8 +109,8 @@ $tab-font-size: 14px !default;
 }
 
 .mdl-tabs__tab.is-active {
-    color: $primary;
-    border-bottom: 2px solid $primary;
+    color: $brand-purple;
+    border-bottom: 2px solid $brand-purple;
 }
 
 .mdl-tabs__tab.langtab {

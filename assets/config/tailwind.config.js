@@ -1,43 +1,83 @@
 
 // Tailwind configuration. Changes to this file require a dev-server restart.
+//
+// Configuration docs:
 // https://tailwindcss.com/docs/configuration
+//
+// Default configuration:
+// https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
+
+const defaultTheme = require('tailwindcss/defaultTheme');
+
+const brand = {
+    purple: "#512668",
+    orange: "#ee975c",
+    green: "#2fc89f",
+    blue: "#3ec2f8",
+    gray: "#f1f1f1",
+}
+
+const purple = {
+    100: "#ddcae8",
+    300: "#83549c",
+    500: brand.purple,
+    700: "#371a47",
+    900: "#180b1f",
+}
+
+const blue = {
+    100: "#d1f2ff",
+    300: "#85dcff",
+    500: brand.blue,
+    700: "#306275",
+    900: "#0f2e3b",
+}
+
 module.exports = {
     theme: {
 
         extend: {
 
             fontFamily: {
-                display: ["Ubuntu"],
-                body: ["Open Sans"],
+                display: [
+                    "Ubuntu",
+                    ...defaultTheme.fontFamily.sans,
+                ],
+                body: [
+                    "Open Sans",
+                    ...defaultTheme.fontFamily.sans,
+                ],
             },
 
             colors: {
                 purple: {
-                    darkest: "#1a111f",
-                    dark: "#371847",
-                    default: "#512668",
-                    light: "#f6e5ff",
+                    100: purple["100"],
+                    300: purple["300"],
+                    500: purple["500"],
+                    default: purple["500"],
+                    700: purple["700"],
+                    900: purple["900"],
                 },
                 blue: {
-                    darker: "#0079AB",
-                    default: "#00acf2",
-                    light: "#e1f6ff",
-                    bright: "#3EC2F8",
+                    100: blue["100"],
+                    300: blue["300"],
+                    500: blue["500"],
+                    default: blue["500"],
+                    700: blue["700"],
+                    900: blue["900"],
                 },
                 green: {
-                    default: "#2fc89f",
+                    default: brand.green,
+                    ...defaultTheme.colors.green,
                 },
                 orange: {
-                    default: "#ee975c",
-                    light: "#fbe5d7",
+                    default: brand.orange,
+                    ...defaultTheme.colors.orange,
                 },
                 gray: {
-                    dark: "#222",
-                    default: "#555555",
-                    light: "#cccccc",
-                    lighter: "#d3d3d3",
-                    lightest: "#f1f1f1",
-                }
+                    default: brand.gray,
+                    ...defaultTheme.colors.gray,
+                },
             },
         },
     },

@@ -13,7 +13,7 @@
 @import "no-select";
 
 h1, h2, h3, h4, h5, h6 {
-    @apply font-display text-gray-dark mb-2;
+    @apply font-display text-gray-800 mb-2;
 
     &:not(:first-child) {
         @apply mt-8;
@@ -25,15 +25,23 @@ h1 {
 }
 
 h2 {
-    @apply text-2xl;
+    @apply text-3xl;
 }
 
 h3 {
-    @apply text-xl;
+    @apply text-2xl;
 }
 
 h4 {
+    @apply text-xl;
+}
+
+h5 {
     @apply text-lg;
+}
+
+h6 {
+    @apply text-lg uppercase;
 }
 
 p {
@@ -41,11 +49,16 @@ p {
 }
 
 main {
-    @apply text-gray;
+    @apply text-gray-700;
 
     p, li {
+
         a {
-            @apply text-blue-darker;
+            @apply text-blue;
+
+            &:hover {
+                @apply text-blue-700;
+            }
         }
     }
 
@@ -67,7 +80,7 @@ main {
 }
 
 .link {
-    @apply text-blue-darker;
+    @apply text-blue-700;
 }
 
 @tailwind utilities;
