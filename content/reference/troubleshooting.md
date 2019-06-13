@@ -3,7 +3,7 @@ title: Troubleshooting & Support
 aliases: ["troubleshooting.html"]
 menu:
   reference:
-    weight: 13
+    weight: 15
 ---
 
 {{< mini-toc >}}
