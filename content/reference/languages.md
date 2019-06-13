@@ -7,7 +7,7 @@ menu:
     weight: 6
 ---
 
-Pulumi is a multi-language runtime. Your choice of language does not affect which [clouds]({{< relref "clouds.md" >}}) may be
+Pulumi is a multi-language runtime. Your choice of language does not affect which [clouds]({{< relref "clouds/_index.md" >}}) may be
 targeted -- each language is just as capable as the other and supports the entire surface area of resources available.
 
 * [Node.js]({{< relref "javascript.md" >}}) - JavaScript, TypeScript, or any other Node.js compatible language

@@ -12,8 +12,8 @@ In this tutorial, we'll use JavaScript to deploy a simple nginx container to Azu
 
 ## Prerequisites
 
-1.  [Install Pulumi]({{< relref "/quickstart/install.md" >}})
-1.  [Configure Azure credentials]({{< relref "setup.md" >}})
+1.  [Install Pulumi]({{< relref "/reference/install.md" >}})
+1.  [Configure Azure credentials]({{< relref "/reference/clouds/azure/setup.md" >}})
 
 ## Create a container in Azure Container Instance {#ACI}
 

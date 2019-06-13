@@ -55,16 +55,16 @@ Check out [Pulumi: A Better Way to Kubernetes][better-way-to-k8s] for details!
 
 [upstream]: https://kubernetes.io/docs/reference/
 [eks]: https://aws.amazon.com/eks/
-[faq]: {{< relref "/quickstart/kubernetes/faq" >}}
+[faq]: {{< relref "/reference/clouds/kubernetes/faq.md" >}}
 [gcp]: {{< relref "/quickstart/gcp" >}}
 [kubeconfig]: https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/
-[gke-tutorial]: {{< relref "/tutorial-gke" >}}
-[eks-tutorial]: {{< relref "/tutorial-eks" >}}
-[aks-tutorial]: {{< relref "/tutorial-azure-kubernetes-service" >}}
+[gke-tutorial]: {{< relref "/reference/tutorials/kubernetes/tutorial-gke.md" >}}
+[eks-tutorial]: {{< relref "/reference/tutorials/kubernetes/tutorial-eks.md" >}}
+[aks-tutorial]: {{< relref "/reference/tutorials/kubernetes/tutorial-aks.md" >}}
 [eks]: https://aws.amazon.com/eks/
 [aurora]: https://aws.amazon.com/rds/aurora/
 [pulumi-k8s]: https://github.com/pulumi/pulumi-kubernetes
 [better-way-to-k8s]: https://blog.pulumi.com/pulumi-a-better-way-to-kubernetes
 [create-before-replace]: {{< relref "/reference/programming-model.md#autonaming" >}}
 [programming-model]: {{< relref "/reference/programming-model.md" >}}
-[cluster-management]: {{< relref "/quickstart/kubernetes/tutorial-clusters" >}}
+[cluster-management]: {{< relref "/reference/tutorials/kubernetes#clusters" >}}

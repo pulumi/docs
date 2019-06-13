@@ -15,13 +15,15 @@ See the [full API documentation]({{< relref "/reference/pkg/nodejs/pulumi/azure"
 
 ## Setup
 
-The Azure provider supports several options for providing access to Azure credentials.  See [Azure installation page]({{< relref "/quickstart/azure/setup.md" >}}) for details.
+The Azure provider supports several options for providing access to Azure credentials.  See [Azure setup page]({{< relref "/reference/clouds/azure/setup.md" >}}) for details.
 
 ## Getting Started
 
 The easiest way to start with Pulumi for Azure is to follow the tutorial:
 
-* [Azure Container Instances Web Server]({{< relref "tutorial-container-webserver.md" >}}): Create an NGINX web server Azure Container Instance
+Additionally, a tutorial is available to follow:
+
+* [Azure Container Instances Web Server]({{< relref "/reference/tutorials/azure/tutorial-container-webserver.md" >}}): Create an NGINX web server Azure Container Instance
 
 In addition to the tutorial, several interesting examples are available complete with instructions:
 

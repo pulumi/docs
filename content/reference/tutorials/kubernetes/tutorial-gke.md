@@ -15,7 +15,7 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
 
 ## Prerequisites
 
-1. [Install Pulumi]({{< relref "../install.md" >}})
+1. [Install Pulumi]({{< relref "/reference/install.md" >}})
 1. [Install Node.js version 6 or later](https://nodejs.org/en/download/)
 1. Install a package manager for Node.js, such as [npm](https://www.npmjs.com/get-npm) or [Yarn](https://yarnpkg.com/en/docs/install).
 1. [Install Google Cloud SDK (`gcloud`)](https://cloud.google.com/sdk/docs/downloads-interactive)

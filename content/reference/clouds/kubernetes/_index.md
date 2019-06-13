@@ -54,7 +54,6 @@ The [`pulumi/kubernetes`](https://github.com/pulumi/pulumi-kubernetes) SDK is av
 - [Introduction]({{< relref "introduction.md" >}})
 - [Setup]({{< relref "setup.md" >}})
 - [FAQ]({{< relref "faq.md" >}})
-- [Tutorials - Clusters]({{< relref "tutorial-clusters.md" >}})
-- [Tutorials - Workloads]({{< relref "tutorial-workloads.md" >}})
+- [Tutorials]({{< relref "/reference/tutorials/kubernetes/_index.md" >}})
 
 [k8s]: https://kubernetes.io
