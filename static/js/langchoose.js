@@ -6,7 +6,10 @@ function getElemClasses(e) {
 // all code tabs and snippets for this language, and disabling those for unselected languages.
 function selectLanguage(lang) {
     $(function() {
-        document.cookie = "pulumi_language=" + lang;
+        // Explicitly set `path` to `/` so the saved selection is available across all pages, and
+        // set `max-age` to one year (31536000 is one year in seconds) so the saved selection does
+        // not expire when the browser session ends.
+        document.cookie = "pulumi_language=" + lang + "; max-age=31536000; path=/"
 
         // Change the active tab.
         var langTabs = 0;
