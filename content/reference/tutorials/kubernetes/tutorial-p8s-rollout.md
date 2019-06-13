@@ -1,12 +1,11 @@
 ---
-title: "Tutorial #5: Gating rollout on Prometheus checks"
+title: "#5: Gating rollout on Prometheus checks"
 aliases:
   - /quickstart/kubernetes/tutorial-p8s-rollout/
   - /quickstart/kubernetes/tutorial-p8s-rollout.html
 menu:
-  quickstart:
-    parent: kubernetes-workloads
-    weight: 6
+  reference:
+    parent: tutorials-kubernetes
 ---
 
 In this tutorial, we see how to create a staged rollout (from 3-replica canary -> 10-replica

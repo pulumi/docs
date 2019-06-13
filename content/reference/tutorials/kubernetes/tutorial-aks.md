@@ -1,13 +1,12 @@
 ---
-title: "Tutorial: AKS - Hello World!"
+title: "Clusters: AKS - Hello World!"
 aliases:
     - /quickstart/kubernetes/tutorial-azure-kubernetes-service/
     - /quickstart/azure/tutorial-azure-kubernetes-service.html
     - /quickstart/azure/tutorial-azure-kubernetes-service/
 menu:
-  quickstart:
-    parent: azure
-    parent: kubernetes-clusters
+  reference:
+    parent: tutorials-kubernetes
     weight: 3
 ---
 

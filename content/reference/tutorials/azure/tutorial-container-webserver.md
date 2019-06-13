@@ -1,11 +1,11 @@
 ---
-title: "Tutorial: Web Server Container Instance"
+title: "Web Server Container Instance"
 aliases:
   - /quickstart/azure/tutorial-container-webserver/
   - /quickstart/azure/tutorial-container-webserver.html
 menu:
-  quickstart:
-    parent: azure
+  reference:
+    parent: tutorials-azure
 ---
 
 In this tutorial, we'll use JavaScript to deploy a simple nginx container to Azure Container Instance (ACI).

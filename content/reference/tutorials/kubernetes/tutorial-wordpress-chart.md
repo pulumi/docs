@@ -1,13 +1,12 @@
 ---
-title: "Tutorial #2: Deploying the WordPress Helm Chart"
+title: "#2: Deploying the WordPress Helm Chart"
 aliases:
   - /quickstart/kuberentes/tutorial-wordpress-chart/
   - /quickstart/kuberentes/tutorial-wordpress-chart.html
   - /quickstart/kubernetes-guestbook.html
 menu:
-  quickstart:
-    parent: kubernetes-workloads
-    weight: 6
+  reference:
+    parent: tutorials-kubernetes
 ---
 
 In this tutorial, we'll use the Helm API of `@pulumi/kubernetes` to deploy `v2.1.3` of the Wordpress

@@ -1,13 +1,13 @@
 ---
-title: "Tutorial: EKS - Hello World!"
+title: "Clusters: EKS - Hello World!"
 aliases:
     - /quickstart/kubernetes/tutorial-eks/
     - /quickstart/aws/tutorial-eks.html
     - /quickstart/aws/tutorial-eks/
     - /quickstart/eks-hello-world.html
 menu:
-  quickstart:
-    parent: kubernetes-clusters
+  reference:
+    parent: tutorials-kubernetes
     weight: 1
 ---
 
