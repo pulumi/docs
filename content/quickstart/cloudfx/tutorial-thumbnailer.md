@@ -3,9 +3,6 @@ title: "Tutorial: Multi-Cloud Containers and Serverless"
 aliases:
     - tutorial-thumbnailer.html
     - /quickstart/aws-extract-thumbnail.html
-menu:
-  quickstart:
-    parent: cloud
 ---
 
 In this tutorial, we'll use JavaScript to combine serverless, containers and cloud infrastructure together into a
