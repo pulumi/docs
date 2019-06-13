@@ -1,10 +1,10 @@
 ---
-title: Microsoft Azure
+title: Azure
 aliases: ["/reference/azure.html"]
 menu:
-  quickstart:
-    identifier: azure
-    weight: 4
+  reference:
+    parent: clouds
+    identifier: clouds-azure
 ---
 
 <img src="/images/quickstart/azure-purple.png" align="right">

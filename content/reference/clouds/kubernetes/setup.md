@@ -5,9 +5,9 @@ aliases:
     - /quickstart/kubernetes/setup.html
     - /install/kubernetes.html
 menu:
-  quickstart:
-    identifier: kubernetes-setup
-    parent: kubernetes
+  reference:
+    parent: clouds-kubernetes
+    identifier: clouds-kubernetes-setup
     weight: 2
 ---
 

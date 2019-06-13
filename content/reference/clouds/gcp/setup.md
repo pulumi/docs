@@ -5,10 +5,9 @@ aliases:
     - /quickstart/gcp/setup.html
     - /install/gcp.html
 menu:
-  quickstart:
-    identifier: gcp-setup
-    parent: gcp
-    weight: 1
+  reference:
+    parent: clouds-gcp
+    identifier: clouds-gcp-setup
 ---
 
 [Pulumi Google Cloud Platform Provider]: {{< relref "./" >}}
