@@ -148,3 +148,11 @@ $ pulumi stack import --file my-app-production.checkpoint.json # import the new 
 In addition, if you have any encrypted configuration in your stack, you'll need to re-run
 `pulumi config set --secret <key> <value>` because pulumi.com uses a different key to encrypt your secrets than the
 local endpoint.
+
+### Secrets Encryption
+
+When a secret value is provided via secret configuration (by passing --secret to pulumi config set) or created inside your program by using `pulumi.secret` (JavaScript) or `Output.secret` (Python) the value is encrypted with a key managed by the backend you are connected to.  When using the local backend, this key is derived from a passphrase you set when creating your stack, and when using the web backend, it is handled by a key managed by the service.
+
+For new stacks managed with the web backend, you may choose to use the passphrase based key instead. Pass `--secrets-provider passphrase` when you create the stack (either via `pulumi new` or `pulumi stack init`). You'll be prompted to choose a passphrase and future operations like `update`, `preview` and `destroy` will require you enter this passphrase before the operation will run.
+
+When using the filesystem backend, you must use the passphrase based secrets provider.

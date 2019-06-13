@@ -24,11 +24,7 @@ When you run a preview, update or destroy, pulumi decrypts this data. It is plai
 
 ## Are my secrets ever visible?
 
-Depending on how you use your secrets, they may be visible in parts of your application at deployment time. For example, if you capture the value of a secret with a Lambda, which backs some serverless function, the secret would appear in the program text. Since the checkpoint retains information about all inputs to resources it created, they may also be visible in parts of the checkpoint. You can use `pulumi stack export` to inspect the checkpoint of the current stack and see exactly what data is present.
-
-## If I don't want my secret to end up in the checkpoint, what can I do?
-
-We are actively looking for ways to improve pulumi's secret management, see [pulumi/pulumi#1547](https://github.com/pulumi/pulumi/issues/1547) and [pulumi/pulumi#397](https://github.com/pulumi/pulumi/issues/397). In the meantime we recommend you manually use some third party key management (e.g. Amazon KMS). 
+As noted above, Pulumi provides primitives so you can enforce your secrets are stored in a secure manner in the CLI UI, State file and Pulumi Web Console. During an update, your secrets will be unencrypted in memory and visible to your Pulumi program. It is your responsibility to ensure that you do not persist them outside of Pulumi without securing them. To learn more, see [Secrets]({{< relref "/reference/programming-model.md#secrets" >}}).
 
 ## How do I create a stack inside an Organization instead of my User account?
 
