@@ -1046,6 +1046,25 @@ div.section[id^="pulumi"] {
     }
 }
 
+.choose-cloud-container {
+    display: flex;
+    flex-direction: column;
+
+    .button {
+        margin-right: inherit !important;
+        padding: 20px;
+        max-width: 500px;
+
+        @media(max-width: $screen-md){
+            max-width: initial;
+        }
+
+        img {
+            height: 50px;
+        }
+    }
+}
+
 .get-started-stepper {
     margin-top: 24px;
 }
