@@ -4,7 +4,7 @@
         <a class="mdl-tabs__tab langtab">TypeScript</a>
         {{ if not (eq (.Get 0) "nodeonly") }}
         <a class="mdl-tabs__tab langtab">Python</a>
-        <a class="mdl-tabs__tab langtab">Go</a>
+        {{ if not (eq (.Get 0) "nogo") }}<a class="mdl-tabs__tab langtab">Go</a>{{ end }}
         {{ end }}
     </div>
 </div>
