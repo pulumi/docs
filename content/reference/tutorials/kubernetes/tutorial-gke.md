@@ -1,13 +1,13 @@
 ---
-title: "Tutorial: GKE - Hello World!"
+title: "Clusters: GKE - Hello World!"
 aliases:
     - /quickstart/kubernetes/tutorial-gke/
     - /quickstart/gcp/tutorial-gke.html
     - /quickstart/gcp/tutorial-gke/
     - /quickstart/gke-hello-world.html
 menu:
-  quickstart:
-    parent: kubernetes-clusters
+  reference:
+    parent: tutorials-kubernetes
     weight: 2
 ---
 

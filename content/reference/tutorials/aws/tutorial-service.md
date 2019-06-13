@@ -1,14 +1,13 @@
 ---
-title: "Tutorial: Containers on ECS \"Fargate\""
+title: "Containers on ECS \"Fargate\""
 aliases:
     - /quickstart/tutorial-service/
     - /quickstart/tutorial-service.html
     - /quickstart/aws-containers.html
     - /quickstart/aws/tutorial-containers-ecs-fargate.html
 menu:
-  quickstart:
-    parent: aws
-    weight: 1
+  reference:
+    parent: tutorials-aws
 ---
 
 In this tutorial, we'll build and publish a Docker container image to a private Elastic Container Registry (ECR), and

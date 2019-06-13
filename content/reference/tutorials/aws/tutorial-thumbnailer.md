@@ -1,13 +1,12 @@
 ---
-title: "Tutorial: Video Thumbnailer"
+title: "Video Thumbnailer"
 aliases:
     - /quickstart/aws/tutorial-thumbnailer/
     - /quickstart/aws/tutorial-thumbnailer.html
     - /quickstart/aws-extract-thumbnail.html
 menu:
-  quickstart:
-    parent: aws
-    weight: 5
+  reference:
+    parent: tutorials-aws
 ---
 
 In this tutorial, we'll use combine serverless, containers and cloud infrastructure together into a fully functioning
