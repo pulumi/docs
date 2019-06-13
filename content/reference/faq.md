@@ -24,7 +24,7 @@ When you run a preview, update or destroy, pulumi decrypts this data. It is plai
 
 ## Are my secrets ever visible?
 
-As noted above, inside your program, secret configuration values retrived via `get` or `require` from the configuration system are in a plaintext form. If these values end up being passed as inputs to a resource's constructor, they will end up present in their unencrypted form in Pulumi's state file. To ensure these values are correctly marked as secrets, Pulumi provides laguage support for secrets.  When using this support, these values will end up being encrypted in the state file. To learn more, see [Secrets](https://pulumi.io/reference/programming-model.html#secrets).
+As noted above, Pulumi provides primitives so you can enforce your secrets are stored in a secure manner in the CLI UI, State file and Pulumi Web Console. During an update, your secrets will be unencrypted in memory and visible to your Pulumi program. It is your responsibility to ensure that you do not persist them outside of Pulumi without securing them. To learn more, see [Secrets]({{< relref "/reference/programming-model.md#secrets" >}}).
 
 ## How do I create a stack inside an Organization instead of my User account?
 

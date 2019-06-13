@@ -454,12 +454,35 @@ const url2: Output<string> = pulumi.interpolate `http://${hostname}:${port}/`;
 
 When constructing resources, Pulumi will record all inputs and outputs from a resource it is state file.  Some of these properties may contain sensitive data, which should be encrypted before being stored in the state file. For example, consider the following program which creates an AWS Parameter Store parameter.
 
+{{< langchoose >}}
+
 ```javascript
 const cfg = new pulumi.Config()
 const param = new aws.ssm.Parameter("a-secret-param", {
     type: "SecureString",
     value: cfg.require("my-secret-value"),
 });
+```
+
+```typescript
+const cfg = new pulumi.Config()
+const param = new aws.ssm.Parameter("a-secret-param", {
+    type: "SecureString",
+    value: cfg.require("my-secret-value"),
+});
+```
+
+```python
+cfg = pulumi.Config()
+param = ssm.Parameter("a-secret-param",
+    type="SecureString",
+    value=cfg.require("my-secret-value"))
+```
+
+```go
+// Secrets are not yet avaiaible in Go.
+//
+// See https://github.com/pulumi/pulumi/issues/2820
 ```
 
 As written, the state file for this program will show the plaintext value of the "my-secret-value" configuration variable as an input to the `Parameter` resource.  Pulumi provides a way to mark a value as "secret" such that if it stored in the state file, it will be encrypted in the same way secret configuration values are.  There are two ways to create secret values:
@@ -469,12 +492,35 @@ As written, the state file for this program will show the plaintext value of the
 
 We can change the above code to look like the following:
 
+{{< langchoose >}}
+
 ```javascript
 const cfg = new pulumi.Config()
 const param = new aws.ssm.Parameter("a-secret-param", {
     type: "SecureString",
     value: cfg.requireSecret("my-secret-value"),
 });
+```
+
+```typescript
+const cfg = new pulumi.Config()
+const param = new aws.ssm.Parameter("a-secret-param", {
+    type: "SecureString",
+    value: cfg.requireSecret("my-secret-value"),
+});
+```
+
+```python
+cfg = pulumi.Config()
+param = ssm.Parameter("a-secret-param", 
+    type="SecureString",
+    value=cfg.require_secret("my-secret-value"))
+```
+
+```go
+// Secrets are not yet avaiaible in Go.
+//
+// See https://github.com/pulumi/pulumi/issues/2820
 ```
 
 In which case the value property of the `Parameter` resource will now be encrypted in the state file.
@@ -627,7 +673,7 @@ console.log(`Active: ${data.active}`);
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
-The `Config` object also provides functions to get the value from configuration and mark it as a secret.  See [config.getSecret] or [config.requireSecret].
+The `Config` object also provides functions to get the value from configuration and mark it as a secret. See [config.getSecret] or [config.requireSecret].  Unlike the [config.get] and [config.require], these methods return an `Output<T>` which holds the underlying value and ensures that it is encrypted when it is being persisted.
 
 ## Components {#components}
 
