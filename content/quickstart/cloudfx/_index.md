@@ -1,10 +1,6 @@
 ---
 title: Pulumi Cloud Framework
 aliases: ["/reference/cloud.html"]
-menu:
-  quickstart:
-    identifier: cloud
-    weight: 7
 ---
 
 <img src="/images/quickstart/cloudfx-purple.png" align="right">

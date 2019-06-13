@@ -3,9 +3,6 @@ title: "Tutorial: Serverless REST APIs with DynamoDB"
 aliases:
     - tutorial-rest-api.html
     - /quickstart/aws-rest-api.html
-menu:
-  quickstart:
-    parent: cloud
 ---
 
 With Pulumi, you can combine infrastructure definitions and application code in one program. The [@pulumi/cloud] library is a set of Pulumi [components]({{< relref "/reference/programming-model.md#components" >}}) that provide a higher-level abstraction over AWS. So, instead of provisioning an API Gateway instance, Lambda functions, and setting up IAM roles, you can use [cloud.API] and define application code at the same time as the infrastructure it depends on.
