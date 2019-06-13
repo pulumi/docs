@@ -1,6 +1,8 @@
 ---
 title: "Tutorial #5: Gating rollout on Prometheus checks"
-aliases: ["tutorial-p8s-rollout.html"]
+aliases:
+  - /quickstart/kubernetes/tutorial-p8s-rollout/
+  - /quickstart/kubernetes/tutorial-p8s-rollout.html
 menu:
   quickstart:
     parent: kubernetes-workloads

@@ -1,6 +1,8 @@
 ---
 title: FAQ
-aliases: ["faq.html"]
+aliases:
+  - /quickstart/kubernetes/faq/
+  - /quickstart/kubernetes/faq.html
 menu:
   quickstart:
     identifier: kubernetes-faq

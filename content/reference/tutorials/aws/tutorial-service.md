@@ -1,7 +1,8 @@
 ---
 title: "Tutorial: Containers on ECS \"Fargate\""
 aliases:
-    - tutorial-service.html
+    - /quickstart/tutorial-service/
+    - /quickstart/tutorial-service.html
     - /quickstart/aws-containers.html
     - /quickstart/aws/tutorial-containers-ecs-fargate.html
 menu:

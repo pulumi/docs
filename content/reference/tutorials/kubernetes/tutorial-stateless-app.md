@@ -1,6 +1,8 @@
 ---
 title: "Tutorial #6: Run a Stateless App Deployment"
-aliases: ["tutorial-stateless-app.html"]
+aliases:
+  - /quickstart/kubernetes/tutorial-stateless-app/
+  - /quickstart/kubernetes/tutorial-stateless-app.html
 menu:
   quickstart:
     parent: kubernetes-workloads

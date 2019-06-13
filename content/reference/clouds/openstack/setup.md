@@ -1,7 +1,8 @@
 ---
 title: Setup
 aliases:
-    - setup.html
+    - /quickstart/openstack/setup/
+    - /quickstart/openstack/setup.html
     - /install/openstack.html
 menu:
   quickstart:

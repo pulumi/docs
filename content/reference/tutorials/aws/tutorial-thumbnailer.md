@@ -1,7 +1,8 @@
 ---
 title: "Tutorial: Video Thumbnailer"
 aliases:
-    - tutorial-thumbnailer.html
+    - /quickstart/aws/tutorial-thumbnailer/
+    - /quickstart/aws/tutorial-thumbnailer.html
     - /quickstart/aws-extract-thumbnail.html
 menu:
   quickstart:

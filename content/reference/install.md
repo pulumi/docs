@@ -1,7 +1,8 @@
 ---
 title: "Download and Install"
 aliases:
-    - install.html
+    - /quickstart/install/
+    - /quickstart/install.html
     - /install/
 menu:
   quickstart:

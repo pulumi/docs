@@ -1,7 +1,8 @@
 ---
 title: "Tutorial #2: Deploying the WordPress Helm Chart"
 aliases:
-  - tutorial-wordpress-chart.html
+  - /quickstart/kuberentes/tutorial-wordpress-chart/
+  - /quickstart/kuberentes/tutorial-wordpress-chart.html
   - /quickstart/kubernetes-guestbook.html
 menu:
   quickstart:

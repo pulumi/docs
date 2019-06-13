@@ -1,6 +1,8 @@
 ---
 title: "Tutorial #4: Graceful App Rollout"
-aliases: ["tutorial-configmap-rollout.html"]
+aliases:
+    - /quickstart/kubernetes/tutorial-configmap-rollout/
+    - /quickstart/kubernetes/tutorial-configmap-rollout.html
 menu:
   quickstart:
     parent: kubernetes-workloads
