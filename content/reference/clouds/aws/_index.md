@@ -21,7 +21,9 @@ The AWS provider supports several options for providing access to AWS credential
 
 ## Getting Started
 
-The easiest way to start with AWS is to follow one of the tutorials:
+The quickest way to get started with AWS is to follow the [Get Started]({{< relref "/quickstart/aws" >}}) guide.
+
+Additionally, there are several tutorials available to follow:
 
 * [Containers on ECS "Fargate"]({{< relref "/reference/tutorials/aws/tutorial-service.md" >}}): Deploy containers to Amazon
 * [EC2 Linux WebServer VM]({{< relref "/reference/tutorials/aws/tutorial-ec2-webserver.md" >}}): Create an EC2 Linux Web Server virtual machine

@@ -19,7 +19,7 @@ The Azure provider supports several options for providing access to Azure creden
 
 ## Getting Started
 
-The easiest way to start with Pulumi for Azure is to follow the tutorial:
+The quickest way to get started with Azure is to follow the [Get Started]({{< relref "/quickstart/azure" >}}) guide.
 
 Additionally, a tutorial is available to follow:
 
