@@ -44,13 +44,13 @@ instructions [here][kubectl].
 
 [pulumi]: https://www.pulumi.com/
 [nodejs]: https://nodejs.org/en/
-[pulumi-cli]: {{< relref "/quickstart/install.md" >}}
+[pulumi-cli]: {{< relref "/reference/install.md" >}}
 [local-backend]: {{< relref "/reference/state.md" >}}
 [ts]: https://www.typescriptlang.org/
 [yarn]: https://yarnpkg.com/en/docs/install
 
-[aws-setup]: {{< relref "/quickstart/aws/setup.md" >}}
-[azure-setup]: {{< relref "/quickstart/azure/setup.md" >}}
-[gcp-setup]: {{< relref "/quickstart/gcp/setup.md" >}}
+[aws-setup]: {{< relref "/reference/clouds/aws/setup.md" >}}
+[azure-setup]: {{< relref "/reference/clouds/azure/setup.md" >}}
+[gcp-setup]: {{< relref "/reference/clouds/gcp/setup.md" >}}
 
 [kubectl]: https://kubernetes.io/docs/tasks/tools/install-kubectl/

@@ -11,7 +11,7 @@ noindex: true
         Create, deploy, and manage infrastructure on any cloud using your favorite language.
     </h3>
     <p style="text-align: center; margin-bottom: 0">
-        <a href="{{< relref "/quickstart/install.md" >}}"><button class="button primary">INSTALL</button></a>
+        <a href="{{< relref "/reference/install.md" >}}"><button class="button primary">INSTALL</button></a>
         <a href="{{< relref "/quickstart" >}}"><button class="button primary">GET STARTED</button></a>
         <a href="{{< relref "/reference" >}}"><button class="button primary">LEARN</button></a>
     </p>
@@ -85,13 +85,13 @@ noindex: true
 
 <div class="card-table" style="background: #fafafa; border-top: 1px solid #eee; border-bottom: 1px solid #eee; margin-bottom: 64px">
     <div class="mdl-card mdl-shadow--2dp get-started-card">
-        <a href="{{< relref "/quickstart/aws/tutorial-service.md" >}}">
+        <a href="{{< relref "/reference/tutorials/aws/tutorial-service.md" >}}">
           <img src="/images/icon-feature-containers.svg"
               style="margin-bottom: 30px" width="125">
         </a>
         <div class="mdl-card__title">
             <h2 class="mdl-card__title-text no-anchor">
-                <a href="{{< relref "/quickstart/aws/tutorial-service.md" >}}">Containers</a>
+                <a href="{{< relref "/reference/tutorials/aws/tutorial-service.md" >}}">Containers</a>
             </h2>
         </div>
         <div class="mdl-card__supporting-text">
@@ -100,19 +100,19 @@ noindex: true
             </span>
         </div>
         <div class="mdl-card__actions">
-            <a href="{{< relref "/quickstart/aws/tutorial-service.md" >}}">
+            <a href="{{< relref "/reference/tutorials/aws/tutorial-service.md" >}}">
                 <button class="button">START NOW</button>
             </a>
         </div>
     </div>
     <div class="mdl-card mdl-shadow--2dp get-started-card">
-        <a href="{{< relref "/quickstart/aws/tutorial-rest-api.md" >}}">
+        <a href="{{< relref "/reference/tutorials/aws/tutorial-rest-api.md" >}}">
           <img src="/images/icon-feature-serverless.svg"
               style="margin-bottom: 30px" width="125">
         </a>
         <div class="mdl-card__title">
             <h2 class="mdl-card__title-text no-anchor">
-                <a href="{{< relref "/quickstart/aws/tutorial-rest-api.md" >}}">Serverless</a>
+                <a href="{{< relref "/reference/tutorials/aws/tutorial-rest-api.md" >}}">Serverless</a>
             </h2>
         </div>
         <div class="mdl-card__supporting-text">
@@ -121,19 +121,19 @@ noindex: true
             </span>
         </div>
         <div class="mdl-card__actions">
-            <a href="{{< relref "/quickstart/aws/tutorial-rest-api.md" >}}">
+            <a href="{{< relref "/reference/tutorials/aws/tutorial-rest-api.md" >}}">
                 <button class="button">START NOW</button>
             </a>
         </div>
     </div>
     <div class="mdl-card mdl-shadow--2dp get-started-card">
-        <a href="{{< relref "/quickstart/aws/tutorial-ec2-webserver.md" >}}">
+        <a href="{{< relref "/reference/tutorials/aws/tutorial-ec2-webserver.md" >}}">
           <img src="/images/icon-feature-data.svg"
               style="margin-bottom: 30px" width="125">
         </a>
         <div class="mdl-card__title">
             <h2 class="mdl-card__title-text no-anchor">
-                <a href="{{< relref "/quickstart/aws/tutorial-ec2-webserver.md" >}}">Infrastructure</a>
+                <a href="{{< relref "/reference/tutorials/aws/tutorial-ec2-webserver.md" >}}">Infrastructure</a>
             </h2>
         </div>
         <div class="mdl-card__supporting-text">
@@ -142,7 +142,7 @@ noindex: true
             </span>
         </div>
         <div class="mdl-card__actions">
-            <a href="{{< relref "/quickstart/aws/tutorial-ec2-webserver.md" >}}">
+            <a href="{{< relref "/reference/tutorials/aws/tutorial-ec2-webserver.md" >}}">
                 <button class="button">START NOW</button>
             </a>
         </div>

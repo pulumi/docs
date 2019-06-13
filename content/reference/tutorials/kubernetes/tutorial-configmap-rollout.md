@@ -31,7 +31,7 @@ For example, in the gif below, we can see how updating one resource (in this cas
 ## Prerequisites
 
 > **IMPORTANT:** This tutorial expects that you have provisioned a Kubernetes cluster and have an
-> active kubeconfig file. If you don't, please follow instructions [here]({{< relref "./" >}}).
+> active kubeconfig file. If you don't, please follow instructions [here]({{< relref "/reference/clouds/kubernetes" >}}).
 
 1.  Install [Node.js][nodejs] version 6 or later.
 1.  Install a package manager for Node.js, such as [npm] or [Yarn].
@@ -231,6 +231,6 @@ pulumi destroy
 [nodejs]: https://nodejs.org/en/
 [npm]: https://www.npmjs.com/get-npm
 [yarn]: https://yarnpkg.com/en/docs/install
-[install]: {{< relref "/quickstart/install.md" >}}
+[install]: {{< relref "/reference/install.md" >}}
 [pulumi-test]: https://github.com/pulumi/examples/tree/master/kubernetes-ts-configmap-rollout
 [index.ts]: https://github.com/pulumi/examples/blob/master/kubernetes-ts-configmap-rollout/index.ts

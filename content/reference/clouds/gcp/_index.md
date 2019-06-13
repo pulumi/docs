@@ -21,7 +21,9 @@ The GCP provider supports several options for providing access to Google Cloud c
 
 The easiest way to start with Pulumi for GCP is to follow the tutorial:
 
-* [Virtual Machine]({{< relref "tutorial-gce-webserver.md" >}}): Create a Debian virtual machine web server instance
+Additionally, a tutorial is available to follow:
+
+* [Virtual Machine]({{< relref "/reference/tutorials/gcp/tutorial-gce-webserver.md" >}}): Create a Debian virtual machine web server instance
 
 In addition to the tutorial, several interesting examples are available complete with instructions:
 

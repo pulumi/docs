@@ -41,7 +41,7 @@ For your workflow to do anything interesting, you'll want to create a new projec
 
 1. [Clone an Existing Example](https://github.com/pulumi/examples)
 2. [Use the New Project Wizard](https://app.pulumi.com/site/new-project)
-3. [Download the CLI]({{< relref "/quickstart/install.md" >}}) and run `pulumi new` to select a template
+3. [Download the CLI]({{< relref "/reference/install.md" >}}) and run `pulumi new` to select a template
 
 # Creating a Workflow
 
@@ -115,10 +115,10 @@ This enables your GitHub Action to communicate with the Pulumi service.
 
 Next, you'll need to configure your cloud credentials. This is dependent on your cloud of choice; for example
 
-* `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` for [AWS]({{< relref "/quickstart/aws/setup.md" >}})
-* `ARM_CLIENT_ID`, `ARM_CLIENT_SECRET`, and `ARM_TENANT_ID` for [Azure]({{< relref "/quickstart/azure/setup.md" >}})
-* `GOOGLE_CREDENTIALS` for [GCP]({{< relref "/quickstart/gcp/setup.md" >}})
-* `KUBECONFIG` for [Kubernetes]({{< relref "/quickstart/kubernetes/setup.md" >}})
+* `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` for [AWS]({{< relref "/reference/clouds/aws/setup.md" >}})
+* `ARM_CLIENT_ID`, `ARM_CLIENT_SECRET`, and `ARM_TENANT_ID` for [Azure]({{< relref "/reference/clouds/azure/setup.md" >}})
+* `GOOGLE_CREDENTIALS` for [GCP]({{< relref "/reference/clouds/gcp/setup.md" >}})
+* `KUBECONFIG` for [Kubernetes]({{< relref "/reference/clouds/kubernetes/setup.md" >}})
 
 Enter these as secrets, just like you did `PULUMI_ACCESS_TOKEN`, so that your GitHub Action can deploy to your cloud.
 

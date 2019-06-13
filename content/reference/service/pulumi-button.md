@@ -44,7 +44,7 @@ The above snippet includes an `aws:region` config value with a default value of 
 
 ### Testing
 
-You can test your template project with the [Pulumi CLI]({{< relref "/quickstart/install.md" >}}) or a web browser.
+You can test your template project with the [Pulumi CLI]({{< relref "/reference/install.md" >}}) or a web browser.
 
 CLI:
 

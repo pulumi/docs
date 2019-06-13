@@ -13,7 +13,7 @@ so, we will discovery many new ways to extend the basic Pulumi program.
 
 > If you'd like to take a break from the tour, head on over to [the Tutorials section]({{< relref "/quickstart" >}}) to see specific
 > example applications that use [containers]({{< relref "/quickstart/cloudfx/tutorial-service.md" >}}),
-> [serverless]({{< relref "/quickstart/aws/tutorial-rest-api.md" >}}), [infrastructure]({{< relref "/quickstart/aws/tutorial-ec2-webserver.md" >}}), or
+> [serverless]({{< relref "/reference/tutorials/aws/tutorial-rest-api.md" >}}), [infrastructure]({{< relref "/reference/tutorials/aws/tutorial-ec2-webserver.md" >}}), or
 > [a combination of all three]({{< relref "/quickstart/cloudfx/tutorial-thumbnailer.md" >}}).  Alternatively, check out
 > [the detailed Reference material]({{< relref "/reference" >}}) to go deeper on certain concepts.
 

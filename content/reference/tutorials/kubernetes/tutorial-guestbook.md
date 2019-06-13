@@ -33,8 +33,8 @@ The code for this tutorial is
 You need to have the Pulumi CLI and a working Kubernetes cluster.
 [Minikube](https://kubernetes.io/docs/getting-started-guides/minikube) is an easy way to get started.
 
-1. [Install Pulumi]({{< relref "../install.md" >}})
-2. [Connect Pulumi to a Kubernetes Cluster]({{< relref "setup.md" >}})
+1. [Install Pulumi]({{< relref "/reference/install.md" >}})
+2. [Connect Pulumi to a Kubernetes Cluster]({{< relref "/reference/clouds/kubernetes/setup.md" >}})
 
 ## Running the Guestbook
 
