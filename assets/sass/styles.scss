@@ -1,14 +1,16 @@
-@import "colors";
-@import "fonts";
-@import "icons";
-@import "langchoose";
-@import "mixins";
-@import "no-select";
-@import "pygments";
-@import "toc";
-
 @tailwind base;
 @tailwind components;
+
+@import "colors";
+@import "mixins";
+@import "fonts";
+@import "buttons";
+@import "tables";
+@import "code";
+@import "icons";
+@import "toc";
+@import "langchoose";
+@import "no-select";
 
 h1, h2, h3, h4, h5, h6 {
     @apply font-display text-gray-dark mb-2;
@@ -64,46 +66,8 @@ main {
     }
 }
 
-code {
-    @apply bg-gray-lightest rounded py-1 px-2 text-sm;
-}
-
-pre {
-    @apply bg-gray-lightest py-2 px-3 rounded scrolling-auto overflow-scroll my-4 leading-normal;
-
-    > code {
-        @apply bg-transparent p-0;
-    }
-}
-
-footer {
-    a {
-        @include transition();
-
-        &:hover {
-            @apply text-gray-light;
-        };
-    }
-}
-
 .link {
     @apply text-blue-darker;
-}
-
-.btn {
-    @apply py-2 px-4 rounded text-white uppercase bg-blue;
-
-    &:hover {
-        @apply bg-blue-bright;
-    }
-
-    &:active {
-        @apply bg-blue;
-    }
-}
-
-.btn-cta {
-    @apply bg-orange;
 }
 
 @tailwind utilities;

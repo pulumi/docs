@@ -1,0 +1,19 @@
+table {
+    @apply border border-gray-lightest;
+
+    thead {
+        @apply bg-gray-lightest;
+    }
+
+    tr {
+        @apply border-b border-gray-lightest;
+    }
+
+    th {
+        @apply text-left text-black;
+    }
+
+    th, td {
+        @apply px-8 py-2;
+    }
+}
