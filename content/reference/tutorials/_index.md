@@ -6,6 +6,10 @@ menu:
     weight: 2
 ---
 
+The quickest way to get started is to follow the [Get Started]({{< relref "/quickstart" >}}) guide.
+
+There are additional tutorials available for each of the supported clouds:
+
 * [AWS]({{< relref "./aws" >}})
 * [Azure]({{< relref "./azure" >}})
 * [Google Cloud]({{< relref "./gcp" >}})

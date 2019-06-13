@@ -31,6 +31,10 @@ Kubernetes and Pulumi can:
 -  Increase productivity using the power of dev tools such as IDE auto-completion, type &
    error checking, linting, refactoring, and testing frameworks to validate Kubernetes clusters, app workloads, or both.
 
+## Getting Started
+
+The quickest way to get started with Kubernetes is to follow the [Get Started]({{< relref "/quickstart/kubernetes" >}}) guide.
+
 ## Library Packages
 
 #### For Cluster Management

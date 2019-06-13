@@ -6,6 +6,10 @@ menu:
     identifier: tutorials-kubernetes
 ---
 
+The quickest way to get started with Kubernetes is to follow the [Get Started]({{< relref "/quickstart/kubernetes" >}}) guide.
+
+Additionally, there are several tutorials available to follow:
+
 ## Clusters
 
 The following tutorials are focused on creating managed Kubernetes clusters

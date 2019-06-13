@@ -6,4 +6,8 @@ menu:
     identifier: tutorials-azure
 ---
 
+The quickest way to get started with Azure is to follow the [Get Started]({{< relref "/quickstart/azure" >}}) guide.
+
+Additionally, a tutorial is available to follow:
+
 * [Azure Container Instances Web Server]({{< relref "/reference/tutorials/azure/tutorial-container-webserver.md" >}}): Create an NGINX web server Azure Container Instance

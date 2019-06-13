@@ -19,7 +19,7 @@ The GCP provider supports several options for providing access to Google Cloud c
 
 ## Getting Started
 
-The easiest way to start with Pulumi for GCP is to follow the tutorial:
+The quickest way to get started with GCP is to follow the [Get Started]({{< relref "/quickstart/gcp" >}}) guide.
 
 Additionally, a tutorial is available to follow:
 
