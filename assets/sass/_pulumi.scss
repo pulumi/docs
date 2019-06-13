@@ -178,6 +178,10 @@ $code-font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
         margin-bottom: 10px;
     }
 
+    &.large {
+        font-size: 18px;
+    }
+
     &.primary {
         color: #fff;
         background-color: $primary2;
