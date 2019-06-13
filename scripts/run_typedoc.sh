@@ -70,6 +70,7 @@ REPOS=(
     "eks,pulumi-eks/nodejs/eks"
     "f5bigip,pulumi-f5bigip,sdk/nodejs"
     "gcp,pulumi-gcp,sdk/nodejs"
+    "gitlab,pulumi-gitlab,sdk/nodejs"
     "kubernetes,pulumi-kubernetes,sdk/nodejs"
     "linode,pulumi-linode,sdk/nodejs"
     "mysql,pulumi-mysql,sdk/nodejs"
