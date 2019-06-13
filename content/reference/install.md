@@ -5,8 +5,8 @@ aliases:
     - /quickstart/install.html
     - /install/
 menu:
-  quickstart:
-    weight: 2
+  reference:
+    weight: 13
 ---
 
 <!--
