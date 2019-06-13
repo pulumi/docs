@@ -64,7 +64,7 @@ function selectLanguage(lang) {
             });
 
             // Any explicit prologue elements:
-            $("div").each(function (i, e) {
+            $("div,span").each(function (i, e) {
                 var classes = getElemClasses(e);
                 for (var i = 0; i < classes.length; i++) {
                     if (classes[i].startsWith("language-prologue-")) {
