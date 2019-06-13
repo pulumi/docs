@@ -2,17 +2,17 @@
     Blog sidebar, showing a list of tags, and a quick intro for context.
 -->
 <aside>
-    <div class="pul-sidebar col-md-3">
-        <h3 class="no-anchor">Pulumi Blog</h3>
-        <p>🍹Program the Cloud 🍹</p>
-        <p>Create, deploy, and manage cloud infrastructure using your favorite language.</p>
-
-        <ul class="pul-tags-list">
-            {{ range .Site.Taxonomies.tags }}
-            <li>
-                <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
-            </li>
+    <h3 class="no-anchor">🍹 Pulumi Blog</h3>
+    <h4>Program the Cloud</h4>
+    <p>Create, deploy, and manage cloud infrastructure using your favorite language.</p>
+    <h5>Tags</h5>
+    <ul class="list-none p-0">
+        {{ range .Site.Taxonomies.tags }}
+            {{ if .Page.Title }}
+                <li>
+                    <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+                </li>
             {{ end }}
-        </ul>
-    </div>
+        {{ end }}
+    </ul>
 </aside>

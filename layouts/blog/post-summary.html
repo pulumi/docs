@@ -2,9 +2,11 @@
     Renders a summary of a blog post, assumed to be the current
     template context.
 -->
-<article>
+<p>
     {{ .Summary }}
-    <a class="summary-read-more" href="{{ .Permalink }}">
-        Read more
+</p>
+<p>
+    <a href="{{ .Permalink }}">
+        Read more &rarr;
     </a>
-</article>
+</p>

@@ -1,62 +1,49 @@
 {{ define "main" }}
-<section class="content-block">
-    <div class="container-fluid">
-        <div id="pul-blog" class="row">
+    <div class="md:flex">
 
+        <div class="md:w-3/12 pr-8">
             {{ partial "blog/sidebar.html" . }}
+        </div>
 
-             <div class="col-md-7">
-                 {{ $authorData := index $.Site.Data.team.team .Data.Term }}
-                 <div class="author-details">
-                    <img src="{{ $.Site.BaseURL }}images/team/{{ $authorData.id }}.jpg" alt="{{ $authorData.name }}">
-                    <div class="profile">
-                        <h2 class="taxonomy-page-header no-anchor">{{ $authorData.name }}</h2>
-                        <p>{{ $authorData.title }}</p>
+        <div class="md:w-7/12">
+            {{ $authorData := index $.Site.Data.team.team .Data.Term }}
+            {{ $paginator := .Paginate .Data.Pages.Reverse }}
 
-                        <div>
+            <header>
+                <div class="flex items-top">
+                    <span class="rounded-full bg-gray-300 mr-8">
+                        <img class="rounded-full h-32 p-1" src="{{ $.Site.BaseURL }}images/team/{{ $authorData.id }}.jpg" alt="{{ $authorData.name }}">
+                    </span>
+                    <div>
+                        <h1>{{ $authorData.name }}</h1>
+                        <div>{{ $authorData.title }}</div>
+                        <span>
                             {{ if $authorData.social }}
-                                {{ partial "widgets/social-icons.html" (dict "social" $authorData.social)}}
+                                {{ partial "widgets/social-icons.html" (dict "social" $authorData.social) }}
                             {{ end }}
-                        </div>
+                        </span>
                     </div>
                 </div>
+            </header>
 
-                <ul class="posts-list">
-                    {{ $paginator := .Paginate .Data.Pages.Reverse }}
-                    {{ range $paginator.Pages }}
-                    <li>
-                        <div class="post-header">
-                            <small>
-                                <time>{{ .Date.Format "Monday, Jan 2, 2006" }}</time>
-                            </small>
-                            <h3 class="no-anchor">
-                                <a href="{{ .Permalink }}">{{ .Title }}</a>
-                            </h3>
-                        </div>
-                        <div>
-                            {{/*
-                                If a general image is associated with the post, display it in-line.
-                                Though we need to do some work to convert a relative image path.
-                            */}}
-                            {{ if .Param "meta_image" }}
-                                {{ if in .Params.meta_image "RELATIVE_TO_PAGE" }}
-                                    {{ $imagePath := replace .Params.meta_image "RELATIVE_TO_PAGE/" "" }}
-                                    <img class="post-image" src="{{ .Page.Permalink }}{{ $imagePath }}" alt="{{ .Title }}">
-                                {{ else }}
-                                    <img class="post-image" src="{{ .Site.BaseURL }}{{ .Params.meta_image }}" alt="{{ .Title }}">
-                                {{ end }}
-                            {{ end }}
+            {{ range $paginator.Pages }}
+                <article class="my-8 pb-8 border-b border-gray-200">
+                    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                    <div class="flex items-center">
+                        <time>
+                            {{ .Date.Format "Monday, Jan 2, 2006" }}
+                        </time>
+                    </div>
+                    <section>
+                        {{ partial "blog/poster" . }}
+                        {{ .Render "post-summary" }}
+                    </section>
+                </article>
+            {{ end }}
+        </div>
 
-                            {{ .Render "post-summary" }}
-                            <div class="clearfix"></div>
-                        </div>
-                    </li>
-                    {{ end }}
-                </ul>
+        <div class="md:w-2/12 pl-8">
 
-                {{ partial "blog/paginator.html" . }}
-            </div>
         </div>
     </div>
-</section>
 {{ end }}

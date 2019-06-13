@@ -1,64 +1,31 @@
 {{ define "main" }}
-<section class="content-block">
-    <div class="container-fluid">
-        <div id="pul-blog" class="row">
+    <div class="md:flex">
 
+        <div class="md:w-3/12 pr-8">
             {{ partial "blog/sidebar.html" . }}
+        </div>
 
-            <div class="col-md-7">
-                <article>
-                    <h1 class="taxonomy-page-header no-anchor">{{ .Title }}</h1>
+        <div class="md:w-7/12">
+            <article class="my-8 pb-8 border-b border-gray-200">
+                <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+                <div class="flex items-center">
+                    <span>
+                        {{ partial "blog/authors.html" (dict "context" . "authors" .Params.authors) }}
+                    </span>
+                    <span class="mx-2">∙</span>
+                    <time>
+                        {{ .Date.Format "Monday, Jan 2, 2006" }}
+                    </time>
+                </div>
+                <section>
+                    {{ partial "blog/poster" . }}
+                    {{ .Content }}
+                </section>
+            </article>
+        </div>
 
-                    <div>
-                        <ul class="authors">
-                            {{ range $idx, $authorName := .Param "authors" }}
-                                {{ $authorPage := $.Site.GetPage (printf "/authors/%s" ($authorName | urlize)) }}
-                                {{ $authorData := index $.Site.Data.team.team $authorName }}
-                                <li class="author">
-                                    <img
-                                            src="{{ $.Site.BaseURL }}images/team/{{ $authorData.id }}.jpg"
-                                            alt="{{ $authorData.name }}">
-                                    <div>
-                                        <div>
-                                            <a class="author-link" href="{{ $authorPage.Permalink }}">{{ $authorData.name }}</a>
-                                        </div>
-                                        <div>
-                                            {{ if $authorData.social }}
-                                                {{ partial "widgets/social-icons.html" (dict "social" $authorData.social)}}
-                                            {{ end }}
-                                        </div>
-                                    </div>
-                                </li>
-                            {{ end }}
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        {{ .Content }}
-                    </div>
-
-                    <div class="pul-post-ending">
-                        <small>
-                            Posted <time>{{ .Date.Format "Monday, Jan 2, 2006" }}</time>
-                        </small>
-                    </div>
-                </article>
-
-                <aside>
-                    <ul class="pul-tags-list">
-                        {{ range $tag := .Param "tags" }}
-                        {{ with $tagPAge := $.Site.GetPage (printf "/tags/%s" ($tag | urlize)) }}
-                        <li>
-                            <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
-                        </li>
-                        {{ end }}
-                        {{ end }}
-                    </ul>
-                </aside>
-            </div>
+        <div class="md:w-2/12 pl-8">
 
         </div>
     </div>
-</section>
 {{ end }}
