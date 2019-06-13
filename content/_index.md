@@ -11,9 +11,8 @@ noindex: true
         Create, deploy, and manage infrastructure on any cloud using your favorite language.
     </h3>
     <p style="text-align: center; margin-bottom: 0">
-        <a href="{{< relref "/reference/install.md" >}}"><button class="button primary">INSTALL</button></a>
-        <a href="{{< relref "/quickstart" >}}"><button class="button primary">GET STARTED</button></a>
-        <a href="{{< relref "/reference" >}}"><button class="button primary">LEARN</button></a>
+        <a class="button large primary" href="{{< relref "/quickstart" >}}">GET STARTED</a>
+        <a class="button large" href="{{< relref "/reference" >}}">LEARN</a>
     </p>
     <p style="margin-top: 32px;">
         <span style="font-weight: 600; background-color: #ee975c; border-radius: 4px; color: #fff; padding: 8px 16px; font-size: 16px">
