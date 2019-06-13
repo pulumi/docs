@@ -3,5 +3,10 @@
 
     <div id="search-results-container"></div>
 
-    <script src="/js/search.js"></script>
+    <!--
+        Minify and fingerprint script. Generated file will contain content
+        hash in filename, so no need to add query param to cache bust.
+    -->
+    {{ $js := resources.Get "js/search.js" | resources.Minify | resources.Fingerprint }}
+    <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 {{ end }}
