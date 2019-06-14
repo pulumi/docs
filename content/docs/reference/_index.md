@@ -1,5 +1,5 @@
 ---
-title: Documentation
+title: Reference
 menu:
   reference:
     identifier: reference
