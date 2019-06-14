@@ -2,7 +2,7 @@ Use Crosswalk to get first class insights and visualizations directly inside you
 
 As cloud apps tend to be long-lived, we think it's vital that it be possible to get insight and understanding of the performance
 of the app, including getting information immediately when something goes wrong.  Using
-[Crosswalk](https://pulumi.io/reference/crosswalk/aws/) Pulumi apps allow you to easily define or reference the appropriate
+[Crosswalk](https://pulumi.io/reference/crosswalk/aws/) Pulumi apps allow you to easily define and visualize the appropriate
 [metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/working_with_metrics.html) that show the health of your
 services, create [alarms](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html) to let you know
 when something is wrong, and even easily create
