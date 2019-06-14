@@ -38,3 +38,5 @@ well-architected best practices, for the entire AWS cloud. Go to production
 with containers, Kubernetes, and serverless applications.
 
 <a href="{{< relref "/reference/crosswalk/aws" >}}">Get Started with Crosswalk for AWS Now</a>
+
+{{< get-started-stepper >}}
