@@ -1,6 +1,6 @@
 ---
 title: Deploy the Stack
-weight: 6
+weight: 7
 menu:
   quickstart:
     parent: aws
