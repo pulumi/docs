@@ -26,3 +26,5 @@ Get started provisioning infrastructure with Pulumi.
         <img src="/images/quickstart/k8s.svg" alt="Kubernetes">
     </a>
 </div>
+
+See [Supported Clouds]({{< relref "/reference/clouds" >}}) for other clouds.
