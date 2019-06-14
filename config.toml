@@ -2,7 +2,13 @@ baseURL = "https://pulumi.io/"
 languageCode = "en-us"
 title = "Pulumi"
 
-disableKinds = ["category", "RSS"]
+disableKinds = ["category", "taxonomyTerm"]
+sectionPagesMenu = "main"
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+[outputFormats.RSS]
+    baseName = "rss"
 
 pygmentsCodeFences = true
 pygmentsUseClasses = true
@@ -10,12 +16,12 @@ pygmentsUseClasses = true
 sectionPagesMenu = "main"
 
 [taxonomies]
-  author = "authors"
-  tag    = "tags"
+    author = "authors"
+    tag = "tags"
 
 [permalinks]
-  authors = "/blog/author/:slug/"
-  tags    = "/blog/tag/:slug/"
+    authors = "/blog/author/:slug/"
+    tags = "/blog/tag/:slug/"
 
 [blackfriday]
     fractions = false
