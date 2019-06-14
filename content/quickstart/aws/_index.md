@@ -5,6 +5,7 @@ menu:
   quickstart:
     identifier: aws
     name: AWS
+    weight: 2
 ---
 
 This guide is intended to help you quickly get started provisioning infrastructure on AWS with Pulumi.

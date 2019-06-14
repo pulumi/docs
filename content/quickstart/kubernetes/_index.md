@@ -6,7 +6,7 @@ menu:
   quickstart:
     identifier: kubernetes
     name: Kubernetes
-    weight: 5
+    weight: 2
 ---
 
 This guide is intended to help you quickly get started provisioning infrastructure on Kubernetes with Pulumi.

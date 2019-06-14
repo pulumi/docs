@@ -5,7 +5,7 @@ menu:
   quickstart:
     identifier: gcp
     name: Google Cloud
-    weight: 4
+    weight: 2
 ---
 
 This guide is intended to help you quickly get started provisioning infrastructure on Google Cloud with Pulumi.
