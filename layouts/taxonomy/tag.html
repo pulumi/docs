@@ -10,7 +10,7 @@
             {{ $paginator := .Paginate .Data.Pages.Reverse }}
 
             <header>
-                <h1>{{ .Data.Term }}</h1>
+                <h1>Posts Tagged {{ .Data.Term }}</h1>
             </header>
 
             {{ range $paginator.Pages }}

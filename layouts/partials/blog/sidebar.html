@@ -7,10 +7,15 @@
     <p>Create, deploy, and manage cloud infrastructure using your favorite language.</p>
     <h5>Tags</h5>
     <ul class="list-none p-0">
-        {{ range .Site.Taxonomies.tags }}
-            {{ if .Page.Title }}
-                <li class="inline-flex mx-1 my-1 ">
-                    <a class="bg-gray-100 text-gray-700 py-1 px-2 text-sm rounded" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+        {{ $title := .Title }}
+        {{ range $tag, $_ := .Site.Taxonomies.tags }}
+            {{ if $tag }}
+                <li class="inline-flex mr-1 my-1 ">
+                    {{ $classes := "bg-gray-100 text-blue-700 hover:bg-blue-300 hover:text-white" }}
+                    {{ if eq $tag $title }}
+                        {{ $classes = "bg-blue-300 text-white hover:text-white" }}
+                    {{ end }}
+                    <a class="py-1 px-2 text-sm rounded {{ $classes }}" href="{{ .Page.Permalink }}">{{ $tag }}</a>
                 </li>
             {{ end }}
         {{ end }}
