@@ -21,12 +21,15 @@ const awsx = require("@pulumi/awsx");
 
 const size = "t2.micro"; // t2.micro is available in the AWS free tier
 
-const ami = "ami-6869aa05" // AMI for us-east-1 (Virginia)
-// const ami  = "ami-c55673a0" // AMI for us-east-2 (Ohio)
-// const ami  = "ami-31490d51" // AMI for us-west-1 (California)
-// const ami  = "ami-7172b611" // AMI for us-west-2 (Oregon)
-// const ami  = "ami-f9dd458a" // AMI for eu-west-1 (Ireland)
-// const ami  = "ami-ea26ce85" // AMI for eu-central-1 (Frankfurt)
+// Look up the right AMI for running Ubuntu Trusty in our region
+const ami = pulumi.output(aws.getAmi({
+    filters: [
+        { name: "name", values: ["ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*"] },
+        { name: "virtualization-type", values: ["hvm"] },
+    ],
+    owners: ["099720109477"], // Canonical
+    mostRecent: true,
+})).apply(result => result.id);
 
 // Create a new security group for port 80
 const group = new aws.ec2.SecurityGroup("web-secgrp", {
@@ -42,7 +45,6 @@ echo "Hello, World!" > index.html
 nohup python -m SimpleHTTPServer 80 &`;
 
 const server = new aws.ec2.Instance("web-server-www", {
-    tags: { "Name": "web-server-www" },
     instanceType: size,
     securityGroups: [ group.name ], // reference the group object above
     ami: ami,
@@ -60,12 +62,15 @@ import * as awsx from "@pulumi/awsx";
 
 const size = "t2.micro"; // t2.micro is available in the AWS free tier
 
-const ami = "ami-6869aa05" // AMI for us-east-1 (Virginia)
-// const ami  = "ami-c55673a0" // AMI for us-east-2 (Ohio)
-// const ami  = "ami-31490d51" // AMI for us-west-1 (California)
-// const ami  = "ami-7172b611" // AMI for us-west-2 (Oregon)
-// const ami  = "ami-f9dd458a" // AMI for eu-west-1 (Ireland)
-// const ami  = "ami-ea26ce85" // AMI for eu-central-1 (Frankfurt)
+// Look up the right AMI for running Ubuntu Trusty in our region
+const ami = pulumi.output(aws.getAmi({
+    filters: [
+        { name: "name", values: ["ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*"] },
+        { name: "virtualization-type", values: ["hvm"] },
+    ],
+    owners: ["099720109477"], // Canonical
+    mostRecent: true,
+})).apply(result => result.id);
 
 // Create a new security group for port 80
 const group = new aws.ec2.SecurityGroup("web-secgrp", {
@@ -81,7 +86,6 @@ echo "Hello, World!" > index.html
 nohup python -m SimpleHTTPServer 80 &`;
 
 const server = new aws.ec2.Instance("web-server-www", {
-    tags: { "Name": "web-server-www" },
     instanceType: size,
     securityGroups: [ group.name ], // reference the group object above
     ami: ami,
@@ -107,7 +111,6 @@ ami = 'ami-6869aa05' # AMI for us-east-1 (Virginia)
 
 # Create a new security group for port 80
 group = ec2.SecurityGroup('web-secgrp',
-    description='Enable HTTP access',
     ingress=[
         { 'protocol': 'tcp', 'from_port': 80, 'to_port': 80, 'cidr_blocks': ['0.0.0.0/0'] }
     ])
@@ -116,20 +119,23 @@ group = ec2.SecurityGroup('web-secgrp',
 user_data = """
 #!/bin/bash
 echo "Hello, World!" > index.html
-nohup python -m SimpleHTTPServer 80 &
-"""
+nohup python -m SimpleHTTPServer 80 &"""
 
 server = ec2.Instance('web-server-www',
     instance_type=size,
     security_groups=[group.name],
-    user_data=user_data,
-    ami=ami)
+    ami=ami,
+    user_data=user_data)
 
 # Export the host name
 pulumi.export('host', server.public_dns)
 ```
 
 Our program now creates a simple EC2 virtual machine running a Python web server.
+
+{{% lang python %}}
+Update the `ami` variable based on your AWS region.
+{{% /lang %}}
 
 Next, we'll deploy the changes.
 
