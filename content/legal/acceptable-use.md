@@ -1,12 +1,8 @@
 ---
-title: "Acceptable Use"
-date: 2018-06-07T15:09:28-07:00
+title: "Acceptable Use Policy"
 menu:
     legal:
         weight: 2
-
-hero_title: "Acceptable Use Policy"
-url: "/acceptable-use"
 ---
 
 <p>Your use of the Pulumi Services is subject to this Acceptable Use Policy. If you are found to be in violation of our policies at any time, as determined by Pulumi Corporation ("Pulumi”, "we" or "us") in its sole discretion, we may warn you or suspend or terminate your account.</p>

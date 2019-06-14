@@ -1,12 +1,8 @@
 ---
-title: "Trademark"
-date: 2018-06-07T14:45:48-07:00
+title: "Trademark Usage"
 menu:
     legal:
         weight: 1
-
-hero_title: "Trademark Usage"
-url: "/trademark"
 ---
 
 <h2 class="h3">QUICK REFERENCE</h2>
