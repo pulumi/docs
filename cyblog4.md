@@ -17,7 +17,7 @@ me messages in a private channel we share like so:
 
 ![image](https://user-images.githubusercontent.com/4564579/59464639-dc033f80-8ddd-11e9-9219-b3c3ee0b4020.png)
 
-I intend to add more functionality to this bot over time to help me out.  If you'd like to create something similar, the code for
+I intend to add more functionality to this bot over time to help me out.  If you'd like to create something similar, the code 
 it (including full instructions) was packaged up into one of our examples
 [here](https://github.com/pulumi/examples/tree/master/aws-ts-slackbot).  The bot works by hearing about incoming events (pushed to
 it from Slack's servers), looking for mentions of my name, then pushing requests back to Slack's server to update our private channel.
