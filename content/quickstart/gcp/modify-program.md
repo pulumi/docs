@@ -1,6 +1,6 @@
 ---
 title: Modify the Program
-weight: 7
+weight: 8
 menu:
   quickstart:
     parent: gcp
