@@ -9,13 +9,15 @@ menu:
 
 ## Choose Your Language
 
-  * **JavaScript** or **TypeScript**
+{{< langchoose nogo >}}
 
-    {{< install-node >}} to use JavaScript, TypeScript, or any other Node.js compatible language with Pulumi.
+{{% lang nodejs %}}
+{{< install-node >}}
+{{< /lang >}}
 
-  * **Python**
-
-    {{< install-python >}} to use Python with Pulumi.
+{{% lang python %}}
+{{< install-python >}}
+{{< /lang >}}
 
 Next, we'll configure Kubernetes.
 
