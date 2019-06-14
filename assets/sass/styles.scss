@@ -48,13 +48,17 @@ p {
     @apply mb-4 leading-normal my-4;
 }
 
+body {
+    @apply font-body text-gray-900;
+}
+
 main {
     @apply text-gray-700;
 
     p, li {
 
         a {
-            @apply text-blue;
+            @apply text-blue-700;
 
             &:hover {
                 @apply text-blue-700;
@@ -81,6 +85,32 @@ main {
 
 .link {
     @apply text-blue-700;
+}
+
+.pagination {
+    @apply inline-flex list-none border-2 rounded border-gray-200 text-sm p-0;
+
+    .page-item {
+        @apply my-0 p-0;
+
+        &:not(:first-of-type) {
+            @apply border-l border-gray-200;
+        }
+
+        > span, > a {
+            @apply block px-4 py-2;
+        }
+
+        a {
+            &:hover {
+                @apply bg-gray-100;
+            }
+        }
+
+        &.active {
+            @apply bg-gray-200;
+        }
+    }
 }
 
 @tailwind utilities;

@@ -36,10 +36,12 @@
                     </div>
                     <section>
                         {{ partial "blog/poster" . }}
-                        {{ .Render "post-summary" }}
+                        {{ partial "blog/summary" . }}
                     </section>
                 </article>
             {{ end }}
+
+            {{ partial "blog/paginator.html" . }}
         </div>
 
         <div class="md:w-2/12 pl-8">

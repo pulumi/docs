@@ -14,17 +14,18 @@
                         <span>
                             {{ partial "blog/authors.html" (dict "context" . "authors" .Params.authors ) }}
                         </span>
-                        <span class="mx-2">∙</span>
                         <time>
                             {{ .Date.Format "Monday, Jan 2, 2006" }}
                         </time>
                     </div>
                     <section>
                         {{ partial "blog/poster" . }}
-                        {{ .Render "post-summary" }}
+                        {{ partial "blog/summary" . }}
                     </section>
                 </article>
             {{ end }}
+
+            {{ partial "blog/paginator.html" . }}
         </div>
 
         <div class="md:w-2/12 pl-8">
