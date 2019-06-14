@@ -57,92 +57,13 @@ Next, you will be asked for the name of a stack. You can hit enter to accept the
 > What are [projects]({{< relref "/reference/project.md" >}}) and [stacks]({{< relref "/reference/stack.md" >}})? Pulumi projects and stacks are a way to organize Pulumi code. You can consider a Pulumi Project to be analogous to a GitHub repo: a single place for code — and a Stack to be an instance of that code which has separate configuration. For instance, Project Foo may have multiple stacks for Dev, Test, Prod, or perhaps for different cloud configurations (e.g. geographic region). Please [see this guide]({{< relref "/reference/organizing-stacks-projects.md" >}}) for some best practices on organizing your Pulumi projects and stacks.
 
 {{% lang nodejs %}}
-After some dependency installations from `npm`, you'll see some files have been generated:
+After some dependency installations from `npm`, the project and stack will be ready.
 {{% /lang %}}
 
 {{% lang python %}}
-After the command completes, you'll see some files have been generated:
+After the command completes, the project and stack will be ready.
 {{% /lang %}}
 
-- `Pulumi.yaml` defines the [project]({{< relref "/reference/project.md" >}}).
-- `Pulumi.dev.yaml` contains [configuration]({{< relref "/reference/config.md" >}}) values for the [stack]({{< relref "/reference/stack.md" >}}) we initialized.
-- {{< langfile >}} is the Pulumi program that defines our stack resources. Let's examine it.
-
-{{< langchoose nogo >}}
-
-```javascript
-"use strict";
-const k8s = require("@pulumi/kubernetes");
-
-const appLabels = { app: "nginx" };
-const deployment = new k8s.apps.v1.Deployment("nginx", {
-    spec: {
-        selector: { matchLabels: appLabels },
-        replicas: 1,
-        template: {
-            metadata: { labels: appLabels },
-            spec: { containers: [{ name: "nginx", image: "nginx" }] }
-        }
-    }
-});
-exports.name = deployment.metadata.apply(m => m.name);
-```
-
-```typescript
-import * as k8s from "@pulumi/kubernetes";
-
-const appLabels = { app: "nginx" };
-const deployment = new k8s.apps.v1.Deployment("nginx", {
-    spec: {
-        selector: { matchLabels: appLabels },
-        replicas: 1,
-        template: {
-            metadata: { labels: appLabels },
-            spec: { containers: [{ name: "nginx", image: "nginx" }] }
-        }
-    }
-});
-export const name = deployment.metadata.apply(m => m.name);
-```
-
-```python
-import pulumi
-from pulumi_kubernetes.apps.v1 import Deployment
-
-app_labels = { "app": "nginx" }
-
-deployment = Deployment(
-    "nginx",
-    spec={
-        "selector": { "match_labels": app_labels },
-        "replicas": 1,
-        "template": {
-            "metadata": { "labels": app_labels },
-            "spec": { "containers": [{ "name": "nginx", "image": "nginx" }] }
-        }
-    })
-
-pulumi.export("name", deployment.metadata["name"])
-```
-
-This Pulumi program creates an NGINX deployment and exports the name of the deployment.
-
-{{% lang python %}}
-Finally, for Python, run the following commands to create a virtual environment, activate it, and install dependencies:
-
-```bash
-$ virtualenv -p python3 venv
-```
-
-```bash
-$ source venv/bin/activate
-```
-
-```bash
-$ pip3 install -r requirements.txt
-```
-{{% /lang %}}
-
-Next, we'll deploy the stack.
+Next, we'll review the generated project files.
 
 {{< get-started-stepper >}}
