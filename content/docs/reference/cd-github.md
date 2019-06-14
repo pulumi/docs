@@ -1,7 +1,7 @@
 ---
 title: Pulumi GitHub App
 aliases: ["cd-github.html"]
-expanded_url: /reference/service/
+expanded_url: /docs/reference/service/
 menu:
   reference:
     parent: teams

@@ -3,7 +3,7 @@ title: "Pulumi GitHub Actions"
 aliases:
     - cd-github-actions.html
     - /github/
-expanded_url: /reference/cd/
+expanded_url: /docs/reference/cd/
 menu:
   reference:
     parent: cd

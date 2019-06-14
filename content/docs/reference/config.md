@@ -1,7 +1,7 @@
 ---
 title: "Configuration and Secrets"
 aliases: ["config.html"]
-expanded_url: /reference/concepts/
+expanded_url: /docs/reference/concepts/
 menu:
   reference:
     parent: concepts

@@ -1,7 +1,7 @@
 ---
 title: "How Pulumi Works"
 aliases: ["how.html"]
-expanded_url: /reference/concepts/
+expanded_url: /docs/reference/concepts/
 menu:
   reference:
     parent: concepts

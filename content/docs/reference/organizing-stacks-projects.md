@@ -1,7 +1,7 @@
 ---
 title: Organizing Projects and Stacks
 aliases: ["organizing-stacks-projects.html"]
-expanded_url: /reference/concepts/
+expanded_url: /docs/reference/concepts/
 menu:
   reference:
     parent: concepts

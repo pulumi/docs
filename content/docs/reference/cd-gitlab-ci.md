@@ -1,7 +1,7 @@
 ---
 title: GitLab CI
 aliases: ["cd-gitlab-ci.html"]
-expanded_url: /reference/cd/
+expanded_url: /docs/reference/cd/
 menu:
   reference:
     parent: cd

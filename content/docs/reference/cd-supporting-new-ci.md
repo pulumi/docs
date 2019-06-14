@@ -1,6 +1,6 @@
 ---
 title: Supporting A New CI System
-expanded_url: /reference/cd/
+expanded_url: /docs/reference/cd/
 menu:
   reference:
     parent: cd

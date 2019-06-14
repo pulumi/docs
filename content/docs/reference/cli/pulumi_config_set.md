@@ -1,7 +1,7 @@
 ---
 title: "pulumi config set"
 aliases: ["pulumi_config_set.html"]
-expanded_url: /reference/commands/
+expanded_url: /docs/reference/commands/
 ---
 
 
@@ -10,7 +10,7 @@ Set configuration value
 
 ### Synopsis
 
-Configuration values can be accessed when a stack is being deployed and used to configure behavior. 
+Configuration values can be accessed when a stack is being deployed and used to configure behavior.
 If a value is not present on the command line, pulumi will prompt for the value. Multi-line values
 may be set by piping a file to standard in.
 

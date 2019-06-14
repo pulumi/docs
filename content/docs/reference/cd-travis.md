@@ -1,7 +1,7 @@
 ---
 title: Travis CI
 aliases: ["cd-travis.html"]
-expanded_url: /reference/cd/
+expanded_url: /docs/reference/cd/
 menu:
   reference:
     parent: cd

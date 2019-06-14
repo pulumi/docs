@@ -1,7 +1,7 @@
 ---
 title: "pulumi login"
 aliases: ["pulumi_login.html"]
-expanded_url: /reference/commands/
+expanded_url: /docs/reference/commands/
 ---
 
 

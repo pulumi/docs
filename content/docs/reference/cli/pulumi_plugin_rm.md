@@ -1,7 +1,7 @@
 ---
 title: "pulumi plugin rm"
 aliases: ["pulumi_plugin_rm.html"]
-expanded_url: /reference/commands/
+expanded_url: /docs/reference/commands/
 ---
 
 

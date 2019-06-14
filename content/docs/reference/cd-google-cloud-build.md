@@ -1,7 +1,7 @@
 ---
 title: Google Cloud Build
 aliases: ["cd-google-cloud-build.html"]
-expanded_url: /reference/cd/
+expanded_url: /docs/reference/cd/
 menu:
   reference:
     parent: cd

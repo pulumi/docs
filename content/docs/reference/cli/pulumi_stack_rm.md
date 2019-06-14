@@ -1,7 +1,7 @@
 ---
 title: "pulumi stack rm"
 aliases: ["pulumi_stack_rm.html"]
-expanded_url: /reference/commands/
+expanded_url: /docs/reference/commands/
 ---
 
 

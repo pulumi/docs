@@ -1,7 +1,7 @@
 ---
 title: "pulumi stack tag"
 aliases: ["pulumi_stack_tag.html"]
-expanded_url: /reference/commands/
+expanded_url: /docs/reference/commands/
 ---
 
 

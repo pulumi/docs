@@ -1,7 +1,7 @@
 ---
 title: "Programming Model"
 aliases: ["programming-model.html"]
-expanded_url: /reference/concepts/
+expanded_url: /docs/reference/concepts/
 menu:
   reference:
     parent: concepts
