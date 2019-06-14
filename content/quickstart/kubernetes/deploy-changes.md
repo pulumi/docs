@@ -1,6 +1,6 @@
 ---
 title: Deploy the Changes
-weight: 8
+weight: 9
 menu:
   quickstart:
     parent: kubernetes
