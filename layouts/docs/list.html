@@ -1,7 +1,7 @@
 {{ define "main" }}
     <div class="md:flex">
 
-        <div class="md:w-3/12 pr-8">
+        <div class="md:w-3/12 pr-8 mt-2">
             {{ partial "docs/toc.html" . }}
         </div>
 
@@ -10,13 +10,8 @@
             {{ .Content }}
         </div>
 
-        <div class="md:w-2/12 pl-8">
-            {{ with .File }}
-                <a class="link" href="{{ $.Site.Params.repositoryURL }}/edit/{{ $.Site.Params.repositoryBranch }}/content/{{ .Path }}" target="_blank">
-                    <i class="fab fa-github"></i>
-                    Edit This Page
-                </a>
-            {{ end }}
+        <div class="md:w-2/12 pl-8 mt-2">
+            {{ partial "docs/edit.html" . }}
         </div>
     </div>
 {{ end }}

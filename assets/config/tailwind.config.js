@@ -26,11 +26,11 @@ const purple = {
 }
 
 const blue = {
-    100: "#d1f2ff",
-    300: "#85dcff",
+    100: "#C4EEFF",
+    300: "#94E1FF",
     500: brand.blue,
-    700: "#306275",
-    900: "#0f2e3b",
+    700: "#238FBA",
+    900: "#0F2E3B",
 }
 
 module.exports = {

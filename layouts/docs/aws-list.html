@@ -73,12 +73,7 @@
         </div>
 
         <div class="md:w-2/12 pl-8">
-            {{ with .File }}
-                <a class="link" href="{{ $.Site.Params.repositoryURL }}/edit/{{ $.Site.Params.repositoryBranch }}/content/{{ .Path }}" target="_blank">
-                    <i class="fab fa-github"></i>
-                    Edit This Page
-                </a>
-            {{ end }}
+            {{ partial "docs/edit.html" . }}
         </div>
     </div>
 {{ end }}

@@ -1,17 +1,23 @@
 .toc {
-    @apply text-black;
+    @apply text-blue-900;
+
+    a {
+        &:hover {
+            @apply text-blue-700;
+        }
+    }
+
+    .active {
+        @apply text-blue-700;
+    }
 }
 
 .sidenav-topic {
     @apply mb-4;
-
-    &.active {
-        @apply text-purple;
-    }
 }
 
 .sidenav-subsection {
-    @apply mb-4 ml-4 text-gray-700;
+    @apply mb-4 ml-4;
 }
 
 .sidenav-parent {
@@ -19,15 +25,15 @@
 }
 
 .toggleButton {
-    cursor: pointer;
+    @apply text-gray-500 ml-1 cursor-pointer;
 }
 
 .toggle > .collapsed,
 .toggleVisible > .expanded {
-    display: block;
+    @apply visible;
 }
 
 .toggle > .expanded,
 .toggleVisible > .collapsed {
-    display: none;
+    @apply hidden;
 }

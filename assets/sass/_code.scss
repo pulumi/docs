@@ -5,7 +5,7 @@ code {
 }
 
 pre {
-    @apply bg-gray-100 py-2 px-3 rounded scrolling-auto overflow-scroll my-4 leading-normal;
+    @apply bg-gray-100 py-2 px-3 rounded border border-gray-200 scrolling-auto overflow-scroll my-4 leading-normal;
 
     > code {
         @apply bg-transparent p-0;

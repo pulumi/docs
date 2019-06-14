@@ -8,7 +8,7 @@
         <div class="md:w-7/12">
             {{ $paginator := .Paginate (where .Pages "Type" "blog").ByDate.Reverse }}
             {{ range $paginator.Pages }}
-                <article class="my-8 pb-8 border-b border-gray-200">
+                <article class="mb-8 pb-8 border-b border-gray-200">
                     <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
                     <div class="flex items-center">
                         <span>

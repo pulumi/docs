@@ -9,8 +9,8 @@
     <ul class="list-none p-0">
         {{ range .Site.Taxonomies.tags }}
             {{ if .Page.Title }}
-                <li>
-                    <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+                <li class="inline-flex mx-1 my-1 ">
+                    <a class="bg-gray-100 text-gray-700 py-1 px-2 text-sm rounded" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
                 </li>
             {{ end }}
         {{ end }}
