@@ -4,6 +4,9 @@
     <body>
         {{ partial "header.html" . }}
 
+        {{ block "hero" . }}
+        {{ end }}
+
         <main class="container mx-auto py-8 px-8 md:px-0 min-h-screen">
             {{ block "main" . }}
             {{ end }}
