@@ -64,73 +64,13 @@ Next, you will be prompted for some configuration values for the stack.
 For AWS projects, you will be prompted for the AWS region. You can accept the default value or choose another value like `us-west-2`.
 
 {{% lang nodejs %}}
-After some dependency installations from `npm`, you'll see some files have been generated:
+After some dependency installations from `npm`, the project and stack will be ready.
 {{% /lang %}}
 
 {{% lang python %}}
-After the command completes, you'll see some files have been generated:
+After the command completes, the project and stack will be ready.
 {{% /lang %}}
 
-- `Pulumi.yaml` defines the [project]({{< relref "/reference/project.md" >}}).
-- `Pulumi.dev.yaml` contains [configuration]({{< relref "/reference/config.md" >}}) values for the [stack]({{< relref "/reference/stack.md" >}}) we initialized.
-- {{< langfile >}} is the Pulumi program that defines our stack resources. Let's examine it.
-
-{{< langchoose nogo >}}
-
-```javascript
-"use strict";
-const pulumi = require("@pulumi/pulumi");
-const aws = require("@pulumi/aws");
-const awsx = require("@pulumi/awsx");
-
-// Create an AWS resource (S3 Bucket)
-const bucket = new aws.s3.Bucket("my-bucket");
-
-// Export the name of the bucket
-exports.bucketName = bucket.id;
-```
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-import * as awsx from "@pulumi/awsx";
-
-// Create an AWS resource (S3 Bucket)
-const bucket = new aws.s3.Bucket("my-bucket");
-
-// Export the name of the bucket
-export const bucketName = bucket.id;
-```
-
-```python
-import pulumi
-from pulumi_aws import s3
-
-# Create an AWS resource (S3 Bucket)
-bucket = s3.Bucket('my-bucket')
-
-# Export the name of the bucket
-pulumi.export('bucket_name',  bucket.id)
-```
-
-This Pulumi program creates an S3 bucket and exports the name of the bucket.
-
-{{% lang python %}}
-Finally, for Python, run the following commands to create a virtual environment, activate it, and install dependencies:
-
-```bash
-$ virtualenv -p python3 venv
-```
-
-```bash
-$ source venv/bin/activate
-```
-
-```bash
-$ pip3 install -r requirements.txt
-```
-{{% /lang %}}
-
-Next, we'll deploy the stack.
+Next, we'll review the generated project files.
 
 {{< get-started-stepper >}}
