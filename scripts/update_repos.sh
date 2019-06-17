@@ -22,6 +22,7 @@ TOOLS_REPOS=(
     "pulumi-newrelic"
     "pulumi-openstack"
     "pulumi-packet"
+    "pulumi-postgresql"
     "pulumi-random"
     "pulumi-terraform"
     "pulumi-vsphere"

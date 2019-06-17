@@ -203,6 +203,11 @@ sectionPagesMenu = "main"
 
 [[menu.reference]]
     parent = "node"
+    name = "postgresql"
+    url = "/reference/pkg/nodejs/pulumi/postgresql/"
+
+[[menu.reference]]
+    parent = "node"
     name = "random"
     url = "/reference/pkg/nodejs/pulumi/random/"
 
@@ -277,6 +282,11 @@ sectionPagesMenu = "main"
     parent = "python"
     name = "pulumi_openstack"
     url = "/reference/pkg/python/pulumi_openstack/"
+
+[[menu.reference]]
+    parent = "python"
+    name = "pulumi_postgresql"
+    url = "/reference/pkg/python/pulumi_postgresql/"
 
 [[menu.reference]]
     parent = "python"
