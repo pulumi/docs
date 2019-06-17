@@ -12,13 +12,11 @@ menu:
     weight: 1
 ---
 
-Pulumi supports JavaScript programs running on Node.js.
+Pulumi supports JavaScript programs running on Node.js version 8 and later.
 
 Because programs are just JavaScript, you may elect to write them in any manner you'd normally write Node.js programs.
 That includes TypeScript, CoffeeScript, or Babel, in addition to your favorite tools such as build systems, linters, or
 test frameworks.
-
-Any Node.js version after 6.10.x is supported, as long it is under **Active LTS** or is the **Current** stable release.
 
 <a href="https://nodejs.org/en/download/" target="_blank"><button class="button primary small">INSTALL NODE.JS</button></a>
 
