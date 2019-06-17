@@ -1,0 +1,15 @@
+.btn {
+    @apply py-2 px-4 rounded text-white uppercase bg-blue;
+
+    &:hover {
+        @apply bg-blue-300;
+    }
+
+    &:active {
+        @apply bg-blue-100;
+    }
+}
+
+.btn-cta {
+    @apply bg-orange;
+}

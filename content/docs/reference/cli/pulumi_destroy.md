@@ -1,7 +1,7 @@
 ---
 title: "pulumi destroy"
 aliases: ["pulumi_destroy.html"]
-expanded_url: /reference/commands/
+expanded_url: /docs/reference/commands/
 ---
 
 

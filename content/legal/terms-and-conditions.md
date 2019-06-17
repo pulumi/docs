@@ -1,12 +1,10 @@
 ---
-title: "Terms and Conditions"
+title: "Terms & Conditions"
 date: 2018-06-07T16:46:34-07:00
+url: "/terms-and-conditions"
 menu:
     legal:
         weight: 3
-
-hero_title: "Terms and Conditions"
-url: "/terms-and-conditions"
 ---
 
 <h2 class="h4">1.&nbsp;&nbsp;&nbsp;&nbsp;GENERAL TERMS</h2>
@@ -46,11 +44,11 @@ url: "/terms-and-conditions"
 <p>7.1&nbsp;&nbsp;&nbsp;&nbsp;Pulumi hereby grants you a personal, worldwide, royalty-free, non-assignable and non-exclusive license to access and use the Pulumi Services and to use the software provided to you by Pulumi as part of the Pulumi. This license is for the sole purpose of enabling you to use the Pulumi Services as provided by Pulumi, in the manner permitted by the Terms. </p>
 <p>7.2&nbsp;&nbsp;&nbsp;&nbsp;You may not (and may not permit anyone else to): (a) copy, modify, create a derivative work of, reverse engineer, decompile or otherwise attempt to extract the source code of the Pulumi Services or any part thereof, unless this is expressly permitted or required by law, or unless you have been specifically granted permission to do so by Pulumi, in writing (e.g., through an open source software license); or (b) attempt to disable or circumvent any security mechanisms used by the Pulumi Services.</p>
 <p>7.3&nbsp;&nbsp;&nbsp;&nbsp;Open source software licenses for components of the Pulumi Services released under an open source license constitute separate written agreements. To the limited extent that the open source software licenses expressly supersede these Terms, the open source licenses govern your agreement with Pulumi for the use of the components of the Pulumi Services released under an open source license.</p>
-<p>7.4&nbsp;&nbsp;&nbsp;&nbsp;Pulumi hereby grants you a limited, non-exclusive, royalty-free, non-transferable license, with no right to sub-license, to display the Pulumi trademarks and/or logos (“Marks”) for the sole purpose of promoting or advertising that you use the Pulumi Services and solely in accordance with Pulumi’s then current Trademark Usage Guidelines, which may be found at <a href="https://www.pulumi.com/trademark">https://www.pulumi.com/trademark</a>. You agree that all goodwill generated through your use of the 
+<p>7.4&nbsp;&nbsp;&nbsp;&nbsp;Pulumi hereby grants you a limited, non-exclusive, royalty-free, non-transferable license, with no right to sub-license, to display the Pulumi trademarks and/or logos (“Marks”) for the sole purpose of promoting or advertising that you use the Pulumi Services and solely in accordance with Pulumi’s then current Trademark Usage Guidelines, which may be found at <a href="https://www.pulumi.com/trademark">https://www.pulumi.com/trademark</a>. You agree that all goodwill generated through your use of the
 Pulumi Marks shall inure to the benefit of Pulumi.</p>
 <br />
 <h2 class="h4">8.&nbsp;&nbsp;&nbsp;&nbsp;LICENSE FROM YOU</h2>
-<p>8.1&nbsp;&nbsp;&nbsp;&nbsp;Pulumi claims no ownership or control over any Content or Cloud Application. You retain 
+<p>8.1&nbsp;&nbsp;&nbsp;&nbsp;Pulumi claims no ownership or control over any Content or Cloud Application. You retain
 copyright and any other rights you already holds in the Content and/or Cloud Application, and you are responsible for protecting those rights, as appropriate. By submitting, posting or displaying the Content on or through the Pulumi Services, you give Pulumi a worldwide, royalty-free, and non-exclusive license to reproduce, adapt, modify, translate, publish, publicly perform, publicly display and distribute such Content for the sole purpose of enabling Pulumi to provide you with the Pulumi Services. Furthermore, by creating a Cloud Application through use of the Pulumi Services, you give Pulumi a worldwide, royalty-free, and non-exclusive license to reproduce, adapt, modify, translate, publish, publicly perform, publicly display and distribute such Cloud Application for the sole purpose of enabling Pulumi to provide you with the Pulumi Services.</p>
 <p>8.2&nbsp;&nbsp;&nbsp;&nbsp;By adding a collaborator to Cloud Application(s), you hereby grant to that user a non-exclusive, royalty-free, non-transferable license, with no right to sub-license, to use, display, perform, reproduce, modify, publish, distribute, list information regarding, edit, translate and analyze such Cloud Application(s) and Content as permitted by the relevant Pulumi Services functionality or features for the sole purpose of collaborating on development of the Cloud Application(s).</p>
 <p>8.3&nbsp;&nbsp;&nbsp;&nbsp;You may choose to or we may invite you to submit comments or ideas about the Pulumi Services, including without limitation about how to improve the Pulumi Services or our products (“Ideas”). By submitting any Idea, you agree that your disclosure is gratuitous, unsolicited and without restriction and will not place Pulumi under any fiduciary or other obligation, and that we are free to use the Idea without any additional compensation to you, and/or to disclose the Idea on a non-confidential basis or otherwise to anyone.</p>

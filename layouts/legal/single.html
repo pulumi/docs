@@ -1,5 +1,20 @@
 {{ define "main" }}
+    <div class="md:flex">
+        <div class="md:w-3/12 pr-8">
+            <aside>
+                <ul class="md:w-8/12 p-0 list-none">
+                    {{ range .Site.Menus.legal }}
+                        <li><a href="{{ .URL }}">{{ .Title }}</a></li>
+                    {{ end }}
+                </ul>
+            </aside>
+        </div>
+        <div class="md:w-7/12">
+            <h1>{{ .Title }}</h1>
+            {{ .Content }}
+        </div>
+        <div class="md:w-2/12 pl-8">
 
-    <h1>{{ .Title }}</h1>
-    {{ .Content }}
+        </div>
+    </div>
 {{ end }}

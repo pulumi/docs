@@ -20,28 +20,6 @@ of most _ChatOps_ workflows.
 > If you’re keen to try them out, start a trial of Team Edition
 > [here](https://app.pulumi.com/site/organizations/add).
 
-<style>
-/* Custom CSS for tables; cloned from roles-and-access-controls.md */
-td, th {
-    padding: 8px 8px;
-    border: 1px solid rgba(0,0,0,0.13);
-}
-
-thead tr th {
-    color: #00acf2;  /* $primary2, blue */
-    font-weight: 800;
-}
-
-tbody tr td:first-child {
-    text-align: left;
-    width: 250px;
-}
-
-tbody tr td {
-    width: 650px;
-}
-</style>
-
 ## Management
 
 Webhooks can be attached to either a stack or an organization. Stack webhooks

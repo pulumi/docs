@@ -5,7 +5,7 @@ aliases:
     - npm-packages.html
     - /install/configure-npm.html
 
-expanded_url: /reference/languages/
+expanded_url: /docs/reference/languages/
 menu:
   reference:
     parent: languages

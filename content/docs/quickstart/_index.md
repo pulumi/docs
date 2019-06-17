@@ -18,7 +18,7 @@ Pulumi is [open source on GitHub](https://github.com/pulumi/pulumi) and is free 
 
 To get started, first download and install the CLI:
 
-<a href="{{< relref "install.md" >}}"><button class="button primary small">INSTALL PULUMI</button></a>
+<a class="btn" href="{{< relref "install.md" >}}">INSTALL PULUMI</a>
 
 ## Choose Your Cloud
 

@@ -1,7 +1,7 @@
 ---
 title: "Python"
 aliases: ["python.html"]
-expanded_url: /reference/languages/
+expanded_url: /docs/reference/languages/
 menu:
   reference:
     parent: languages

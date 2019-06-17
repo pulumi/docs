@@ -1,7 +1,7 @@
 ---
 title: "pulumi cancel"
 aliases: ["pulumi_cancel.html"]
-expanded_url: /reference/commands/
+expanded_url: /docs/reference/commands/
 ---
 
 

@@ -9,6 +9,7 @@ service: "IAM"
 description: "enables you to manage access to AWS services and resources securely"
 aws_here: "https://aws.amazon.com/iam/"
 
+layout: aws-single
 menu:
   aws:
     parent: aws

@@ -1,24 +1,95 @@
-@import "bootstrap-variables-override";
-@import "bootstrap-override";
+@tailwind base;
+@tailwind components;
 
-@import "utils/mixins";
-@import "utils/variables";
-@import "utils/fonts";
+@import "colors";
+@import "mixins";
+@import "fonts";
+@import "buttons";
+@import "tables";
+@import "code";
+@import "icons";
+@import "toc";
+@import "langchoose";
+@import "no-select";
+@import "pagination";
 
-@import "partials/container";
-@import "partials/typography";
-@import "partials/buttons-cta";
-@import "partials/forms";
-@import "partials/bg";
-@import "partials/modal";
-@import "partials/social";
-@import "partials/header";
-@import "partials/footer";
-@import "partials/hero";
-@import "partials/breadcrumbs";
-@import "partials/content-blocks";
+h1, h2, h3, h4, h5, h6 {
+    @apply font-display text-gray-700 mb-2;
 
-@import "pulumi";
-@import "pulumi-blog";
+    &:not(:first-child) {
+        @apply mt-8;
+    }
+}
 
-@import "pygments";
+h1 {
+    @apply text-4xl;
+}
+
+h2 {
+    @apply text-3xl;
+}
+
+h3 {
+    @apply text-2xl;
+}
+
+h4 {
+    @apply text-xl;
+}
+
+h5 {
+    @apply text-lg;
+}
+
+h6 {
+    @apply text-sm uppercase;
+}
+
+p {
+    @apply mb-4 leading-normal my-4;
+}
+
+body {
+    @apply font-body text-gray-900;
+}
+
+main {
+    @apply text-gray-700;
+
+    p, li {
+
+        a {
+            @apply text-blue-700;
+
+            &:hover {
+                @apply text-blue-700;
+            }
+        }
+    }
+
+    ul, ol {
+        @apply pl-5;
+    }
+
+    ul {
+        @apply list-disc;
+    }
+
+    ol {
+        @apply list-decimal;
+    }
+
+    li {
+        @apply my-2 leading-normal;
+    }
+
+    blockquote {
+        @apply border-l-4 rounded border-orange-300 px-4 py-1 text-sm;
+    }
+}
+
+.link {
+    @apply text-blue-700;
+}
+
+@tailwind utilities;

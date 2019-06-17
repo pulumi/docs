@@ -1,7 +1,7 @@
 ---
 title: "pulumi logout"
 aliases: ["pulumi_logout.html"]
-expanded_url: /reference/commands/
+expanded_url: /docs/reference/commands/
 ---
 
 

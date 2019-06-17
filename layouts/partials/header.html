@@ -1,69 +1,43 @@
-<header class="main-header">
-    <div class="utility-bar hidden-xs hidden-sm">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-12">
-                    <ul class="utility-nav">
-                        {{ partial "utility-links.html" . }}
-                    </ul>
-                </div>
-            </div>
-        </div>
+<nav class="bg-black text-white text-sm py-2 px-8 md:px-0">
+    <div class="container mx-auto">
+        <ul class="flex justify-end">
+            <li class="mr-8"><a href="https://slack.pulumi.io/" target="_blank">Slack</a></li>
+            <li class="mr-8"><a href="https://github.com/pulumi" target="_blank">GitHub</a></li>
+            <li class="mr-8"><a href="https://app.pulumi.com/" target="_blank">Console</a></li>
+            <li class="gh-widget">
+                <a class="github-button" href="https://github.com/pulumi/pulumi" data-size="small" data-show-count="true" aria-label="Star pulumi/pulumi on GitHub">Star</a>
+            </li>
+        </ul>
     </div>
+</nav>
 
-    <div class="main-nav-block">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-12">
+<!-- <div class="bg-blue text-white text-center px-8 md:px-0 py-4 font-bold">
+    Announcing Pulumi Crosswalk for AWS.
+    <a class="underline" href="/crosswalk/aws">Learn more</a>.
+</div> -->
 
-                    <div class="wrapper dropdown main-nav-wrapper-wrapper">
-                        <a href="/">
-                            <img src="/images/logo/logo-inv.svg" class="logo hidden-xs hidden-sm">
-                            <img src="/images/logo/logo-symbol-inv.svg" class="logo visible-xs-inline visible-sm-inline">
-                        </a>
-                        <div class="mobile-menu-bg"></div>
-                        <nav class="main-nav-wrapper dropdown-menu" aria-labelledby=".toggle-menu">
-                            <div class="toc-in-nav visible-xs-block visible-sm-block" style="text-align: right">
-                                {{ partial "docs/toc.html" . }}
-                            </div>
-
-                            {{- $is_product := (hasPrefix .RelPermalink "/product/") -}}
-                            {{- $is_pricing := (hasPrefix .RelPermalink "/pricing/") -}}
-                            {{- $is_docs := (hasPrefix .RelPermalink "/docs/") -}}
-                            {{- $is_blog := (hasPrefix .RelPermalink "/blog/") -}}
-
-                            <ul class="main-nav">
-                                <li class="{{ if $is_product }}current-page{{ end }}"><a href="/product">Products</a></li>
-                                <li class="{{ if $is_pricing }}current-page{{ end }}"><a href="/pricing">Pricing</a></li>
-                                <li class="{{ if $is_docs }}current-page{{ end }}"><a href="/docs">Docs</a></li>
-                                <li class="{{ if $is_blog }}current-page{{ end }}"><a href="/blog">Blog</a></li>
-                            </ul>
-
-                            <ul class="utility-nav visible-xs-block visible-sm-block">
-                                {{ partial "utility-links.html" . }}
-                            </ul>
-                        </nav>
-
-                        <button class="toggle-menu visible-xs-block visible-sm-block" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="icon">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </span>
-                        </button>
-
-                        <div class="right-nav-block">
-                            <form id="search-form" action="/docs/search/" method="get">
-                                <input type="search" id="search-box" name="q" placeholder="Search..." autocomplete="off">
-                                <button class="button" type="submit"><i class="fas fa-search"></i></button>
-                            </form>
-                            <a href="https://app.pulumi.com" class="button orange borderless white-text" id="sign-in-button">SIGN IN</a>
-                            <a href="https://app.pulumi.com/signup" class="button" id="sign-up-button">SIGN UP</a>
-                        </div>
-                    </div>
-                </div>
+<nav class="bg-purple-700 py-6 px-8 md:px-0 border-t border-purple">
+    <div class="container mx-auto">
+        <header class="flex items-center justify-between flex-wrap">
+            <div class="flex items-center flex-shrink-0 text-white mr-6">
+                <a class="block" href="/">
+                    <img class="h-10 hidden md:block" src="/images/logo/logo-inv.svg" alt="Pulumi logo">
+                    <img class="h-10 md:hidden" src="/images/logo/logo-symbol-inv.svg" alt="Pulumi logo">
+                </a>
             </div>
-        </div>
+
+            <div class="nav-header-toggle block md:hidden">
+                <button class="flex items-center px-3 py-2 border rounded text-white border-purple">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <ul class="nav-header-items hidden w-full flex-grow md:flex md:items-center md:w-auto text-white uppercase pt-4 md:pt-0">
+                <li><a class="block py-2 md:py-0 md:px-4 md:py-2 md:mx-4 border border-purple-700 hover:border-purple rounded" href="{{ relref . "/product/_index.md" }}">Products</a></li>
+                <li><a class="block py-2 md:py-0 md:px-4 md:py-2 md:mx-4 border border-purple-700 hover:border-purple rounded" href="{{ relref . "/pricing/_index.md" }}">Pricing</a></li>
+                <li><a class="block py-2 md:py-0 md:px-4 md:py-2 md:mx-4 border border-purple-700 hover:border-purple rounded" href="{{ relref . "/docs/_index.md" }}">Docs</a></li>
+                <li><a class="block py-2 md:py-0 md:px-4 md:py-2 md:mx-4 border border-purple-700 hover:border-purple rounded" href="{{ relref . "/blog/_index.md" }}">Blog</a></li>
+            </ul>
+        </header>
     </div>
-</header>
+</nav>

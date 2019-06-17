@@ -1,20 +1,17 @@
 {{ define "main" }}
-    <div class="col-md-3 hidden-xs hidden-sm">
-        {{ partial "docs/toc.html" . }}
-    </div>
-    <div class="col-md-9">
-        {{ with .File }}
-        <div class="edit-this-page">
-            <a href="{{ $.Site.Params.repositoryURL }}/edit/{{ $.Site.Params.repositoryBranch }}/content/{{ .Path }}" target="_blank">
-                <i class="fab fa-github"></i>
-                Edit This Page
-            </a>
+    <div class="md:flex">
+
+        <div class="md:w-3/12 pr-8 mt-2">
+            {{ partial "docs/toc.html" . }}
         </div>
-        {{ end }}
 
-        <!-- TODO: Check for nil or empty title? -->
-        <h1>{{ .Title }}</h1>
+        <div class="md:w-7/12">
+            <h1>{{ .Title }}</h1>
+            {{ .Content }}
+        </div>
 
-        {{ .Content }}
+        <div class="md:w-2/12 pl-8 mt-2">
+            {{ partial "docs/edit.html" . }}
+        </div>
     </div>
 {{ end }}

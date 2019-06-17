@@ -20,8 +20,8 @@ the Pulumi Cloud Console, see [https://pulumi.com](https://www.pulumi.com/pricin
 
 Adding a new Pulumi organization can be done directly from the Pulumi Cloud Console.
 
-<a href="https://app.pulumi.com/site/organizations/add" target="_blank">
-    <button class="button">ADD ORGANIZATION</button>
+<a class="btn" href="https://app.pulumi.com/site/organizations/add" target="_blank">
+    ADD ORGANIZATION
 </a>
 
 ## Imported Organizations
@@ -30,35 +30,6 @@ Organizations using Pulumi Team or Enterprise editions may be backed by an exter
 This enables you to manage user access and team permissions by using your existing access controls.
 
 Here's a table that shows you the mapping between the supported 3rd-party services and Pulumi.
-
-<style>
-table {
-    margin-bottom: 20px;
-}
-
-td, th {
-    padding: 8px 8px;
-    text-align: center;
-    border: 1px solid rgba(0,0,0,0.13);
-}
-
-thead tr th {
-    color: #00acf2;  /* $primary2, blue */
-    font-weight: 800;
-}
-
-thead tr th:first-child {
-    text-align: left;
-}
-
-tbody tr td {
-    width: 30px;
-}
-
-tbody tr td:first-child {
-    text-align: left;
-}
-</style>
 
 | Pulumi | Bitbucket | GitHub | GitLab |
 |--------|--------|--------|--------|

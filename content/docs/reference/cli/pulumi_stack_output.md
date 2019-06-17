@@ -1,7 +1,7 @@
 ---
 title: "pulumi stack output"
 aliases: ["pulumi_stack_output.html"]
-expanded_url: /reference/commands/
+expanded_url: /docs/reference/commands/
 ---
 
 

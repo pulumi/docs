@@ -39,30 +39,10 @@ The next step is to enter Pulumi-specific configuration data into your Azure AD 
 The values you will want to use are dependent upon your organization's name on Pulumi. Be sure
 to replace `acmecorp` with whatever your specific Pulumi organization's name is.
 
-<style>
-td, th {
-    padding: 8px 8px;
-    border: 1px solid rgba(0,0,0,0.13);
-}
-
-thead tr th {
-    color: #00acf2;  /* $primary2, blue */
-    font-weight: 800;
-}
-
-tbody tr td {
-    padding-left: 16px;
-    padding-right: 16px;
-}
-</style>
-
 | SAML Setting | Value |
 | --------------- | ----- |
 | Identifier (Entity ID) | https://api.pulumi.com/login/**acmecorp**/sso/saml/metadata |
 | Replay URL | https://api.pulumi.com/login/**acmecorp**/sso/saml/acs |
-
-
-<p><!-- space between table and image --></p>
 
 ![Edited SAML configuration](/images/docs/reference/service/saml-aad/edited-saml-configuration.png)
 

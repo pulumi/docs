@@ -15,52 +15,57 @@
 {{ end }}
 
 {{ if $has_toc }}
-<div class="toc">
-    {{ $page := . }}
-    {{ $lastindex := (sub (len $menu) 1) }}
+    <aside class="toc">
+        {{ $page := . }}
+        {{ $lastindex := (sub (len $menu) 1) }}
 
-    {{ range $index, $element := $menu }}
-        {{ $toggle_state := "toggle" }}
-        {{ $sidenav_selected := "" }}
+        {{ range $index, $element := $menu }}
+            {{ $toggle_state := "toggle" }}
+            {{ $sidenav_selected := "" }}
 
-        {{ if eq $page.RelPermalink .URL }}
-            {{ $toggle_state = "toggleVisible" }}
-            {{ $sidenav_selected = "sidenav-selected" }}
-        {{ else if isset $page.Params "expanded_url" }}
-            {{ if eq $page.Params.expanded_url .URL }}
+            {{ if eq $page.RelPermalink .URL }}
+                {{ $toggle_state = "toggleVisible" }}
+                {{ $sidenav_selected = "active" }}
+            {{ else if isset $page.Params "expanded_url" }}
+
+                {{ if eq $page.Params.expanded_url .URL }}
+                    {{ $toggle_state = "toggleVisible" }}
+                {{ end }}
+            {{ else if hasPrefix $page.RelPermalink .URL }}
                 {{ $toggle_state = "toggleVisible" }}
             {{ end }}
-        {{ else if hasPrefix $page.RelPermalink .URL }}
-            {{ $toggle_state = "toggleVisible" }}
-        {{ end }}
 
-        <div class="sidenav-section toggleVisible{{ if ne $lastindex $index }} separator{{ end }}">
-            <div class="{{ $toggle_state }}" data-title="{{ .Name }}">
-                <div class="collapsed">
-                    <div class="sidenav-topic {{ $sidenav_selected }}">
-                        <a data-title="{{ .Name }}" href="{{ .URL }}">{{ .Name }}</a>
-                        {{- if .HasChildren -}}
-                            &nbsp;<span class="toggleButton">▹</span>
-                        {{- end -}}
-                    </div>
-                </div>
-                <div class="expanded">
-                    <div class="sidenav-topic {{ $sidenav_selected }}">
-                        <a data-title="{{ .Name }}" href="{{ .URL }}">{{ .Name }}</a>
-                        {{- if .HasChildren -}}
-                            &nbsp;<span class="toggleButton">▾</span>
-                        {{- end -}}
-                    </div>
-                    {{ if .HasChildren }}
-                        <div class="sidenav-subsection">
-                            {{ template "tocsub" (dict "page" $page "menu" . "prefix_selection" false) }}
+            <div class="toggleVisible{{ if ne $lastindex $index }} separator{{ end }}">
+                <div class="{{ $toggle_state }}" data-title="{{ .Name }}">
+                    <div class="collapsed">
+                        <div class="sidenav-topic {{ $sidenav_selected }}">
+                            <a data-title="{{ .Name }}" href="{{ .URL }}">{{ .Name }}</a>
+                            {{- if .HasChildren -}}
+                                <span class="toggleButton">
+                                    <i class="fas fa-caret-right"></i>
+                                </span>
+                            {{- end -}}
                         </div>
-                    {{ end }}
+                    </div>
+                    <div class="expanded">
+                        <div class="sidenav-topic {{ if .HasChildren }} sidenav-parent {{ end }} {{ $sidenav_selected }}">
+                            <a data-title="{{ .Name }}" href="{{ .URL }}">{{ .Name }}</a>
+                            {{- if .HasChildren -}}
+                                <span class="toggleButton">
+                                    <i class="fas fa-caret-down"></i>
+                                </span>
+                            {{- end -}}
+                        </div>
+                        {{ if .HasChildren }}
+                            <div class="sidenav-subsection text-sm">
+                                {{ template "tocsub" (dict "page" $page "menu" . "prefix_selection" false) }}
+                            </div>
+                        {{ end }}
+                    </div>
                 </div>
             </div>
-        </div>
-    {{ end }}
-</div>
+        {{ end }}
+    </aside>
 {{ end }}
 
 {{ define "tocsub" }}
@@ -70,7 +75,7 @@
     {{ range .menu.Children }}
         {{ $sidenav_selected := "" }}
         {{ if or (eq $page.RelPermalink .URL) (and $prefix_selection (hasPrefix $page.RelPermalink .URL)) }}
-            {{ $sidenav_selected = "sidenav-selected" }}
+            {{ $sidenav_selected = "active" }}
         {{ end }}
 
         {{ if .HasChildren }}
@@ -83,7 +88,7 @@
                 </div>
             </div>
         {{ else }}
-            <div class="sidenav-topic {{ $sidenav_selected }}">
+            <div class="sidenav-topic mb-2 {{ $sidenav_selected }}">
                 <a data-title="{{ .Name }}" href="{{ .URL }}">{{ .Name }}</a>
             </div>
         {{ end }}

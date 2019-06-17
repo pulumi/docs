@@ -1,13 +1,9 @@
 ---
-title: "Privacy"
-date: 2018-06-07T15:26:26-07:00
+title: "Privacy Policy"
+url: "/privacy"
 menu:
     legal:
         weight: 4
-
-hero_title: "Privacy Statement"
-hero_description: "Effective as of May 25, 2018"
-url: "/privacy"
 ---
 
 <p>Pulumi Corporation ("Pulumi," "we," "us," "our," or the "Company") is committed to protecting the privacy of individuals who visit the Company's Web sites ("Visitors"), individuals who register to use the Services as defined below ("Customers"), and individuals who register to attend the Company's corporate events ("Attendees"). This Privacy Statement describes Pulumi's privacy practices.</p>
@@ -221,7 +217,7 @@ url: "/privacy"
 <br />
 <h2 class="h4">11. Security</h2>
 <p>We take precautions including organizational, technical, and physical measures, to help safeguard against accidental or unlawful destruction, loss, alteration, unauthorized disclosure of, or access to, the Personal Data we process or use.</p>
-<p>While we follow generally accepted standards to protect Personal Data, no method of storage or transmission is 100% secure. You are solely responsible for protecting your password, limiting access to your devices, and signing out of websites after your sessions. If you have any questions about the security of our websites, please contact us via the “Contacting Us” section 
+<p>While we follow generally accepted standards to protect Personal Data, no method of storage or transmission is 100% secure. You are solely responsible for protecting your password, limiting access to your devices, and signing out of websites after your sessions. If you have any questions about the security of our websites, please contact us via the “Contacting Us” section
 below.</p>
 <br />
 <h2 class="h4">12. Changes to this Privacy Statement</h2>

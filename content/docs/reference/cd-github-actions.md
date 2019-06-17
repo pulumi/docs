@@ -3,23 +3,11 @@ title: "Pulumi GitHub Actions"
 aliases:
     - cd-github-actions.html
     - /github/
-expanded_url: /reference/cd/
+expanded_url: /docs/reference/cd/
 menu:
   reference:
     parent: cd
 ---
-
-<style>
-    .img-bordered {
-        border: 2px solid rgba(0,0,0,0.15);
-    }
-    .move-right {
-        margin-left: 32px;
-    }
-    .move-right-small {
-        margin-left: 8px;
-    }
-</style>
 
 Pulumi's [GitHub Actions](https://developer.github.com/actions) help you deploy apps and infrastructure
 to your cloud of choice, using nothing but code in your favorite language and GitHub. This includes previewing,
@@ -198,13 +186,13 @@ is left on the Pull Request. As well as links to the Pulumi Cloud Console for mo
 You can install the Pulumi GitHub App now, by visiting [github.com/apps/pulumi](https://github.com/apps/pulumi)
 or clicking the button below.
 
-<a href="https://github.com/apps/pulumi" target="_blank">
-    <button class="button">INSTALL</button>
+<a class="btn" href="https://github.com/apps/pulumi" target="_blank">
+    INSTALL
 </a>
 
 Example comment when using the Pulumi GitHub App:
 
-<img src="/images/docs/github-actions/pr-comment-gh-app.png" alt="Comment from the Pulumi GitHub App" width="600" class="img-bordered">
+![Comment from the Pulumi GitHub App](/images/docs/github-actions/pr-comment-gh-app.png)
 
 ## Comments By GitHub Actions
 
@@ -232,7 +220,7 @@ action "Pulumi Preview (Merged Stack)" {
 
 Example comment when using GitHub Actions directly:
 
-<img src="/images/docs/github-actions/pr-comment-actions.png" alt="Comment from GitHub Actions" width="600" class="img-bordered">
+![Comment from GitHub Actions](/images/docs/github-actions/pr-comment-actions.png)
 
 # Configuration
 

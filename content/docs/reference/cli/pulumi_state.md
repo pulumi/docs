@@ -1,7 +1,7 @@
 ---
 title: "pulumi state"
 aliases: ["pulumi_state.html"]
-expanded_url: /reference/commands/
+expanded_url: /docs/reference/commands/
 ---
 
 

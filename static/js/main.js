@@ -92,4 +92,9 @@ function generateMiniToc() {
         if (windowWidth != originalWindowWidth) { //if width resized
         }
     });
+
+    // Toggle the mobile menu.
+    $(".nav-header-toggle").click(function() {
+        $(".nav-header-items").toggleClass("hidden");
+    });
 }(jQuery));

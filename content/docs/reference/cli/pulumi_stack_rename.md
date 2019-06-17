@@ -1,7 +1,7 @@
 ---
 title: "pulumi stack rename"
 aliases: ["pulumi_stack_rename.html"]
-expanded_url: /reference/commands/
+expanded_url: /docs/reference/commands/
 ---
 
 
