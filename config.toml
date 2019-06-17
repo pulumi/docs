@@ -10,11 +10,6 @@ pygmentsUseClasses = true
 [outputFormats.RSS]
     baseName = "rss"
 
-pygmentsCodeFences = true
-pygmentsUseClasses = true
-
-sectionPagesMenu = "main"
-
 [taxonomies]
     author = "authors"
     tag = "tags"
